@@ -378,7 +378,8 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
                    away_inj=away_inj or None, home_inj=home_inj or None)
     model_margin_home = -proj["spread"]           # jsx spread is away-minus-home
     rec["model"] = {**proj, "margin_home": round(model_margin_home, 1),
-                    "games_home": th["games"], "games_away": ta["games"]}
+                    "games_home": th["games"], "games_away": ta["games"],
+                    "rank_home": th.get("tRank"), "rank_away": ta.get("tRank")}
 
     if odds_event is None:
         rec["pass_reasons"].append("no market line (nothing to anchor against)")

@@ -179,19 +179,56 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
         out.append("<div class='card' style='border-color:#ef444460'>"
                    "<span class='r'><b>DATA OUTAGE</b></span> — odds unavailable "
                    "on the last run.</div>")
+    def _best_rank(g):
+        m = g.get("model") or {}
+        ranks = [r for r in (m.get("rank_home"), m.get("rank_away"))
+                 if isinstance(r, int)]
+        return min(ranks) if ranks else 999
+
+    # Ranked matchups (top-25 on either side) float to the top by best rank;
+    # the rest follow by tip time.
     games = sorted(grades.get("games") or [],
-                   key=lambda x: (x.get("start") or "", x.get("matchup") or ""))
+                   key=lambda x: (0 if _best_rank(x) <= 25 else 1,
+                                  _best_rank(x) if _best_rank(x) <= 25 else 0,
+                                  x.get("start") or "", x.get("matchup") or ""))
     if not games:
         out.append("<div class='card empty'>No D-I games on this date.</div>")
     carded = {c["espn_event_id"]: c for c in (grades.get("cards") or [])}
+
+    def _ranked_matchup(g) -> str:
+        m = g.get("model") or {}
+        parts = (g.get("matchup") or " @ ").split(" @ ")
+        if len(parts) != 2:
+            return esc(g.get("matchup"))
+        away, home = parts
+        ra, rh = m.get("rank_away"), m.get("rank_home")
+        if isinstance(ra, int) and ra <= 25:
+            away = f"<span class='y'>#{ra}</span> {esc(away)}"
+        else:
+            away = esc(away)
+        if isinstance(rh, int) and rh <= 25:
+            home = f"<span class='y'>#{rh}</span> {esc(home)}"
+        else:
+            home = esc(home)
+        return f"{away} <span class='dim'>@</span> {home}"
+
+    ranked_header_done = others_header_done = False
     for g in games:
+        if _best_rank(g) <= 25 and not ranked_header_done:
+            out.append("<div class='muted' style='margin:10px 0 6px'>"
+                       "🏆 RANKED MATCHUPS</div>")
+            ranked_header_done = True
+        elif _best_rank(g) > 25 and ranked_header_done and not others_header_done:
+            out.append("<div class='muted' style='margin:18px 0 6px'>"
+                       "— rest of the slate —</div>")
+            others_header_done = True
         m = g.get("model")
         mk = g.get("market") or {}
         card = carded.get(g["espn_event_id"])
         bet = bet_idx.get((str(g["espn_event_id"]), card["market"], card["side"])) if card else None
         tip = (g.get("start") or "")[11:16]
         head = (f"<div style='display:flex;justify-content:space-between;align-items:flex-start'>"
-                f"<div><div class='matchup'>{esc(g.get('matchup'))}</div>"
+                f"<div><div class='matchup'>{_ranked_matchup(g)}</div>"
                 f"<div class='muted'>{tip} UTC"
                 + (" · neutral site" if g.get("neutral_site") else "")
                 + "</div></div>"
