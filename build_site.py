@@ -18,10 +18,16 @@ from __future__ import annotations
 import csv
 import html
 import json
+import math
 import sys
 from pathlib import Path
 
 from ncaaw_data_scraper import DATA_ROOT
+from ncaaw_model import SPREAD_SIGMA
+
+
+def _win_prob_home(margin_home: float) -> float:
+    return 0.5 * (1.0 + math.erf(margin_home / SPREAD_SIGMA / math.sqrt(2.0)))
 
 DOCS = Path(__file__).resolve().parent / "docs"
 
@@ -235,14 +241,32 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
                 + ("<span class='badge b-accent'>⚡ EDGE</span>" if card else "")
                 + "</div>")
         if m:
-            spread_disp = f"{m['margin_home']:+.1f}"
-            mk_spread = (f"{mk['spread_home']:+g}" if mk.get("spread_home") is not None else "N/A")
-            mk_total = (f"{mk['total']:g}" if mk.get("total") is not None else "N/A")
+            away_nm = g.get("away_short") or (g.get("matchup") or " @ ").split(" @ ")[0]
+            home_nm = g.get("home_short") or (g.get("matchup") or " @ ").split(" @ ")[-1]
+            home_wins = m["margin_home"] > 0
+            p_home = _win_prob_home(m["margin_home"])
+            away_cls = "" if home_wins else " g"
+            home_cls = " g" if home_wins else ""
+            fav_nm = home_nm if home_wins else away_nm
+            model_line = f"{esc(fav_nm)} {-abs(m['margin_home']):.1f}"
+            # total lean vs book (blue), spread disagreement vs book (gold)
+            if mk.get("total") is not None:
+                lean = m["total"] - mk["total"]
+                total_sub = (f"Book {mk['total']:g} · <span class='bl'>lean "
+                             f"{'OVER' if lean > 0 else 'UNDER'} {abs(lean):.1f}</span>")
+            else:
+                total_sub = "Book: no line yet"
+            if mk.get("spread_home") is not None:
+                dis = -m["margin_home"] - mk["spread_home"]
+                dis_html = (f"<span class='y'>Δ {dis:+.1f} vs book {mk['spread_home']:+g}</span>"
+                            if abs(dis) >= 2 else f"Book {mk['spread_home']:+g}")
+            else:
+                dis_html = "Book: no line yet"
             grid = f"""<div class='grid4'>
-<div class='stat'><div class='l'>AWAY SCORE</div><div class='v'>{m['away_score']:.1f}</div><div class='s'>proj</div></div>
-<div class='stat'><div class='l'>HOME SCORE</div><div class='v'>{m['home_score']:.1f}</div><div class='s'>home margin {spread_disp}</div></div>
-<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v'>{m['total']:.1f}</div><div class='s'>Book: {mk_total}</div></div>
-<div class='stat'><div class='l'>MODEL SPREAD (HOME)</div><div class='v'>{-m['margin_home']:+.1f}</div><div class='s'>Book: {mk_spread}</div></div>
+<div class='stat'><div class='l'>{esc(away_nm.upper())}</div><div class='v{away_cls}'>{m['away_score']:.0f}</div><div class='s'>win {1 - p_home:.0%}</div></div>
+<div class='stat'><div class='l'>{esc(home_nm.upper())}</div><div class='v{home_cls}'>{m['home_score']:.0f}</div><div class='s'>win {p_home:.0%}</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>{m['total']:.1f}</div><div class='s'>{total_sub}</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>{esc(model_line)}</div><div class='s'>{dis_html}</div></div>
 </div>"""
         else:
             grid = ("<div class='muted' style='margin:10px 0'>No Torvik data "

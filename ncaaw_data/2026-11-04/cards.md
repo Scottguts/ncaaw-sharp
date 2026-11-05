@@ -45,4 +45,4 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Hope International Royals @ Cal State Fullerton Titans** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Saint Mary's Gaels @ Stanford Cardinal** — model 62-75 (margin +13.2 home, total 137.1) · market: no line · PASS: insufficient sample (<2 games on one side)
 
-_Generated 2026-11-05T03:29:29Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-05T03:32:03Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

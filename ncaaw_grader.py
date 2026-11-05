@@ -345,6 +345,8 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
     rec: dict = {
         "espn_event_id": game["espn_event_id"],
         "matchup": matchup,
+        "home_short": game["home"].get("location") or hname,
+        "away_short": game["away"].get("location") or aname,
         "start": game["start"],
         "neutral_site": game["neutral_site"],
         "status": "graded",
