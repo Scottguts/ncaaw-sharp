@@ -380,22 +380,23 @@ def match_odds_to_game(game: dict, odds_games: list[dict]) -> dict | None:
 # Orchestrator
 # ---------------------------------------------------------------------------
 
-def _latest_cached_teams(data_root: Path, season: int,
-                         exclude_day: str) -> dict | None:
-    """Most recent committed teams.json for this season (fallback when the
-    live Torvik fetch is blocked, e.g. from datacenter IPs). Ratings move
-    slowly — a 1-day-old snapshot with a warning beats a dead slate."""
-    days = sorted((p for p in data_root.iterdir()
-                   if p.is_dir() and p.name != exclude_day
-                   and (p / "teams.json").exists()),
-                  key=lambda p: p.name, reverse=True)
-    for day in days:
+def _latest_cached_teams(data_root: Path, season: int) -> dict | None:
+    """Most recent committed Torvik snapshot for this season — fallback when
+    the live fetch is blocked (barttorvik 403s datacenter/GitHub-runner IPs).
+    Checks the top-level latest_teams.json first (refreshed by ANY successful
+    live fetch, e.g. a local run on the Mac), then per-day snapshots. Ratings
+    move slowly — a 1-day-old snapshot with a warning beats a dead slate."""
+    candidates = [data_root / "latest_teams.json"]
+    candidates += sorted((p / "teams.json" for p in data_root.iterdir()
+                          if p.is_dir() and (p / "teams.json").exists()),
+                         key=lambda p: p.parent.name, reverse=True)
+    for path in candidates:
         try:
-            cached = json.loads((day / "teams.json").read_text())
+            cached = json.loads(path.read_text())
         except (ValueError, OSError):
             continue
         if cached.get("season") == season and cached.get("teams"):
-            cached["stale_from"] = day.name
+            cached["stale_from"] = (cached.get("fetched_at") or "")[:10] or path.parent.name
             return cached
     return None
 
@@ -414,8 +415,11 @@ def run(target: date, data_root: Path = DATA_ROOT) -> dict:
             "teams": teams,
         }
         print(f"[torvik] {len(teams)} teams (live)")
+        # Refresh the shared snapshot so CI (whose IPs Torvik blocks) can
+        # always fall back to the newest successful fetch.
+        _save_json(data_root / "latest_teams.json", teams_doc)
     except Exception as e:
-        cached = _latest_cached_teams(data_root, season, target.isoformat())
+        cached = _latest_cached_teams(data_root, season)
         if not cached:
             raise RuntimeError(f"Torvik fetch failed and no cached snapshot "
                                f"exists: {e}") from e

@@ -83,6 +83,11 @@ pinnacle devig anchor. FanDuel stays excluded (mlb-sharp empirical analysis).
   (Nov 2026 → 2027). Fronted by a trivial JS check: POST
   `js_test_submitted=1` once → `js_verified` cookie. Column map verified
   against the 2026 season to the decimal (see fetch_torvik docstring).
+  **GOTCHA: barttorvik 403-blocks GitHub runner (datacenter) IPs**, so CI
+  always falls back to `ncaaw_data/latest_teams.json` — the snapshot pushed
+  by the last successful live fetch. Keep it fresh by double-clicking
+  `refresh_teams.command` on the Mac every day or two (ratings drift
+  slowly; a stale snapshot triggers a Discord warning, not an outage).
 - `site.api.espn.com/.../womens-college-basketball/scoreboard?dates=&groups=50`
   — slate, neutral-site flags, conference ids, finals for settlement.
 - The Odds API `basketball_wncaab` — h2h/spreads/totals.
