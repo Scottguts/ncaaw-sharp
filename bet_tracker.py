@@ -24,6 +24,9 @@ from pathlib import Path
 from ncaaw_data_scraper import DATA_ROOT, _get, ESPN_API, _et_date
 
 BET_LOG = DATA_ROOT / "bet_log.csv"
+# Paper tier: half-gate "shadow" bets at a flat 0.5u — evidence accumulation
+# only, never real money, never capped, never posted to Discord.
+SHADOW_LOG = DATA_ROOT / "shadow_log.csv"
 
 CSV_FIELDS = [
     "bet_id", "recommended_at", "date", "espn_event_id", "matchup", "tipoff",
@@ -158,6 +161,44 @@ def append_pending(target_date: str) -> int:
     return append_cards(cards, target_date)
 
 
+def append_shadow(target_date: str) -> int:
+    """Paper-log shadow cards (no caps, flat 0.5u, dedup by event/market/side)."""
+    grades = DATA_ROOT / target_date / "grades.json"
+    if not grades.exists():
+        return 0
+    cards = json.loads(grades.read_text()).get("shadow_cards") or []
+    if not cards:
+        return 0
+    _ensure_log(SHADOW_LOG)
+    rows = _read_log(SHADOW_LOG)
+    seen = {(str(r["espn_event_id"]), r["market"], r["side"]) for r in rows}
+    added = 0
+    for c in cards:
+        key = (str(c["espn_event_id"]), c["market"], c["side"])
+        if key in seen:
+            continue
+        rows.append({
+            "bet_id": _next_id(rows) + added,
+            "recommended_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "date": target_date,
+            "espn_event_id": c["espn_event_id"],
+            "matchup": c["matchup"], "tipoff": c["start"],
+            "market": c["market"], "side": c["side"],
+            "line": "" if c.get("line") is None else c["line"],
+            "book": c["book"], "price": c["price_american"],
+            "fair_prob": c["fair_prob"], "fair_american": c["fair_american"],
+            "edge_pred": c["edge"], "confidence": c["confidence"],
+            "units_risked": c["unit_size"],
+            "status": "pending", "notes": c.get("risk", "Shadow"),
+        })
+        seen.add(key)
+        added += 1
+    if added:
+        _write_log(rows, SHADOW_LOG)
+    print(f"[tracker] paper-logged {added} shadow bet(s) for {target_date}")
+    return added
+
+
 # ---------------------------------------------------------------------------
 # Settlement via ESPN finals
 # ---------------------------------------------------------------------------
@@ -220,11 +261,11 @@ def _settle_one(row: dict, final_home: int, final_away: int) -> tuple[str, float
     return "loss", round(-units, 4), result
 
 
-def settle_pending() -> int:
-    rows = _read_log()
+def settle_pending(log: Path = BET_LOG, label: str = "real") -> int:
+    rows = _read_log(log)
     pending = [r for r in rows if r.get("status") == "pending"]
     if not pending:
-        print("[tracker] nothing pending")
+        print(f"[tracker] nothing pending ({label})")
         return 0
     finals_by_date: dict[str, dict] = {}
     settled = 0
@@ -257,8 +298,8 @@ def settle_pending() -> int:
             r["beat_close"] = "yes" if clv > 0 else ("no" if clv < 0 else "even")
         settled += 1
     if settled:
-        _write_log(rows)
-    print(f"[tracker] settled {settled} bet(s)")
+        _write_log(rows, log)
+    print(f"[tracker] settled {settled} {label} bet(s)")
     return settled
 
 
@@ -297,6 +338,27 @@ def build_record() -> str:
         mp = sum(1 for r in ms if r["status"] == "push")
         mpl = sum(_f(r.get("units_pl"), 0.0) or 0.0 for r in ms)
         lines.append(f"| {mkt} | {mw}-{ml_}-{mp} | {mpl:+.2f}u |")
+    # shadow (paper) section — evidence tier, never real money
+    srows = _read_log(SHADOW_LOG)
+    ssettled = [r for r in srows if r.get("status") in ("win", "loss", "push")]
+    if srows:
+        sw = sum(1 for r in ssettled if r["status"] == "win")
+        sl = sum(1 for r in ssettled if r["status"] == "loss")
+        sp = sum(1 for r in ssettled if r["status"] == "push")
+        spl = sum(_f(r.get("units_pl"), 0.0) or 0.0 for r in ssettled)
+        lines += ["", f"## Shadow (paper) tier — half-gate evidence, 0.5u flat",
+                  "", f"**{sw}-{sl}-{sp}** · {spl:+.2f}u paper · "
+                  f"{sum(1 for r in srows if r.get('status') == 'pending')} pending", ""]
+        lines += ["| market | W-L-P | paper units |", "|---|---|---|"]
+        for mkt in ("moneyline", "spread", "total"):
+            ms = [r for r in ssettled if r.get("market") == mkt]
+            if not ms:
+                continue
+            mw = sum(1 for r in ms if r["status"] == "win")
+            ml_ = sum(1 for r in ms if r["status"] == "loss")
+            mp = sum(1 for r in ms if r["status"] == "push")
+            mpl = sum(_f(r.get("units_pl"), 0.0) or 0.0 for r in ms)
+            lines.append(f"| {mkt} | {mw}-{ml_}-{mp} | {mpl:+.2f}u |")
     lines += ["", "_Validation is Brier/log-loss on all graded games + CLV, "
               "never small-sample ROI._", ""]
     md = "\n".join(lines)
@@ -313,8 +375,10 @@ def main() -> int:
     args = ap.parse_args()
     if args.append:
         append_pending(args.append)
+        append_shadow(args.append)
     if args.settle:
-        settle_pending()
+        settle_pending(BET_LOG, "real")
+        settle_pending(SHADOW_LOG, "shadow")
     if args.record or args.settle or args.append:
         build_record()
     if not (args.append or args.settle or args.record):

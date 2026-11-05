@@ -83,8 +83,26 @@ NCAAW burn is tiny — ~1 call/daily run + closing snapshots ≈ **40–70
 requests/month** (no per-event prop calls). It shares keys with mlb-sharp's
 quota, but Nov–Apr barely overlaps the MLB season.
 
-Sport key: `basketball_wncaab`. Books: draftkings/betmgm/caesars shopping,
-pinnacle devig anchor. FanDuel stays excluded (mlb-sharp empirical analysis).
+Sport key: `basketball_wncaab`. Books shopped: draftkings, betmgm, caesars
+(+williamhill_us alias), betrivers, espnbet (theScore's US successor — theScore
+itself is not on The Odds API), ballybet, hardrockbet; pinnacle devig anchor.
+Stay ≤10 total (API bills per 10-book block). FanDuel stays excluded
+(mlb-sharp empirical analysis).
+
+## 4b. Injury feed + shadow tier (added 2026-11-05)
+
+- **`ncaaw_data/injuries.json`** — manual availability feed, the highest-alpha
+  input: NCAAW books are slow on star-player news. Add an entry the moment
+  news breaks (team → [{player, ppg, status OUT/GTD/PROB, replacement,
+  starter}]), dispatch line-watch, and the model adjusts (~1.43 adjOE per net
+  lost ppg, +0.8 adjDE per starter out — the v11 app's formula) BEFORE the
+  market moves. Delete entries once the line has priced the news.
+- **Shadow (paper) tier** — anything clearing HALF the edge gate at conf ≥4
+  (plus full-gate cards squeezed out by slate caps) is paper-logged to
+  `shadow_log.csv` at a flat 0.5u. Settled alongside real bets; reported in
+  record.md. Pure evidence accumulation (~5-10x live volume) — NEVER real
+  money, never Discord-posted, and never a justification to loosen the real
+  gates.
 
 ## 5. Data sources
 

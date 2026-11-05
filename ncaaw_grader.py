@@ -87,6 +87,77 @@ MAX_UNITS_PER_GAME  = 1.5
 
 ENABLED_MARKETS = {"moneyline": True, "spread": True, "total": True}
 
+# Shadow (paper) tier — evidence accumulation, NOT real bets. Anything that
+# clears HALF the edge gate at conf >=4 is paper-logged at a flat 0.5u so we
+# learn which markets/buckets actually win ~5-10x faster than live volume
+# alone. Price band, win-prob floor, book confirmation and the stale-line
+# (MAX_REASONABLE_EDGE) reject still apply. Mirrors mlb-sharp's paper props.
+SHADOW_MIN_CONFIDENCE = 4
+SHADOW_UNITS = 0.5
+
+
+def gate_tier(market: str, edge: float, conf: int) -> str | None:
+    """'fire' = real bet, 'shadow' = paper-only, None = discard."""
+    if edge > MAX_REASONABLE_EDGE:
+        return None
+    if edge >= MIN_EDGE[market] and conf >= MIN_CONFIDENCE:
+        return "fire"
+    if edge >= MIN_EDGE[market] / 2 and conf >= SHADOW_MIN_CONFIDENCE:
+        return "shadow"
+    return None
+
+
+# ===========================================================================
+# Injury feed — ncaaw_data/injuries.json (manual; update when news breaks)
+# ===========================================================================
+# Format (team names in any ESPN/Torvik spelling):
+#   { "UConn": [ {"player": "Star Guard", "ppg": 18.5, "status": "OUT",
+#                 "replacement": 0.45, "starter": true} ] }
+# status: OUT (full weight) / GTD (half) / PROB (quarter).
+# replacement: fraction of the player's production the bench recovers
+# (default 0.45). Deltas mirror the v11 app's getInjuryAdj: each net lost
+# ppg costs ~1.43 adjOE points; each starter out costs ~0.8 adjDE.
+# NCAAW books are SLOW on availability news — this is the highest-alpha
+# input in the system. Clear entries once the market has priced them.
+
+_STATUS_MULT = {"OUT": 1.0, "GTD": 0.5, "PROB": 0.25}
+
+
+def load_injuries(data_root: Path = None) -> dict:
+    path = (data_root or DATA_ROOT) / "injuries.json"
+    if not path.exists():
+        return {}
+    try:
+        raw = json.loads(path.read_text())
+    except ValueError:
+        print("[grader] WARNING: injuries.json is malformed — ignoring")
+        return {}
+    return {canon_name(team): entries for team, entries in raw.items()
+            if isinstance(entries, list) and not team.startswith("_")
+            and all(isinstance(e, dict) for e in entries)}
+
+
+def injury_adj_for(team_canon: str, injuries: dict) -> tuple[dict, list[str]]:
+    """(predict() delta dict, human-readable notes) for a team."""
+    entries = injuries.get(team_canon) or []
+    lost_ppg = 0.0
+    starters_out = 0
+    notes = []
+    for e in entries:
+        mult = _STATUS_MULT.get(str(e.get("status", "")).upper())
+        if mult is None:
+            continue
+        repl = float(e.get("replacement", 0.45))
+        lost = float(e.get("ppg", 0.0)) * (1 - repl) * mult
+        lost_ppg += lost
+        if e.get("starter") and mult >= 1.0:
+            starters_out += 1
+        notes.append(f"{e.get('player', '?')} {str(e.get('status', '')).upper()} "
+                     f"(~{lost:.1f} ppg net)")
+    if not notes:
+        return {}, []
+    return {"adjOE": -(lost_ppg * 1.43), "adjDE": starters_out * 0.8}, notes
+
 
 # ===========================================================================
 # Dataclasses
@@ -265,7 +336,8 @@ def _pass_triggers() -> list[str]:
 # Per-game grading
 # ===========================================================================
 
-def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
+def grade_game(game: dict, teams: dict, odds_event: dict | None,
+               injuries: dict | None = None) -> dict:
     """Grade one game: model projection, market anchor, candidate cards."""
     hname = game["home"]["display_name"]
     aname = game["away"]["display_name"]
@@ -277,6 +349,7 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
         "neutral_site": game["neutral_site"],
         "status": "graded",
         "cards": [],
+        "shadow": [],
         "pass_reasons": [],
     }
 
@@ -293,7 +366,16 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
     away = {**ta, "record": game["away"].get("record") or ta["record"],
             "conf": game["away"].get("conf") or ""}
 
-    proj = predict(away, home, TRAINED_WEIGHTS, neutral_site=game["neutral_site"])
+    inj = injuries or {}
+    home_inj, home_inj_notes = injury_adj_for(game["home"]["canon"], inj)
+    away_inj, away_inj_notes = injury_adj_for(game["away"]["canon"], inj)
+    inj_notes = ([f"{hname}: {n}" for n in home_inj_notes]
+                 + [f"{aname}: {n}" for n in away_inj_notes])
+    if inj_notes:
+        rec["injury_notes"] = inj_notes
+
+    proj = predict(away, home, TRAINED_WEIGHTS, neutral_site=game["neutral_site"],
+                   away_inj=away_inj or None, home_inj=home_inj or None)
     model_margin_home = -proj["spread"]           # jsx spread is away-minus-home
     rec["model"] = {**proj, "margin_home": round(model_margin_home, 1),
                     "games_home": th["games"], "games_away": ta["games"]}
@@ -316,6 +398,12 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
     rec["sigma"] = {"spread": round(sigma_s, 2), "total": round(sigma_t, 2)}
 
     cards: list[BetCard] = []
+    shadow: list[BetCard] = []
+
+    def _place(tier: str, card: BetCard) -> None:
+        if inj_notes:
+            card.reasoning = card.reasoning + [f"Injury adj: {n}" for n in inj_notes[:2]]
+        (cards if tier == "fire" else shadow).append(card)
 
     # ── moneyline + spread (need a market spread anchor) ──
     if anchor["spread_home"] is not None:
@@ -345,15 +433,17 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
                 if not (MIN_AMERICAN_PRICE <= price <= MAX_AMERICAN_PRICE):
                     continue
                 e = edge_pct(p, price)
-                if e < MIN_EDGE["moneyline"] or e > MAX_REASONABLE_EDGE:
-                    continue
                 conf = confidence_from(disagreement, e)
-                if conf < MIN_CONFIDENCE:
+                tier = gate_tier("moneyline", e, conf)
+                if tier == "fire":
+                    units, risk = unit_size_from(e, conf)
+                    if units == 0:
+                        tier = "shadow"
+                if tier == "shadow":
+                    units, risk = SHADOW_UNITS, "Shadow"
+                if tier is None:
                     continue
-                units, risk = unit_size_from(e, conf)
-                if units == 0:
-                    continue
-                cards.append(BetCard(
+                _place(tier, BetCard(
                     bet_label=f"{team} ML", market="moneyline", side=side,
                     book=book, price_american=price, line=None,
                     fair_prob=round(p, 4), fair_american=prob_to_american(p),
@@ -380,15 +470,17 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
                 p_home_cover = norm_cdf((fair_margin + line_home) / sigma_s)
                 p = p_home_cover if side == "home" else 1 - p_home_cover
                 e = edge_pct(p, price)
-                if e < MIN_EDGE["spread"] or e > MAX_REASONABLE_EDGE:
-                    continue
                 conf = confidence_from(disagreement, e)
-                if conf < MIN_CONFIDENCE:
+                tier = gate_tier("spread", e, conf)
+                if tier == "fire":
+                    units, risk = unit_size_from(e, conf)
+                    if units == 0:
+                        tier = "shadow"
+                if tier == "shadow":
+                    units, risk = SHADOW_UNITS, "Shadow"
+                if tier is None:
                     continue
-                units, risk = unit_size_from(e, conf)
-                if units == 0:
-                    continue
-                cards.append(BetCard(
+                _place(tier, BetCard(
                     bet_label=f"{team} {float(line):+g}", market="spread", side=side,
                     book=book, price_american=price, line=float(line),
                     fair_prob=round(p, 4), fair_american=prob_to_american(p),
@@ -422,15 +514,17 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
             p_over = norm_cdf((fair_total - float(line)) / sigma_t)
             p = p_over if side == "Over" else 1 - p_over
             e = edge_pct(p, price)
-            if e < MIN_EDGE["total"] or e > MAX_REASONABLE_EDGE:
-                continue
             conf = confidence_from(disagreement_t, e)
-            if conf < MIN_CONFIDENCE:
+            tier = gate_tier("total", e, conf)
+            if tier == "fire":
+                units, risk = unit_size_from(e, conf)
+                if units == 0:
+                    tier = "shadow"
+            if tier == "shadow":
+                units, risk = SHADOW_UNITS, "Shadow"
+            if tier is None:
                 continue
-            units, risk = unit_size_from(e, conf)
-            if units == 0:
-                continue
-            cards.append(BetCard(
+            _place(tier, BetCard(
                 bet_label=f"{side} {float(line):g}", market="total",
                 side=side.lower(), book=book, price_american=price,
                 line=float(line),
@@ -446,6 +540,7 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None) -> dict:
             ))
 
     rec["cards"] = cards
+    rec["shadow"] = shadow
     if not cards and not rec["pass_reasons"]:
         rec["pass_reasons"].append("no edge cleared the gates")
     return rec
@@ -544,13 +639,26 @@ def run(target_date: str, data_root: Path = DATA_ROOT) -> dict:
     odds = _load(day / "odds.json") if (day / "odds.json").exists() else {"available": False, "games": []}
 
     odds_by_id = {g.get("id"): g for g in odds.get("games") or []}
+    injuries = load_injuries()
+    if injuries:
+        print(f"[grader] injuries.json active for {len(injuries)} team(s)")
     # slate.json stored odds_event_id at scrape time
     graded = []
     for g in slate["games"]:
         ev = odds_by_id.get(g.get("odds_event_id"))
-        graded.append(grade_game(g, teams, ev))
+        graded.append(grade_game(g, teams, ev, injuries))
 
     fired = select_cards(graded)
+    # shadow = paper evidence, uncapped (fired cards excluded to avoid overlap).
+    # Full-gate cards squeezed out by the slate caps are paper-logged too.
+    fired_keys = {(c.espn_event_id, c.market, c.side) for c in fired}
+    shadow_all = [c for rec in graded for c in rec.get("shadow") or []
+                  if (c.espn_event_id, c.market, c.side) not in fired_keys]
+    for rec in graded:
+        for c in rec.get("cards") or []:
+            if (c.espn_event_id, c.market, c.side) not in fired_keys:
+                c.unit_size, c.risk = SHADOW_UNITS, "Shadow(cap-cut)"
+                shadow_all.append(c)
 
     out = {
         "date": target_date,
@@ -560,8 +668,11 @@ def run(target_date: str, data_root: Path = DATA_ROOT) -> dict:
         "n_cards": len(fired),
         "total_units": round(sum(c.unit_size for c in fired), 2),
         "cards": [asdict(c) for c in fired],
+        "shadow_cards": [asdict(c) for c in shadow_all],
         "games": [
-            {**rec, "cards": [asdict(c) for c in rec.get("cards") or []]}
+            {**rec,
+             "cards": [asdict(c) for c in rec.get("cards") or []],
+             "shadow": [asdict(c) for c in rec.get("shadow") or []]}
             for rec in graded
         ],
     }

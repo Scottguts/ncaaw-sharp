@@ -26,7 +26,7 @@ from zoneinfo import ZoneInfo
 
 import ncaaw_data_scraper as scraper
 import ncaaw_grader as grader
-from bet_tracker import _read_log, append_pending, build_record
+from bet_tracker import _read_log, append_pending, append_shadow, build_record
 from notify import post_discord, _fmt_price, SITE_URL
 import build_site
 
@@ -103,6 +103,9 @@ def run() -> int:
     else:
         print(f"[watch] no new value ({len(out.get('cards') or [])} graded cards, "
               f"{len(fired)} already fired)")
+    # paper tier accumulates silently on every sweep (no Discord, no caps)
+    if append_shadow(today_iso):
+        build_record()
 
     # 4. keep the dashboard fresh
     build_site.build()

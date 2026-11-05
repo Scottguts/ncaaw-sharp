@@ -1,0 +1,9 @@
+{
+  "_README": [
+    "Manual injury feed - highest-alpha input. Update the moment you hear news,",
+    "then run line_watch or wait for the next 2h sweep. Key = team name.",
+    "status: OUT | GTD | PROB. replacement = bench recovery fraction (0.45).",
+    "DELETE entries once the market has priced the news.",
+    "Example: \"UConn\": [{\"player\": \"Star G\", \"ppg\": 18.5, \"status\": \"OUT\", \"replacement\": 0.45, \"starter\": true}]"
+  ]
+}

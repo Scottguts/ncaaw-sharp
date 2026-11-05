@@ -45,7 +45,13 @@ USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
 
 # Bookmaker policy — carried over from mlb-sharp (FanDuel stays excluded:
 # its marketing-driven trap lines won "best price" at -27.7% ROI there).
-TARGET_BOOKS = ("draftkings", "betmgm", "caesars")
+# Widened 2026-11-05 for NCAAW line-shopping width: betrivers (verified live
+# for wncaab), espnbet (theScore Bet's US successor — theScore itself is not
+# carried by The Odds API), ballybet + hardrockbet (soft books, free width).
+# williamhill_us is Caesars' canonical API key (kept alongside "caesars").
+# NOTE: stay ≤10 total books — The Odds API bills per 10-book block.
+TARGET_BOOKS = ("draftkings", "betmgm", "caesars", "williamhill_us",
+                "betrivers", "espnbet", "ballybet", "hardrockbet")
 SHARP_ANCHORS = ("pinnacle",)
 ALL_BOOKS = TARGET_BOOKS + SHARP_ANCHORS
 FULL_MARKETS = ("h2h", "spreads", "totals")
