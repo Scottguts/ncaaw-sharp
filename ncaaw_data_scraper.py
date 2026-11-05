@@ -240,12 +240,23 @@ def fetch_torvik(year: int) -> dict[str, dict]:
     s = requests.Session()
     s.headers["User-Agent"] = USER_AGENT
     url = f"{TORVIK_URL}?json=1&year={year}"
-    r = s.get(url, timeout=30)
-    if "js_test" in r.text[:500]:
-        s.post(url, data={"js_test_submitted": "1"}, timeout=30,
-               allow_redirects=True)
+    rows = None
+    for attempt in range(3):
         r = s.get(url, timeout=30)
-    rows = r.json()
+        if "js_test" in r.text[:500] or "Verifying" in r.text[:500]:
+            s.post(url, data={"js_test_submitted": "1"}, timeout=30,
+                   allow_redirects=True)
+            r = s.get(url, timeout=30)
+        try:
+            rows = r.json()
+            break
+        except ValueError:
+            print(f"[torvik] attempt {attempt + 1}: non-JSON response "
+                  f"(HTTP {r.status_code}): {r.text[:120]!r}")
+            time.sleep(2 * (attempt + 1))
+    if rows is None:
+        raise RuntimeError(f"Torvik unreachable (last HTTP {r.status_code}) — "
+                           "likely blocking this IP")
     if not isinstance(rows, list) or not rows:
         raise RuntimeError("Torvik returned no data")
     # tRank = barthag rank (1 = best), matching the app's tRank column
@@ -369,19 +380,60 @@ def match_odds_to_game(game: dict, odds_games: list[dict]) -> dict | None:
 # Orchestrator
 # ---------------------------------------------------------------------------
 
+def _latest_cached_teams(data_root: Path, season: int,
+                         exclude_day: str) -> dict | None:
+    """Most recent committed teams.json for this season (fallback when the
+    live Torvik fetch is blocked, e.g. from datacenter IPs). Ratings move
+    slowly — a 1-day-old snapshot with a warning beats a dead slate."""
+    days = sorted((p for p in data_root.iterdir()
+                   if p.is_dir() and p.name != exclude_day
+                   and (p / "teams.json").exists()),
+                  key=lambda p: p.name, reverse=True)
+    for day in days:
+        try:
+            cached = json.loads((day / "teams.json").read_text())
+        except (ValueError, OSError):
+            continue
+        if cached.get("season") == season and cached.get("teams"):
+            cached["stale_from"] = day.name
+            return cached
+    return None
+
+
 def run(target: date, data_root: Path = DATA_ROOT) -> dict:
     out = data_root / target.isoformat()
     out.mkdir(parents=True, exist_ok=True)
 
     season = torvik_season_for(target)
     print(f"[torvik] fetching NCAAW season {season} …")
-    teams = fetch_torvik(season)
-    print(f"[torvik] {len(teams)} teams")
-    _save_json(out / "teams.json", {
-        "fetched_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "season": season,
-        "teams": teams,
-    })
+    try:
+        teams = fetch_torvik(season)
+        teams_doc = {
+            "fetched_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "season": season,
+            "teams": teams,
+        }
+        print(f"[torvik] {len(teams)} teams (live)")
+    except Exception as e:
+        cached = _latest_cached_teams(data_root, season, target.isoformat())
+        if not cached:
+            raise RuntimeError(f"Torvik fetch failed and no cached snapshot "
+                               f"exists: {e}") from e
+        teams = cached["teams"]
+        teams_doc = cached
+        print(f"[torvik] LIVE FETCH FAILED ({e}) — falling back to cached "
+              f"snapshot from {cached['stale_from']} ({len(teams)} teams)")
+        hook = os.environ.get("DISCORD_WEBHOOK_URL")
+        if hook:
+            try:
+                requests.post(hook, json={"content":
+                    f"⚠️ **NCAAW Torvik fetch failed** — graded today's slate on the "
+                    f"cached ratings snapshot from **{cached['stale_from']}**. "
+                    f"Ratings drift slowly so cards are still valid, but investigate "
+                    f"if this repeats."}, timeout=15)
+            except Exception:
+                pass
+    _save_json(out / "teams.json", teams_doc)
 
     print(f"[espn] fetching slate for {target} …")
     slate = fetch_slate(target)

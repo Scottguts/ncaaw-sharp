@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "fetched_at": "2026-11-05T02:38:27.418343Z",
+  "fetched_at": "2026-11-05T02:47:32.245945Z",
   "games": [
     {
       "espn_event_id": "401918840",
@@ -9,7 +9,7 @@
       "name": "Fairleigh Dickinson Knights at Texas Longhorns",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
+      "status": "STATUS_END_PERIOD",
       "completed": false,
       "home": {
         "espn_id": "251",
@@ -18,7 +18,7 @@
         "canon": "texas",
         "conf": "SEC",
         "record": "0-0",
-        "score": "76",
+        "score": "85",
         "winner": null
       },
       "away": {
@@ -28,7 +28,7 @@
         "canon": "fairleigh dickinson",
         "conf": "NEC",
         "record": "0-1",
-        "score": "57",
+        "score": "65",
         "winner": null
       },
       "torvik_home": true,
@@ -42,7 +42,7 @@
       "name": "Stetson Hatters at Louisville Cardinals",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_END_PERIOD",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "97",
@@ -51,7 +51,7 @@
         "canon": "louisville",
         "conf": "ACC",
         "record": "1-0",
-        "score": "68",
+        "score": "80",
         "winner": null
       },
       "away": {
@@ -61,40 +61,7 @@
         "canon": "stetson",
         "conf": "ASUN",
         "record": "1-0",
-        "score": "26",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401928191",
-      "start": "2026-11-05T00:30Z",
-      "et_date": "2026-11-04",
-      "name": "Chattanooga Mocs at Western Kentucky Lady Toppers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "98",
-        "location": "Western Kentucky",
-        "display_name": "Western Kentucky Lady Toppers",
-        "canon": "western kentucky",
-        "conf": "CUSA",
-        "record": "0-0",
-        "score": "61",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "236",
-        "location": "Chattanooga",
-        "display_name": "Chattanooga Mocs",
-        "canon": "chattanooga",
-        "conf": "SC",
-        "record": "1-0",
-        "score": "50",
+        "score": "29",
         "winner": null
       },
       "torvik_home": true,
@@ -117,7 +84,7 @@
         "canon": "colorado",
         "conf": "Big 12",
         "record": "0-0",
-        "score": "70",
+        "score": "75",
         "winner": null
       },
       "away": {
@@ -127,7 +94,7 @@
         "canon": "morgan st",
         "conf": "MEAC",
         "record": "1-0",
-        "score": "35",
+        "score": "38",
         "winner": null
       },
       "torvik_home": true,
@@ -150,7 +117,7 @@
         "canon": "denver",
         "conf": "WCC",
         "record": "0-1",
-        "score": "55",
+        "score": "59",
         "winner": null
       },
       "away": {
@@ -160,7 +127,7 @@
         "canon": "lindenwood",
         "conf": "OVC",
         "record": "0-1",
-        "score": "43",
+        "score": "47",
         "winner": null
       },
       "torvik_home": true,
@@ -183,7 +150,7 @@
         "canon": "texas a&mcorpus christi",
         "conf": "Southland",
         "record": "0-0",
-        "score": "64",
+        "score": "72",
         "winner": null
       },
       "away": {
@@ -193,7 +160,7 @@
         "canon": "our lady of the lake",
         "conf": "",
         "record": null,
-        "score": "25",
+        "score": "35",
         "winner": null
       },
       "torvik_home": true,
@@ -216,7 +183,7 @@
         "canon": "texas st",
         "conf": "Pac-12",
         "record": "0-0",
-        "score": "62",
+        "score": "67",
         "winner": null
       },
       "away": {
@@ -226,7 +193,7 @@
         "canon": "liu",
         "conf": "NEC",
         "record": "0-1",
-        "score": "42",
+        "score": "51",
         "winner": null
       },
       "torvik_home": true,
@@ -249,7 +216,7 @@
         "canon": "st thomas",
         "conf": "Summit",
         "record": "0-1",
-        "score": "60",
+        "score": "68",
         "winner": null
       },
       "away": {
@@ -259,7 +226,7 @@
         "canon": "bethel mn",
         "conf": "",
         "record": null,
-        "score": "33",
+        "score": "37",
         "winner": null
       },
       "torvik_home": true,
@@ -282,7 +249,7 @@
         "canon": "grand canyon",
         "conf": "MWC",
         "record": "0-0",
-        "score": "67",
+        "score": "73",
         "winner": null
       },
       "away": {
@@ -292,7 +259,7 @@
         "canon": "jackson st",
         "conf": "SWAC",
         "record": "0-1",
-        "score": "37",
+        "score": "42",
         "winner": null
       },
       "torvik_home": true,
@@ -306,7 +273,7 @@
       "name": "California Baptist Lancers at Oregon State Beavers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "204",
@@ -325,11 +292,44 @@
         "canon": "cal baptist",
         "conf": "Big West",
         "record": "0-0",
-        "score": "24",
+        "score": "31",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401928280",
+      "start": "2026-11-05T02:30Z",
+      "et_date": "2026-11-04",
+      "name": "UC Merced Bobcats at Fresno State Bulldogs",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "278",
+        "location": "Fresno State",
+        "display_name": "Fresno State Bulldogs",
+        "canon": "fresno st",
+        "conf": "Pac-12",
+        "record": "0-0",
+        "score": "24",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "3185",
+        "location": "UC Merced",
+        "display_name": "UC Merced Bobcats",
+        "canon": "uc merced",
+        "conf": "",
+        "record": null,
+        "score": "12",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": false,
       "odds_event_id": null
     },
     {
@@ -1092,36 +1092,36 @@
       "odds_event_id": null
     },
     {
-      "espn_event_id": "401928280",
-      "start": "2026-11-05T02:30Z",
+      "espn_event_id": "401928191",
+      "start": "2026-11-05T00:30Z",
       "et_date": "2026-11-04",
-      "name": "UC Merced Bobcats at Fresno State Bulldogs",
+      "name": "Chattanooga Mocs at Western Kentucky Lady Toppers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
-        "espn_id": "278",
-        "location": "Fresno State",
-        "display_name": "Fresno State Bulldogs",
-        "canon": "fresno st",
-        "conf": "Pac-12",
-        "record": "0-0",
-        "score": "8",
-        "winner": null
+        "espn_id": "98",
+        "location": "Western Kentucky",
+        "display_name": "Western Kentucky Lady Toppers",
+        "canon": "western kentucky",
+        "conf": "CUSA",
+        "record": "1-0",
+        "score": "61",
+        "winner": true
       },
       "away": {
-        "espn_id": "3185",
-        "location": "UC Merced",
-        "display_name": "UC Merced Bobcats",
-        "canon": "uc merced",
-        "conf": "",
-        "record": null,
-        "score": "5",
-        "winner": null
+        "espn_id": "236",
+        "location": "Chattanooga",
+        "display_name": "Chattanooga Mocs",
+        "canon": "chattanooga",
+        "conf": "SC",
+        "record": "1-1",
+        "score": "50",
+        "winner": false
       },
       "torvik_home": true,
-      "torvik_away": false,
+      "torvik_away": true,
       "odds_event_id": null
     },
     {
