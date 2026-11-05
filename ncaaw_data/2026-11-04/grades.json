@@ -1,6 +1,12 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-05T03:32:03.440961Z",
+  "generated_at": "2026-11-05T03:40:07.426640Z",
+  "market_bias": {
+    "n_spread_lines": 2,
+    "n_total_lines": 2,
+    "mean_spread_delta": 2.55,
+    "mean_total_delta": -8.8
+  },
   "odds_available": true,
   "n_games": 36,
   "n_cards": 0,
@@ -8,65 +14,6 @@
   "cards": [],
   "shadow_cards": [],
   "games": [
-    {
-      "espn_event_id": "401906075",
-      "matchup": "Stetson Hatters @ Louisville Cardinals",
-      "home_short": "Louisville",
-      "away_short": "Stetson",
-      "start": "2026-11-05T01:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "insufficient sample (<2 games on one side)"
-      ],
-      "model": {
-        "away_score": 29.4,
-        "home_score": 68.9,
-        "spread": -39.4,
-        "total": 98.3,
-        "proj_poss": 73.9,
-        "margin_home": 39.4,
-        "games_home": 1,
-        "games_away": 1,
-        "rank_home": 6,
-        "rank_away": 317
-      },
-      "market": {
-        "spread_home": -52.5,
-        "total": 122.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      }
-    },
-    {
-      "espn_event_id": "401918553",
-      "matchup": "Jackson State Lady Tigers @ Grand Canyon Lopes",
-      "home_short": "Grand Canyon",
-      "away_short": "Jackson State",
-      "start": "2026-11-05T01:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 55.7,
-        "home_score": 83.7,
-        "spread": -28.0,
-        "total": 139.4,
-        "proj_poss": 73.0,
-        "margin_home": 28.0,
-        "games_home": 0,
-        "games_away": 1,
-        "rank_home": 88,
-        "rank_away": 353
-      }
-    },
     {
       "espn_event_id": "401921577",
       "matchup": "California Baptist Lancers @ Oregon State Beavers",
@@ -78,19 +25,26 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
-        "away_score": 65.4,
-        "home_score": 78.2,
+        "away_score": 65.0,
+        "home_score": 77.9,
         "spread": -12.9,
-        "total": 143.6,
-        "proj_poss": 73.6,
+        "total": 143.0,
+        "proj_poss": 73.5,
         "margin_home": 12.9,
         "games_home": 0,
         "games_away": 0,
         "rank_home": 84,
         "rank_away": 192
+      },
+      "market": {
+        "spread_home": -3.5,
+        "total": 157.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -108,6 +62,53 @@
       ]
     },
     {
+      "espn_event_id": "401921520",
+      "matchup": "Hope International Royals @ Cal State Fullerton Titans",
+      "home_short": "Cal State Fullerton",
+      "away_short": "Hope International",
+      "start": "2026-11-05T03:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401915978",
+      "matchup": "Saint Mary's Gaels @ Stanford Cardinal",
+      "home_short": "Stanford",
+      "away_short": "Saint Mary's",
+      "start": "2026-11-05T03:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "insufficient sample (<2 games on one side)"
+      ],
+      "model": {
+        "away_score": 61.6,
+        "home_score": 74.8,
+        "spread": -13.2,
+        "total": 136.4,
+        "proj_poss": 71.6,
+        "margin_home": 13.2,
+        "games_home": 1,
+        "games_away": 0,
+        "rank_home": 57,
+        "rank_away": 144
+      },
+      "market": {
+        "spread_home": -17.5,
+        "total": 139.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      }
+    },
+    {
       "espn_event_id": "401918840",
       "matchup": "Fairleigh Dickinson Knights @ Texas Longhorns",
       "home_short": "Texas",
@@ -121,16 +122,42 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 52.9,
-        "home_score": 84.3,
-        "spread": -31.4,
-        "total": 137.2,
-        "proj_poss": 71.6,
-        "margin_home": 31.4,
-        "games_home": 0,
-        "games_away": 1,
+        "away_score": 54.3,
+        "home_score": 85.4,
+        "spread": -31.2,
+        "total": 139.7,
+        "proj_poss": 71.8,
+        "margin_home": 31.2,
+        "games_home": 1,
+        "games_away": 2,
         "rank_home": 10,
-        "rank_away": 169
+        "rank_away": 166
+      }
+    },
+    {
+      "espn_event_id": "401906075",
+      "matchup": "Stetson Hatters @ Louisville Cardinals",
+      "home_short": "Louisville",
+      "away_short": "Stetson",
+      "start": "2026-11-05T01:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 47.4,
+        "home_score": 88.6,
+        "spread": -41.1,
+        "total": 136.0,
+        "proj_poss": 74.5,
+        "margin_home": 41.1,
+        "games_home": 2,
+        "games_away": 2,
+        "rank_home": 6,
+        "rank_away": 321
       }
     },
     {
@@ -147,11 +174,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 54.9,
-        "home_score": 91.6,
+        "away_score": 54.5,
+        "home_score": 91.3,
         "spread": -36.7,
-        "total": 146.5,
-        "proj_poss": 76.8,
+        "total": 145.8,
+        "proj_poss": 76.6,
         "margin_home": 36.7,
         "games_home": 2,
         "games_away": 2,
@@ -173,11 +200,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 57.0,
-        "home_score": 90.0,
+        "away_score": 56.7,
+        "home_score": 89.7,
         "spread": -33.0,
-        "total": 147.1,
-        "proj_poss": 74.1,
+        "total": 146.4,
+        "proj_poss": 73.9,
         "margin_home": 33.0,
         "games_home": 1,
         "games_away": 2,
@@ -199,11 +226,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 53.3,
-        "home_score": 82.6,
+        "away_score": 53.0,
+        "home_score": 82.3,
         "spread": -29.2,
-        "total": 135.9,
-        "proj_poss": 72.9,
+        "total": 135.3,
+        "proj_poss": 72.8,
         "margin_home": 29.2,
         "games_home": 2,
         "games_away": 2,
@@ -267,11 +294,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.4,
-        "home_score": 73.7,
+        "away_score": 64.1,
+        "home_score": 73.4,
         "spread": -9.3,
-        "total": 138.1,
-        "proj_poss": 73.2,
+        "total": 137.4,
+        "proj_poss": 73.1,
         "margin_home": 9.3,
         "games_home": 1,
         "games_away": 2,
@@ -391,15 +418,15 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 58.0,
-        "home_score": 85.7,
+        "away_score": 57.7,
+        "home_score": 85.3,
         "spread": -27.7,
-        "total": 143.6,
-        "proj_poss": 75.3,
+        "total": 143.0,
+        "proj_poss": 75.2,
         "margin_home": 27.7,
         "games_home": 2,
         "games_away": 1,
-        "rank_home": 39,
+        "rank_home": 40,
         "rank_away": 286
       }
     },
@@ -445,11 +472,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 65.5,
-        "home_score": 82.6,
+        "away_score": 65.2,
+        "home_score": 82.3,
         "spread": -17.1,
-        "total": 148.1,
-        "proj_poss": 74.3,
+        "total": 147.5,
+        "proj_poss": 74.1,
         "margin_home": 17.1,
         "games_home": 1,
         "games_away": 2,
@@ -499,11 +526,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.6,
-        "home_score": 84.0,
+        "away_score": 64.5,
+        "home_score": 83.9,
         "spread": -19.4,
-        "total": 148.7,
-        "proj_poss": 75.0,
+        "total": 148.4,
+        "proj_poss": 74.9,
         "margin_home": 19.4,
         "games_home": 2,
         "games_away": 1,
@@ -525,11 +552,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 57.4,
-        "home_score": 89.5,
+        "away_score": 57.1,
+        "home_score": 89.2,
         "spread": -32.1,
-        "total": 146.9,
-        "proj_poss": 78.8,
+        "total": 146.3,
+        "proj_poss": 78.6,
         "margin_home": 32.1,
         "games_home": 2,
         "games_away": 2,
@@ -565,11 +592,11 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 62.3,
-        "home_score": 71.2,
+        "away_score": 61.9,
+        "home_score": 70.8,
         "spread": -8.9,
-        "total": 133.4,
-        "proj_poss": 71.0,
+        "total": 132.8,
+        "proj_poss": 70.9,
         "margin_home": 8.9,
         "games_home": 1,
         "games_away": 2,
@@ -591,16 +618,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 55.9,
-        "home_score": 86.6,
-        "spread": -30.7,
-        "total": 142.5,
-        "proj_poss": 72.9,
-        "margin_home": 30.7,
-        "games_home": 0,
-        "games_away": 1,
-        "rank_home": 40,
-        "rank_away": 333
+        "away_score": 55.5,
+        "home_score": 87.2,
+        "spread": -31.6,
+        "total": 142.7,
+        "proj_poss": 73.4,
+        "margin_home": 31.6,
+        "games_home": 1,
+        "games_away": 2,
+        "rank_home": 38,
+        "rank_away": 339
       }
     },
     {
@@ -617,16 +644,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 65.1,
-        "home_score": 65.9,
-        "spread": -0.7,
-        "total": 131.0,
-        "proj_poss": 71.8,
-        "margin_home": 0.7,
-        "games_home": 1,
-        "games_away": 1,
-        "rank_home": 298,
-        "rank_away": 288
+        "away_score": 62.6,
+        "home_score": 67.9,
+        "spread": -5.3,
+        "total": 130.6,
+        "proj_poss": 71.5,
+        "margin_home": 5.3,
+        "games_home": 2,
+        "games_away": 2,
+        "rank_home": 282,
+        "rank_away": 300
       }
     },
     {
@@ -657,16 +684,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 66.6,
-        "home_score": 78.9,
-        "spread": -12.3,
-        "total": 145.5,
-        "proj_poss": 73.8,
-        "margin_home": 12.3,
-        "games_home": 0,
-        "games_away": 1,
-        "rank_home": 154,
-        "rank_away": 281
+        "away_score": 61.2,
+        "home_score": 75.4,
+        "spread": -14.3,
+        "total": 136.6,
+        "proj_poss": 73.2,
+        "margin_home": 14.3,
+        "games_home": 1,
+        "games_away": 2,
+        "rank_home": 145,
+        "rank_away": 293
       }
     },
     {
@@ -684,50 +711,29 @@
       ]
     },
     {
-      "espn_event_id": "401921520",
-      "matchup": "Hope International Royals @ Cal State Fullerton Titans",
-      "home_short": "Cal State Fullerton",
-      "away_short": "Hope International",
-      "start": "2026-11-05T03:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401915978",
-      "matchup": "Saint Mary's Gaels @ Stanford Cardinal",
-      "home_short": "Stanford",
-      "away_short": "Saint Mary's",
-      "start": "2026-11-05T03:00Z",
+      "espn_event_id": "401918553",
+      "matchup": "Jackson State Lady Tigers @ Grand Canyon Lopes",
+      "home_short": "Grand Canyon",
+      "away_short": "Jackson State",
+      "start": "2026-11-05T01:00Z",
       "neutral_site": false,
       "status": "graded",
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "insufficient sample (<2 games on one side)"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 61.9,
-        "home_score": 75.1,
-        "spread": -13.2,
-        "total": 137.1,
-        "proj_poss": 71.8,
-        "margin_home": 13.2,
+        "away_score": 55.7,
+        "home_score": 84.0,
+        "spread": -28.3,
+        "total": 139.7,
+        "proj_poss": 73.1,
+        "margin_home": 28.3,
         "games_home": 1,
-        "games_away": 0,
-        "rank_home": 57,
-        "rank_away": 144
-      },
-      "market": {
-        "spread_home": null,
-        "total": null,
-        "spread_src": null,
-        "total_src": null,
-        "pinnacle_fair_home_ml": null
+        "games_away": 2,
+        "rank_home": 88,
+        "rank_away": 353
       }
     }
   ]

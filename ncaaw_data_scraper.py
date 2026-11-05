@@ -29,7 +29,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from ncaaw_model import canon_name
+from ncaaw_model import canon_name, canon_match
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -370,15 +370,17 @@ def match_odds_to_game(game: dict, odds_games: list[dict]) -> dict | None:
     """Attach the Odds API event to an ESPN game by canonical team names +
     same ET date. Odds API names include mascots ('UConn Huskies') which
     canon_name strips."""
-    hc, ac = game["home"]["canon"], game["away"]["canon"]
+    hn = game["home"]["location"] or game["home"]["display_name"] or ""
+    an = game["away"]["location"] or game["away"]["display_name"] or ""
     et = game["et_date"]
     for og in odds_games:
         if _et_date(og.get("commence_time") or "") != et:
             continue
-        oh, oa = canon_name(og.get("home_team") or ""), canon_name(og.get("away_team") or "")
-        if (oh == hc and oa == ac) or (oh == ac and oa == hc):
-            flipped = not (oh == hc and oa == ac)
-            return {**og, "_flipped": flipped}
+        oh, oa = og.get("home_team") or "", og.get("away_team") or ""
+        if canon_match(oh, hn) and canon_match(oa, an):
+            return {**og, "_flipped": False}
+        if canon_match(oh, an) and canon_match(oa, hn):
+            return {**og, "_flipped": True}
     return None
 
 

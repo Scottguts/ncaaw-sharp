@@ -1,0 +1,398 @@
+<!doctype html><html><head><meta charset='utf-8'><meta http-equiv='refresh' content='300'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NCAAW SHARP — 2026-11-05</title><style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box}
+body{font-family:'JetBrains Mono','SF Mono',monospace;background:#0a0f1a;color:#e2e8f0;
+margin:0;font-size:13px;min-height:100vh}
+a{color:#3b82f6;text-decoration:none}
+.header{background:linear-gradient(135deg,#111827 0%,#0d1525 100%);
+border-bottom:1px solid #1e293b;padding:16px 20px;display:flex;align-items:center;
+justify-content:space-between;flex-wrap:wrap;gap:8px}
+.title{font-size:18px;font-weight:800;letter-spacing:-0.02em;
+background:linear-gradient(135deg,#f97316 0%,#fbbf24 100%);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{font-size:11px;color:#8899aa;margin-top:2px}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:6px;
+font-size:11px;font-weight:700}
+.b-green{color:#22c55e;background:#22c55e18;border:1px solid #22c55e25}
+.b-red{color:#ef4444;background:#ef444418;border:1px solid #ef444425}
+.b-grey{color:#8899aa;background:#8899aa18;border:1px solid #8899aa25}
+.b-yellow{color:#eab308;background:#eab30818;border:1px solid #eab30825}
+.b-accent{color:#f97316;background:#f9731618;border:1px solid #f9731625}
+.tabs{display:flex;gap:2px;padding:8px 20px;background:#111827;
+border-bottom:1px solid #1e293b;position:sticky;top:0;z-index:5}
+.tab{padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;
+border:none;background:transparent;color:#8899aa;font-family:inherit}
+.tab.active{background:#f97316;color:#fff}
+.wrap{padding:20px;max-width:1100px;margin:0 auto}
+.card{background:#111827;border:1px solid #1e293b;border-radius:10px;
+padding:16px;margin-bottom:12px}
+.card.edge{border:1px solid #f9731640;box-shadow:0 0 20px #f9731622}
+.matchup{font-size:15px;font-weight:800;letter-spacing:-0.01em}
+.muted{font-size:11px;color:#8899aa} .dim{font-size:10px;color:#556677}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.stat{padding:8px 10px;background:#0a0f1a;border-radius:6px;text-align:center}
+.stat .l{font-size:10px;color:#8899aa;margin-bottom:3px}
+.stat .v{font-size:15px;font-weight:800}
+.stat .s{font-size:10px;color:#556677}
+.play{flex:1;min-width:200px;padding:10px 12px;border-radius:8px;margin-top:8px}
+.play-g{background:#22c55e12;border:1px solid #22c55e30}
+.play-b{background:#3b82f612;border:1px solid #3b82f630}
+.play-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.stars{font-size:14px;font-weight:800;color:#eab308}
+.datenav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.navbtn{padding:8px 16px;border-radius:6px;border:1px solid #1e293b;color:#8899aa;
+background:transparent;font-size:14px;font-weight:700}
+.datetitle{font-size:16px;font-weight:700}
+.pnl{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
+.pnl .card{text-align:center;padding:12px;margin:0}
+.pnl .l{font-size:10px;color:#8899aa} .pnl .v{font-size:20px;font-weight:800}
+.betrow{display:flex;justify-content:space-between;align-items:center;padding:12px;
+background:#111827;border:1px solid #1e293b;border-radius:10px;margin-bottom:8px}
+.g{color:#22c55e} .r{color:#ef4444} .y{color:#eab308} .bl{color:#3b82f6}
+.empty{text-align:center;color:#8899aa;padding:40px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{padding:8px 6px;text-align:left;font-size:10px;font-weight:700;color:#8899aa;
+text-transform:uppercase;border-bottom:2px solid #1e293b}
+td{padding:6px;border-bottom:1px solid #1e293b30}
+@media(max-width:700px){.grid4{grid-template-columns:repeat(2,1fr)}
+.pnl{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div class='header'><div>
+<div class='title'>🏀 NCAAW SHARP</div>
+<div class='subtitle'>Tuned Torvik Model · Market-Anchored · ML + Spread + Totals ·
+updated 2026-11-05 03:40Z</div></div>
+<div style='display:flex;align-items:center;gap:12px'>
+<span class='badge b-green'>0 PLAYS</span>
+</div></div>
+<div class='tabs'>
+<button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
+<button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
+<button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
+</div>
+<div class='wrap'>
+<div class='pane' id='pane-predictions'><div class='datenav'><a class='navbtn' href='2026-11-04.html'>‹</a><div class='datetitle'>📅 2026-11-05</div><span class='navbtn'>›</span></div><div class='muted' style='margin:10px 0 6px'>🏆 RANKED MATCHUPS</div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'><span class='y'>#1</span> UConn Huskies <span class='dim'>@</span> <span class='y'>#8</span> Michigan Wolverines</div><div class='muted'>23:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UCONN</div><div class='v g'>60</div><div class='s'>win 69%</div></div>
+<div class='stat'><div class='l'>MICHIGAN</div><div class='v'>54</div><div class='s'>win 31%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>113.9</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UConn -5.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Eastern Illinois Panthers <span class='dim'>@</span> <span class='y'>#4</span> Iowa Hawkeyes</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>EASTERN ILLINOIS</div><div class='v'>51</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>IOWA</div><div class='v g'>96</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>146.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Iowa -45.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Texas Southern Tigers <span class='dim'>@</span> <span class='y'>#5</span> LSU Tigers</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>TEXAS SOUTHERN</div><div class='v'>50</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>LSU</div><div class='v g'>101</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>150.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>LSU -50.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Central Michigan Chippewas <span class='dim'>@</span> <span class='y'>#9</span> Ohio State Buckeyes</div><div class='muted'>23:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CENTRAL MICHIGAN</div><div class='v'>57</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>OHIO STATE</div><div class='v g'>92</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>149.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Ohio State -35.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>UC Irvine Anteaters <span class='dim'>@</span> <span class='y'>#12</span> UCLA Bruins</div><div class='muted'>03:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UC IRVINE</div><div class='v'>48</div><div class='s'>win 2%</div></div>
+<div class='stat'><div class='l'>UCLA</div><div class='v g'>73</div><div class='s'>win 98%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>120.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UCLA -25.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Central Arkansas Sugar Bears <span class='dim'>@</span> <span class='y'>#15</span> Baylor Bears</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CENTRAL ARKANSAS</div><div class='v'>59</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>BAYLOR</div><div class='v g'>86</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>145.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Baylor -26.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Pacific Tigers <span class='dim'>@</span> <span class='y'>#16</span> Washington Huskies</div><div class='muted'>03:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PACIFIC</div><div class='v'>60</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>WASHINGTON</div><div class='v g'>87</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>147.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Washington -26.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'><span class='y'>#18</span> Tennessee Lady Volunteers <span class='dim'>@</span> Coppin State Eagles</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>TENNESSEE</div><div class='v g'>79</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>COPPIN STATE</div><div class='v'>46</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>125.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Tennessee -33.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Le Moyne Dolphins <span class='dim'>@</span> <span class='y'>#19</span> TCU Horned Frogs</div><div class='muted'>00:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LE MOYNE</div><div class='v'>49</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>TCU</div><div class='v g'>89</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>137.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>TCU -40.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Northern Kentucky Norse <span class='dim'>@</span> <span class='y'>#22</span> Kentucky Wildcats</div><div class='muted'>23:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTHERN KENTUCKY</div><div class='v'>48</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>KENTUCKY</div><div class='v g'>79</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>127.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Kentucky -30.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='muted' style='margin:18px 0 6px'>— rest of the slate —</div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Frostburg State Bobcats <span class='dim'>@</span> Towson Tigers</div><div class='muted'>16:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>North Florida Ospreys <span class='dim'>@</span> Florida State Seminoles</div><div class='muted'>16:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTH FLORIDA</div><div class='v'>39</div><div class='s'>win 3%</div></div>
+<div class='stat'><div class='l'>FLORIDA STATE</div><div class='v g'>61</div><div class='s'>win 97%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>99.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Florida State -21.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Arkansas Monticello Boll Weevils <span class='dim'>@</span> SE Louisiana Lady Lions</div><div class='muted'>17:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Hampton Lady Pirates <span class='dim'>@</span> SMU Mustangs</div><div class='muted'>17:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>HAMPTON</div><div class='v'>63</div><div class='s'>win 6%</div></div>
+<div class='stat'><div class='l'>SMU</div><div class='v g'>82</div><div class='s'>win 94%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>144.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>SMU -18.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Johnson Royals <span class='dim'>@</span> Coastal Carolina Chanticleers</div><div class='muted'>17:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Miami (OH) RedHawks <span class='dim'>@</span> Southeast Missouri State Redhawks</div><div class='muted'>17:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MIAMI (OH)</div><div class='v g'>76</div><div class='s'>win 88%</div></div>
+<div class='stat'><div class='l'>SOUTHEAST MISSOURI STATE</div><div class='v'>62</div><div class='s'>win 12%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>138.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Miami (OH) -13.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Texas A&amp;M-Texarkana Eagles <span class='dim'>@</span> Louisiana Tech Lady Techsters</div><div class='muted'>17:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Stony Brook Seawolves <span class='dim'>@</span> Iona Gaels</div><div class='muted'>18:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>STONY BROOK</div><div class='v g'>65</div><div class='s'>win 54%</div></div>
+<div class='stat'><div class='l'>IONA</div><div class='v'>64</div><div class='s'>win 46%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Stony Brook -1.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>North Texas Mean Green <span class='dim'>@</span> San Diego State Aztecs</div><div class='muted'>19:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTH TEXAS</div><div class='v'>67</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>SAN DIEGO STATE</div><div class='v g'>78</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>144.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>San Diego State -10.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Hawai&#x27;i Rainbow Wahine <span class='dim'>@</span> San Francisco Dons</div><div class='muted'>20:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>HAWAI&#x27;I</div><div class='v'>66</div><div class='s'>win 27%</div></div>
+<div class='stat'><div class='l'>SAN FRANCISCO</div><div class='v g'>74</div><div class='s'>win 73%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>140.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>San Francisco -7.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>UIC Flames <span class='dim'>@</span> Robert Morris Colonials</div><div class='muted'>21:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>UCF Knights <span class='dim'>@</span> Florida Gators</div><div class='muted'>21:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UCF</div><div class='v'>69</div><div class='s'>win 15%</div></div>
+<div class='stat'><div class='l'>FLORIDA</div><div class='v g'>81</div><div class='s'>win 85%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>149.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Florida -12.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>St. Thomas Aquinas Spartans <span class='dim'>@</span> Fordham Rams</div><div class='muted'>22:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Canisius Golden Griffins <span class='dim'>@</span> New Hampshire Wildcats</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CANISIUS</div><div class='v'>67</div><div class='s'>win 48%</div></div>
+<div class='stat'><div class='l'>NEW HAMPSHIRE</div><div class='v g'>67</div><div class='s'>win 52%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>133.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>New Hampshire -0.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Central Connecticut Blue Devils <span class='dim'>@</span> James Madison Dukes</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CENTRAL CONNECTICUT</div><div class='v'>56</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>JAMES MADISON</div><div class='v g'>85</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>140.9</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>James Madison -29.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Charlotte 49ers <span class='dim'>@</span> Texas Tech Lady Raiders</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CHARLOTTE</div><div class='v'>59</div><div class='s'>win 8%</div></div>
+<div class='stat'><div class='l'>TEXAS TECH</div><div class='v g'>75</div><div class='s'>win 92%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>134.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Texas Tech -16.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Dartmouth Big Green <span class='dim'>@</span> Holy Cross Crusaders</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>DARTMOUTH</div><div class='v'>60</div><div class='s'>win 22%</div></div>
+<div class='stat'><div class='l'>HOLY CROSS</div><div class='v g'>69</div><div class='s'>win 78%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Holy Cross -9.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Marist Red Foxes <span class='dim'>@</span> Bryant Bulldogs</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MARIST</div><div class='v'>62</div><div class='s'>win 21%</div></div>
+<div class='stat'><div class='l'>BRYANT</div><div class='v g'>72</div><div class='s'>win 79%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>134.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Bryant -9.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Merrimack Warriors <span class='dim'>@</span> NJIT Highlanders</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MERRIMACK</div><div class='v'>66</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>NJIT</div><div class='v g'>76</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>142.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>NJIT -10.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Mount St. Mary&#x27;s Mountaineers <span class='dim'>@</span> UMBC Retrievers</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MOUNT ST. MARY&#x27;S</div><div class='v'>63</div><div class='s'>win 14%</div></div>
+<div class='stat'><div class='l'>UMBC</div><div class='v g'>76</div><div class='s'>win 86%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>138.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UMBC -12.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Penn State Beaver Nittany Lions <span class='dim'>@</span> Mercyhurst Lakers</div><div class='muted'>23:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Presbyterian Blue Hose <span class='dim'>@</span> Wake Forest Demon Deacons</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PRESBYTERIAN</div><div class='v'>60</div><div class='s'>win 5%</div></div>
+<div class='stat'><div class='l'>WAKE FOREST</div><div class='v g'>79</div><div class='s'>win 95%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>139.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Wake Forest -19.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Siena Saints <span class='dim'>@</span> Maine Black Bears</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SIENA</div><div class='v g'>62</div><div class='s'>win 67%</div></div>
+<div class='stat'><div class='l'>MAINE</div><div class='v'>57</div><div class='s'>win 33%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>119.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Siena -5.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>West Florida Argonauts <span class='dim'>@</span> Western Carolina Catamounts</div><div class='muted'>23:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>WEST FLORIDA</div><div class='v'>66</div><div class='s'>win 21%</div></div>
+<div class='stat'><div class='l'>WESTERN CAROLINA</div><div class='v g'>75</div><div class='s'>win 79%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>140.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Western Carolina -9.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Gardner-Webb Runnin&#x27; Bulldogs <span class='dim'>@</span> Catawba Indians</div><div class='muted'>23:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Lipscomb Bisons <span class='dim'>@</span> Butler Bulldogs</div><div class='muted'>23:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LIPSCOMB</div><div class='v'>60</div><div class='s'>win 5%</div></div>
+<div class='stat'><div class='l'>BUTLER</div><div class='v g'>79</div><div class='s'>win 95%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>139.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Butler -18.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Manhattan Jaspers <span class='dim'>@</span> UAlbany Great Danes</div><div class='muted'>23:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>SIU Edwardsville Cougars <span class='dim'>@</span> IU Indianapolis Jaguars</div><div class='muted'>23:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Simmons (KY) Falcons <span class='dim'>@</span> Bellarmine Knights</div><div class='muted'>23:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Virginia State Trojans <span class='dim'>@</span> Old Dominion Monarchs</div><div class='muted'>23:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Akron Zips <span class='dim'>@</span> George Mason Patriots</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>AKRON</div><div class='v'>68</div><div class='s'>win 20%</div></div>
+<div class='stat'><div class='l'>GEORGE MASON</div><div class='v g'>78</div><div class='s'>win 80%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>145.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>George Mason -9.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Alabama A&amp;M Bulldogs <span class='dim'>@</span> Alabama Crimson Tide</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>ALABAMA A&amp;M</div><div class='v'>43</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>ALABAMA</div><div class='v g'>70</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>112.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Alabama -26.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>American University Eagles <span class='dim'>@</span> Georgetown Hoyas</div><div class='muted'>00:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Army Black Knights <span class='dim'>@</span> Brown Bears</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>ARMY</div><div class='v g'>70</div><div class='s'>win 68%</div></div>
+<div class='stat'><div class='l'>BROWN</div><div class='v'>65</div><div class='s'>win 32%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>134.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Army -5.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Bethune-Cookman Wildcats <span class='dim'>@</span> South Carolina State Lady Bulldogs</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>BETHUNE-COOKMAN</div><div class='v g'>70</div><div class='s'>win 65%</div></div>
+<div class='stat'><div class='l'>SOUTH CAROLINA STATE</div><div class='v'>66</div><div class='s'>win 35%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>136.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Bethune-Cookman -4.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Boston College Eagles <span class='dim'>@</span> Harvard Crimson</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>BOSTON COLLEGE</div><div class='v'>67</div><div class='s'>win 16%</div></div>
+<div class='stat'><div class='l'>HARVARD</div><div class='v g'>79</div><div class='s'>win 84%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>145.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Harvard -11.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Cleveland State Vikings <span class='dim'>@</span> Bowling Green Falcons</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CLEVELAND STATE</div><div class='v'>66</div><div class='s'>win 29%</div></div>
+<div class='stat'><div class='l'>BOWLING GREEN</div><div class='v g'>73</div><div class='s'>win 71%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>139.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Bowling Green -6.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Columbia (SC) Koalas <span class='dim'>@</span> UNC Greensboro Spartans</div><div class='muted'>00:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>East Tennessee State Buccaneers <span class='dim'>@</span> Clemson Tigers</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>EAST TENNESSEE STATE</div><div class='v'>54</div><div class='s'>win 4%</div></div>
+<div class='stat'><div class='l'>CLEMSON</div><div class='v g'>74</div><div class='s'>win 96%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>127.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Clemson -20.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Eastern Michigan Eagles <span class='dim'>@</span> Purdue Boilermakers</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>EASTERN MICHIGAN</div><div class='v'>65</div><div class='s'>win 7%</div></div>
+<div class='stat'><div class='l'>PURDUE</div><div class='v g'>82</div><div class='s'>win 93%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>146.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Purdue -17.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>George Washington Revolutionaries <span class='dim'>@</span> West Virginia Mountaineers</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>GEORGE WASHINGTON</div><div class='v'>54</div><div class='s'>win 14%</div></div>
+<div class='stat'><div class='l'>WEST VIRGINIA</div><div class='v g'>67</div><div class='s'>win 86%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>121.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>West Virginia -12.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Georgia Southern Eagles <span class='dim'>@</span> Mercer Bears</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>GEORGIA SOUTHERN</div><div class='v g'>56</div><div class='s'>win 57%</div></div>
+<div class='stat'><div class='l'>MERCER</div><div class='v'>54</div><div class='s'>win 43%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>110.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Georgia Southern -2.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Illinois State Redbirds <span class='dim'>@</span> Dayton Flyers</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>ILLINOIS STATE</div><div class='v'>71</div><div class='s'>win 48%</div></div>
+<div class='stat'><div class='l'>DAYTON</div><div class='v g'>71</div><div class='s'>win 52%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>142.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Dayton -0.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Jacksonville Dolphins <span class='dim'>@</span> Miami Hurricanes</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>JACKSONVILLE</div><div class='v'>62</div><div class='s'>win 4%</div></div>
+<div class='stat'><div class='l'>MIAMI</div><div class='v g'>82</div><div class='s'>win 96%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>144.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Miami -20.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>King (TN) Tornado <span class='dim'>@</span> Wofford Terriers</div><div class='muted'>00:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Mississippi Valley State Devilettes <span class='dim'>@</span> Chicago State Cougars</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MISSISSIPPI VALLEY STATE</div><div class='v'>74</div><div class='s'>win 39%</div></div>
+<div class='stat'><div class='l'>CHICAGO STATE</div><div class='v g'>78</div><div class='s'>win 61%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>152.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Chicago State -3.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Niagara Purple Eagles <span class='dim'>@</span> UMass Lowell River Hawks</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NIAGARA</div><div class='v'>61</div><div class='s'>win 28%</div></div>
+<div class='stat'><div class='l'>UMASS LOWELL</div><div class='v g'>68</div><div class='s'>win 72%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UMass Lowell -6.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>North Alabama Lions <span class='dim'>@</span> Ole Miss Rebels</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTH ALABAMA</div><div class='v'>47</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>OLE MISS</div><div class='v g'>84</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>131.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Ole Miss -36.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Quinnipiac Bobcats <span class='dim'>@</span> Vermont Catamounts</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>QUINNIPIAC</div><div class='v'>56</div><div class='s'>win 20%</div></div>
+<div class='stat'><div class='l'>VERMONT</div><div class='v g'>66</div><div class='s'>win 80%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>122.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Vermont -9.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>SUNY Fredonia Blue Devils <span class='dim'>@</span> Cornell Big Red</div><div class='muted'>00:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Samford Bulldogs <span class='dim'>@</span> Georgia Tech Yellow Jackets</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SAMFORD</div><div class='v'>54</div><div class='s'>win 8%</div></div>
+<div class='stat'><div class='l'>GEORGIA TECH</div><div class='v g'>71</div><div class='s'>win 92%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>125.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Georgia Tech -16.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Southern Miss Lady Eagles <span class='dim'>@</span> Auburn Tigers</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SOUTHERN MISS</div><div class='v'>44</div><div class='s'>win 5%</div></div>
+<div class='stat'><div class='l'>AUBURN</div><div class='v g'>64</div><div class='s'>win 95%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>107.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Auburn -19.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Tennessee State Lady Tigers <span class='dim'>@</span> William &amp; Mary Tribe</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>TENNESSEE STATE</div><div class='v'>68</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>WILLIAM &amp; MARY</div><div class='v g'>78</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>145.9</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>William &amp;amp; Mary -10.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Thomas Night Hawks <span class='dim'>@</span> Troy Trojans</div><div class='muted'>00:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Virginia Cavaliers <span class='dim'>@</span> Davidson Wildcats</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>VIRGINIA</div><div class='v g'>73</div><div class='s'>win 72%</div></div>
+<div class='stat'><div class='l'>DAVIDSON</div><div class='v'>66</div><div class='s'>win 28%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>138.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Virginia -6.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Winthrop Eagles <span class='dim'>@</span> Georgia Lady Bulldogs</div><div class='muted'>00:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>WINTHROP</div><div class='v'>54</div><div class='s'>win 4%</div></div>
+<div class='stat'><div class='l'>GEORGIA</div><div class='v g'>74</div><div class='s'>win 96%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Georgia -21.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Centenary (LA) Ladies <span class='dim'>@</span> UL Monroe Warhawks</div><div class='muted'>00:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Emory &amp; Henry Wasps <span class='dim'>@</span> Tennessee Tech Golden Eagles</div><div class='muted'>00:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Grambling Lady Tigers <span class='dim'>@</span> McNeese Cowgirls</div><div class='muted'>00:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Lamar Cardinals <span class='dim'>@</span> UT Arlington Mavericks</div><div class='muted'>00:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LAMAR</div><div class='v g'>59</div><div class='s'>win 54%</div></div>
+<div class='stat'><div class='l'>UT ARLINGTON</div><div class='v'>58</div><div class='s'>win 46%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>116.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Lamar -1.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Nicholls Colonels <span class='dim'>@</span> Iowa State Cyclones</div><div class='muted'>00:30 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Oakland Golden Grizzlies <span class='dim'>@</span> Wisconsin Badgers</div><div class='muted'>00:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>OAKLAND</div><div class='v'>57</div><div class='s'>win 11%</div></div>
+<div class='stat'><div class='l'>WISCONSIN</div><div class='v g'>71</div><div class='s'>win 89%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Wisconsin -14.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Southern Indiana Screaming Eagles <span class='dim'>@</span> Kansas State Wildcats</div><div class='muted'>00:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SOUTHERN INDIANA</div><div class='v'>65</div><div class='s'>win 10%</div></div>
+<div class='stat'><div class='l'>KANSAS STATE</div><div class='v g'>80</div><div class='s'>win 90%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>144.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Kansas State -15.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Eastern Kentucky Colonels <span class='dim'>@</span> Morehead State Eagles</div><div class='muted'>00:45 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>EASTERN KENTUCKY</div><div class='v g'>80</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>MOREHEAD STATE</div><div class='v'>70</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>150.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Eastern Kentucky -10.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Augustana (SD) Vikings <span class='dim'>@</span> North Dakota State Bison</div><div class='muted'>01:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Christian Brothers Buccaneers <span class='dim'>@</span> UT Martin Skyhawks</div><div class='muted'>01:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Milwaukee Panthers <span class='dim'>@</span> Saint Louis Billikens</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MILWAUKEE</div><div class='v'>66</div><div class='s'>win 10%</div></div>
+<div class='stat'><div class='l'>SAINT LOUIS</div><div class='v g'>80</div><div class='s'>win 90%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>146.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Saint Louis -14.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Sam Houston Bearkats <span class='dim'>@</span> Houston Cougars</div><div class='muted'>01:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>UC Santa Barbara Gauchos <span class='dim'>@</span> Pepperdine Waves</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UC SANTA BARBARA</div><div class='v g'>70</div><div class='s'>win 52%</div></div>
+<div class='stat'><div class='l'>PEPPERDINE</div><div class='v'>70</div><div class='s'>win 48%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>139.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UC Santa Barbara -0.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Xavier Musketeers <span class='dim'>@</span> Northwestern Wildcats</div><div class='muted'>01:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>XAVIER</div><div class='v'>67</div><div class='s'>win 22%</div></div>
+<div class='stat'><div class='l'>NORTHWESTERN</div><div class='v g'>76</div><div class='s'>win 78%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>142.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Northwestern -9.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Northern Arizona Lumberjacks <span class='dim'>@</span> Arizona State Sun Devils</div><div class='muted'>01:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTHERN ARIZONA</div><div class='v'>60</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>ARIZONA STATE</div><div class='v g'>89</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>148.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Arizona State -29.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Wagner Seahawks <span class='dim'>@</span> Lafayette Leopards</div><div class='muted'>01:30 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>WAGNER</div><div class='v'>64</div><div class='s'>win 26%</div></div>
+<div class='stat'><div class='l'>LAFAYETTE</div><div class='v g'>71</div><div class='s'>win 74%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>135.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Lafayette -7.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Long Beach State Beach <span class='dim'>@</span> California Golden Bears</div><div class='muted'>02:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LONG BEACH STATE</div><div class='v'>59</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>CALIFORNIA</div><div class='v g'>89</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>147.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>California -30.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Louisiana Ragin&#x27; Cajuns <span class='dim'>@</span> Texas A&amp;M Aggies</div><div class='muted'>02:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LOUISIANA</div><div class='v'>54</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>TEXAS A&amp;M</div><div class='v g'>82</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>136.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Texas A&amp;amp;M -27.9</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Portland Pilots <span class='dim'>@</span> BYU Cougars</div><div class='muted'>02:00 UTC</div></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PORTLAND</div><div class='v'>58</div><div class='s'>win 15%</div></div>
+<div class='stat'><div class='l'>BYU</div><div class='v g'>71</div><div class='s'>win 85%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>BYU -12.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div></div><div class='card'><div style='display:flex;justify-content:space-between;align-items:flex-start'><div><div class='matchup'>Whittier Poets <span class='dim'>@</span> Cal Poly Mustangs</div><div class='muted'>02:00 UTC</div></div></div><div class='muted' style='margin:10px 0'>No Torvik data (non-D-I opponent) — not graded.</div></div></div>
+<div class='pane' id='pane-bets' style='display:none'><div class='card empty'>No bets fired yet. The gates are strict by design — line-watch checks every 2h as books post lines.</div></div>
+<div class='pane' id='pane-history' style='display:none'><div class='pnl'><div class='card'><div class='l'>NET P&L</div><div class='v g'>+0.00u</div></div><div class='card'><div class='l'>ROI</div><div class='v g'>+0.0%</div></div><div class='card'><div class='l'>WINS</div><div class='v g'>0</div></div><div class='card'><div class='l'>LOSSES</div><div class='v r'>0</div></div><div class='card'><div class='l'>PUSH / PEND</div><div class='v y'>0 / 0</div></div></div><div class='card empty'>No bets logged yet.</div></div>
+</div>
+<div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
+· conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
+<script>
+function showTab(id){
+  document.querySelectorAll('.pane').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('pane-'+id).style.display='block';
+  document.getElementById('tab-'+id).classList.add('active');
+  if(history.replaceState)history.replaceState(null,'','#'+id);
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const h=(location.hash||'#predictions').slice(1);
+  showTab(['predictions','bets','history'].includes(h)?h:'predictions');
+});
+</script></body></html>

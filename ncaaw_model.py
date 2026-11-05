@@ -297,6 +297,26 @@ TORVIK_ALIASES = {
 }
 
 
+def canon_match(mascot_name: str, clean_name: str) -> bool:
+    """Robust team-name equality across Torvik/ESPN/Odds-API spellings.
+
+    ASYMMETRIC by design: `mascot_name` is the Odds-API-style name that may
+    carry a mascot ('Cal Baptist Lancers'); `clean_name` is the ESPN
+    location / Torvik name ('California Baptist'). Exact canon match first;
+    on miss, retry with 1-2 trailing words dropped from mascot_name only,
+    re-canoning so aliases apply to the trimmed form. Trimming only one side
+    prevents 'Texas Tech' -> 'Texas' false positives while catching mascots
+    missing from the suffix list — the list never needs to be complete again."""
+    ca, cb = canon_name(mascot_name), canon_name(clean_name)
+    if ca == cb:
+        return bool(ca)
+    words = (mascot_name or "").split()
+    for k in (1, 2):
+        if len(words) > k and canon_name(" ".join(words[:-k])) == cb:
+            return True
+    return False
+
+
 def canon_name(name: str) -> str:
     """Canonical lowercase team key: strips mascots, periods, punctuation."""
     n = (name or "").strip().lower().replace("-", " ")

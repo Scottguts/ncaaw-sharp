@@ -1,73 +1,7 @@
 {
   "date": "2026-11-04",
-  "fetched_at": "2026-11-05T03:08:26.608840Z",
+  "fetched_at": "2026-11-05T03:39:11.256169Z",
   "games": [
-    {
-      "espn_event_id": "401906075",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Stetson Hatters at Louisville Cardinals",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_FINAL",
-      "completed": true,
-      "home": {
-        "espn_id": "97",
-        "location": "Louisville",
-        "display_name": "Louisville Cardinals",
-        "canon": "louisville",
-        "conf": "ACC",
-        "record": "2-0",
-        "score": "87",
-        "winner": true
-      },
-      "away": {
-        "espn_id": "56",
-        "location": "Stetson",
-        "display_name": "Stetson Hatters",
-        "canon": "stetson",
-        "conf": "ASUN",
-        "record": "1-1",
-        "score": "35",
-        "winner": false
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "0fd57dcca7134ddf26d3c4abfbdb1ba6"
-    },
-    {
-      "espn_event_id": "401918553",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Jackson State Lady Tigers at Grand Canyon Lopes",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_FINAL",
-      "completed": true,
-      "home": {
-        "espn_id": "2253",
-        "location": "Grand Canyon",
-        "display_name": "Grand Canyon Lopes",
-        "canon": "grand canyon",
-        "conf": "MWC",
-        "record": "1-0",
-        "score": "77",
-        "winner": true
-      },
-      "away": {
-        "espn_id": "2296",
-        "location": "Jackson State",
-        "display_name": "Jackson State Lady Tigers",
-        "canon": "jackson st",
-        "conf": "SWAC",
-        "record": "0-2",
-        "score": "55",
-        "winner": false
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401921577",
       "start": "2026-11-05T02:00Z",
@@ -84,7 +18,7 @@
         "canon": "oregon st",
         "conf": "Pac-12",
         "record": "0-0",
-        "score": "32",
+        "score": "67",
         "winner": null
       },
       "away": {
@@ -94,12 +28,12 @@
         "canon": "cal baptist",
         "conf": "Big West",
         "record": "0-0",
-        "score": "41",
+        "score": "66",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "c89e9822554cd7101b2583ab17b62f6b"
     },
     {
       "espn_event_id": "401928280",
@@ -117,7 +51,7 @@
         "canon": "fresno st",
         "conf": "Pac-12",
         "record": "0-0",
-        "score": "49",
+        "score": "68",
         "winner": null
       },
       "away": {
@@ -127,12 +61,78 @@
         "canon": "uc merced",
         "conf": "",
         "record": null,
-        "score": "17",
+        "score": "20",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": false,
       "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401921520",
+      "start": "2026-11-05T03:00Z",
+      "et_date": "2026-11-04",
+      "name": "Hope International Royals at Cal State Fullerton Titans",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2239",
+        "location": "Cal State Fullerton",
+        "display_name": "Cal State Fullerton Titans",
+        "canon": "cal st fullerton",
+        "conf": "Big West",
+        "record": "0-1",
+        "score": "40",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "3091",
+        "location": "Hope International",
+        "display_name": "Hope International Royals",
+        "canon": "hope international",
+        "conf": "",
+        "record": null,
+        "score": "22",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915978",
+      "start": "2026-11-05T03:00Z",
+      "et_date": "2026-11-04",
+      "name": "Saint Mary's Gaels at Stanford Cardinal",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "24",
+        "location": "Stanford",
+        "display_name": "Stanford Cardinal",
+        "canon": "stanford",
+        "conf": "ACC",
+        "record": "0-1",
+        "score": "34",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2608",
+        "location": "Saint Mary's",
+        "display_name": "Saint Mary's Gaels",
+        "canon": "saint marys ca",
+        "conf": "WCC",
+        "record": "0-0",
+        "score": "24",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "1708ab5cd47f3dca53f1389dbd77d0be"
     },
     {
       "espn_event_id": "401918840",
@@ -161,6 +161,39 @@
         "conf": "NEC",
         "record": "0-2",
         "score": "65",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401906075",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Stetson Hatters at Louisville Cardinals",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "97",
+        "location": "Louisville",
+        "display_name": "Louisville Cardinals",
+        "canon": "louisville",
+        "conf": "ACC",
+        "record": "2-0",
+        "score": "87",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "56",
+        "location": "Stetson",
+        "display_name": "Stetson Hatters",
+        "canon": "stetson",
+        "conf": "ASUN",
+        "record": "1-1",
+        "score": "35",
         "winner": false
       },
       "torvik_home": true,
@@ -1125,70 +1158,37 @@
       "odds_event_id": null
     },
     {
-      "espn_event_id": "401921520",
-      "start": "2026-11-05T03:00Z",
+      "espn_event_id": "401918553",
+      "start": "2026-11-05T01:00Z",
       "et_date": "2026-11-04",
-      "name": "Hope International Royals at Cal State Fullerton Titans",
+      "name": "Jackson State Lady Tigers at Grand Canyon Lopes",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
-        "espn_id": "2239",
-        "location": "Cal State Fullerton",
-        "display_name": "Cal State Fullerton Titans",
-        "canon": "cal st fullerton",
-        "conf": "Big West",
-        "record": "0-1",
-        "score": "10",
-        "winner": null
+        "espn_id": "2253",
+        "location": "Grand Canyon",
+        "display_name": "Grand Canyon Lopes",
+        "canon": "grand canyon",
+        "conf": "MWC",
+        "record": "1-0",
+        "score": "77",
+        "winner": true
       },
       "away": {
-        "espn_id": "3091",
-        "location": "Hope International",
-        "display_name": "Hope International Royals",
-        "canon": "hope international",
-        "conf": "",
-        "record": null,
-        "score": "5",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401915978",
-      "start": "2026-11-05T03:00Z",
-      "et_date": "2026-11-04",
-      "name": "Saint Mary's Gaels at Stanford Cardinal",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "24",
-        "location": "Stanford",
-        "display_name": "Stanford Cardinal",
-        "canon": "stanford",
-        "conf": "ACC",
-        "record": "0-1",
-        "score": "11",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2608",
-        "location": "Saint Mary's",
-        "display_name": "Saint Mary's Gaels",
-        "canon": "saint marys ca",
-        "conf": "WCC",
-        "record": "0-0",
-        "score": "4",
-        "winner": null
+        "espn_id": "2296",
+        "location": "Jackson State",
+        "display_name": "Jackson State Lady Tigers",
+        "canon": "jackson st",
+        "conf": "SWAC",
+        "record": "0-2",
+        "score": "55",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "1708ab5cd47f3dca53f1389dbd77d0be"
+      "odds_event_id": null
     }
   ]
 }

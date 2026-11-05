@@ -3,85 +3,33 @@
   "date": "2026-11-04",
   "games": [
     {
-      "away_short": "Stetson",
-      "cards": [],
-      "espn_event_id": "401906075",
-      "home_short": "Louisville",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -52.5,
-        "spread_src": "consensus",
-        "total": 122.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Stetson Hatters @ Louisville Cardinals",
-      "model": {
-        "away_score": 29.4,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 68.9,
-        "margin_home": 39.4,
-        "proj_poss": 73.9,
-        "rank_away": 317,
-        "rank_home": 6,
-        "spread": -39.4,
-        "total": 98.3
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "insufficient sample (<2 games on one side)"
-      ],
-      "shadow": [],
-      "start": "2026-11-05T01:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Jackson State",
-      "cards": [],
-      "espn_event_id": "401918553",
-      "home_short": "Grand Canyon",
-      "matchup": "Jackson State Lady Tigers @ Grand Canyon Lopes",
-      "model": {
-        "away_score": 55.7,
-        "games_away": 1,
-        "games_home": 0,
-        "home_score": 83.7,
-        "margin_home": 28.0,
-        "proj_poss": 73.0,
-        "rank_away": 353,
-        "rank_home": 88,
-        "spread": -28.0,
-        "total": 139.4
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-05T01:00Z",
-      "status": "graded"
-    },
-    {
       "away_short": "California Baptist",
       "cards": [],
       "espn_event_id": "401921577",
       "home_short": "Oregon State",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -3.5,
+        "spread_src": "consensus",
+        "total": 157.5,
+        "total_src": "consensus"
+      },
       "matchup": "California Baptist Lancers @ Oregon State Beavers",
       "model": {
-        "away_score": 65.4,
+        "away_score": 65.0,
         "games_away": 0,
         "games_home": 0,
-        "home_score": 78.2,
+        "home_score": 77.9,
         "margin_home": 12.9,
-        "proj_poss": 73.6,
+        "proj_poss": 73.5,
         "rank_away": 192,
         "rank_home": 84,
         "spread": -12.9,
-        "total": 143.6
+        "total": 143.0
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T02:00Z",
@@ -102,22 +50,95 @@
       "status": "skipped"
     },
     {
+      "away_short": "Hope International",
+      "cards": [],
+      "espn_event_id": "401921520",
+      "home_short": "Cal State Fullerton",
+      "matchup": "Hope International Royals @ Cal State Fullerton Titans",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-05T03:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Saint Mary's",
+      "cards": [],
+      "espn_event_id": "401915978",
+      "home_short": "Stanford",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -17.5,
+        "spread_src": "consensus",
+        "total": 139.5,
+        "total_src": "consensus"
+      },
+      "matchup": "Saint Mary's Gaels @ Stanford Cardinal",
+      "model": {
+        "away_score": 61.6,
+        "games_away": 0,
+        "games_home": 1,
+        "home_score": 74.8,
+        "margin_home": 13.2,
+        "proj_poss": 71.6,
+        "rank_away": 144,
+        "rank_home": 57,
+        "spread": -13.2,
+        "total": 136.4
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "insufficient sample (<2 games on one side)"
+      ],
+      "shadow": [],
+      "start": "2026-11-05T03:00Z",
+      "status": "graded"
+    },
+    {
       "away_short": "Fairleigh Dickinson",
       "cards": [],
       "espn_event_id": "401918840",
       "home_short": "Texas",
       "matchup": "Fairleigh Dickinson Knights @ Texas Longhorns",
       "model": {
-        "away_score": 52.9,
-        "games_away": 1,
-        "games_home": 0,
-        "home_score": 84.3,
-        "margin_home": 31.4,
-        "proj_poss": 71.6,
-        "rank_away": 169,
+        "away_score": 54.3,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 85.4,
+        "margin_home": 31.2,
+        "proj_poss": 71.8,
+        "rank_away": 166,
         "rank_home": 10,
-        "spread": -31.4,
-        "total": 137.2
+        "spread": -31.2,
+        "total": 139.7
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-05T01:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Stetson",
+      "cards": [],
+      "espn_event_id": "401906075",
+      "home_short": "Louisville",
+      "matchup": "Stetson Hatters @ Louisville Cardinals",
+      "model": {
+        "away_score": 47.4,
+        "games_away": 2,
+        "games_home": 2,
+        "home_score": 88.6,
+        "margin_home": 41.1,
+        "proj_poss": 74.5,
+        "rank_away": 321,
+        "rank_home": 6,
+        "spread": -41.1,
+        "total": 136.0
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -134,16 +155,16 @@
       "home_short": "Vanderbilt",
       "matchup": "Queens University Royals @ Vanderbilt Commodores",
       "model": {
-        "away_score": 54.9,
+        "away_score": 54.5,
         "games_away": 2,
         "games_home": 2,
-        "home_score": 91.6,
+        "home_score": 91.3,
         "margin_home": 36.7,
-        "proj_poss": 76.8,
+        "proj_poss": 76.6,
         "rank_away": 270,
         "rank_home": 13,
         "spread": -36.7,
-        "total": 146.5
+        "total": 145.8
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -160,16 +181,16 @@
       "home_short": "Illinois",
       "matchup": "Detroit Mercy Titans @ Illinois Fighting Illini",
       "model": {
-        "away_score": 57.0,
+        "away_score": 56.7,
         "games_away": 2,
         "games_home": 1,
-        "home_score": 90.0,
+        "home_score": 89.7,
         "margin_home": 33.0,
-        "proj_poss": 74.1,
+        "proj_poss": 73.9,
         "rank_away": 264,
         "rank_home": 25,
         "spread": -33.0,
-        "total": 147.1
+        "total": 146.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -186,16 +207,16 @@
       "home_short": "NC State",
       "matchup": "Campbell Fighting Camels @ NC State Wolfpack",
       "model": {
-        "away_score": 53.3,
+        "away_score": 53.0,
         "games_away": 2,
         "games_home": 2,
-        "home_score": 82.6,
+        "home_score": 82.3,
         "margin_home": 29.2,
-        "proj_poss": 72.9,
+        "proj_poss": 72.8,
         "rank_away": 249,
         "rank_home": 24,
         "spread": -29.2,
-        "total": 135.9
+        "total": 135.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -254,16 +275,16 @@
       "home_short": "Tarleton State",
       "matchup": "Arkansas-Pine Bluff Golden Lions @ Tarleton State Texans",
       "model": {
-        "away_score": 64.4,
+        "away_score": 64.1,
         "games_away": 2,
         "games_home": 1,
-        "home_score": 73.7,
+        "home_score": 73.4,
         "margin_home": 9.3,
-        "proj_poss": 73.2,
+        "proj_poss": 73.1,
         "rank_away": 324,
         "rank_home": 261,
         "spread": -9.3,
-        "total": 138.1
+        "total": 137.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -378,16 +399,16 @@
       "home_short": "Virginia Tech",
       "matchup": "Delaware Blue Hens @ Virginia Tech Hokies",
       "model": {
-        "away_score": 58.0,
+        "away_score": 57.7,
         "games_away": 1,
         "games_home": 2,
-        "home_score": 85.7,
+        "home_score": 85.3,
         "margin_home": 27.7,
-        "proj_poss": 75.3,
+        "proj_poss": 75.2,
         "rank_away": 286,
-        "rank_home": 39,
+        "rank_home": 40,
         "spread": -27.7,
-        "total": 143.6
+        "total": 143.0
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -432,16 +453,16 @@
       "home_short": "Cincinnati",
       "matchup": "East Texas A&M Lions @ Cincinnati Bearcats",
       "model": {
-        "away_score": 65.5,
+        "away_score": 65.2,
         "games_away": 2,
         "games_home": 1,
-        "home_score": 82.6,
+        "home_score": 82.3,
         "margin_home": 17.1,
-        "proj_poss": 74.3,
+        "proj_poss": 74.1,
         "rank_away": 262,
         "rank_home": 94,
         "spread": -17.1,
-        "total": 148.1
+        "total": 147.5
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -486,16 +507,16 @@
       "home_short": "Rutgers",
       "matchup": "La Salle Explorers @ Rutgers Scarlet Knights",
       "model": {
-        "away_score": 64.6,
+        "away_score": 64.5,
         "games_away": 1,
         "games_home": 2,
-        "home_score": 84.0,
+        "home_score": 83.9,
         "margin_home": 19.4,
-        "proj_poss": 75.0,
+        "proj_poss": 74.9,
         "rank_away": 210,
         "rank_home": 49,
         "spread": -19.4,
-        "total": 148.7
+        "total": 148.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -512,16 +533,16 @@
       "home_short": "Alabama",
       "matchup": "LSU New Orleans Privateers @ Alabama Crimson Tide",
       "model": {
-        "away_score": 57.4,
+        "away_score": 57.1,
         "games_away": 2,
         "games_home": 2,
-        "home_score": 89.5,
+        "home_score": 89.2,
         "margin_home": 32.1,
-        "proj_poss": 78.8,
+        "proj_poss": 78.6,
         "rank_away": 313,
         "rank_home": 31,
         "spread": -32.1,
-        "total": 146.9
+        "total": 146.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -552,16 +573,16 @@
       "home_short": "Western Kentucky",
       "matchup": "Chattanooga Mocs @ Western Kentucky Lady Toppers",
       "model": {
-        "away_score": 62.3,
+        "away_score": 61.9,
         "games_away": 2,
         "games_home": 1,
-        "home_score": 71.2,
+        "home_score": 70.8,
         "margin_home": 8.9,
-        "proj_poss": 71.0,
+        "proj_poss": 70.9,
         "rank_away": 277,
         "rank_home": 214,
         "spread": -8.9,
-        "total": 133.4
+        "total": 132.8
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -578,16 +599,16 @@
       "home_short": "Colorado",
       "matchup": "Morgan State Lady Bears @ Colorado Buffaloes",
       "model": {
-        "away_score": 55.9,
-        "games_away": 1,
-        "games_home": 0,
-        "home_score": 86.6,
-        "margin_home": 30.7,
-        "proj_poss": 72.9,
-        "rank_away": 333,
-        "rank_home": 40,
-        "spread": -30.7,
-        "total": 142.5
+        "away_score": 55.5,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 87.2,
+        "margin_home": 31.6,
+        "proj_poss": 73.4,
+        "rank_away": 339,
+        "rank_home": 38,
+        "spread": -31.6,
+        "total": 142.7
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -604,16 +625,16 @@
       "home_short": "Denver",
       "matchup": "Lindenwood Lions @ Denver Pioneers",
       "model": {
-        "away_score": 65.1,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 65.9,
-        "margin_home": 0.7,
-        "proj_poss": 71.8,
-        "rank_away": 288,
-        "rank_home": 298,
-        "spread": -0.7,
-        "total": 131.0
+        "away_score": 62.6,
+        "games_away": 2,
+        "games_home": 2,
+        "home_score": 67.9,
+        "margin_home": 5.3,
+        "proj_poss": 71.5,
+        "rank_away": 300,
+        "rank_home": 282,
+        "spread": -5.3,
+        "total": 130.6
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -644,16 +665,16 @@
       "home_short": "Texas State",
       "matchup": "Long Island University Sharks @ Texas State Bobcats",
       "model": {
-        "away_score": 66.6,
-        "games_away": 1,
-        "games_home": 0,
-        "home_score": 78.9,
-        "margin_home": 12.3,
-        "proj_poss": 73.8,
-        "rank_away": 281,
-        "rank_home": 154,
-        "spread": -12.3,
-        "total": 145.5
+        "away_score": 61.2,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 75.4,
+        "margin_home": 14.3,
+        "proj_poss": 73.2,
+        "rank_away": 293,
+        "rank_home": 145,
+        "spread": -14.3,
+        "total": 136.6
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -678,54 +699,39 @@
       "status": "skipped"
     },
     {
-      "away_short": "Hope International",
+      "away_short": "Jackson State",
       "cards": [],
-      "espn_event_id": "401921520",
-      "home_short": "Cal State Fullerton",
-      "matchup": "Hope International Royals @ Cal State Fullerton Titans",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-05T03:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Saint Mary's",
-      "cards": [],
-      "espn_event_id": "401915978",
-      "home_short": "Stanford",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": null,
-        "spread_src": null,
-        "total": null,
-        "total_src": null
-      },
-      "matchup": "Saint Mary's Gaels @ Stanford Cardinal",
+      "espn_event_id": "401918553",
+      "home_short": "Grand Canyon",
+      "matchup": "Jackson State Lady Tigers @ Grand Canyon Lopes",
       "model": {
-        "away_score": 61.9,
-        "games_away": 0,
+        "away_score": 55.7,
+        "games_away": 2,
         "games_home": 1,
-        "home_score": 75.1,
-        "margin_home": 13.2,
-        "proj_poss": 71.8,
-        "rank_away": 144,
-        "rank_home": 57,
-        "spread": -13.2,
-        "total": 137.1
+        "home_score": 84.0,
+        "margin_home": 28.3,
+        "proj_poss": 73.1,
+        "rank_away": 353,
+        "rank_home": 88,
+        "spread": -28.3,
+        "total": 139.7
       },
       "neutral_site": false,
       "pass_reasons": [
-        "insufficient sample (<2 games on one side)"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-05T03:00Z",
+      "start": "2026-11-05T01:00Z",
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-05T03:32:03.440961Z",
+  "generated_at": "2026-11-05T03:40:07.426640Z",
+  "market_bias": {
+    "mean_spread_delta": 2.55,
+    "mean_total_delta": -8.8,
+    "n_spread_lines": 2,
+    "n_total_lines": 2
+  },
   "n_cards": 0,
   "n_games": 36,
   "odds_available": true,

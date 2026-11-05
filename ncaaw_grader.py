@@ -36,7 +36,7 @@ from statistics import median
 
 from ncaaw_model import (
     TRAINED_WEIGHTS, SPREAD_SIGMA, TOTAL_SIGMA,
-    predict, norm_cdf, early_season_sigma, canon_name,
+    predict, norm_cdf, early_season_sigma, canon_name, canon_match,
 )
 from ncaaw_data_scraper import (
     DATA_ROOT, TARGET_BOOKS, SHARP_ANCHORS, _et_date,
@@ -227,9 +227,8 @@ def _markets_for_book(odds_event: dict, book_key: str) -> dict[str, list]:
 
 
 def _team_outcome(outcomes: list, team_name: str) -> dict | None:
-    tc = canon_name(team_name)
     for o in outcomes:
-        if canon_name(o.get("name") or "") == tc:
+        if canon_match(o.get("name") or "", team_name):
             return o
     return None
 
@@ -341,6 +340,10 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
     """Grade one game: model projection, market anchor, candidate cards."""
     hname = game["home"]["display_name"]
     aname = game["away"]["display_name"]
+    # clean (mascot-free) names for odds lookups — canon_match trims mascots
+    # from the Odds-API side only, so the reference side must be clean
+    hloc = game["home"].get("location") or hname
+    aloc = game["away"].get("location") or aname
     matchup = f"{aname} @ {hname}"
     rec: dict = {
         "espn_event_id": game["espn_event_id"],
@@ -387,7 +390,7 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
         rec["pass_reasons"].append("no market line (nothing to anchor against)")
         return rec
 
-    anchor = market_anchor_lines(odds_event, hname)
+    anchor = market_anchor_lines(odds_event, hloc)
     rec["market"] = anchor
     if min(th["games"], ta["games"]) < MIN_GAMES_TO_BET:
         rec["pass_reasons"].append(
@@ -426,10 +429,11 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
                 p_home = _clip(anchor["pinnacle_fair_home_ml"]
                                + _clip(p_home - anchor["pinnacle_fair_home_ml"],
                                        -0.035, 0.035), 0.05, 0.95)
-            for side, team, p in (("home", hname, p_home), ("away", aname, 1 - p_home)):
+            for side, team, lookup, p in (("home", hname, hloc, p_home),
+                                          ("away", aname, aloc, 1 - p_home)):
                 if p < MIN_TEAM_WIN_PROB:
                     continue
-                bp = best_price(odds_event, "h2h", team)
+                bp = best_price(odds_event, "h2h", lookup)
                 if not bp:
                     continue
                 price, _, book = bp
@@ -461,8 +465,8 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
                 ))
 
         if ENABLED_MARKETS["spread"]:
-            for side, team in (("home", hname), ("away", aname)):
-                bp = best_price(odds_event, "spreads", team)
+            for side, team, lookup in (("home", hname, hloc), ("away", aname, aloc)):
+                bp = best_price(odds_event, "spreads", lookup)
                 if not bp:
                     continue
                 price, line, book = bp
@@ -663,9 +667,30 @@ def run(target_date: str, data_root: Path = DATA_ROOT) -> dict:
                 c.unit_size, c.risk = SHADOW_UNITS, "Shadow(cap-cut)"
                 shadow_all.append(c)
 
+    # Model-vs-market bias instrument: signed deltas across every game with a
+    # line. A persistent mean (e.g. totals always -5) = recalibrate; noise
+    # around zero = healthy. This is the "do we need to tune" gauge.
+    s_deltas = [rec["model"]["margin_home"] - (-rec["market"]["spread_home"])
+                for rec in graded
+                if rec.get("model") and (rec.get("market") or {}).get("spread_home") is not None]
+    t_deltas = [rec["model"]["total"] - rec["market"]["total"]
+                for rec in graded
+                if rec.get("model") and (rec.get("market") or {}).get("total") is not None]
+    market_bias = {
+        "n_spread_lines": len(s_deltas),
+        "n_total_lines": len(t_deltas),
+        "mean_spread_delta": round(sum(s_deltas) / len(s_deltas), 2) if s_deltas else None,
+        "mean_total_delta": round(sum(t_deltas) / len(t_deltas), 2) if t_deltas else None,
+    }
+    if s_deltas or t_deltas:
+        print(f"[grader] model-vs-market: spread Δ {market_bias['mean_spread_delta']} "
+              f"({len(s_deltas)} lines) · total Δ {market_bias['mean_total_delta']} "
+              f"({len(t_deltas)} lines)")
+
     out = {
         "date": target_date,
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "market_bias": market_bias,
         "odds_available": bool(odds.get("available")),
         "n_games": len(graded),
         "n_cards": len(fired),

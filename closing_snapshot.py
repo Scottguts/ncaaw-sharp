@@ -16,7 +16,7 @@ import sys
 from datetime import datetime, timezone, timedelta
 
 from ncaaw_data_scraper import (
-    fetch_odds, canon_name, _et_date, TARGET_BOOKS,
+    fetch_odds, canon_name, canon_match, _et_date, TARGET_BOOKS,
 )
 from ncaaw_grader import (
     _markets_for_book, _team_outcome, devig_two_way,
@@ -85,20 +85,16 @@ def run() -> int:
         print(f"[closing] odds unavailable: {odds.get('errors')}")
         return 0
 
-    # index odds events by (canon away, canon home, et date)
-    idx = {}
-    for og in odds.get("games") or []:
-        key = (canon_name(og.get("away_team") or ""),
-               canon_name(og.get("home_team") or ""),
-               _et_date(og.get("commence_time") or ""))
-        idx[key] = og
+    events = odds.get("games") or []
 
     updated = 0
     for r in targets:
         matchup = r.get("matchup") or " @ "
         away_name, home_name = (matchup.split(" @ ") + [""])[:2]
-        ev = idx.get((canon_name(away_name), canon_name(home_name),
-                      r.get("date") or ""))
+        ev = next((og for og in events
+                   if _et_date(og.get("commence_time") or "") == (r.get("date") or "")
+                   and canon_match(og.get("away_team") or "", away_name)
+                   and canon_match(og.get("home_team") or "", home_name)), None)
         if not ev:
             continue
         price, fair = _closing_quote(ev, r)
