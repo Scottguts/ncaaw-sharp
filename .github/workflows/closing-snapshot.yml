@@ -1,0 +1,61 @@
+name: Closing-line snapshot (CLV)
+
+# Hourly during game hours (NCAAW tips ~noon-11pm ET). One odds call per run,
+# via key rotation — only runs that find pending bets near tip spend quota.
+on:
+  schedule:
+    - cron: "5 17-23 11,12,1-4 * *"   # 12:05-18:05 ET (EST)
+    - cron: "5 0-4 11,12,1-4 * *"     # 19:05-23:05 ET (EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ncaaw-closing-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ODDS_API_KEY:   ${{ secrets.ODDS_API_KEY }}
+      ODDS_API_KEY_2: ${{ secrets.ODDS_API_KEY_2 }}
+      ODDS_API_KEY_3: ${{ secrets.ODDS_API_KEY_3 }}
+      ODDS_API_KEY_4: ${{ secrets.ODDS_API_KEY_4 }}
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Skip odds call when nothing is pending near tip
+        id: pending
+        run: |
+          python - <<'EOF' >> "$GITHUB_OUTPUT"
+          from closing_snapshot import _read_log
+          import datetime as dt
+          rows = [r for r in _read_log() if r.get("status") == "pending" and not r.get("closing_price")]
+          print(f"any={'true' if rows else 'false'}")
+          EOF
+      - name: Capture closing prices
+        if: steps.pending.outputs.any == 'true'
+        run: python closing_snapshot.py
+      - name: Commit
+        if: steps.pending.outputs.any == 'true'
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add ncaaw_data/bet_log.csv
+          if git diff --staged --quiet; then
+            echo "No closing updates"
+          else
+            git commit -m "closing snapshot"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+            done
+          fi

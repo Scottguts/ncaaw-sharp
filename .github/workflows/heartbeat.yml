@@ -1,0 +1,42 @@
+name: Heartbeat (dead-man's switch)
+
+# If no slate has been committed by early afternoon ET, ping Discord and
+# auto-dispatch daily-bets. Survives GitHub dropping every daily-bets cron.
+on:
+  schedule:
+    - cron: "30 18 11,12,1-4 * *"   # 13:30 ET (EST)
+    - cron: "30 19 11,12,1-4 * *"   # 14:30 ET — second chance
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check today's slate exists
+        id: check
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          if [ -f "ncaaw_data/$TODAY/cards.md" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Alert + dispatch daily-bets
+        if: steps.check.outputs.ok == 'false'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$DISCORD_WEBHOOK_URL" ]; then
+            curl -s -X POST "$DISCORD_WEBHOOK_URL" -H 'Content-Type: application/json' \
+              -d '{"content":"💓 **NCAAW heartbeat**: no slate committed yet today — auto-dispatching daily-bets now."}' || true
+          fi
+          gh workflow run daily-bets.yml --ref main

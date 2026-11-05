@@ -1,0 +1,104 @@
+name: Daily NCAAW Sharp Cards
+
+# Runs mid-morning ET during the NCAAW season (Nov-Apr). GitHub cron is
+# best-effort and silently drops runs under load, so there are staggered
+# retries; `precheck` makes every attempt after the first successful one a
+# free no-op (no double-posting to Discord).
+on:
+  schedule:
+    - cron: "47 14 11,12,1-4 * *"   # 09:47 ET (EST) — primary
+    - cron: "32 15 11,12,1-4 * *"   # 10:32 ET — retry
+    - cron: "17 16 11,12,1-4 * *"   # 11:17 ET — retry
+    - cron: "17 17 11,12,1-4 * *"   # 12:17 ET — backup
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-ncaaw-sharp
+  cancel-in-progress: false
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TZ: America/New_York
+    outputs:
+      done: ${{ steps.guard.outputs.done }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Determine target date (US/Eastern)
+        id: date
+        run: echo "value=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+      - name: Skip if today's cards already exist
+        id: guard
+        run: |
+          if [ -f "ncaaw_data/${{ steps.date.outputs.value }}/cards.md" ]; then
+            echo "done=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "done=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  build-and-send:
+    needs: precheck
+    if: ${{ needs.precheck.outputs.done != 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ODDS_API_KEY:        ${{ secrets.ODDS_API_KEY }}
+      ODDS_API_KEY_2:      ${{ secrets.ODDS_API_KEY_2 }}
+      ODDS_API_KEY_3:      ${{ secrets.ODDS_API_KEY_3 }}
+      ODDS_API_KEY_4:      ${{ secrets.ODDS_API_KEY_4 }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      TZ:                  America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Determine target date (US/Eastern)
+        id: date
+        run: echo "value=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+      - name: Configure git identity
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+
+      - name: Settle pending bets (yesterday's finals)
+        run: python bet_tracker.py --settle
+        continue-on-error: true
+
+      - name: Scrape slate (Torvik + ESPN + odds)
+        run: python ncaaw_data_scraper.py --date ${{ steps.date.outputs.value }}
+
+      - name: Grade games and build cards
+        run: python ncaaw_grader.py --date ${{ steps.date.outputs.value }}
+
+      - name: Send cards to Discord
+        run: python notify.py --date ${{ steps.date.outputs.value }}
+        continue-on-error: true
+
+      - name: Append cards to bet log + rebuild record
+        run: python bet_tracker.py --append ${{ steps.date.outputs.value }}
+
+      - name: Rebuild public site
+        run: python build_site.py
+        continue-on-error: true
+
+      - name: Commit results
+        run: |
+          git add ncaaw_data/ docs/
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "slate ${{ steps.date.outputs.value }}"
+            # closing-snapshot commits to the same repo — rebase + retry
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+            done
+          fi
