@@ -1,0 +1,66 @@
+name: Weekly auto-retune
+
+# Sundays in-season: refresh the current season's game log, re-run the
+# cross-fold tune, and adopt new weights ONLY if they beat the deployed ones
+# on every completed-season holdout. This is how the model absorbs the new
+# season's scoring environment as the sample grows — no gates are touched.
+# Torvik ratings for the current season come from the committed
+# latest_teams.json snapshot (barttorvik 403s runner IPs).
+on:
+  schedule:
+    - cron: "0 9 * 11,12,1-4 0"   # Sundays 04:00 ET (EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ncaaw-retune
+  cancel-in-progress: false
+
+jobs:
+  retune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Refresh current-season game log
+        run: python historic_scrape.py --seasons 2027 --refresh
+      - name: Cross-fold retune
+        id: tune
+        run: |
+          set +e
+          python train_model.py --auto | tee tune.log
+          echo "adopted=$([ ${PIPESTATUS[0]} -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Commit new weights
+        if: steps.tune.outputs.adopted == 'true'
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add weights.json ncaaw_data/history/
+          git commit -m "weekly retune: adopted (see weights.json metrics)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+          done
+      - name: Notify Discord
+        if: always()
+        run: |
+          if [ -n "$DISCORD_WEBHOOK_URL" ]; then
+            SUMMARY=$(grep -E "\[auto\] (fold means|REJECTED|accepted|wrote)" tune.log | tail -3 | tr '\n' ' ' | cut -c1-500)
+            if [ "${{ steps.tune.outputs.adopted }}" = "true" ]; then
+              MSG="🧠 **Weekly retune: new weights adopted.** $SUMMARY"
+            else
+              MSG="🧠 Weekly retune: kept current weights (folds did not improve). $SUMMARY"
+            fi
+            curl -s -X POST "$DISCORD_WEBHOOK_URL" -H 'Content-Type: application/json' \
+              -d "{\"content\": \"$MSG\"}" || true
+          fi

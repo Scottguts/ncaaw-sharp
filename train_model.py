@@ -1,25 +1,24 @@
-"""Tune the v13 model on historic seasons + recalibrate error sigmas.
+"""Tune the model on historic seasons + recalibrate error sigmas (v2).
 
-    python train_model.py                 # tune, validate, write weights.json
-    python train_model.py --eval-only     # just report metrics for current weights
+    python train_model.py --auto        # full protocol; writes weights.json on improvement
+    python train_model.py --eval-only   # report current weights vs all seasons
 
-Protocol (honest about Torvik rating lookahead — the women's site only serves
-season-END ratings, so same-season backtests see future-informed ratings):
-  1. Baseline: v13 weights on season 2025 (train) and 2026 (holdout).
-  2. Coordinate-descent tune on 2025 only; accept ONLY if the 2026 holdout
-     improves on BOTH spread and total MAE vs the v13 baseline.
-  3. If accepted, re-run the identical tune on 2025+2026 combined for the
-     deployment weights (standard refit-on-all after validation).
-  4. Sigmas: residual std of the deployed weights on the 2026 holdout,
-     inflated 5% because live (lookahead-free) ratings run slightly noisier.
+v2 protocol (2026-11-05):
+  * Trains on every games_<season>.json in ncaaw_data/history/ (2024-2026 +
+    the CURRENT season once it has >=300 Torvik-covered games — this is how
+    the model absorbs the new season's scoring environment instead of
+    guessing from a two-line sample).
+  * Recency-weighted loss: older seasons count less (0.7x oldest -> 1.0x most
+    recent completed; current season 1.3x).
+  * Cross-fold validation: each completed season held out once, tuned on the
+    rest. The tune is ADOPTED only if the fold-mean improves the current
+    deployed weights on BOTH heads, with no fold regressing >1.5% on spread.
+  * On adoption: refit on all seasons, sigmas from residuals on the most
+    recent season (x1.05 live-noise inflation), write weights.json.
 
-In-season records are reconstructed from the game log (no lookahead on the
-winPct feature). Rating lookahead remains on adjOE/adjDE/four-factors — the
-same limitation the original 319-game jsx tune had, now mitigated by
-cross-season validation.
-
-Outputs weights.json — ncaaw_model auto-loads it when present (v13 constants
-remain the fallback).
+Honesty note: Torvik's women's site serves season-END ratings only, so
+same-season backtests carry rating lookahead. Cross-season folds are the
+defense; treat absolute MAE as optimistic, relative comparisons as valid.
 """
 
 from __future__ import annotations
@@ -31,10 +30,17 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from ncaaw_model import TRAINED_WEIGHTS as V13_WEIGHTS, predict
+from ncaaw_model import predict
 
 HISTORY = Path(__file__).resolve().parent / "ncaaw_data" / "history"
 WEIGHTS_OUT = Path(__file__).resolve().parent / "weights.json"
+
+# v13 constants are the ultimate fallback baseline (ncaaw_model.TRAINED_WEIGHTS
+# already reflects weights.json when present, so read the raw fallback here).
+from ncaaw_model import TRAINED_WEIGHTS as _ACTIVE_WEIGHTS
+
+MIN_CURRENT_SEASON_GAMES = 300
+CURRENT_SEASON_WEIGHT = 1.3
 
 # key -> (lo, hi). Only these are tuned; structural caps stay fixed.
 BOUNDS = {
@@ -55,12 +61,15 @@ BOUNDS = {
 # Dataset
 # ---------------------------------------------------------------------------
 
+def available_seasons() -> list[int]:
+    return sorted(int(p.stem.split("_")[1]) for p in HISTORY.glob("games_*.json"))
+
+
 def load_season(season: int) -> list[dict]:
     games = json.loads((HISTORY / f"games_{season}.json").read_text())
     teams = json.loads((HISTORY / f"teams_{season}.json").read_text())["teams"]
     games.sort(key=lambda g: g["date"])
-    # reconstruct in-season records (as-of BEFORE each game)
-    wl: dict[str, list[int]] = {}
+    wl: dict[str, list[int]] = {}   # in-season records, as-of BEFORE each game
     rows = []
     for g in games:
         h, a = g["home"], g["away"]
@@ -69,48 +78,62 @@ def load_season(season: int) -> list[dict]:
             hw, hl = wl.get(h, [0, 0])
             aw, al = wl.get(a, [0, 0])
             rows.append({
-                "date": g["date"],
+                "season": season,
                 "neutral": g["neutral_site"],
                 "home": {**th, "record": f"{hw}-{hl}", "conf": g.get("home_conf") or ""},
                 "away": {**ta, "record": f"{aw}-{al}", "conf": g.get("away_conf") or ""},
                 "margin_home": g["home_score"] - g["away_score"],
                 "total": g["home_score"] + g["away_score"],
             })
-        # update records regardless of Torvik coverage
         hwon = g["home_score"] > g["away_score"]
         wl.setdefault(h, [0, 0])[0 if hwon else 1] += 1
         wl.setdefault(a, [0, 0])[1 if hwon else 0] += 1
     return rows
 
 
-def evaluate(weights: dict, rows: list[dict]) -> dict:
-    s_err = t_err = 0.0
-    su = 0
-    n = 0
+def season_weights(seasons: list[int], current: int | None) -> dict[int, float]:
+    completed = [s for s in seasons if s != current]
+    w = {}
+    n = len(completed)
+    for i, s in enumerate(sorted(completed)):
+        w[s] = 0.7 + 0.3 * (i / max(1, n - 1)) if n > 1 else 1.0
+    if current in seasons:
+        w[current] = CURRENT_SEASON_WEIGHT
+    return w
+
+
+# ---------------------------------------------------------------------------
+# Evaluation + tuning
+# ---------------------------------------------------------------------------
+
+def evaluate(weights: dict, rows: list[dict], row_w: dict[int, float] | None = None) -> dict:
+    s_err = t_err = wsum = 0.0
+    su = n = 0
     for r in rows:
+        w = (row_w or {}).get(r["season"], 1.0)
         p = predict(r["away"], r["home"], weights, neutral_site=r["neutral"])
-        pm = -p["spread"]              # predicted home margin
-        s_err += abs(pm - r["margin_home"])
-        t_err += abs(p["total"] - r["total"])
+        pm = -p["spread"]
+        s_err += w * abs(pm - r["margin_home"])
+        t_err += w * abs(p["total"] - r["total"])
+        wsum += w
         if (pm > 0) == (r["margin_home"] > 0) and r["margin_home"] != 0:
             su += 1
         n += 1
-    return {"n": n, "spread_mae": s_err / n, "total_mae": t_err / n,
+    return {"n": n, "spread_mae": s_err / wsum, "total_mae": t_err / wsum,
             "su_pct": su / n * 100}
 
 
-def _objective(m: dict) -> float:
+def _obj(m: dict) -> float:
     return m["spread_mae"] + m["total_mae"]
 
 
-def tune(rows: list[dict], start: dict, passes: int = 5) -> dict:
-    """Coordinate descent with shrinking multiplicative steps."""
+def tune(rows: list[dict], start: dict, row_w: dict[int, float] | None = None,
+         passes: int = 7, step0: float = 0.30, label: str = "") -> dict:
     w = dict(start)
-    best = evaluate(w, rows)
-    best_obj = _objective(best)
-    print(f"[tune] start: spread {best['spread_mae']:.3f} / total "
-          f"{best['total_mae']:.3f} / SU {best['su_pct']:.1f}% (n={best['n']})")
-    step = 0.25
+    best = evaluate(w, rows, row_w)
+    best_obj = _obj(best)
+    step = step0
+    stale = 0
     for p in range(passes):
         improved = False
         for key, (lo, hi) in BOUNDS.items():
@@ -121,16 +144,17 @@ def tune(rows: list[dict], start: dict, passes: int = 5) -> dict:
                 if cand == base:
                     continue
                 w[key] = cand
-                m = evaluate(w, rows)
-                if _objective(m) < best_obj - 1e-6:
-                    best_obj, best, base = _objective(m), m, cand
+                m = evaluate(w, rows, row_w)
+                if _obj(m) < best_obj - 1e-6:
+                    best_obj, best, base = _obj(m), m, cand
                     improved = True
                 else:
                     w[key] = base
-        print(f"[tune] pass {p + 1}: spread {best['spread_mae']:.3f} / total "
-              f"{best['total_mae']:.3f} / SU {best['su_pct']:.1f}% (step {step:.3f})")
-        step *= 0.5
-        if not improved and p >= 2:
+        print(f"[tune{label}] pass {p + 1}: spread {best['spread_mae']:.3f} / "
+              f"total {best['total_mae']:.3f} / SU {best['su_pct']:.1f}% (step {step:.3f})")
+        step *= 0.55
+        stale = 0 if improved else stale + 1
+        if stale >= 2:
             break
     return w
 
@@ -146,60 +170,89 @@ def residual_sigmas(weights: dict, rows: list[dict]) -> tuple[float, float]:
     return math.sqrt(ss / n), math.sqrt(tt / n)
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--eval-only", action="store_true")
-    ap.add_argument("--train-season", type=int, default=2025)
-    ap.add_argument("--holdout-season", type=int, default=2026)
-    args = ap.parse_args()
+# ---------------------------------------------------------------------------
+# Protocol
+# ---------------------------------------------------------------------------
 
-    train_rows = load_season(args.train_season)
-    hold_rows = load_season(args.holdout_season)
-    print(f"[data] train {args.train_season}: {len(train_rows)} games · "
-          f"holdout {args.holdout_season}: {len(hold_rows)} games")
+def auto(current_season: int | None = None) -> int:
+    seasons = available_seasons()
+    data = {s: load_season(s) for s in seasons}
+    # current season only joins once it has a real sample
+    if current_season in data and len(data[current_season]) < MIN_CURRENT_SEASON_GAMES:
+        print(f"[auto] season {current_season}: only {len(data[current_season])} "
+              f"covered games (<{MIN_CURRENT_SEASON_GAMES}) — excluded this week")
+        data.pop(current_season)
+        seasons = [s for s in seasons if s != current_season]
+    sw = season_weights(seasons, current_season)
+    print(f"[auto] seasons: " + ", ".join(
+        f"{s} ({len(data[s])} games, w={sw[s]:.2f})" for s in seasons))
 
-    base_train = evaluate(V13_WEIGHTS, train_rows)
-    base_hold = evaluate(V13_WEIGHTS, hold_rows)
-    print(f"[v13] train:   spread {base_train['spread_mae']:.3f} / total "
-          f"{base_train['total_mae']:.3f} / SU {base_train['su_pct']:.1f}%")
-    print(f"[v13] holdout: spread {base_hold['spread_mae']:.3f} / total "
-          f"{base_hold['total_mae']:.3f} / SU {base_hold['su_pct']:.1f}%")
-    if args.eval_only:
-        return 0
+    baseline = dict(_ACTIVE_WEIGHTS)
+    folds = [s for s in seasons if s != current_season]
+    results = []
+    for hold in folds:
+        train_rows = [r for s in seasons if s != hold for r in data[s]]
+        hold_rows = data[hold]
+        base_m = evaluate(baseline, hold_rows)
+        print(f"\n[fold hold={hold}] baseline: spread {base_m['spread_mae']:.3f} "
+              f"/ total {base_m['total_mae']:.3f} / SU {base_m['su_pct']:.1f}%")
+        tuned = tune(train_rows, baseline, sw, label=f" hold={hold}")
+        tuned_m = evaluate(tuned, hold_rows)
+        print(f"[fold hold={hold}] tuned:    spread {tuned_m['spread_mae']:.3f} "
+              f"/ total {tuned_m['total_mae']:.3f} / SU {tuned_m['su_pct']:.1f}%")
+        results.append((hold, base_m, tuned_m))
 
-    tuned = tune(train_rows, V13_WEIGHTS)
-    tuned_hold = evaluate(tuned, hold_rows)
-    print(f"[tuned] holdout: spread {tuned_hold['spread_mae']:.3f} / total "
-          f"{tuned_hold['total_mae']:.3f} / SU {tuned_hold['su_pct']:.1f}%")
-
-    if (tuned_hold["spread_mae"] >= base_hold["spread_mae"]
-            or tuned_hold["total_mae"] >= base_hold["total_mae"]):
-        print("[tune] REJECTED — holdout did not improve on both heads; "
-              "keeping v13 weights (no weights.json written)")
+    mean_bs = sum(r[1]["spread_mae"] for r in results) / len(results)
+    mean_ts = sum(r[2]["spread_mae"] for r in results) / len(results)
+    mean_bt = sum(r[1]["total_mae"] for r in results) / len(results)
+    mean_tt = sum(r[2]["total_mae"] for r in results) / len(results)
+    worst_reg = max((r[2]["spread_mae"] / r[1]["spread_mae"] - 1) for r in results)
+    print(f"\n[auto] fold means — spread {mean_bs:.3f}->{mean_ts:.3f}, "
+          f"total {mean_bt:.3f}->{mean_tt:.3f}, worst spread regression "
+          f"{worst_reg * 100:+.1f}%")
+    if not (mean_ts < mean_bs and mean_tt < mean_bt and worst_reg < 0.015):
+        print("[auto] REJECTED — folds did not beat the deployed weights; "
+              "weights.json unchanged")
         return 1
 
-    print("[tune] holdout improved on both heads — refitting on all seasons "
-          "for deployment")
-    final = tune(train_rows + hold_rows, tuned, passes=3)
-    s_sig, t_sig = residual_sigmas(final, hold_rows)
-    s_sig *= 1.05   # live ratings (no lookahead) run slightly noisier
+    print("[auto] accepted — refitting on all seasons for deployment")
+    all_rows = [r for s in seasons for r in data[s]]
+    final = tune(all_rows, tune(all_rows, baseline, sw, passes=5, label=" refit"),
+                 sw, passes=3, step0=0.05, label=" polish")
+    sig_season = max(folds)
+    s_sig, t_sig = residual_sigmas(final, data[sig_season])
+    s_sig *= 1.05
     t_sig *= 1.05
-
     out = {
         "trained_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "train_seasons": [args.train_season, args.holdout_season],
-        "weights": {**V13_WEIGHTS, **final},
+        "train_seasons": seasons,
+        "weights": {**baseline, **final},
         "spread_sigma": round(s_sig, 3),
         "total_sigma": round(t_sig, 3),
         "metrics": {
-            "v13_holdout": base_hold,
-            "tuned_holdout": tuned_hold,
+            "folds": [{"holdout": h, "baseline": b, "tuned": t}
+                      for h, b, t in results],
         },
     }
     WEIGHTS_OUT.write_text(json.dumps(out, indent=2))
-    print(f"[tune] wrote {WEIGHTS_OUT.name}: sigmas spread {s_sig:.2f} / "
-          f"total {t_sig:.2f}")
+    print(f"[auto] wrote weights.json — sigmas spread {s_sig:.2f} / total {t_sig:.2f}")
     return 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--auto", action="store_true", help="full cross-fold protocol")
+    ap.add_argument("--eval-only", action="store_true")
+    ap.add_argument("--current-season", type=int, default=2027)
+    args = ap.parse_args()
+    if args.eval_only:
+        for s in available_seasons():
+            rows = load_season(s)
+            m = evaluate(_ACTIVE_WEIGHTS, rows)
+            print(f"[eval] {s}: n={m['n']} spread {m['spread_mae']:.3f} / "
+                  f"total {m['total_mae']:.3f} / SU {m['su_pct']:.1f}%")
+        return 0
+    return auto(args.current_season)
 
 
 if __name__ == "__main__":

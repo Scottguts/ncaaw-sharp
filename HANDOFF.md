@@ -43,7 +43,7 @@ November is deliberately quiet.
 |---|---|
 | `ncaaw_model.py` | Model: predict(), prob layer (normal error model), name canonicalization. Auto-loads tuned `weights.json` (v13 constants = fallback; delete weights.json to roll back). |
 | `historic_scrape.py` | Full-season ESPN results + Torvik ratings → ncaaw_data/history/ (2 seasons, ~12k games). |
-| `train_model.py` | Cross-season-validated coordinate-descent tune + sigma recalibration → weights.json. 2026-11-04 tune (10,304 games): holdout spread MAE 9.46→8.82, SU 79.7→80.2%; sigmas spread 11.73 / total 15.97 (v13's 13.7 total sigma was overconfident). |
+| `train_model.py` | v2 trainer: cross-FOLD validation (every completed season held out once), recency-weighted loss, current season auto-included at ≥300 covered games (how the model absorbs the new scoring environment). `--auto` adopts new weights.json only if fold means beat the DEPLOYED weights on both heads with no fold regressing >1.5%. Runs weekly via retune.yml (Sundays 4am ET) with a Discord adopted/kept note. |
 | `line_watch.py` | Line-drop watcher: re-scrape + re-grade every 2h, fire ONLY new cards to Discord (yellow LINE DROP embed), day-level caps enforced across runs via bet_log. |
 | `ncaaw_data_scraper.py` | Torvik ratings (JS-check cookie bypass), ESPN slate (neutral-site, conf ids), Odds API board (one call/run) with key rotation + quota alert. |
 | `ncaaw_grader.py` | Market anchoring, cover probs, gates, card selection. Writes grades.json + cards.md. Zero API calls. |

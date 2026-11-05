@@ -90,6 +90,17 @@ background:transparent;font-size:14px;font-weight:700}}
 background:{C['surface']};border:1px solid {C['border']};border-radius:10px;margin-bottom:8px}}
 .g{{color:{C['green']}}} .r{{color:{C['red']}}} .y{{color:{C['yellow']}}} .bl{{color:{C['blue']}}}
 .empty{{text-align:center;color:{C['mut']};padding:40px}}
+.search{{width:100%;background:{C['bg']};border:1px solid {C['border']};border-radius:8px;
+padding:10px 14px;color:{C['text']};font-family:inherit;font-size:13px;outline:none;
+margin-bottom:14px}}
+.search:focus{{border-color:{C['accent']}66}}
+.gamecard{{cursor:pointer}}
+.chev{{color:{C['dim']};font-size:14px;margin-right:6px}}
+.details{{margin-top:12px;border-top:1px solid {C['border']};padding-top:12px}}
+.details p{{font-size:12px;color:{C['mut']};line-height:1.55;margin:.4rem 0}}
+.details b{{color:{C['text']}}}
+.statrow td{{font-variant-numeric:tabular-nums}}
+.better{{color:{C['green']};font-weight:700}}
 table{{width:100%;border-collapse:collapse;font-size:12px}}
 th{{padding:8px 6px;text-align:left;font-size:10px;font-weight:700;color:{C['mut']};
 text-transform:uppercase;border-bottom:2px solid {C['border']}}}
@@ -105,6 +116,20 @@ function showTab(id){
   document.getElementById('pane-'+id).style.display='block';
   document.getElementById('tab-'+id).classList.add('active');
   if(history.replaceState)history.replaceState(null,'','#'+id);
+}
+function toggleGame(id){
+  const d=document.getElementById('det-'+id);
+  const c=document.getElementById('chev-'+id);
+  const open=d.style.display!=='none';
+  d.style.display=open?'none':'block';
+  if(c)c.textContent=open?'▸':'▾';
+}
+function searchGames(q){
+  q=q.trim().toLowerCase();
+  document.querySelectorAll('.gamecard').forEach(el=>{
+    el.style.display=(!q||el.dataset.search.includes(q))?'':'none';
+  });
+  document.querySelectorAll('.secthead').forEach(el=>{el.style.display=q?'none':'';});
 }
 window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
@@ -172,15 +197,150 @@ def _pnl(bets: list[dict]) -> dict:
 # Tab renderers
 # ---------------------------------------------------------------------------
 
+def _team_stats_ctx(day: Path) -> dict:
+    """espn_event_id -> {'home': torvik stats, 'away': torvik stats} for the
+    advanced-metrics panel. Joined from the day's slate.json + teams.json."""
+    try:
+        slate = json.loads((day / "slate.json").read_text())
+        teams = json.loads((day / "teams.json").read_text())["teams"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    ctx = {}
+    for g in slate.get("games", []):
+        ctx[g["espn_event_id"]] = {
+            "home": teams.get(g["home"]["canon"]),
+            "away": teams.get(g["away"]["canon"]),
+        }
+    return ctx
+
+
+_STAT_ROWS = [
+    ("T-Rank", "tRank", False), ("Record", "record", None),
+    ("adjOE", "adjOE", True), ("adjDE", "adjDE", False),
+    ("Tempo", "tempo", None), ("eFG%", "eFG", True), ("eFG% def", "eFGD", False),
+    ("TOV%", "tor", False), ("TOV% forced", "torD", True),
+    ("ORB%", "orb", True), ("DRB%", "drb", False),
+    ("FT rate", "ftr", True), ("FT rate def", "ftrD", False),
+]
+
+
+def _details_html(g: dict, stats: dict | None) -> str:
+    """Advanced metrics table + generated reasoning for one game."""
+    m = g.get("model") or {}
+    mk = g.get("market") or {}
+    ts = stats or {}
+    th, ta = ts.get("home"), ts.get("away")
+    away_nm = g.get("away_short") or "Away"
+    home_nm = g.get("home_short") or "Home"
+    parts = []
+
+    # four-factor stats are raw this-season numbers — meaningless at 0 games
+    # (Torvik fills placeholders like eFG 0.0 / def 200.0)
+    _FACTOR_KEYS = {"eFG", "eFGD", "tor", "torD", "orb", "drb", "ftr", "ftrD"}
+    a_played = bool(ta and ta.get("games"))
+    h_played = bool(th and th.get("games"))
+
+    def _fmt(v, key, played):
+        if key in _FACTOR_KEYS and not played:
+            return None
+        if isinstance(v, float):
+            return f"{v:.1f}"
+        return v
+
+    if th and ta:
+        rows = []
+        for label, key, higher_better in _STAT_ROWS:
+            av, hv = _fmt(ta.get(key), key, a_played), _fmt(th.get(key), key, h_played)
+            ac = hc = ""
+            rav, rhv = ta.get(key), th.get(key)
+            if (higher_better is not None and av is not None and hv is not None
+                    and isinstance(rav, (int, float)) and isinstance(rhv, (int, float))):
+                if (rav > rhv) == higher_better and rav != rhv:
+                    ac = " class='better'"
+                elif rav != rhv:
+                    hc = " class='better'"
+            rows.append(f"<tr class='statrow'><td{ac}>{esc(av if av is not None else '—')}</td>"
+                        f"<td style='color:{C['mut']}'>{esc(label)}</td>"
+                        f"<td{hc} style='text-align:right'>{esc(hv if hv is not None else '—')}</td></tr>")
+        parts.append(
+            f"<table style='max-width:420px'><tr><th>{esc(away_nm)}</th>"
+            f"<th style='text-align:center'>TORVIK</th>"
+            f"<th style='text-align:right'>{esc(home_nm)}</th></tr>"
+            + "".join(rows) + "</table>")
+
+    # ── generated reasoning ──
+    paras = []
+    if th and ta and m:
+        net_a = ta["adjOE"] - ta["adjDE"]
+        net_h = th["adjOE"] - th["adjDE"]
+        edge_team = home_nm if net_h > net_a else away_nm
+        paras.append(
+            f"<b>Efficiency:</b> {esc(away_nm)} nets {net_a:+.1f} pts/100 poss "
+            f"(O {ta['adjOE']:.1f} / D {ta['adjDE']:.1f}) vs {esc(home_nm)} "
+            f"{net_h:+.1f} (O {th['adjOE']:.1f} / D {th['adjDE']:.1f}) — a "
+            f"{abs(net_h - net_a):.1f}-point gap favoring {esc(edge_team)} before "
+            f"venue. At ~{m.get('proj_poss', 70):.0f} projected possessions that "
+            f"drives most of the {abs(m.get('margin_home', 0)):.1f}-point model margin.")
+        if a_played and h_played:   # factor stats are placeholders at 0 games
+            ff = []
+            shoot = (ta["eFG"] - th["eFGD"]) - (th["eFG"] - ta["eFGD"])
+            if abs(shoot) >= 3:
+                ff.append(f"shooting leans {esc(away_nm if shoot > 0 else home_nm)} "
+                          f"({abs(shoot):.1f} eFG pts of matchup edge)")
+            to = (th["torD"] - ta["tor"]) - (ta["torD"] - th["tor"])
+            if abs(to) >= 3:
+                ff.append(f"turnover battle leans {esc(away_nm if to > 0 else home_nm)}")
+            glass = (ta["orb"] - (100 - th["drb"])) - (th["orb"] - (100 - ta["drb"]))
+            if abs(glass) >= 3:
+                ff.append(f"offensive glass leans {esc(away_nm if glass > 0 else home_nm)}")
+            if ff:
+                paras.append("<b>Four factors:</b> " + "; ".join(ff) + ".")
+        paras.append(
+            f"<b>Pace:</b> {esc(away_nm)} plays at {ta['tempo']:.0f} poss/40, "
+            f"{esc(home_nm)} at {th['tempo']:.0f} → ~{m.get('proj_poss', 0):.0f} "
+            f"possessions, model total {m.get('total', 0):.1f}.")
+    if g.get("injury_notes"):
+        paras.append("<b>Injuries:</b> " + esc("; ".join(g["injury_notes"])) + ".")
+    anch = g.get("anchored") or {}
+    if mk.get("spread_home") is not None and m:
+        dis = -m["margin_home"] - mk["spread_home"]
+        paras.append(
+            f"<b>Market:</b> book has home {mk['spread_home']:+g} "
+            f"({esc(mk.get('spread_src') or '')}); model says {-m['margin_home']:+.1f} "
+            f"(Δ {dis:+.1f}). Anchored fair margin {anch.get('margin_home', '—')} "
+            f"(shift capped at ±1.5)"
+            + (f"; fair total {anch.get('total')} vs book {mk.get('total'):g}."
+               if mk.get("total") is not None and anch.get("total") is not None else "."))
+    sig = g.get("sigma") or {}
+    if sig:
+        paras.append(f"<b>Uncertainty:</b> σ spread {sig.get('spread')} / total "
+                     f"{sig.get('total')} (widened until both teams reach ~10 games; "
+                     f"currently {m.get('games_away', '?')} and {m.get('games_home', '?')} played).")
+    for c in g.get("cards") or []:
+        paras.append(f"<b class='g'>FIRED:</b> {esc(c['bet_label'])} "
+                     f"{_price(c['price_american'])} @ {esc(c['book'])} — edge "
+                     f"{c['edge']:.1%}, conf {c['confidence']}/10, {c['unit_size']}u.")
+    for c in (g.get("shadow") or [])[:3]:
+        paras.append(f"<b class='y'>shadow:</b> {esc(c['bet_label'])} "
+                     f"{_price(c['price_american'])} — edge {c['edge']:.1%} "
+                     f"(paper tier, below live gates).")
+    if g.get("pass_reasons") and not (g.get("cards")):
+        paras.append(f"<b>Verdict:</b> PASS — {esc(g['pass_reasons'][0])}.")
+    parts.append("".join(f"<p>{p}</p>" for p in paras))
+    return "".join(parts)
+
+
 def render_predictions(grades: dict, dates: list[str], this_date: str,
-                       bet_idx: dict) -> str:
+                       bet_idx: dict, stats_ctx: dict | None = None) -> str:
     i = dates.index(this_date)
     prev_link = (f"<a class='navbtn' href='{dates[i + 1]}.html'>‹</a>"
                  if i + 1 < len(dates) else "<span class='navbtn'>‹</span>")
     next_link = (f"<a class='navbtn' href='{dates[i - 1]}.html'>›</a>"
                  if i > 0 else "<span class='navbtn'>›</span>")
     out = [f"<div class='datenav'>{prev_link}"
-           f"<div class='datetitle'>📅 {this_date}</div>{next_link}</div>"]
+           f"<div class='datetitle'>📅 {this_date}</div>{next_link}</div>",
+           "<input class='search' type='search' placeholder='🔍 Search teams…' "
+           "oninput='searchGames(this.value)'>"]
     if not grades.get("odds_available"):
         out.append("<div class='card' style='border-color:#ef444460'>"
                    "<span class='r'><b>DATA OUTAGE</b></span> — odds unavailable "
@@ -221,11 +381,11 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
     ranked_header_done = others_header_done = False
     for g in games:
         if _best_rank(g) <= 25 and not ranked_header_done:
-            out.append("<div class='muted' style='margin:10px 0 6px'>"
+            out.append("<div class='muted secthead' style='margin:10px 0 6px'>"
                        "🏆 RANKED MATCHUPS</div>")
             ranked_header_done = True
         elif _best_rank(g) > 25 and ranked_header_done and not others_header_done:
-            out.append("<div class='muted' style='margin:18px 0 6px'>"
+            out.append("<div class='muted secthead' style='margin:18px 0 6px'>"
                        "— rest of the slate —</div>")
             others_header_done = True
         m = g.get("model")
@@ -290,7 +450,16 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
                     f"conf {card['confidence']}/10 · {card['unit_size']}u {badge}</div></div>")
         elif m and (g.get("pass_reasons")):
             play = f"<div class='dim'>PASS — {esc(g['pass_reasons'][0])}</div>"
-        out.append(f"<div class='card{' edge' if card else ''}'>{head}{grid}{play}</div>")
+        eid = esc(g["espn_event_id"])
+        search_key = esc((g.get("matchup") or "").lower())
+        details = _details_html(g, (stats_ctx or {}).get(g["espn_event_id"]))
+        head = head.replace("<div class='matchup'>",
+                            f"<div class='matchup'><span class='chev' id='chev-{eid}'>▸</span>", 1)
+        out.append(
+            f"<div class='card gamecard{' edge' if card else ''}' "
+            f"data-search='{search_key}' onclick='toggleGame(\"{eid}\")'>"
+            f"{head}{grid}{play}"
+            f"<div class='details' id='det-{eid}' style='display:none'>{details}</div></div>")
     return "".join(out)
 
 
@@ -385,7 +554,7 @@ def render_history(bets: list[dict]) -> str:
 # ---------------------------------------------------------------------------
 
 def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
-          bet_idx: dict, is_index: bool) -> str:
+          bet_idx: dict, is_index: bool, stats_ctx: dict | None = None) -> str:
     pnl = _pnl(bets)
     n_cards = len(grades.get("cards") or [])
     pnl_badge = ""
@@ -410,7 +579,7 @@ updated {esc((grades.get('generated_at') or '')[:16].replace('T', ' '))}Z</div><
 <button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
 </div>
 <div class='wrap'>
-<div class='pane' id='pane-predictions'>{render_predictions(grades, dates, this_date, bet_idx)}</div>
+<div class='pane' id='pane-predictions'>{render_predictions(grades, dates, this_date, bet_idx, stats_ctx)}</div>
 <div class='pane' id='pane-bets' style='display:none'>{render_best_bets(dates, bet_idx)}</div>
 <div class='pane' id='pane-history' style='display:none'>{render_history(bets)}</div>
 </div>
@@ -430,7 +599,8 @@ def build() -> int:
 
     for i, day in enumerate(days):
         grades = json.loads((day / "grades.json").read_text())
-        page = _page(day.name, grades, dates, bets, bet_idx, is_index=(i == 0))
+        page = _page(day.name, grades, dates, bets, bet_idx, is_index=(i == 0),
+                     stats_ctx=_team_stats_ctx(day))
         (DOCS / f"{day.name}.html").write_text(page)
         (DOCS / f"{day.name}.json").write_text(
             json.dumps(grades, indent=2, sort_keys=True, default=str))

@@ -29,6 +29,7 @@ HISTORY = Path(__file__).resolve().parent / "ncaaw_data" / "history"
 
 # Season windows (END-year keyed): first games ~Nov 4, title game ~first Sun of Apr
 SEASON_WINDOW = {
+    2024: (date(2023, 11, 6), date(2024, 4, 7)),
     2025: (date(2024, 11, 4), date(2025, 4, 6)),
     2026: (date(2025, 11, 3), date(2026, 4, 5)),
     2027: (date(2026, 11, 3), date(2027, 4, 4)),
@@ -83,19 +84,31 @@ def scrape_season_games(season: int, pause: float = 0.25) -> list[dict]:
     return games
 
 
-def run(seasons: list[int]) -> None:
+def run(seasons: list[int], refresh: bool = False) -> None:
     HISTORY.mkdir(parents=True, exist_ok=True)
     for season in seasons:
         print(f"[hist] === season {season} ===")
         tpath = HISTORY / f"teams_{season}.json"
-        if tpath.exists():
+        if tpath.exists() and not refresh:
             print(f"[hist] teams_{season}.json exists — keeping")
         else:
-            teams = fetch_torvik(season)
+            try:
+                teams = fetch_torvik(season)
+            except Exception as e:
+                # Torvik 403s datacenter IPs — for the CURRENT season fall
+                # back to the committed snapshot (same data, pushed from the
+                # Mac); past seasons have no snapshot, so re-raise.
+                snap = Path(__file__).resolve().parent / "ncaaw_data" / "latest_teams.json"
+                cached = json.loads(snap.read_text()) if snap.exists() else {}
+                if cached.get("season") == season and cached.get("teams"):
+                    teams = cached["teams"]
+                    print(f"[hist] torvik live failed ({e}) — using latest_teams.json")
+                else:
+                    raise
             _save_json(tpath, {"season": season, "teams": teams})
             print(f"[hist] torvik {season}: {len(teams)} teams")
         gpath = HISTORY / f"games_{season}.json"
-        if gpath.exists():
+        if gpath.exists() and not refresh:
             print(f"[hist] games_{season}.json exists — keeping")
             continue
         games = scrape_season_games(season)
@@ -106,8 +119,10 @@ def run(seasons: list[int]) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seasons", nargs="+", type=int, default=[2025, 2026])
+    ap.add_argument("--refresh", action="store_true",
+                    help="re-scrape even if files exist (use for the current season)")
     args = ap.parse_args()
-    run(args.seasons)
+    run(args.seasons, refresh=args.refresh)
     return 0
 
 
