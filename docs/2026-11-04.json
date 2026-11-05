@@ -5,6 +5,13 @@
     {
       "cards": [],
       "espn_event_id": "401918840",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -20.5,
+        "spread_src": "consensus",
+        "total": 150.5,
+        "total_src": "consensus"
+      },
       "matchup": "Fairleigh Dickinson Knights @ Texas Longhorns",
       "model": {
         "away_score": 44.1,
@@ -18,7 +25,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "start": "2026-11-05T01:00Z",
       "status": "graded"
@@ -26,6 +33,13 @@
     {
       "cards": [],
       "espn_event_id": "401906075",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -56.5,
+        "spread_src": "consensus",
+        "total": 130.5,
+        "total_src": "consensus"
+      },
       "matchup": "Stetson Hatters @ Louisville Cardinals",
       "model": {
         "away_score": 56.3,
@@ -39,30 +53,9 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "start": "2026-11-05T01:00Z",
-      "status": "graded"
-    },
-    {
-      "cards": [],
-      "espn_event_id": "401928191",
-      "matchup": "Chattanooga Mocs @ Western Kentucky Lady Toppers",
-      "model": {
-        "away_score": 79.9,
-        "games_away": 1,
-        "games_home": 0,
-        "home_score": 80.0,
-        "margin_home": 0.0,
-        "proj_poss": 70.8,
-        "spread": -0.0,
-        "total": 159.9
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "start": "2026-11-05T00:30Z",
       "status": "graded"
     },
     {
@@ -191,6 +184,17 @@
       ],
       "start": "2026-11-05T02:00Z",
       "status": "graded"
+    },
+    {
+      "cards": [],
+      "espn_event_id": "401928280",
+      "matchup": "UC Merced Bobcats @ Fresno State Bulldogs",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "start": "2026-11-05T02:30Z",
+      "status": "skipped"
     },
     {
       "cards": [],
@@ -527,14 +531,24 @@
     },
     {
       "cards": [],
-      "espn_event_id": "401928280",
-      "matchup": "UC Merced Bobcats @ Fresno State Bulldogs",
+      "espn_event_id": "401928191",
+      "matchup": "Chattanooga Mocs @ Western Kentucky Lady Toppers",
+      "model": {
+        "away_score": 77.5,
+        "games_away": 1,
+        "games_home": 0,
+        "home_score": 82.4,
+        "margin_home": 4.9,
+        "proj_poss": 70.8,
+        "spread": -4.9,
+        "total": 159.9
+      },
       "neutral_site": false,
       "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
+        "no market line (nothing to anchor against)"
       ],
-      "start": "2026-11-05T02:30Z",
-      "status": "skipped"
+      "start": "2026-11-05T00:30Z",
+      "status": "graded"
     },
     {
       "cards": [],
@@ -569,9 +583,9 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-05T02:38:27.783864Z",
+  "generated_at": "2026-11-05T02:50:02.490548Z",
   "n_cards": 0,
   "n_games": 36,
-  "odds_available": false,
+  "odds_available": true,
   "total_units": 0
 }
