@@ -11,8 +11,10 @@ NOT from predicting games from scratch.
 
 from __future__ import annotations
 
+import json
 import math
 import re
+from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # v13 trained weights — ported verbatim from the JSX (do not hand-tune;
@@ -62,6 +64,19 @@ SPREAD_MAE = 9.66
 TOTAL_MAE = 10.92
 SPREAD_SIGMA = SPREAD_MAE * math.sqrt(math.pi / 2)   # ~12.1
 TOTAL_SIGMA = TOTAL_MAE * math.sqrt(math.pi / 2)     # ~13.7
+
+# Tuned weights override: train_model.py writes weights.json after a
+# cross-season-validated tune. When present it replaces the v13 constants
+# (which remain the fallback — delete weights.json to roll back).
+_WEIGHTS_FILE = Path(__file__).resolve().parent / "weights.json"
+if _WEIGHTS_FILE.exists():
+    try:
+        _tuned = json.loads(_WEIGHTS_FILE.read_text())
+        TRAINED_WEIGHTS = {**TRAINED_WEIGHTS, **(_tuned.get("weights") or {})}
+        SPREAD_SIGMA = float(_tuned.get("spread_sigma") or SPREAD_SIGMA)
+        TOTAL_SIGMA = float(_tuned.get("total_sigma") or TOTAL_SIGMA)
+    except (ValueError, OSError):
+        pass   # malformed weights.json -> keep v13
 
 # Conference strength multipliers (from the JSX; Torvik names on the left)
 CONF_STRENGTH = {

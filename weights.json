@@ -1,0 +1,53 @@
+{
+  "trained_at": "2026-11-05T03:06:09.601347Z",
+  "train_seasons": [
+    2025,
+    2026
+  ],
+  "weights": {
+    "effWeight": 0.55,
+    "tRankWeight": 0.19718750000000002,
+    "winPctWeight": 0.0,
+    "ffWeight": 0.21250000000000005,
+    "confAdjust": 0.53125,
+    "hca": 2.15,
+    "tempoSens": 0.0046875,
+    "spreadCompressBig": 1.253125,
+    "spreadCompressMid": 1.09375,
+    "spreadCompressSmall": 1.0062499999999999,
+    "eFGW": 0.0,
+    "torW": 0.0,
+    "orbW": 0.125,
+    "ftrW": 0.105,
+    "totalOwnW": 0.46749999999999997,
+    "totalTorW": 0.0,
+    "totalHCA": 1.765625,
+    "totalTempoBoost": 0.396875,
+    "totalBiasBase": 5.0,
+    "totalBiasOEScale": 0.13125,
+    "totalBias": 0.0,
+    "totalTOMismatch": 0.022968750000000003,
+    "totalLowTempoPen": 0.265625,
+    "totalVarAmp": 1.5062499999999999,
+    "totalHighCap": 148,
+    "totalHighDamp": 0.4,
+    "totalLowCap": 100,
+    "totalLowDamp": 0.2
+  },
+  "spread_sigma": 11.726,
+  "total_sigma": 15.975,
+  "metrics": {
+    "v13_holdout": {
+      "n": 5166,
+      "spread_mae": 9.46327913279134,
+      "total_mae": 12.26039488966319,
+      "su_pct": 79.67479674796748
+    },
+    "tuned_holdout": {
+      "n": 5166,
+      "spread_mae": 8.822493224932247,
+      "total_mae": 11.974583817266758,
+      "su_pct": 80.15873015873017
+    }
+  }
+}

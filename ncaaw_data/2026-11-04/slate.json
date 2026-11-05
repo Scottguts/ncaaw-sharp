@@ -1,40 +1,7 @@
 {
   "date": "2026-11-04",
-  "fetched_at": "2026-11-05T02:50:02.296231Z",
+  "fetched_at": "2026-11-05T03:07:05.616328Z",
   "games": [
-    {
-      "espn_event_id": "401918840",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Fairleigh Dickinson Knights at Texas Longhorns",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_END_PERIOD",
-      "completed": false,
-      "home": {
-        "espn_id": "251",
-        "location": "Texas",
-        "display_name": "Texas Longhorns",
-        "canon": "texas",
-        "conf": "SEC",
-        "record": "0-0",
-        "score": "85",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "161",
-        "location": "Fairleigh Dickinson",
-        "display_name": "Fairleigh Dickinson Knights",
-        "canon": "fairleigh dickinson",
-        "conf": "NEC",
-        "record": "0-1",
-        "score": "65",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "b827e7b6396e7cacc551198e44ca87f1"
-    },
     {
       "espn_event_id": "401906075",
       "start": "2026-11-05T01:00Z",
@@ -42,17 +9,17 @@
       "name": "Stetson Hatters at Louisville Cardinals",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "97",
         "location": "Louisville",
         "display_name": "Louisville Cardinals",
         "canon": "louisville",
         "conf": "ACC",
-        "record": "1-0",
-        "score": "80",
-        "winner": null
+        "record": "2-0",
+        "score": "87",
+        "winner": true
       },
       "away": {
         "espn_id": "56",
@@ -60,178 +27,13 @@
         "display_name": "Stetson Hatters",
         "canon": "stetson",
         "conf": "ASUN",
-        "record": "1-0",
-        "score": "31",
-        "winner": null
+        "record": "1-1",
+        "score": "35",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": "0fd57dcca7134ddf26d3c4abfbdb1ba6"
-    },
-    {
-      "espn_event_id": "401923473",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Morgan State Lady Bears at Colorado Buffaloes",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "38",
-        "location": "Colorado",
-        "display_name": "Colorado Buffaloes",
-        "canon": "colorado",
-        "conf": "Big 12",
-        "record": "0-0",
-        "score": "83",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2415",
-        "location": "Morgan State",
-        "display_name": "Morgan State Lady Bears",
-        "canon": "morgan st",
-        "conf": "MEAC",
-        "record": "1-0",
-        "score": "38",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401923193",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Lindenwood Lions at Denver Pioneers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2172",
-        "location": "Denver",
-        "display_name": "Denver Pioneers",
-        "canon": "denver",
-        "conf": "WCC",
-        "record": "0-1",
-        "score": "62",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2815",
-        "location": "Lindenwood",
-        "display_name": "Lindenwood Lions",
-        "canon": "lindenwood",
-        "conf": "OVC",
-        "record": "0-1",
-        "score": "47",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401920439",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Our Lady of the Lake Saints at Texas A&M-Corpus Christi Islanders",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "357",
-        "location": "Texas A&M-Corpus Christi",
-        "display_name": "Texas A&M-Corpus Christi Islanders",
-        "canon": "texas a&mcorpus christi",
-        "conf": "Southland",
-        "record": "0-0",
-        "score": "74",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "3158",
-        "location": "Our Lady of the Lake",
-        "display_name": "Our Lady of the Lake Saints",
-        "canon": "our lady of the lake",
-        "conf": "",
-        "record": null,
-        "score": "35",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919931",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Long Island University Sharks at Texas State Bobcats",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "326",
-        "location": "Texas State",
-        "display_name": "Texas State Bobcats",
-        "canon": "texas st",
-        "conf": "Pac-12",
-        "record": "0-0",
-        "score": "69",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "112358",
-        "location": "Long Island University",
-        "display_name": "Long Island University Sharks",
-        "canon": "liu",
-        "conf": "NEC",
-        "record": "0-1",
-        "score": "51",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401918723",
-      "start": "2026-11-05T01:00Z",
-      "et_date": "2026-11-04",
-      "name": "Bethel (MN) Royals at St. Thomas Tommies",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2900",
-        "location": "St. Thomas",
-        "display_name": "St. Thomas Tommies",
-        "canon": "st thomas",
-        "conf": "Summit",
-        "record": "0-1",
-        "score": "70",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2802",
-        "location": "Bethel (MN)",
-        "display_name": "Bethel (MN) Royals",
-        "canon": "bethel mn",
-        "conf": "",
-        "record": null,
-        "score": "39",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
     },
     {
       "espn_event_id": "401918553",
@@ -240,17 +42,17 @@
       "name": "Jackson State Lady Tigers at Grand Canyon Lopes",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2253",
         "location": "Grand Canyon",
         "display_name": "Grand Canyon Lopes",
         "canon": "grand canyon",
         "conf": "MWC",
-        "record": "0-0",
-        "score": "75",
-        "winner": null
+        "record": "1-0",
+        "score": "77",
+        "winner": true
       },
       "away": {
         "espn_id": "2296",
@@ -258,9 +60,9 @@
         "display_name": "Jackson State Lady Tigers",
         "canon": "jackson st",
         "conf": "SWAC",
-        "record": "0-1",
-        "score": "44",
-        "winner": null
+        "record": "0-2",
+        "score": "55",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -273,7 +75,7 @@
       "name": "California Baptist Lancers at Oregon State Beavers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_HALFTIME",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "204",
@@ -282,7 +84,7 @@
         "canon": "oregon st",
         "conf": "Pac-12",
         "record": "0-0",
-        "score": "27",
+        "score": "32",
         "winner": null
       },
       "away": {
@@ -292,7 +94,7 @@
         "canon": "cal baptist",
         "conf": "Big West",
         "record": "0-0",
-        "score": "31",
+        "score": "41",
         "winner": null
       },
       "torvik_home": true,
@@ -315,7 +117,7 @@
         "canon": "fresno st",
         "conf": "Pac-12",
         "record": "0-0",
-        "score": "32",
+        "score": "47",
         "winner": null
       },
       "away": {
@@ -325,11 +127,44 @@
         "canon": "uc merced",
         "conf": "",
         "record": null,
-        "score": "12",
+        "score": "17",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401918840",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Fairleigh Dickinson Knights at Texas Longhorns",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "251",
+        "location": "Texas",
+        "display_name": "Texas Longhorns",
+        "canon": "texas",
+        "conf": "SEC",
+        "record": "1-0",
+        "score": "85",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "161",
+        "location": "Fairleigh Dickinson",
+        "display_name": "Fairleigh Dickinson Knights",
+        "canon": "fairleigh dickinson",
+        "conf": "NEC",
+        "record": "0-2",
+        "score": "65",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
       "odds_event_id": null
     },
     {
@@ -1125,13 +960,178 @@
       "odds_event_id": null
     },
     {
+      "espn_event_id": "401923473",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Morgan State Lady Bears at Colorado Buffaloes",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "38",
+        "location": "Colorado",
+        "display_name": "Colorado Buffaloes",
+        "canon": "colorado",
+        "conf": "Big 12",
+        "record": "1-0",
+        "score": "83",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2415",
+        "location": "Morgan State",
+        "display_name": "Morgan State Lady Bears",
+        "canon": "morgan st",
+        "conf": "MEAC",
+        "record": "1-1",
+        "score": "38",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401923193",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Lindenwood Lions at Denver Pioneers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2172",
+        "location": "Denver",
+        "display_name": "Denver Pioneers",
+        "canon": "denver",
+        "conf": "WCC",
+        "record": "1-1",
+        "score": "66",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2815",
+        "location": "Lindenwood",
+        "display_name": "Lindenwood Lions",
+        "canon": "lindenwood",
+        "conf": "OVC",
+        "record": "0-2",
+        "score": "52",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401920439",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Our Lady of the Lake Saints at Texas A&M-Corpus Christi Islanders",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "357",
+        "location": "Texas A&M-Corpus Christi",
+        "display_name": "Texas A&M-Corpus Christi Islanders",
+        "canon": "texas a&mcorpus christi",
+        "conf": "Southland",
+        "record": "1-0",
+        "score": "76",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "3158",
+        "location": "Our Lady of the Lake",
+        "display_name": "Our Lady of the Lake Saints",
+        "canon": "our lady of the lake",
+        "conf": "",
+        "record": null,
+        "score": "36",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919931",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Long Island University Sharks at Texas State Bobcats",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "326",
+        "location": "Texas State",
+        "display_name": "Texas State Bobcats",
+        "canon": "texas st",
+        "conf": "Pac-12",
+        "record": "1-0",
+        "score": "69",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "112358",
+        "location": "Long Island University",
+        "display_name": "Long Island University Sharks",
+        "canon": "liu",
+        "conf": "NEC",
+        "record": "0-2",
+        "score": "51",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401918723",
+      "start": "2026-11-05T01:00Z",
+      "et_date": "2026-11-04",
+      "name": "Bethel (MN) Royals at St. Thomas Tommies",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2900",
+        "location": "St. Thomas",
+        "display_name": "St. Thomas Tommies",
+        "canon": "st thomas",
+        "conf": "Summit",
+        "record": "1-1",
+        "score": "77",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2802",
+        "location": "Bethel (MN)",
+        "display_name": "Bethel (MN) Royals",
+        "canon": "bethel mn",
+        "conf": "",
+        "record": null,
+        "score": "43",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
       "espn_event_id": "401921520",
       "start": "2026-11-05T03:00Z",
       "et_date": "2026-11-04",
       "name": "Hope International Royals at Cal State Fullerton Titans",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2239",
@@ -1140,7 +1140,7 @@
         "canon": "cal st fullerton",
         "conf": "Big West",
         "record": "0-1",
-        "score": "0",
+        "score": "7",
         "winner": null
       },
       "away": {
@@ -1150,7 +1150,7 @@
         "canon": "hope international",
         "conf": "",
         "record": null,
-        "score": "0",
+        "score": "3",
         "winner": null
       },
       "torvik_home": true,
@@ -1164,7 +1164,7 @@
       "name": "Saint Mary's Gaels at Stanford Cardinal",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "24",
@@ -1173,7 +1173,7 @@
         "canon": "stanford",
         "conf": "ACC",
         "record": "0-1",
-        "score": "0",
+        "score": "4",
         "winner": null
       },
       "away": {
@@ -1183,12 +1183,12 @@
         "canon": "saint marys ca",
         "conf": "WCC",
         "record": "0-0",
-        "score": "0",
+        "score": "4",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "1708ab5cd47f3dca53f1389dbd77d0be"
     }
   ]
 }

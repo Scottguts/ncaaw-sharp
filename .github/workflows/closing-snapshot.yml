@@ -4,8 +4,8 @@ name: Closing-line snapshot (CLV)
 # via key rotation — only runs that find pending bets near tip spend quota.
 on:
   schedule:
-    - cron: "5 17-23 11,12,1-4 * *"   # 12:05-18:05 ET (EST)
-    - cron: "5 0-4 11,12,1-4 * *"     # 19:05-23:05 ET (EST)
+    - cron: "5 17-23 * 11,12,1-4 *"   # 12:05-18:05 ET (EST)
+    - cron: "5 0-4 * 11,12,1-4 *"     # 19:05-23:05 ET (EST)
   workflow_dispatch:
 
 permissions:

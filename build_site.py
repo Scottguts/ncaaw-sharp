@@ -1,7 +1,12 @@
-"""Static GitHub Pages site — docs/ index + one page per slate date.
+"""Static dashboard — docs/ for GitHub Pages (or open docs/index.html locally).
 
-Deterministic by construction (sorted globs, sort_keys) so repeat builds are
-zero-diff — the mlb-sharp docs-churn lesson, applied from day one.
+index.html IS the live board for the most recent slate: fired best bets up
+top (with settled results), then every game's predicted score / spread /
+total next to the market lines, with the pass reason when no bet fired.
+Auto-refreshes every 5 minutes; daily-bets and line-watch rebuild + push it
+whenever lines drop, so this is the "app" view of the system.
+
+Deterministic by construction (sorted globs, sort_keys) — zero-diff rebuilds.
 """
 
 from __future__ import annotations
@@ -16,25 +21,113 @@ from ncaaw_data_scraper import DATA_ROOT
 DOCS = Path(__file__).resolve().parent / "docs"
 
 STYLE = """
-body{font-family:-apple-system,Segoe UI,sans-serif;max-width:860px;margin:2rem auto;
-padding:0 1rem;background:#0f1419;color:#e6e6e6;line-height:1.5}
-a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
-h1,h2{border-bottom:1px solid #30363d;padding-bottom:.3rem}
-table{border-collapse:collapse;width:100%} td,th{border:1px solid #30363d;
-padding:.35rem .6rem;text-align:left} th{background:#161b22}
-.card{background:#161b22;border:1px solid #30363d;border-radius:8px;
-padding:1rem;margin:1rem 0}
-.win{color:#3fb950}.loss{color:#f85149}.push{color:#d29922}
-.muted{color:#8b949e;font-size:.9rem}
-pre{white-space:pre-wrap;background:#161b22;padding:1rem;border-radius:8px}
+:root{--bg:#0f1419;--panel:#161b22;--line:#30363d;--fg:#e6e6e6;--mut:#8b949e;
+--green:#3fb950;--red:#f85149;--gold:#d29922;--blue:#58a6ff}
+body{font-family:-apple-system,Segoe UI,sans-serif;max-width:980px;margin:1.2rem auto;
+padding:0 .8rem;background:var(--bg);color:var(--fg);line-height:1.45}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+h1{margin:.2rem 0 .4rem;font-size:1.5rem} h2{font-size:1.1rem;border-bottom:1px solid var(--line);padding-bottom:.25rem}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+td,th{border:1px solid var(--line);padding:.3rem .5rem;text-align:left;vertical-align:top}
+th{background:var(--panel);position:sticky;top:0}
+.card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);
+border-radius:8px;padding:.7rem .9rem;margin:.6rem 0}
+.card.win{border-left-color:var(--green)} .card.loss{border-left-color:var(--red)}
+.win{color:var(--green)}.loss{color:var(--red)}.push,.gold{color:var(--gold)}
+.muted{color:var(--mut);font-size:.88rem} .big{font-size:1.05rem;font-weight:600}
+.pill{display:inline-block;padding:0 .5rem;border-radius:99px;border:1px solid var(--line);
+font-size:.8rem;margin-left:.4rem}
+pre{white-space:pre-wrap;background:var(--panel);padding:.8rem;border-radius:8px;font-size:.88rem}
+@media(max-width:640px){td,th{padding:.25rem .35rem;font-size:.82rem}}
 """
 
 
-def _page(title: str, body: str) -> str:
-    return (f"<!doctype html><html><head><meta charset='utf-8'>"
+def _page(title: str, body: str, refresh: bool = False) -> str:
+    meta = "<meta http-equiv='refresh' content='300'>" if refresh else ""
+    return (f"<!doctype html><html><head><meta charset='utf-8'>{meta}"
             f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
             f"<title>{html.escape(title)}</title><style>{STYLE}</style></head>"
             f"<body>{body}</body></html>")
+
+
+def _price(p) -> str:
+    try:
+        p = int(p)
+    except (TypeError, ValueError):
+        return "—"
+    return f"+{p}" if p > 0 else str(p)
+
+
+def _bet_status_index() -> dict:
+    """(event_id, market, side) -> bet row, from bet_log.csv."""
+    import csv
+    log = DATA_ROOT / "bet_log.csv"
+    if not log.exists():
+        return {}
+    with log.open(newline="") as f:
+        return {(str(r["espn_event_id"]), r["market"], r["side"]): r
+                for r in csv.DictReader(f)}
+
+
+def _cards_section(grades: dict, bets: dict) -> list[str]:
+    cards = grades.get("cards") or []
+    out = []
+    if not grades.get("odds_available"):
+        out.append("<div class='card loss'><b>DATA OUTAGE</b> — odds unavailable "
+                   "on the last run. Not a disciplined no-play.</div>")
+    if not cards:
+        out.append("<div class='card'><b>NO PLAYS (yet)</b> — nothing has cleared "
+                   "the gates. Line-watch re-checks as books post lines.</div>")
+        return out
+    for c in cards:
+        bet = bets.get((str(c["espn_event_id"]), c["market"], c["side"])) or {}
+        status = bet.get("status", "pending")
+        badge = {"win": "✅ WIN", "loss": "❌ LOSS", "push": "➖ PUSH"}.get(
+            status, "🕐 PENDING")
+        pl = bet.get("units_pl")
+        pl_txt = f" ({float(pl):+.2f}u)" if pl not in (None, "") and status != "pending" else ""
+        out.append(
+            f"<div class='card {status}'><span class='big'>{html.escape(c['bet_label'])}"
+            f"</span> {_price(c['price_american'])} ({html.escape(c['book'])})"
+            f"<span class='pill {status}'>{badge}{pl_txt}</span><br>"
+            f"{html.escape(c['matchup'])}<br>"
+            f"<span class='muted'>fair {c['fair_prob']:.1%} ({_price(c['fair_american'])}) · "
+            f"edge {c['edge']:.1%} · conf {c['confidence']}/10 · "
+            f"{c['unit_size']}u {html.escape(c['risk'])}</span></div>")
+    return out
+
+
+def _slate_table(grades: dict) -> list[str]:
+    out = ["<table><tr><th>game</th><th>tip (ET)</th><th>model score</th>"
+           "<th>model spread</th><th>model total</th><th>market</th><th>status</th></tr>"]
+    carded = {(g_c["espn_event_id"]) for g_c in (grades.get("cards") or [])}
+    for g in sorted(grades.get("games") or [], key=lambda x: (x.get("start") or "",
+                                                              x.get("matchup") or "")):
+        m = g.get("model")
+        mk = g.get("market") or {}
+        tip = (g.get("start") or "")[11:16]
+        if m:
+            score = f"{m['away_score']:.0f}–{m['home_score']:.0f}"
+            spread = f"home {m['margin_home']:+.1f}"
+            total = f"{m['total']:.1f}"
+        else:
+            score = spread = total = "—"
+        mkt_bits = []
+        if mk.get("spread_home") is not None:
+            mkt_bits.append(f"{mk['spread_home']:+g}")
+        if mk.get("total") is not None:
+            mkt_bits.append(f"O/U {mk['total']:g}")
+        if g["espn_event_id"] in carded:
+            status = "<b class='gold'>BET FIRED</b>"
+        elif not mkt_bits:
+            status = "<span class='muted'>no line yet</span>"
+        else:
+            status = f"<span class='muted'>{html.escape((g.get('pass_reasons') or ['pass'])[0])}</span>"
+        out.append(f"<tr><td>{html.escape(g.get('matchup') or '')}</td><td>{tip}</td>"
+                   f"<td>{score}</td><td>{spread}</td><td>{total}</td>"
+                   f"<td>{' · '.join(mkt_bits) or '—'}</td><td>{status}</td></tr>")
+    out.append("</table>")
+    return out
 
 
 def build() -> int:
@@ -43,61 +136,42 @@ def build() -> int:
         (p for p in DATA_ROOT.iterdir()
          if p.is_dir() and (p / "grades.json").exists()),
         key=lambda p: p.name, reverse=True)
+    bets = _bet_status_index()
 
-    # per-date pages + snapshot JSON
     rows_html = []
-    for day in days:
+    for i, day in enumerate(days):
         grades = json.loads((day / "grades.json").read_text())
-        cards = grades.get("cards") or []
-        body = [f"<p><a href='index.html'>← index</a></p>",
-                f"<h1>NCAAW — {day.name}</h1>"]
-        if not grades.get("odds_available"):
-            body.append("<div class='card loss'><b>DATA OUTAGE</b> — odds unavailable this run.</div>")
-        if cards:
-            for c in cards:
-                price = f"+{c['price_american']}" if c['price_american'] > 0 else str(c['price_american'])
-                body.append(
-                    f"<div class='card'><b>{html.escape(c['bet_label'])}</b> {price} "
-                    f"({html.escape(c['book'])}) — {html.escape(c['matchup'])}<br>"
-                    f"<span class='muted'>fair {c['fair_prob']:.1%} · edge {c['edge']:.1%} · "
-                    f"conf {c['confidence']}/10 · {c['unit_size']}u {html.escape(c['risk'])}</span></div>")
-        else:
-            body.append("<div class='card'>NO PLAYS — nothing cleared the gates.</div>")
-        body.append("<h2>Slate</h2><table><tr><th>game</th><th>model</th><th>market</th><th>note</th></tr>")
-        for g in sorted(grades.get("games") or [], key=lambda x: x.get("matchup") or ""):
-            m = g.get("model")
-            model = (f"{m['away_score']:.0f}-{m['home_score']:.0f} "
-                     f"(tot {m['total']:.0f})") if m else "—"
-            mk = g.get("market") or {}
-            mkt_bits = []
-            if mk.get("spread_home") is not None:
-                mkt_bits.append(f"home {mk['spread_home']:+g}")
-            if mk.get("total") is not None:
-                mkt_bits.append(f"O/U {mk['total']:g}")
-            note = (g.get("pass_reasons") or [""])[0]
-            body.append(f"<tr><td>{html.escape(g.get('matchup') or '')}</td>"
-                        f"<td>{model}</td><td>{' · '.join(mkt_bits) or '—'}</td>"
-                        f"<td class='muted'>{html.escape(note)}</td></tr>")
-        body.append("</table>")
-        (DOCS / f"{day.name}.html").write_text(_page(f"NCAAW {day.name}", "".join(body)))
+        body = ["<p><a href='index.html'>← today</a> · <a href='record.html'>record</a></p>",
+                f"<h1>🏀 NCAAW — {day.name}</h1>",
+                f"<p class='muted'>updated {html.escape(grades.get('generated_at') or '')} · "
+                f"{grades.get('n_games', 0)} games · auto-refreshes</p>",
+                "<h2>Best bets</h2>", *_cards_section(grades, bets),
+                "<h2>Full board — model vs market</h2>", *_slate_table(grades)]
+        page = _page(f"NCAAW {day.name}", "".join(body), refresh=(i == 0))
+        (DOCS / f"{day.name}.html").write_text(page)
+        if i == 0:
+            (DOCS / "index.html").write_text(page.replace(
+                "<p><a href='index.html'>← today</a>",
+                "<p><a href='archive.html'>archive</a>"))
         (DOCS / f"{day.name}.json").write_text(json.dumps(grades, indent=2,
                                                           sort_keys=True, default=str))
+        n_cards = len(grades.get("cards") or [])
         rows_html.append(
             f"<tr><td><a href='{day.name}.html'>{day.name}</a></td>"
-            f"<td>{grades.get('n_games', 0)}</td><td>{len(cards)}</td>"
+            f"<td>{grades.get('n_games', 0)}</td><td>{n_cards}</td>"
             f"<td>{grades.get('total_units', 0):g}u</td></tr>")
 
     record_md = DATA_ROOT / "record.md"
     rec_html = (f"<pre>{html.escape(record_md.read_text())}</pre>"
                 if record_md.exists() else "<p class='muted'>no record yet</p>")
-    idx = ["<h1>NCAAW Sharp</h1>",
-           "<p class='muted'>Market-anchored NCAAW betting cards — v13 Torvik model, "
-           "mlb-sharp gates. Most days are NO PLAYS by design.</p>",
-           rec_html,
-           "<h2>Slates</h2><table><tr><th>date</th><th>games</th><th>cards</th><th>units</th></tr>",
-           *rows_html, "</table>"]
-    (DOCS / "index.html").write_text(_page("NCAAW Sharp", "".join(idx)))
-    print(f"[site] built {len(days)} slate page(s)")
+    (DOCS / "record.html").write_text(_page("Record", (
+        "<p><a href='index.html'>← today</a></p><h1>Record</h1>" + rec_html)))
+    (DOCS / "archive.html").write_text(_page("Archive", (
+        "<p><a href='index.html'>← today</a> · <a href='record.html'>record</a></p>"
+        "<h1>Slate archive</h1>" + rec_html +
+        "<table><tr><th>date</th><th>games</th><th>cards</th><th>units</th></tr>"
+        + "".join(rows_html) + "</table>")))
+    print(f"[site] built {len(days)} slate page(s) + dashboard")
     return 0
 
 

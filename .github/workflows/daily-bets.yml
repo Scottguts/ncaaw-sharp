@@ -6,10 +6,10 @@ name: Daily NCAAW Sharp Cards
 # free no-op (no double-posting to Discord).
 on:
   schedule:
-    - cron: "47 14 11,12,1-4 * *"   # 09:47 ET (EST) — primary
-    - cron: "32 15 11,12,1-4 * *"   # 10:32 ET — retry
-    - cron: "17 16 11,12,1-4 * *"   # 11:17 ET — retry
-    - cron: "17 17 11,12,1-4 * *"   # 12:17 ET — backup
+    - cron: "47 14 * 11,12,1-4 *"   # 09:47 ET (EST) — primary
+    - cron: "32 15 * 11,12,1-4 *"   # 10:32 ET — retry
+    - cron: "17 16 * 11,12,1-4 *"   # 11:17 ET — retry
+    - cron: "17 17 * 11,12,1-4 *"   # 12:17 ET — backup
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,52 @@
+name: Line-drop watcher
+
+# Every 2h during posting hours: re-scrape the board, grade, and fire NEW
+# best bets to Discord the moment books post lines with value. Each run costs
+# exactly one Odds-API request (~210/mo at 7 runs/day — add ODDS_API_KEY_2
+# for headroom). Caps are enforced across the whole day via bet_log.csv.
+on:
+  schedule:
+    - cron: "10 11,13,15,19,21,23 * 11,12,1-4 *"   # 6a/8a/10a/2p/4p/6p ET (EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ncaaw-line-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ODDS_API_KEY:        ${{ secrets.ODDS_API_KEY }}
+      ODDS_API_KEY_2:      ${{ secrets.ODDS_API_KEY_2 }}
+      ODDS_API_KEY_3:      ${{ secrets.ODDS_API_KEY_3 }}
+      ODDS_API_KEY_4:      ${{ secrets.ODDS_API_KEY_4 }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      TZ:                  America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Watch for line drops
+        run: python line_watch.py
+      - name: Commit results
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add ncaaw_data/ docs/
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "line watch $(date +%F-%H%M)"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+            done
+          fi

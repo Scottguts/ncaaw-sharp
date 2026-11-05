@@ -4,8 +4,8 @@ name: Heartbeat (dead-man's switch)
 # auto-dispatch daily-bets. Survives GitHub dropping every daily-bets cron.
 on:
   schedule:
-    - cron: "30 18 11,12,1-4 * *"   # 13:30 ET (EST)
-    - cron: "30 19 11,12,1-4 * *"   # 14:30 ET — second chance
+    - cron: "30 18 * 11,12,1-4 *"   # 13:30 ET (EST)
+    - cron: "30 19 * 11,12,1-4 *"   # 14:30 ET — second chance
   workflow_dispatch:
 
 permissions:

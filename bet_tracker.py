@@ -98,19 +98,30 @@ def _payout_units(price: int, units: float) -> float:
 # Append pending
 # ---------------------------------------------------------------------------
 
-def append_pending(target_date: str) -> int:
-    grades = DATA_ROOT / target_date / "grades.json"
-    if not grades.exists():
-        print(f"[tracker] no grades.json for {target_date}")
-        return 0
-    cards = json.loads(grades.read_text()).get("cards") or []
+# Slate caps shared with the grader — enforced ACROSS runs here (the grader
+# caps one run; daily + line-watch re-runs must not stack past the day cap).
+MAX_CARDS_PER_SLATE = 5
+MAX_UNITS_PER_SLATE = 6.0
+
+
+def append_cards(cards: list[dict], target_date: str) -> int:
+    """Append specific cards as pending, respecting the day's remaining caps.
+    Cards already in the log (same event/market/side) are skipped."""
     _ensure_log()
     rows = _read_log()
-    seen = {(r["espn_event_id"], r["market"], r["side"]) for r in rows}
+    seen = {(str(r["espn_event_id"]), r["market"], r["side"]) for r in rows}
+    today_rows = [r for r in rows if r.get("date") == target_date
+                  and r.get("status") in ("pending", "win", "loss", "push")]
+    slots = MAX_CARDS_PER_SLATE - len(today_rows)
+    units = MAX_UNITS_PER_SLATE - sum(_f(r.get("units_risked"), 0.0) or 0.0
+                                      for r in today_rows)
     added = 0
-    for c in cards:
+    for c in sorted(cards, key=lambda c: -(c.get("edge") or 0)):
         key = (str(c["espn_event_id"]), c["market"], c["side"])
         if key in seen:
+            continue
+        if slots <= 0 or (c.get("unit_size") or 0) > units:
+            print(f"[tracker] {c.get('bet_label')} skipped — day caps reached")
             continue
         rows.append({
             "bet_id": _next_id(rows) + added,
@@ -129,10 +140,22 @@ def append_pending(target_date: str) -> int:
         })
         seen.add(key)
         added += 1
+        slots -= 1
+        units -= c.get("unit_size") or 0
     if added:
         _write_log(rows)
     print(f"[tracker] appended {added} pending bet(s) for {target_date}")
     return added
+
+
+def append_pending(target_date: str) -> int:
+    """Append all of grades.json's fired cards (cap-aware across runs)."""
+    grades = DATA_ROOT / target_date / "grades.json"
+    if not grades.exists():
+        print(f"[tracker] no grades.json for {target_date}")
+        return 0
+    cards = json.loads(grades.read_text()).get("cards") or []
+    return append_cards(cards, target_date)
 
 
 # ---------------------------------------------------------------------------
