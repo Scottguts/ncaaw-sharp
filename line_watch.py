@@ -27,7 +27,7 @@ from zoneinfo import ZoneInfo
 import ncaaw_data_scraper as scraper
 import ncaaw_grader as grader
 from bet_tracker import _read_log, append_pending, build_record
-from notify import post_discord, _fmt_price
+from notify import post_discord, _fmt_price, SITE_URL
 import build_site
 
 _ET = ZoneInfo("America/New_York")
@@ -87,8 +87,11 @@ def run() -> int:
                       f"**{c['unit_size']}u** {c['risk']}"),
             "inline": False,
         } for c in new_cards]
+        fields.append({"name": "📊 Live board",
+                       "value": f"[{SITE_URL}]({SITE_URL})", "inline": False})
         post_discord({"embeds": [{
             "title": f"🚨 LINE DROP — {len(new_cards)} new best bet(s) · {today_iso}",
+            "url": SITE_URL,
             "color": 0xF1C40F,
             "fields": fields,
             "footer": {"text": "Fired on line drop for max CLV · caps include "

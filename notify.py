@@ -21,6 +21,9 @@ from ncaaw_data_scraper import DATA_ROOT
 
 GREEN, RED, GREY = 0x2ECC71, 0xE74C3C, 0x95A5A6
 
+# Live dashboard — every embed links here so the board is one tap away.
+SITE_URL = "https://scottguts.github.io/ncaaw-sharp/"
+
 
 def _fmt_price(p: int) -> str:
     return f"+{p}" if p > 0 else str(p)
@@ -46,6 +49,7 @@ def build_payload(grades: dict) -> dict:
                        "This is NOT a no-play day. Check API quota / odds.json.",
             "embeds": [{
                 "title": f"NCAAW {date} — DATA OUTAGE",
+                "url": SITE_URL,
                 "color": RED,
                 "description": "Scraper could not fetch odds. "
                                "`gh secret set ODDS_API_KEY_N` with a fresh key, "
@@ -56,9 +60,11 @@ def build_payload(grades: dict) -> dict:
         return {
             "embeds": [{
                 "title": f"🏀 NCAAW {date} — NO PLAYS",
+                "url": SITE_URL,
                 "color": GREY,
                 "description": (f"{grades.get('n_games', 0)} games graded; nothing cleared "
-                                "the gates. A quiet day is a correct day."),
+                                "the gates. A quiet day is a correct day.\n"
+                                f"📊 [Live board]({SITE_URL}) — every game's model vs market."),
             }],
         }
     fields = []
@@ -72,12 +78,15 @@ def build_payload(grades: dict) -> dict:
             "inline": False,
         })
     total_u = sum(c["unit_size"] for c in cards)
+    fields.append({"name": "📊 Live board",
+                   "value": f"[{SITE_URL}]({SITE_URL})", "inline": False})
     return {
         "embeds": [{
             "title": f"🏀 NCAAW {date} — {len(cards)} play(s), {total_u:g}u",
+            "url": SITE_URL,
             "color": GREEN,
             "fields": fields,
-            "footer": {"text": "v13 Torvik model · market-anchored · "
+            "footer": {"text": "Tuned Torvik model · market-anchored · "
                                "gates: 1.8-2.5% min edge, 6% max, conf ≥6"},
         }],
     }
