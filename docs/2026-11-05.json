@@ -3,46 +3,6 @@
   "date": "2026-11-05",
   "games": [
     {
-      "away_short": "Frostburg State",
-      "cards": [],
-      "espn_event_id": "401927975",
-      "home_short": "Towson",
-      "matchup": "Frostburg State Bobcats @ Towson Tigers",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-05T16:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "North Florida",
-      "cards": [],
-      "espn_event_id": "401913706",
-      "home_short": "Florida State",
-      "matchup": "North Florida Ospreys @ Florida State Seminoles",
-      "model": {
-        "away_score": 39.0,
-        "games_away": 0,
-        "games_home": 1,
-        "home_score": 60.6,
-        "margin_home": 21.6,
-        "proj_poss": 76.7,
-        "rank_away": 240,
-        "rank_home": 34,
-        "spread": -21.6,
-        "total": 99.6
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-05T16:00Z",
-      "status": "graded"
-    },
-    {
       "away_short": "Miami (OH)",
       "cards": [],
       "espn_event_id": "401929148",
@@ -115,6 +75,13 @@
       "cards": [],
       "espn_event_id": "401915961",
       "home_short": "SMU",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -13.5,
+        "spread_src": "consensus",
+        "total": 120.0,
+        "total_src": "consensus"
+      },
       "matchup": "Hampton Lady Pirates @ SMU Mustangs",
       "model": {
         "away_score": 63.0,
@@ -130,7 +97,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T17:00Z",
@@ -141,6 +108,13 @@
       "cards": [],
       "espn_event_id": "401915665",
       "home_short": "Iona",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 13.5,
+        "spread_src": "consensus",
+        "total": 124.5,
+        "total_src": "consensus"
+      },
       "matchup": "Stony Brook Seawolves @ Iona Gaels",
       "model": {
         "away_score": 64.9,
@@ -156,10 +130,50 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T18:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Frostburg State",
+      "cards": [],
+      "espn_event_id": "401927975",
+      "home_short": "Towson",
+      "matchup": "Frostburg State Bobcats @ Towson Tigers",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-05T16:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "North Florida",
+      "cards": [],
+      "espn_event_id": "401913706",
+      "home_short": "Florida State",
+      "matchup": "North Florida Ospreys @ Florida State Seminoles",
+      "model": {
+        "away_score": 39.0,
+        "games_away": 0,
+        "games_home": 1,
+        "home_score": 60.6,
+        "margin_home": 21.6,
+        "proj_poss": 76.7,
+        "rank_away": 240,
+        "rank_home": 34,
+        "spread": -21.6,
+        "total": 99.6
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-05T16:00Z",
       "status": "graded"
     },
     {
@@ -547,6 +561,13 @@
       "cards": [],
       "espn_event_id": "401911737",
       "home_short": "Michigan",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 8.5,
+        "spread_src": "consensus",
+        "total": 142.5,
+        "total_src": "consensus"
+      },
       "matchup": "UConn Huskies @ Michigan Wolverines",
       "model": {
         "away_score": 59.9,
@@ -562,7 +583,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T23:30Z",
@@ -573,6 +594,13 @@
       "cards": [],
       "espn_event_id": "401929059",
       "home_short": "Kentucky",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -40.0,
+        "spread_src": "consensus",
+        "total": 135.5,
+        "total_src": "consensus"
+      },
       "matchup": "Northern Kentucky Norse @ Kentucky Wildcats",
       "model": {
         "away_score": 48.2,
@@ -588,7 +616,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T23:30Z",
@@ -599,6 +627,13 @@
       "cards": [],
       "espn_event_id": "401927082",
       "home_short": "Ohio State",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -45.5,
+        "spread_src": "consensus",
+        "total": 143.5,
+        "total_src": "consensus"
+      },
       "matchup": "Central Michigan Chippewas @ Ohio State Buckeyes",
       "model": {
         "away_score": 56.7,
@@ -614,7 +649,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-05T23:30Z",
@@ -721,6 +756,13 @@
       "cards": [],
       "espn_event_id": "401924631",
       "home_short": "Ole Miss",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -43.5,
+        "spread_src": "consensus",
+        "total": 131.5,
+        "total_src": "consensus"
+      },
       "matchup": "North Alabama Lions @ Ole Miss Rebels",
       "model": {
         "away_score": 47.4,
@@ -736,7 +778,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-06T00:00Z",
@@ -1311,6 +1353,13 @@
       "cards": [],
       "espn_event_id": "401909670",
       "home_short": "Georgia",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -34.5,
+        "spread_src": "consensus",
+        "total": 133.5,
+        "total_src": "consensus"
+      },
       "matchup": "Winthrop Eagles @ Georgia Lady Bulldogs",
       "model": {
         "away_score": 53.5,
@@ -1326,7 +1375,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-06T00:00Z",
@@ -1363,6 +1412,13 @@
       "cards": [],
       "espn_event_id": "401917939",
       "home_short": "TCU",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -56.5,
+        "spread_src": "consensus",
+        "total": 134.5,
+        "total_src": "consensus"
+      },
       "matchup": "Le Moyne Dolphins @ TCU Horned Frogs",
       "model": {
         "away_score": 48.6,
@@ -1378,7 +1434,7 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "shadow": [],
       "start": "2026-11-06T00:30Z",
@@ -1939,12 +1995,12 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-05T03:40:07.589009Z",
+  "generated_at": "2026-11-05T18:42:12.844215Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": -4.46,
+    "mean_total_delta": -0.66,
+    "n_spread_lines": 8,
+    "n_total_lines": 8
   },
   "n_cards": 0,
   "n_games": 86,

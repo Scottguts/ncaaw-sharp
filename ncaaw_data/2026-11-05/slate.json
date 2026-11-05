@@ -1,73 +1,7 @@
 {
   "date": "2026-11-05",
-  "fetched_at": "2026-11-05T03:35:50.187933Z",
+  "fetched_at": "2026-11-05T18:42:12.838644Z",
   "games": [
-    {
-      "espn_event_id": "401927975",
-      "start": "2026-11-05T16:00Z",
-      "et_date": "2026-11-05",
-      "name": "Frostburg State Bobcats at Towson Tigers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "119",
-        "location": "Towson",
-        "display_name": "Towson Tigers",
-        "canon": "towson",
-        "conf": "CAA",
-        "record": "0-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "112702",
-        "location": "Frostburg State",
-        "display_name": "Frostburg State Bobcats",
-        "canon": "frostburg st",
-        "conf": "",
-        "record": null,
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401913706",
-      "start": "2026-11-05T16:00Z",
-      "et_date": "2026-11-05",
-      "name": "North Florida Ospreys at Florida State Seminoles",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "52",
-        "location": "Florida State",
-        "display_name": "Florida State Seminoles",
-        "canon": "florida st",
-        "conf": "ACC",
-        "record": "1-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2454",
-        "location": "North Florida",
-        "display_name": "North Florida Ospreys",
-        "canon": "north florida",
-        "conf": "ASUN",
-        "record": "0-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401929148",
       "start": "2026-11-05T17:00Z",
@@ -75,7 +9,7 @@
       "name": "Miami (OH) RedHawks at Southeast Missouri State Redhawks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2546",
@@ -84,7 +18,7 @@
         "canon": "southeast missouri st",
         "conf": "OVC",
         "record": "0-1",
-        "score": "0",
+        "score": "35",
         "winner": null
       },
       "away": {
@@ -94,7 +28,7 @@
         "canon": "miami oh",
         "conf": "MAC",
         "record": "1-0",
-        "score": "0",
+        "score": "59",
         "winner": null
       },
       "torvik_home": true,
@@ -108,7 +42,7 @@
       "name": "Texas A&M-Texarkana Eagles at Louisiana Tech Lady Techsters",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2348",
@@ -117,7 +51,7 @@
         "canon": "louisiana tech",
         "conf": "Sun Belt",
         "record": "1-0",
-        "score": "0",
+        "score": "64",
         "winner": null
       },
       "away": {
@@ -127,7 +61,7 @@
         "canon": "texas a&m texarkana",
         "conf": "",
         "record": null,
-        "score": "0",
+        "score": "28",
         "winner": null
       },
       "torvik_home": true,
@@ -141,7 +75,7 @@
       "name": "Arkansas Monticello Boll Weevils at SE Louisiana Lady Lions",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2545",
@@ -150,7 +84,7 @@
         "canon": "se louisiana",
         "conf": "Southland",
         "record": "0-1",
-        "score": "0",
+        "score": "64",
         "winner": null
       },
       "away": {
@@ -160,7 +94,7 @@
         "canon": "arkansas monticello",
         "conf": "",
         "record": null,
-        "score": "0",
+        "score": "52",
         "winner": null
       },
       "torvik_home": false,
@@ -174,7 +108,7 @@
       "name": "Johnson Royals at Coastal Carolina Chanticleers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "324",
@@ -183,7 +117,7 @@
         "canon": "coastal carolina",
         "conf": "Sun Belt",
         "record": "1-0",
-        "score": "0",
+        "score": "88",
         "winner": null
       },
       "away": {
@@ -193,7 +127,7 @@
         "canon": "johnson",
         "conf": "",
         "record": null,
-        "score": "0",
+        "score": "45",
         "winner": null
       },
       "torvik_home": true,
@@ -207,7 +141,7 @@
       "name": "Hampton Lady Pirates at SMU Mustangs",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2567",
@@ -216,7 +150,7 @@
         "canon": "smu",
         "conf": "ACC",
         "record": "1-0",
-        "score": "0",
+        "score": "55",
         "winner": null
       },
       "away": {
@@ -226,12 +160,12 @@
         "canon": "hampton",
         "conf": "CAA",
         "record": "0-1",
-        "score": "0",
+        "score": "44",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "fac3eb5cf62858d1633b9f76947b5960"
     },
     {
       "espn_event_id": "401915665",
@@ -240,7 +174,7 @@
       "name": "Stony Brook Seawolves at Iona Gaels",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "314",
@@ -249,7 +183,7 @@
         "canon": "iona",
         "conf": "MAAC",
         "record": "1-0",
-        "score": "0",
+        "score": "20",
         "winner": null
       },
       "away": {
@@ -259,8 +193,74 @@
         "canon": "stony brook",
         "conf": "CAA",
         "record": "1-0",
-        "score": "0",
+        "score": "34",
         "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "226052a635fb944941d28270c90a68de"
+    },
+    {
+      "espn_event_id": "401927975",
+      "start": "2026-11-05T16:00Z",
+      "et_date": "2026-11-05",
+      "name": "Frostburg State Bobcats at Towson Tigers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "119",
+        "location": "Towson",
+        "display_name": "Towson Tigers",
+        "canon": "towson",
+        "conf": "CAA",
+        "record": "0-2",
+        "score": "92",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "112702",
+        "location": "Frostburg State",
+        "display_name": "Frostburg State Bobcats",
+        "canon": "frostburg st",
+        "conf": "",
+        "record": null,
+        "score": "94",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913706",
+      "start": "2026-11-05T16:00Z",
+      "et_date": "2026-11-05",
+      "name": "North Florida Ospreys at Florida State Seminoles",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "52",
+        "location": "Florida State",
+        "display_name": "Florida State Seminoles",
+        "canon": "florida st",
+        "conf": "ACC",
+        "record": "2-0",
+        "score": "74",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2454",
+        "location": "North Florida",
+        "display_name": "North Florida Ospreys",
+        "canon": "north florida",
+        "conf": "ASUN",
+        "record": "0-1",
+        "score": "63",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -825,7 +825,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "d39d511392b1d031ad974d23244cf192"
     },
     {
       "espn_event_id": "401929059",
@@ -858,7 +858,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "56ac219e8354601652af8bd5f2501670"
     },
     {
       "espn_event_id": "401927082",
@@ -891,7 +891,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "1d0599c3972b078d749d70d9ce57112c"
     },
     {
       "espn_event_id": "401929340",
@@ -1122,7 +1122,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "8f838faa4a554976220484e054cfc690"
     },
     {
       "espn_event_id": "401907164",
@@ -1947,7 +1947,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "01a2af6850018b298d81da816c62d215"
     },
     {
       "espn_event_id": "401906032",
@@ -2013,7 +2013,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "3bf88747a0742704b5313d23757e2e3e"
     },
     {
       "espn_event_id": "401929053",

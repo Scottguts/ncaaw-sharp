@@ -1,11 +1,11 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T03:40:07.589009Z",
+  "generated_at": "2026-11-05T18:42:12.844215Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 8,
+    "n_total_lines": 8,
+    "mean_spread_delta": -4.46,
+    "mean_total_delta": -0.66
   },
   "odds_available": true,
   "n_games": 86,
@@ -14,46 +14,6 @@
   "cards": [],
   "shadow_cards": [],
   "games": [
-    {
-      "espn_event_id": "401927975",
-      "matchup": "Frostburg State Bobcats @ Towson Tigers",
-      "home_short": "Towson",
-      "away_short": "Frostburg State",
-      "start": "2026-11-05T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401913706",
-      "matchup": "North Florida Ospreys @ Florida State Seminoles",
-      "home_short": "Florida State",
-      "away_short": "North Florida",
-      "start": "2026-11-05T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 39.0,
-        "home_score": 60.6,
-        "spread": -21.6,
-        "total": 99.6,
-        "proj_poss": 76.7,
-        "margin_home": 21.6,
-        "games_home": 1,
-        "games_away": 0,
-        "rank_home": 34,
-        "rank_away": 240
-      }
-    },
     {
       "espn_event_id": "401929148",
       "matchup": "Miami (OH) RedHawks @ Southeast Missouri State Redhawks",
@@ -133,7 +93,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 63.0,
@@ -146,6 +106,13 @@
         "games_away": 1,
         "rank_home": 69,
         "rank_away": 260
+      },
+      "market": {
+        "spread_home": -13.5,
+        "total": 120.0,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -159,7 +126,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 64.9,
@@ -172,6 +139,53 @@
         "games_away": 1,
         "rank_home": 315,
         "rank_away": 284
+      },
+      "market": {
+        "spread_home": 13.5,
+        "total": 124.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      }
+    },
+    {
+      "espn_event_id": "401927975",
+      "matchup": "Frostburg State Bobcats @ Towson Tigers",
+      "home_short": "Towson",
+      "away_short": "Frostburg State",
+      "start": "2026-11-05T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401913706",
+      "matchup": "North Florida Ospreys @ Florida State Seminoles",
+      "home_short": "Florida State",
+      "away_short": "North Florida",
+      "start": "2026-11-05T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 39.0,
+        "home_score": 60.6,
+        "spread": -21.6,
+        "total": 99.6,
+        "proj_poss": 76.7,
+        "margin_home": 21.6,
+        "games_home": 1,
+        "games_away": 0,
+        "rank_home": 34,
+        "rank_away": 240
       }
     },
     {
@@ -565,7 +579,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 59.9,
@@ -578,6 +592,13 @@
         "games_away": 1,
         "rank_home": 8,
         "rank_away": 1
+      },
+      "market": {
+        "spread_home": 8.5,
+        "total": 142.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -591,7 +612,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 48.2,
@@ -604,6 +625,13 @@
         "games_away": 1,
         "rank_home": 22,
         "rank_away": 266
+      },
+      "market": {
+        "spread_home": -40.0,
+        "total": 135.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -617,7 +645,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 56.7,
@@ -630,6 +658,13 @@
         "games_away": 1,
         "rank_home": 9,
         "rank_away": 254
+      },
+      "market": {
+        "spread_home": -45.5,
+        "total": 143.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -739,7 +774,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 47.4,
@@ -752,6 +787,13 @@
         "games_away": 1,
         "rank_home": 26,
         "rank_away": 345
+      },
+      "market": {
+        "spread_home": -43.5,
+        "total": 131.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -1329,7 +1371,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 53.5,
@@ -1342,6 +1384,13 @@
         "games_away": 1,
         "rank_home": 50,
         "rank_away": 256
+      },
+      "market": {
+        "spread_home": -34.5,
+        "total": 133.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
@@ -1381,7 +1430,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "insufficient sample (<2 games on one side)"
       ],
       "model": {
         "away_score": 48.6,
@@ -1394,6 +1443,13 @@
         "games_away": 1,
         "rank_home": 19,
         "rank_away": 346
+      },
+      "market": {
+        "spread_home": -56.5,
+        "total": 134.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
       }
     },
     {
