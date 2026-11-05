@@ -41,7 +41,10 @@ November is deliberately quiet.
 
 | File | Role |
 |---|---|
-| `ncaaw_model.py` | v13 model port: TRAINED_WEIGHTS, predict(), prob layer (normal error model), team-name canonicalization (Torvik↔ESPN↔Odds API). |
+| `ncaaw_model.py` | Model: predict(), prob layer (normal error model), name canonicalization. Auto-loads tuned `weights.json` (v13 constants = fallback; delete weights.json to roll back). |
+| `historic_scrape.py` | Full-season ESPN results + Torvik ratings → ncaaw_data/history/ (2 seasons, ~12k games). |
+| `train_model.py` | Cross-season-validated coordinate-descent tune + sigma recalibration → weights.json. 2026-11-04 tune (10,304 games): holdout spread MAE 9.46→8.82, SU 79.7→80.2%; sigmas spread 11.73 / total 15.97 (v13's 13.7 total sigma was overconfident). |
+| `line_watch.py` | Line-drop watcher: re-scrape + re-grade every 2h, fire ONLY new cards to Discord (yellow LINE DROP embed), day-level caps enforced across runs via bet_log. |
 | `ncaaw_data_scraper.py` | Torvik ratings (JS-check cookie bypass), ESPN slate (neutral-site, conf ids), Odds API board (one call/run) with key rotation + quota alert. |
 | `ncaaw_grader.py` | Market anchoring, cover probs, gates, card selection. Writes grades.json + cards.md. Zero API calls. |
 | `bet_tracker.py` | bet_log.csv append/settle (ESPN finals), record.md. Atomic writes. |
@@ -59,6 +62,12 @@ top-level `ncaaw_data/bet_log.csv`, `ncaaw_data/record.md`.
 | daily-bets.yml | 14:47 / 15:32 / 16:17 / 17:17 | THE pipeline. `precheck` skips when cards.md already committed. |
 | heartbeat.yml | 18:30 & 19:30 | Dead-man's-switch: no slate by early afternoon ET → Discord ping + auto-dispatch. |
 | closing-snapshot.yml | hourly 17:00–04:00 | CLV capture; skips the odds call when nothing is pending. |
+| line-watch.yml | every 2h, 11:10–23:10 | Catch newly-posted lines; fire best bets immediately (max CLV). ~210 req/mo — add ODDS_API_KEY_2 for headroom. |
+
+**Dashboard:** `docs/index.html` is the live board (best bets w/ settled
+results + model-vs-market for every game, auto-refresh 5 min). Rebuilt and
+pushed by every daily-bets / line-watch run. Enable GitHub Pages on docs/
+(repo must be public on a free plan) or open the file locally.
 
 Manual full fire:
 ```bash
