@@ -1,0 +1,102 @@
+name: Manual line submission
+
+# Issue-ops: the dashboard's "➕ LATE LINE" button opens a prefilled GitHub
+# issue titled "LINE: Away @ Home". This workflow parses it, appends to
+# ncaaw_data/manual_lines.json, re-grades the slate (manual lines merge in as
+# a 'manual' book — confirmation-exempt, every other gate still applies),
+# fires any new cards to Discord, and closes the issue with the verdict.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ncaaw-line-submit
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: startsWith(github.event.issue.title, 'LINE:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ODDS_API_KEY:        ${{ secrets.ODDS_API_KEY }}
+      ODDS_API_KEY_2:      ${{ secrets.ODDS_API_KEY_2 }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      ISSUE_TITLE:         ${{ github.event.issue.title }}
+      ISSUE_BODY:          ${{ github.event.issue.body }}
+      TZ:                  America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Parse + store line
+        id: parse
+        run: |
+          python - <<'EOF'
+          import json, os, re, sys
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          title = os.environ["ISSUE_TITLE"]
+          body = os.environ.get("ISSUE_BODY") or ""
+          m = re.match(r"LINE:\s*(.+?)\s*@\s*(.+)", title)
+          if not m:
+              print("::error::title must be 'LINE: Away @ Home'"); sys.exit(1)
+          away, home = m.group(1).strip(), m.group(2).strip()
+          kv = dict(re.findall(r"(\w+)\s*[:=]\s*([+-]?\d+(?:\.\d+)?)", body))
+          entry = {
+              "date": kv.get("date") or datetime.now(ZoneInfo("America/New_York")).date().isoformat(),
+              "away": away, "home": home,
+              "spread_home": float(kv["spread_home"]) if "spread_home" in kv else None,
+              "total": float(kv["total"]) if "total" in kv else None,
+              "spread_price": int(float(kv["spread_price"])) if "spread_price" in kv else None,
+              "total_price": int(float(kv["total_price"])) if "total_price" in kv else None,
+              "ml_home": int(float(kv["ml_home"])) if "ml_home" in kv else None,
+              "ml_away": int(float(kv["ml_away"])) if "ml_away" in kv else None,
+          }
+          if entry["spread_home"] is None and entry["total"] is None and entry["ml_home"] is None:
+              print("::error::need at least one of spread_home / total / ml_home+ml_away"); sys.exit(1)
+          p = "ncaaw_data/manual_lines.json"
+          try:
+              rows = json.load(open(p))
+          except Exception:
+              rows = []
+          rows = [r for r in rows if not (r.get("date") == entry["date"]
+                  and r.get("away") == away and r.get("home") == home)]
+          rows.append(entry)
+          json.dump(rows, open(p, "w"), indent=2)
+          print(f"stored: {entry}")
+          EOF
+      - name: Re-grade + fire new cards
+        run: python line_watch.py
+      - name: Commit
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add ncaaw_data/ docs/
+          git diff --staged --quiet || git commit -m "manual line: ${{ github.event.issue.title }}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+          done
+      - name: Close issue with verdict
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TODAY=$(date +%F)
+          CARDS=$(python -c "
+          import json
+          try:
+              g = json.load(open(f'ncaaw_data/$TODAY/grades.json'))
+              print(g.get('n_cards', 0))
+          except Exception:
+              print(0)")
+          gh issue comment ${{ github.event.issue.number }} --body \
+            "✅ Line stored and slate re-graded — $CARDS live card(s) today. Check Discord/the dashboard for fires."
+          gh issue close ${{ github.event.issue.number }}

@@ -570,9 +570,11 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
 <div class='title'>🏀 NCAAW SHARP</div>
 <div class='subtitle'>Tuned Torvik Model · Market-Anchored · ML + Spread + Totals ·
 updated {esc((grades.get('generated_at') or '')[:16].replace('T', ' '))}Z</div></div>
-<div style='display:flex;align-items:center;gap:12px'>
+<div style='display:flex;align-items:center;gap:12px;flex-wrap:wrap'>
 <span class='badge b-green'>{n_cards} PLAY{'S' if n_cards != 1 else ''}</span>
-{pnl_badge}</div></div>
+{pnl_badge}
+<a class='badge b-accent' target='_blank' rel='noopener'
+href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%20%40%20Home&body=spread_home%3D-6.5%0Atotal%3D141.5%0A%23%20optional%3A%20ml_home%3D-250%20ml_away%3D%2B200%20spread_price%3D-110%20date%3D{esc(this_date)}'>➕ LATE LINE</a></div></div>
 <div class='tabs'>
 <button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
 <button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>

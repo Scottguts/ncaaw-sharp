@@ -69,9 +69,45 @@ BOOK_CONFIRMATION_TOLERANCE_CENTS = 8
 MIN_CONFIDENCE = 6
 
 # Early-season discipline: full confidence only once BOTH teams have this
-# many games; below it sigma widens (see ncaaw_model.early_season_sigma).
+# many EFFECTIVE games; below it sigma widens (ncaaw_model.early_season_sigma).
+# A prior-season rating counts as PRIOR_GAMES_CREDIT games of sample — Torvik's
+# adjOE/adjDE already carry preseason priors, and we blend last season's
+# tempo/four-factors in (see blend_with_prior), so a 0-game November team is
+# NOT a zero-information team. Validated 2026-11-05 vs 76 actual finals:
+# factors-only blend cut total MAE 16.6 -> 14.1 with spreads unchanged.
 FULL_CONFIDENCE_GAMES = 10
-MIN_GAMES_TO_BET = 2         # <2 games of data on either side -> no bet at all
+MIN_GAMES_TO_BET = 2         # effective games below this -> no bet
+PRIOR_GAMES_CREDIT = 5
+PRIOR_BLEND_K = 8            # current-season games to mostly trust current stats
+# blend ONLY the raw per-game stats; adjOE/adjDE/tRank stay live (already
+# prior-informed by Torvik — blending them made spreads slightly worse)
+PRIOR_BLEND_KEYS = ("tempo", "eFG", "eFGD", "tor", "torD",
+                    "orb", "drb", "ftr", "ftrD")
+
+
+def blend_with_prior(cur: dict, pri: dict | None) -> dict:
+    """Shrink a team's raw season stats toward last season's by games played,
+    and grant the prior-games credit used by the betting gate + sigma."""
+    out = dict(cur)
+    if not pri:
+        out["games_eff"] = cur.get("games", 0)
+        return out
+    g = cur.get("games", 0)
+    w = g / (g + PRIOR_BLEND_K)
+    for k in PRIOR_BLEND_KEYS:
+        out[k] = w * cur[k] + (1 - w) * pri[k]
+    out["games_eff"] = g + PRIOR_GAMES_CREDIT
+    return out
+
+
+def load_prior_teams(season: int) -> dict:
+    p = DATA_ROOT / "history" / f"teams_{season - 1}.json"
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text()).get("teams") or {}
+    except ValueError:
+        return {}
 
 # (edge_floor, confidence_floor, units, risk_label) — 1u = 1% bankroll
 UNIT_LADDER = [
@@ -240,6 +276,7 @@ def market_anchor_lines(odds_event: dict, home_name: str) -> dict:
     spreads: list[float] = []
     totals: list[float] = []
     pinn_spread = pinn_total = None
+    manual_spread = manual_total = None
     pinn_fair_home = None
     for b in odds_event.get("bookmakers", []):
         key = b.get("key")
@@ -250,25 +287,37 @@ def market_anchor_lines(odds_event: dict, home_name: str) -> dict:
                 pinn_spread = float(h["point"])
             elif key in TARGET_BOOKS:
                 spreads.append(float(h["point"]))
+            elif key == "manual":
+                manual_spread = float(h["point"])
         tot = next((o for o in mk.get("totals", []) if o.get("name") == "Over"), None)
         if tot and tot.get("point") is not None:
             if key in SHARP_ANCHORS:
                 pinn_total = float(tot["point"])
             elif key in TARGET_BOOKS:
                 totals.append(float(tot["point"]))
+            elif key == "manual":
+                manual_total = float(tot["point"])
         if key in SHARP_ANCHORS:
             h2h = mk.get("h2h", [])
             ho = _team_outcome(h2h, home_name)
             ao = next((o for o in h2h if o is not ho), None)
             if ho and ao and ho.get("price") is not None and ao.get("price") is not None:
                 pinn_fair_home, _ = devig_two_way(int(ho["price"]), int(ao["price"]))
+    spread_home = (pinn_spread if pinn_spread is not None
+                   else median(spreads) if spreads
+                   else manual_spread)
+    total = (pinn_total if pinn_total is not None
+             else median(totals) if totals
+             else manual_total)
     return {
-        "spread_home": pinn_spread if pinn_spread is not None
-                       else (median(spreads) if spreads else None),
-        "total": pinn_total if pinn_total is not None
-                 else (median(totals) if totals else None),
-        "spread_src": "pinnacle" if pinn_spread is not None else ("consensus" if spreads else None),
-        "total_src": "pinnacle" if pinn_total is not None else ("consensus" if totals else None),
+        "spread_home": spread_home,
+        "total": total,
+        "spread_src": ("pinnacle" if pinn_spread is not None
+                       else "consensus" if spreads
+                       else "manual" if manual_spread is not None else None),
+        "total_src": ("pinnacle" if pinn_total is not None
+                      else "consensus" if totals
+                      else "manual" if manual_total is not None else None),
         "pinnacle_fair_home_ml": pinn_fair_home,
     }
 
@@ -282,7 +331,7 @@ def best_price(odds_event: dict, market_key: str, pick) -> tuple[int, float | No
     lone outlier price is treated as stale, not as value.
     """
     quotes: list[tuple[int, float | None, str]] = []
-    for book in TARGET_BOOKS:
+    for book in TARGET_BOOKS + ("manual",):
         mk = _markets_for_book(odds_event, book)
         outs = mk.get(market_key, [])
         o = (_team_outcome(outs, pick) if market_key in ("h2h", "spreads")
@@ -293,6 +342,8 @@ def best_price(odds_event: dict, market_key: str, pick) -> tuple[int, float | No
         return None
     quotes.sort(key=lambda q: -q[0])   # higher american = better for bettor
     best = quotes[0]
+    if best[2] == "manual":
+        return best   # user-submitted line = user-confirmed
     for q in quotes[1:]:
         same_line = (market_key == "h2h") or (q[1] == best[1])
         if same_line and abs(q[0] - best[0]) <= BOOK_CONFIRMATION_TOLERANCE_CENTS:
@@ -392,14 +443,16 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
 
     anchor = market_anchor_lines(odds_event, hloc)
     rec["market"] = anchor
-    if min(th["games"], ta["games"]) < MIN_GAMES_TO_BET:
+    gh_eff = th.get("games_eff", th["games"])
+    ga_eff = ta.get("games_eff", ta["games"])
+    if min(gh_eff, ga_eff) < MIN_GAMES_TO_BET:
         rec["pass_reasons"].append(
-            f"insufficient sample (<{MIN_GAMES_TO_BET} games on one side)")
+            f"insufficient sample (<{MIN_GAMES_TO_BET} effective games on one side)")
         return rec
 
-    sigma_s = early_season_sigma(SPREAD_SIGMA, th["games"], ta["games"],
+    sigma_s = early_season_sigma(SPREAD_SIGMA, gh_eff, ga_eff,
                                  FULL_CONFIDENCE_GAMES)
-    sigma_t = early_season_sigma(TOTAL_SIGMA, th["games"], ta["games"],
+    sigma_t = early_season_sigma(TOTAL_SIGMA, gh_eff, ga_eff,
                                  FULL_CONFIDENCE_GAMES)
     rec["sigma"] = {"spread": round(sigma_s, 2), "total": round(sigma_t, 2)}
 
@@ -639,13 +692,79 @@ def render_cards_md(target_date: str, graded: list[dict],
     return "\n".join(lines)
 
 
+def load_manual_lines(target_date: str, data_root: Path = DATA_ROOT) -> list[dict]:
+    """User-submitted late lines (via the dashboard's LATE LINE button ->
+    GitHub issue -> line-submit.yml -> ncaaw_data/manual_lines.json)."""
+    p = data_root / "manual_lines.json"
+    if not p.exists():
+        return []
+    try:
+        rows = json.loads(p.read_text())
+    except ValueError:
+        return []
+    return [r for r in rows if isinstance(r, dict) and r.get("date") == target_date]
+
+
+def _synth_manual_event(game: dict, line: dict) -> dict:
+    """Build a one-book odds event from a manually submitted line. Prices
+    default to -110; the 'manual' book is exempt from two-book confirmation
+    (the user IS the confirmation) but every other gate still applies."""
+    hname = game["home"]["display_name"]
+    aname = game["away"]["display_name"]
+    markets = []
+    sp = line.get("spread_home")
+    if sp is not None:
+        price = int(line.get("spread_price") or -110)
+        markets.append({"key": "spreads", "outcomes": [
+            {"name": hname, "price": price, "point": float(sp)},
+            {"name": aname, "price": price, "point": -float(sp)}]})
+    tot = line.get("total")
+    if tot is not None:
+        price = int(line.get("total_price") or -110)
+        markets.append({"key": "totals", "outcomes": [
+            {"name": "Over", "price": price, "point": float(tot)},
+            {"name": "Under", "price": price, "point": float(tot)}]})
+    if line.get("ml_home") is not None and line.get("ml_away") is not None:
+        markets.append({"key": "h2h", "outcomes": [
+            {"name": hname, "price": int(line["ml_home"])},
+            {"name": aname, "price": int(line["ml_away"])}]})
+    return {"id": f"manual-{game['espn_event_id']}",
+            "commence_time": game["start"],
+            "home_team": hname, "away_team": aname,
+            "bookmakers": [{"key": "manual", "markets": markets}]}
+
+
 def run(target_date: str, data_root: Path = DATA_ROOT) -> dict:
     day = data_root / target_date
     slate = _load(day / "slate.json")
-    teams = _load(day / "teams.json")["teams"]
+    teams_doc = _load(day / "teams.json")
+    season = int(teams_doc.get("season") or 0)
+    prior = load_prior_teams(season) if season else {}
+    teams = {k: blend_with_prior(v, prior.get(k))
+             for k, v in teams_doc["teams"].items()}
+    if prior:
+        print(f"[grader] prior-blend active (season {season - 1} baseline, "
+              f"K={PRIOR_BLEND_K}, +{PRIOR_GAMES_CREDIT} games credit)")
     odds = _load(day / "odds.json") if (day / "odds.json").exists() else {"available": False, "games": []}
 
     odds_by_id = {g.get("id"): g for g in odds.get("games") or []}
+
+    # merge user-submitted late lines for games the board doesn't cover
+    manual = load_manual_lines(target_date, data_root)
+    n_manual = 0
+    for g in slate["games"]:
+        if g.get("odds_event_id") and g["odds_event_id"] in odds_by_id:
+            continue
+        for line in manual:
+            if (canon_match(line.get("away") or "", g["away"].get("location") or "")
+                    and canon_match(line.get("home") or "", g["home"].get("location") or "")):
+                ev = _synth_manual_event(g, line)
+                odds_by_id[ev["id"]] = ev
+                g["odds_event_id"] = ev["id"]
+                n_manual += 1
+                break
+    if n_manual:
+        print(f"[grader] merged {n_manual} manually submitted line(s)")
     injuries = load_injuries()
     if injuries:
         print(f"[grader] injuries.json active for {len(injuries)} team(s)")

@@ -4,9 +4,13 @@ name: Line-drop watcher
 # best bets to Discord the moment books post lines with value. Each run costs
 # exactly one Odds-API request (~210/mo at 7 runs/day — add ODDS_API_KEY_2
 # for headroom). Caps are enforced across the whole day via bet_log.csv.
+# HOURLY through the posting window — GitHub drops/delays scheduled runs
+# aggressively (2026-11-05: most crons slipped hours), so density is the
+# defense: any one surviving run catches the board. ~13 odds requests/day;
+# add ODDS_API_KEY_2 for comfortable headroom.
 on:
   schedule:
-    - cron: "10 11,13,15,19,21,23 * 11,12,1-4 *"   # 6a/8a/10a/2p/4p/6p ET (EST)
+    - cron: "7 11-23 * 11,12,1-4 *"   # every hour 06:07-18:07 ET (EST)
   workflow_dispatch:
 
 permissions:

@@ -32,10 +32,21 @@ Caps: 5 cards / 6.0u per slate · 1 card & ≤1.5u per game
 UNIT_LADDER: 5%+/conf8 → 1.5u · 3.5%+/conf7 → 1.0u · 1.8%+/conf6 → 0.5u
 ```
 
-NCAAW-specific: **early-season discipline** — error sigma is doubled at 0
-games and tapers to the CV value once both teams have 10 games
-(`early_season_sigma`); under 2 games on either side → no bet at all.
-November is deliberately quiet.
+NCAAW-specific: **early-season discipline, prior-informed** — each team's raw
+tempo/four-factor stats are shrunk toward LAST season's by games played
+(blend_with_prior, K=8; adjOE/adjDE stay live — Torvik already priors them;
+validated 2026-11-05 vs 76 finals: total MAE 16.6→14.1). A prior-season
+rating counts as 5 effective games for the gate + sigma, so November CAN
+fire — at widened sigma. Teams with no prior (new D-I) still need 2 real
+games. Spread MAE in week 1 runs ~12 vs ~8.8 mid-season; the gates and
+±1.5pt anchoring absorb this, and the weekly retune folds the new season in
+as it grows.
+
+**Late lines:** the dashboard's ➕ LATE LINE button opens a prefilled GitHub
+issue ("LINE: Away @ Home" + spread_home/total in the body); line-submit.yml
+parses it into ncaaw_data/manual_lines.json, re-grades, fires new cards, and
+closes the issue. Manual lines act as a one-book 'manual' anchor —
+confirmation-exempt, all other gates apply.
 
 ## 2. File inventory
 
