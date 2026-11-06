@@ -1,11 +1,11 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T17:55:34.340102Z",
+  "generated_at": "2026-11-06T23:03:30.356167Z",
   "market_bias": {
-    "n_spread_lines": 6,
-    "n_total_lines": 6,
-    "mean_spread_delta": -3.38,
-    "mean_total_delta": -4.52
+    "n_spread_lines": 3,
+    "n_total_lines": 3,
+    "mean_spread_delta": -8.73,
+    "mean_total_delta": -6.4
   },
   "odds_available": true,
   "n_games": 45,
@@ -67,12 +67,12 @@
   ],
   "shadow_cards": [
     {
-      "bet_label": "Arkansas Razorbacks -18.5",
+      "bet_label": "Stonehill Skyhawks +45.5",
       "market": "spread",
-      "side": "home",
-      "book": "hardrockbet",
+      "side": "away",
+      "book": "draftkings",
       "price_american": -110,
-      "line": -18.5,
+      "line": 45.5,
       "fair_prob": 0.5364,
       "fair_american": -116,
       "edge": 0.024,
@@ -80,72 +80,74 @@
       "unit_size": 0.5,
       "risk": "Shadow",
       "reasoning": [
-        "Model margin +25.9 vs market +18.5 (home)",
-        "Anchored fair margin +20.0 vs line -18.5 (home)"
+        "Model margin +36.8 vs market +45.5 (home)",
+        "Anchored fair margin +44.0 vs line +45.5 (away)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401922829",
-      "matchup": "Northwestern State Lady Demons @ Arkansas Razorbacks",
-      "start": "2026-11-06T16:30Z"
-    },
-    {
-      "bet_label": "Under 139.5",
-      "market": "total",
-      "side": "under",
-      "book": "betmgm",
-      "price_american": -110,
-      "line": 139.5,
-      "fair_prob": 0.5356,
-      "fair_american": -115,
-      "edge": 0.0226,
-      "confidence": 7,
-      "unit_size": 0.5,
-      "risk": "Shadow",
-      "reasoning": [
-        "Model total 135.3 vs market 140",
-        "Anchored fair total 137.5 vs line 139.5"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401919674",
-      "matchup": "Drake Bulldogs @ Kansas Jayhawks",
-      "start": "2026-11-06T17:00Z"
-    },
-    {
-      "bet_label": "Under 137.5",
-      "market": "total",
-      "side": "under",
-      "book": "betmgm",
-      "price_american": -115,
-      "line": 137.5,
-      "fair_prob": 0.5445,
-      "fair_american": -120,
-      "edge": 0.018,
-      "confidence": 6,
-      "unit_size": 0.5,
-      "risk": "Shadow",
-      "reasoning": [
-        "Model total 125.1 vs market 137.5",
-        "Anchored fair total 135.0 vs line 137.5"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401918738",
-      "matchup": "UT Rio Grande Valley Vaqueros @ South Dakota Coyotes",
-      "start": "2026-11-06T17:00Z"
+      "espn_event_id": "401919954",
+      "matchup": "Stonehill Skyhawks @ Notre Dame Fighting Irish",
+      "start": "2026-11-07T00:00Z"
     }
   ],
   "games": [
+    {
+      "espn_event_id": "401920403",
+      "matchup": "UC Davis Aggies @ Eastern Washington Eagles",
+      "home_short": "Eastern Washington",
+      "away_short": "UC Davis",
+      "start": "2026-11-06T21:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 66.5,
+        "home_score": 67.3,
+        "spread": -0.7,
+        "total": 133.8,
+        "proj_poss": 70.9,
+        "margin_home": 0.7,
+        "games_home": 1,
+        "games_away": 1,
+        "rank_home": 191,
+        "rank_away": 187
+      }
+    },
+    {
+      "espn_event_id": "401929113",
+      "matchup": "Ohio Christian Trailblazers @ Wright State Raiders",
+      "home_short": "Wright State",
+      "away_short": "Ohio Christian",
+      "start": "2026-11-06T22:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401929010",
+      "matchup": "Southern Wesleyan Warriors @ Furman Paladins",
+      "home_short": "Furman",
+      "away_short": "Southern Wesleyan",
+      "start": "2026-11-06T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
     {
       "espn_event_id": "401922829",
       "matchup": "Northwestern State Lady Demons @ Arkansas Razorbacks",
@@ -155,36 +157,9 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [
-        {
-          "bet_label": "Arkansas Razorbacks -18.5",
-          "market": "spread",
-          "side": "home",
-          "book": "hardrockbet",
-          "price_american": -110,
-          "line": -18.5,
-          "fair_prob": 0.5364,
-          "fair_american": -116,
-          "edge": 0.024,
-          "confidence": 8,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model margin +25.9 vs market +18.5 (home)",
-            "Anchored fair margin +20.0 vs line -18.5 (home)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401922829",
-          "matchup": "Northwestern State Lady Demons @ Arkansas Razorbacks",
-          "start": "2026-11-06T16:30Z"
-        }
-      ],
+      "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 50.7,
@@ -197,23 +172,6 @@
         "games_away": 1,
         "rank_home": 56,
         "rank_away": 319
-      },
-      "market": {
-        "spread_home": -18.5,
-        "total": 138.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "anchored": {
-        "margin_home": 20.0,
-        "spread_shift": 1.5,
-        "total": 136.0,
-        "total_shift": -2.5
       }
     },
     {
@@ -227,7 +185,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 61.6,
@@ -240,23 +198,6 @@
         "games_away": 1,
         "rank_home": 76,
         "rank_away": 301
-      },
-      "market": {
-        "spread_home": -21.5,
-        "total": 124.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "anchored": {
-        "margin_home": 20.0,
-        "spread_shift": -1.5,
-        "total": 127.0,
-        "total_shift": 2.5
       }
     },
     {
@@ -282,36 +223,9 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [
-        {
-          "bet_label": "Under 139.5",
-          "market": "total",
-          "side": "under",
-          "book": "betmgm",
-          "price_american": -110,
-          "line": 139.5,
-          "fair_prob": 0.5356,
-          "fair_american": -115,
-          "edge": 0.0226,
-          "confidence": 7,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 135.3 vs market 140",
-            "Anchored fair total 137.5 vs line 139.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401919674",
-          "matchup": "Drake Bulldogs @ Kansas Jayhawks",
-          "start": "2026-11-06T17:00Z"
-        }
-      ],
+      "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 58.8,
@@ -324,23 +238,6 @@
         "games_away": 1,
         "rank_home": 39,
         "rank_away": 167
-      },
-      "market": {
-        "spread_home": -23.5,
-        "total": 140.0,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "anchored": {
-        "margin_home": 22.0,
-        "spread_shift": -1.5,
-        "total": 137.5,
-        "total_shift": -2.5
       }
     },
     {
@@ -352,36 +249,9 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [
-        {
-          "bet_label": "Under 137.5",
-          "market": "total",
-          "side": "under",
-          "book": "betmgm",
-          "price_american": -115,
-          "line": 137.5,
-          "fair_prob": 0.5445,
-          "fair_american": -120,
-          "edge": 0.018,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 125.1 vs market 137.5",
-            "Anchored fair total 135.0 vs line 137.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401918738",
-          "matchup": "UT Rio Grande Valley Vaqueros @ South Dakota Coyotes",
-          "start": "2026-11-06T17:00Z"
-        }
-      ],
+      "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 59.3,
@@ -394,23 +264,6 @@
         "games_away": 1,
         "rank_home": 177,
         "rank_away": 222
-      },
-      "market": {
-        "spread_home": -3.5,
-        "total": 137.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "anchored": {
-        "margin_home": 5.0,
-        "spread_shift": 1.5,
-        "total": 135.0,
-        "total_shift": -2.5
       }
     },
     {
@@ -438,20 +291,6 @@
         "rank_home": 154,
         "rank_away": 305
       }
-    },
-    {
-      "espn_event_id": "401929010",
-      "matchup": "Southern Wesleyan Warriors @ Furman Paladins",
-      "home_short": "Furman",
-      "away_short": "Southern Wesleyan",
-      "start": "2026-11-06T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
     },
     {
       "espn_event_id": "401927007",
@@ -494,32 +333,6 @@
       ]
     },
     {
-      "espn_event_id": "401920403",
-      "matchup": "UC Davis Aggies @ Eastern Washington Eagles",
-      "home_short": "Eastern Washington",
-      "away_short": "UC Davis",
-      "start": "2026-11-06T21:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 66.5,
-        "home_score": 67.3,
-        "spread": -0.7,
-        "total": 133.8,
-        "proj_poss": 70.9,
-        "margin_home": 0.7,
-        "games_home": 1,
-        "games_away": 1,
-        "rank_home": 191,
-        "rank_away": 187
-      }
-    },
-    {
       "espn_event_id": "401917687",
       "matchup": "Loyola Marymount Lions @ Utah State Aggies",
       "home_short": "Utah State",
@@ -544,20 +357,6 @@
         "rank_home": 135,
         "rank_away": 119
       }
-    },
-    {
-      "espn_event_id": "401929113",
-      "matchup": "Ohio Christian Trailblazers @ Wright State Raiders",
-      "home_short": "Wright State",
-      "away_short": "Ohio Christian",
-      "start": "2026-11-06T22:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
     },
     {
       "espn_event_id": "401907047",
@@ -610,7 +409,7 @@
         "rank_away": 339
       },
       "market": {
-        "spread_home": -50.5,
+        "spread_home": -53.5,
         "total": 139.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -621,7 +420,7 @@
         "total": 22.36
       },
       "anchored": {
-        "margin_home": 49.0,
+        "margin_home": 52.0,
         "spread_shift": -1.5,
         "total": 137.0,
         "total_shift": -2.5
@@ -638,7 +437,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 63.6,
@@ -651,6 +450,23 @@
         "games_away": 1,
         "rank_home": 164,
         "rank_away": 148
+      },
+      "market": {
+        "spread_home": -1.5,
+        "total": 130.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 16.42,
+        "total": 22.36
+      },
+      "anchored": {
+        "margin_home": 0.4,
+        "spread_shift": -1.1,
+        "total": 128.0,
+        "total_shift": -2.5
       }
     },
     {
@@ -847,7 +663,34 @@
           "start": "2026-11-07T00:00Z"
         }
       ],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Stonehill Skyhawks +45.5",
+          "market": "spread",
+          "side": "away",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 45.5,
+          "fair_prob": 0.5364,
+          "fair_american": -116,
+          "edge": 0.024,
+          "confidence": 8,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model margin +36.8 vs market +45.5 (home)",
+            "Anchored fair margin +44.0 vs line +45.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401919954",
+          "matchup": "Stonehill Skyhawks @ Notre Dame Fighting Irish",
+          "start": "2026-11-07T00:00Z"
+        }
+      ],
       "pass_reasons": [],
       "model": {
         "away_score": 48.7,
