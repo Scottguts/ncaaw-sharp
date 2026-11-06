@@ -73,6 +73,10 @@ jobs:
         run: python bet_tracker.py --settle
         continue-on-error: true
 
+      - name: Build finals report (model vs actual)
+        run: python finals_report.py
+        continue-on-error: true
+
       - name: Scrape slate (Torvik + ESPN + odds)
         run: python ncaaw_data_scraper.py --date ${{ steps.date.outputs.value }}
 

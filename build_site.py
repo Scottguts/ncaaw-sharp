@@ -133,7 +133,7 @@ function searchGames(q){
 }
 window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
-  showTab(['predictions','bets','history'].includes(h)?h:'predictions');
+  showTab(['predictions','bets','history','finals'].includes(h)?h:'predictions');
 });
 """
 
@@ -327,6 +327,17 @@ def _details_html(g: dict, stats: dict | None) -> str:
     if g.get("pass_reasons") and not (g.get("cards")):
         paras.append(f"<b>Verdict:</b> PASS — {esc(g['pass_reasons'][0])}.")
     parts.append("".join(f"<p>{p}</p>" for p in paras))
+    # live-line checker (issue-ops; advisory, separate from pregame picks)
+    import urllib.parse
+    matchup_q = urllib.parse.quote(f"LIVE: {g.get('away_short') or ''} @ {g.get('home_short') or ''}")
+    body_q = urllib.parse.quote("spread_home=-6.5\ntotal=141.5\nprice=-110\n"
+                                "# enter the LIVE line showing right now, then Submit")
+    parts.append(
+        f"<p><a class='badge b-accent' target='_blank' rel='noopener' "
+        f"onclick='event.stopPropagation()' "
+        f"href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title={matchup_q}&body={body_q}'>"
+        f"📡 CHECK LIVE LINE</a> <span class='dim'>in-game advisory — pulls live "
+        f"score + clock, projects the finish, verdicts the line</span></p>")
     return "".join(parts)
 
 
@@ -508,6 +519,52 @@ def render_best_bets(dates: list[str], bet_idx: dict) -> str:
     return "".join(out)
 
 
+def render_finals(day: Path, dates: list[str], this_date: str) -> str:
+    fp = day / "finals.json"
+    if not fp.exists():
+        # point at the most recent date that has finals
+        for d in dates:
+            if d < this_date and (DATA_ROOT / d / "finals.json").exists():
+                return (f"<div class='card empty'>No finals for {this_date} yet — "
+                        f"the report generates the morning after games complete.<br><br>"
+                        f"<a href='{d}.html#finals'>→ see {d} finals</a></div>")
+        return ("<div class='card empty'>No finals yet — the report generates "
+                "the morning after games complete.</div>")
+    rep = json.loads(fp.read_text())
+    s = rep["summary"]
+    fired = s.get("fired") or {}
+    tiles = [
+        ("GAMES", str(s["n"]), ""),
+        ("SPREAD MAE", f"{s['spread_mae']:.1f}", ""),
+        ("TOTAL MAE", f"{s['total_mae']:.1f}", ""),
+        ("SIDE %", f"{s['su_pct']:.0f}%", "g" if s["su_pct"] >= 70 else ""),
+        ("CARDS", f"{fired.get('w', 0)}-{fired.get('l', 0)}-{fired.get('p', 0)} "
+                  f"({fired.get('units', 0):+.2f}u)",
+         "g" if fired.get("units", 0) > 0 else "r" if fired.get("units", 0) < 0 else ""),
+    ]
+    out = ["<div class='pnl'>" + "".join(
+        f"<div class='card'><div class='l'>{t}</div><div class='v {c}'>{v}</div></div>"
+        for t, v, c in tiles) + "</div>",
+        "<p class='muted'>Sorted best → worst spread call. Green ≤5 pts off, "
+        "gold ≤12, red >12. This table is what the weekly retune learns from.</p>",
+        "<table><tr><th>game</th><th>model</th><th>actual</th>"
+        "<th>spread err</th><th>total err</th><th>side</th></tr>"]
+    for r in rep["games"]:
+        se, te = abs(r["spread_err"]), abs(r["total_err"])
+        se_c = "g" if se <= 5 else "y" if se <= 12 else "r"
+        te_c = "g" if te <= 6 else "y" if te <= 14 else "r"
+        star = " ⚡" if r.get("had_card") else ""
+        out.append(
+            f"<tr><td>{esc(r['away_short'])} @ {esc(r['home_short'])}{star}</td>"
+            f"<td>{r['model_away']:.0f}–{r['model_home']:.0f}</td>"
+            f"<td><b>{r['act_away']}–{r['act_home']}</b></td>"
+            f"<td class='{se_c}'>{r['spread_err']:+.1f}</td>"
+            f"<td class='{te_c}'>{r['total_err']:+.1f}</td>"
+            f"<td>{'✓' if r['side_right'] else '✗'}</td></tr>")
+    out.append("</table>")
+    return "".join(out)
+
+
 def render_history(bets: list[dict]) -> str:
     pnl = _pnl(bets)
     net_cls = "g" if pnl["net"] >= 0 else "r"
@@ -578,11 +635,13 @@ href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%2
 <div class='tabs'>
 <button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
 <button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
+<button class='tab' id='tab-finals' onclick="showTab('finals')">🏁 Finals</button>
 <button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
 </div>
 <div class='wrap'>
 <div class='pane' id='pane-predictions'>{render_predictions(grades, dates, this_date, bet_idx, stats_ctx)}</div>
 <div class='pane' id='pane-bets' style='display:none'>{render_best_bets(dates, bet_idx)}</div>
+<div class='pane' id='pane-finals' style='display:none'>{render_finals(DATA_ROOT / this_date, dates, this_date)}</div>
 <div class='pane' id='pane-history' style='display:none'>{render_history(bets)}</div>
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)

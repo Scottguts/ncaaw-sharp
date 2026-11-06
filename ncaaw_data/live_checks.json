@@ -1,0 +1,37 @@
+[
+  {
+    "at": "2026-11-06T04:40:18.205485Z",
+    "game": "Pacific Tigers at Washington Huskies",
+    "live": "Pacific 50 \u2014 65 Washington \u00b7 5.3 min left",
+    "fraction_left": 0.133,
+    "projected_final_margin_home": 18.6,
+    "projected_final_total": 132.3,
+    "checks": [
+      {
+        "market": "live spread",
+        "label": "Washington -18.5",
+        "fair": 0.506,
+        "edge": -0.0346
+      },
+      {
+        "market": "live spread",
+        "label": "Pacific +18.5",
+        "fair": 0.494,
+        "edge": -0.0563
+      },
+      {
+        "market": "live total",
+        "label": "Over 139.5",
+        "fair": 0.107,
+        "edge": -0.7957
+      },
+      {
+        "market": "live total",
+        "label": "Under 139.5",
+        "fair": 0.893,
+        "edge": 0.7047
+      }
+    ],
+    "verdict": "PASS \u2014 biggest 'edge' exceeds the 12% stale-line reject; re-check the number you entered"
+  }
+]

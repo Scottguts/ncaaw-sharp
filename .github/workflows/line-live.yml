@@ -1,0 +1,74 @@
+name: Live line check
+
+# Issue-ops: each game card's "📡 LIVE LINE" button opens a prefilled issue
+# titled "LIVE: Away @ Home" with the in-game line in the body. This pulls
+# the live score/clock from ESPN, projects the rest of the game from the
+# model, and comments a VIABLE/PASS verdict. Advisory only — never touches
+# bet_log.csv.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  live:
+    if: startsWith(github.event.issue.title, 'LIVE:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ISSUE_TITLE: ${{ github.event.issue.title }}
+      ISSUE_BODY:  ${{ github.event.issue.body }}
+      TZ:          America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Check live line
+        id: check
+        run: |
+          python - <<'EOF' | tee verdict.txt
+          import json, os, re, sys
+          title = os.environ["ISSUE_TITLE"]
+          body = os.environ.get("ISSUE_BODY") or ""
+          m = re.match(r"LIVE:\s*(.+?)\s*@\s*(.+)", title)
+          if not m:
+              print("title must be 'LIVE: Away @ Home'"); sys.exit(0)
+          kv = dict(re.findall(r"(\w+)\s*[:=]\s*([+-]?\d+(?:\.\d+)?)", body))
+          from live_check import check
+          r = check(m.group(1).strip(), m.group(2).strip(),
+                    float(kv["spread_home"]) if "spread_home" in kv else None,
+                    float(kv["total"]) if "total" in kv else None,
+                    int(float(kv.get("price") or -110)))
+          print("### " + r.get("verdict", "no verdict"))
+          if r.get("ok"):
+              print(f"\n{r.get('live','')}")
+              print(f"projected final: home margin {r['projected_final_margin_home']:+}, "
+                    f"total {r['projected_final_total']} "
+                    f"({r['fraction_left']:.0%} of game left)")
+              for c in r.get("checks", []):
+                  print(f"- {c['market']}: {c['label']} — fair {c['fair']:.1%}, "
+                        f"edge {c['edge']:+.1%}")
+          EOF
+      - name: Commit live-check log
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add ncaaw_data/live_checks.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "live check: ${{ github.event.issue.title }}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+          done
+        continue-on-error: true
+      - name: Reply + close
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body-file verdict.txt
+          gh issue close ${{ github.event.issue.number }}
