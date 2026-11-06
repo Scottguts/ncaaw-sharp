@@ -101,6 +101,22 @@ margin-bottom:14px}}
 .details b{{color:{C['text']}}}
 .statrow td{{font-variant-numeric:tabular-nums}}
 .better{{color:{C['green']};font-weight:700}}
+.lrow{{display:flex;gap:8px;flex-wrap:wrap;margin:.5rem 0}}
+.lrow input,.lrow select{{background:{C['bg']};border:1px solid {C['border']};
+border-radius:6px;padding:8px 10px;color:{C['text']};font-family:inherit;font-size:13px}}
+.btn{{background:{C['accent']};border:none;border-radius:6px;padding:8px 16px;
+color:#fff;font-family:inherit;font-weight:700;font-size:12px;cursor:pointer}}
+.btn.sec{{background:{C['hover']};border:1px solid {C['border']}}}
+.verdict{{border-radius:8px;padding:10px 12px;margin:.5rem 0;font-size:13px}}
+.v-go{{background:{C['green']}18;border:1px solid {C['green']}40}}
+.v-no{{background:{C['hover']};border:1px solid {C['border']}}}
+.chat{{display:flex;flex-direction:column;gap:8px;margin-top:8px}}
+.msg{{border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;white-space:pre-wrap}}
+.msg.user{{background:{C['accent']}22;border:1px solid {C['accent']}35;align-self:flex-end;max-width:85%}}
+.msg.ai{{background:{C['hover']};border:1px solid {C['border']};max-width:95%}}
+.chatbar{{display:flex;gap:8px;margin-top:8px}}
+.chatbar textarea{{flex:1;background:{C['bg']};border:1px solid {C['border']};border-radius:8px;
+padding:10px;color:{C['text']};font-family:inherit;font-size:13px;resize:vertical;min-height:44px}}
 table{{width:100%;border-collapse:collapse;font-size:12px}}
 th{{padding:8px 6px;text-align:left;font-size:10px;font-weight:700;color:{C['mut']};
 text-transform:uppercase;border-bottom:2px solid {C['border']}}}
@@ -133,8 +149,156 @@ function searchGames(q){
 }
 window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
-  showTab(['predictions','bets','history','finals'].includes(h)?h:'predictions');
+  showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
+  if(h==='live'){liveRefresh();renderKeyState();}
 });
+
+// ═══ LIVE TAB — client-side line checker ═══
+const ESPN='https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard';
+let LIVEGAMES={};
+function phi(x){ // Abramowitz-Stegun erf approx
+  const t=1/(1+0.3275911*Math.abs(x/Math.SQRT2));
+  const e=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-(x*x)/2);
+  return x>=0?0.5*(1+e):0.5*(1-e);
+}
+function edgePct(p,am){const dec=am>0?am/100+1:100/(-am)+1;return p*dec-1;}
+function fmtOdds(a){return a>0?'+'+a:''+a;}
+async function liveRefresh(){
+  const sel=document.getElementById('livesel');
+  if(!sel)return;
+  sel.innerHTML='<option>loading…</option>';
+  const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/New_York'}).replaceAll('-','');
+  try{
+    const r=await fetch(ESPN+'?dates='+today+'&limit=500&groups=50');
+    const d=await r.json();
+    LIVEGAMES={};
+    (d.events||[]).forEach(ev=>{
+      const id=String(ev.id); const model=window.SLATE[id];
+      if(!model)return;
+      const comp=ev.competitions[0];
+      const sides={}; comp.competitors.forEach(c=>sides[c.homeAway]=c);
+      const st=ev.status||{}; const state=(st.type||{}).state;
+      LIVEGAMES[id]={id,name:ev.name,state,period:st.period||0,clock:st.displayClock||'',
+        hs:+(sides.home.score||0),as:+(sides.away.score||0),model};
+    });
+    const inplay=Object.values(LIVEGAMES).filter(g=>g.state==='in');
+    const pre=Object.values(LIVEGAMES).filter(g=>g.state==='pre');
+    sel.innerHTML='';
+    [...inplay,...pre].forEach(g=>{
+      const tag=g.state==='in'?`LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock}`:'pregame';
+      sel.insertAdjacentHTML('beforeend',`<option value='${g.id}'>${g.name} — ${tag}</option>`);
+    });
+    if(!sel.options.length)sel.innerHTML='<option>no graded games today</option>';
+    document.getElementById('livestatus').textContent=
+      `${inplay.length} live · ${pre.length} upcoming · refreshed ${new Date().toLocaleTimeString()}`;
+  }catch(e){sel.innerHTML='<option>ESPN fetch failed — retry</option>';}
+}
+function minutesLeft(g){
+  const parts=(g.clock||'0:00').split(':');
+  const cm=(+parts[0]||0)+((+parts[1]||0)/60);
+  if(g.period<=0)return 40;
+  if(g.period<=4)return (4-g.period)*10+cm;
+  return cm;
+}
+function liveVerdict(){
+  const id=document.getElementById('livesel').value;
+  const g=LIVEGAMES[id]; const out=document.getElementById('liveout');
+  if(!g||!g.model){out.innerHTML="<div class='verdict v-no'>pick a game</div>";return;}
+  const sp=parseFloat(document.getElementById('livesp').value);
+  const tot=parseFloat(document.getElementById('livetot').value);
+  const price=parseInt(document.getElementById('livepr').value)||-110;
+  const f=g.state==='pre'?1:Math.max(0,Math.min(1,minutesLeft(g)/40));
+  const m=g.model;
+  const em=(g.hs-g.as)+m.m*f, et=(g.hs+g.as)+m.t*f;
+  const ss=(m.ss||12)*Math.sqrt(Math.max(f,0.05)), st=(m.st||16)*Math.sqrt(Math.max(f,0.05));
+  let rows=[`<div class='muted'>projected finish: home margin ${em>0?'+':''}${em.toFixed(1)}, total ${et.toFixed(1)} · ${(f*100).toFixed(0)}% of game left</div>`];
+  let checks=[];
+  if(!isNaN(sp)){
+    const ph=phi((em+sp)/ss);
+    checks.push({label:`HOME ${sp>0?'+':''}${sp}`,p:ph});
+    checks.push({label:`AWAY ${-sp>0?'+':''}${-sp}`,p:1-ph});
+  }
+  if(!isNaN(tot)){
+    const po=phi((et-tot)/st);
+    checks.push({label:`OVER ${tot}`,p:po});
+    checks.push({label:`UNDER ${tot}`,p:1-po});
+  }
+  if(g.state==='in'&&f<0.1){
+    out.innerHTML=rows.join('')+"<div class='verdict v-no'>PASS — under 4 game-minutes left, projection unreliable</div>";return;
+  }
+  let best=null;
+  checks.forEach(c=>{c.edge=edgePct(c.p,price);
+    rows.push(`<div class='muted'>${c.label}: fair ${(c.p*100).toFixed(1)}% · edge ${(c.edge*100).toFixed(1)}%</div>`);
+    if(c.edge>=0.035&&c.edge<=0.12&&(!best||c.edge>best.edge))best=c;});
+  const stale=checks.some(c=>c.edge>0.12);
+  if(best)rows.push(`<div class='verdict v-go'>✅ VIABLE — ${best.label} (${fmtOdds(price)}): fair ${(best.p*100).toFixed(1)}%, edge ${(best.edge*100).toFixed(1)}% <span class='muted'>· live advisory, separate from pregame cards</span></div>`);
+  else if(stale)rows.push("<div class='verdict v-no'>⚠️ PASS — biggest 'edge' exceeds the 12% sanity reject. Re-check the line you entered.</div>");
+  else if(checks.length)rows.push("<div class='verdict v-no'>PASS — nothing clears the 3.5% live edge bar.</div>");
+  else rows.push("<div class='verdict v-no'>enter a live spread and/or total</div>");
+  out.innerHTML=rows.join('');
+}
+function openLive(id){showTab('live');liveRefresh().then(()=>{
+  const sel=document.getElementById('livesel');
+  if(sel&&[...sel.options].some(o=>o.value===id))sel.value=id;});}
+
+// ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
+let CHAT=[];
+function aiKey(){return localStorage.getItem('anthropic_key')||'';}
+function saveKey(){
+  const v=document.getElementById('aikey').value.trim();
+  if(v){localStorage.setItem('anthropic_key',v);}else{localStorage.removeItem('anthropic_key');}
+  renderKeyState();
+}
+function renderKeyState(){
+  const has=!!aiKey();
+  document.getElementById('keyform').style.display=has?'none':'flex';
+  document.getElementById('keyset').style.display=has?'block':'none';
+}
+function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
+function chatContext(){
+  const lines=[];
+  const id=(document.getElementById('livesel')||{}).value;
+  Object.values(LIVEGAMES).forEach(g=>{
+    const m=g.model;
+    const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
+      g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
+    lines.push(`${g.name}:${live} | model: home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16}${id===g.id?' [SELECTED]':''}`);
+  });
+  return lines.join('\\n');
+}
+async function sendChat(){
+  const box=document.getElementById('aimsg');
+  const text=box.value.trim(); if(!text)return;
+  const key=aiKey(); if(!key){alert('Set your Anthropic API key first.');return;}
+  box.value='';
+  CHAT.push({role:'user',content:text});
+  renderChat(); renderChat('…thinking');
+  if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
+  const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
+`Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
+`Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
+`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
+`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. Today's board (model numbers are pregame rates):\\n`+chatContext();
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':key,
+        'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
+        messages:CHAT.slice(-12)})});
+    const d=await r.json();
+    const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
+    CHAT.push({role:'assistant',content:reply});
+  }catch(e){CHAT.push({role:'assistant',content:'request failed: '+e.message});}
+  renderChat();
+}
+function renderChat(pending){
+  const el=document.getElementById('chatlog');
+  el.innerHTML=CHAT.map(m=>`<div class='msg ${m.role==='user'?'user':'ai'}'>${m.content
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\*\\*(.+?)\\*\\*/g,'<b>$1</b>')}</div>`).join('')
+    +(pending?`<div class='msg ai muted'>${pending}</div>`:'');
+  el.scrollTop=el.scrollHeight;
+}
 """
 
 
@@ -327,17 +491,12 @@ def _details_html(g: dict, stats: dict | None) -> str:
     if g.get("pass_reasons") and not (g.get("cards")):
         paras.append(f"<b>Verdict:</b> PASS — {esc(g['pass_reasons'][0])}.")
     parts.append("".join(f"<p>{p}</p>" for p in paras))
-    # live-line checker (issue-ops; advisory, separate from pregame picks)
-    import urllib.parse
-    matchup_q = urllib.parse.quote(f"LIVE: {g.get('away_short') or ''} @ {g.get('home_short') or ''}")
-    body_q = urllib.parse.quote("spread_home=-6.5\ntotal=141.5\nprice=-110\n"
-                                "# enter the LIVE line showing right now, then Submit")
+    # jump to the Live tab with this game preselected (in-app, no GitHub)
     parts.append(
-        f"<p><a class='badge b-accent' target='_blank' rel='noopener' "
-        f"onclick='event.stopPropagation()' "
-        f"href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title={matchup_q}&body={body_q}'>"
-        f"📡 CHECK LIVE LINE</a> <span class='dim'>in-game advisory — pulls live "
-        f"score + clock, projects the finish, verdicts the line</span></p>")
+        f"<p><a class='badge b-accent' "
+        f"onclick='event.stopPropagation();openLive(\"{esc(g['espn_event_id'])}\")'>"
+        f"📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this "
+        f"game selected — instant in-browser verdict</span></p>")
     return "".join(parts)
 
 
@@ -620,6 +779,18 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
         pnl_badge = (f"<span class='badge {cls}'>{pnl['net']:+.2f}u "
                      f"({pnl['roi']:+.1f}% ROI)</span>")
     refresh = "<meta http-equiv='refresh' content='300'>" if is_index else ""
+    # compact per-game model data for the Live tab / chat context
+    slate_js = {}
+    for g in grades.get("games") or []:
+        m = g.get("model")
+        if not m:
+            continue
+        sig = g.get("sigma") or {}
+        slate_js[str(g["espn_event_id"])] = {
+            "m": m["margin_home"], "t": m["total"],
+            "ss": sig.get("spread"), "st": sig.get("total"),
+        }
+    slate_json = json.dumps(slate_js, sort_keys=True)
     return f"""<!doctype html><html><head><meta charset='utf-8'>{refresh}
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>NCAAW SHARP — {esc(this_date)}</title><style>{STYLE}</style></head><body>
@@ -635,18 +806,54 @@ href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%2
 <div class='tabs'>
 <button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
 <button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
+<button class='tab' id='tab-live' onclick="showTab('live');liveRefresh();renderKeyState()">📡 Live</button>
 <button class='tab' id='tab-finals' onclick="showTab('finals')">🏁 Finals</button>
 <button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
 </div>
 <div class='wrap'>
 <div class='pane' id='pane-predictions'>{render_predictions(grades, dates, this_date, bet_idx, stats_ctx)}</div>
 <div class='pane' id='pane-bets' style='display:none'>{render_best_bets(dates, bet_idx)}</div>
+<div class='pane' id='pane-live' style='display:none'>
+<h2>📡 Live line checker</h2>
+<p class='muted'>Scores and clock pull straight from ESPN in your browser; the verdict is
+computed instantly with the model's rates. Advisory only — separate from pregame cards.</p>
+<div class='lrow'>
+<select id='livesel' style='flex:1;min-width:240px'><option>open this tab to load…</option></select>
+<button class='btn sec' onclick='liveRefresh()'>↻ refresh</button>
+</div>
+<div class='lrow'>
+<input id='livesp' type='number' step='0.5' placeholder='live spread (home, e.g. -6.5)' style='flex:1'>
+<input id='livetot' type='number' step='0.5' placeholder='live total (e.g. 134.5)' style='flex:1'>
+<input id='livepr' type='number' step='5' placeholder='price (-110)' style='width:110px'>
+<button class='btn' onclick='liveVerdict()'>CHECK</button>
+</div>
+<div id='livestatus' class='dim'></div>
+<div id='liveout'></div>
+<h2 style='margin-top:24px'>🤖 Betting copilot</h2>
+<p class='muted'>Talk through spots — it sees today's board, the model's numbers, and the
+live scores above. Uses your Anthropic API key, stored only in this browser
+(never sent anywhere except api.anthropic.com).</p>
+<div id='keyform' class='lrow'>
+<input id='aikey' type='password' placeholder='Anthropic API key (sk-ant-…)' style='flex:1'>
+<button class='btn' onclick='saveKey()'>save</button>
+</div>
+<div id='keyset' style='display:none'>
+<span class='badge b-green'>key set</span>
+<button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
+</div>
+<div class='chat'><div id='chatlog'></div></div>
+<div class='chatbar'>
+<textarea id='aimsg' placeholder='e.g. "UCLA is up 8 at the half and the live line is UCLA -12.5 — worth it?"'
+onkeydown='if(event.key==="Enter"&&!event.shiftKey){{event.preventDefault();sendChat();}}'></textarea>
+<button class='btn' onclick='sendChat()'>send</button>
+</div>
+</div>
 <div class='pane' id='pane-finals' style='display:none'>{render_finals(DATA_ROOT / this_date, dates, this_date)}</div>
 <div class='pane' id='pane-history' style='display:none'>{render_history(bets)}</div>
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
 · conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
-<script>{TABS_JS}</script></body></html>"""
+<script>window.SLATE={slate_json};{TABS_JS}</script></body></html>"""
 
 
 def build() -> int:
