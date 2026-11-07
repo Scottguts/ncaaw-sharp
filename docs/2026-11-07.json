@@ -1,338 +1,223 @@
 {
   "cards": [
     {
-      "bet_label": "Kent State Golden Flashes +1.5",
-      "book": "espnbet",
+      "bet_label": "Over 121.5",
+      "book": "hardrockbet",
       "confidence": 9,
-      "edge": 0.0473,
-      "espn_event_id": "401929031",
-      "fair_american": -116,
-      "fair_prob": 0.5364,
-      "line": 1.5,
-      "market": "spread",
-      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "edge": 0.0395,
+      "espn_event_id": "401927061",
+      "fair_american": -120,
+      "fair_prob": 0.5445,
+      "line": 121.5,
+      "market": "total",
+      "matchup": "Southern Jaguars @ Illinois Fighting Illini",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "price_american": -105,
+      "price_american": -110,
       "reasoning": [
-        "Model margin -4.2 vs market +1.5 (home)",
-        "Anchored fair margin +0.0 vs line +1.5 (away)"
+        "Model total 128.2 vs market 121.5",
+        "Anchored fair total 124.0 vs line 121.5"
       ],
       "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-07T16:00Z",
+      "side": "over",
+      "start": "2026-11-07T20:00Z",
       "unit_size": 1.0
+    },
+    {
+      "bet_label": "Under 137.5",
+      "book": "hardrockbet",
+      "confidence": 7,
+      "edge": 0.0327,
+      "espn_event_id": "401921435",
+      "fair_american": -118,
+      "fair_prob": 0.541,
+      "line": 137.5,
+      "market": "total",
+      "matchup": "Western Illinois Leathernecks @ Nebraska Cornhuskers",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model total 135.2 vs market 137.5",
+        "Anchored fair total 135.2 vs line 137.5"
+      ],
+      "risk": "Lean",
+      "side": "under",
+      "start": "2026-11-07T20:00Z",
+      "unit_size": 0.5
     }
   ],
   "date": "2026-11-07",
   "games": [
     {
       "anchored": {
-        "margin_home": 0.0,
-        "spread_shift": -1.5,
-        "total": 126.0,
-        "total_shift": 2.5
+        "margin_home": -12.0,
+        "spread_shift": 1.5,
+        "total": 142.5,
+        "total_shift": -2.5
       },
-      "away_short": "Kent State",
-      "cards": [
-        {
-          "bet_label": "Kent State Golden Flashes ML",
-          "book": "espnbet",
-          "confidence": 7,
-          "edge": 0.025,
-          "espn_event_id": "401929031",
-          "fair_american": -100,
-          "fair_prob": 0.5,
-          "line": null,
-          "market": "moneyline",
-          "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": 105,
-          "reasoning": [
-            "Model margin -4.2 vs market +1.5 (home)",
-            "Anchored fair margin +0.0, sigma 16.4"
-          ],
-          "risk": "Shadow(cap-cut)",
-          "side": "away",
-          "start": "2026-11-07T16:00Z",
-          "unit_size": 0.5
-        },
-        {
-          "bet_label": "Kent State Golden Flashes +1.5",
-          "book": "espnbet",
-          "confidence": 9,
-          "edge": 0.0473,
-          "espn_event_id": "401929031",
-          "fair_american": -116,
-          "fair_prob": 0.5364,
-          "line": 1.5,
-          "market": "spread",
-          "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -105,
-          "reasoning": [
-            "Model margin -4.2 vs market +1.5 (home)",
-            "Anchored fair margin +0.0 vs line +1.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-07T16:00Z",
-          "unit_size": 1.0
-        }
-      ],
-      "espn_event_id": "401929031",
-      "home_short": "Northern Kentucky",
+      "away_short": "Minnesota",
+      "cards": [],
+      "espn_event_id": "401918909",
+      "home_short": "Marquette",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -1.5,
+        "spread_home": 13.5,
         "spread_src": "consensus",
-        "total": 123.5,
+        "total": 145.0,
         "total_src": "consensus"
       },
-      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "matchup": "Minnesota Golden Gophers @ Marquette Golden Eagles",
       "model": {
-        "away_score": 68.4,
+        "away_score": 67.9,
         "games_away": 1,
         "games_home": 1,
-        "home_score": 64.1,
-        "margin_home": -4.2,
-        "proj_poss": 70.7,
-        "rank_away": 186,
-        "rank_home": 266,
-        "spread": 4.2,
-        "total": 132.5
+        "home_score": 59.1,
+        "margin_home": -8.8,
+        "proj_poss": 67.2,
+        "rank_away": 29,
+        "rank_home": 80,
+        "spread": 8.8,
+        "total": 127.0
       },
       "neutral_site": false,
-      "pass_reasons": [],
-      "shadow": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "shadow": [
+        {
+          "bet_label": "Marquette Golden Eagles +13.5",
+          "book": "draftkings",
+          "confidence": 7,
+          "edge": 0.024,
+          "espn_event_id": "401918909",
+          "fair_american": -116,
+          "fair_prob": 0.5364,
+          "line": 13.5,
+          "market": "spread",
+          "matchup": "Minnesota Golden Gophers @ Marquette Golden Eagles",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin -8.8 vs market -13.5 (home)",
+            "Anchored fair margin -12.0 vs line +13.5 (home)"
+          ],
+          "risk": "Shadow",
+          "side": "home",
+          "start": "2026-11-07T20:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "sigma": {
         "spread": 16.42,
         "total": 22.36
       },
-      "start": "2026-11-07T16:00Z",
+      "start": "2026-11-07T20:00Z",
       "status": "graded"
     },
     {
-      "away_short": "North Carolina Central",
-      "cards": [],
-      "espn_event_id": "401925621",
-      "home_short": "UNC Wilmington",
-      "matchup": "North Carolina Central Eagles @ UNC Wilmington Seahawks",
-      "model": {
-        "away_score": 60.7,
-        "games_away": 2,
-        "games_home": 1,
-        "home_score": 72.3,
-        "margin_home": 11.6,
-        "proj_poss": 73.5,
-        "rank_away": 342,
-        "rank_home": 215,
-        "spread": -11.6,
-        "total": 132.9
+      "anchored": {
+        "margin_home": 49.0,
+        "spread_shift": -1.5,
+        "total": 124.0,
+        "total_shift": 2.5
       },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "away_short": "Southern",
+      "cards": [
+        {
+          "bet_label": "Over 121.5",
+          "book": "hardrockbet",
+          "confidence": 9,
+          "edge": 0.0395,
+          "espn_event_id": "401927061",
+          "fair_american": -120,
+          "fair_prob": 0.5445,
+          "line": 121.5,
+          "market": "total",
+          "matchup": "Southern Jaguars @ Illinois Fighting Illini",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 128.2 vs market 121.5",
+            "Anchored fair total 124.0 vs line 121.5"
+          ],
+          "risk": "Standard",
+          "side": "over",
+          "start": "2026-11-07T20:00Z",
+          "unit_size": 1.0
+        }
       ],
-      "shadow": [],
-      "start": "2026-11-07T17:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Loyola Maryland",
-      "cards": [],
-      "espn_event_id": "401921148",
-      "home_short": "La Salle",
-      "matchup": "Loyola Maryland Greyhounds @ La Salle Explorers",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T17:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "LSU New Orleans",
-      "cards": [],
-      "espn_event_id": "401920210",
-      "home_short": "Texas A&M",
-      "matchup": "LSU New Orleans Privateers @ Texas A&M Aggies",
-      "model": {
-        "away_score": 55.5,
-        "games_away": 2,
-        "games_home": 1,
-        "home_score": 84.5,
-        "margin_home": 29.0,
-        "proj_poss": 73.7,
-        "rank_away": 313,
-        "rank_home": 43,
-        "spread": -29.0,
-        "total": 139.9
+      "espn_event_id": "401927061",
+      "home_short": "Illinois",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -50.5,
+        "spread_src": "consensus",
+        "total": 121.5,
+        "total_src": "consensus"
       },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T17:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Palm Beach Atlantic",
-      "cards": [],
-      "espn_event_id": "401933116",
-      "home_short": "North Florida",
-      "matchup": "Palm Beach Atlantic Sailfish @ North Florida Ospreys",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T17:30Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Charleston Southern",
-      "cards": [],
-      "espn_event_id": "401927028",
-      "home_short": "Charleston",
-      "matchup": "Charleston Southern Buccaneers @ Charleston Cougars",
+      "matchup": "Southern Jaguars @ Illinois Fighting Illini",
       "model": {
-        "away_score": 59.3,
+        "away_score": 50.8,
         "games_away": 1,
         "games_home": 1,
-        "home_score": 67.3,
-        "margin_home": 8.0,
-        "proj_poss": 70.0,
-        "rank_away": 338,
-        "rank_home": 263,
-        "spread": -8.0,
-        "total": 126.6
+        "home_score": 77.4,
+        "margin_home": 26.7,
+        "proj_poss": 69.6,
+        "rank_away": 193,
+        "rank_home": 25,
+        "spread": -26.7,
+        "total": 128.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "pass_reasons": [],
+      "shadow": [
+        {
+          "bet_label": "Southern Jaguars +50.5",
+          "book": "hardrockbet",
+          "confidence": 8,
+          "edge": 0.024,
+          "espn_event_id": "401927061",
+          "fair_american": -116,
+          "fair_prob": 0.5364,
+          "line": 50.5,
+          "market": "spread",
+          "matchup": "Southern Jaguars @ Illinois Fighting Illini",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin +26.7 vs market +50.5 (home)",
+            "Anchored fair margin +49.0 vs line +50.5 (away)"
+          ],
+          "risk": "Shadow",
+          "side": "away",
+          "start": "2026-11-07T20:00Z",
+          "unit_size": 0.5
+        }
       ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Kutztown",
-      "cards": [],
-      "espn_event_id": "401921240",
-      "home_short": "Saint Joseph's",
-      "matchup": "Kutztown Golden Bears @ Saint Joseph's Hawks",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "High Point",
-      "cards": [],
-      "espn_event_id": "401920336",
-      "home_short": "Ball State",
-      "matchup": "High Point Panthers @ Ball State Cardinals",
-      "model": {
-        "away_score": 72.5,
-        "games_away": 2,
-        "games_home": 1,
-        "home_score": 71.2,
-        "margin_home": -1.3,
-        "proj_poss": 72.8,
-        "rank_away": 78,
-        "rank_home": 103,
-        "spread": 1.3,
-        "total": 143.7
+      "sigma": {
+        "spread": 16.42,
+        "total": 22.36
       },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Wagner",
-      "cards": [],
-      "espn_event_id": "401919962",
-      "home_short": "St. John's",
-      "matchup": "Wagner Seahawks @ St. John's Red Storm",
-      "model": {
-        "away_score": 46.1,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 74.3,
-        "margin_home": 28.2,
-        "proj_poss": 68.3,
-        "rank_away": 347,
-        "rank_home": 54,
-        "spread": -28.2,
-        "total": 120.5
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Avila",
-      "cards": [],
-      "espn_event_id": "401918781",
-      "home_short": "Omaha",
-      "matchup": "Avila Eagles @ Omaha Mavericks",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Massachusetts",
-      "cards": [],
-      "espn_event_id": "401913035",
-      "home_short": "Providence",
-      "matchup": "Massachusetts Minutewomen @ Providence Friars",
-      "model": {
-        "away_score": 60.7,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 65.8,
-        "margin_home": 5.1,
-        "proj_poss": 68.9,
-        "rank_away": 127,
-        "rank_home": 114,
-        "spread": -5.1,
-        "total": 126.5
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-07T18:00Z",
+      "start": "2026-11-07T20:00Z",
       "status": "graded"
     },
     {
@@ -340,7 +225,7 @@
       "cards": [],
       "espn_event_id": "401929627",
       "home_short": "Hofstra",
-      "matchup": "Queens (NY) QUEENS COLLEGE (NY) @ Hofstra Pride",
+      "matchup": "Queens (NY) Lady Knights @ Hofstra Pride",
       "neutral_site": false,
       "pass_reasons": [
         "missing Torvik data (non-D-I opponent?)"
@@ -638,92 +523,6 @@
       "status": "skipped"
     },
     {
-      "anchored": {
-        "margin_home": -8.8,
-        "spread_shift": 0.7,
-        "total": 132.0,
-        "total_shift": -2.5
-      },
-      "away_short": "Minnesota",
-      "cards": [],
-      "espn_event_id": "401918909",
-      "home_short": "Marquette",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 9.5,
-        "spread_src": "consensus",
-        "total": 134.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Minnesota Golden Gophers @ Marquette Golden Eagles",
-      "model": {
-        "away_score": 67.9,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 59.1,
-        "margin_home": -8.8,
-        "proj_poss": 67.2,
-        "rank_away": 29,
-        "rank_home": 80,
-        "spread": 8.8,
-        "total": 127.0
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "start": "2026-11-07T20:00Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": 33.0,
-        "spread_shift": -1.5,
-        "total": 128.2,
-        "total_shift": -1.3
-      },
-      "away_short": "Southern",
-      "cards": [],
-      "espn_event_id": "401927061",
-      "home_short": "Illinois",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -34.5,
-        "spread_src": "consensus",
-        "total": 129.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Southern Jaguars @ Illinois Fighting Illini",
-      "model": {
-        "away_score": 50.8,
-        "games_away": 1,
-        "games_home": 1,
-        "home_score": 77.4,
-        "margin_home": 26.7,
-        "proj_poss": 69.6,
-        "rank_away": 193,
-        "rank_home": 25,
-        "spread": -26.7,
-        "total": 128.2
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 16.42,
-        "total": 22.36
-      },
-      "start": "2026-11-07T20:00Z",
-      "status": "graded"
-    },
-    {
       "away_short": "Incarnate Word",
       "cards": [],
       "espn_event_id": "401925801",
@@ -790,10 +589,50 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 41.0,
+        "spread_shift": -1.5,
+        "total": 135.2,
+        "total_shift": -2.3
+      },
       "away_short": "Western Illinois",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 137.5",
+          "book": "hardrockbet",
+          "confidence": 7,
+          "edge": 0.0327,
+          "espn_event_id": "401921435",
+          "fair_american": -118,
+          "fair_prob": 0.541,
+          "line": 137.5,
+          "market": "total",
+          "matchup": "Western Illinois Leathernecks @ Nebraska Cornhuskers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 135.2 vs market 137.5",
+            "Anchored fair total 135.2 vs line 137.5"
+          ],
+          "risk": "Lean",
+          "side": "under",
+          "start": "2026-11-07T20:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401921435",
       "home_short": "Nebraska",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -42.5,
+        "spread_src": "consensus",
+        "total": 137.5,
+        "total_src": "consensus"
+      },
       "matchup": "Western Illinois Leathernecks @ Nebraska Cornhuskers",
       "model": {
         "away_score": 56.9,
@@ -808,18 +647,60 @@
         "total": 135.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "pass_reasons": [],
+      "shadow": [
+        {
+          "bet_label": "Western Illinois Leathernecks +42.5",
+          "book": "hardrockbet",
+          "confidence": 8,
+          "edge": 0.024,
+          "espn_event_id": "401921435",
+          "fair_american": -116,
+          "fair_prob": 0.5364,
+          "line": 42.5,
+          "market": "spread",
+          "matchup": "Western Illinois Leathernecks @ Nebraska Cornhuskers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin +21.5 vs market +42.5 (home)",
+            "Anchored fair margin +41.0 vs line +42.5 (away)"
+          ],
+          "risk": "Shadow",
+          "side": "away",
+          "start": "2026-11-07T20:00Z",
+          "unit_size": 0.5
+        }
       ],
-      "shadow": [],
+      "sigma": {
+        "spread": 16.42,
+        "total": 22.36
+      },
       "start": "2026-11-07T20:00Z",
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 13.0,
+        "spread_shift": -1.5,
+        "total": 116.5,
+        "total_shift": 0.0
+      },
       "away_short": "Saint Mary's",
       "cards": [],
       "espn_event_id": "401917690",
       "home_short": "Air Force",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -14.5,
+        "spread_src": "consensus",
+        "total": 116.5,
+        "total_src": "consensus"
+      },
       "matchup": "Saint Mary's Gaels @ Air Force Falcons",
       "model": {
         "away_score": 60.1,
@@ -835,9 +716,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 17.59,
+        "total": 23.96
+      },
       "start": "2026-11-07T20:00Z",
       "status": "graded"
     },
@@ -891,6 +776,244 @@
       ],
       "shadow": [],
       "start": "2026-11-07T20:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Kent State",
+      "cards": [],
+      "espn_event_id": "401929031",
+      "home_short": "Northern Kentucky",
+      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "model": {
+        "away_score": 68.4,
+        "games_away": 1,
+        "games_home": 1,
+        "home_score": 64.1,
+        "margin_home": -4.2,
+        "proj_poss": 70.7,
+        "rank_away": 186,
+        "rank_home": 266,
+        "spread": 4.2,
+        "total": 132.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T16:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "North Carolina Central",
+      "cards": [],
+      "espn_event_id": "401925621",
+      "home_short": "UNC Wilmington",
+      "matchup": "North Carolina Central Eagles @ UNC Wilmington Seahawks",
+      "model": {
+        "away_score": 60.7,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 72.3,
+        "margin_home": 11.6,
+        "proj_poss": 73.5,
+        "rank_away": 342,
+        "rank_home": 215,
+        "spread": -11.6,
+        "total": 132.9
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T17:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Loyola Maryland",
+      "cards": [],
+      "espn_event_id": "401921148",
+      "home_short": "La Salle",
+      "matchup": "Loyola Maryland Greyhounds @ La Salle Explorers",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T17:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "LSU New Orleans",
+      "cards": [],
+      "espn_event_id": "401920210",
+      "home_short": "Texas A&M",
+      "matchup": "LSU New Orleans Privateers @ Texas A&M Aggies",
+      "model": {
+        "away_score": 55.5,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 84.5,
+        "margin_home": 29.0,
+        "proj_poss": 73.7,
+        "rank_away": 313,
+        "rank_home": 43,
+        "spread": -29.0,
+        "total": 139.9
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T17:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Palm Beach Atlantic",
+      "cards": [],
+      "espn_event_id": "401933116",
+      "home_short": "North Florida",
+      "matchup": "Palm Beach Atlantic Sailfish @ North Florida Ospreys",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T17:30Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Charleston Southern",
+      "cards": [],
+      "espn_event_id": "401927028",
+      "home_short": "Charleston",
+      "matchup": "Charleston Southern Buccaneers @ Charleston Cougars",
+      "model": {
+        "away_score": 59.3,
+        "games_away": 1,
+        "games_home": 1,
+        "home_score": 67.3,
+        "margin_home": 8.0,
+        "proj_poss": 70.0,
+        "rank_away": 338,
+        "rank_home": 263,
+        "spread": -8.0,
+        "total": 126.6
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Kutztown",
+      "cards": [],
+      "espn_event_id": "401921240",
+      "home_short": "Saint Joseph's",
+      "matchup": "Kutztown Golden Bears @ Saint Joseph's Hawks",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "High Point",
+      "cards": [],
+      "espn_event_id": "401920336",
+      "home_short": "Ball State",
+      "matchup": "High Point Panthers @ Ball State Cardinals",
+      "model": {
+        "away_score": 72.5,
+        "games_away": 2,
+        "games_home": 1,
+        "home_score": 71.2,
+        "margin_home": -1.3,
+        "proj_poss": 72.8,
+        "rank_away": 78,
+        "rank_home": 103,
+        "spread": 1.3,
+        "total": 143.7
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Wagner",
+      "cards": [],
+      "espn_event_id": "401919962",
+      "home_short": "St. John's",
+      "matchup": "Wagner Seahawks @ St. John's Red Storm",
+      "model": {
+        "away_score": 46.1,
+        "games_away": 1,
+        "games_home": 1,
+        "home_score": 74.3,
+        "margin_home": 28.2,
+        "proj_poss": 68.3,
+        "rank_away": 347,
+        "rank_home": 54,
+        "spread": -28.2,
+        "total": 120.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Avila",
+      "cards": [],
+      "espn_event_id": "401918781",
+      "home_short": "Omaha",
+      "matchup": "Avila Eagles @ Omaha Mavericks",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Massachusetts",
+      "cards": [],
+      "espn_event_id": "401913035",
+      "home_short": "Providence",
+      "matchup": "Massachusetts Minutewomen @ Providence Friars",
+      "model": {
+        "away_score": 60.7,
+        "games_away": 1,
+        "games_home": 1,
+        "home_score": 65.8,
+        "margin_home": 5.1,
+        "proj_poss": 68.9,
+        "rank_away": 127,
+        "rank_home": 114,
+        "spread": -5.1,
+        "total": 126.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-07T18:00Z",
       "status": "graded"
     },
     {
@@ -1222,43 +1345,95 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-07T16:49:32.387851Z",
+  "generated_at": "2026-11-07T20:50:41.298095Z",
   "market_bias": {
-    "mean_spread_delta": -4.27,
-    "mean_total_delta": 0.07,
-    "n_spread_lines": 3,
-    "n_total_lines": 3
+    "mean_spread_delta": -14.55,
+    "mean_total_delta": -3.4,
+    "n_spread_lines": 4,
+    "n_total_lines": 4
   },
-  "n_cards": 1,
+  "n_cards": 2,
   "n_games": 47,
   "odds_available": true,
   "shadow_cards": [
     {
-      "bet_label": "Kent State Golden Flashes ML",
-      "book": "espnbet",
+      "bet_label": "Marquette Golden Eagles +13.5",
+      "book": "draftkings",
       "confidence": 7,
-      "edge": 0.025,
-      "espn_event_id": "401929031",
-      "fair_american": -100,
-      "fair_prob": 0.5,
-      "line": null,
-      "market": "moneyline",
-      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "edge": 0.024,
+      "espn_event_id": "401918909",
+      "fair_american": -116,
+      "fair_prob": 0.5364,
+      "line": 13.5,
+      "market": "spread",
+      "matchup": "Minnesota Golden Gophers @ Marquette Golden Eagles",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "price_american": 105,
+      "price_american": -110,
       "reasoning": [
-        "Model margin -4.2 vs market +1.5 (home)",
-        "Anchored fair margin +0.0, sigma 16.4"
+        "Model margin -8.8 vs market -13.5 (home)",
+        "Anchored fair margin -12.0 vs line +13.5 (home)"
       ],
-      "risk": "Shadow(cap-cut)",
+      "risk": "Shadow",
+      "side": "home",
+      "start": "2026-11-07T20:00Z",
+      "unit_size": 0.5
+    },
+    {
+      "bet_label": "Southern Jaguars +50.5",
+      "book": "hardrockbet",
+      "confidence": 8,
+      "edge": 0.024,
+      "espn_event_id": "401927061",
+      "fair_american": -116,
+      "fair_prob": 0.5364,
+      "line": 50.5,
+      "market": "spread",
+      "matchup": "Southern Jaguars @ Illinois Fighting Illini",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model margin +26.7 vs market +50.5 (home)",
+        "Anchored fair margin +49.0 vs line +50.5 (away)"
+      ],
+      "risk": "Shadow",
       "side": "away",
-      "start": "2026-11-07T16:00Z",
+      "start": "2026-11-07T20:00Z",
+      "unit_size": 0.5
+    },
+    {
+      "bet_label": "Western Illinois Leathernecks +42.5",
+      "book": "hardrockbet",
+      "confidence": 8,
+      "edge": 0.024,
+      "espn_event_id": "401921435",
+      "fair_american": -116,
+      "fair_prob": 0.5364,
+      "line": 42.5,
+      "market": "spread",
+      "matchup": "Western Illinois Leathernecks @ Nebraska Cornhuskers",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model margin +21.5 vs market +42.5 (home)",
+        "Anchored fair margin +41.0 vs line +42.5 (away)"
+      ],
+      "risk": "Shadow",
+      "side": "away",
+      "start": "2026-11-07T20:00Z",
       "unit_size": 0.5
     }
   ],
-  "total_units": 1.0
+  "total_units": 1.5
 }

@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-07T16:49:32.132294Z",
+  "fetched_at": "2026-11-07T20:50:41.105953Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -19,61 +19,47 @@
   ],
   "games": [
     {
-      "id": "52b7e93af921e29f274bfb214bfbe5e9",
+      "id": "a9930ad04ec58c5b6e4f3b5972e239a1",
       "sport_key": "basketball_wncaab",
       "sport_title": "WNCAAB",
-      "commence_time": "2026-11-07T16:02:00Z",
-      "home_team": "Northern Kentucky Norse",
-      "away_team": "Kent State Golden Flashes",
+      "commence_time": "2026-11-07T20:00:00Z",
+      "home_team": "Air Force Falcons",
+      "away_team": "Saint Mary's Gaels",
       "bookmakers": [
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-11-07T16:49:19Z",
+          "last_update": "2026-11-07T20:50:36Z",
           "markets": [
             {
-              "key": "h2h",
-              "last_update": "2026-11-07T16:49:19Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
-                  "price": 102
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -143
-                }
-              ]
-            },
-            {
               "key": "spreads",
-              "last_update": "2026-11-07T16:49:19Z",
+              "last_update": "2026-11-07T20:50:36Z",
               "outcomes": [
                 {
-                  "name": "Kent State Golden Flashes",
-                  "price": -114,
-                  "point": 1.5
+                  "name": "Air Force Falcons",
+                  "price": -112,
+                  "point": -14.5
                 },
                 {
-                  "name": "Northern Kentucky Norse",
+                  "name": "Saint Mary's Gaels",
                   "price": -130,
-                  "point": -1.5
+                  "point": 14.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:49:19Z",
+              "last_update": "2026-11-07T20:50:36Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -129,
-                  "point": 123.5
+                  "price": -118,
+                  "point": 116.5
                 },
                 {
                   "name": "Under",
-                  "price": -118,
-                  "point": 123.5
+                  "price": -127,
+                  "point": 116.5
                 }
               ]
             }
@@ -82,157 +68,37 @@
         {
           "key": "ballybet",
           "title": "Bally Bet",
-          "last_update": "2026-11-07T16:49:22Z",
+          "last_update": "2026-11-07T20:49:46Z",
           "markets": [
             {
-              "key": "h2h",
-              "last_update": "2026-11-07T16:49:22Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
-                  "price": 102
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -143
-                }
-              ]
-            },
-            {
               "key": "spreads",
-              "last_update": "2026-11-07T16:49:22Z",
+              "last_update": "2026-11-07T20:49:46Z",
               "outcomes": [
                 {
-                  "name": "Kent State Golden Flashes",
-                  "price": -113,
-                  "point": 1.5
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -127,
-                  "point": -1.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-11-07T16:49:22Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -127,
-                  "point": 123.5
-                },
-                {
-                  "name": "Under",
-                  "price": -115,
-                  "point": 123.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "hardrockbet",
-          "title": "Hard Rock Bet",
-          "last_update": "2026-11-07T16:48:01Z",
-          "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-11-07T16:48:01Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
-                  "price": 105
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -140
-                }
-              ]
-            },
-            {
-              "key": "spreads",
-              "last_update": "2026-11-07T16:48:01Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
+                  "name": "Air Force Falcons",
                   "price": -110,
-                  "point": 1.5
+                  "point": -14.5
                 },
                 {
-                  "name": "Northern Kentucky Norse",
-                  "price": -125,
-                  "point": -1.5
+                  "name": "Saint Mary's Gaels",
+                  "price": -129,
+                  "point": 14.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:48:01Z",
+              "last_update": "2026-11-07T20:49:46Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -120,
-                  "point": 123.5
-                },
-                {
-                  "name": "Under",
-                  "price": -110,
-                  "point": 123.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "espnbet",
-          "title": "theScore Bet",
-          "last_update": "2026-11-07T16:48:54Z",
-          "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-11-07T16:48:54Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
-                  "price": 105
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -135
-                }
-              ]
-            },
-            {
-              "key": "spreads",
-              "last_update": "2026-11-07T16:48:54Z",
-              "outcomes": [
-                {
-                  "name": "Kent State Golden Flashes",
-                  "price": -105,
-                  "point": 1.5
-                },
-                {
-                  "name": "Northern Kentucky Norse",
-                  "price": -125,
-                  "point": -1.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-11-07T16:48:54Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -105,
-                  "point": 123.5
+                  "price": -117,
+                  "point": 116.5
                 },
                 {
                   "name": "Under",
                   "price": -125,
-                  "point": 123.5
+                  "point": 116.5
                 }
               ]
             }
@@ -249,39 +115,267 @@
       "away_team": "Southern Jaguars",
       "bookmakers": [
         {
-          "key": "draftkings",
-          "title": "DraftKings",
-          "last_update": "2026-11-07T16:49:20Z",
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-07T20:49:46Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:49:46Z",
               "outcomes": [
                 {
                   "name": "Illinois Fighting Illini",
-                  "price": -112,
-                  "point": -34.5
+                  "price": -122,
+                  "point": -50.5
                 },
                 {
                   "name": "Southern Jaguars",
-                  "price": -108,
-                  "point": 34.5
+                  "price": -115,
+                  "point": 50.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:49:46Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -102,
-                  "point": 129.5
+                  "price": -115,
+                  "point": 121.5
                 },
                 {
                   "name": "Under",
+                  "price": -125,
+                  "point": 121.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-07T20:50:36Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Illinois Fighting Illini",
+                  "price": -125,
+                  "point": -50.5
+                },
+                {
+                  "name": "Southern Jaguars",
+                  "price": -117,
+                  "point": 50.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -117,
+                  "point": 121.5
+                },
+                {
+                  "name": "Under",
+                  "price": -127,
+                  "point": 121.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-07T20:50:11Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
                   "price": -118,
-                  "point": 129.5
+                  "point": 120.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 120.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-07T20:50:12Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Illinois Fighting Illini",
+                  "price": -120,
+                  "point": -50.5
+                },
+                {
+                  "name": "Southern Jaguars",
+                  "price": -110,
+                  "point": 50.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 121.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 121.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a39c05b5c869b61e4863c560294760fb",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-07T20:00:00Z",
+      "home_team": "Nebraska Cornhuskers",
+      "away_team": "Western Illinois Leathernecks",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-07T20:50:36Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -129,
+                  "point": -42.5
+                },
+                {
+                  "name": "Western Illinois Leathernecks",
+                  "price": -114,
+                  "point": 42.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -130,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 137.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-07T20:49:46Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -127,
+                  "point": -42.5
+                },
+                {
+                  "name": "Western Illinois Leathernecks",
+                  "price": -113,
+                  "point": 42.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -129,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 137.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-07T20:50:12Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -120,
+                  "point": -42.5
+                },
+                {
+                  "name": "Western Illinois Leathernecks",
+                  "price": -110,
+                  "point": 42.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -125,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 137.5
                 }
               ]
             }
@@ -293,58 +387,58 @@
       "id": "9006fff4c9e9a31f862039631265ed7e",
       "sport_key": "basketball_wncaab",
       "sport_title": "WNCAAB",
-      "commence_time": "2026-11-07T20:00:00Z",
+      "commence_time": "2026-11-07T20:02:10Z",
       "home_team": "Marquette Golden Eagles",
       "away_team": "Minnesota Golden Gophers",
       "bookmakers": [
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-07T16:49:20Z",
+          "last_update": "2026-11-07T20:50:11Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:50:11Z",
               "outcomes": [
                 {
                   "name": "Marquette Golden Eagles",
-                  "price": 330
+                  "price": 1000
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -425
+                  "price": -2100
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:50:11Z",
               "outcomes": [
                 {
                   "name": "Marquette Golden Eagles",
                   "price": -110,
-                  "point": 9.5
+                  "point": 13.5
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -110,
-                  "point": -9.5
+                  "price": -120,
+                  "point": -13.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:50:11Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -110,
-                  "point": 134.5
+                  "price": -120,
+                  "point": 145.5
                 },
                 {
                   "name": "Under",
                   "price": -110,
-                  "point": 134.5
+                  "point": 145.5
                 }
               ]
             }
@@ -353,51 +447,247 @@
         {
           "key": "espnbet",
           "title": "theScore Bet",
-          "last_update": "2026-11-07T16:48:54Z",
+          "last_update": "2026-11-07T20:50:35Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-07T16:48:54Z",
+              "last_update": "2026-11-07T20:50:35Z",
               "outcomes": [
                 {
                   "name": "Marquette Golden Eagles",
-                  "price": 340
+                  "price": 1000
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -500
+                  "price": -3500
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-07T16:48:54Z",
+              "last_update": "2026-11-07T20:50:35Z",
               "outcomes": [
                 {
                   "name": "Marquette Golden Eagles",
-                  "price": -105,
-                  "point": 9.5
+                  "price": -125,
+                  "point": 13.5
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -125,
-                  "point": -9.5
+                  "price": -105,
+                  "point": -13.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:48:54Z",
+              "last_update": "2026-11-07T20:50:35Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -110,
-                  "point": 134.5
+                  "price": -125,
+                  "point": 146.5
                 },
                 {
                   "name": "Under",
+                  "price": -105,
+                  "point": 146.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-07T20:50:11Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-07T20:50:11Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 900
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -2500
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 145.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 145.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-07T20:49:46Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 1000
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -10000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": -121,
+                  "point": 13.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -118,
+                  "point": -13.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -121,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -121,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-07T20:50:36Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 1000
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -10000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": -122,
+                  "point": 13.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
                   "price": -120,
-                  "point": 134.5
+                  "point": -13.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -122,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -122,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-07T20:50:12Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 1100
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -5000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": -115,
+                  "point": 13.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -115,
+                  "point": -13.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 144.5
                 }
               ]
             }
@@ -416,11 +706,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-07T16:49:20Z",
+          "last_update": "2026-11-07T20:50:11Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:50:11Z",
               "outcomes": [
                 {
                   "name": "N Colorado Bears",
@@ -436,11 +726,151 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-07T16:49:20Z",
+              "last_update": "2026-11-07T20:50:11Z",
               "outcomes": [
                 {
                   "name": "Over",
                   "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-07T20:50:11Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-07T20:50:36Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "N Colorado Bears",
+                  "price": -113,
+                  "point": 34.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -118,
+                  "point": -34.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -112,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-07T20:49:46Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "N Colorado Bears",
+                  "price": -110,
+                  "point": 34.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -115,
+                  "point": -34.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:49:46Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -117,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -109,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-07T20:50:12Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "N Colorado Bears",
+                  "price": -110,
+                  "point": 34.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -120,
+                  "point": -34.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-07T20:50:12Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
                   "point": 132.5
                 },
                 {
