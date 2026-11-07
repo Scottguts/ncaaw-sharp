@@ -28,6 +28,7 @@ jobs:
       DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       ISSUE_TITLE:         ${{ github.event.issue.title }}
       ISSUE_BODY:          ${{ github.event.issue.body }}
+      TORVIK_SKIP_LIVE:    "1"
       TZ:                  America/New_York
     steps:
       - uses: actions/checkout@v4

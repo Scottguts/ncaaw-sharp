@@ -42,6 +42,18 @@ def run() -> int:
     today = datetime.now(_ET).date()
     today_iso = today.isoformat()
 
+    # 0. quota saver: if nothing on today's slate is still pregame, there is
+    # nothing left to bet — skip the odds call entirely (ESPN check is free)
+    try:
+        upcoming = [g for g in scraper.fetch_slate(today)
+                    if (g.get("status") or "").upper().endswith("SCHEDULED")]
+        if not upcoming:
+            print("[watch] no pregame games left today — skipping odds call")
+            return 0
+        print(f"[watch] {len(upcoming)} pregame game(s) remain")
+    except Exception as e:
+        print(f"[watch] pregame check failed ({e}) — proceeding with full run")
+
     # 1. fresh scrape (slate + torvik-or-cache + 1 odds call) + grade
     scraper.run(today)
     out = grader.run(today_iso)

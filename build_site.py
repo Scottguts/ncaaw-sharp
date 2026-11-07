@@ -121,8 +121,26 @@ table{{width:100%;border-collapse:collapse;font-size:12px}}
 th{{padding:8px 6px;text-align:left;font-size:10px;font-weight:700;color:{C['mut']};
 text-transform:uppercase;border-bottom:2px solid {C['border']}}}
 td{{padding:6px;border-bottom:1px solid {C['border']}30}}
+.lc:empty{{display:none}}
+.lc-live{{color:{C['red']};background:{C['red']}18;border:1px solid {C['red']}30;
+animation:pulse 2s infinite}}
+@keyframes pulse{{50%{{opacity:.55}}}}
+.card{{transition:border-color .15s, box-shadow .15s}}
+.gamecard:hover{{border-color:{C['accent']}50}}
+.btn{{transition:filter .1s}} .btn:hover{{filter:brightness(1.15)}}
+.tab{{transition:background .12s,color .12s}}
+::selection{{background:{C['accent']}55}}
+*{{scrollbar-width:thin;scrollbar-color:{C['border']} transparent}}
+::-webkit-scrollbar{{width:8px;height:8px}}
+::-webkit-scrollbar-thumb{{background:{C['border']};border-radius:99px}}
+details.xtra{{margin-top:16px}} details.xtra summary{{color:{C['dim']};cursor:pointer;
+font-size:12px;padding:8px 0}}
+details.xtra div{{color:{C['dim']};font-size:12px;padding:3px 0 3px 14px}}
 @media(max-width:700px){{.grid4{{grid-template-columns:repeat(2,1fr)}}
-.pnl{{grid-template-columns:repeat(2,1fr)}}}}
+.pnl{{grid-template-columns:repeat(2,1fr)}}
+.tab{{padding:8px 9px;font-size:11px}}
+.wrap{{padding:14px 10px}}
+.header{{padding:12px 14px}}}}
 """
 
 TABS_JS = """
@@ -152,6 +170,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
   loadChat();
+  annotateLive();
   // in-app browsers (Discord, Messages, Instagram...) block cross-site
   // fetches and wipe localStorage — warn loudly
   const ua=navigator.userAgent||'';
@@ -162,6 +181,24 @@ window.addEventListener('DOMContentLoaded',()=>{
     document.body.prepend(w);
   }
 });
+// live score chips on the prediction cards (one free ESPN call per page load)
+async function annotateLive(){
+  if(!document.querySelector('.lc'))return;
+  try{
+    const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/New_York'}).replaceAll('-','');
+    const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard?dates='+today+'&limit=500&groups=50');
+    const d=await r.json();
+    (d.events||[]).forEach(ev=>{
+      const el=document.getElementById('lc-'+ev.id);
+      if(!el)return;
+      const st=ev.status||{}; const state=(st.type||{}).state;
+      const sides={}; (ev.competitions[0].competitors||[]).forEach(c=>sides[c.homeAway]=c);
+      const sc=`${sides.away?sides.away.score:'?'}–${sides.home?sides.home.score:'?'}`;
+      if(state==='in'){el.textContent=`🔴 ${sc} Q${st.period||''} ${st.displayClock||''}`;el.classList.add('lc-live');}
+      else if(state==='post'){el.textContent=`FINAL ${sc}`;}
+    });
+  }catch(e){}
+}
 function fetchHint(e){
   return (e&&e.message?e.message:'failed')+
     ' — if you opened this link from Discord or Messages, tap ··· and "Open in Browser"; '+
@@ -698,6 +735,11 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
             home = esc(home)
         return f"{away} <span class='dim'>@</span> {home}"
 
+    # non-modeled games (non-D-I exhibition opponents) collapse into a
+    # footnote instead of cluttering the board with 20+ dead cards
+    unmodeled = [g for g in games if not g.get("model")]
+    games = [g for g in games if g.get("model")]
+
     ranked_header_done = others_header_done = False
     for g in games:
         if _best_rank(g) <= 25 and not ranked_header_done:
@@ -713,13 +755,14 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
         card = carded.get(g["espn_event_id"])
         bet = bet_idx.get((str(g["espn_event_id"]), card["market"], card["side"])) if card else None
         tip = (g.get("start") or "")[11:16]
-        head = (f"<div style='display:flex;justify-content:space-between;align-items:flex-start'>"
+        head = (f"<div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'>"
                 f"<div><div class='matchup'>{_ranked_matchup(g)}</div>"
                 f"<div class='muted'>{tip} UTC"
                 + (" · neutral site" if g.get("neutral_site") else "")
-                + "</div></div>"
-                + ("<span class='badge b-accent'>⚡ EDGE</span>" if card else "")
-                + "</div>")
+                + "</div></div><div style='text-align:right'>"
+                + ("<span class='badge b-accent'>⚡ EDGE</span> " if card else "")
+                + f"<span class='badge b-grey lc' id='lc-{esc(g['espn_event_id'])}'></span>"
+                + "</div></div>")
         if m:
             away_nm = g.get("away_short") or (g.get("matchup") or " @ ").split(" @ ")[0]
             home_nm = g.get("home_short") or (g.get("matchup") or " @ ").split(" @ ")[-1]
@@ -780,6 +823,10 @@ def render_predictions(grades: dict, dates: list[str], this_date: str,
             f"data-search='{search_key}' onclick='toggleGame(\"{eid}\")'>"
             f"{head}{grid}{play}"
             f"<div class='details' id='det-{eid}' style='display:none'>{details}</div></div>")
+    if unmodeled:
+        rows = "".join(f"<div>{esc(x.get('matchup'))}</div>" for x in unmodeled)
+        out.append(f"<details class='xtra'><summary>{len(unmodeled)} exhibition / "
+                   f"non-D-I games (no ratings — not graded)</summary>{rows}</details>")
     return "".join(out)
 
 
@@ -983,6 +1030,12 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
     chat_ctx_json = json.dumps(" | ".join(ctx_bits))
     return f"""<!doctype html><html><head><meta charset='utf-8'>{refresh}
 <meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta name='theme-color' content='#0a0f1a'>
+<link rel='manifest' href='manifest.json'>
+<link rel='icon' href='icon.svg' type='image/svg+xml'>
+<link rel='apple-touch-icon' href='apple-touch-icon.png'>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
 <title>NCAAW SHARP — {esc(this_date)}</title><style>{STYLE}</style></head><body>
 <div class='header'><div>
 <div class='title'>🏀 NCAAW SHARP</div>

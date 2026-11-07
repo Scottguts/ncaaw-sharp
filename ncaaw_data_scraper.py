@@ -416,6 +416,10 @@ def run(target: date, data_root: Path = DATA_ROOT) -> dict:
     season = torvik_season_for(target)
     print(f"[torvik] fetching NCAAW season {season} …")
     try:
+        if os.environ.get("TORVIK_SKIP_LIVE"):
+            # CI runners are always 403-blocked — skip the doomed attempt
+            # (saves ~10s + retry noise per run) and go straight to snapshot
+            raise RuntimeError("TORVIK_SKIP_LIVE set (runner IPs are blocked)")
         teams = fetch_torvik(season)
         teams_doc = {
             "fetched_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -433,16 +437,24 @@ def run(target: date, data_root: Path = DATA_ROOT) -> dict:
                                f"exists: {e}") from e
         teams = cached["teams"]
         teams_doc = cached
-        print(f"[torvik] LIVE FETCH FAILED ({e}) — falling back to cached "
+        print(f"[torvik] live fetch unavailable ({e}) — using cached "
               f"snapshot from {cached['stale_from']} ({len(teams)} teams)")
+        # Discord warning ONLY when the snapshot is actually going stale
+        # (>2 days old) — the fallback itself is normal on CI and warning
+        # every hourly sweep was pure spam.
+        try:
+            stale_days = (target - date.fromisoformat(
+                cached["stale_from"][:10])).days
+        except (ValueError, TypeError):
+            stale_days = 99
         hook = os.environ.get("DISCORD_WEBHOOK_URL")
-        if hook:
+        if hook and stale_days > 2:
             try:
                 requests.post(hook, json={"content":
-                    f"⚠️ **NCAAW Torvik fetch failed** — graded today's slate on the "
-                    f"cached ratings snapshot from **{cached['stale_from']}**. "
-                    f"Ratings drift slowly so cards are still valid, but investigate "
-                    f"if this repeats."}, timeout=15)
+                    f"⚠️ **NCAAW ratings snapshot is {stale_days} days old** — "
+                    f"double-click `refresh_teams.command` on the Mac to push "
+                    f"fresh Torvik ratings (CI can't fetch them itself)."},
+                    timeout=15)
             except Exception:
                 pass
     _save_json(out / "teams.json", teams_doc)
