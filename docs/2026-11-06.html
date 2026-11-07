@@ -357,7 +357,21 @@ window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
+  // in-app browsers (Discord, Messages, Instagram...) block cross-site
+  // fetches and wipe localStorage — warn loudly
+  const ua=navigator.userAgent||'';
+  if(/Discord|FBAN|FBAV|Instagram|Line\/|wv\)|WebView/i.test(ua)){
+    const w=document.createElement('div');
+    w.style.cssText='background:#ef444422;border:1px solid #ef444460;border-radius:8px;padding:10px 14px;margin:10px 20px;font-size:13px';
+    w.innerHTML='⚠️ <b>You are in an in-app browser</b> — live scores, the copilot, and saved keys will not work here. Tap the ··· menu and choose <b>Open in Browser / Safari</b>.';
+    document.body.prepend(w);
+  }
 });
+function fetchHint(e){
+  return (e&&e.message?e.message:'failed')+
+    ' — if you opened this link from Discord or Messages, tap ··· and "Open in Browser"; '+
+    'ad-blockers/VPNs can also block api calls.';
+}
 
 // ═══ LIVE TAB — client-side line checker ═══
 const ESPN='https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard';
@@ -397,7 +411,7 @@ async function liveRefresh(){
     if(!sel.options.length)sel.innerHTML='<option>no graded games today</option>';
     document.getElementById('livestatus').textContent=
       `${inplay.length} live · ${pre.length} upcoming · refreshed ${new Date().toLocaleTimeString()}`;
-  }catch(e){sel.innerHTML='<option>ESPN fetch failed — retry</option>';}
+  }catch(e){sel.innerHTML='<option>ESPN fetch failed — retry</option>';document.getElementById('livestatus').textContent=fetchHint(e);}
 }
 function minutesLeft(g){
   const parts=(g.clock||'0:00').split(':');
@@ -474,7 +488,7 @@ async function runWorkflow(file,label){
       const d=await r.json().catch(()=>({}));
       out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,120)}</span>`;
     }
-  }catch(e){out.innerHTML="<span class='r'>request failed: "+e.message+"</span>";}
+  }catch(e){out.innerHTML="<span class='r'>request failed: "+fetchHint(e)+"</span>";}
 }
 
 // ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
@@ -575,7 +589,7 @@ async function sendChat(){
     const d=await r.json();
     const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
     CHAT.push({role:'assistant',content:reply});
-  }catch(e){CHAT.push({role:'assistant',content:'request failed: '+e.message});}
+  }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
   renderChat();
 }
 function renderChat(pending){
