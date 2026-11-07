@@ -938,8 +938,9 @@ computed instantly with the model's rates. Advisory only — separate from prega
 <div id='liveout'></div>
 <h2 style='margin-top:24px'>🤖 Betting copilot</h2>
 <p class='muted'>Talk through spots — it sees today's board, the model's numbers, and the
-live scores above. Uses your Anthropic API key, stored only in this browser
-(never sent anywhere except api.anthropic.com).</p>
+live scores above. <b>📷 attach a screenshot of your book's lines</b> (button next
+to the message box below) and it reads every number and verdicts each one.
+Uses your Anthropic API key, stored only in this browser.</p>
 <div id='keyform' class='lrow'>
 <input id='aikey' type='password' placeholder='Anthropic API key (sk-ant-…)' style='flex:1'>
 <button class='btn' onclick='saveKey()'>save</button>
@@ -953,7 +954,7 @@ live scores above. Uses your Anthropic API key, stored only in this browser
 <div class='chatbar'>
 <input id='imgfile' type='file' accept='image/*' multiple style='display:none'
 onchange='[...this.files].forEach(addImageFile);this.value=""'>
-<button class='btn sec' title='attach screenshot'
+<button class='btn sec' title='attach screenshot' style='font-size:18px;min-width:52px'
 onclick='document.getElementById("imgfile").click()'>📷</button>
 <textarea id='aimsg' placeholder='ask about a spot — or 📷 attach a screenshot of your book&#39;s live lines'
 onkeydown='if(event.key==="Enter"&&!event.shiftKey){{event.preventDefault();sendChat();}}'
