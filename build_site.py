@@ -151,6 +151,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
+  loadChat();
   // in-app browsers (Discord, Messages, Instagram...) block cross-site
   // fetches and wipe localStorage — warn loudly
   const ua=navigator.userAgent||'';
@@ -332,13 +333,20 @@ function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
   const lines=[];
   const id=(document.getElementById('livesel')||{}).value;
-  Object.values(LIVEGAMES).forEach(g=>{
+  const src=Object.keys(LIVEGAMES).length?Object.values(LIVEGAMES)
+    :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
+  src.forEach(g=>{
     const m=g.model;
     const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
       g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
-    lines.push(`${g.name}:${live} | model: home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16}${id===g.id?' [SELECTED]':''}`);
+    const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
+    const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
+             (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
+    const extra=(m.card?` | FIRED: ${m.card}`:'')+(m.inj?` | INJ: ${m.inj}`:'');
+    lines.push(`${g.name}:${live}${rank} | model: ${m.aw||'away'} ${m.as_||'?'}-${m.hs_||'?'} ${m.hm||'home'} (home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16})${bk}${extra}${id===g.id?' [USER SELECTED THIS GAME]':''}`);
   });
-  return lines.join('\\n');
+  return (window.BETCTX?window.BETCTX+'\\n':'')+lines.join('\\n')+
+    `\\n(as of ${new Date().toLocaleTimeString()} ET-ish, user local)`;
 }
 async function sendChat(){
   const box=document.getElementById('aimsg');
@@ -359,33 +367,73 @@ async function sendChat(){
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
   const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
 `Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
+`Sizing ladder (1u = 1% bankroll): 5%+ edge & high conviction = 1.5u max; 3.5%+ = 1u; 1.8%+ = 0.5u; day cap 6u across 5 bets. `+
 `Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
-`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
-`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. `+
+`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Edge = fair_prob*decimal_odds - 1. `+
+`Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line — say so). `+
+`Be direct and numeric: show the math in one or two lines, give a clear verdict (BET x.xu / PASS), recommend PASS freely. `+
+`Early-season caution: it is opening week, ratings are noisy, model margins on mismatches run hot — trust the book more than the model on extreme spreads. `+
 `If a sportsbook screenshot is attached: read every visible line (teams, spreads, totals, prices), match them to the board below, compute edges vs the model, and verdict each one. `+
-`Today's board (model numbers are pregame rates):\\n`+chatContext();
+`PENDING BETS listed below are already placed — evaluate hedges/middles if asked but never double-count them as new plays. `+
+`Today's board (model numbers are pregame full-game rates):\\n`+chatContext();
+  const msgs=CHAT.slice(-12).map((m,i,arr)=>{
+    if(typeof m.content==='string')return m;
+    const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+    if(!recent&&m.content.some(b=>b.type==='image')){
+      const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+      return {role:m.role,content:'[earlier screenshot omitted] '+t};
+    }
+    return {role:m.role,content:m.content.map(b=>
+      b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+  });
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'content-type':'application/json','x-api-key':key,
         'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
-        messages:CHAT.slice(-12).map((m,i,arr)=>{
-          if(typeof m.content==='string')return m;
-          const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
-          if(!recent&&m.content.some(b=>b.type==='image')){
-            const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
-            return {role:m.role,content:'[earlier screenshot omitted] '+t};
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1800,stream:true,
+        system:system,messages:msgs})});
+    if(!r.ok){
+      const d=await r.json().catch(()=>({}));
+      CHAT.push({role:'assistant',content:'error: '+JSON.stringify(d.error||d).slice(0,300)});
+      renderChat();saveChat();return;
+    }
+    CHAT.push({role:'assistant',content:''});
+    const reader=r.body.getReader();
+    const dec=new TextDecoder();
+    let buf='';
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\\n'); buf=lines.pop();
+      for(const ln of lines){
+        if(!ln.startsWith('data: '))continue;
+        try{
+          const ev=JSON.parse(ln.slice(6));
+          if(ev.type==='content_block_delta'&&ev.delta&&ev.delta.text){
+            CHAT[CHAT.length-1].content+=ev.delta.text;
+            renderChat();
           }
-          return {role:m.role,content:m.content.map(b=>
-            b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
-        })})});
-    const d=await r.json();
-    const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
-    CHAT.push({role:'assistant',content:reply});
+        }catch(e){}
+      }
+    }
   }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
-  renderChat();
+  renderChat();saveChat();
 }
+function saveChat(){
+  try{
+    const slim=CHAT.slice(-30).map(m=>typeof m.content==='string'?m:
+      {role:m.role,content:'[screenshot] '+m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ')});
+    localStorage.setItem('chat_hist',JSON.stringify(slim));
+  }catch(e){}
+}
+function loadChat(){
+  try{CHAT=JSON.parse(localStorage.getItem('chat_hist')||'[]');}catch(e){CHAT=[];}
+  if(CHAT.length)renderChat();
+}
+function clearChat(){CHAT=[];localStorage.removeItem('chat_hist');renderChat();}
+function quick(t){document.getElementById('aimsg').value=t;sendChat();}
 function renderChat(pending){
   const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\*\\*(.+?)\\*\\*/g,'<b>$1</b>');
   const el=document.getElementById('chatlog');
@@ -888,11 +936,51 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
         if not m:
             continue
         sig = g.get("sigma") or {}
-        slate_js[str(g["espn_event_id"])] = {
+        mk = g.get("market") or {}
+        entry = {
             "m": m["margin_home"], "t": m["total"],
             "ss": sig.get("spread"), "st": sig.get("total"),
+            "aw": g.get("away_short"), "hm": g.get("home_short"),
+            "as_": m.get("away_score"), "hs_": m.get("home_score"),
         }
+        if mk.get("spread_home") is not None:
+            entry["bk_sp"] = mk["spread_home"]
+        if mk.get("total") is not None:
+            entry["bk_t"] = mk["total"]
+        ra, rh = m.get("rank_away"), m.get("rank_home")
+        if isinstance(ra, int) and ra <= 50:
+            entry["ra"] = ra
+        if isinstance(rh, int) and rh <= 50:
+            entry["rh"] = rh
+        if g.get("cards"):
+            c = g["cards"][0]
+            entry["card"] = (f"{c['bet_label']} {c['price_american']:+d} "
+                             f"@{c['book']} edge {c['edge']:.1%} {c['unit_size']}u")
+        if g.get("injury_notes"):
+            entry["inj"] = "; ".join(g["injury_notes"])[:160]
+        slate_js[str(g["espn_event_id"])] = entry
     slate_json = json.dumps(slate_js, sort_keys=True)
+
+    # global context for the copilot: pending bets, record, recent accuracy
+    ctx_bits = []
+    pend = [b for b in bets if b.get("status") == "pending"]
+    if pend:
+        ctx_bits.append("PENDING BETS: " + "; ".join(
+            f"{b.get('matchup')} {b.get('market')} {b.get('side')} "
+            f"{b.get('line') or ''} {b.get('price')} ({b.get('units_risked')}u, "
+            f"edge {b.get('edge_pred')})" for b in pend[:10]))
+    if pnl["risked"] > 0:
+        ctx_bits.append(f"SEASON RECORD: {pnl['w']}-{pnl['l']}-{pnl['p']}, "
+                        f"{pnl['net']:+.2f}u ({pnl['roi']:+.1f}% ROI)")
+    for d in dates:
+        frep = DATA_ROOT / d / "finals.json"
+        if d < this_date and frep.exists():
+            s = json.loads(frep.read_text())["summary"]
+            ctx_bits.append(f"MODEL ACCURACY {d}: {s['n']} games, spread MAE "
+                            f"{s['spread_mae']}, total MAE {s['total_mae']}, "
+                            f"sides {s['su_pct']}%")
+            break
+    chat_ctx_json = json.dumps(" | ".join(ctx_bits))
     return f"""<!doctype html><html><head><meta charset='utf-8'>{refresh}
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>NCAAW SHARP — {esc(this_date)}</title><style>{STYLE}</style></head><body>
@@ -963,6 +1051,12 @@ Uses your Anthropic API key, stored only in this browser.</p>
 <span class='badge b-green'>key set</span>
 <button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
 </div>
+<div class='lrow'>
+<button class='btn sec' onclick='quick("Scan the whole board: which games have the biggest model-vs-book gaps right now, and is anything worth a bet under the gates?")'>🔍 scan board</button>
+<button class='btn sec' onclick='quick("What is live right now and how do the live scores compare to what the model projected?")'>📡 what&#39;s live</button>
+<button class='btn sec' onclick='quick("Review my pending bets: current state of each game, how they are tracking, and any hedge worth considering.")'>🎫 my bets</button>
+<button class='btn sec' onclick='clearChat()'>🗑 clear</button>
+</div>
 <div class='chat'><div id='chatlog'></div></div>
 <div id='imgpreview'></div>
 <div class='chatbar'>
@@ -981,7 +1075,7 @@ onpaste='[...(event.clipboardData||{{}}).items||[]].forEach(it=>{{if(it.type&&it
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
 · conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
-<script>window.SLATE={slate_json};{TABS_JS}</script></body></html>"""
+<script>window.SLATE={slate_json};window.BETCTX={chat_ctx_json};{TABS_JS}</script></body></html>"""
 
 
 def build() -> int:

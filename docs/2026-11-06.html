@@ -313,6 +313,12 @@ Uses your Anthropic API key, stored only in this browser.</p>
 <span class='badge b-green'>key set</span>
 <button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
 </div>
+<div class='lrow'>
+<button class='btn sec' onclick='quick("Scan the whole board: which games have the biggest model-vs-book gaps right now, and is anything worth a bet under the gates?")'>🔍 scan board</button>
+<button class='btn sec' onclick='quick("What is live right now and how do the live scores compare to what the model projected?")'>📡 what&#39;s live</button>
+<button class='btn sec' onclick='quick("Review my pending bets: current state of each game, how they are tracking, and any hedge worth considering.")'>🎫 my bets</button>
+<button class='btn sec' onclick='clearChat()'>🗑 clear</button>
+</div>
 <div class='chat'><div id='chatlog'></div></div>
 <div id='imgpreview'></div>
 <div class='chatbar'>
@@ -331,7 +337,7 @@ onpaste='[...(event.clipboardData||{}).items||[]].forEach(it=>{if(it.type&&it.ty
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
 · conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
-<script>window.SLATE={"401903554": {"m": 21.4, "ss": null, "st": null, "t": 136.9}, "401907047": {"m": 37.1, "ss": null, "st": null, "t": 135.6}, "401913025": {"m": 18.7, "ss": null, "st": null, "t": 141.9}, "401913045": {"m": 13.5, "ss": null, "st": null, "t": 137.5}, "401913676": {"m": -7.5, "ss": null, "st": null, "t": 124.2}, "401913831": {"m": 4.0, "ss": null, "st": null, "t": 142.1}, "401913863": {"m": -7.5, "ss": 16.42, "st": 22.36, "t": 130.6}, "401915642": {"m": 16.9, "ss": null, "st": null, "t": 127.1}, "401915774": {"m": 5.0, "ss": null, "st": null, "t": 122.6}, "401917687": {"m": -1.2, "ss": null, "st": null, "t": 126.8}, "401918540": {"m": -14.3, "ss": null, "st": null, "t": 125.4}, "401918656": {"m": 5.1, "ss": null, "st": null, "t": 125.9}, "401918738": {"m": 6.5, "ss": null, "st": null, "t": 125.1}, "401918924": {"m": 20.3, "ss": null, "st": null, "t": 131.0}, "401918932": {"m": 6.1, "ss": null, "st": null, "t": 126.0}, "401919515": {"m": -1.3, "ss": null, "st": null, "t": 122.0}, "401919666": {"m": 7.2, "ss": null, "st": null, "t": 123.6}, "401919674": {"m": 17.7, "ss": null, "st": null, "t": 135.3}, "401919954": {"m": 36.8, "ss": null, "st": null, "t": 134.2}, "401919980": {"m": 12.3, "ss": null, "st": null, "t": 129.8}, "401920403": {"m": 0.7, "ss": null, "st": null, "t": 133.8}, "401920492": {"m": 6.9, "ss": null, "st": null, "t": 122.4}, "401921578": {"m": -6.5, "ss": null, "st": null, "t": 137.3}, "401922829": {"m": 25.9, "ss": null, "st": null, "t": 127.3}, "401925785": {"m": 0.4, "ss": null, "st": null, "t": 127.5}, "401926041": {"m": 4.6, "ss": null, "st": null, "t": 132.3}, "401926958": {"m": 14.6, "ss": 16.42, "st": 22.36, "t": 138.5}, "401926999": {"m": 14.5, "ss": null, "st": null, "t": 129.8}, "401927007": {"m": -9.3, "ss": null, "st": null, "t": 134.2}, "401927053": {"m": -0.7, "ss": null, "st": null, "t": 124.4}, "401927466": {"m": -15.4, "ss": null, "st": null, "t": 133.8}, "401927926": {"m": 3.8, "ss": null, "st": null, "t": 129.7}};
+<script>window.SLATE={"401903554": {"as_": 57.8, "aw": "Washington State", "hm": "Oregon", "hs_": 79.2, "m": 21.4, "rh": 23, "ss": null, "st": null, "t": 136.9}, "401907047": {"as_": 49.3, "aw": "Morgan State", "hm": "Oklahoma State", "hs_": 86.3, "m": 37.1, "rh": 21, "ss": null, "st": null, "t": 135.6}, "401913025": {"as_": 61.6, "aw": "Indiana State", "hm": "Seton Hall", "hs_": 80.3, "m": 18.7, "ss": null, "st": null, "t": 141.9}, "401913045": {"as_": 62.0, "aw": "Purdue Fort Wayne", "hm": "DePaul", "hs_": 75.5, "m": 13.5, "ss": null, "st": null, "t": 137.5}, "401913676": {"as_": 65.9, "aw": "Princeton", "hm": "Richmond", "hs_": 58.3, "m": -7.5, "ss": null, "st": null, "t": 124.2}, "401913831": {"as_": 69.0, "aw": "Rice", "hm": "Murray State", "hs_": 73.0, "m": 4.0, "ss": null, "st": null, "t": 142.1}, "401913863": {"as_": 69.1, "aw": "South Florida", "bk_sp": 13.5, "bk_t": 122.5, "hm": "Belmont", "hs_": 61.6, "m": -7.5, "ss": 16.42, "st": 22.36, "t": 130.6}, "401915642": {"as_": 55.1, "aw": "Binghamton", "hm": "Fairfield", "hs_": 72.0, "m": 16.9, "ss": null, "st": null, "t": 127.1}, "401915774": {"as_": 58.8, "aw": "Rhode Island", "hm": "Columbia", "hs_": 63.8, "m": 5.0, "ss": null, "st": null, "t": 122.6}, "401917687": {"as_": 64.0, "aw": "Loyola Marymount", "hm": "Utah State", "hs_": 62.8, "m": -1.2, "ss": null, "st": null, "t": 126.8}, "401918540": {"as_": 69.8, "aw": "Abilene Christian", "hm": "Houston Christian", "hs_": 55.6, "m": -14.3, "ss": null, "st": null, "t": 125.4}, "401918656": {"as_": 60.4, "aw": "North Carolina A&T", "hm": "Marshall", "hs_": 65.5, "m": 5.1, "ss": null, "st": null, "t": 125.9}, "401918738": {"as_": 59.3, "aw": "UT Rio Grande Valley", "hm": "South Dakota", "hs_": 65.8, "m": 6.5, "ss": null, "st": null, "t": 125.1}, "401918924": {"as_": 55.3, "aw": "Southern Illinois", "hm": "Indiana", "hs_": 75.7, "m": 20.3, "rh": 41, "ss": null, "st": null, "t": 131.0}, "401918932": {"as_": 60.0, "aw": "Colorado State", "hm": "Utah", "hs_": 66.1, "m": 6.1, "ss": null, "st": null, "t": 126.0}, "401919515": {"as_": 61.6, "aw": "Northeastern", "hm": "Boston University", "hs_": 60.3, "m": -1.3, "ss": null, "st": null, "t": 122.0}, "401919666": {"as_": 58.2, "aw": "Northern Illinois", "hm": "Bradley", "hs_": 65.4, "m": 7.2, "ss": null, "st": null, "t": 123.6}, "401919674": {"as_": 58.8, "aw": "Drake", "hm": "Kansas", "hs_": 76.5, "m": 17.7, "rh": 39, "ss": null, "st": null, "t": 135.3}, "401919954": {"as_": 48.7, "aw": "Stonehill", "hm": "Notre Dame", "hs_": 85.5, "m": 36.8, "rh": 17, "ss": null, "st": null, "t": 134.2}, "401919980": {"as_": 58.7, "aw": "Northern Iowa", "hm": "South Dakota State", "hs_": 71.1, "m": 12.3, "ss": null, "st": null, "t": 129.8}, "401920403": {"as_": 66.5, "aw": "UC Davis", "hm": "Eastern Washington", "hs_": 67.3, "m": 0.7, "ss": null, "st": null, "t": 133.8}, "401920492": {"as_": 57.8, "aw": "UTSA", "hm": "UNLV", "hs_": 64.7, "m": 6.9, "ss": null, "st": null, "t": 122.4}, "401921578": {"as_": 71.9, "aw": "California Baptist", "hm": "Utah Tech", "hs_": 65.4, "m": -6.5, "ss": null, "st": null, "t": 137.3}, "401922829": {"as_": 50.7, "aw": "Northwestern State", "hm": "Arkansas", "hs_": 76.6, "m": 25.9, "ss": null, "st": null, "t": 127.3}, "401925785": {"as_": 63.6, "aw": "Lehigh", "hm": "Monmouth", "hs_": 63.9, "m": 0.4, "ss": null, "st": null, "t": 127.5}, "401926041": {"as_": 63.8, "aw": "Middle Tennessee", "hm": "Memphis", "hs_": 68.4, "m": 4.6, "ss": null, "st": null, "t": 132.3}, "401926958": {"as_": 62.0, "aw": "Idaho", "bk_sp": 7.5, "bk_t": 158.5, "hm": "Gonzaga", "hs_": 76.6, "m": 14.6, "rh": 48, "ss": 16.42, "st": 22.36, "t": 138.5}, "401926999": {"as_": 57.6, "aw": "Portland State", "hm": "Boise State", "hs_": 72.2, "m": 14.5, "ss": null, "st": null, "t": 129.8}, "401927007": {"as_": 71.7, "aw": "Southern Utah", "hm": "New Mexico State", "hs_": 62.4, "m": -9.3, "ss": null, "st": null, "t": 134.2}, "401927053": {"as_": 62.5, "aw": "Georgia State", "hm": "UNC Asheville", "hs_": 61.8, "m": -0.7, "ss": null, "st": null, "t": 124.4}, "401927466": {"as_": 74.6, "aw": "Missouri", "hm": "Little Rock", "hs_": 59.2, "m": -15.4, "ss": null, "st": null, "t": 133.8}, "401927926": {"as_": 62.9, "aw": "Elon", "hm": "Howard", "hs_": 66.8, "m": 3.8, "ss": null, "st": null, "t": 129.7}};window.BETCTX="PENDING BETS: Stonehill Skyhawks @ Notre Dame Fighting Irish total under 146.5 -110 (1.0u, edge 0.0395); Morgan State Lady Bears @ Oklahoma State Cowgirls total under 139.5 -110 (1.0u, edge 0.0395) | MODEL ACCURACY 2026-11-05: 59 games, spread MAE 12.17, total MAE 14.88, sides 88.1%";
 function showTab(id){
   document.querySelectorAll('.pane').forEach(p=>p.style.display='none');
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -357,6 +363,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
+  loadChat();
   // in-app browsers (Discord, Messages, Instagram...) block cross-site
   // fetches and wipe localStorage — warn loudly
   const ua=navigator.userAgent||'';
@@ -538,13 +545,20 @@ function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
   const lines=[];
   const id=(document.getElementById('livesel')||{}).value;
-  Object.values(LIVEGAMES).forEach(g=>{
+  const src=Object.keys(LIVEGAMES).length?Object.values(LIVEGAMES)
+    :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
+  src.forEach(g=>{
     const m=g.model;
     const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
       g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
-    lines.push(`${g.name}:${live} | model: home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16}${id===g.id?' [SELECTED]':''}`);
+    const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
+    const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
+             (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
+    const extra=(m.card?` | FIRED: ${m.card}`:'')+(m.inj?` | INJ: ${m.inj}`:'');
+    lines.push(`${g.name}:${live}${rank} | model: ${m.aw||'away'} ${m.as_||'?'}-${m.hs_||'?'} ${m.hm||'home'} (home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16})${bk}${extra}${id===g.id?' [USER SELECTED THIS GAME]':''}`);
   });
-  return lines.join('\n');
+  return (window.BETCTX?window.BETCTX+'\n':'')+lines.join('\n')+
+    `\n(as of ${new Date().toLocaleTimeString()} ET-ish, user local)`;
 }
 async function sendChat(){
   const box=document.getElementById('aimsg');
@@ -565,33 +579,73 @@ async function sendChat(){
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
   const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
 `Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
+`Sizing ladder (1u = 1% bankroll): 5%+ edge & high conviction = 1.5u max; 3.5%+ = 1u; 1.8%+ = 0.5u; day cap 6u across 5 bets. `+
 `Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
-`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
-`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. `+
+`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Edge = fair_prob*decimal_odds - 1. `+
+`Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line — say so). `+
+`Be direct and numeric: show the math in one or two lines, give a clear verdict (BET x.xu / PASS), recommend PASS freely. `+
+`Early-season caution: it is opening week, ratings are noisy, model margins on mismatches run hot — trust the book more than the model on extreme spreads. `+
 `If a sportsbook screenshot is attached: read every visible line (teams, spreads, totals, prices), match them to the board below, compute edges vs the model, and verdict each one. `+
-`Today's board (model numbers are pregame rates):\n`+chatContext();
+`PENDING BETS listed below are already placed — evaluate hedges/middles if asked but never double-count them as new plays. `+
+`Today's board (model numbers are pregame full-game rates):\n`+chatContext();
+  const msgs=CHAT.slice(-12).map((m,i,arr)=>{
+    if(typeof m.content==='string')return m;
+    const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+    if(!recent&&m.content.some(b=>b.type==='image')){
+      const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+      return {role:m.role,content:'[earlier screenshot omitted] '+t};
+    }
+    return {role:m.role,content:m.content.map(b=>
+      b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+  });
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'content-type':'application/json','x-api-key':key,
         'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
-        messages:CHAT.slice(-12).map((m,i,arr)=>{
-          if(typeof m.content==='string')return m;
-          const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
-          if(!recent&&m.content.some(b=>b.type==='image')){
-            const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
-            return {role:m.role,content:'[earlier screenshot omitted] '+t};
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1800,stream:true,
+        system:system,messages:msgs})});
+    if(!r.ok){
+      const d=await r.json().catch(()=>({}));
+      CHAT.push({role:'assistant',content:'error: '+JSON.stringify(d.error||d).slice(0,300)});
+      renderChat();saveChat();return;
+    }
+    CHAT.push({role:'assistant',content:''});
+    const reader=r.body.getReader();
+    const dec=new TextDecoder();
+    let buf='';
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const ln of lines){
+        if(!ln.startsWith('data: '))continue;
+        try{
+          const ev=JSON.parse(ln.slice(6));
+          if(ev.type==='content_block_delta'&&ev.delta&&ev.delta.text){
+            CHAT[CHAT.length-1].content+=ev.delta.text;
+            renderChat();
           }
-          return {role:m.role,content:m.content.map(b=>
-            b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
-        })})});
-    const d=await r.json();
-    const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
-    CHAT.push({role:'assistant',content:reply});
+        }catch(e){}
+      }
+    }
   }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
-  renderChat();
+  renderChat();saveChat();
 }
+function saveChat(){
+  try{
+    const slim=CHAT.slice(-30).map(m=>typeof m.content==='string'?m:
+      {role:m.role,content:'[screenshot] '+m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ')});
+    localStorage.setItem('chat_hist',JSON.stringify(slim));
+  }catch(e){}
+}
+function loadChat(){
+  try{CHAT=JSON.parse(localStorage.getItem('chat_hist')||'[]');}catch(e){CHAT=[];}
+  if(CHAT.length)renderChat();
+}
+function clearChat(){CHAT=[];localStorage.removeItem('chat_hist');renderChat();}
+function quick(t){document.getElementById('aimsg').value=t;sendChat();}
 function renderChat(pending){
   const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
   const el=document.getElementById('chatlog');

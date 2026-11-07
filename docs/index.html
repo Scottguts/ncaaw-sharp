@@ -333,6 +333,12 @@ Uses your Anthropic API key, stored only in this browser.</p>
 <span class='badge b-green'>key set</span>
 <button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
 </div>
+<div class='lrow'>
+<button class='btn sec' onclick='quick("Scan the whole board: which games have the biggest model-vs-book gaps right now, and is anything worth a bet under the gates?")'>🔍 scan board</button>
+<button class='btn sec' onclick='quick("What is live right now and how do the live scores compare to what the model projected?")'>📡 what&#39;s live</button>
+<button class='btn sec' onclick='quick("Review my pending bets: current state of each game, how they are tracking, and any hedge worth considering.")'>🎫 my bets</button>
+<button class='btn sec' onclick='clearChat()'>🗑 clear</button>
+</div>
 <div class='chat'><div id='chatlog'></div></div>
 <div id='imgpreview'></div>
 <div class='chatbar'>
@@ -351,7 +357,7 @@ onpaste='[...(event.clipboardData||{}).items||[]].forEach(it=>{if(it.type&&it.ty
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
 · conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
-<script>window.SLATE={"401909683": {"m": 6.4, "ss": null, "st": null, "t": 114.8}, "401911505": {"m": 6.3, "ss": null, "st": null, "t": 134.1}, "401911754": {"m": 13.7, "ss": null, "st": null, "t": 126.0}, "401912505": {"m": -3.7, "ss": null, "st": null, "t": 122.6}, "401913035": {"m": 5.1, "ss": null, "st": null, "t": 126.5}, "401913745": {"m": 17.7, "ss": null, "st": null, "t": 132.6}, "401916151": {"m": 18.7, "ss": null, "st": null, "t": 135.2}, "401916185": {"m": 5.9, "ss": null, "st": null, "t": 144.3}, "401917688": {"m": -9.7, "ss": null, "st": null, "t": 139.6}, "401917689": {"m": 7.4, "ss": null, "st": null, "t": 127.6}, "401917690": {"m": -3.6, "ss": null, "st": null, "t": 116.5}, "401918423": {"m": 5.8, "ss": null, "st": null, "t": 134.0}, "401918704": {"m": 4.0, "ss": null, "st": null, "t": 135.2}, "401918841": {"m": 29.4, "ss": null, "st": null, "t": 126.9}, "401918909": {"m": -8.8, "ss": 16.42, "st": 22.36, "t": 127.0}, "401919679": {"m": 3.7, "ss": null, "st": null, "t": 125.0}, "401919875": {"m": -13.2, "ss": null, "st": null, "t": 141.3}, "401919962": {"m": 28.2, "ss": null, "st": null, "t": 120.5}, "401920014": {"m": -1.4, "ss": null, "st": null, "t": 137.5}, "401920210": {"m": 29.0, "ss": null, "st": null, "t": 139.9}, "401920265": {"m": 6.0, "ss": null, "st": null, "t": 121.1}, "401920336": {"m": -1.3, "ss": null, "st": null, "t": 143.7}, "401920496": {"m": -7.9, "ss": null, "st": null, "t": 121.2}, "401921435": {"m": 21.5, "ss": null, "st": null, "t": 135.2}, "401923194": {"m": 4.7, "ss": null, "st": null, "t": 125.1}, "401923474": {"m": 17.2, "ss": null, "st": null, "t": 126.5}, "401925621": {"m": 11.6, "ss": null, "st": null, "t": 132.9}, "401925801": {"m": 7.0, "ss": null, "st": null, "t": 131.3}, "401926031": {"m": 6.9, "ss": null, "st": null, "t": 131.3}, "401926054": {"m": -1.7, "ss": null, "st": null, "t": 141.3}, "401926058": {"m": -0.2, "ss": null, "st": null, "t": 128.8}, "401927028": {"m": 8.0, "ss": null, "st": null, "t": 126.6}, "401927061": {"m": 26.7, "ss": 16.42, "st": 22.36, "t": 128.2}, "401927075": {"m": -12.6, "ss": null, "st": null, "t": 131.3}, "401929031": {"m": -4.2, "ss": 16.42, "st": 22.36, "t": 132.5}, "401929136": {"m": 9.8, "ss": null, "st": null, "t": 130.5}};
+<script>window.SLATE={"401909683": {"as_": 54.2, "aw": "Bucknell", "hm": "Brown", "hs_": 60.6, "m": 6.4, "ss": null, "st": null, "t": 114.8}, "401911505": {"as_": 63.9, "aw": "Radford", "hm": "Eastern Kentucky", "hs_": 70.2, "m": 6.3, "ss": null, "st": null, "t": 134.1}, "401911754": {"as_": 56.1, "aw": "Loyola Chicago", "hm": "Green Bay", "hs_": 69.8, "m": 13.7, "ss": null, "st": null, "t": 126.0}, "401912505": {"as_": 63.1, "aw": "Liberty", "hm": "East Carolina", "hs_": 59.4, "m": -3.7, "ss": null, "st": null, "t": 122.6}, "401913035": {"as_": 60.7, "aw": "Massachusetts", "hm": "Providence", "hs_": 65.8, "m": 5.1, "ss": null, "st": null, "t": 126.5}, "401913745": {"as_": 57.5, "aw": "Long Island University", "hm": "Pittsburgh", "hs_": 75.1, "m": 17.7, "ss": null, "st": null, "t": 132.6}, "401916151": {"as_": 58.3, "aw": "Montana", "hm": "BYU", "hs_": 77.0, "m": 18.7, "rh": 47, "ss": null, "st": null, "t": 135.2}, "401916185": {"as_": 69.2, "aw": "Penn State", "hm": "Cincinnati", "hs_": 75.1, "m": 5.9, "ss": null, "st": null, "t": 144.3}, "401917688": {"as_": 74.6, "aw": "Santa Clara", "hm": "Utah Valley", "hs_": 64.9, "m": -9.7, "ss": null, "st": null, "t": 139.6}, "401917689": {"as_": 60.1, "aw": "San Diego", "hm": "UC San Diego", "hs_": 67.5, "m": 7.4, "ss": null, "st": null, "t": 127.6}, "401917690": {"as_": 60.1, "aw": "Saint Mary's", "hm": "Air Force", "hs_": 56.5, "m": -3.6, "ss": null, "st": null, "t": 116.5}, "401918423": {"as_": 64.1, "aw": "Alabama State", "hm": "West Georgia", "hs_": 69.9, "m": 5.8, "ss": null, "st": null, "t": 134.0}, "401918704": {"as_": 65.6, "aw": "Arkansas State", "hm": "Florida Gulf Coast", "hs_": 69.6, "m": 4.0, "ss": null, "st": null, "t": 135.2}, "401918841": {"as_": 48.8, "aw": "Northern Colorado", "hm": "Texas", "hs_": 78.1, "m": 29.4, "rh": 10, "ss": null, "st": null, "t": 126.9}, "401918909": {"as_": 67.9, "aw": "Minnesota", "bk_sp": 9.5, "bk_t": 134.5, "hm": "Marquette", "hs_": 59.1, "m": -8.8, "ra": 29, "ss": 16.42, "st": 22.36, "t": 127.0}, "401919679": {"as_": 60.7, "aw": "Evansville", "hm": "Lindenwood", "hs_": 64.4, "m": 3.7, "ss": null, "st": null, "t": 125.0}, "401919875": {"as_": 77.2, "aw": "Texas State", "hm": "Chicago State", "hs_": 64.1, "m": -13.2, "ss": null, "st": null, "t": 141.3}, "401919962": {"as_": 46.1, "aw": "Wagner", "hm": "St. John's", "hs_": 74.3, "m": 28.2, "ss": null, "st": null, "t": 120.5}, "401920014": {"as_": 69.4, "aw": "Detroit Mercy", "hm": "Valparaiso", "hs_": 68.1, "m": -1.4, "ss": null, "st": null, "t": 137.5}, "401920210": {"as_": 55.5, "aw": "LSU New Orleans", "hm": "Texas A&M", "hs_": 84.5, "m": 29.0, "rh": 43, "ss": null, "st": null, "t": 139.9}, "401920265": {"as_": 57.5, "aw": "Sacramento State", "hm": "Nevada", "hs_": 63.6, "m": 6.0, "ss": null, "st": null, "t": 121.1}, "401920336": {"as_": 72.5, "aw": "High Point", "hm": "Ball State", "hs_": 71.2, "m": -1.3, "ss": null, "st": null, "t": 143.7}, "401920496": {"as_": 64.5, "aw": "Missouri State", "hm": "Wyoming", "hs_": 56.6, "m": -7.9, "ss": null, "st": null, "t": 121.2}, "401921435": {"as_": 56.9, "aw": "Western Illinois", "hm": "Nebraska", "hs_": 78.3, "m": 21.5, "rh": 28, "ss": null, "st": null, "t": 135.2}, "401923194": {"as_": 60.2, "aw": "Denver", "hm": "Weber State", "hs_": 64.9, "m": 4.7, "ss": null, "st": null, "t": 125.1}, "401923474": {"as_": 54.7, "aw": "Fresno State", "hm": "Colorado", "hs_": 71.8, "m": 17.2, "rh": 38, "ss": null, "st": null, "t": 126.5}, "401925621": {"as_": 60.7, "aw": "North Carolina Central", "hm": "UNC Wilmington", "hs_": 72.3, "m": 11.6, "ss": null, "st": null, "t": 132.9}, "401925801": {"as_": 62.2, "aw": "Incarnate Word", "hm": "UTEP", "hs_": 69.2, "m": 7.0, "ss": null, "st": null, "t": 131.3}, "401926031": {"as_": 62.2, "aw": "Kennesaw State", "hm": "Florida Atlantic", "hs_": 69.1, "m": 6.9, "ss": null, "st": null, "t": 131.3}, "401926054": {"as_": 71.5, "aw": "Navy", "hm": "Temple", "hs_": 69.8, "m": -1.7, "ss": null, "st": null, "t": 141.3}, "401926058": {"as_": 64.5, "aw": "UAB", "hm": "South Alabama", "hs_": 64.3, "m": -0.2, "ss": null, "st": null, "t": 128.8}, "401927028": {"as_": 59.3, "aw": "Charleston Southern", "hm": "Charleston", "hs_": 67.3, "m": 8.0, "ss": null, "st": null, "t": 126.6}, "401927061": {"as_": 50.8, "aw": "Southern", "bk_sp": -34.5, "bk_t": 129.5, "hm": "Illinois", "hs_": 77.4, "m": 26.7, "rh": 25, "ss": 16.42, "st": 22.36, "t": 128.2}, "401927075": {"as_": 71.9, "aw": "Michigan State", "hm": "Toledo", "hs_": 59.4, "m": -12.6, "ra": 30, "ss": null, "st": null, "t": 131.3}, "401929031": {"as_": 68.4, "aw": "Kent State", "bk_sp": -1.5, "bk_t": 123.5, "card": "Kent State Golden Flashes ML +105 @espnbet edge 2.5% 0.5u", "hm": "Northern Kentucky", "hs_": 64.1, "m": -4.2, "ss": 16.42, "st": 22.36, "t": 132.5}, "401929136": {"as_": 60.4, "aw": "Buffalo", "hm": "Youngstown State", "hs_": 70.1, "m": 9.8, "ss": null, "st": null, "t": 130.5}};window.BETCTX="PENDING BETS: Stonehill Skyhawks @ Notre Dame Fighting Irish total under 146.5 -110 (1.0u, edge 0.0395); Morgan State Lady Bears @ Oklahoma State Cowgirls total under 139.5 -110 (1.0u, edge 0.0395) | MODEL ACCURACY 2026-11-05: 59 games, spread MAE 12.17, total MAE 14.88, sides 88.1%";
 function showTab(id){
   document.querySelectorAll('.pane').forEach(p=>p.style.display='none');
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -377,6 +383,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
+  loadChat();
   // in-app browsers (Discord, Messages, Instagram...) block cross-site
   // fetches and wipe localStorage — warn loudly
   const ua=navigator.userAgent||'';
@@ -558,13 +565,20 @@ function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
   const lines=[];
   const id=(document.getElementById('livesel')||{}).value;
-  Object.values(LIVEGAMES).forEach(g=>{
+  const src=Object.keys(LIVEGAMES).length?Object.values(LIVEGAMES)
+    :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
+  src.forEach(g=>{
     const m=g.model;
     const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
       g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
-    lines.push(`${g.name}:${live} | model: home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16}${id===g.id?' [SELECTED]':''}`);
+    const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
+    const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
+             (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
+    const extra=(m.card?` | FIRED: ${m.card}`:'')+(m.inj?` | INJ: ${m.inj}`:'');
+    lines.push(`${g.name}:${live}${rank} | model: ${m.aw||'away'} ${m.as_||'?'}-${m.hs_||'?'} ${m.hm||'home'} (home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16})${bk}${extra}${id===g.id?' [USER SELECTED THIS GAME]':''}`);
   });
-  return lines.join('\n');
+  return (window.BETCTX?window.BETCTX+'\n':'')+lines.join('\n')+
+    `\n(as of ${new Date().toLocaleTimeString()} ET-ish, user local)`;
 }
 async function sendChat(){
   const box=document.getElementById('aimsg');
@@ -585,33 +599,73 @@ async function sendChat(){
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
   const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
 `Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
+`Sizing ladder (1u = 1% bankroll): 5%+ edge & high conviction = 1.5u max; 3.5%+ = 1u; 1.8%+ = 0.5u; day cap 6u across 5 bets. `+
 `Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
-`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
-`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. `+
+`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Edge = fair_prob*decimal_odds - 1. `+
+`Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line — say so). `+
+`Be direct and numeric: show the math in one or two lines, give a clear verdict (BET x.xu / PASS), recommend PASS freely. `+
+`Early-season caution: it is opening week, ratings are noisy, model margins on mismatches run hot — trust the book more than the model on extreme spreads. `+
 `If a sportsbook screenshot is attached: read every visible line (teams, spreads, totals, prices), match them to the board below, compute edges vs the model, and verdict each one. `+
-`Today's board (model numbers are pregame rates):\n`+chatContext();
+`PENDING BETS listed below are already placed — evaluate hedges/middles if asked but never double-count them as new plays. `+
+`Today's board (model numbers are pregame full-game rates):\n`+chatContext();
+  const msgs=CHAT.slice(-12).map((m,i,arr)=>{
+    if(typeof m.content==='string')return m;
+    const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+    if(!recent&&m.content.some(b=>b.type==='image')){
+      const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+      return {role:m.role,content:'[earlier screenshot omitted] '+t};
+    }
+    return {role:m.role,content:m.content.map(b=>
+      b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+  });
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'content-type':'application/json','x-api-key':key,
         'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
-        messages:CHAT.slice(-12).map((m,i,arr)=>{
-          if(typeof m.content==='string')return m;
-          const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
-          if(!recent&&m.content.some(b=>b.type==='image')){
-            const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
-            return {role:m.role,content:'[earlier screenshot omitted] '+t};
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1800,stream:true,
+        system:system,messages:msgs})});
+    if(!r.ok){
+      const d=await r.json().catch(()=>({}));
+      CHAT.push({role:'assistant',content:'error: '+JSON.stringify(d.error||d).slice(0,300)});
+      renderChat();saveChat();return;
+    }
+    CHAT.push({role:'assistant',content:''});
+    const reader=r.body.getReader();
+    const dec=new TextDecoder();
+    let buf='';
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const ln of lines){
+        if(!ln.startsWith('data: '))continue;
+        try{
+          const ev=JSON.parse(ln.slice(6));
+          if(ev.type==='content_block_delta'&&ev.delta&&ev.delta.text){
+            CHAT[CHAT.length-1].content+=ev.delta.text;
+            renderChat();
           }
-          return {role:m.role,content:m.content.map(b=>
-            b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
-        })})});
-    const d=await r.json();
-    const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
-    CHAT.push({role:'assistant',content:reply});
+        }catch(e){}
+      }
+    }
   }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
-  renderChat();
+  renderChat();saveChat();
 }
+function saveChat(){
+  try{
+    const slim=CHAT.slice(-30).map(m=>typeof m.content==='string'?m:
+      {role:m.role,content:'[screenshot] '+m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ')});
+    localStorage.setItem('chat_hist',JSON.stringify(slim));
+  }catch(e){}
+}
+function loadChat(){
+  try{CHAT=JSON.parse(localStorage.getItem('chat_hist')||'[]');}catch(e){CHAT=[];}
+  if(CHAT.length)renderChat();
+}
+function clearChat(){CHAT=[];localStorage.removeItem('chat_hist');renderChat();}
+function quick(t){document.getElementById('aimsg').value=t;sendChat();}
 function renderChat(pending){
   const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
   const el=document.getElementById('chatlog');

@@ -238,6 +238,12 @@ Uses your Anthropic API key, stored only in this browser.</p>
 <span class='badge b-green'>key set</span>
 <button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
 </div>
+<div class='lrow'>
+<button class='btn sec' onclick='quick("Scan the whole board: which games have the biggest model-vs-book gaps right now, and is anything worth a bet under the gates?")'>🔍 scan board</button>
+<button class='btn sec' onclick='quick("What is live right now and how do the live scores compare to what the model projected?")'>📡 what&#39;s live</button>
+<button class='btn sec' onclick='quick("Review my pending bets: current state of each game, how they are tracking, and any hedge worth considering.")'>🎫 my bets</button>
+<button class='btn sec' onclick='clearChat()'>🗑 clear</button>
+</div>
 <div class='chat'><div id='chatlog'></div></div>
 <div id='imgpreview'></div>
 <div class='chatbar'>
@@ -256,7 +262,7 @@ onpaste='[...(event.clipboardData||{}).items||[]].forEach(it=>{if(it.type&&it.ty
 </div>
 <div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
 · conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
-<script>window.SLATE={"401906075": {"m": 41.1, "ss": null, "st": null, "t": 136.0}, "401912989": {"m": 32.1, "ss": null, "st": null, "t": 146.3}, "401913004": {"m": 19.4, "ss": null, "st": null, "t": 148.4}, "401913736": {"m": 29.2, "ss": null, "st": null, "t": 135.3}, "401913884": {"m": 36.7, "ss": null, "st": null, "t": 145.8}, "401915978": {"m": 13.2, "ss": null, "st": null, "t": 136.4}, "401916016": {"m": 27.7, "ss": null, "st": null, "t": 143.0}, "401916184": {"m": 17.1, "ss": null, "st": null, "t": 147.5}, "401918431": {"m": 9.3, "ss": null, "st": null, "t": 137.4}, "401918553": {"m": 28.3, "ss": null, "st": null, "t": 139.7}, "401918840": {"m": 31.2, "ss": null, "st": null, "t": 139.7}, "401919931": {"m": 14.3, "ss": null, "st": null, "t": 136.6}, "401921577": {"m": 12.9, "ss": null, "st": null, "t": 143.0}, "401923193": {"m": 5.3, "ss": null, "st": null, "t": 130.6}, "401923473": {"m": 31.6, "ss": null, "st": null, "t": 142.7}, "401927060": {"m": 33.0, "ss": null, "st": null, "t": 146.4}, "401928191": {"m": 8.9, "ss": null, "st": null, "t": 132.8}};
+<script>window.SLATE={"401906075": {"as_": 47.4, "aw": "Stetson", "hm": "Louisville", "hs_": 88.6, "m": 41.1, "rh": 6, "ss": null, "st": null, "t": 136.0}, "401912989": {"as_": 57.1, "aw": "LSU New Orleans", "hm": "Alabama", "hs_": 89.2, "m": 32.1, "rh": 31, "ss": null, "st": null, "t": 146.3}, "401913004": {"as_": 64.5, "aw": "La Salle", "hm": "Rutgers", "hs_": 83.9, "m": 19.4, "rh": 49, "ss": null, "st": null, "t": 148.4}, "401913736": {"as_": 53.0, "aw": "Campbell", "hm": "NC State", "hs_": 82.3, "m": 29.2, "rh": 24, "ss": null, "st": null, "t": 135.3}, "401913884": {"as_": 54.5, "aw": "Queens University", "hm": "Vanderbilt", "hs_": 91.3, "m": 36.7, "rh": 13, "ss": null, "st": null, "t": 145.8}, "401915978": {"as_": 61.6, "aw": "Saint Mary's", "bk_sp": -17.5, "bk_t": 139.5, "hm": "Stanford", "hs_": 74.8, "m": 13.2, "ss": null, "st": null, "t": 136.4}, "401916016": {"as_": 57.7, "aw": "Delaware", "hm": "Virginia Tech", "hs_": 85.3, "m": 27.7, "rh": 40, "ss": null, "st": null, "t": 143.0}, "401916184": {"as_": 65.2, "aw": "East Texas A&M", "hm": "Cincinnati", "hs_": 82.3, "m": 17.1, "ss": null, "st": null, "t": 147.5}, "401918431": {"as_": 64.1, "aw": "Arkansas-Pine Bluff", "hm": "Tarleton State", "hs_": 73.4, "m": 9.3, "ss": null, "st": null, "t": 137.4}, "401918553": {"as_": 55.7, "aw": "Jackson State", "hm": "Grand Canyon", "hs_": 84.0, "m": 28.3, "ss": null, "st": null, "t": 139.7}, "401918840": {"as_": 54.3, "aw": "Fairleigh Dickinson", "hm": "Texas", "hs_": 85.4, "m": 31.2, "rh": 10, "ss": null, "st": null, "t": 139.7}, "401919931": {"as_": 61.2, "aw": "Long Island University", "hm": "Texas State", "hs_": 75.4, "m": 14.3, "ss": null, "st": null, "t": 136.6}, "401921577": {"as_": 65.0, "aw": "California Baptist", "bk_sp": -3.5, "bk_t": 157.5, "hm": "Oregon State", "hs_": 77.9, "m": 12.9, "ss": null, "st": null, "t": 143.0}, "401923193": {"as_": 62.6, "aw": "Lindenwood", "hm": "Denver", "hs_": 67.9, "m": 5.3, "ss": null, "st": null, "t": 130.6}, "401923473": {"as_": 55.5, "aw": "Morgan State", "hm": "Colorado", "hs_": 87.2, "m": 31.6, "rh": 38, "ss": null, "st": null, "t": 142.7}, "401927060": {"as_": 56.7, "aw": "Detroit Mercy", "hm": "Illinois", "hs_": 89.7, "m": 33.0, "rh": 25, "ss": null, "st": null, "t": 146.4}, "401928191": {"as_": 61.9, "aw": "Chattanooga", "hm": "Western Kentucky", "hs_": 70.8, "m": 8.9, "ss": null, "st": null, "t": 132.8}};window.BETCTX="PENDING BETS: Stonehill Skyhawks @ Notre Dame Fighting Irish total under 146.5 -110 (1.0u, edge 0.0395); Morgan State Lady Bears @ Oklahoma State Cowgirls total under 139.5 -110 (1.0u, edge 0.0395)";
 function showTab(id){
   document.querySelectorAll('.pane').forEach(p=>p.style.display='none');
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -282,6 +288,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const h=(location.hash||'#predictions').slice(1);
   showTab(['predictions','bets','history','finals','live'].includes(h)?h:'predictions');
   if(h==='live'){liveRefresh();renderKeyState();}
+  loadChat();
   // in-app browsers (Discord, Messages, Instagram...) block cross-site
   // fetches and wipe localStorage — warn loudly
   const ua=navigator.userAgent||'';
@@ -463,13 +470,20 @@ function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
   const lines=[];
   const id=(document.getElementById('livesel')||{}).value;
-  Object.values(LIVEGAMES).forEach(g=>{
+  const src=Object.keys(LIVEGAMES).length?Object.values(LIVEGAMES)
+    :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
+  src.forEach(g=>{
     const m=g.model;
     const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
       g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
-    lines.push(`${g.name}:${live} | model: home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16}${id===g.id?' [SELECTED]':''}`);
+    const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
+    const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
+             (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
+    const extra=(m.card?` | FIRED: ${m.card}`:'')+(m.inj?` | INJ: ${m.inj}`:'');
+    lines.push(`${g.name}:${live}${rank} | model: ${m.aw||'away'} ${m.as_||'?'}-${m.hs_||'?'} ${m.hm||'home'} (home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16})${bk}${extra}${id===g.id?' [USER SELECTED THIS GAME]':''}`);
   });
-  return lines.join('\n');
+  return (window.BETCTX?window.BETCTX+'\n':'')+lines.join('\n')+
+    `\n(as of ${new Date().toLocaleTimeString()} ET-ish, user local)`;
 }
 async function sendChat(){
   const box=document.getElementById('aimsg');
@@ -490,33 +504,73 @@ async function sendChat(){
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
   const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
 `Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
+`Sizing ladder (1u = 1% bankroll): 5%+ edge & high conviction = 1.5u max; 3.5%+ = 1u; 1.8%+ = 0.5u; day cap 6u across 5 bets. `+
 `Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
-`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
-`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. `+
+`Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Edge = fair_prob*decimal_odds - 1. `+
+`Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line — say so). `+
+`Be direct and numeric: show the math in one or two lines, give a clear verdict (BET x.xu / PASS), recommend PASS freely. `+
+`Early-season caution: it is opening week, ratings are noisy, model margins on mismatches run hot — trust the book more than the model on extreme spreads. `+
 `If a sportsbook screenshot is attached: read every visible line (teams, spreads, totals, prices), match them to the board below, compute edges vs the model, and verdict each one. `+
-`Today's board (model numbers are pregame rates):\n`+chatContext();
+`PENDING BETS listed below are already placed — evaluate hedges/middles if asked but never double-count them as new plays. `+
+`Today's board (model numbers are pregame full-game rates):\n`+chatContext();
+  const msgs=CHAT.slice(-12).map((m,i,arr)=>{
+    if(typeof m.content==='string')return m;
+    const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+    if(!recent&&m.content.some(b=>b.type==='image')){
+      const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+      return {role:m.role,content:'[earlier screenshot omitted] '+t};
+    }
+    return {role:m.role,content:m.content.map(b=>
+      b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+  });
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'content-type':'application/json','x-api-key':key,
         'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
-        messages:CHAT.slice(-12).map((m,i,arr)=>{
-          if(typeof m.content==='string')return m;
-          const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
-          if(!recent&&m.content.some(b=>b.type==='image')){
-            const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
-            return {role:m.role,content:'[earlier screenshot omitted] '+t};
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1800,stream:true,
+        system:system,messages:msgs})});
+    if(!r.ok){
+      const d=await r.json().catch(()=>({}));
+      CHAT.push({role:'assistant',content:'error: '+JSON.stringify(d.error||d).slice(0,300)});
+      renderChat();saveChat();return;
+    }
+    CHAT.push({role:'assistant',content:''});
+    const reader=r.body.getReader();
+    const dec=new TextDecoder();
+    let buf='';
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const ln of lines){
+        if(!ln.startsWith('data: '))continue;
+        try{
+          const ev=JSON.parse(ln.slice(6));
+          if(ev.type==='content_block_delta'&&ev.delta&&ev.delta.text){
+            CHAT[CHAT.length-1].content+=ev.delta.text;
+            renderChat();
           }
-          return {role:m.role,content:m.content.map(b=>
-            b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
-        })})});
-    const d=await r.json();
-    const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
-    CHAT.push({role:'assistant',content:reply});
+        }catch(e){}
+      }
+    }
   }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
-  renderChat();
+  renderChat();saveChat();
 }
+function saveChat(){
+  try{
+    const slim=CHAT.slice(-30).map(m=>typeof m.content==='string'?m:
+      {role:m.role,content:'[screenshot] '+m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ')});
+    localStorage.setItem('chat_hist',JSON.stringify(slim));
+  }catch(e){}
+}
+function loadChat(){
+  try{CHAT=JSON.parse(localStorage.getItem('chat_hist')||'[]');}catch(e){CHAT=[];}
+  if(CHAT.length)renderChat();
+}
+function clearChat(){CHAT=[];localStorage.removeItem('chat_hist');renderChat();}
+function quick(t){document.getElementById('aimsg').value=t;sendChat();}
 function renderChat(pending){
   const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
   const el=document.getElementById('chatlog');
