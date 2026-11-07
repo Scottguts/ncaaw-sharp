@@ -241,6 +241,36 @@ function openLive(id){showTab('live');liveRefresh().then(()=>{
   const sel=document.getElementById('livesel');
   if(sel&&[...sel.options].some(o=>o.value===id))sel.value=id;});}
 
+// ═══ MANUAL TRIGGERS — fire the pipeline from your phone ═══
+// Needs a fine-grained GitHub PAT (repo: ncaaw-sharp, Actions: write),
+// stored in localStorage only — same trust model as the AI key.
+function ghToken(){return localStorage.getItem('gh_pat')||'';}
+function saveGh(){
+  const v=document.getElementById('ghpat').value.trim();
+  if(v)localStorage.setItem('gh_pat',v);else localStorage.removeItem('gh_pat');
+  renderKeyState();
+}
+function clearGh(){localStorage.removeItem('gh_pat');renderKeyState();}
+async function runWorkflow(file,label){
+  const t=ghToken();
+  const out=document.getElementById('runstatus');
+  if(!t){out.innerHTML="<span class='r'>set a GitHub token first (or use the Actions page link)</span>";return;}
+  out.textContent='dispatching '+label+'…';
+  try{
+    const r=await fetch(`https://api.github.com/repos/Scottguts/ncaaw-sharp/actions/workflows/${file}/dispatches`,{
+      method:'POST',
+      headers:{'authorization':'Bearer '+t,'accept':'application/vnd.github+json',
+               'content-type':'application/json'},
+      body:JSON.stringify({ref:'main'})});
+    if(r.status===204){
+      out.innerHTML=`<span class='g'>✅ ${label} dispatched ${new Date().toLocaleTimeString()} — results hit Discord + this page in ~3 min</span>`;
+    }else{
+      const d=await r.json().catch(()=>({}));
+      out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,120)}</span>`;
+    }
+  }catch(e){out.innerHTML="<span class='r'>request failed: "+e.message+"</span>";}
+}
+
 // ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
 let CHAT=[];
 function aiKey(){return localStorage.getItem('anthropic_key')||'';}
@@ -253,6 +283,9 @@ function renderKeyState(){
   const has=!!aiKey();
   document.getElementById('keyform').style.display=has?'none':'flex';
   document.getElementById('keyset').style.display=has?'block':'none';
+  const gh=!!ghToken();
+  const gf=document.getElementById('ghform'), gs=document.getElementById('ghset');
+  if(gf){gf.style.display=gh?'none':'flex';gs.style.display=gh?'block':'none';}
 }
 function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
@@ -814,7 +847,26 @@ href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%2
 <div class='pane' id='pane-predictions'>{render_predictions(grades, dates, this_date, bet_idx, stats_ctx)}</div>
 <div class='pane' id='pane-bets' style='display:none'>{render_best_bets(dates, bet_idx)}</div>
 <div class='pane' id='pane-live' style='display:none'>
-<h2>📡 Live line checker</h2>
+<h2>🚀 Run the pipeline now</h2>
+<p class='muted'>GitHub's scheduler drops runs — these buttons fire it on demand from any
+device. Needs a fine-grained GitHub token (repo: ncaaw-sharp, Actions read+write),
+stored only in this browser. No token? Use the
+<a href='https://github.com/Scottguts/ncaaw-sharp/actions/workflows/line-watch.yml'
+target='_blank' rel='noopener'>Actions page</a> → Run workflow.</p>
+<div id='ghform' class='lrow'>
+<input id='ghpat' type='password' placeholder='GitHub fine-grained token (github_pat_…)' style='flex:1'>
+<button class='btn' onclick='saveGh()'>save</button>
+</div>
+<div id='ghset' style='display:none'>
+<span class='badge b-green'>token set</span>
+<button class='btn sec' onclick='clearGh()' style='margin-left:8px'>remove</button>
+</div>
+<div class='lrow'>
+<button class='btn' onclick='runWorkflow("line-watch.yml","line sweep")'>🔄 SWEEP LINES NOW</button>
+<button class='btn sec' onclick='runWorkflow("daily-bets.yml","daily card")'>📋 RUN DAILY CARD</button>
+</div>
+<div id='runstatus' class='muted'></div>
+<h2 style='margin-top:24px'>📡 Live line checker</h2>
 <p class='muted'>Scores and clock pull straight from ESPN in your browser; the verdict is
 computed instantly with the model's rates. Advisory only — separate from pregame cards.</p>
 <div class='lrow'>

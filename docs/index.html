@@ -286,7 +286,26 @@ href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%2
 </div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401920265' style='display:none'><table style='max-width:420px'><tr><th>Sacramento State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Nevada</th></tr><tr class='statrow'><td>209</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>183</td></tr><tr class='statrow'><td>1-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-1</td></tr><tr class='statrow'><td>89.3</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>90.7</td></tr><tr class='statrow'><td>94.1</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>93.3</td></tr><tr class='statrow'><td>71.7</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.4</td></tr><tr class='statrow'><td class='better'>47.9</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>47.2</td></tr><tr class='statrow'><td class='better'>38.3</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>61.2</td></tr><tr class='statrow'><td class='better'>31.7</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>34.3</td></tr><tr class='statrow'><td class='better'>23.0</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>21.1</td></tr><tr class='statrow'><td class='better'>41.4</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>40.6</td></tr><tr class='statrow'><td>39.5</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>39.1</td></tr><tr class='statrow'><td class='better'>57.4</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>38.9</td></tr><tr class='statrow'><td>41.7</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>41.4</td></tr></table><p><b>Efficiency:</b> Sacramento State nets -4.8 pts/100 poss (O 89.3 / D 94.1) vs Nevada -2.5 (O 90.7 / D 93.3) — a 2.2-point gap favoring Nevada before venue. At ~67 projected possessions that drives most of the 6.0-point model margin.</p><p><b>Four factors:</b> shooting leans Nevada (22.2 eFG pts of matchup edge).</p><p><b>Pace:</b> Sacramento State plays at 72 poss/40, Nevada at 72 → ~67 possessions, model total 121.1.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401920265")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div></div>
 <div class='pane' id='pane-bets' style='display:none'><div class='muted' style='margin:14px 0 6px'>— 2026-11-05 —</div><div class='card edge'><div class='play-head'><span class='matchup'>Under 134.5 -110 <span class='muted'>(draftkings)</span></span><span class='stars'>★★</span></div><div class='muted'>Le Moyne Dolphins @ TCU Horned Frogs</div><div class='muted' style='margin-top:6px'>edge <b class='g'>+4.0%</b> · fair 54.4% (-120) · conf 9/10 · <b>1.0u</b> Standard · <span class='badge b-grey'>🕐 PENDING</span></div><div class='dim' style='margin-top:4px'>Model total 127.3 vs market 134.5; Anchored fair total 132.0 vs line 134.5</div></div><div class='card edge'><div class='play-head'><span class='matchup'>Ole Miss Rebels -33.5 -115 <span class='muted'>(espnbet)</span></span><span class='stars'>★</span></div><div class='muted'>North Alabama Lions @ Ole Miss Rebels</div><div class='muted' style='margin-top:6px'>edge <b class='g'>+2.5%</b> · fair 54.9% (-121) · conf 7/10 · <b>0.5u</b> Lean · <span class='badge b-grey'>🕐 PENDING</span></div><div class='dim' style='margin-top:4px'>Model margin +36.2 vs market +34.0 (home); Anchored fair margin +35.5 vs line -33.5 (home)</div></div></div>
 <div class='pane' id='pane-live' style='display:none'>
-<h2>📡 Live line checker</h2>
+<h2>🚀 Run the pipeline now</h2>
+<p class='muted'>GitHub's scheduler drops runs — these buttons fire it on demand from any
+device. Needs a fine-grained GitHub token (repo: ncaaw-sharp, Actions read+write),
+stored only in this browser. No token? Use the
+<a href='https://github.com/Scottguts/ncaaw-sharp/actions/workflows/line-watch.yml'
+target='_blank' rel='noopener'>Actions page</a> → Run workflow.</p>
+<div id='ghform' class='lrow'>
+<input id='ghpat' type='password' placeholder='GitHub fine-grained token (github_pat_…)' style='flex:1'>
+<button class='btn' onclick='saveGh()'>save</button>
+</div>
+<div id='ghset' style='display:none'>
+<span class='badge b-green'>token set</span>
+<button class='btn sec' onclick='clearGh()' style='margin-left:8px'>remove</button>
+</div>
+<div class='lrow'>
+<button class='btn' onclick='runWorkflow("line-watch.yml","line sweep")'>🔄 SWEEP LINES NOW</button>
+<button class='btn sec' onclick='runWorkflow("daily-bets.yml","daily card")'>📋 RUN DAILY CARD</button>
+</div>
+<div id='runstatus' class='muted'></div>
+<h2 style='margin-top:24px'>📡 Live line checker</h2>
 <p class='muted'>Scores and clock pull straight from ESPN in your browser; the verdict is
 computed instantly with the model's rates. Advisory only — separate from pregame cards.</p>
 <div class='lrow'>
@@ -441,6 +460,36 @@ function openLive(id){showTab('live');liveRefresh().then(()=>{
   const sel=document.getElementById('livesel');
   if(sel&&[...sel.options].some(o=>o.value===id))sel.value=id;});}
 
+// ═══ MANUAL TRIGGERS — fire the pipeline from your phone ═══
+// Needs a fine-grained GitHub PAT (repo: ncaaw-sharp, Actions: write),
+// stored in localStorage only — same trust model as the AI key.
+function ghToken(){return localStorage.getItem('gh_pat')||'';}
+function saveGh(){
+  const v=document.getElementById('ghpat').value.trim();
+  if(v)localStorage.setItem('gh_pat',v);else localStorage.removeItem('gh_pat');
+  renderKeyState();
+}
+function clearGh(){localStorage.removeItem('gh_pat');renderKeyState();}
+async function runWorkflow(file,label){
+  const t=ghToken();
+  const out=document.getElementById('runstatus');
+  if(!t){out.innerHTML="<span class='r'>set a GitHub token first (or use the Actions page link)</span>";return;}
+  out.textContent='dispatching '+label+'…';
+  try{
+    const r=await fetch(`https://api.github.com/repos/Scottguts/ncaaw-sharp/actions/workflows/${file}/dispatches`,{
+      method:'POST',
+      headers:{'authorization':'Bearer '+t,'accept':'application/vnd.github+json',
+               'content-type':'application/json'},
+      body:JSON.stringify({ref:'main'})});
+    if(r.status===204){
+      out.innerHTML=`<span class='g'>✅ ${label} dispatched ${new Date().toLocaleTimeString()} — results hit Discord + this page in ~3 min</span>`;
+    }else{
+      const d=await r.json().catch(()=>({}));
+      out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,120)}</span>`;
+    }
+  }catch(e){out.innerHTML="<span class='r'>request failed: "+e.message+"</span>";}
+}
+
 // ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
 let CHAT=[];
 function aiKey(){return localStorage.getItem('anthropic_key')||'';}
@@ -453,6 +502,9 @@ function renderKeyState(){
   const has=!!aiKey();
   document.getElementById('keyform').style.display=has?'none':'flex';
   document.getElementById('keyset').style.display=has?'block':'none';
+  const gh=!!ghToken();
+  const gf=document.getElementById('ghform'), gs=document.getElementById('ghset');
+  if(gf){gf.style.display=gh?'none':'flex';gs.style.display=gh?'block':'none';}
 }
 function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
 function chatContext(){
