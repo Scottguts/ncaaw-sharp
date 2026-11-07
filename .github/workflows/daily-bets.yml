@@ -5,11 +5,15 @@ name: Daily NCAAW Sharp Cards
 # retries; `precheck` makes every attempt after the first successful one a
 # free no-op (no double-posting to Discord).
 on:
+  # 11:45 ET primary — after the books have posted the day's lines (lines
+  # land ~11am; the old 9:47 run kept finding an empty board). Line-watch
+  # still sweeps hourly from 6am and fires line-drop alerts the moment value
+  # appears — this is the daily summary card.
   schedule:
-    - cron: "47 14 * 11,12,1-4 *"   # 09:47 ET (EST) — primary
-    - cron: "32 15 * 11,12,1-4 *"   # 10:32 ET — retry
-    - cron: "17 16 * 11,12,1-4 *"   # 11:17 ET — retry
-    - cron: "17 17 * 11,12,1-4 *"   # 12:17 ET — backup
+    - cron: "45 16 * 11,12,1-4 *"   # 11:45 ET (EST) — primary
+    - cron: "5 17 * 11,12,1-4 *"    # 12:05 ET — retry
+    - cron: "35 17 * 11,12,1-4 *"   # 12:35 ET — retry
+    - cron: "20 18 * 11,12,1-4 *"   # 13:20 ET — backup
   workflow_dispatch:
 
 permissions:
