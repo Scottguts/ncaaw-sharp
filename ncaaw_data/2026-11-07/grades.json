@@ -1,18 +1,72 @@
 {
   "date": "2026-11-07",
-  "generated_at": "2026-11-07T15:49:57.224995Z",
+  "generated_at": "2026-11-07T16:49:32.387851Z",
   "market_bias": {
-    "n_spread_lines": 2,
-    "n_total_lines": 2,
-    "mean_spread_delta": -3.55,
-    "mean_total_delta": -4.15
+    "n_spread_lines": 3,
+    "n_total_lines": 3,
+    "mean_spread_delta": -4.27,
+    "mean_total_delta": 0.07
   },
   "odds_available": true,
   "n_games": 47,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
-  "shadow_cards": [],
+  "n_cards": 1,
+  "total_units": 1.0,
+  "cards": [
+    {
+      "bet_label": "Kent State Golden Flashes +1.5",
+      "market": "spread",
+      "side": "away",
+      "book": "espnbet",
+      "price_american": -105,
+      "line": 1.5,
+      "fair_prob": 0.5364,
+      "fair_american": -116,
+      "edge": 0.0473,
+      "confidence": 9,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin -4.2 vs market +1.5 (home)",
+        "Anchored fair margin +0.0 vs line +1.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401929031",
+      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "start": "2026-11-07T16:00Z"
+    }
+  ],
+  "shadow_cards": [
+    {
+      "bet_label": "Kent State Golden Flashes ML",
+      "market": "moneyline",
+      "side": "away",
+      "book": "espnbet",
+      "price_american": 105,
+      "line": null,
+      "fair_prob": 0.5,
+      "fair_american": -100,
+      "edge": 0.025,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow(cap-cut)",
+      "reasoning": [
+        "Model margin -4.2 vs market +1.5 (home)",
+        "Anchored fair margin +0.0, sigma 16.4"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401929031",
+      "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+      "start": "2026-11-07T16:00Z"
+    }
+  ],
   "games": [
     {
       "espn_event_id": "401929031",
@@ -22,11 +76,62 @@
       "start": "2026-11-07T16:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Kent State Golden Flashes ML",
+          "market": "moneyline",
+          "side": "away",
+          "book": "espnbet",
+          "price_american": 105,
+          "line": null,
+          "fair_prob": 0.5,
+          "fair_american": -100,
+          "edge": 0.025,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow(cap-cut)",
+          "reasoning": [
+            "Model margin -4.2 vs market +1.5 (home)",
+            "Anchored fair margin +0.0, sigma 16.4"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401929031",
+          "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+          "start": "2026-11-07T16:00Z"
+        },
+        {
+          "bet_label": "Kent State Golden Flashes +1.5",
+          "market": "spread",
+          "side": "away",
+          "book": "espnbet",
+          "price_american": -105,
+          "line": 1.5,
+          "fair_prob": 0.5364,
+          "fair_american": -116,
+          "edge": 0.0473,
+          "confidence": 9,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin -4.2 vs market +1.5 (home)",
+            "Anchored fair margin +0.0 vs line +1.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401929031",
+          "matchup": "Kent State Golden Flashes @ Northern Kentucky Norse",
+          "start": "2026-11-07T16:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 68.4,
         "home_score": 64.1,
@@ -38,6 +143,23 @@
         "games_away": 1,
         "rank_home": 266,
         "rank_away": 186
+      },
+      "market": {
+        "spread_home": -1.5,
+        "total": 123.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 16.42,
+        "total": 22.36
+      },
+      "anchored": {
+        "margin_home": 0.0,
+        "spread_shift": -1.5,
+        "total": 126.0,
+        "total_shift": 2.5
       }
     },
     {
@@ -581,7 +703,7 @@
       },
       "market": {
         "spread_home": 9.5,
-        "total": 134.0,
+        "total": 134.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -593,7 +715,7 @@
       "anchored": {
         "margin_home": -8.8,
         "spread_shift": 0.7,
-        "total": 131.5,
+        "total": 132.0,
         "total_shift": -2.5
       }
     },
