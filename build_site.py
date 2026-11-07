@@ -273,6 +273,33 @@ async function runWorkflow(file,label){
 
 // ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
 let CHAT=[];
+let PENDING_IMGS=[];
+function addImageFile(file){
+  if(!file||!file.type.startsWith('image/'))return;
+  const img=new Image();
+  img.onload=()=>{
+    const MAX=1400;
+    let w=img.width,h=img.height;
+    if(Math.max(w,h)>MAX){const s=MAX/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s);}
+    const c=document.createElement('canvas');c.width=w;c.height=h;
+    c.getContext('2d').drawImage(img,0,0,w,h);
+    const url=c.toDataURL('image/jpeg',0.85);
+    PENDING_IMGS.push({media_type:'image/jpeg',data:url.split(',')[1],url});
+    renderImgPreview();
+    URL.revokeObjectURL(img.src);
+  };
+  img.src=URL.createObjectURL(file);
+}
+function renderImgPreview(){
+  const el=document.getElementById('imgpreview');
+  el.innerHTML=PENDING_IMGS.map((im,i)=>
+    `<span style='position:relative;display:inline-block;margin:4px'>`+
+    `<img src='${im.url}' style='height:64px;border-radius:6px;border:1px solid #30363d'>`+
+    `<a onclick='PENDING_IMGS.splice(${i},1);renderImgPreview()' `+
+    `style='position:absolute;top:-6px;right:-6px;background:#ef4444;color:#fff;`+
+    `border-radius:99px;width:18px;height:18px;text-align:center;line-height:18px;`+
+    `font-size:11px;cursor:pointer'>×</a></span>`).join('');
+}
 function aiKey(){return localStorage.getItem('anthropic_key')||'';}
 function saveKey(){
   const v=document.getElementById('aikey').value.trim();
@@ -301,24 +328,44 @@ function chatContext(){
 }
 async function sendChat(){
   const box=document.getElementById('aimsg');
-  const text=box.value.trim(); if(!text)return;
+  const text=box.value.trim();
+  if(!text&&!PENDING_IMGS.length)return;
   const key=aiKey(); if(!key){alert('Set your Anthropic API key first.');return;}
   box.value='';
-  CHAT.push({role:'user',content:text});
+  if(PENDING_IMGS.length){
+    const blocks=PENDING_IMGS.map(im=>({type:'image',
+      source:{type:'base64',media_type:im.media_type,data:im.data},_url:im.url}));
+    blocks.push({type:'text',text:text||'What do you see — any viable plays in this screenshot? Check the numbers against the model.'});
+    CHAT.push({role:'user',content:blocks});
+    PENDING_IMGS=[];renderImgPreview();
+  }else{
+    CHAT.push({role:'user',content:text});
+  }
   renderChat(); renderChat('…thinking');
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
   const system=`You are the live betting copilot inside NCAAW Sharp, a market-anchored women's college basketball model. `+
 `Philosophy: edges come from small disagreements with the market; most days are NO PLAYS; never recommend loosening gates. `+
 `Live math: projected final home margin = current margin + model_margin*f, total = current total + model_total*f, where f = fraction of game remaining. `+
 `Sigma scales with sqrt(f). Cover prob = Phi((proj_margin + line)/sigma). Viable live edge band: 3.5% to 12% (beyond 12% = probably a mistyped/stale line). `+
-`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. Today's board (model numbers are pregame rates):\\n`+chatContext();
+`Be direct and numeric; recommend PASS freely; flag when a user's live line looks implausible. `+
+`If a sportsbook screenshot is attached: read every visible line (teams, spreads, totals, prices), match them to the board below, compute edges vs the model, and verdict each one. `+
+`Today's board (model numbers are pregame rates):\\n`+chatContext();
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'content-type':'application/json','x-api-key':key,
         'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:system,
-        messages:CHAT.slice(-12)})});
+        messages:CHAT.slice(-12).map((m,i,arr)=>{
+          if(typeof m.content==='string')return m;
+          const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+          if(!recent&&m.content.some(b=>b.type==='image')){
+            const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+            return {role:m.role,content:'[earlier screenshot omitted] '+t};
+          }
+          return {role:m.role,content:m.content.map(b=>
+            b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+        })})});
     const d=await r.json();
     const reply=(d.content&&d.content[0]&&d.content[0].text)||('error: '+JSON.stringify(d.error||d).slice(0,300));
     CHAT.push({role:'assistant',content:reply});
@@ -326,10 +373,18 @@ async function sendChat(){
   renderChat();
 }
 function renderChat(pending){
+  const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\*\\*(.+?)\\*\\*/g,'<b>$1</b>');
   const el=document.getElementById('chatlog');
-  el.innerHTML=CHAT.map(m=>`<div class='msg ${m.role==='user'?'user':'ai'}'>${m.content
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\*\\*(.+?)\\*\\*/g,'<b>$1</b>')}</div>`).join('')
-    +(pending?`<div class='msg ai muted'>${pending}</div>`:'');
+  el.innerHTML=CHAT.map(m=>{
+    let body;
+    if(typeof m.content==='string'){body=esc(m.content);}
+    else{
+      body=m.content.map(b=>b.type==='image'
+        ?`<img src='${b._url||''}' style='max-height:120px;border-radius:8px;display:block;margin:4px 0'>`
+        :esc(b.text||'')).join('');
+    }
+    return `<div class='msg ${m.role==='user'?'user':'ai'}'>${body}</div>`;
+  }).join('')+(pending?`<div class='msg ai muted'>${pending}</div>`:'');
   el.scrollTop=el.scrollHeight;
 }
 """
@@ -894,9 +949,15 @@ live scores above. Uses your Anthropic API key, stored only in this browser
 <button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
 </div>
 <div class='chat'><div id='chatlog'></div></div>
+<div id='imgpreview'></div>
 <div class='chatbar'>
-<textarea id='aimsg' placeholder='e.g. "UCLA is up 8 at the half and the live line is UCLA -12.5 — worth it?"'
-onkeydown='if(event.key==="Enter"&&!event.shiftKey){{event.preventDefault();sendChat();}}'></textarea>
+<input id='imgfile' type='file' accept='image/*' multiple style='display:none'
+onchange='[...this.files].forEach(addImageFile);this.value=""'>
+<button class='btn sec' title='attach screenshot'
+onclick='document.getElementById("imgfile").click()'>📷</button>
+<textarea id='aimsg' placeholder='ask about a spot — or 📷 attach a screenshot of your book&#39;s live lines'
+onkeydown='if(event.key==="Enter"&&!event.shiftKey){{event.preventDefault();sendChat();}}'
+onpaste='[...(event.clipboardData||{{}}).items||[]].forEach(it=>{{if(it.type&&it.type.startsWith("image/"))addImageFile(it.getAsFile());}})'></textarea>
 <button class='btn' onclick='sendChat()'>send</button>
 </div>
 </div>
