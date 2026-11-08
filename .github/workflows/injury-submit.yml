@@ -1,0 +1,107 @@
+name: Injury submission
+
+# Issue-ops: the dashboard's 🏥 INJURY button opens a prefilled issue titled
+# "INJ: <Team>". Body lines (one per field):
+#   player: Star Guard
+#   ppg: 18.5
+#   status: OUT          (OUT | GTD | PROB | CLEAR — CLEAR removes the team's entries)
+#   replacement: 0.45    (optional)
+#   starter: true        (optional)
+# Updates ncaaw_data/injuries.json, re-grades the slate (the model docks the
+# team immediately — NCAAW books are slow on availability news), fires any
+# new cards, closes the issue with the verdict.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ncaaw-injury-submit
+  cancel-in-progress: false
+
+jobs:
+  injury:
+    if: startsWith(github.event.issue.title, 'INJ:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ODDS_API_KEY:        ${{ secrets.ODDS_API_KEY }}
+      ODDS_API_KEY_2:      ${{ secrets.ODDS_API_KEY_2 }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      ISSUE_TITLE:         ${{ github.event.issue.title }}
+      ISSUE_BODY:          ${{ github.event.issue.body }}
+      TORVIK_SKIP_LIVE:    "1"
+      TZ:                  America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Parse + store injury
+        run: |
+          python - <<'EOF'
+          import json, os, re, sys
+          title = os.environ["ISSUE_TITLE"]
+          body = os.environ.get("ISSUE_BODY") or ""
+          m = re.match(r"INJ:\s*(.+)", title)
+          if not m:
+              print("::error::title must be 'INJ: Team Name'"); sys.exit(1)
+          team = m.group(1).strip()
+          kv = {}
+          for line in body.splitlines():
+              mm = re.match(r"\s*(\w+)\s*[:=]\s*(.+?)\s*$", line)
+              if mm:
+                  kv[mm.group(1).lower()] = mm.group(2)
+          status = (kv.get("status") or "OUT").upper()
+          p = "ncaaw_data/injuries.json"
+          try:
+              data = json.load(open(p))
+          except Exception:
+              data = {}
+          data = {k: v for k, v in data.items() if not k.startswith("_")}
+          if status == "CLEAR":
+              removed = data.pop(team, None)
+              # also try case-insensitive match
+              for k in list(data):
+                  if k.lower() == team.lower():
+                      removed = data.pop(k)
+              print(f"cleared {team}: {removed}")
+          else:
+              entry = {
+                  "player": kv.get("player") or "unnamed",
+                  "ppg": float(kv.get("ppg") or 10.0),
+                  "status": status,
+                  "replacement": float(kv.get("replacement") or 0.45),
+                  "starter": (kv.get("starter") or "true").lower() in ("true", "1", "yes"),
+              }
+              data.setdefault(team, [])
+              data[team] = [e for e in data[team]
+                            if e.get("player") != entry["player"]]
+              data[team].append(entry)
+              print(f"stored {team}: {entry}")
+          json.dump(data, open(p, "w"), indent=2)
+          EOF
+      - name: Re-grade + fire new cards
+        run: python line_watch.py
+      - name: Commit
+        run: |
+          git config user.name  "ncaaw-sharp-bot"
+          git config user.email "ncaaw-sharp-bot@users.noreply.github.com"
+          git add ncaaw_data/ docs/
+          git diff --staged --quiet || git commit -m "injury: ${{ github.event.issue.title }}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break || sleep $((i*5))
+          done
+      - name: Close issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body \
+            "✅ Injury logged and slate re-graded — any new value fired to Discord. Remember to submit 'status: CLEAR' once the market prices the news."
+          gh issue close ${{ github.event.issue.number }}

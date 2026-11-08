@@ -1,11 +1,11 @@
 {
   "date": "2026-11-08",
-  "generated_at": "2026-11-08T13:29:53.360316Z",
+  "generated_at": "2026-11-08T14:47:51.273821Z",
   "market_bias": {
     "n_spread_lines": 5,
     "n_total_lines": 5,
-    "mean_spread_delta": -1.96,
-    "mean_total_delta": -5.96
+    "mean_spread_delta": -1.84,
+    "mean_total_delta": -6.96
   },
   "odds_available": true,
   "n_games": 68,
@@ -19,14 +19,14 @@
       "book": "draftkings",
       "price_american": -108,
       "line": 144.5,
-      "fair_prob": 0.5445,
+      "fair_prob": 0.5448,
       "fair_american": -120,
-      "edge": 0.0487,
+      "edge": 0.0492,
       "confidence": 10,
       "unit_size": 1.0,
       "risk": "Standard",
       "reasoning": [
-        "Model total 135.9 vs market 144.5",
+        "Model total 134.5 vs market 144.5",
         "Anchored fair total 142.0 vs line 144.5"
       ],
       "pass_triggers": [
@@ -45,14 +45,14 @@
       "book": "ballybet",
       "price_american": -110,
       "line": 135.5,
-      "fair_prob": 0.5445,
+      "fair_prob": 0.5448,
       "fair_american": -120,
-      "edge": 0.0395,
-      "confidence": 8,
+      "edge": 0.04,
+      "confidence": 9,
       "unit_size": 1.0,
       "risk": "Standard",
       "reasoning": [
-        "Model total 130.1 vs market 135.5",
+        "Model total 128.6 vs market 135.5",
         "Anchored fair total 133.0 vs line 135.5"
       ],
       "pass_triggers": [
@@ -75,7 +75,7 @@
       "line": 17.5,
       "fair_prob": 0.5364,
       "fair_american": -116,
-      "edge": 0.024,
+      "edge": 0.0241,
       "confidence": 6,
       "unit_size": 0.5,
       "risk": "Shadow",
@@ -99,41 +99,15 @@
       "book": "draftkings",
       "price_american": -110,
       "line": 11.5,
-      "fair_prob": 0.5364,
-      "fair_american": -116,
-      "edge": 0.024,
-      "confidence": 6,
-      "unit_size": 0.5,
-      "risk": "Shadow",
-      "reasoning": [
-        "Model margin +9.5 vs market +11.5 (home)",
-        "Anchored fair margin +10.0 vs line +11.5 (away)"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401911738",
-      "matchup": "Iowa Hawkeyes @ UConn Huskies",
-      "start": "2026-11-08T19:00Z"
-    },
-    {
-      "bet_label": "Over 138.5",
-      "market": "total",
-      "side": "over",
-      "book": "ballybet",
-      "price_american": -109,
-      "line": 138.5,
-      "fair_prob": 0.5321,
-      "fair_american": -114,
-      "edge": 0.0202,
+      "fair_prob": 0.534,
+      "fair_american": -115,
+      "edge": 0.0195,
       "confidence": 5,
       "unit_size": 0.5,
       "risk": "Shadow",
       "reasoning": [
-        "Model total 140.3 vs market 138.5",
-        "Anchored fair total 140.3 vs line 138.5"
+        "Model margin +10.1 vs market +11.5 (home)",
+        "Anchored fair margin +10.1 vs line +11.5 (away)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
@@ -153,12 +127,12 @@
       "line": 12.5,
       "fair_prob": 0.5364,
       "fair_american": -116,
-      "edge": 0.0285,
+      "edge": 0.0286,
       "confidence": 8,
       "unit_size": 0.5,
       "risk": "Shadow(cap-cut)",
       "reasoning": [
-        "Model margin +6.9 vs market +12.5 (home)",
+        "Model margin +7.1 vs market +12.5 (home)",
         "Anchored fair margin +11.0 vs line +12.5 (away)"
       ],
       "pass_triggers": [
@@ -187,11 +161,11 @@
       ],
       "model": {
         "away_score": 72.3,
-        "home_score": 69.2,
-        "spread": 3.1,
-        "total": 141.5,
+        "home_score": 69.0,
+        "spread": 3.3,
+        "total": 141.3,
         "proj_poss": 70.3,
-        "margin_home": -3.1,
+        "margin_home": -3.3,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 82,
@@ -212,12 +186,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 51.0,
-        "home_score": 70.5,
-        "spread": -19.5,
-        "total": 121.5,
+        "away_score": 50.8,
+        "home_score": 69.7,
+        "spread": -19.0,
+        "total": 120.5,
         "proj_poss": 67.5,
-        "margin_home": 19.5,
+        "margin_home": 19.0,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 63,
@@ -238,12 +212,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 56.6,
-        "home_score": 61.4,
-        "spread": -4.9,
-        "total": 118.0,
+        "away_score": 56.3,
+        "home_score": 60.8,
+        "spread": -4.5,
+        "total": 117.1,
         "proj_poss": 66.7,
-        "margin_home": 4.9,
+        "margin_home": 4.5,
         "games_home": 0,
         "games_away": 1,
         "rank_home": 318,
@@ -264,12 +238,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 55.8,
-        "home_score": 68.9,
-        "spread": -13.1,
-        "total": 124.7,
-        "proj_poss": 68.7,
-        "margin_home": 13.1,
+        "away_score": 55.1,
+        "home_score": 68.7,
+        "spread": -13.7,
+        "total": 123.8,
+        "proj_poss": 68.8,
+        "margin_home": 13.7,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 125,
@@ -290,12 +264,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 78.6,
-        "home_score": 51.4,
-        "spread": 27.2,
-        "total": 129.9,
+        "away_score": 77.8,
+        "home_score": 51.1,
+        "spread": 26.7,
+        "total": 128.8,
         "proj_poss": 70.4,
-        "margin_home": -27.2,
+        "margin_home": -26.7,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 170,
@@ -316,12 +290,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 50.4,
-        "home_score": 89.4,
-        "spread": -39.1,
-        "total": 139.8,
+        "away_score": 50.9,
+        "home_score": 89.3,
+        "spread": -38.4,
+        "total": 140.2,
         "proj_poss": 71.5,
-        "margin_home": 39.1,
+        "margin_home": 38.4,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 9,
@@ -342,12 +316,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 59.9,
+        "away_score": 59.6,
         "home_score": 77.5,
-        "spread": -17.6,
-        "total": 137.4,
+        "spread": -17.8,
+        "total": 137.1,
         "proj_poss": 70.4,
-        "margin_home": 17.6,
+        "margin_home": 17.8,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 20,
@@ -394,12 +368,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 48.7,
-        "home_score": 63.4,
-        "spread": -14.7,
-        "total": 112.1,
-        "proj_poss": 66.0,
-        "margin_home": 14.7,
+        "away_score": 47.9,
+        "home_score": 62.9,
+        "spread": -14.9,
+        "total": 110.8,
+        "proj_poss": 66.1,
+        "margin_home": 14.9,
         "games_home": 1,
         "games_away": 2,
         "rank_home": 95,
@@ -420,12 +394,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 69.5,
-        "home_score": 57.8,
-        "spread": 11.7,
-        "total": 127.3,
+        "away_score": 69.2,
+        "home_score": 57.2,
+        "spread": 12.0,
+        "total": 126.5,
         "proj_poss": 69.4,
-        "margin_home": -11.7,
+        "margin_home": -12.0,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 254,
@@ -446,12 +420,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 58.2,
-        "home_score": 64.1,
-        "spread": -6.0,
-        "total": 122.3,
+        "away_score": 57.3,
+        "home_score": 63.2,
+        "spread": -5.8,
+        "total": 120.5,
         "proj_poss": 67.8,
-        "margin_home": 6.0,
+        "margin_home": 5.8,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 58,
@@ -472,10 +446,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.1,
-        "home_score": 61.8,
+        "away_score": 64.3,
+        "home_score": 62.0,
         "spread": 2.3,
-        "total": 125.9,
+        "total": 126.3,
         "proj_poss": 70.8,
         "margin_home": -2.3,
         "games_home": 1,
@@ -498,10 +472,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 59.8,
-        "home_score": 64.2,
+        "away_score": 59.5,
+        "home_score": 63.9,
         "spread": -4.4,
-        "total": 124.0,
+        "total": 123.4,
         "proj_poss": 69.5,
         "margin_home": 4.4,
         "games_home": 1,
@@ -529,7 +503,7 @@
           "line": 17.5,
           "fair_prob": 0.5364,
           "fair_american": -116,
-          "edge": 0.024,
+          "edge": 0.0241,
           "confidence": 6,
           "unit_size": 0.5,
           "risk": "Shadow",
@@ -551,10 +525,10 @@
         "no edge cleared the gates"
       ],
       "model": {
-        "away_score": 70.3,
-        "home_score": 56.5,
+        "away_score": 69.8,
+        "home_score": 56.0,
         "spread": 13.8,
-        "total": 126.8,
+        "total": 125.7,
         "proj_poss": 69.3,
         "margin_home": -13.8,
         "games_home": 1,
@@ -570,8 +544,8 @@
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
-        "spread": 16.42,
-        "total": 22.36
+        "spread": 16.41,
+        "total": 22.22
       },
       "anchored": {
         "margin_home": -16.0,
@@ -608,12 +582,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 55.9,
-        "home_score": 72.9,
-        "spread": -17.0,
-        "total": 128.7,
+        "away_score": 55.5,
+        "home_score": 72.7,
+        "spread": -17.2,
+        "total": 128.3,
         "proj_poss": 69.5,
-        "margin_home": 17.0,
+        "margin_home": 17.2,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 65,
@@ -637,41 +611,15 @@
           "book": "draftkings",
           "price_american": -110,
           "line": 11.5,
-          "fair_prob": 0.5364,
-          "fair_american": -116,
-          "edge": 0.024,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model margin +9.5 vs market +11.5 (home)",
-            "Anchored fair margin +10.0 vs line +11.5 (away)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401911738",
-          "matchup": "Iowa Hawkeyes @ UConn Huskies",
-          "start": "2026-11-08T19:00Z"
-        },
-        {
-          "bet_label": "Over 138.5",
-          "market": "total",
-          "side": "over",
-          "book": "ballybet",
-          "price_american": -109,
-          "line": 138.5,
-          "fair_prob": 0.5321,
-          "fair_american": -114,
-          "edge": 0.0202,
+          "fair_prob": 0.534,
+          "fair_american": -115,
+          "edge": 0.0195,
           "confidence": 5,
           "unit_size": 0.5,
           "risk": "Shadow",
           "reasoning": [
-            "Model total 140.3 vs market 138.5",
-            "Anchored fair total 140.3 vs line 138.5"
+            "Model margin +10.1 vs market +11.5 (home)",
+            "Anchored fair margin +10.1 vs line +11.5 (away)"
           ],
           "pass_triggers": [
             "Key player ruled out after card is posted",
@@ -687,12 +635,12 @@
         "no edge cleared the gates"
       ],
       "model": {
-        "away_score": 65.4,
+        "away_score": 64.8,
         "home_score": 74.9,
-        "spread": -9.5,
-        "total": 140.3,
+        "spread": -10.1,
+        "total": 139.7,
         "proj_poss": 71.3,
-        "margin_home": 9.5,
+        "margin_home": 10.1,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 1,
@@ -706,14 +654,14 @@
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
-        "spread": 16.42,
-        "total": 22.36
+        "spread": 16.41,
+        "total": 22.22
       },
       "anchored": {
-        "margin_home": 10.0,
-        "spread_shift": -1.5,
-        "total": 140.3,
-        "total_shift": 1.8
+        "margin_home": 10.1,
+        "spread_shift": -1.4,
+        "total": 139.7,
+        "total_shift": 1.2
       }
     },
     {
@@ -730,12 +678,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 51.1,
-        "home_score": 86.3,
-        "spread": -35.2,
-        "total": 137.5,
+        "away_score": 51.4,
+        "home_score": 85.8,
+        "spread": -34.4,
+        "total": 137.3,
         "proj_poss": 70.7,
-        "margin_home": 35.2,
+        "margin_home": 34.4,
         "games_home": 0,
         "games_away": 1,
         "rank_home": 8,
@@ -756,12 +704,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 71.5,
-        "home_score": 66.6,
-        "spread": 4.9,
-        "total": 138.0,
+        "away_score": 71.3,
+        "home_score": 66.8,
+        "spread": 4.5,
+        "total": 138.1,
         "proj_poss": 71.3,
-        "margin_home": -4.9,
+        "margin_home": -4.5,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 67,
@@ -782,12 +730,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 63.5,
-        "home_score": 73.0,
-        "spread": -9.6,
-        "total": 136.5,
-        "proj_poss": 72.8,
-        "margin_home": 9.6,
+        "away_score": 63.9,
+        "home_score": 73.2,
+        "spread": -9.3,
+        "total": 137.1,
+        "proj_poss": 72.7,
+        "margin_home": 9.3,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 223,
@@ -808,12 +756,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 67.0,
-        "home_score": 62.8,
-        "spread": 4.1,
-        "total": 129.8,
+        "away_score": 66.7,
+        "home_score": 62.7,
+        "spread": 3.9,
+        "total": 129.4,
         "proj_poss": 69.4,
-        "margin_home": -4.1,
+        "margin_home": -3.9,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 302,
@@ -848,10 +796,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 53.3,
-        "home_score": 72.3,
+        "away_score": 52.9,
+        "home_score": 71.9,
         "spread": -19.0,
-        "total": 125.6,
+        "total": 124.8,
         "proj_poss": 68.1,
         "margin_home": 19.0,
         "games_home": 0,
@@ -888,12 +836,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 57.2,
-        "home_score": 64.3,
-        "spread": -7.2,
-        "total": 121.5,
-        "proj_poss": 66.8,
-        "margin_home": 7.2,
+        "away_score": 56.6,
+        "home_score": 64.1,
+        "spread": -7.5,
+        "total": 120.7,
+        "proj_poss": 66.9,
+        "margin_home": 7.5,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 233,
@@ -956,12 +904,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 45.9,
-        "home_score": 66.5,
-        "spread": -20.6,
-        "total": 112.4,
+        "away_score": 45.5,
+        "home_score": 65.9,
+        "spread": -20.4,
+        "total": 111.3,
         "proj_poss": 66.5,
-        "margin_home": 20.6,
+        "margin_home": 20.4,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 83,
@@ -996,12 +944,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 58.9,
-        "home_score": 54.1,
-        "spread": 4.8,
-        "total": 113.0,
-        "proj_poss": 66.3,
-        "margin_home": -4.8,
+        "away_score": 58.1,
+        "home_score": 53.7,
+        "spread": 4.3,
+        "total": 111.8,
+        "proj_poss": 66.4,
+        "margin_home": -4.3,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 280,
@@ -1022,12 +970,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 53.3,
-        "home_score": 72.6,
-        "spread": -19.3,
-        "total": 126.0,
+        "away_score": 52.9,
+        "home_score": 71.9,
+        "spread": -19.0,
+        "total": 124.8,
         "proj_poss": 68.3,
-        "margin_home": 19.3,
+        "margin_home": 19.0,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 45,
@@ -1048,12 +996,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 39.1,
-        "home_score": 70.4,
-        "spread": -31.2,
-        "total": 109.5,
-        "proj_poss": 64.8,
-        "margin_home": 31.2,
+        "away_score": 38.5,
+        "home_score": 69.6,
+        "spread": -31.1,
+        "total": 108.0,
+        "proj_poss": 64.9,
+        "margin_home": 31.1,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 32,
@@ -1088,10 +1036,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 52.5,
-        "home_score": 65.9,
+        "away_score": 52.2,
+        "home_score": 65.6,
         "spread": -13.4,
-        "total": 118.4,
+        "total": 117.8,
         "proj_poss": 66.0,
         "margin_home": 13.4,
         "games_home": 0,
@@ -1128,10 +1076,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.0,
-        "home_score": 59.3,
+        "away_score": 63.5,
+        "home_score": 58.9,
         "spread": 4.7,
-        "total": 123.3,
+        "total": 122.4,
         "proj_poss": 69.0,
         "margin_home": -4.7,
         "games_home": 1,
@@ -1154,12 +1102,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 48.3,
-        "home_score": 79.3,
-        "spread": -31.1,
-        "total": 127.6,
+        "away_score": 48.0,
+        "home_score": 78.7,
+        "spread": -30.8,
+        "total": 126.7,
         "proj_poss": 69.3,
-        "margin_home": 31.1,
+        "margin_home": 30.8,
         "games_home": 1,
         "games_away": 2,
         "rank_home": 33,
@@ -1180,12 +1128,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 55.3,
-        "home_score": 87.9,
-        "spread": -32.5,
-        "total": 143.2,
+        "away_score": 55.6,
+        "home_score": 88.4,
+        "spread": -32.7,
+        "total": 144.0,
         "proj_poss": 72.6,
-        "margin_home": 32.5,
+        "margin_home": 32.7,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 34,
@@ -1206,10 +1154,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 60.7,
-        "home_score": 87.2,
+        "away_score": 61.3,
+        "home_score": 87.7,
         "spread": -26.5,
-        "total": 147.8,
+        "total": 149.0,
         "proj_poss": 73.0,
         "margin_home": 26.5,
         "games_home": 2,
@@ -1232,12 +1180,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 74.2,
-        "home_score": 55.0,
-        "spread": 19.2,
-        "total": 129.1,
+        "away_score": 73.5,
+        "home_score": 54.8,
+        "spread": 18.7,
+        "total": 128.3,
         "proj_poss": 68.6,
-        "margin_home": -19.2,
+        "margin_home": -18.7,
         "games_home": 2,
         "games_away": 1,
         "rank_home": 277,
@@ -1258,10 +1206,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 61.2,
-        "home_score": 75.6,
+        "away_score": 61.0,
+        "home_score": 75.4,
         "spread": -14.4,
-        "total": 136.8,
+        "total": 136.3,
         "proj_poss": 71.0,
         "margin_home": 14.4,
         "games_home": 1,
@@ -1284,12 +1232,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.6,
-        "home_score": 60.9,
-        "spread": 3.8,
-        "total": 125.5,
-        "proj_poss": 68.1,
-        "margin_home": -3.8,
+        "away_score": 63.7,
+        "home_score": 60.7,
+        "spread": 3.0,
+        "total": 124.4,
+        "proj_poss": 68.2,
+        "margin_home": -3.0,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 152,
@@ -1312,14 +1260,14 @@
           "book": "ballybet",
           "price_american": -110,
           "line": 135.5,
-          "fair_prob": 0.5445,
+          "fair_prob": 0.5448,
           "fair_american": -120,
-          "edge": 0.0395,
-          "confidence": 8,
+          "edge": 0.04,
+          "confidence": 9,
           "unit_size": 1.0,
           "risk": "Standard",
           "reasoning": [
-            "Model total 130.1 vs market 135.5",
+            "Model total 128.6 vs market 135.5",
             "Anchored fair total 133.0 vs line 135.5"
           ],
           "pass_triggers": [
@@ -1335,12 +1283,12 @@
       "shadow": [],
       "pass_reasons": [],
       "model": {
-        "away_score": 65.9,
-        "home_score": 64.2,
-        "spread": 1.7,
-        "total": 130.1,
+        "away_score": 65.0,
+        "home_score": 63.6,
+        "spread": 1.3,
+        "total": 128.6,
         "proj_poss": 70.0,
-        "margin_home": -1.7,
+        "margin_home": -1.3,
         "games_home": 2,
         "games_away": 1,
         "rank_home": 24,
@@ -1354,8 +1302,8 @@
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
-        "spread": 16.42,
-        "total": 22.36
+        "spread": 16.41,
+        "total": 22.22
       },
       "anchored": {
         "margin_home": -4.0,
@@ -1378,12 +1326,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 46.2,
-        "home_score": 78.1,
-        "spread": -32.0,
-        "total": 124.3,
+        "away_score": 45.6,
+        "home_score": 77.4,
+        "spread": -31.8,
+        "total": 123.0,
         "proj_poss": 68.2,
-        "margin_home": 32.0,
+        "margin_home": 31.8,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 19,
@@ -1404,12 +1352,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 52.7,
+        "away_score": 53.6,
         "home_score": 92.3,
-        "spread": -39.6,
-        "total": 145.0,
-        "proj_poss": 73.6,
-        "margin_home": 39.6,
+        "spread": -38.8,
+        "total": 145.9,
+        "proj_poss": 73.5,
+        "margin_home": 38.8,
         "games_home": 1,
         "games_away": 2,
         "rank_home": 14,
@@ -1458,12 +1406,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 74.9,
+        "away_score": 74.2,
         "home_score": 54.7,
-        "spread": 20.2,
-        "total": 129.6,
-        "proj_poss": 69.1,
-        "margin_home": -20.2,
+        "spread": 19.5,
+        "total": 128.9,
+        "proj_poss": 69.2,
+        "margin_home": -19.5,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 309,
@@ -1484,12 +1432,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 45.0,
-        "home_score": 82.2,
-        "spread": -37.2,
-        "total": 127.3,
+        "away_score": 44.7,
+        "home_score": 81.6,
+        "spread": -36.9,
+        "total": 126.3,
         "proj_poss": 69.3,
-        "margin_home": 37.2,
+        "margin_home": 36.9,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 15,
@@ -1510,12 +1458,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 52.2,
-        "home_score": 80.8,
-        "spread": -28.6,
-        "total": 133.0,
+        "away_score": 52.5,
+        "home_score": 80.3,
+        "spread": -27.8,
+        "total": 132.8,
         "proj_poss": 70.8,
-        "margin_home": 28.6,
+        "margin_home": 27.8,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 51,
@@ -1536,12 +1484,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 51.0,
-        "home_score": 76.3,
-        "spread": -25.3,
-        "total": 127.3,
+        "away_score": 52.4,
+        "home_score": 74.6,
+        "spread": -22.2,
+        "total": 127.0,
         "proj_poss": 70.1,
-        "margin_home": 25.3,
+        "margin_home": 22.2,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 60,
@@ -1562,10 +1510,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 59.0,
+        "away_score": 59.1,
         "home_score": 74.5,
         "spread": -15.4,
-        "total": 133.5,
+        "total": 133.7,
         "proj_poss": 70.1,
         "margin_home": 15.4,
         "games_home": 1,
@@ -1602,12 +1550,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 68.7,
-        "home_score": 62.2,
-        "spread": 6.5,
-        "total": 130.8,
+        "away_score": 68.3,
+        "home_score": 61.9,
+        "spread": 6.4,
+        "total": 130.2,
         "proj_poss": 69.8,
-        "margin_home": -6.5,
+        "margin_home": -6.4,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 133,
@@ -1628,12 +1576,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 80.7,
+        "away_score": 80.2,
         "home_score": 54.4,
-        "spread": 26.3,
-        "total": 135.1,
+        "spread": 25.8,
+        "total": 134.6,
         "proj_poss": 70.0,
-        "margin_home": -26.3,
+        "margin_home": -25.8,
         "games_home": 1,
         "games_away": 2,
         "rank_home": 172,
@@ -1668,12 +1616,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 56.5,
-        "home_score": 64.4,
-        "spread": -7.9,
-        "total": 120.9,
+        "away_score": 55.3,
+        "home_score": 64.3,
+        "spread": -9.0,
+        "total": 119.5,
         "proj_poss": 67.0,
-        "margin_home": 7.9,
+        "margin_home": 9.0,
         "games_home": 1,
         "games_away": 0,
         "rank_home": 73,
@@ -1694,12 +1642,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 61.7,
+        "away_score": 61.9,
         "home_score": 71.0,
-        "spread": -9.3,
-        "total": 132.7,
+        "spread": -9.2,
+        "total": 132.9,
         "proj_poss": 70.4,
-        "margin_home": 9.3,
+        "margin_home": 9.2,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 174,
@@ -1720,10 +1668,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 61.6,
-        "home_score": 71.1,
+        "away_score": 62.0,
+        "home_score": 71.5,
         "spread": -9.6,
-        "total": 132.7,
+        "total": 133.5,
         "proj_poss": 72.6,
         "margin_home": 9.6,
         "games_home": 1,
@@ -1747,11 +1695,11 @@
       ],
       "model": {
         "away_score": 51.9,
-        "home_score": 78.3,
-        "spread": -26.4,
-        "total": 130.3,
+        "home_score": 77.7,
+        "spread": -25.8,
+        "total": 129.6,
         "proj_poss": 68.8,
-        "margin_home": 26.4,
+        "margin_home": 25.8,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 48,
@@ -1772,12 +1720,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 57.9,
-        "home_score": 70.4,
-        "spread": -12.5,
-        "total": 128.3,
+        "away_score": 57.3,
+        "home_score": 70.1,
+        "spread": -12.8,
+        "total": 127.5,
         "proj_poss": 68.8,
-        "margin_home": 12.5,
+        "margin_home": 12.8,
         "games_home": 0,
         "games_away": 1,
         "rank_home": 84,
@@ -1798,12 +1746,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 56.7,
-        "home_score": 72.1,
-        "spread": -15.4,
-        "total": 128.8,
+        "away_score": 56.2,
+        "home_score": 71.7,
+        "spread": -15.5,
+        "total": 128.0,
         "proj_poss": 69.5,
-        "margin_home": 15.4,
+        "margin_home": 15.5,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 57,
@@ -1824,12 +1772,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 64.6,
-        "home_score": 60.9,
-        "spread": 3.7,
-        "total": 125.6,
+        "away_score": 64.1,
+        "home_score": 60.7,
+        "spread": 3.5,
+        "total": 124.8,
         "proj_poss": 69.0,
-        "margin_home": -3.7,
+        "margin_home": -3.5,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 267,
@@ -1854,12 +1802,12 @@
           "line": 12.5,
           "fair_prob": 0.5364,
           "fair_american": -116,
-          "edge": 0.0285,
+          "edge": 0.0286,
           "confidence": 8,
           "unit_size": 0.5,
           "risk": "Shadow(cap-cut)",
           "reasoning": [
-            "Model margin +6.9 vs market +12.5 (home)",
+            "Model margin +7.1 vs market +12.5 (home)",
             "Anchored fair margin +11.0 vs line +12.5 (away)"
           ],
           "pass_triggers": [
@@ -1878,14 +1826,14 @@
           "book": "draftkings",
           "price_american": -108,
           "line": 144.5,
-          "fair_prob": 0.5445,
+          "fair_prob": 0.5448,
           "fair_american": -120,
-          "edge": 0.0487,
+          "edge": 0.0492,
           "confidence": 10,
           "unit_size": 1.0,
           "risk": "Standard",
           "reasoning": [
-            "Model total 135.9 vs market 144.5",
+            "Model total 134.5 vs market 144.5",
             "Anchored fair total 142.0 vs line 144.5"
           ],
           "pass_triggers": [
@@ -1901,12 +1849,12 @@
       "shadow": [],
       "pass_reasons": [],
       "model": {
-        "away_score": 64.5,
-        "home_score": 71.4,
-        "spread": -6.9,
-        "total": 135.9,
+        "away_score": 63.7,
+        "home_score": 70.8,
+        "spread": -7.1,
+        "total": 134.5,
         "proj_poss": 70.0,
-        "margin_home": 6.9,
+        "margin_home": 7.1,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 2,
@@ -1920,8 +1868,8 @@
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
-        "spread": 16.42,
-        "total": 22.36
+        "spread": 16.41,
+        "total": 22.22
       },
       "anchored": {
         "margin_home": 11.0,
@@ -1944,12 +1892,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 61.7,
-        "home_score": 71.8,
-        "spread": -10.1,
-        "total": 133.5,
+        "away_score": 61.6,
+        "home_score": 71.6,
+        "spread": -10.0,
+        "total": 133.2,
         "proj_poss": 71.2,
-        "margin_home": 10.1,
+        "margin_home": 10.0,
         "games_home": 2,
         "games_away": 1,
         "rank_home": 40,
@@ -1970,12 +1918,12 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 57.9,
-        "home_score": 77.2,
-        "spread": -19.3,
+        "away_score": 57.8,
+        "home_score": 77.3,
+        "spread": -19.5,
         "total": 135.1,
         "proj_poss": 70.7,
-        "margin_home": 19.3,
+        "margin_home": 19.5,
         "games_home": 1,
         "games_away": 2,
         "rank_home": 69,
@@ -1996,12 +1944,12 @@
         "no edge cleared the gates"
       ],
       "model": {
-        "away_score": 50.9,
-        "home_score": 82.7,
-        "spread": -31.8,
-        "total": 133.6,
+        "away_score": 51.0,
+        "home_score": 82.2,
+        "spread": -31.2,
+        "total": 133.2,
         "proj_poss": 70.3,
-        "margin_home": 31.8,
+        "margin_home": 31.2,
         "games_home": 1,
         "games_away": 1,
         "rank_home": 3,
@@ -2015,8 +1963,8 @@
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
-        "spread": 16.42,
-        "total": 22.36
+        "spread": 16.41,
+        "total": 22.22
       },
       "anchored": {
         "margin_home": 40.0,

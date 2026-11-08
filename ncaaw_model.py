@@ -52,7 +52,18 @@ TRAINED_WEIGHTS = {
     "totalHighDamp": 0.40,
     "totalLowCap": 100,
     "totalLowDamp": 0.20,
+    # v14 features from the 15.4k-game residual autopsy (2026-11-08):
+    # power homes outperform flat HCA by ~0.8; home teams cover extra in
+    # non-conference buy games; 35+ point favorites stretch further.
+    # Defaults are inert — the cross-fold tuner fits them.
+    "hcaPowerBonus": 0.0,
+    "hcaNonConBonus": 0.0,
+    "spreadCompressHuge": 1.05,
 }
+
+# Power conferences get the extra home-court bonus (autopsy: -0.80 signed
+# residual on 3,667 power home games with the flat HCA)
+POWER_CONFS = {"SEC", "Big Ten", "Big 12", "ACC", "Big East"}
 
 # League mean total used by the variance amplifier (v13 constant)
 MEAN_TOTAL = 138.0
@@ -169,6 +180,11 @@ def predict(away: dict, home: dict, weights: dict | None = None,
                + ((a["orb"] - (100 - h["drb"])) - (h["orb"] - (100 - a["drb"]))) * w["orbW"]
                + ((a["ftr"] - h["ftrD"]) - (h["ftr"] - a["ftrD"])) * w["ftrW"])
     hca = 0.0 if neutral_site else w["hca"]
+    if not neutral_site:
+        if h.get("conf") in POWER_CONFS:
+            hca += w.get("hcaPowerBonus", 0.0)
+        if h.get("conf") and a.get("conf") and h["conf"] != a["conf"]:
+            hca += w.get("hcaNonConBonus", 0.0)
     raw_spread = (eff_diff * w["effWeight"]
                   + rank_diff * w["tRankWeight"]
                   + wp_diff * w["winPctWeight"] * 30
@@ -177,7 +193,8 @@ def predict(away: dict, home: dict, weights: dict | None = None,
                   - hca)
 
     abs_raw = abs(raw_spread)
-    compress = (w["spreadCompressBig"] if abs_raw > 20
+    compress = (w.get("spreadCompressHuge", w["spreadCompressBig"]) if abs_raw > 35
+                else w["spreadCompressBig"] if abs_raw > 20
                 else w["spreadCompressMid"] if abs_raw > 8
                 else w["spreadCompressSmall"])
     proj_spread = raw_spread * compress

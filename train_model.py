@@ -54,6 +54,11 @@ BOUNDS = {
     "totalTempoBoost": (0.0, 1.0), "totalBiasBase": (-10.0, 15.0),
     "totalBiasOEScale": (0.0, 0.5), "totalTOMismatch": (0.0, 0.15),
     "totalLowTempoPen": (0.0, 5.0), "totalVarAmp": (0.8, 2.2),
+    # v14 autopsy features (2026-11-08): tiered HCA, buy-game bonus,
+    # huge-favorite stretch, and the high-total clamp opened up for fitting
+    "hcaPowerBonus": (0.0, 2.5), "hcaNonConBonus": (0.0, 1.5),
+    "spreadCompressHuge": (0.9, 1.7),
+    "totalHighCap": (140.0, 170.0), "totalHighDamp": (0.2, 1.0),
 }
 
 

@@ -1065,7 +1065,9 @@ updated {esc((grades.get('generated_at') or '')[:16].replace('T', ' '))}Z</div><
 <span class='badge b-green'>{n_cards} PLAY{'S' if n_cards != 1 else ''}</span>
 {pnl_badge}
 <a class='badge b-accent' target='_blank' rel='noopener'
-href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%20%40%20Home&body=spread_home%3D-6.5%0Atotal%3D141.5%0A%23%20optional%3A%20ml_home%3D-250%20ml_away%3D%2B200%20spread_price%3D-110%20date%3D{esc(this_date)}'>➕ LATE LINE</a></div></div>
+href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%20%40%20Home&body=spread_home%3D-6.5%0Atotal%3D141.5%0A%23%20optional%3A%20ml_home%3D-250%20ml_away%3D%2B200%20spread_price%3D-110%20date%3D{esc(this_date)}'>➕ LATE LINE</a>
+<a class='badge b-red' target='_blank' rel='noopener'
+href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=INJ%3A%20Team%20Name&body=player%3A%20Star%20Guard%0Appg%3A%2018.5%0Astatus%3A%20OUT%0A%23%20status%3A%20OUT%20%7C%20GTD%20%7C%20PROB%20%7C%20CLEAR%20(removes%20team)%0A%23%20optional%3A%20replacement%3A%200.45%2C%20starter%3A%20true'>🏥 INJURY</a></div></div>
 <div class='tabs'>
 <button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
 <button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
