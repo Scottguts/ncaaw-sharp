@@ -1,33 +1,33 @@
 {
   "date": "2026-11-08",
-  "fetched_at": "2026-11-08T13:29:53.356268Z",
+  "fetched_at": "2026-11-08T17:00:35.132145Z",
   "games": [
     {
       "espn_event_id": "401915323",
       "start": "2026-11-08T17:00Z",
       "et_date": "2026-11-08",
-      "name": "Princeton Tigers at Murray State Racers",
+      "name": "Murray State Racers at Princeton Tigers",
       "neutral_site": true,
       "conference_game": false,
       "status": "STATUS_SCHEDULED",
       "completed": false,
       "home": {
-        "espn_id": "93",
-        "location": "Murray State",
-        "display_name": "Murray State Racers",
-        "canon": "murray st",
-        "conf": "MVC",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "163",
         "location": "Princeton",
         "display_name": "Princeton Tigers",
         "canon": "princeton",
         "conf": "Ivy",
         "record": "2-0",
+        "score": "0",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "93",
+        "location": "Murray State",
+        "display_name": "Murray State Racers",
+        "canon": "murray st",
+        "conf": "MVC",
+        "record": "1-1",
         "score": "0",
         "winner": null
       },
@@ -627,7 +627,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "86423ccadd1b471509673bddcb47c0f5"
     },
     {
       "espn_event_id": "401929301",

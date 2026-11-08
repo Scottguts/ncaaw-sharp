@@ -27,14 +27,40 @@
       "unit_size": 1.0
     },
     {
-      "bet_label": "Under 135.5",
-      "book": "ballybet",
+      "bet_label": "Under 137.5",
+      "book": "draftkings",
+      "confidence": 9,
+      "edge": 0.04,
+      "espn_event_id": "401912991",
+      "fair_american": -120,
+      "fair_prob": 0.5448,
+      "line": 137.5,
+      "market": "total",
+      "matchup": "Alabama Crimson Tide @ Tulane Green Wave",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model total 125.7 vs market 137.5",
+        "Anchored fair total 135.0 vs line 137.5"
+      ],
+      "risk": "Standard",
+      "side": "under",
+      "start": "2026-11-08T18:00Z",
+      "unit_size": 1.0
+    },
+    {
+      "bet_label": "Under 136.5",
+      "book": "draftkings",
       "confidence": 9,
       "edge": 0.04,
       "espn_event_id": "401913737",
       "fair_american": -120,
       "fair_prob": 0.5448,
-      "line": 135.5,
+      "line": 136.5,
       "market": "total",
       "matchup": "Kentucky Wildcats @ NC State Wolfpack",
       "pass_triggers": [
@@ -44,33 +70,59 @@
       ],
       "price_american": -110,
       "reasoning": [
-        "Model total 128.6 vs market 135.5",
-        "Anchored fair total 133.0 vs line 135.5"
+        "Model total 128.6 vs market 136.5",
+        "Anchored fair total 134.0 vs line 136.5"
       ],
       "risk": "Standard",
       "side": "under",
       "start": "2026-11-08T20:00Z",
+      "unit_size": 1.0
+    },
+    {
+      "bet_label": "Under 140.5",
+      "book": "betmgm",
+      "confidence": 9,
+      "edge": 0.04,
+      "espn_event_id": "401927106",
+      "fair_american": -120,
+      "fair_prob": 0.5448,
+      "line": 140.5,
+      "market": "total",
+      "matchup": "Utah State Aggies @ USC Trojans",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model total 133.2 vs market 140.5",
+        "Anchored fair total 138.0 vs line 140.5"
+      ],
+      "risk": "Standard",
+      "side": "under",
+      "start": "2026-11-09T01:00Z",
       "unit_size": 1.0
     }
   ],
   "date": "2026-11-08",
   "games": [
     {
-      "away_short": "Princeton",
+      "away_short": "Murray State",
       "cards": [],
       "espn_event_id": "401915323",
-      "home_short": "Murray State",
-      "matchup": "Princeton Tigers @ Murray State Racers",
+      "home_short": "Princeton",
+      "matchup": "Murray State Racers @ Princeton Tigers",
       "model": {
-        "away_score": 72.3,
+        "away_score": 69.0,
         "games_away": 1,
         "games_home": 1,
-        "home_score": 69.0,
-        "margin_home": -3.3,
+        "home_score": 72.3,
+        "margin_home": 3.3,
         "proj_poss": 70.3,
-        "rank_away": 62,
-        "rank_home": 82,
-        "spread": 3.3,
+        "rank_away": 82,
+        "rank_home": 62,
+        "spread": -3.3,
         "total": 141.3
       },
       "neutral_site": true,
@@ -401,7 +453,34 @@
         "total_shift": -2.5
       },
       "away_short": "Alabama",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 137.5",
+          "book": "draftkings",
+          "confidence": 9,
+          "edge": 0.04,
+          "espn_event_id": "401912991",
+          "fair_american": -120,
+          "fair_prob": 0.5448,
+          "line": 137.5,
+          "market": "total",
+          "matchup": "Alabama Crimson Tide @ Tulane Green Wave",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 125.7 vs market 137.5",
+            "Anchored fair total 135.0 vs line 137.5"
+          ],
+          "risk": "Standard",
+          "side": "under",
+          "start": "2026-11-08T18:00Z",
+          "unit_size": 1.0
+        }
+      ],
       "espn_event_id": "401912991",
       "home_short": "Tulane",
       "market": {
@@ -425,9 +504,7 @@
         "total": 125.7
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [
         {
           "bet_label": "Tulane Green Wave +17.5",
@@ -505,8 +582,8 @@
     },
     {
       "anchored": {
-        "margin_home": 10.1,
-        "spread_shift": -1.4,
+        "margin_home": 14.0,
+        "spread_shift": -1.5,
         "total": 139.7,
         "total_shift": 1.2
       },
@@ -516,7 +593,7 @@
       "home_short": "UConn",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -11.5,
+        "spread_home": -15.5,
         "spread_src": "consensus",
         "total": 138.5,
         "total_src": "consensus"
@@ -538,34 +615,7 @@
       "pass_reasons": [
         "no edge cleared the gates"
       ],
-      "shadow": [
-        {
-          "bet_label": "Iowa Hawkeyes +11.5",
-          "book": "draftkings",
-          "confidence": 5,
-          "edge": 0.0195,
-          "espn_event_id": "401911738",
-          "fair_american": -115,
-          "fair_prob": 0.534,
-          "line": 11.5,
-          "market": "spread",
-          "matchup": "Iowa Hawkeyes @ UConn Huskies",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +10.1 vs market +11.5 (home)",
-            "Anchored fair margin +10.1 vs line +11.5 (away)"
-          ],
-          "risk": "Shadow",
-          "side": "away",
-          "start": "2026-11-08T19:00Z",
-          "unit_size": 0.5
-        }
-      ],
+      "shadow": [],
       "sigma": {
         "spread": 16.41,
         "total": 22.22
@@ -600,10 +650,23 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -6.0,
+        "spread_shift": 1.5,
+        "total": 138.1,
+        "total_shift": 0.6
+      },
       "away_short": "West Virginia",
       "cards": [],
       "espn_event_id": "401907165",
       "home_short": "Georgia Tech",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 7.5,
+        "spread_src": "consensus",
+        "total": 137.5,
+        "total_src": "consensus"
+      },
       "matchup": "West Virginia Mountaineers @ Georgia Tech Yellow Jackets",
       "model": {
         "away_score": 71.3,
@@ -619,9 +682,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 16.41,
+        "total": 22.22
+      },
       "start": "2026-11-08T19:00Z",
       "status": "graded"
     },
@@ -1155,22 +1222,22 @@
     },
     {
       "anchored": {
-        "margin_home": -4.0,
+        "margin_home": -3.0,
         "spread_shift": 1.5,
-        "total": 133.0,
+        "total": 134.0,
         "total_shift": -2.5
       },
       "away_short": "Kentucky",
       "cards": [
         {
-          "bet_label": "Under 135.5",
-          "book": "ballybet",
+          "bet_label": "Under 136.5",
+          "book": "draftkings",
           "confidence": 9,
           "edge": 0.04,
           "espn_event_id": "401913737",
           "fair_american": -120,
           "fair_prob": 0.5448,
-          "line": 135.5,
+          "line": 136.5,
           "market": "total",
           "matchup": "Kentucky Wildcats @ NC State Wolfpack",
           "pass_triggers": [
@@ -1180,8 +1247,8 @@
           ],
           "price_american": -110,
           "reasoning": [
-            "Model total 128.6 vs market 135.5",
-            "Anchored fair total 133.0 vs line 135.5"
+            "Model total 128.6 vs market 136.5",
+            "Anchored fair total 134.0 vs line 136.5"
           ],
           "risk": "Standard",
           "side": "under",
@@ -1193,9 +1260,9 @@
       "home_short": "NC State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 5.5,
+        "spread_home": 4.5,
         "spread_src": "consensus",
-        "total": 135.5,
+        "total": 136.5,
         "total_src": "consensus"
       },
       "matchup": "Kentucky Wildcats @ NC State Wolfpack",
@@ -1703,32 +1770,6 @@
       "away_short": "North Carolina",
       "cards": [
         {
-          "bet_label": "North Carolina Tar Heels +12.5",
-          "book": "ballybet",
-          "confidence": 8,
-          "edge": 0.0286,
-          "espn_event_id": "401906089",
-          "fair_american": -116,
-          "fair_prob": 0.5364,
-          "line": 12.5,
-          "market": "spread",
-          "matchup": "North Carolina Tar Heels @ South Carolina Gamecocks",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -109,
-          "reasoning": [
-            "Model margin +7.1 vs market +12.5 (home)",
-            "Anchored fair margin +11.0 vs line +12.5 (away)"
-          ],
-          "risk": "Shadow(cap-cut)",
-          "side": "away",
-          "start": "2026-11-08T22:30Z",
-          "unit_size": 0.5
-        },
-        {
           "bet_label": "Under 144.5",
           "book": "draftkings",
           "confidence": 10,
@@ -1841,18 +1882,45 @@
     },
     {
       "anchored": {
-        "margin_home": 40.0,
+        "margin_home": 44.0,
         "spread_shift": -1.5,
         "total": 138.0,
         "total_shift": -2.5
       },
       "away_short": "Utah State",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 140.5",
+          "book": "betmgm",
+          "confidence": 9,
+          "edge": 0.04,
+          "espn_event_id": "401927106",
+          "fair_american": -120,
+          "fair_prob": 0.5448,
+          "line": 140.5,
+          "market": "total",
+          "matchup": "Utah State Aggies @ USC Trojans",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 133.2 vs market 140.5",
+            "Anchored fair total 138.0 vs line 140.5"
+          ],
+          "risk": "Standard",
+          "side": "under",
+          "start": "2026-11-09T01:00Z",
+          "unit_size": 1.0
+        }
+      ],
       "espn_event_id": "401927106",
       "home_short": "USC",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -41.5,
+        "spread_home": -45.5,
         "spread_src": "consensus",
         "total": 140.5,
         "total_src": "consensus"
@@ -1871,9 +1939,7 @@
         "total": 133.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [],
       "sigma": {
         "spread": 16.41,
@@ -1883,14 +1949,14 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-08T14:47:51.273821Z",
+  "generated_at": "2026-11-08T17:00:35.138363Z",
   "market_bias": {
-    "mean_spread_delta": -1.84,
-    "mean_total_delta": -6.96,
-    "n_spread_lines": 5,
-    "n_total_lines": 5
+    "mean_spread_delta": -2.53,
+    "mean_total_delta": -5.87,
+    "n_spread_lines": 6,
+    "n_total_lines": 6
   },
-  "n_cards": 2,
+  "n_cards": 4,
   "n_games": 68,
   "odds_available": true,
   "shadow_cards": [
@@ -1919,59 +1985,7 @@
       "side": "home",
       "start": "2026-11-08T18:00Z",
       "unit_size": 0.5
-    },
-    {
-      "bet_label": "Iowa Hawkeyes +11.5",
-      "book": "draftkings",
-      "confidence": 5,
-      "edge": 0.0195,
-      "espn_event_id": "401911738",
-      "fair_american": -115,
-      "fair_prob": 0.534,
-      "line": 11.5,
-      "market": "spread",
-      "matchup": "Iowa Hawkeyes @ UConn Huskies",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +10.1 vs market +11.5 (home)",
-        "Anchored fair margin +10.1 vs line +11.5 (away)"
-      ],
-      "risk": "Shadow",
-      "side": "away",
-      "start": "2026-11-08T19:00Z",
-      "unit_size": 0.5
-    },
-    {
-      "bet_label": "North Carolina Tar Heels +12.5",
-      "book": "ballybet",
-      "confidence": 8,
-      "edge": 0.0286,
-      "espn_event_id": "401906089",
-      "fair_american": -116,
-      "fair_prob": 0.5364,
-      "line": 12.5,
-      "market": "spread",
-      "matchup": "North Carolina Tar Heels @ South Carolina Gamecocks",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -109,
-      "reasoning": [
-        "Model margin +7.1 vs market +12.5 (home)",
-        "Anchored fair margin +11.0 vs line +12.5 (away)"
-      ],
-      "risk": "Shadow(cap-cut)",
-      "side": "away",
-      "start": "2026-11-08T22:30Z",
-      "unit_size": 0.5
     }
   ],
-  "total_units": 2.0
+  "total_units": 4.0
 }
