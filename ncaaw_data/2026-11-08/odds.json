@@ -1,0 +1,960 @@
+{
+  "available": true,
+  "fetched_at": "2026-11-08T13:29:53.218234Z",
+  "books_used": [
+    "draftkings",
+    "betmgm",
+    "caesars",
+    "williamhill_us",
+    "betrivers",
+    "espnbet",
+    "ballybet",
+    "hardrockbet",
+    "pinnacle"
+  ],
+  "markets_requested": [
+    "h2h",
+    "spreads",
+    "totals"
+  ],
+  "games": [
+    {
+      "id": "eb7ead91ae98af0ec9582856727103ba",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-08T18:00:00Z",
+      "home_team": "Tulane Green Wave",
+      "away_team": "Alabama Crimson Tide",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -1650
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": 950
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -110,
+                  "point": -17.5
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": -110,
+                  "point": 17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -10000
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": 1050
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -113,
+                  "point": -17.5
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": -117,
+                  "point": 17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -108,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -124,
+                  "point": 137.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -3335
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": 1050
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -110,
+                  "point": -17.5
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": -115,
+                  "point": 17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -106,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -121,
+                  "point": 137.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -3000
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": 1100
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -110,
+                  "point": -17.5
+                },
+                {
+                  "name": "Tulane Green Wave",
+                  "price": -115,
+                  "point": 17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 137.5
+                },
+                {
+                  "name": "Under",
+                  "price": -125,
+                  "point": 137.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8dbda6c3c54b446f3dd9ecbdb635c9d7",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-08T19:00:00Z",
+      "home_team": "UConn Huskies",
+      "away_team": "Iowa Hawkeyes",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": 440
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -600
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": -110,
+                  "point": 11.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -110,
+                  "point": -11.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": 450
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -770
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": -120,
+                  "point": 11.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -112,
+                  "point": -11.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": 450
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -715
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": -117,
+                  "point": 11.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -109,
+                  "point": -11.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -109,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": 450
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -700
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": -120,
+                  "point": 11.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -110,
+                  "point": -11.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fcd1e023060d1b7aa3ae1e5b35b7b099",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-08T20:00:00Z",
+      "home_team": "NC State Wolfpack",
+      "away_team": "Kentucky Wildcats",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -198
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": 164
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -102,
+                  "point": -5.5
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": -118,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -102,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -118,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -235
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": 170
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -110,
+                  "point": -5.5
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": -121,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -113,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -230
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": 175
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -108,
+                  "point": -5.5
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": -118,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -225
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": 175
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -110,
+                  "point": -5.5
+                },
+                {
+                  "name": "NC State Wolfpack",
+                  "price": -120,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ac47138be05a609d3cbfc42972c7ae62",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-08T22:30:00Z",
+      "home_team": "South Carolina Gamecocks",
+      "away_team": "North Carolina Tar Heels",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": 550
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -800
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -110,
+                  "point": 13.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -110,
+                  "point": -13.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -108,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": 540
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -1115
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -112,
+                  "point": 12.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -120,
+                  "point": -12.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": 540
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -910
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -109,
+                  "point": 12.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -117,
+                  "point": -12.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-08T13:29:52Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": 550
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -900
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -110,
+                  "point": 12.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -120,
+                  "point": -12.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:52Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d872630a5f76bc92b218dbabad816e70",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-09T01:00:00Z",
+      "home_team": "USC Trojans",
+      "away_team": "Utah State Aggies",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-08T13:29:30Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "USC Trojans",
+                  "price": -110,
+                  "point": -41.5
+                },
+                {
+                  "name": "Utah State Aggies",
+                  "price": -110,
+                  "point": 41.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-08T13:29:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -105,
+                  "point": 140.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 140.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
