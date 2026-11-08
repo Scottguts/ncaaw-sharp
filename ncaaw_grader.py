@@ -59,8 +59,34 @@ MAX_AMERICAN_PRICE = +180
 
 # Market anchoring caps — the model may only move the market line this far.
 # 1.5 pts on a ~12.1-sigma spread ~= 5pp of win prob (MLB caps at 3.5pp).
+# TOTAL shift tightened 2.5 -> 1.5 on 2026-11-08: week-one audit showed the
+# model runs ~6 low on the marquee games that get early lines (books were
+# near-perfect on them), which pegged the shift and auto-fired Unders on
+# every lined total. Tighter cap = totals only fire on genuine disagreement.
 MAX_SPREAD_SHIFT = 1.5   # points of margin
-MAX_TOTAL_SHIFT  = 2.5   # points of total
+MAX_TOTAL_SHIFT  = 1.5   # points of total
+
+
+def season_total_bias(data_root: Path = DATA_ROOT, days: int = 10,
+                      min_games: int = 30, clamp: float = 4.0) -> float:
+    """Self-correcting totals bias: mean (actual - model) total over recent
+    finals reports. Positive = the season is scoring more than the model
+    thinks -> raise projections before anchoring. Clamped, and zero until a
+    real sample exists. This closes the loop the week-one audit exposed
+    without touching any betting gate."""
+    diffs: list[float] = []
+    reports = sorted((p / "finals.json" for p in data_root.iterdir()
+                      if p.is_dir() and (p / "finals.json").exists()),
+                     key=lambda p: p.parent.name, reverse=True)[:days]
+    for rp in reports:
+        try:
+            for r in json.loads(rp.read_text()).get("games") or []:
+                diffs.append(r["act_total"] - r["model_total"])
+        except (ValueError, KeyError):
+            continue
+    if len(diffs) < min_games:
+        return 0.0
+    return max(-clamp, min(clamp, sum(diffs) / len(diffs)))
 
 # Best price must be confirmed by a DIFFERENT book within this many cents
 # (and at the same line, for spread/total) — stale-line protection.
@@ -387,7 +413,7 @@ def _pass_triggers() -> list[str]:
 # ===========================================================================
 
 def grade_game(game: dict, teams: dict, odds_event: dict | None,
-               injuries: dict | None = None) -> dict:
+               injuries: dict | None = None, total_bias: float = 0.0) -> dict:
     """Grade one game: model projection, market anchor, candidate cards."""
     hname = game["home"]["display_name"]
     aname = game["away"]["display_name"]
@@ -558,12 +584,15 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
 
     # ── total ──
     if ENABLED_MARKETS["total"] and anchor["total"] is not None:
-        shift_t = _clip(proj["total"] - anchor["total"],
+        adj_total = proj["total"] + total_bias   # in-season environment corrector
+        shift_t = _clip(adj_total - anchor["total"],
                         -MAX_TOTAL_SHIFT, MAX_TOTAL_SHIFT)
         fair_total = anchor["total"] + shift_t
         rec.setdefault("anchored", {})["total"] = round(fair_total, 2)
         rec["anchored"]["total_shift"] = round(shift_t, 2)
-        disagreement_t = proj["total"] - anchor["total"]
+        if total_bias:
+            rec["anchored"]["season_bias_applied"] = round(total_bias, 2)
+        disagreement_t = adj_total - anchor["total"]
         for side in ("Over", "Under"):
             bp = best_price(odds_event, "totals", side)
             if not bp:
@@ -768,11 +797,15 @@ def run(target_date: str, data_root: Path = DATA_ROOT) -> dict:
     injuries = load_injuries()
     if injuries:
         print(f"[grader] injuries.json active for {len(injuries)} team(s)")
+    tbias = season_total_bias(data_root)
+    if tbias:
+        print(f"[grader] season total-bias corrector: {tbias:+.2f} "
+              f"(recent actual-vs-model totals)")
     # slate.json stored odds_event_id at scrape time
     graded = []
     for g in slate["games"]:
         ev = odds_by_id.get(g.get("odds_event_id"))
-        graded.append(grade_game(g, teams, ev, injuries))
+        graded.append(grade_game(g, teams, ev, injuries, total_bias=tbias))
 
     fired = select_cards(graded)
     # shadow = paper evidence, uncapped (fired cards excluded to avoid overlap).
