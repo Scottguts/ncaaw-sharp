@@ -751,7 +751,11 @@ async function runWorkflow(file,label){
       out.innerHTML=`<span class='g'>✅ ${label} dispatched ${new Date().toLocaleTimeString()} — results hit Discord + this page in ~3 min</span>`;
     }else{
       const d=await r.json().catch(()=>({}));
-      out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,120)}</span>`;
+      let fix='';
+      if(r.status===401)fix=' → token invalid or expired: make a new one at github.com/settings/personal-access-tokens';
+      else if(r.status===403)fix=' → token lacks permission: edit it so Repository access = Only select → ncaaw-sharp, and Permissions → Actions = Read and write';
+      else if(r.status===404)fix=' → token cannot see the repo (GitHub returns 404 to hide it): in the token settings add ncaaw-sharp under Repository access';
+      out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,100)}${fix}</span>`;
     }
   }catch(e){out.innerHTML="<span class='r'>request failed: "+fetchHint(e)+"</span>";}
 }
