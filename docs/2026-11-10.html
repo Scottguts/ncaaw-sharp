@@ -1,0 +1,792 @@
+<!doctype html><html><head><meta charset='utf-8'><meta http-equiv='refresh' content='300'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta name='theme-color' content='#0a0f1a'>
+<link rel='manifest' href='manifest.json'>
+<link rel='icon' href='icon.svg' type='image/svg+xml'>
+<link rel='apple-touch-icon' href='apple-touch-icon.png'>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+<title>NCAAW SHARP — 2026-11-10</title><style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box}
+body{font-family:'JetBrains Mono','SF Mono',monospace;background:#0a0f1a;color:#e2e8f0;
+margin:0;font-size:13px;min-height:100vh}
+a{color:#3b82f6;text-decoration:none}
+.header{background:linear-gradient(135deg,#111827 0%,#0d1525 100%);
+border-bottom:1px solid #1e293b;padding:16px 20px;display:flex;align-items:center;
+justify-content:space-between;flex-wrap:wrap;gap:8px}
+.title{font-size:18px;font-weight:800;letter-spacing:-0.02em;
+background:linear-gradient(135deg,#f97316 0%,#fbbf24 100%);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{font-size:11px;color:#8899aa;margin-top:2px}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:6px;
+font-size:11px;font-weight:700}
+.b-green{color:#22c55e;background:#22c55e18;border:1px solid #22c55e25}
+.b-red{color:#ef4444;background:#ef444418;border:1px solid #ef444425}
+.b-grey{color:#8899aa;background:#8899aa18;border:1px solid #8899aa25}
+.b-yellow{color:#eab308;background:#eab30818;border:1px solid #eab30825}
+.b-accent{color:#f97316;background:#f9731618;border:1px solid #f9731625}
+.tabs{display:flex;gap:2px;padding:8px 20px;background:#111827;
+border-bottom:1px solid #1e293b;position:sticky;top:0;z-index:5}
+.tab{padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;
+border:none;background:transparent;color:#8899aa;font-family:inherit}
+.tab.active{background:#f97316;color:#fff}
+.wrap{padding:20px;max-width:1100px;margin:0 auto}
+.card{background:#111827;border:1px solid #1e293b;border-radius:10px;
+padding:16px;margin-bottom:12px}
+.card.edge{border:1px solid #f9731640;box-shadow:0 0 20px #f9731622}
+.matchup{font-size:15px;font-weight:800;letter-spacing:-0.01em}
+.muted{font-size:11px;color:#8899aa} .dim{font-size:10px;color:#556677}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.stat{padding:8px 10px;background:#0a0f1a;border-radius:6px;text-align:center}
+.stat .l{font-size:10px;color:#8899aa;margin-bottom:3px}
+.stat .v{font-size:15px;font-weight:800}
+.stat .s{font-size:10px;color:#556677}
+.play{flex:1;min-width:200px;padding:10px 12px;border-radius:8px;margin-top:8px}
+.play-g{background:#22c55e12;border:1px solid #22c55e30}
+.play-b{background:#3b82f612;border:1px solid #3b82f630}
+.play-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.stars{font-size:14px;font-weight:800;color:#eab308}
+.datenav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.navbtn{padding:8px 16px;border-radius:6px;border:1px solid #1e293b;color:#8899aa;
+background:transparent;font-size:14px;font-weight:700}
+.datetitle{font-size:16px;font-weight:700}
+.pnl{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
+.pnl .card{text-align:center;padding:12px;margin:0}
+.pnl .l{font-size:10px;color:#8899aa} .pnl .v{font-size:20px;font-weight:800}
+.betrow{display:flex;justify-content:space-between;align-items:center;padding:12px;
+background:#111827;border:1px solid #1e293b;border-radius:10px;margin-bottom:8px}
+.g{color:#22c55e} .r{color:#ef4444} .y{color:#eab308} .bl{color:#3b82f6}
+.empty{text-align:center;color:#8899aa;padding:40px}
+.search{width:100%;background:#0a0f1a;border:1px solid #1e293b;border-radius:8px;
+padding:10px 14px;color:#e2e8f0;font-family:inherit;font-size:13px;outline:none;
+margin-bottom:14px}
+.search:focus{border-color:#f9731666}
+.gamecard{cursor:pointer}
+.chev{color:#556677;font-size:14px;margin-right:6px}
+.details{margin-top:12px;border-top:1px solid #1e293b;padding-top:12px}
+.details p{font-size:12px;color:#8899aa;line-height:1.55;margin:.4rem 0}
+.details b{color:#e2e8f0}
+.statrow td{font-variant-numeric:tabular-nums}
+.better{color:#22c55e;font-weight:700}
+.lrow{display:flex;gap:8px;flex-wrap:wrap;margin:.5rem 0}
+.lrow input,.lrow select{background:#0a0f1a;border:1px solid #1e293b;
+border-radius:6px;padding:8px 10px;color:#e2e8f0;font-family:inherit;font-size:13px}
+.btn{background:#f97316;border:none;border-radius:6px;padding:8px 16px;
+color:#fff;font-family:inherit;font-weight:700;font-size:12px;cursor:pointer}
+.btn.sec{background:#1a2236;border:1px solid #1e293b}
+.verdict{border-radius:8px;padding:10px 12px;margin:.5rem 0;font-size:13px}
+.v-go{background:#22c55e18;border:1px solid #22c55e40}
+.v-no{background:#1a2236;border:1px solid #1e293b}
+.chat{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.msg{border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;white-space:pre-wrap}
+.msg.user{background:#f9731622;border:1px solid #f9731635;align-self:flex-end;max-width:85%}
+.msg.ai{background:#1a2236;border:1px solid #1e293b;max-width:95%}
+.chatbar{display:flex;gap:8px;margin-top:8px}
+.chatbar textarea{flex:1;background:#0a0f1a;border:1px solid #1e293b;border-radius:8px;
+padding:10px;color:#e2e8f0;font-family:inherit;font-size:13px;resize:vertical;min-height:44px}
+.msg .who{font-size:9px;letter-spacing:.08em;color:#556677;margin-bottom:4px;font-weight:700}
+.chead{font-weight:800;color:#e2e8f0;margin:.5rem 0 .2rem;font-size:13px}
+.cbul{padding-left:6px;margin:.15rem 0}
+.cverdict{border-radius:8px;padding:8px 12px;margin:.6rem 0 .2rem;font-weight:700;font-size:13px}
+.cv-bet{background:#22c55e18;border:1px solid #22c55e45;color:#22c55e}
+.cv-pass{background:#1a2236;border:1px solid #1e293b;color:#8899aa}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{padding:8px 6px;text-align:left;font-size:10px;font-weight:700;color:#8899aa;
+text-transform:uppercase;border-bottom:2px solid #1e293b}
+td{padding:6px;border-bottom:1px solid #1e293b30}
+.lc:empty{display:none}
+.lc-live{color:#ef4444;background:#ef444418;border:1px solid #ef444430;
+animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.55}}
+.card{transition:border-color .15s, box-shadow .15s}
+.gamecard:hover{border-color:#f9731650}
+.btn{transition:filter .1s} .btn:hover{filter:brightness(1.15)}
+.tab{transition:background .12s,color .12s}
+::selection{background:#f9731655}
+*{scrollbar-width:thin;scrollbar-color:#1e293b transparent}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:#1e293b;border-radius:99px}
+details.xtra{margin-top:16px} details.xtra summary{color:#556677;cursor:pointer;
+font-size:12px;padding:8px 0}
+details.xtra div{color:#556677;font-size:12px;padding:3px 0 3px 14px}
+@media(max-width:700px){.grid4{grid-template-columns:repeat(2,1fr)}
+.pnl{grid-template-columns:repeat(2,1fr)}
+.tab{padding:8px 9px;font-size:11px}
+.wrap{padding:14px 10px}
+.header{padding:12px 14px}}
+</style></head><body>
+<div class='header'><div>
+<div class='title'>🏀 NCAAW SHARP</div>
+<div class='subtitle'>Tuned Torvik Model · Market-Anchored · ML + Spread + Totals ·
+updated 2026-11-10 11:00Z</div></div>
+<div style='display:flex;align-items:center;gap:12px;flex-wrap:wrap'>
+<span class='badge b-green'>0 PLAYS</span>
+<span class='badge b-red'>-0.26u (-4.3% ROI)</span>
+<a class='badge b-accent' target='_blank' rel='noopener'
+href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=LINE%3A%20Away%20%40%20Home&body=spread_home%3D-6.5%0Atotal%3D141.5%0A%23%20optional%3A%20ml_home%3D-250%20ml_away%3D%2B200%20spread_price%3D-110%20date%3D2026-11-10'>➕ LATE LINE</a>
+<a class='badge b-red' target='_blank' rel='noopener'
+href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=INJ%3A%20Team%20Name&body=player%3A%20Star%20Guard%0Appg%3A%2018.5%0Astatus%3A%20OUT%0A%23%20status%3A%20OUT%20%7C%20GTD%20%7C%20PROB%20%7C%20CLEAR%20(removes%20team)%0A%23%20optional%3A%20replacement%3A%200.45%2C%20starter%3A%20true'>🏥 INJURY</a></div></div>
+<div class='tabs'>
+<button class='tab' id='tab-predictions' onclick="showTab('predictions')">🎯 Predictions</button>
+<button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
+<button class='tab' id='tab-live' onclick="showTab('live');liveRefresh();renderKeyState()">📡 Live</button>
+<button class='tab' id='tab-chat' onclick="showTab('chat');renderKeyState();if(!Object.keys(LIVEGAMES).length)liveRefresh()">🤖 Copilot</button>
+<button class='tab' id='tab-finals' onclick="showTab('finals')">🏁 Finals</button>
+<button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
+</div>
+<div class='wrap'>
+<div class='pane' id='pane-predictions'><div class='datenav'><a class='navbtn' href='2026-11-09.html'>‹</a><div class='datetitle'>📅 2026-11-10</div><span class='navbtn'>›</span></div><input class='search' type='search' placeholder='🔍 Search teams…' oninput='searchGames(this.value)'><div class='muted secthead' style='margin:10px 0 6px'>🏆 RANKED MATCHUPS</div><div class='card gamecard' data-search='charleston cougars @ usc trojans' onclick='toggleGame("401927107")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401927107'>▸</span>Charleston Cougars <span class='dim'>@</span> <span class='y'>#3</span> USC Trojans</div><div class='muted'>03:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401927107'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CHARLESTON</div><div class='v'>49</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>USC</div><div class='v g'>90</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>139.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>USC -40.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401927107' style='display:none'><table style='max-width:420px'><tr><th>Charleston</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>USC</th></tr><tr class='statrow'><td>253</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>3</td></tr><tr class='statrow'><td>2-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>87.7</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>114.6</td></tr><tr class='statrow'><td>96.6</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>76.0</td></tr><tr class='statrow'><td>73.6</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>74.9</td></tr><tr class='statrow'><td>52.9</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>65.2</td></tr><tr class='statrow'><td>42.7</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>35.8</td></tr><tr class='statrow'><td>25.3</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>15.4</td></tr><tr class='statrow'><td class='better'>29.7</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>28.2</td></tr><tr class='statrow'><td>31.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>54.4</td></tr><tr class='statrow'><td>36.8</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>34.1</td></tr><tr class='statrow'><td class='better'>32.7</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>25.7</td></tr><tr class='statrow'><td class='better'>25.5</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>25.8</td></tr></table><p><b>Efficiency:</b> Charleston nets -8.9 pts/100 poss (O 87.7 / D 96.6) vs USC +38.6 (O 114.6 / D 76.0) — a 47.5-point gap favoring USC before venue. At ~71 projected possessions that drives most of the 40.4-point model margin.</p><p><b>Four factors:</b> shooting leans USC (5.4 eFG pts of matchup edge); turnover battle leans USC; offensive glass leans USC.</p><p><b>Pace:</b> Charleston plays at 74 poss/40, USC at 75 → ~71 possessions, model total 139.2.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401927107")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='lindenwood lions @ louisville cardinals' onclick='toggleGame("401906077")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401906077'>▸</span>Lindenwood Lions <span class='dim'>@</span> <span class='y'>#9</span> Louisville Cardinals</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401906077'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>LINDENWOOD</div><div class='v'>46</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>LOUISVILLE</div><div class='v g'>84</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Louisville -38.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401906077' style='display:none'><table style='max-width:420px'><tr><th>Lindenwood</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Louisville</th></tr><tr class='statrow'><td>287</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>9</td></tr><tr class='statrow'><td>1-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>3-0</td></tr><tr class='statrow'><td>84.7</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>112.5</td></tr><tr class='statrow'><td>95.6</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>79.4</td></tr><tr class='statrow'><td>69.6</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.9</td></tr><tr class='statrow'><td>40.5</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>54.7</td></tr><tr class='statrow'><td>48.7</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>35.7</td></tr><tr class='statrow'><td>22.2</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>15.3</td></tr><tr class='statrow'><td>24.8</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>36.4</td></tr><tr class='statrow'><td>29.8</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>44.4</td></tr><tr class='statrow'><td>26.3</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>25.2</td></tr><tr class='statrow'><td>27.4</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>28.4</td></tr><tr class='statrow'><td>29.8</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>22.3</td></tr></table><p><b>Efficiency:</b> Lindenwood nets -10.9 pts/100 poss (O 84.7 / D 95.6) vs Louisville +33.1 (O 112.5 / D 79.4) — a 44.0-point gap favoring Louisville before venue. At ~69 projected possessions that drives most of the 38.0-point model margin.</p><p><b>Four factors:</b> turnover battle leans Lindenwood; offensive glass leans Louisville.</p><p><b>Pace:</b> Lindenwood plays at 70 poss/40, Louisville at 74 → ~69 possessions, model total 129.3.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401906077")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='detroit mercy titans @ notre dame fighting irish' onclick='toggleGame("401923182")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401923182'>▸</span>Detroit Mercy Titans <span class='dim'>@</span> <span class='y'>#16</span> Notre Dame Fighting Irish</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401923182'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>DETROIT MERCY</div><div class='v'>54</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>NOTRE DAME</div><div class='v g'>87</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>141.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Notre Dame -32.8</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401923182' style='display:none'><table style='max-width:420px'><tr><th>Detroit Mercy</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Notre Dame</th></tr><tr class='statrow'><td>261</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>16</td></tr><tr class='statrow'><td>2-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>86.8</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>108.0</td></tr><tr class='statrow'><td>96.2</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>80.6</td></tr><tr class='statrow'><td>74.0</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>76.9</td></tr><tr class='statrow'><td>38.4</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>64.3</td></tr><tr class='statrow'><td>44.8</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>38.5</td></tr><tr class='statrow'><td>21.1</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>15.0</td></tr><tr class='statrow'><td>23.8</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>30.0</td></tr><tr class='statrow'><td>25.9</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>46.5</td></tr><tr class='statrow'><td>43.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>31.1</td></tr><tr class='statrow'><td class='better'>46.4</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>30.0</td></tr><tr class='statrow'><td>43.5</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>16.9</td></tr></table><p><b>Efficiency:</b> Detroit Mercy nets -9.4 pts/100 poss (O 86.8 / D 96.2) vs Notre Dame +27.4 (O 108.0 / D 80.6) — a 36.7-point gap favoring Notre Dame before venue. At ~72 projected possessions that drives most of the 32.8-point model margin.</p><p><b>Four factors:</b> shooting leans Notre Dame (19.6 eFG pts of matchup edge); offensive glass leans Notre Dame.</p><p><b>Pace:</b> Detroit Mercy plays at 74 poss/40, Notre Dame at 77 → ~72 possessions, model total 141.1.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401923182")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='iona gaels @ tcu horned frogs' onclick='toggleGame("401915666")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401915666'>▸</span>Iona Gaels <span class='dim'>@</span> <span class='y'>#19</span> TCU Horned Frogs</div><div class='muted'>22:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401915666'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>IONA</div><div class='v'>45</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>TCU</div><div class='v g'>81</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>125.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>TCU -35.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401915666' style='display:none'><table style='max-width:420px'><tr><th>Iona</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>TCU</th></tr><tr class='statrow'><td>328</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>19</td></tr><tr class='statrow'><td>1-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>3-0</td></tr><tr class='statrow'><td>84.5</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>107.6</td></tr><tr class='statrow'><td>98.4</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>81.3</td></tr><tr class='statrow'><td>69.9</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>70.1</td></tr><tr class='statrow'><td>41.9</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>57.7</td></tr><tr class='statrow'><td>53.9</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>34.7</td></tr><tr class='statrow'><td>20.9</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>13.7</td></tr><tr class='statrow'><td>19.5</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>27.5</td></tr><tr class='statrow'><td>27.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>51.0</td></tr><tr class='statrow'><td>29.8</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>19.4</td></tr><tr class='statrow'><td class='better'>40.5</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>38.7</td></tr><tr class='statrow'><td>53.4</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>16.6</td></tr></table><p><b>Efficiency:</b> Iona nets -13.9 pts/100 poss (O 84.5 / D 98.4) vs TCU +26.3 (O 107.6 / D 81.3) — a 40.2-point gap favoring TCU before venue. At ~68 projected possessions that drives most of the 35.5-point model margin.</p><p><b>Four factors:</b> shooting leans Iona (3.4 eFG pts of matchup edge); offensive glass leans TCU.</p><p><b>Pace:</b> Iona plays at 70 poss/40, TCU at 70 → ~68 possessions, model total 125.6.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401915666")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='new haven chargers @ tennessee lady volunteers' onclick='toggleGame("401912954")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401912954'>▸</span>New Haven Chargers <span class='dim'>@</span> <span class='y'>#21</span> Tennessee Lady Volunteers</div><div class='muted'>23:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401912954'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NEW HAVEN</div><div class='v'>44</div><div class='s'>win 0%</div></div>
+<div class='stat'><div class='l'>TENNESSEE</div><div class='v g'>84</div><div class='s'>win 100%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.9</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Tennessee -40.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401912954' style='display:none'><table style='max-width:420px'><tr><th>New Haven</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Tennessee</th></tr><tr class='statrow'><td>356</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>21</td></tr><tr class='statrow'><td>1-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>79.5</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>108.6</td></tr><tr class='statrow'><td>99.2</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>82.2</td></tr><tr class='statrow'><td>67.6</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>78.5</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>49.4</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>38.8</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>13.1</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>33.4</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>44.0</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>33.0</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>34.1</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>32.0</td></tr></table><p><b>Efficiency:</b> New Haven nets -19.7 pts/100 poss (O 79.5 / D 99.2) vs Tennessee +26.4 (O 108.6 / D 82.2) — a 46.2-point gap favoring Tennessee before venue. At ~70 projected possessions that drives most of the 40.0-point model margin.</p><p><b>Four factors:</b> shooting leans New Haven (111.8 eFG pts of matchup edge); turnover battle leans Tennessee; offensive glass leans Tennessee.</p><p><b>Pace:</b> New Haven plays at 68 poss/40, Tennessee at 79 → ~70 possessions, model total 128.9.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401912954")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='north carolina a&amp;t aggies @ nebraska cornhuskers' onclick='toggleGame("401921436")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401921436'>▸</span>North Carolina A&amp;T Aggies <span class='dim'>@</span> <span class='y'>#24</span> Nebraska Cornhuskers</div><div class='muted'>01:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401921436'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NORTH CAROLINA A&amp;T</div><div class='v'>52</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>NEBRASKA</div><div class='v g'>81</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>132.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Nebraska -29.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401921436' style='display:none'><table style='max-width:420px'><tr><th>North Carolina A&amp;T</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Nebraska</th></tr><tr class='statrow'><td>238</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>24</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>88.8</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>106.4</td></tr><tr class='statrow'><td>96.3</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>82.1</td></tr><tr class='statrow'><td>70.1</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.7</td></tr><tr class='statrow'><td>31.5</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>52.4</td></tr><tr class='statrow'><td>45.0</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>40.4</td></tr><tr class='statrow'><td>23.6</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>17.0</td></tr><tr class='statrow'><td>23.6</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>42.4</td></tr><tr class='statrow'><td>39.1</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>42.5</td></tr><tr class='statrow'><td>30.3</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>15.8</td></tr><tr class='statrow'><td>12.9</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>25.0</td></tr><tr class='statrow'><td>44.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>24.7</td></tr></table><p><b>Efficiency:</b> North Carolina A&amp;T nets -7.4 pts/100 poss (O 88.8 / D 96.3) vs Nebraska +24.3 (O 106.4 / D 82.1) — a 31.7-point gap favoring Nebraska before venue. At ~70 projected possessions that drives most of the 29.5-point model margin.</p><p><b>Four factors:</b> shooting leans Nebraska (16.3 eFG pts of matchup edge); turnover battle leans North Carolina A&amp;T; offensive glass leans Nebraska.</p><p><b>Pace:</b> North Carolina A&amp;T plays at 70 poss/40, Nebraska at 74 → ~70 possessions, model total 132.7.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401921436")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='villanova wildcats @ princeton tigers' onclick='toggleGame("401915324")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401915324'>▸</span><span class='y'>#25</span> Villanova Wildcats <span class='dim'>@</span> Princeton Tigers</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401915324'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>VILLANOVA</div><div class='v g'>71</div><div class='s'>win 72%</div></div>
+<div class='stat'><div class='l'>PRINCETON</div><div class='v'>64</div><div class='s'>win 28%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>134.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Villanova -7.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401915324' style='display:none'><table style='max-width:420px'><tr><th>Villanova</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Princeton</th></tr><tr class='statrow'><td class='better'>25</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>68</td></tr><tr class='statrow'><td>0-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>3-0</td></tr><tr class='statrow'><td class='better'>106.2</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>103.0</td></tr><tr class='statrow'><td class='better'>82.9</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>91.2</td></tr><tr class='statrow'><td>71.4</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>67.2</td></tr><tr class='statrow'><td>47.9</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>49.7</td></tr><tr class='statrow'><td>62.5</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>44.7</td></tr><tr class='statrow'><td>17.6</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>17.5</td></tr><tr class='statrow'><td>14.9</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>17.5</td></tr><tr class='statrow'><td>35.7</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>40.2</td></tr><tr class='statrow'><td>38.2</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>37.7</td></tr><tr class='statrow'><td>15.7</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>22.1</td></tr><tr class='statrow'><td>29.4</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>10.7</td></tr></table><p><b>Efficiency:</b> Villanova nets +23.3 pts/100 poss (O 106.2 / D 82.9) vs Princeton +11.9 (O 103.0 / D 91.2) — a 11.5-point gap favoring Villanova before venue. At ~68 projected possessions that drives most of the 7.0-point model margin.</p><p><b>Four factors:</b> shooting leans Villanova (16.0 eFG pts of matchup edge); offensive glass leans Princeton.</p><p><b>Pace:</b> Villanova plays at 71 poss/40, Princeton at 67 → ~68 possessions, model total 134.3.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401915324")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='muted secthead' style='margin:18px 0 6px'>— rest of the slate —</div><div class='card gamecard' data-search='bellarmine knights @ bowling green falcons' onclick='toggleGame("401926094")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401926094'>▸</span>Bellarmine Knights <span class='dim'>@</span> Bowling Green Falcons</div><div class='muted'>16:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401926094'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>BELLARMINE</div><div class='v'>60</div><div class='s'>win 12%</div></div>
+<div class='stat'><div class='l'>BOWLING GREEN</div><div class='v g'>74</div><div class='s'>win 88%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>133.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Bowling Green -13.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401926094' style='display:none'><table style='max-width:420px'><tr><th>Bellarmine</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Bowling Green</th></tr><tr class='statrow'><td>352</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>223</td></tr><tr class='statrow'><td>1-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>81.6</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>87.5</td></tr><tr class='statrow'><td>100.3</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>93.3</td></tr><tr class='statrow'><td>76.7</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>74.6</td></tr><tr class='statrow'><td>25.2</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>52.7</td></tr><tr class='statrow'><td>56.2</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>36.5</td></tr><tr class='statrow'><td>40.6</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>25.3</td></tr><tr class='statrow'><td>13.5</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>21.6</td></tr><tr class='statrow'><td>29.5</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>29.7</td></tr><tr class='statrow'><td>38.1</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>32.3</td></tr><tr class='statrow'><td class='better'>40.2</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>27.3</td></tr><tr class='statrow'><td class='better'>26.7</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>41.4</td></tr></table><p><b>Efficiency:</b> Bellarmine nets -18.7 pts/100 poss (O 81.6 / D 100.3) vs Bowling Green -5.8 (O 87.5 / D 93.3) — a 13.0-point gap favoring Bowling Green before venue. At ~72 projected possessions that drives most of the 13.6-point model margin.</p><p><b>Four factors:</b> shooting leans Bowling Green (7.8 eFG pts of matchup edge); turnover battle leans Bowling Green; offensive glass leans Bowling Green.</p><p><b>Pace:</b> Bellarmine plays at 77 poss/40, Bowling Green at 75 → ~72 possessions, model total 133.4.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401926094")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='youngstown state penguins @ toledo rockets' onclick='toggleGame("401929137")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401929137'>▸</span>Youngstown State Penguins <span class='dim'>@</span> Toledo Rockets</div><div class='muted'>16:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401929137'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>YOUNGSTOWN STATE</div><div class='v'>58</div><div class='s'>win 29%</div></div>
+<div class='stat'><div class='l'>TOLEDO</div><div class='v g'>65</div><div class='s'>win 71%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>122.9</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Toledo -6.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401929137' style='display:none'><table style='max-width:420px'><tr><th>Youngstown State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Toledo</th></tr><tr class='statrow'><td>151</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>119</td></tr><tr class='statrow'><td>2-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-2</td></tr><tr class='statrow'><td>91.0</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>93.3</td></tr><tr class='statrow'><td>91.0</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>90.0</td></tr><tr class='statrow'><td>71.6</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.0</td></tr><tr class='statrow'><td class='better'>48.0</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>42.7</td></tr><tr class='statrow'><td>48.0</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>42.3</td></tr><tr class='statrow'><td class='better'>12.2</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>24.7</td></tr><tr class='statrow'><td class='better'>36.5</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>18.0</td></tr><tr class='statrow'><td>20.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>25.6</td></tr><tr class='statrow'><td class='better'>25.0</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>26.5</td></tr><tr class='statrow'><td class='better'>27.0</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>18.7</td></tr><tr class='statrow'><td class='better'>34.0</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>39.0</td></tr></table><p><b>Efficiency:</b> Youngstown State nets +0.0 pts/100 poss (O 91.0 / D 91.0) vs Toledo +3.3 (O 93.3 / D 90.0) — a 3.3-point gap favoring Toledo before venue. At ~68 projected possessions that drives most of the 6.4-point model margin.</p><p><b>Four factors:</b> shooting leans Youngstown State (11.0 eFG pts of matchup edge); turnover battle leans Toledo; offensive glass leans Toledo.</p><p><b>Pace:</b> Youngstown State plays at 72 poss/40, Toledo at 72 → ~68 possessions, model total 122.9.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401929137")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='cleveland state vikings @ drake bulldogs' onclick='toggleGame("401919675")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401919675'>▸</span>Cleveland State Vikings <span class='dim'>@</span> Drake Bulldogs</div><div class='muted'>17:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401919675'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CLEVELAND STATE</div><div class='v'>61</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>DRAKE</div><div class='v g'>72</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>133.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Drake -10.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401919675' style='display:none'><table style='max-width:420px'><tr><th>Cleveland State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Drake</th></tr><tr class='statrow'><td>270</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>168</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-1</td></tr><tr class='statrow'><td>86.1</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>92.7</td></tr><tr class='statrow'><td>96.1</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>94.5</td></tr><tr class='statrow'><td>72.0</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>74.9</td></tr><tr class='statrow'><td class='better'>45.2</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>39.4</td></tr><tr class='statrow'><td class='better'>43.1</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>45.7</td></tr><tr class='statrow'><td>22.7</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>19.9</td></tr><tr class='statrow'><td>16.7</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>24.0</td></tr><tr class='statrow'><td>24.6</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>34.7</td></tr><tr class='statrow'><td>30.7</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>27.8</td></tr><tr class='statrow'><td class='better'>39.5</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>16.2</td></tr><tr class='statrow'><td class='better'>22.6</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>26.7</td></tr></table><p><b>Efficiency:</b> Cleveland State nets -9.9 pts/100 poss (O 86.1 / D 96.1) vs Drake -1.8 (O 92.7 / D 94.5) — a 8.1-point gap favoring Drake before venue. At ~70 projected possessions that drives most of the 10.5-point model margin.</p><p><b>Four factors:</b> shooting leans Cleveland State (3.2 eFG pts of matchup edge); turnover battle leans Cleveland State; offensive glass leans Drake.</p><p><b>Pace:</b> Cleveland State plays at 72 poss/40, Drake at 75 → ~70 possessions, model total 133.0.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401919675")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='furman paladins @ auburn tigers' onclick='toggleGame("401928218")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401928218'>▸</span>Furman Paladins <span class='dim'>@</span> Auburn Tigers</div><div class='muted'>17:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401928218'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>FURMAN</div><div class='v'>55</div><div class='s'>win 5%</div></div>
+<div class='stat'><div class='l'>AUBURN</div><div class='v g'>74</div><div class='s'>win 95%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.0</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Auburn -19.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401928218' style='display:none'><table style='max-width:420px'><tr><th>Furman</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Auburn</th></tr><tr class='statrow'><td>214</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>48</td></tr><tr class='statrow'><td>2-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>90.0</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>97.7</td></tr><tr class='statrow'><td>95.0</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>82.5</td></tr><tr class='statrow'><td>74.1</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>71.2</td></tr><tr class='statrow'><td>37.0</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>45.7</td></tr><tr class='statrow'><td>56.5</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>24.4</td></tr><tr class='statrow'><td class='better'>24.8</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>26.1</td></tr><tr class='statrow'><td class='better'>30.6</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>24.7</td></tr><tr class='statrow'><td>31.7</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>39.7</td></tr><tr class='statrow'><td>62.5</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>31.1</td></tr><tr class='statrow'><td>42.6</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>62.9</td></tr><tr class='statrow'><td class='better'>22.6</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>33.3</td></tr></table><p><b>Efficiency:</b> Furman nets -5.0 pts/100 poss (O 90.0 / D 95.0) vs Auburn +15.2 (O 97.7 / D 82.5) — a 20.2-point gap favoring Auburn before venue. At ~70 projected possessions that drives most of the 19.0-point model margin.</p><p><b>Four factors:</b> shooting leans Furman (23.4 eFG pts of matchup edge); turnover battle leans Auburn; offensive glass leans Auburn.</p><p><b>Pace:</b> Furman plays at 74 poss/40, Auburn at 71 → ~70 possessions, model total 129.0.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401928218")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='missouri state lady bears @ wichita state shockers' onclick='toggleGame("401913874")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401913874'>▸</span>Missouri State Lady Bears <span class='dim'>@</span> Wichita State Shockers</div><div class='muted'>17:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401913874'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MISSOURI STATE</div><div class='v g'>68</div><div class='s'>win 81%</div></div>
+<div class='stat'><div class='l'>WICHITA STATE</div><div class='v'>58</div><div class='s'>win 19%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>126.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Missouri State -10.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401913874' style='display:none'><table style='max-width:420px'><tr><th>Missouri State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Wichita State</th></tr><tr class='statrow'><td class='better'>83</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>239</td></tr><tr class='statrow'><td>2-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-2</td></tr><tr class='statrow'><td class='better'>97.3</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>84.4</td></tr><tr class='statrow'><td class='better'>88.1</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>91.5</td></tr><tr class='statrow'><td>71.9</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.2</td></tr><tr class='statrow'><td class='better'>51.7</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>41.1</td></tr><tr class='statrow'><td class='better'>31.0</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>45.0</td></tr><tr class='statrow'><td class='better'>19.7</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>29.5</td></tr><tr class='statrow'><td class='better'>25.0</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>15.8</td></tr><tr class='statrow'><td class='better'>43.8</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>35.1</td></tr><tr class='statrow'><td class='better'>13.5</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>31.1</td></tr><tr class='statrow'><td>27.5</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>39.3</td></tr><tr class='statrow'><td class='better'>19.0</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>44.2</td></tr></table><p><b>Efficiency:</b> Missouri State nets +9.2 pts/100 poss (O 97.3 / D 88.1) vs Wichita State -7.1 (O 84.4 / D 91.5) — a 16.3-point gap favoring Missouri State before venue. At ~70 projected possessions that drives most of the 10.2-point model margin.</p><p><b>Four factors:</b> shooting leans Wichita State (3.4 eFG pts of matchup edge); offensive glass leans Missouri State.</p><p><b>Pace:</b> Missouri State plays at 72 poss/40, Wichita State at 73 → ~70 possessions, model total 126.1.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401913874")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='montana lady griz @ kansas state wildcats' onclick='toggleGame("401906982")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401906982'>▸</span>Montana Lady Griz <span class='dim'>@</span> Kansas State Wildcats</div><div class='muted'>17:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401906982'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>MONTANA</div><div class='v'>58</div><div class='s'>win 8%</div></div>
+<div class='stat'><div class='l'>KANSAS STATE</div><div class='v g'>74</div><div class='s'>win 92%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>132.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Kansas State -16.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401906982' style='display:none'><table style='max-width:420px'><tr><th>Montana</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Kansas State</th></tr><tr class='statrow'><td>195</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>60</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>3-0</td></tr><tr class='statrow'><td>94.0</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>97.5</td></tr><tr class='statrow'><td>97.7</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>84.9</td></tr><tr class='statrow'><td>70.8</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.4</td></tr><tr class='statrow'><td>36.8</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>46.5</td></tr><tr class='statrow'><td>65.2</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>31.8</td></tr><tr class='statrow'><td>25.9</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>17.0</td></tr><tr class='statrow'><td>21.8</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>28.2</td></tr><tr class='statrow'><td>17.9</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>26.8</td></tr><tr class='statrow'><td>48.3</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>28.6</td></tr><tr class='statrow'><td class='better'>34.0</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>32.2</td></tr><tr class='statrow'><td>19.7</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>19.6</td></tr></table><p><b>Efficiency:</b> Montana nets -3.7 pts/100 poss (O 94.0 / D 97.7) vs Kansas State +12.6 (O 97.5 / D 84.9) — a 16.3-point gap favoring Kansas State before venue. At ~69 projected possessions that drives most of the 16.6-point model margin.</p><p><b>Four factors:</b> shooting leans Montana (23.7 eFG pts of matchup edge); offensive glass leans Kansas State.</p><p><b>Pace:</b> Montana plays at 71 poss/40, Kansas State at 72 → ~69 possessions, model total 132.1.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401906982")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='presbyterian blue hose @ marquette golden eagles' onclick='toggleGame("401919075")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401919075'>▸</span>Presbyterian Blue Hose <span class='dim'>@</span> Marquette Golden Eagles</div><div class='muted'>17:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401919075'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PRESBYTERIAN</div><div class='v'>50</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>MARQUETTE</div><div class='v g'>78</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>128.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Marquette -27.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401919075' style='display:none'><table style='max-width:420px'><tr><th>Presbyterian</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Marquette</th></tr><tr class='statrow'><td>355</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>84</td></tr><tr class='statrow'><td>0-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-1</td></tr><tr class='statrow'><td>81.2</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>98.4</td></tr><tr class='statrow'><td>101.1</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>89.2</td></tr><tr class='statrow'><td>72.2</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.3</td></tr><tr class='statrow'><td>36.1</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>59.1</td></tr><tr class='statrow'><td>51.4</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>38.1</td></tr><tr class='statrow'><td class='better'>25.6</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>28.0</td></tr><tr class='statrow'><td class='better'>24.2</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>17.3</td></tr><tr class='statrow'><td>32.1</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>37.7</td></tr><tr class='statrow'><td>36.5</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>31.6</td></tr><tr class='statrow'><td>21.8</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>24.3</td></tr><tr class='statrow'><td>40.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>25.9</td></tr></table><p><b>Efficiency:</b> Presbyterian nets -19.9 pts/100 poss (O 81.2 / D 101.1) vs Marquette +9.2 (O 98.4 / D 89.2) — a 29.1-point gap favoring Marquette before venue. At ~69 projected possessions that drives most of the 27.7-point model margin.</p><p><b>Four factors:</b> shooting leans Marquette (9.7 eFG pts of matchup edge); turnover battle leans Marquette; offensive glass leans Marquette.</p><p><b>Pace:</b> Presbyterian plays at 72 poss/40, Marquette at 72 → ~69 possessions, model total 128.3.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401919075")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='howard bison @ marshall thundering herd' onclick='toggleGame("401918657")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401918657'>▸</span>Howard Bison <span class='dim'>@</span> Marshall Thundering Herd</div><div class='muted'>23:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401918657'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>HOWARD</div><div class='v'>65</div><div class='s'>win 50%</div></div>
+<div class='stat'><div class='l'>MARSHALL</div><div class='v g'>65</div><div class='s'>win 50%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Marshall -0.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401918657' style='display:none'><table style='max-width:420px'><tr><th>Howard</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Marshall</th></tr><tr class='statrow'><td class='better'>167</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>187</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>90.4</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>91.7</td></tr><tr class='statrow'><td class='better'>92.0</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>94.8</td></tr><tr class='statrow'><td>74.5</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.5</td></tr><tr class='statrow'><td>47.8</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>49.1</td></tr><tr class='statrow'><td>43.8</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>37.1</td></tr><tr class='statrow'><td class='better'>20.1</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>24.8</td></tr><tr class='statrow'><td class='better'>25.4</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>24.1</td></tr><tr class='statrow'><td class='better'>34.5</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>27.7</td></tr><tr class='statrow'><td class='better'>35.1</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>41.3</td></tr><tr class='statrow'><td class='better'>41.2</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>38.3</td></tr><tr class='statrow'><td>43.5</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>20.5</td></tr></table><p><b>Efficiency:</b> Howard nets -1.6 pts/100 poss (O 90.4 / D 92.0) vs Marshall -3.1 (O 91.7 / D 94.8) — a 1.4-point gap favoring Howard before venue. At ~70 projected possessions that drives most of the 0.1-point model margin.</p><p><b>Four factors:</b> shooting leans Howard (5.4 eFG pts of matchup edge); turnover battle leans Howard; offensive glass leans Howard.</p><p><b>Pace:</b> Howard plays at 74 poss/40, Marshall at 73 → ~70 possessions, model total 129.6.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401918657")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='delaware state hornets @ pittsburgh panthers' onclick='toggleGame("401913746")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401913746'>▸</span>Delaware State Hornets <span class='dim'>@</span> Pittsburgh Panthers</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401913746'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>DELAWARE STATE</div><div class='v'>54</div><div class='s'>win 3%</div></div>
+<div class='stat'><div class='l'>PITTSBURGH</div><div class='v g'>77</div><div class='s'>win 97%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>131.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Pittsburgh -22.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401913746' style='display:none'><table style='max-width:420px'><tr><th>Delaware State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Pittsburgh</th></tr><tr class='statrow'><td>348</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>90</td></tr><tr class='statrow'><td>1-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>83.3</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>95.7</td></tr><tr class='statrow'><td>99.9</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>87.6</td></tr><tr class='statrow'><td>73.4</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.7</td></tr><tr class='statrow'><td class='better'>47.1</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>46.7</td></tr><tr class='statrow'><td>46.7</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>39.3</td></tr><tr class='statrow'><td>41.7</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>12.6</td></tr><tr class='statrow'><td>22.5</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>39.1</td></tr><tr class='statrow'><td>20.8</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>50.5</td></tr><tr class='statrow'><td class='better'>37.2</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>38.7</td></tr><tr class='statrow'><td class='better'>35.6</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>35.3</td></tr><tr class='statrow'><td>42.6</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>8.0</td></tr></table><p><b>Efficiency:</b> Delaware State nets -16.6 pts/100 poss (O 83.3 / D 99.9) vs Pittsburgh +8.1 (O 95.7 / D 87.6) — a 24.7-point gap favoring Pittsburgh before venue. At ~70 projected possessions that drives most of the 22.2-point model margin.</p><p><b>Four factors:</b> shooting leans Delaware State (7.8 eFG pts of matchup edge); turnover battle leans Pittsburgh; offensive glass leans Pittsburgh.</p><p><b>Pace:</b> Delaware State plays at 73 poss/40, Pittsburgh at 74 → ~70 possessions, model total 131.3.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401913746")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='purdue fort wayne mastodons @ western michigan broncos' onclick='toggleGame("401929100")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401929100'>▸</span>Purdue Fort Wayne Mastodons <span class='dim'>@</span> Western Michigan Broncos</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401929100'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PURDUE FORT WAYNE</div><div class='v'>60</div><div class='s'>win 27%</div></div>
+<div class='stat'><div class='l'>WESTERN MICHIGAN</div><div class='v g'>68</div><div class='s'>win 73%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>127.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Western Michigan -7.3</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401929100' style='display:none'><table style='max-width:420px'><tr><th>Purdue Fort Wayne</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Western Michigan</th></tr><tr class='statrow'><td>313</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>249</td></tr><tr class='statrow'><td>0-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-1</td></tr><tr class='statrow'><td>84.4</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>87.4</td></tr><tr class='statrow'><td>97.4</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>96.0</td></tr><tr class='statrow'><td>74.1</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>69.4</td></tr><tr class='statrow'><td>42.1</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>44.0</td></tr><tr class='statrow'><td>45.7</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>44.3</td></tr><tr class='statrow'><td class='better'>19.0</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>27.5</td></tr><tr class='statrow'><td>15.6</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>17.9</td></tr><tr class='statrow'><td class='better'>20.3</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>9.4</td></tr><tr class='statrow'><td>44.4</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>39.1</td></tr><tr class='statrow'><td class='better'>30.0</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>28.0</td></tr><tr class='statrow'><td class='better'>19.9</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>24.3</td></tr></table><p><b>Efficiency:</b> Purdue Fort Wayne nets -13.0 pts/100 poss (O 84.4 / D 97.4) vs Western Michigan -8.5 (O 87.4 / D 96.0) — a 4.5-point gap favoring Western Michigan before venue. At ~70 projected possessions that drives most of the 7.3-point model margin.</p><p><b>Four factors:</b> turnover battle leans Purdue Fort Wayne; offensive glass leans Purdue Fort Wayne.</p><p><b>Pace:</b> Purdue Fort Wayne plays at 74 poss/40, Western Michigan at 69 → ~70 possessions, model total 127.6.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401929100")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='south carolina upstate spartans @ south carolina state lady bulldogs' onclick='toggleGame("401925980")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401925980'>▸</span>South Carolina Upstate Spartans <span class='dim'>@</span> South Carolina State Lady Bulldogs</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401925980'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SOUTH CAROLINA UPSTATE</div><div class='v g'>66</div><div class='s'>win 68%</div></div>
+<div class='stat'><div class='l'>SOUTH CAROLINA STATE</div><div class='v'>60</div><div class='s'>win 32%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>126.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>South Carolina Upstate -5.6</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401925980' style='display:none'><table style='max-width:420px'><tr><th>South Carolina Upstate</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>South Carolina State</th></tr><tr class='statrow'><td class='better'>308</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>361</td></tr><tr class='statrow'><td>2-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-1</td></tr><tr class='statrow'><td class='better'>85.4</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>79.4</td></tr><tr class='statrow'><td class='better'>98.4</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>101.7</td></tr><tr class='statrow'><td>70.8</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.6</td></tr><tr class='statrow'><td class='better'>40.6</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>38.2</td></tr><tr class='statrow'><td class='better'>41.8</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>45.2</td></tr><tr class='statrow'><td class='better'>29.8</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>35.2</td></tr><tr class='statrow'><td>19.0</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>27.9</td></tr><tr class='statrow'><td class='better'>39.0</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>33.3</td></tr><tr class='statrow'><td class='better'>16.7</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>38.5</td></tr><tr class='statrow'><td>14.1</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>41.8</td></tr><tr class='statrow'><td class='better'>43.6</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>46.8</td></tr></table><p><b>Efficiency:</b> South Carolina Upstate nets -13.0 pts/100 poss (O 85.4 / D 98.4) vs South Carolina State -22.3 (O 79.4 / D 101.7) — a 9.2-point gap favoring South Carolina Upstate before venue. At ~70 projected possessions that drives most of the 5.6-point model margin.</p><p><b>Four factors:</b> turnover battle leans South Carolina Upstate; offensive glass leans South Carolina Upstate.</p><p><b>Pace:</b> South Carolina Upstate plays at 71 poss/40, South Carolina State at 74 → ~70 possessions, model total 126.7.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401925980")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='southeast missouri state redhawks @ purdue boilermakers' onclick='toggleGame("401921453")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401921453'>▸</span>Southeast Missouri State Redhawks <span class='dim'>@</span> Purdue Boilermakers</div><div class='muted'>00:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401921453'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SOUTHEAST MISSOURI STATE</div><div class='v'>56</div><div class='s'>win 3%</div></div>
+<div class='stat'><div class='l'>PURDUE</div><div class='v g'>78</div><div class='s'>win 97%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>133.8</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Purdue -22.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401921453' style='display:none'><table style='max-width:420px'><tr><th>Southeast Missouri State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Purdue</th></tr><tr class='statrow'><td>324</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>69</td></tr><tr class='statrow'><td>0-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>82.8</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>99.2</td></tr><tr class='statrow'><td>96.2</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>87.8</td></tr><tr class='statrow'><td>74.3</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>73.5</td></tr><tr class='statrow'><td>36.4</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>54.1</td></tr><tr class='statrow'><td>57.1</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>41.3</td></tr><tr class='statrow'><td>27.4</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>26.1</td></tr><tr class='statrow'><td class='better'>25.2</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>19.6</td></tr><tr class='statrow'><td>24.3</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>40.0</td></tr><tr class='statrow'><td>36.5</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>30.6</td></tr><tr class='statrow'><td>29.1</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>52.7</td></tr><tr class='statrow'><td class='better'>25.0</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>44.4</td></tr></table><p><b>Efficiency:</b> Southeast Missouri State nets -13.3 pts/100 poss (O 82.8 / D 96.2) vs Purdue +11.4 (O 99.2 / D 87.8) — a 24.7-point gap favoring Purdue before venue. At ~71 projected possessions that drives most of the 22.2-point model margin.</p><p><b>Four factors:</b> turnover battle leans Purdue; offensive glass leans Purdue.</p><p><b>Pace:</b> Southeast Missouri State plays at 74 poss/40, Purdue at 73 → ~71 possessions, model total 133.8.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401921453")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='oral roberts golden eagles @ kansas jayhawks' onclick='toggleGame("401906964")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401906964'>▸</span>Oral Roberts Golden Eagles <span class='dim'>@</span> Kansas Jayhawks</div><div class='muted'>00:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401906964'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>ORAL ROBERTS</div><div class='v'>60</div><div class='s'>win 2%</div></div>
+<div class='stat'><div class='l'>KANSAS</div><div class='v g'>85</div><div class='s'>win 98%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>144.6</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Kansas -25.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401906964' style='display:none'><table style='max-width:420px'><tr><th>Oral Roberts</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Kansas</th></tr><tr class='statrow'><td>232</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>41</td></tr><tr class='statrow'><td>2-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>90.3</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>101.6</td></tr><tr class='statrow'><td>97.4</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>83.3</td></tr><tr class='statrow'><td>78.5</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>71.3</td></tr><tr class='statrow'><td>33.3</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>44.0</td></tr><tr class='statrow'><td>60.6</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>32.9</td></tr><tr class='statrow'><td>23.0</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>20.0</td></tr><tr class='statrow'><td>17.3</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>26.2</td></tr><tr class='statrow'><td>17.5</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>33.8</td></tr><tr class='statrow'><td>62.5</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>28.3</td></tr><tr class='statrow'><td>19.3</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>44.8</td></tr><tr class='statrow'><td>34.8</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>16.7</td></tr></table><p><b>Efficiency:</b> Oral Roberts nets -7.1 pts/100 poss (O 90.3 / D 97.4) vs Kansas +18.3 (O 101.6 / D 83.3) — a 25.4-point gap favoring Kansas before venue. At ~73 projected possessions that drives most of the 25.1-point model margin.</p><p><b>Four factors:</b> shooting leans Oral Roberts (17.0 eFG pts of matchup edge); turnover battle leans Oral Roberts; offensive glass leans Kansas.</p><p><b>Pace:</b> Oral Roberts plays at 78 poss/40, Kansas at 71 → ~73 possessions, model total 144.6.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401906964")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='colorado state rams @ denver pioneers' onclick='toggleGame("401923327")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401923327'>▸</span>Colorado State Rams <span class='dim'>@</span> Denver Pioneers</div><div class='muted'>01:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401923327'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>COLORADO STATE</div><div class='v g'>66</div><div class='s'>win 86%</div></div>
+<div class='stat'><div class='l'>DENVER</div><div class='v'>54</div><div class='s'>win 14%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>119.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Colorado State -12.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401923327' style='display:none'><table style='max-width:420px'><tr><th>Colorado State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Denver</th></tr><tr class='statrow'><td class='better'>92</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>293</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-2</td></tr><tr class='statrow'><td class='better'>98.0</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>84.0</td></tr><tr class='statrow'><td class='better'>89.7</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>95.3</td></tr><tr class='statrow'><td>69.0</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>70.0</td></tr><tr class='statrow'><td class='better'>47.2</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>35.9</td></tr><tr class='statrow'><td>44.7</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>44.0</td></tr><tr class='statrow'><td class='better'>15.2</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>23.0</td></tr><tr class='statrow'><td>19.1</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>21.5</td></tr><tr class='statrow'><td>16.9</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>31.9</td></tr><tr class='statrow'><td class='better'>26.7</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>29.4</td></tr><tr class='statrow'><td>27.5</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>50.0</td></tr><tr class='statrow'><td>26.5</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>24.6</td></tr></table><p><b>Efficiency:</b> Colorado State nets +8.3 pts/100 poss (O 98.0 / D 89.7) vs Denver -11.4 (O 84.0 / D 95.3) — a 19.6-point gap favoring Colorado State before venue. At ~67 projected possessions that drives most of the 12.7-point model margin.</p><p><b>Four factors:</b> shooting leans Colorado State (12.0 eFG pts of matchup edge); turnover battle leans Colorado State; offensive glass leans Denver.</p><p><b>Pace:</b> Colorado State plays at 69 poss/40, Denver at 70 → ~67 possessions, model total 119.7.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401923327")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='southern jaguars @ minnesota golden gophers' onclick='toggleGame("401918910")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401918910'>▸</span>Southern Jaguars <span class='dim'>@</span> Minnesota Golden Gophers</div><div class='muted'>01:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401918910'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>SOUTHERN</div><div class='v'>50</div><div class='s'>win 1%</div></div>
+<div class='stat'><div class='l'>MINNESOTA</div><div class='v g'>77</div><div class='s'>win 99%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>126.5</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Minnesota -27.5</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401918910' style='display:none'><table style='max-width:420px'><tr><th>Southern</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Minnesota</th></tr><tr class='statrow'><td>217</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>28</td></tr><tr class='statrow'><td>0-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>85.4</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>109.1</td></tr><tr class='statrow'><td>90.5</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>86.0</td></tr><tr class='statrow'><td>71.0</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>70.8</td></tr><tr class='statrow'><td>25.4</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>49.6</td></tr><tr class='statrow'><td>58.8</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>52.0</td></tr><tr class='statrow'><td>27.7</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>18.9</td></tr><tr class='statrow'><td>18.2</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>24.5</td></tr><tr class='statrow'><td>20.7</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>49.4</td></tr><tr class='statrow'><td>50.7</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>33.3</td></tr><tr class='statrow'><td>15.2</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>32.8</td></tr><tr class='statrow'><td>36.8</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>12.0</td></tr></table><p><b>Efficiency:</b> Southern nets -5.0 pts/100 poss (O 85.4 / D 90.5) vs Minnesota +23.1 (O 109.1 / D 86.0) — a 28.2-point gap favoring Minnesota before venue. At ~68 projected possessions that drives most of the 27.5-point model margin.</p><p><b>Four factors:</b> shooting leans Minnesota (17.4 eFG pts of matchup edge); offensive glass leans Minnesota.</p><p><b>Pace:</b> Southern plays at 71 poss/40, Minnesota at 71 → ~68 possessions, model total 126.5.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401918910")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='stephen f. austin ladyjacks @ houston cougars' onclick='toggleGame("401923480")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401923480'>▸</span>Stephen F. Austin Ladyjacks <span class='dim'>@</span> Houston Cougars</div><div class='muted'>01:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401923480'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>STEPHEN F. AUSTIN</div><div class='v'>68</div><div class='s'>win 20%</div></div>
+<div class='stat'><div class='l'>HOUSTON</div><div class='v g'>78</div><div class='s'>win 80%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>145.2</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Houston -10.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401923480' style='display:none'><table style='max-width:420px'><tr><th>Stephen F. Austin</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Houston</th></tr><tr class='statrow'><td>126</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>80</td></tr><tr class='statrow'><td>1-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>94.5</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>95.8</td></tr><tr class='statrow'><td>91.8</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>86.3</td></tr><tr class='statrow'><td>76.5</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>74.5</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>58.6</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>33.2</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>30.7</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>22.0</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>42.4</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>32.7</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>39.1</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>36.7</td></tr></table><p><b>Efficiency:</b> Stephen F. Austin nets +2.7 pts/100 poss (O 94.5 / D 91.8) vs Houston +9.5 (O 95.8 / D 86.3) — a 6.9-point gap favoring Houston before venue. At ~74 projected possessions that drives most of the 10.0-point model margin.</p><p><b>Four factors:</b> shooting leans Stephen F. Austin (108.2 eFG pts of matchup edge); turnover battle leans Houston; offensive glass leans Houston.</p><p><b>Pace:</b> Stephen F. Austin plays at 77 poss/40, Houston at 74 → ~74 possessions, model total 145.2.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401923480")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='uc irvine anteaters @ northern arizona lumberjacks' onclick='toggleGame("401921614")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401921614'>▸</span>UC Irvine Anteaters <span class='dim'>@</span> Northern Arizona Lumberjacks</div><div class='muted'>01:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401921614'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UC IRVINE</div><div class='v g'>71</div><div class='s'>win 79%</div></div>
+<div class='stat'><div class='l'>NORTHERN ARIZONA</div><div class='v'>62</div><div class='s'>win 21%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>132.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UC Irvine -9.4</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401921614' style='display:none'><table style='max-width:420px'><tr><th>UC Irvine</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Northern Arizona</th></tr><tr class='statrow'><td class='better'>117</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>282</td></tr><tr class='statrow'><td>0-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-1</td></tr><tr class='statrow'><td class='better'>92.9</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>87.4</td></tr><tr class='statrow'><td class='better'>89.5</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>98.4</td></tr><tr class='statrow'><td>70.1</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>76.6</td></tr><tr class='statrow'><td>26.3</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>37.1</td></tr><tr class='statrow'><td class='better'>50.0</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>51.6</td></tr><tr class='statrow'><td>26.8</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>18.7</td></tr><tr class='statrow'><td class='better'>22.8</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>12.9</td></tr><tr class='statrow'><td class='better'>24.4</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>19.0</td></tr><tr class='statrow'><td>41.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>31.4</td></tr><tr class='statrow'><td>22.0</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>25.9</td></tr><tr class='statrow'><td class='better'>22.1</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>26.6</td></tr></table><p><b>Efficiency:</b> UC Irvine nets +3.4 pts/100 poss (O 92.9 / D 89.5) vs Northern Arizona -11.0 (O 87.4 / D 98.4) — a 14.4-point gap favoring UC Irvine before venue. At ~70 projected possessions that drives most of the 9.4-point model margin.</p><p><b>Four factors:</b> shooting leans Northern Arizona (12.4 eFG pts of matchup edge); turnover battle leans Northern Arizona; offensive glass leans Northern Arizona.</p><p><b>Pace:</b> UC Irvine plays at 70 poss/40, Northern Arizona at 77 → ~70 possessions, model total 132.4.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401921614")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='cal state northridge matadors @ boise state broncos' onclick='toggleGame("401921547")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401921547'>▸</span>Cal State Northridge Matadors <span class='dim'>@</span> Boise State Broncos</div><div class='muted'>01:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401921547'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>CAL STATE NORTHRIDGE</div><div class='v'>64</div><div class='s'>win 17%</div></div>
+<div class='stat'><div class='l'>BOISE STATE</div><div class='v g'>75</div><div class='s'>win 83%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>138.7</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Boise State -11.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401921547' style='display:none'><table style='max-width:420px'><tr><th>Cal State Northridge</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Boise State</th></tr><tr class='statrow'><td>227</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>129</td></tr><tr class='statrow'><td>1-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>88.5</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>93.3</td></tr><tr class='statrow'><td>95.0</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>90.9</td></tr><tr class='statrow'><td>75.9</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.9</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>62.1</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>40.0</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>14.8</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>14.8</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>ORB%</td><td class='better' style='text-align:right'>25.0</td></tr><tr class='statrow'><td>100.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>40.5</td></tr><tr class='statrow'><td>0.0</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>25.9</td></tr><tr class='statrow'><td>200.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>30.8</td></tr></table><p><b>Efficiency:</b> Cal State Northridge nets -6.5 pts/100 poss (O 88.5 / D 95.0) vs Boise State +2.4 (O 93.3 / D 90.9) — a 9.0-point gap favoring Boise State before venue. At ~72 projected possessions that drives most of the 11.2-point model margin.</p><p><b>Four factors:</b> shooting leans Cal State Northridge (97.9 eFG pts of matchup edge); turnover battle leans Boise State; offensive glass leans Boise State.</p><p><b>Pace:</b> Cal State Northridge plays at 76 poss/40, Boise State at 73 → ~72 possessions, model total 138.7.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401921547")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='ut arlington mavericks @ wyoming cowgirls' onclick='toggleGame("401920497")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401920497'>▸</span>UT Arlington Mavericks <span class='dim'>@</span> Wyoming Cowgirls</div><div class='muted'>01:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401920497'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>UT ARLINGTON</div><div class='v'>62</div><div class='s'>win 50%</div></div>
+<div class='stat'><div class='l'>WYOMING</div><div class='v g'>62</div><div class='s'>win 50%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>124.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Wyoming -0.1</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401920497' style='display:none'><table style='max-width:420px'><tr><th>UT Arlington</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>Wyoming</th></tr><tr class='statrow'><td class='better'>204</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>222</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>0-2</td></tr><tr class='statrow'><td class='better'>91.5</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>86.1</td></tr><tr class='statrow'><td>95.6</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>91.6</td></tr><tr class='statrow'><td>75.3</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>67.3</td></tr><tr class='statrow'><td class='better'>46.6</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>32.0</td></tr><tr class='statrow'><td class='better'>42.7</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>56.8</td></tr><tr class='statrow'><td>22.8</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>22.1</td></tr><tr class='statrow'><td class='better'>27.8</td><td style='color:#8899aa'>TOV% forced</td><td style='text-align:right'>17.5</td></tr><tr class='statrow'><td class='better'>40.3</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>15.4</td></tr><tr class='statrow'><td>42.9</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>41.5</td></tr><tr class='statrow'><td class='better'>37.3</td><td style='color:#8899aa'>FT rate</td><td style='text-align:right'>26.2</td></tr><tr class='statrow'><td>50.0</td><td style='color:#8899aa'>FT rate def</td><td class='better' style='text-align:right'>16.8</td></tr></table><p><b>Efficiency:</b> UT Arlington nets -4.1 pts/100 poss (O 91.5 / D 95.6) vs Wyoming -5.5 (O 86.1 / D 91.6) — a 1.4-point gap favoring UT Arlington before venue. At ~69 projected possessions that drives most of the 0.1-point model margin.</p><p><b>Four factors:</b> turnover battle leans Wyoming; offensive glass leans UT Arlington.</p><p><b>Pace:</b> UT Arlington plays at 75 poss/40, Wyoming at 67 → ~69 possessions, model total 124.4.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401920497")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='new mexico state aggies @ utep miners' onclick='toggleGame("401928022")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401928022'>▸</span>New Mexico State Aggies <span class='dim'>@</span> UTEP Miners</div><div class='muted'>02:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401928022'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>NEW MEXICO STATE</div><div class='v'>62</div><div class='s'>win 26%</div></div>
+<div class='stat'><div class='l'>UTEP</div><div class='v g'>70</div><div class='s'>win 74%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>132.4</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>UTEP -7.7</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401928022' style='display:none'><table style='max-width:420px'><tr><th>New Mexico State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>UTEP</th></tr><tr class='statrow'><td>307</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>248</td></tr><tr class='statrow'><td>1-1</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>2-0</td></tr><tr class='statrow'><td>84.0</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>87.0</td></tr><tr class='statrow'><td>96.7</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>95.4</td></tr><tr class='statrow'><td>72.5</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.8</td></tr><tr class='statrow'><td>42.2</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>50.0</td></tr><tr class='statrow'><td class='better'>40.9</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>50.0</td></tr><tr class='statrow'><td>26.3</td><td style='color:#8899aa'>TOV%</td><td class='better' style='text-align:right'>14.2</td></tr><tr class='statrow'><td>24.1</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>24.2</td></tr><tr class='statrow'><td class='better'>37.1</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>28.6</td></tr><tr class='statrow'><td>32.0</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>16.1</td></tr><tr class='statrow'><td>37.6</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>40.7</td></tr><tr class='statrow'><td class='better'>37.3</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>77.3</td></tr></table><p><b>Efficiency:</b> New Mexico State nets -12.7 pts/100 poss (O 84.0 / D 96.7) vs UTEP -8.4 (O 87.0 / D 95.4) — a 4.3-point gap favoring UTEP before venue. At ~71 projected possessions that drives most of the 7.7-point model margin.</p><p><b>Four factors:</b> shooting leans UTEP (16.9 eFG pts of matchup edge); turnover battle leans UTEP; offensive glass leans UTEP.</p><p><b>Pace:</b> New Mexico State plays at 73 poss/40, UTEP at 73 → ~71 possessions, model total 132.4.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401928022")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='portland state vikings @ san diego toreros' onclick='toggleGame("401917695")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401917695'>▸</span>Portland State Vikings <span class='dim'>@</span> San Diego Toreros</div><div class='muted'>02:00 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401917695'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>PORTLAND STATE</div><div class='v'>60</div><div class='s'>win 20%</div></div>
+<div class='stat'><div class='l'>SAN DIEGO</div><div class='v g'>70</div><div class='s'>win 80%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>129.3</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>San Diego -10.0</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401917695' style='display:none'><table style='max-width:420px'><tr><th>Portland State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>San Diego</th></tr><tr class='statrow'><td>290</td><td style='color:#8899aa'>T-Rank</td><td class='better' style='text-align:right'>207</td></tr><tr class='statrow'><td>0-2</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-1</td></tr><tr class='statrow'><td>87.4</td><td style='color:#8899aa'>adjOE</td><td class='better' style='text-align:right'>90.0</td></tr><tr class='statrow'><td>99.1</td><td style='color:#8899aa'>adjDE</td><td class='better' style='text-align:right'>94.5</td></tr><tr class='statrow'><td>69.9</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>71.4</td></tr><tr class='statrow'><td>31.1</td><td style='color:#8899aa'>eFG%</td><td class='better' style='text-align:right'>47.5</td></tr><tr class='statrow'><td>52.6</td><td style='color:#8899aa'>eFG% def</td><td class='better' style='text-align:right'>47.2</td></tr><tr class='statrow'><td class='better'>14.8</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>23.6</td></tr><tr class='statrow'><td>20.7</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>21.7</td></tr><tr class='statrow'><td class='better'>36.0</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>35.1</td></tr><tr class='statrow'><td>35.6</td><td style='color:#8899aa'>DRB%</td><td class='better' style='text-align:right'>28.0</td></tr><tr class='statrow'><td>27.4</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>34.4</td></tr><tr class='statrow'><td class='better'>27.2</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>29.1</td></tr></table><p><b>Efficiency:</b> Portland State nets -11.7 pts/100 poss (O 87.4 / D 99.1) vs San Diego -4.5 (O 90.0 / D 94.5) — a 7.2-point gap favoring San Diego before venue. At ~69 projected possessions that drives most of the 10.0-point model margin.</p><p><b>Four factors:</b> shooting leans San Diego (11.0 eFG pts of matchup edge); turnover battle leans Portland State; offensive glass leans San Diego.</p><p><b>Pace:</b> Portland State plays at 70 poss/40, San Diego at 71 → ~69 possessions, model total 129.3.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401917695")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><div class='card gamecard' data-search='arizona state sun devils @ unlv lady rebels' onclick='toggleGame("401916082")'><div style='display:flex;justify-content:space-between;align-items:flex-start;gap:6px'><div><div class='matchup'><span class='chev' id='chev-401916082'>▸</span>Arizona State Sun Devils <span class='dim'>@</span> UNLV Lady Rebels</div><div class='muted'>02:30 UTC</div></div><div style='text-align:right'><span class='badge b-grey lc' id='lc-401916082'></span></div></div><div class='grid4'>
+<div class='stat'><div class='l'>ARIZONA STATE</div><div class='v g'>70</div><div class='s'>win 70%</div></div>
+<div class='stat'><div class='l'>UNLV</div><div class='v'>63</div><div class='s'>win 30%</div></div>
+<div class='stat'><div class='l'>PROJ TOTAL</div><div class='v bl'>133.1</div><div class='s'>Book: no line yet</div></div>
+<div class='stat'><div class='l'>MODEL LINE</div><div class='v'>Arizona State -6.2</div><div class='s'>Book: no line yet</div></div>
+</div><div class='dim'>PASS — no market line (nothing to anchor against)</div><div class='details' id='det-401916082' style='display:none'><table style='max-width:420px'><tr><th>Arizona State</th><th style='text-align:center'>TORVIK</th><th style='text-align:right'>UNLV</th></tr><tr class='statrow'><td class='better'>36</td><td style='color:#8899aa'>T-Rank</td><td style='text-align:right'>82</td></tr><tr class='statrow'><td>2-0</td><td style='color:#8899aa'>Record</td><td style='text-align:right'>1-1</td></tr><tr class='statrow'><td class='better'>104.7</td><td style='color:#8899aa'>adjOE</td><td style='text-align:right'>98.1</td></tr><tr class='statrow'><td class='better'>84.9</td><td style='color:#8899aa'>adjDE</td><td style='text-align:right'>88.7</td></tr><tr class='statrow'><td>71.8</td><td style='color:#8899aa'>Tempo</td><td style='text-align:right'>72.6</td></tr><tr class='statrow'><td class='better'>55.4</td><td style='color:#8899aa'>eFG%</td><td style='text-align:right'>39.5</td></tr><tr class='statrow'><td class='better'>35.4</td><td style='color:#8899aa'>eFG% def</td><td style='text-align:right'>48.8</td></tr><tr class='statrow'><td class='better'>15.9</td><td style='color:#8899aa'>TOV%</td><td style='text-align:right'>27.7</td></tr><tr class='statrow'><td>21.2</td><td style='color:#8899aa'>TOV% forced</td><td class='better' style='text-align:right'>24.4</td></tr><tr class='statrow'><td class='better'>43.7</td><td style='color:#8899aa'>ORB%</td><td style='text-align:right'>42.9</td></tr><tr class='statrow'><td class='better'>24.4</td><td style='color:#8899aa'>DRB%</td><td style='text-align:right'>38.3</td></tr><tr class='statrow'><td>22.5</td><td style='color:#8899aa'>FT rate</td><td class='better' style='text-align:right'>39.5</td></tr><tr class='statrow'><td class='better'>24.8</td><td style='color:#8899aa'>FT rate def</td><td style='text-align:right'>30.5</td></tr></table><p><b>Efficiency:</b> Arizona State nets +19.8 pts/100 poss (O 104.7 / D 84.9) vs UNLV +9.4 (O 98.1 / D 88.7) — a 10.4-point gap favoring Arizona State before venue. At ~69 projected possessions that drives most of the 6.2-point model margin.</p><p><b>Four factors:</b> turnover battle leans Arizona State; offensive glass leans Arizona State.</p><p><b>Pace:</b> Arizona State plays at 72 poss/40, UNLV at 73 → ~69 possessions, model total 133.1.</p><p><b>Verdict:</b> PASS — no market line (nothing to anchor against).</p><p><a class='badge b-accent' onclick='event.stopPropagation();openLive("401916082")'>📡 CHECK LIVE LINE</a> <span class='dim'>opens the Live tab with this game selected — instant in-browser verdict</span></p></div></div><details class='xtra'><summary>22 exhibition / non-D-I games (no ratings — not graded)</summary><div>Edward Waters Tigers @ North Florida Ospreys</div><div>North Greenville Trailblazers @ Wofford Terriers</div><div>Culver Stockton Wildcats @ Valparaiso Beacons</div><div>Huston Tillotson Rams @ Chicago State Cougars</div><div>LSU Alexandria Generals @ Nicholls Colonels</div><div>La Sierra Golden Eagles @ Loyola Marymount Lions</div><div>Johnson C. Smith Golden Bulls @ Winthrop Eagles</div><div>Midway Eagles @ Eastern Kentucky Colonels</div><div>SUNY Geneseo Knights @ Le Moyne Dolphins</div><div>Talladega Tornadoes @ Alabama State Lady Hornets</div><div>UMass Boston UMASS BOSTON @ Boston University Terriers</div><div>Fort Valley State Wildcats @ West Georgia Wolves</div><div>IU Indianapolis Jaguars @ Indiana State Sycamores</div><div>San José State Spartans @ Oklahoma Sooners</div><div>Stetson Hatters @ Florida International Panthers</div><div>Yale Bulldogs @ Loyola Maryland Greyhounds</div><div>Jarvis Christian Bulldogs @ Sam Houston Bearkats</div><div>McNeese Cowgirls @ LSU Tigers</div><div>St. Catherine Wildcats @ St. Thomas Tommies</div><div>Cal State Dominguez Hills Toros @ Pepperdine Waves</div><div>Jessup Warriors @ Nevada Wolf Pack</div><div>Chico State Wildcats @ Saint Mary&#x27;s Gaels</div></details></div>
+<div class='pane' id='pane-bets' style='display:none'><div class='muted' style='margin:14px 0 6px'>— 2026-11-09 —</div><div class='card edge'><div class='play-head'><span class='matchup'>Bethune-Cookman Wildcats +26.5 -110 <span class='muted'>(hardrockbet)</span></span><span class='stars'>★</span></div><div class='muted'>Bethune-Cookman Wildcats @ Utah Utes</div><div class='muted' style='margin-top:6px'>edge <b class='g'>+2.9%</b> · fair 53.9% (-117) · conf 8/10 · <b>0.5u</b> Lean · <span class='badge b-grey'>🕐 PENDING</span></div><div class='dim' style='margin-top:4px'>Model margin +21.9 vs market +26.5 (home); Anchored fair margin +25.0 vs line +26.5 (away)</div></div><div class='muted' style='margin:14px 0 6px'>— 2026-11-05 —</div><div class='card edge'><div class='play-head'><span class='matchup'>Under 134.5 -110 <span class='muted'>(draftkings)</span></span><span class='stars'>★★</span></div><div class='muted'>Le Moyne Dolphins @ TCU Horned Frogs</div><div class='muted' style='margin-top:6px'>edge <b class='g'>+4.0%</b> · fair 54.4% (-120) · conf 9/10 · <b>1.0u</b> Standard · <span class='badge b-grey'>🕐 PENDING</span></div><div class='dim' style='margin-top:4px'>Model total 127.3 vs market 134.5; Anchored fair total 132.0 vs line 134.5</div></div><div class='card edge'><div class='play-head'><span class='matchup'>Ole Miss Rebels -33.5 -115 <span class='muted'>(espnbet)</span></span><span class='stars'>★</span></div><div class='muted'>North Alabama Lions @ Ole Miss Rebels</div><div class='muted' style='margin-top:6px'>edge <b class='g'>+2.5%</b> · fair 54.9% (-121) · conf 7/10 · <b>0.5u</b> Lean · <span class='badge b-grey'>🕐 PENDING</span></div><div class='dim' style='margin-top:4px'>Model margin +36.2 vs market +34.0 (home); Anchored fair margin +35.5 vs line -33.5 (home)</div></div></div>
+<div class='pane' id='pane-live' style='display:none'>
+<h2>🚀 Run the pipeline now</h2>
+<p class='muted'>GitHub's scheduler drops runs — these buttons fire it on demand from any
+device. Needs a fine-grained GitHub token (repo: ncaaw-sharp, Actions read+write),
+stored only in this browser. No token? Use the
+<a href='https://github.com/Scottguts/ncaaw-sharp/actions/workflows/line-watch.yml'
+target='_blank' rel='noopener'>Actions page</a> → Run workflow.</p>
+<div id='ghform' class='lrow'>
+<input id='ghpat' type='password' placeholder='GitHub fine-grained token (github_pat_…)' style='flex:1'>
+<button class='btn' onclick='saveGh()'>save</button>
+</div>
+<div id='ghset' style='display:none'>
+<span class='badge b-green'>token set</span>
+<button class='btn sec' onclick='clearGh()' style='margin-left:8px'>remove</button>
+</div>
+<div class='lrow'>
+<button class='btn' onclick='runWorkflow("line-watch.yml","line sweep")'>🔄 SWEEP LINES NOW</button>
+<button class='btn sec' onclick='runWorkflow("daily-bets.yml","daily card")'>📋 RUN DAILY CARD</button>
+</div>
+<div id='runstatus' class='muted'></div>
+<h2 style='margin-top:24px'>📡 Live line checker</h2>
+<p class='muted'>Scores and clock pull straight from ESPN in your browser; the verdict is
+computed instantly with the model's rates. Advisory only — separate from pregame cards.</p>
+<div class='lrow'>
+<select id='livesel' style='flex:1;min-width:240px'><option>open this tab to load…</option></select>
+<button class='btn sec' onclick='liveRefresh()'>↻ refresh</button>
+</div>
+<div class='lrow'>
+<input id='livesp' type='number' step='0.5' placeholder='live spread (home, e.g. -6.5)' style='flex:1'>
+<input id='livetot' type='number' step='0.5' placeholder='live total (e.g. 134.5)' style='flex:1'>
+<input id='livepr' type='number' step='5' placeholder='price (-110)' style='width:110px'>
+<button class='btn' onclick='liveVerdict()'>CHECK</button>
+</div>
+<div id='livestatus' class='dim'></div>
+<div id='liveout'></div>
+<p class='muted' style='margin-top:18px'>Want to talk a spot through instead?
+Head to the <a onclick="showTab('chat');renderKeyState()">🤖 Copilot</a> tab.</p>
+</div>
+<div class='pane' id='pane-chat' style='display:none'>
+<h2>🤖 Betting copilot</h2>
+<p class='muted'>Your second opinion — it knows today's board, the model's numbers, live
+scores, and your pending bets. <b>📷 snap your book's lines</b> and it reads every
+number. Key stays on this device.</p>
+<div id='keyform' class='lrow'>
+<input id='aikey' type='password' placeholder='Anthropic API key (sk-ant-…)' style='flex:1'>
+<button class='btn' onclick='saveKey()'>save</button>
+</div>
+<div id='keyset' style='display:none'>
+<span class='badge b-green'>key set</span>
+<button class='btn sec' onclick='clearKey()' style='margin-left:8px'>remove key</button>
+</div>
+<div class='lrow'>
+<button class='btn sec' onclick='quick("Scan the whole board: which games have the biggest model-vs-book gaps right now, and is anything worth a bet under the gates?")'>🔍 scan board</button>
+<button class='btn sec' onclick='quick("What is live right now and how do the live scores compare to what the model projected?")'>📡 what&#39;s live</button>
+<button class='btn sec' onclick='quick("Review my pending bets: current state of each game, how they are tracking, and any hedge worth considering.")'>🎫 my bets</button>
+<button class='btn sec' onclick='clearChat()'>🗑 clear</button>
+</div>
+<div class='chat'><div id='chatlog'></div></div>
+<div id='imgpreview'></div>
+<div class='chatbar'>
+<input id='imgfile' type='file' accept='image/*' multiple style='display:none'
+onchange='[...this.files].forEach(addImageFile);this.value=""'>
+<button class='btn sec' title='attach screenshot' style='font-size:18px;min-width:52px'
+onclick='document.getElementById("imgfile").click()'>📷</button>
+<textarea id='aimsg' placeholder='ask about a spot — or 📷 snap your book&#39;s live lines'
+onkeydown='if(event.key==="Enter"&&!event.shiftKey){event.preventDefault();sendChat();}'
+onpaste='[...(event.clipboardData||{}).items||[]].forEach(it=>{if(it.type&&it.type.startsWith("image/"))addImageFile(it.getAsFile());})'></textarea>
+<button class='btn' onclick='sendChat()'>send</button>
+</div>
+</div>
+<div class='pane' id='pane-finals' style='display:none'><div class='card empty'>No finals for 2026-11-10 yet — the report generates the morning after games complete.<br><br><a href='2026-11-08.html#finals'>→ see 2026-11-08 finals</a></div></div>
+<div class='pane' id='pane-history' style='display:none'><div class='pnl'><div class='card'><div class='l'>NET P&L</div><div class='v r'>-0.26u</div></div><div class='card'><div class='l'>ROI</div><div class='v r'>-4.3%</div></div><div class='card'><div class='l'>WINS</div><div class='v g'>3</div></div><div class='card'><div class='l'>LOSSES</div><div class='v r'>3</div></div><div class='card'><div class='l'>PUSH / PEND</div><div class='v y'>0 / 1</div></div></div><div class='muted' style='margin-bottom:12px'>avg CLV +0.00pp vs close</div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Morehead State Eagles @ Vanderbilt Commodores — total under 148.5</div><div class='muted'>2026-11-09 · -102 @ draftkings · 1.0u · edge 0.0476 · conf 10/10</div></div><div style='display:flex;gap:8px;align-items:center'><span class='badge b-grey'>PENDING</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Utah State Aggies @ USC Trojans — total under 140.5</div><div class='muted'>2026-11-08 · -110 @ betmgm · 1.0u · edge 0.04 · conf 9/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='r'>-1.00u</b><span class='badge b-red'>LOSS</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Alabama Crimson Tide @ Tulane Green Wave — total under 137.5</div><div class='muted'>2026-11-08 · -110 @ draftkings · 1.0u · edge 0.04 · conf 9/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='g'>+0.91u</b><span class='badge b-green'>WIN</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Kentucky Wildcats @ NC State Wolfpack — total under 135.5</div><div class='muted'>2026-11-08 · -110 @ ballybet · 1.0u · edge 0.0395 · conf 8/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='r'>-1.00u</b><span class='badge b-red'>LOSS</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>North Carolina Tar Heels @ South Carolina Gamecocks — total under 144.5</div><div class='muted'>2026-11-08 · -108 @ draftkings · 1.0u · edge 0.0487 · conf 10/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='g'>+0.93u</b><span class='badge b-green'>WIN</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Morgan State Lady Bears @ Oklahoma State Cowgirls — total under 139.5</div><div class='muted'>2026-11-06 · -110 @ draftkings · 1.0u · edge 0.0395 · conf 7/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='g'>+0.91u</b><span class='badge b-green'>WIN</span></div></div><div class='betrow'><div><div style='font-weight:700;font-size:13px'>Stonehill Skyhawks @ Notre Dame Fighting Irish — total under 146.5</div><div class='muted'>2026-11-06 · -110 @ draftkings · 1.0u · edge 0.0395 · conf 9/10</div></div><div style='display:flex;gap:8px;align-items:center'><b class='r'>-1.00u</b><span class='badge b-red'>LOSS</span></div></div></div>
+</div>
+<div class='wrap dim' style='padding-top:0'>Gates: 1.8–2.5% min edge · 6% max (stale-line reject)
+· conf ≥6/10 · 5 cards / 6u per day · early-season sigma widening. NO PLAYS is a correct day.</div>
+<script>window.SLATE={"401906077": {"as_": 45.6, "aw": "Lindenwood", "hm": "Louisville", "hs_": 83.6, "m": 38.0, "rh": 9, "ss": null, "st": null, "t": 133.5}, "401906964": {"as_": 59.7, "aw": "Oral Roberts", "hm": "Kansas", "hs_": 84.9, "m": 25.1, "rh": 41, "ss": null, "st": null, "t": 148.8}, "401906982": {"as_": 57.8, "aw": "Montana", "hm": "Kansas State", "hs_": 74.3, "m": 16.6, "ss": null, "st": null, "t": 136.3}, "401912954": {"as_": 44.5, "aw": "New Haven", "hm": "Tennessee", "hs_": 84.5, "m": 40.0, "rh": 21, "ss": null, "st": null, "t": 133.1}, "401913746": {"as_": 54.5, "aw": "Delaware State", "hm": "Pittsburgh", "hs_": 76.7, "m": 22.2, "ss": null, "st": null, "t": 135.5}, "401913874": {"as_": 68.1, "aw": "Missouri State", "hm": "Wichita State", "hs_": 57.9, "m": -10.2, "ss": null, "st": null, "t": 130.3}, "401915324": {"as_": 70.6, "aw": "Villanova", "hm": "Princeton", "hs_": 63.6, "m": -7.0, "ra": 25, "ss": null, "st": null, "t": 138.5}, "401915666": {"as_": 45.0, "aw": "Iona", "hm": "TCU", "hs_": 80.6, "m": 35.5, "rh": 19, "ss": null, "st": null, "t": 129.8}, "401916082": {"as_": 69.6, "aw": "Arizona State", "hm": "UNLV", "hs_": 63.4, "m": -6.2, "ra": 36, "ss": null, "st": null, "t": 137.3}, "401917695": {"as_": 59.6, "aw": "Portland State", "hm": "San Diego", "hs_": 69.7, "m": 10.0, "ss": null, "st": null, "t": 133.5}, "401918657": {"as_": 64.7, "aw": "Howard", "hm": "Marshall", "hs_": 64.9, "m": 0.1, "ss": null, "st": null, "t": 133.8}, "401918910": {"as_": 49.5, "aw": "Southern", "hm": "Minnesota", "hs_": 77.0, "m": 27.5, "rh": 28, "ss": null, "st": null, "t": 130.7}, "401919075": {"as_": 50.3, "aw": "Presbyterian", "hm": "Marquette", "hs_": 78.0, "m": 27.7, "ss": null, "st": null, "t": 132.5}, "401919675": {"as_": 61.3, "aw": "Cleveland State", "hm": "Drake", "hs_": 71.7, "m": 10.5, "ss": null, "st": null, "t": 137.2}, "401920497": {"as_": 62.2, "aw": "UT Arlington", "hm": "Wyoming", "hs_": 62.3, "m": 0.1, "ss": null, "st": null, "t": 128.6}, "401921436": {"as_": 51.6, "aw": "North Carolina A&T", "hm": "Nebraska", "hs_": 81.1, "m": 29.5, "rh": 24, "ss": null, "st": null, "t": 136.9}, "401921453": {"as_": 55.8, "aw": "Southeast Missouri State", "hm": "Purdue", "hs_": 78.0, "m": 22.2, "ss": null, "st": null, "t": 138.0}, "401921547": {"as_": 63.8, "aw": "Cal State Northridge", "hm": "Boise State", "hs_": 74.9, "m": 11.2, "ss": null, "st": null, "t": 142.9}, "401921614": {"as_": 70.9, "aw": "UC Irvine", "hm": "Northern Arizona", "hs_": 61.5, "m": -9.4, "ss": null, "st": null, "t": 136.6}, "401923182": {"as_": 54.1, "aw": "Detroit Mercy", "hm": "Notre Dame", "hs_": 86.9, "m": 32.8, "rh": 16, "ss": null, "st": null, "t": 145.3}, "401923327": {"as_": 66.2, "aw": "Colorado State", "hm": "Denver", "hs_": 53.5, "m": -12.7, "ss": null, "st": null, "t": 123.9}, "401923480": {"as_": 67.6, "aw": "Stephen F. Austin", "hm": "Houston", "hs_": 77.6, "m": 10.0, "ss": null, "st": null, "t": 149.4}, "401925980": {"as_": 66.2, "aw": "South Carolina Upstate", "hm": "South Carolina State", "hs_": 60.5, "m": -5.6, "ss": null, "st": null, "t": 130.9}, "401926094": {"as_": 59.9, "aw": "Bellarmine", "hm": "Bowling Green", "hs_": 73.5, "m": 13.6, "ss": null, "st": null, "t": 137.6}, "401927107": {"as_": 49.4, "aw": "Charleston", "hm": "USC", "hs_": 89.8, "m": 40.4, "rh": 3, "ss": null, "st": null, "t": 143.4}, "401928022": {"as_": 62.4, "aw": "New Mexico State", "hm": "UTEP", "hs_": 70.1, "m": 7.7, "ss": null, "st": null, "t": 136.6}, "401928218": {"as_": 55.0, "aw": "Furman", "hm": "Auburn", "hs_": 74.0, "m": 19.0, "rh": 48, "ss": null, "st": null, "t": 133.2}, "401929100": {"as_": 60.1, "aw": "Purdue Fort Wayne", "hm": "Western Michigan", "hs_": 67.5, "m": 7.3, "ss": null, "st": null, "t": 131.8}, "401929137": {"as_": 58.3, "aw": "Youngstown State", "hm": "Toledo", "hs_": 64.6, "m": 6.4, "ss": null, "st": null, "t": 127.1}};window.BETCTX="PENDING BETS: Morehead State Eagles @ Vanderbilt Commodores total under 148.5 -102 (1.0u, edge 0.0476) | SEASON RECORD: 3-3-0, -0.26u (-4.3% ROI) | MODEL ACCURACY 2026-11-08: 55 games, spread MAE 13.22, total MAE 14.65, sides 94.5%";
+function showTab(id){
+  document.querySelectorAll('.pane').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('pane-'+id).style.display='block';
+  document.getElementById('tab-'+id).classList.add('active');
+  if(history.replaceState)history.replaceState(null,'','#'+id);
+}
+function toggleGame(id){
+  const d=document.getElementById('det-'+id);
+  const c=document.getElementById('chev-'+id);
+  const open=d.style.display!=='none';
+  d.style.display=open?'none':'block';
+  if(c)c.textContent=open?'▸':'▾';
+}
+function searchGames(q){
+  q=q.trim().toLowerCase();
+  document.querySelectorAll('.gamecard').forEach(el=>{
+    el.style.display=(!q||el.dataset.search.includes(q))?'':'none';
+  });
+  document.querySelectorAll('.secthead').forEach(el=>{el.style.display=q?'none':'';});
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const h=(location.hash||'#predictions').slice(1);
+  showTab(['predictions','bets','history','finals','live','chat'].includes(h)?h:'predictions');
+  if(h==='live'||h==='chat'){liveRefresh();renderKeyState();}
+  loadChat();
+  annotateLive();
+  // in-app browsers (Discord, Messages, Instagram...) block cross-site
+  // fetches and wipe localStorage — warn loudly
+  const ua=navigator.userAgent||'';
+  if(/Discord|FBAN|FBAV|Instagram|Line\/|wv\)|WebView/i.test(ua)){
+    const w=document.createElement('div');
+    w.style.cssText='background:#ef444422;border:1px solid #ef444460;border-radius:8px;padding:10px 14px;margin:10px 20px;font-size:13px';
+    w.innerHTML='⚠️ <b>You are in an in-app browser</b> — live scores, the copilot, and saved keys will not work here. Tap the ··· menu and choose <b>Open in Browser / Safari</b>.';
+    document.body.prepend(w);
+  }
+});
+// live score chips on the prediction cards (one free ESPN call per page load)
+async function annotateLive(){
+  if(!document.querySelector('.lc'))return;
+  try{
+    const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/New_York'}).replaceAll('-','');
+    const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard?dates='+today+'&limit=500&groups=50');
+    const d=await r.json();
+    (d.events||[]).forEach(ev=>{
+      const el=document.getElementById('lc-'+ev.id);
+      if(!el)return;
+      const st=ev.status||{}; const state=(st.type||{}).state;
+      const sides={}; (ev.competitions[0].competitors||[]).forEach(c=>sides[c.homeAway]=c);
+      const sc=`${sides.away?sides.away.score:'?'}–${sides.home?sides.home.score:'?'}`;
+      if(state==='in'){el.textContent=`🔴 ${sc} Q${st.period||''} ${st.displayClock||''}`;el.classList.add('lc-live');}
+      else if(state==='post'){el.textContent=`FINAL ${sc}`;}
+    });
+  }catch(e){}
+}
+function fetchHint(e){
+  return (e&&e.message?e.message:'failed')+
+    ' — if you opened this link from Discord or Messages, tap ··· and "Open in Browser"; '+
+    'ad-blockers/VPNs can also block api calls.';
+}
+
+// ═══ LIVE TAB — client-side line checker ═══
+const ESPN='https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard';
+let LIVEGAMES={};
+function phi(x){ // Abramowitz-Stegun erf approx
+  const t=1/(1+0.3275911*Math.abs(x/Math.SQRT2));
+  const e=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-(x*x)/2);
+  return x>=0?0.5*(1+e):0.5*(1-e);
+}
+function edgePct(p,am){const dec=am>0?am/100+1:100/(-am)+1;return p*dec-1;}
+function fmtOdds(a){return a>0?'+'+a:''+a;}
+async function liveRefresh(){
+  const sel=document.getElementById('livesel');
+  if(!sel)return;
+  sel.innerHTML='<option>loading…</option>';
+  const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/New_York'}).replaceAll('-','');
+  try{
+    const r=await fetch(ESPN+'?dates='+today+'&limit=500&groups=50');
+    const d=await r.json();
+    LIVEGAMES={};
+    (d.events||[]).forEach(ev=>{
+      const id=String(ev.id); const model=window.SLATE[id];
+      if(!model)return;
+      const comp=ev.competitions[0];
+      const sides={}; comp.competitors.forEach(c=>sides[c.homeAway]=c);
+      const st=ev.status||{}; const state=(st.type||{}).state;
+      LIVEGAMES[id]={id,name:ev.name,state,period:st.period||0,clock:st.displayClock||'',
+        hs:+(sides.home.score||0),as:+(sides.away.score||0),model};
+    });
+    const inplay=Object.values(LIVEGAMES).filter(g=>g.state==='in');
+    const pre=Object.values(LIVEGAMES).filter(g=>g.state==='pre');
+    sel.innerHTML='';
+    [...inplay,...pre].forEach(g=>{
+      const tag=g.state==='in'?`LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock}`:'pregame';
+      sel.insertAdjacentHTML('beforeend',`<option value='${g.id}'>${g.name} — ${tag}</option>`);
+    });
+    if(!sel.options.length)sel.innerHTML='<option>no graded games today</option>';
+    document.getElementById('livestatus').textContent=
+      `${inplay.length} live · ${pre.length} upcoming · refreshed ${new Date().toLocaleTimeString()}`;
+  }catch(e){sel.innerHTML='<option>ESPN fetch failed — retry</option>';document.getElementById('livestatus').textContent=fetchHint(e);}
+}
+function minutesLeft(g){
+  const parts=(g.clock||'0:00').split(':');
+  const cm=(+parts[0]||0)+((+parts[1]||0)/60);
+  if(g.period<=0)return 40;
+  if(g.period<=4)return (4-g.period)*10+cm;
+  return cm;
+}
+// ═══ VARIANCE READ — live shooting luck vs sustainable rates ═══
+// NCAAW baselines: 3P ~31%, 2P ~46%, FT ~70%. "Luck" = points above what the
+// shot profile should have produced. Banked points stand, but the REST of
+// the game reverts — a team at 80% from three has its lead, not its form.
+let LIVEBOX={};
+function _ma(s){const p=(s||'0-0').split('-');return [+p[0]||0,+p[1]||0];}
+async function fetchBox(id){
+  if(LIVEBOX[id]&&Date.now()-LIVEBOX[id].at<60000)return LIVEBOX[id];
+  const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event='+id);
+  const d=await r.json();
+  const out={at:Date.now(),sides:{}};
+  (d.boxscore&&d.boxscore.teams||[]).forEach(t=>{
+    const st={};(t.statistics||[]).forEach(s=>st[s.name]=s.displayValue);
+    const [fgm,fga]=_ma(st['fieldGoalsMade-fieldGoalsAttempted']);
+    const [tm,ta]=_ma(st['threePointFieldGoalsMade-threePointFieldGoalsAttempted']);
+    const [ftm,fta]=_ma(st['freeThrowsMade-freeThrowsAttempted']);
+    const twoM=fgm-tm,twoA=fga-ta;
+    const l3=(tm-0.31*ta)*3, l2=(twoM-0.46*twoA)*2, lft=(ftm-0.70*fta);
+    const luck=l3+l2+lft;
+    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,twoM,twoA,ftm,fta,l3,l2,lft,luck};
+  });
+  LIVEBOX[id]=out;return out;
+}
+function _sgn(x){return (x>0?'+':'')+x.toFixed(1);}
+function luckLine(s){
+  if(!s)return '';
+  // full decomposition — variance isn't just threes: twos and FTs count too
+  const parts=[];
+  if(Math.abs(s.l3)>=1.5)parts.push(`3P ${s.tm}/${s.ta} (${_sgn(s.l3)})`);
+  if(Math.abs(s.l2)>=1.5)parts.push(`2P ${s.twoM}/${s.twoA} (${_sgn(s.l2)})`);
+  if(Math.abs(s.lft)>=1.5)parts.push(`FT ${s.ftm}/${s.fta} (${_sgn(s.lft)})`);
+  const hot=s.luck>8?' 🔥 unsustainable — expect reversion':s.luck<-8?' 🧊 cold — likely to normalize':'';
+  return `${s.loc}: luck ${_sgn(s.luck)} pts${parts.length?' ['+parts.join(' · ')+']':''}${hot}`;
+}
+
+async function liveVerdict(){
+  const id=document.getElementById('livesel').value;
+  const g=LIVEGAMES[id]; const out=document.getElementById('liveout');
+  if(!g||!g.model){out.innerHTML="<div class='verdict v-no'>pick a game</div>";return;}
+  const sp=parseFloat(document.getElementById('livesp').value);
+  const tot=parseFloat(document.getElementById('livetot').value);
+  const price=parseInt(document.getElementById('livepr').value)||-110;
+  const f=g.state==='pre'?1:Math.max(0,Math.min(1,minutesLeft(g)/40));
+  const m=g.model;
+  const played=40*(1-f);
+  // variance read: luck-adjust the in-game signal, then blend the remaining-
+  // game rate between pregame expectation and SUSTAINABLE observed form
+  // (weight grows with minutes played; luck never projects forward)
+  let luckH=0,luckA=0,varRows=[];
+  if(g.state==='in'&&played>6){
+    try{
+      const box=await fetchBox(id);
+      const H=box.sides.home,A=box.sides.away;
+      if(H&&A){
+        luckH=H.luck;luckA=A.luck;
+        varRows.push(`<div class='muted'>📊 variance read — ${luckLine(A)}</div>`);
+        varRows.push(`<div class='muted'>📊 variance read — ${luckLine(H)}</div>`);
+      }
+    }catch(e){}
+  }
+  const margin=g.hs-g.as,total=g.hs+g.as;
+  const w=g.state==='in'&&played>6?played/(played+60):0;
+  const sustM=played>6?(margin-(luckH-luckA))/played*40:m.m;
+  const sustT=played>6?(total-luckH-luckA)/played*40:m.t;
+  const em=margin+f*(m.m*(1-w)+sustM*w);
+  const et=total+f*(m.t*(1-w)+sustT*w);
+  const ss=(m.ss||12)*Math.sqrt(Math.max(f,0.05)), st=(m.st||16)*Math.sqrt(Math.max(f,0.05));
+  let rows=[...varRows,
+    `<div class='muted'>projected finish: home margin ${em>0?'+':''}${em.toFixed(1)}, total ${et.toFixed(1)} · ${(f*100).toFixed(0)}% of game left`+
+    (w?` · rest-of-game blend: ${Math.round((1-w)*100)}% pregame / ${Math.round(w*100)}% luck-adjusted form`:'')+`</div>`];
+  let checks=[];
+  if(!isNaN(sp)){
+    const ph=phi((em+sp)/ss);
+    checks.push({label:`HOME ${sp>0?'+':''}${sp}`,p:ph});
+    checks.push({label:`AWAY ${-sp>0?'+':''}${-sp}`,p:1-ph});
+  }
+  if(!isNaN(tot)){
+    const po=phi((et-tot)/st);
+    checks.push({label:`OVER ${tot}`,p:po});
+    checks.push({label:`UNDER ${tot}`,p:1-po});
+  }
+  if(g.state==='in'&&f<0.1){
+    out.innerHTML=rows.join('')+"<div class='verdict v-no'>PASS — under 4 game-minutes left, projection unreliable</div>";return;
+  }
+  let best=null;
+  checks.forEach(c=>{c.edge=edgePct(c.p,price);
+    rows.push(`<div class='muted'>${c.label}: fair ${(c.p*100).toFixed(1)}% · edge ${(c.edge*100).toFixed(1)}%</div>`);
+    if(c.edge>=0.035&&c.edge<=0.12&&(!best||c.edge>best.edge))best=c;});
+  const stale=checks.some(c=>c.edge>0.12);
+  if(best)rows.push(`<div class='verdict v-go'>✅ VIABLE — ${best.label} (${fmtOdds(price)}): fair ${(best.p*100).toFixed(1)}%, edge ${(best.edge*100).toFixed(1)}% <span class='muted'>· live advisory, separate from pregame cards</span></div>`);
+  else if(stale)rows.push("<div class='verdict v-no'>⚠️ PASS — biggest 'edge' exceeds the 12% sanity reject. Re-check the line you entered.</div>");
+  else if(checks.length)rows.push("<div class='verdict v-no'>PASS — nothing clears the 3.5% live edge bar.</div>");
+  else rows.push("<div class='verdict v-no'>enter a live spread and/or total</div>");
+  out.innerHTML=rows.join('');
+}
+function openLive(id){showTab('live');liveRefresh().then(()=>{
+  const sel=document.getElementById('livesel');
+  if(sel&&[...sel.options].some(o=>o.value===id))sel.value=id;});}
+
+// ═══ MANUAL TRIGGERS — fire the pipeline from your phone ═══
+// Needs a fine-grained GitHub PAT (repo: ncaaw-sharp, Actions: write),
+// stored in localStorage only — same trust model as the AI key.
+function ghToken(){return localStorage.getItem('gh_pat')||'';}
+function saveGh(){
+  const v=document.getElementById('ghpat').value.trim();
+  if(v)localStorage.setItem('gh_pat',v);else localStorage.removeItem('gh_pat');
+  renderKeyState();
+}
+function clearGh(){localStorage.removeItem('gh_pat');renderKeyState();}
+async function runWorkflow(file,label){
+  const t=ghToken();
+  const out=document.getElementById('runstatus');
+  if(!t){out.innerHTML="<span class='r'>set a GitHub token first (or use the Actions page link)</span>";return;}
+  out.textContent='dispatching '+label+'…';
+  try{
+    const r=await fetch(`https://api.github.com/repos/Scottguts/ncaaw-sharp/actions/workflows/${file}/dispatches`,{
+      method:'POST',
+      headers:{'authorization':'Bearer '+t,'accept':'application/vnd.github+json',
+               'content-type':'application/json'},
+      body:JSON.stringify({ref:'main'})});
+    if(r.status===204){
+      out.innerHTML=`<span class='g'>✅ ${label} dispatched ${new Date().toLocaleTimeString()} — results hit Discord + this page in ~3 min</span>`;
+    }else{
+      const d=await r.json().catch(()=>({}));
+      let fix='';
+      if(r.status===401)fix=' → token invalid or expired: make a new one at github.com/settings/personal-access-tokens';
+      else if(r.status===403)fix=' → token lacks permission: edit it so Repository access = Only select → ncaaw-sharp, and Permissions → Actions = Read and write';
+      else if(r.status===404)fix=' → token cannot see the repo (GitHub returns 404 to hide it): in the token settings add ncaaw-sharp under Repository access';
+      out.innerHTML=`<span class='r'>failed (${r.status}): ${(d.message||'').slice(0,100)}${fix}</span>`;
+    }
+  }catch(e){out.innerHTML="<span class='r'>request failed: "+fetchHint(e)+"</span>";}
+}
+
+// ═══ AI CHAT — Claude, direct from the browser (key stays on this device) ═══
+let CHAT=[];
+let PENDING_IMGS=[];
+function addImageFile(file){
+  if(!file||!file.type.startsWith('image/'))return;
+  const img=new Image();
+  img.onload=()=>{
+    const MAX=1400;
+    let w=img.width,h=img.height;
+    if(Math.max(w,h)>MAX){const s=MAX/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s);}
+    const c=document.createElement('canvas');c.width=w;c.height=h;
+    c.getContext('2d').drawImage(img,0,0,w,h);
+    const url=c.toDataURL('image/jpeg',0.85);
+    PENDING_IMGS.push({media_type:'image/jpeg',data:url.split(',')[1],url});
+    renderImgPreview();
+    URL.revokeObjectURL(img.src);
+  };
+  img.src=URL.createObjectURL(file);
+}
+function renderImgPreview(){
+  const el=document.getElementById('imgpreview');
+  el.innerHTML=PENDING_IMGS.map((im,i)=>
+    `<span style='position:relative;display:inline-block;margin:4px'>`+
+    `<img src='${im.url}' style='height:64px;border-radius:6px;border:1px solid #30363d'>`+
+    `<a onclick='PENDING_IMGS.splice(${i},1);renderImgPreview()' `+
+    `style='position:absolute;top:-6px;right:-6px;background:#ef4444;color:#fff;`+
+    `border-radius:99px;width:18px;height:18px;text-align:center;line-height:18px;`+
+    `font-size:11px;cursor:pointer'>×</a></span>`).join('');
+}
+function aiKey(){return localStorage.getItem('anthropic_key')||'';}
+function saveKey(){
+  const v=document.getElementById('aikey').value.trim();
+  if(v){localStorage.setItem('anthropic_key',v);}else{localStorage.removeItem('anthropic_key');}
+  renderKeyState();
+}
+function renderKeyState(){
+  const has=!!aiKey();
+  document.getElementById('keyform').style.display=has?'none':'flex';
+  document.getElementById('keyset').style.display=has?'block':'none';
+  const gh=!!ghToken();
+  const gf=document.getElementById('ghform'), gs=document.getElementById('ghset');
+  if(gf){gf.style.display=gh?'none':'flex';gs.style.display=gh?'block':'none';}
+}
+function clearKey(){localStorage.removeItem('anthropic_key');renderKeyState();}
+function chatContext(){
+  const lines=[];
+  const id=(document.getElementById('livesel')||{}).value;
+  const src=Object.keys(LIVEGAMES).length?Object.values(LIVEGAMES)
+    :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
+  src.forEach(g=>{
+    const m=g.model;
+    let live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
+      g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
+    const bx=LIVEBOX[g.id];
+    if(g.state==='in'&&bx&&bx.sides.home){
+      const A=bx.sides.away,H=bx.sides.home;
+      const brk=s=>`luck ${_sgn(s.luck)} (3P ${_sgn(s.l3)}, 2P ${_sgn(s.l2)}, FT ${_sgn(s.lft)})`;
+      live+=` | variance: ${A.loc} ${brk(A)}; ${H.loc} ${brk(H)}`;
+    }
+    const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
+    const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
+             (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
+    const extra=(m.card?` | FIRED: ${m.card}`:'')+(m.inj?` | INJ: ${m.inj}`:'');
+    lines.push(`${g.name}:${live}${rank} | model: ${m.aw||'away'} ${m.as_||'?'}-${m.hs_||'?'} ${m.hm||'home'} (home margin ${m.m>0?'+':''}${m.m}, total ${m.t}, sigma ${m.ss||12}/${m.st||16})${bk}${extra}${id===g.id?' [USER SELECTED THIS GAME]':''}`);
+  });
+  return (window.BETCTX?window.BETCTX+'\n':'')+lines.join('\n')+
+    `\n(as of ${new Date().toLocaleTimeString()} ET-ish, user local)`;
+}
+async function sendChat(){
+  const box=document.getElementById('aimsg');
+  const text=box.value.trim();
+  if(!text&&!PENDING_IMGS.length)return;
+  const key=aiKey(); if(!key){alert('Set your Anthropic API key first.');return;}
+  box.value='';
+  if(PENDING_IMGS.length){
+    const blocks=PENDING_IMGS.map(im=>({type:'image',
+      source:{type:'base64',media_type:im.media_type,data:im.data},_url:im.url}));
+    blocks.push({type:'text',text:text||'What do you see — any viable plays in this screenshot? Check the numbers against the model.'});
+    CHAT.push({role:'user',content:blocks});
+    PENDING_IMGS=[];renderImgPreview();
+  }else{
+    CHAT.push({role:'user',content:text});
+  }
+  renderChat(); renderChat('…thinking');
+  if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
+  // prefetch the variance read for any in-progress games so the context has it
+  for(const g of Object.values(LIVEGAMES)){
+    if(g.state==='in'){try{await fetchBox(g.id);}catch(e){}}
+  }
+  const system=`You are the betting copilot inside NCAAW Sharp — a market-anchored women's college basketball model built by your user, Scott. `+
+`VOICE: talk like a sharp, honest friend watching the games with him — plain English, short sentences, contractions, no jargon walls. `+
+`Lead with your answer in one plain sentence. Back it with 2-3 short points, weaving the key numbers in naturally `+
+`("the model makes this more like -9, so laying -12.5 means paying for three points that aren't there"). `+
+`Do all math silently — never show formulas, sigma, or Phi unless he asks how you got there. `+
+`Round everything sensibly (fair 54%, not 0.5417). Use team names, never event ids. `+
+`ALWAYS end with exactly one line formatted: "Verdict: BET 0.5u — <pick>" or "Verdict: PASS". `+
+`DISCIPLINE (non-negotiable): edges come from small disagreements with the market; most spots are passes and saying PASS is good advice; never suggest loosening gates or chasing. `+
+`Sizing (1u = 1% bankroll): ~5% edge = 1.5u max; ~3.5% = 1u; ~2% = 0.5u; never exceed 6u/day across 5 bets. `+
+`Live reference math (do silently): proj final home margin = current margin + model_margin x fraction_left; proj total = current total + model_total x fraction_left; `+
+`uncertainty shrinks with sqrt(fraction_left); viable live edge band 3.5%-12%; a bigger "edge" than 12% usually means a misread line — say that like a human ("that number looks off, double-check it"). `+
+`VARIANCE: live games carry 'luck' figures = points above sustainable shooting (3P ~31%, 2P ~46%, FT ~70% baselines). `+
+`Banked points stand, but NEVER project hot/cold shooting forward — a team at 80% from three has its lead, not its form, and live lines usually overprice the hot team. That reversion is where live value hides; call it out explicitly. `+
+`It's opening week: ratings are thin, the model runs hot on mismatches — be humble about big spreads and say so plainly. `+
+`If a sportsbook screenshot is attached: read every visible line, match to the board below, and verdict each one in a short list. `+
+`PENDING BETS below are already placed — talk about how they're tracking or hedges, never re-recommend them. `+
+`Today's board (model numbers are pregame full-game rates):\n`+chatContext();
+  const msgs=CHAT.slice(-12).map((m,i,arr)=>{
+    if(typeof m.content==='string')return m;
+    const recent=i>=arr.length-4;   // only resend images from the last 2 exchanges
+    if(!recent&&m.content.some(b=>b.type==='image')){
+      const t=m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ');
+      return {role:m.role,content:'[earlier screenshot omitted] '+t};
+    }
+    return {role:m.role,content:m.content.map(b=>
+      b.type==='image'?{type:'image',source:b.source}:{type:'text',text:b.text})};
+  });
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':key,
+        'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1800,stream:true,
+        system:system,messages:msgs})});
+    if(!r.ok){
+      const d=await r.json().catch(()=>({}));
+      CHAT.push({role:'assistant',content:'error: '+JSON.stringify(d.error||d).slice(0,300)});
+      renderChat();saveChat();return;
+    }
+    CHAT.push({role:'assistant',content:''});
+    const reader=r.body.getReader();
+    const dec=new TextDecoder();
+    let buf='';
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const ln of lines){
+        if(!ln.startsWith('data: '))continue;
+        try{
+          const ev=JSON.parse(ln.slice(6));
+          if(ev.type==='content_block_delta'&&ev.delta&&ev.delta.text){
+            CHAT[CHAT.length-1].content+=ev.delta.text;
+            renderChat();
+          }
+        }catch(e){}
+      }
+    }
+  }catch(e){CHAT.push({role:'assistant',content:'request failed: '+fetchHint(e)});}
+  renderChat();saveChat();
+}
+function saveChat(){
+  try{
+    const slim=CHAT.slice(-30).map(m=>typeof m.content==='string'?m:
+      {role:m.role,content:'[screenshot] '+m.content.filter(b=>b.type==='text').map(b=>b.text).join(' ')});
+    localStorage.setItem('chat_hist',JSON.stringify(slim));
+  }catch(e){}
+}
+function loadChat(){
+  try{CHAT=JSON.parse(localStorage.getItem('chat_hist')||'[]');}catch(e){CHAT=[];}
+  if(CHAT.length)renderChat();
+}
+function clearChat(){CHAT=[];localStorage.removeItem('chat_hist');renderChat();}
+function quick(t){document.getElementById('aimsg').value=t;sendChat();}
+function fmtMsg(t){
+  let h=t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  h=h.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+  h=h.replace(/^#{1,3}\s*(.+)$/gm,'<div class="chead">$1</div>');
+  h=h.replace(/^(Verdict:?\s*)(.+)$/gmi,(m,a,b)=>{
+    const pass=/\bpass\b/i.test(b);
+    return `<div class="cverdict ${pass?'cv-pass':'cv-bet'}">${pass?'🛑':'🎯'} ${b}</div>`;});
+  h=h.replace(/^[-•*]\s+(.+)$/gm,'<div class="cbul">•&nbsp; $1</div>');
+  return h;
+}
+function renderChat(pending){
+  const el=document.getElementById('chatlog');
+  el.innerHTML=CHAT.map(m=>{
+    const who=m.role==='user'?'YOU':'COPILOT';
+    let body;
+    if(typeof m.content==='string'){body=fmtMsg(m.content);}
+    else{
+      body=m.content.map(b=>b.type==='image'
+        ?`<img src='${b._url||''}' style='max-height:120px;border-radius:8px;display:block;margin:4px 0'>`
+        :fmtMsg(b.text||'')).join('');
+    }
+    return `<div class='msg ${m.role==='user'?'user':'ai'}'><div class='who'>${who}</div>${body}</div>`;
+  }).join('')+(pending?`<div class='msg ai muted'>${pending}</div>`:'');
+  el.scrollTop=el.scrollHeight;
+}
+</script></body></html>
