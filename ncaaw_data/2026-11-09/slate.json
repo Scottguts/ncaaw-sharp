@@ -1,73 +1,7 @@
 {
   "date": "2026-11-09",
-  "fetched_at": "2026-11-10T02:41:04.007410Z",
+  "fetched_at": "2026-11-10T03:02:03.466911Z",
   "games": [
-    {
-      "espn_event_id": "401918816",
-      "start": "2026-11-10T00:30Z",
-      "et_date": "2026-11-09",
-      "name": "Kansas City Roos at Arkansas Razorbacks",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "8",
-        "location": "Arkansas",
-        "display_name": "Arkansas Razorbacks",
-        "canon": "arkansas",
-        "conf": "SEC",
-        "record": "2-0",
-        "score": "87",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "140",
-        "location": "Kansas City",
-        "display_name": "Kansas City Roos",
-        "canon": "kansas city",
-        "conf": "Summit",
-        "record": "2-0",
-        "score": "79",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401926994",
-      "start": "2026-11-10T01:00Z",
-      "et_date": "2026-11-09",
-      "name": "Northern New Mexico Eagles at Northern Colorado Bears",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2458",
-        "location": "Northern Colorado",
-        "display_name": "Northern Colorado Bears",
-        "canon": "northern colorado",
-        "conf": "Big Sky",
-        "record": "1-1",
-        "score": "118",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "3141",
-        "location": "Northern New Mexico",
-        "display_name": "Northern New Mexico Eagles",
-        "canon": "northern new mexico",
-        "conf": "",
-        "record": null,
-        "score": "28",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401911791",
       "start": "2026-11-10T01:00Z",
@@ -75,17 +9,17 @@
       "name": "Creighton Bluejays at North Dakota State Bison",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2449",
         "location": "North Dakota State",
         "display_name": "North Dakota State Bison",
         "canon": "north dakota st",
         "conf": "Summit",
-        "record": "1-1",
-        "score": "53",
-        "winner": null
+        "record": "1-2",
+        "score": "60",
+        "winner": false
       },
       "away": {
         "espn_id": "156",
@@ -93,9 +27,9 @@
         "display_name": "Creighton Bluejays",
         "canon": "creighton",
         "conf": "Big East",
-        "record": "1-0",
-        "score": "62",
-        "winner": null
+        "record": "2-0",
+        "score": "66",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -117,7 +51,7 @@
         "canon": "southern utah",
         "conf": "Big Sky",
         "record": "1-1",
-        "score": "61",
+        "score": "79",
         "winner": null
       },
       "away": {
@@ -127,7 +61,7 @@
         "canon": "park university gilbert",
         "conf": "",
         "record": null,
-        "score": "34",
+        "score": "45",
         "winner": null
       },
       "torvik_home": true,
@@ -141,7 +75,7 @@
       "name": "Cal Poly Mustangs at Idaho State Bengals",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "304",
@@ -150,7 +84,7 @@
         "canon": "idaho st",
         "conf": "Big Sky",
         "record": "1-1",
-        "score": "22",
+        "score": "31",
         "winner": null
       },
       "away": {
@@ -160,7 +94,7 @@
         "canon": "cal poly",
         "conf": "Big West",
         "record": "2-0",
-        "score": "22",
+        "score": "28",
         "winner": null
       },
       "torvik_home": true,
@@ -207,7 +141,7 @@
       "name": "Santa Clara Broncos at Long Beach State Beach",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "299",
@@ -216,7 +150,7 @@
         "canon": "long beach st",
         "conf": "Big West",
         "record": "0-1",
-        "score": "32",
+        "score": "39",
         "winner": null
       },
       "away": {
@@ -226,7 +160,7 @@
         "canon": "santa clara",
         "conf": "WCC",
         "record": "2-0",
-        "score": "41",
+        "score": "51",
         "winner": null
       },
       "torvik_home": true,
@@ -240,7 +174,7 @@
       "name": "Seattle U Redhawks at UC Santa Barbara Gauchos",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "2540",
@@ -249,7 +183,7 @@
         "canon": "uc santa barbara",
         "conf": "Big West",
         "record": "2-0",
-        "score": "40",
+        "score": "47",
         "winner": null
       },
       "away": {
@@ -259,7 +193,7 @@
         "canon": "seattle u",
         "conf": "WCC",
         "record": "2-0",
-        "score": "19",
+        "score": "24",
         "winner": null
       },
       "torvik_home": true,
@@ -282,7 +216,7 @@
         "canon": "sacramento st",
         "conf": "Big West",
         "record": "2-0",
-        "score": "12",
+        "score": "26",
         "winner": null
       },
       "away": {
@@ -292,7 +226,7 @@
         "canon": "cal st east bay",
         "conf": "",
         "record": null,
-        "score": "7",
+        "score": "21",
         "winner": null
       },
       "torvik_home": true,
@@ -1224,6 +1158,39 @@
       "odds_event_id": null
     },
     {
+      "espn_event_id": "401918816",
+      "start": "2026-11-10T00:30Z",
+      "et_date": "2026-11-09",
+      "name": "Kansas City Roos at Arkansas Razorbacks",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "8",
+        "location": "Arkansas",
+        "display_name": "Arkansas Razorbacks",
+        "canon": "arkansas",
+        "conf": "SEC",
+        "record": "3-0",
+        "score": "89",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "140",
+        "location": "Kansas City",
+        "display_name": "Kansas City Roos",
+        "canon": "kansas city",
+        "conf": "Summit",
+        "record": "2-1",
+        "score": "81",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
       "espn_event_id": "401918782",
       "start": "2026-11-10T00:30Z",
       "et_date": "2026-11-09",
@@ -1287,6 +1254,39 @@
       },
       "torvik_home": true,
       "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401926994",
+      "start": "2026-11-10T01:00Z",
+      "et_date": "2026-11-09",
+      "name": "Northern New Mexico Eagles at Northern Colorado Bears",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2458",
+        "location": "Northern Colorado",
+        "display_name": "Northern Colorado Bears",
+        "canon": "northern colorado",
+        "conf": "Big Sky",
+        "record": "2-1",
+        "score": "123",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "3141",
+        "location": "Northern New Mexico",
+        "display_name": "Northern New Mexico Eagles",
+        "canon": "northern new mexico",
+        "conf": "",
+        "record": null,
+        "score": "30",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
       "odds_event_id": null
     },
     {
