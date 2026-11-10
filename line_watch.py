@@ -42,15 +42,19 @@ def run() -> int:
     today = datetime.now(_ET).date()
     today_iso = today.isoformat()
 
-    # 0. quota saver: if nothing on today's slate is still pregame, there is
-    # nothing left to bet — skip the odds call entirely (ESPN check is free)
+    # 0. quota saver: if nothing is pregame AND nothing is in progress,
+    # there's nothing to bet or scan — skip the odds call (ESPN check free).
+    # In-progress games keep the sweep alive for the live-signal scan.
     try:
-        upcoming = [g for g in scraper.fetch_slate(today)
+        slate_now = scraper.fetch_slate(today)
+        upcoming = [g for g in slate_now
                     if (g.get("status") or "").upper().endswith("SCHEDULED")]
-        if not upcoming:
-            print("[watch] no pregame games left today — skipping odds call")
+        in_progress = [g for g in slate_now if not g.get("completed")
+                       and g not in upcoming]
+        if not upcoming and not in_progress:
+            print("[watch] no pregame or live games left today — skipping odds call")
             return 0
-        print(f"[watch] {len(upcoming)} pregame game(s) remain")
+        print(f"[watch] {len(upcoming)} pregame, {len(in_progress)} live")
     except Exception as e:
         print(f"[watch] pregame check failed ({e}) — proceeding with full run")
 
@@ -119,7 +123,15 @@ def run() -> int:
     if append_shadow(today_iso):
         build_record()
 
-    # 4. keep the dashboard fresh
+    # 4. autonomous live signals — scan the in-play lines on the board we
+    # just fetched (zero extra quota); Discord advisories, never bets
+    try:
+        from live_signals import scan
+        scan(today_iso)
+    except Exception as e:
+        print(f"[watch] live scan failed (non-fatal): {e}")
+
+    # 5. keep the dashboard fresh
     build_site.build()
     return 0
 

@@ -10,7 +10,9 @@ name: Line-drop watcher
 # add ODDS_API_KEY_2 for comfortable headroom.
 on:
   schedule:
-    - cron: "7 11-23 * 11,12,1-4 *"   # every hour 06:07-18:07 ET (EST)
+    - cron: "7 11,13,15 * 11,12,1-4 *"  # 6a/8a/10a ET — early lines
+    - cron: "7 16-23 * 11,12,1-4 *"     # 11a-6p ET hourly — posting window
+    - cron: "7 0-3 * 11,12,1-4 *"       # 7p-10p ET — live-signal scans
   workflow_dispatch:
 
 permissions:
