@@ -1,270 +1,39 @@
 {
   "date": "2026-11-10",
-  "fetched_at": "2026-11-10T18:35:37.960073Z",
+  "fetched_at": "2026-11-10T21:44:03.652851Z",
   "games": [
     {
-      "espn_event_id": "401928218",
-      "start": "2026-11-10T17:00Z",
+      "espn_event_id": "401917696",
+      "start": "2026-11-10T20:00Z",
       "et_date": "2026-11-10",
-      "name": "Furman Paladins at Auburn Tigers",
+      "name": "La Sierra Golden Eagles at Loyola Marymount Lions",
       "neutral_site": false,
       "conference_game": false,
       "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2",
-        "location": "Auburn",
-        "display_name": "Auburn Tigers",
-        "canon": "auburn",
-        "conf": "SEC",
+        "espn_id": "2351",
+        "location": "Loyola Marymount",
+        "display_name": "Loyola Marymount Lions",
+        "canon": "loyola marymount",
+        "conf": "WCC",
         "record": "2-0",
-        "score": "45",
+        "score": "106",
         "winner": null
       },
       "away": {
-        "espn_id": "231",
-        "location": "Furman",
-        "display_name": "Furman Paladins",
-        "canon": "furman",
-        "conf": "SC",
-        "record": "2-1",
-        "score": "34",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "a4a58d40afb98e157cc087b4c080d278"
-    },
-    {
-      "espn_event_id": "401922658",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "LSU Alexandria Generals at Nicholls Colonels",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_END_PERIOD",
-      "completed": false,
-      "home": {
-        "espn_id": "2447",
-        "location": "Nicholls",
-        "display_name": "Nicholls Colonels",
-        "canon": "nicholls",
-        "conf": "Southland",
-        "record": "1-2",
-        "score": "63",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "108823",
-        "location": "LSU Alexandria",
-        "display_name": "LSU Alexandria Generals",
-        "canon": "lsu alexandria",
+        "espn_id": "111960",
+        "location": "La Sierra",
+        "display_name": "La Sierra Golden Eagles",
+        "canon": "la sierra",
         "conf": "",
         "record": null,
-        "score": "25",
-        "winner": null
-      },
-      "torvik_home": false,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401920015",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Culver Stockton Wildcats at Valparaiso Beacons",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2674",
-        "location": "Valparaiso",
-        "display_name": "Valparaiso Beacons",
-        "canon": "valparaiso",
-        "conf": "MVC",
-        "record": "0-2",
-        "score": "73",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "510",
-        "location": "Culver Stockton",
-        "display_name": "Culver Stockton Wildcats",
-        "canon": "culver stockton",
-        "conf": "",
-        "record": null,
-        "score": "34",
+        "score": "32",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": false,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919876",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Huston Tillotson Rams at Chicago State Cougars",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2130",
-        "location": "Chicago State",
-        "display_name": "Chicago State Cougars",
-        "canon": "chicago st",
-        "conf": "NEC",
-        "record": "1-2",
-        "score": "54",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2281",
-        "location": "Huston Tillotson",
-        "display_name": "Huston Tillotson Rams",
-        "canon": "huston tillotson",
-        "conf": "",
-        "record": null,
-        "score": "43",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919675",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Cleveland State Vikings at Drake Bulldogs",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2181",
-        "location": "Drake",
-        "display_name": "Drake Bulldogs",
-        "canon": "drake",
-        "conf": "MVC",
-        "record": "1-1",
-        "score": "65",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "325",
-        "location": "Cleveland State",
-        "display_name": "Cleveland State Vikings",
-        "canon": "cleveland st",
-        "conf": "Horz",
-        "record": "1-1",
-        "score": "55",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919075",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Presbyterian Blue Hose at Marquette Golden Eagles",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "269",
-        "location": "Marquette",
-        "display_name": "Marquette Golden Eagles",
-        "canon": "marquette",
-        "conf": "Big East",
-        "record": "1-1",
-        "score": "82",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2506",
-        "location": "Presbyterian",
-        "display_name": "Presbyterian Blue Hose",
-        "canon": "presbyterian",
-        "conf": "Big South",
-        "record": "0-2",
-        "score": "49",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "97d2c3f0ca13a21a2377e71e506b5403"
-    },
-    {
-      "espn_event_id": "401913874",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Missouri State Lady Bears at Wichita State Shockers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2724",
-        "location": "Wichita State",
-        "display_name": "Wichita State Shockers",
-        "canon": "wichita st",
-        "conf": "Amer",
-        "record": "0-2",
-        "score": "35",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2623",
-        "location": "Missouri State",
-        "display_name": "Missouri State Lady Bears",
-        "canon": "missouri st",
-        "conf": "CUSA",
-        "record": "2-0",
-        "score": "62",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "f952a9e17bcb17c6bb4566a6dc073648"
-    },
-    {
-      "espn_event_id": "401906982",
-      "start": "2026-11-10T17:00Z",
-      "et_date": "2026-11-10",
-      "name": "Montana Lady Griz at Kansas State Wildcats",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2306",
-        "location": "Kansas State",
-        "display_name": "Kansas State Wildcats",
-        "canon": "kansas st",
-        "conf": "Big 12",
-        "record": "3-0",
-        "score": "57",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "149",
-        "location": "Montana",
-        "display_name": "Montana Lady Griz",
-        "canon": "montana",
-        "conf": "Big Sky",
-        "record": "1-1",
-        "score": "49",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "3dd73f82b06e5e1dbef904d2ae3b9918"
     },
     {
       "espn_event_id": "401929161",
@@ -399,36 +168,267 @@
       "odds_event_id": null
     },
     {
-      "espn_event_id": "401917696",
-      "start": "2026-11-10T20:00Z",
+      "espn_event_id": "401928218",
+      "start": "2026-11-10T17:00Z",
       "et_date": "2026-11-10",
-      "name": "La Sierra Golden Eagles at Loyola Marymount Lions",
+      "name": "Furman Paladins at Auburn Tigers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
-        "espn_id": "2351",
-        "location": "Loyola Marymount",
-        "display_name": "Loyola Marymount Lions",
-        "canon": "loyola marymount",
-        "conf": "WCC",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
+        "espn_id": "2",
+        "location": "Auburn",
+        "display_name": "Auburn Tigers",
+        "canon": "auburn",
+        "conf": "SEC",
+        "record": "3-0",
+        "score": "74",
+        "winner": true
       },
       "away": {
-        "espn_id": "111960",
-        "location": "La Sierra",
-        "display_name": "La Sierra Golden Eagles",
-        "canon": "la sierra",
+        "espn_id": "231",
+        "location": "Furman",
+        "display_name": "Furman Paladins",
+        "canon": "furman",
+        "conf": "SC",
+        "record": "2-2",
+        "score": "56",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401922658",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "LSU Alexandria Generals at Nicholls Colonels",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2447",
+        "location": "Nicholls",
+        "display_name": "Nicholls Colonels",
+        "canon": "nicholls",
+        "conf": "Southland",
+        "record": "2-2",
+        "score": "83",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "108823",
+        "location": "LSU Alexandria",
+        "display_name": "LSU Alexandria Generals",
+        "canon": "lsu alexandria",
         "conf": "",
         "record": null,
-        "score": "0",
-        "winner": null
+        "score": "40",
+        "winner": false
+      },
+      "torvik_home": false,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401920015",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Culver Stockton Wildcats at Valparaiso Beacons",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2674",
+        "location": "Valparaiso",
+        "display_name": "Valparaiso Beacons",
+        "canon": "valparaiso",
+        "conf": "MVC",
+        "record": "1-2",
+        "score": "89",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "510",
+        "location": "Culver Stockton",
+        "display_name": "Culver Stockton Wildcats",
+        "canon": "culver stockton",
+        "conf": "",
+        "record": null,
+        "score": "47",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919876",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Huston Tillotson Rams at Chicago State Cougars",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2130",
+        "location": "Chicago State",
+        "display_name": "Chicago State Cougars",
+        "canon": "chicago st",
+        "conf": "NEC",
+        "record": "2-2",
+        "score": "75",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2281",
+        "location": "Huston Tillotson",
+        "display_name": "Huston Tillotson Rams",
+        "canon": "huston tillotson",
+        "conf": "",
+        "record": null,
+        "score": "60",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919675",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Cleveland State Vikings at Drake Bulldogs",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2181",
+        "location": "Drake",
+        "display_name": "Drake Bulldogs",
+        "canon": "drake",
+        "conf": "MVC",
+        "record": "2-1",
+        "score": "76",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "325",
+        "location": "Cleveland State",
+        "display_name": "Cleveland State Vikings",
+        "canon": "cleveland st",
+        "conf": "Horz",
+        "record": "1-2",
+        "score": "71",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919075",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Presbyterian Blue Hose at Marquette Golden Eagles",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "269",
+        "location": "Marquette",
+        "display_name": "Marquette Golden Eagles",
+        "canon": "marquette",
+        "conf": "Big East",
+        "record": "2-1",
+        "score": "87",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2506",
+        "location": "Presbyterian",
+        "display_name": "Presbyterian Blue Hose",
+        "canon": "presbyterian",
+        "conf": "Big South",
+        "record": "0-3",
+        "score": "54",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913874",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Missouri State Lady Bears at Wichita State Shockers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2724",
+        "location": "Wichita State",
+        "display_name": "Wichita State Shockers",
+        "canon": "wichita st",
+        "conf": "Amer",
+        "record": "0-3",
+        "score": "48",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2623",
+        "location": "Missouri State",
+        "display_name": "Missouri State Lady Bears",
+        "canon": "missouri st",
+        "conf": "CUSA",
+        "record": "3-0",
+        "score": "76",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401906982",
+      "start": "2026-11-10T17:00Z",
+      "et_date": "2026-11-10",
+      "name": "Montana Lady Griz at Kansas State Wildcats",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2306",
+        "location": "Kansas State",
+        "display_name": "Kansas State Wildcats",
+        "canon": "kansas st",
+        "conf": "Big 12",
+        "record": "4-0",
+        "score": "67",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "149",
+        "location": "Montana",
+        "display_name": "Montana Lady Griz",
+        "canon": "montana",
+        "conf": "Big Sky",
+        "record": "1-2",
+        "score": "62",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
       "odds_event_id": null
     },
     {
@@ -726,7 +726,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "2ff36365b3628dbfaf706982dd5db64f"
     },
     {
       "espn_event_id": "401923182",
@@ -759,7 +759,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "42a3455d68be691a5562ebcf854c5e58"
     },
     {
       "espn_event_id": "401929062",
@@ -792,7 +792,7 @@
       },
       "torvik_home": true,
       "torvik_away": false,
-      "odds_event_id": null
+      "odds_event_id": "490ad318d2fbce3955f2550bb029a3e5"
     },
     {
       "espn_event_id": "401929100",
@@ -1221,7 +1221,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "8035e2e3082981ab2fb9c1b23964f67f"
     },
     {
       "espn_event_id": "401921436",
