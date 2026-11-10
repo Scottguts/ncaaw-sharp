@@ -1,8 +1,8 @@
 # NCAAW Sharp — Record
 
-_Updated 2026-11-10T02:17:18Z_
+_Updated 2026-11-10T16:33:34Z_
 
-**3-3-0** · **-0.26u** on 6u risked (-4.3% ROI) · 1 pending
+**3-3-0** · **-0.26u** on 6u risked (-4.3% ROI) · 3 pending
 
 CLV: avg +0.00pp · beat close 0/3 (0%)
 

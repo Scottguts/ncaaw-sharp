@@ -1,17 +1,70 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T14:03:16.612418Z",
+  "generated_at": "2026-11-10T16:33:34.092158Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 6,
+    "n_total_lines": 6,
+    "mean_spread_delta": -8.62,
+    "mean_total_delta": -2.62
   },
   "odds_available": true,
   "n_games": 51,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
+  "n_cards": 2,
+  "total_units": 1.5,
+  "cards": [
+    {
+      "bet_label": "Furman Paladins +25.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -108,
+      "line": 25.5,
+      "fair_prob": 0.5392,
+      "fair_american": -117,
+      "edge": 0.0385,
+      "confidence": 9,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin +19.0 vs market +25.5 (home)",
+        "Anchored fair margin +24.0 vs line +25.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401928218",
+      "matchup": "Furman Paladins @ Auburn Tigers",
+      "start": "2026-11-10T17:00Z"
+    },
+    {
+      "bet_label": "Under 145.5",
+      "market": "total",
+      "side": "under",
+      "book": "ballybet",
+      "price_american": -106,
+      "line": 145.5,
+      "fair_prob": 0.529,
+      "fair_american": -112,
+      "edge": 0.028,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model total 139.4 vs market 145.5",
+        "Anchored fair total 144.0 vs line 145.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401927107",
+      "matchup": "Charleston Cougars @ USC Trojans",
+      "start": "2026-11-11T03:30Z"
+    }
+  ],
   "shadow_cards": [],
   "games": [
     {
@@ -39,7 +92,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 58.4,
@@ -52,6 +105,24 @@
         "games_away": 2,
         "rank_home": 121,
         "rank_away": 151
+      },
+      "market": {
+        "spread_home": -16.5,
+        "total": 118.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 15.0,
+        "spread_shift": -1.5,
+        "total": 120.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -79,7 +150,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 60.0,
@@ -92,6 +163,24 @@
         "games_away": 3,
         "rank_home": 222,
         "rank_away": 352
+      },
+      "market": {
+        "spread_home": -38.0,
+        "total": 146.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 36.5,
+        "spread_shift": -1.5,
+        "total": 145.0,
+        "total_shift": -1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -102,11 +191,36 @@
       "start": "2026-11-10T17:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Furman Paladins +25.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -108,
+          "line": 25.5,
+          "fair_prob": 0.5392,
+          "fair_american": -117,
+          "edge": 0.0385,
+          "confidence": 9,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +19.0 vs market +25.5 (home)",
+            "Anchored fair margin +24.0 vs line +25.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401928218",
+          "matchup": "Furman Paladins @ Auburn Tigers",
+          "start": "2026-11-10T17:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 55.1,
         "home_score": 74.1,
@@ -118,6 +232,24 @@
         "games_away": 3,
         "rank_home": 48,
         "rank_away": 213
+      },
+      "market": {
+        "spread_home": -25.5,
+        "total": 126.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 24.0,
+        "spread_shift": -1.5,
+        "total": 128.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -225,7 +357,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 68.2,
@@ -238,6 +370,24 @@
         "games_away": 2,
         "rank_home": 238,
         "rank_away": 84
+      },
+      "market": {
+        "spread_home": 16.5,
+        "total": 123.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -15.0,
+        "spread_shift": 1.5,
+        "total": 125.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -291,7 +441,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 45.1,
@@ -304,6 +454,24 @@
         "games_away": 3,
         "rank_home": 19,
         "rank_away": 328
+      },
+      "market": {
+        "spread_home": -45.5,
+        "total": 132.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 44.0,
+        "spread_shift": -1.5,
+        "total": 131.0,
+        "total_shift": -1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -1058,11 +1226,36 @@
       "start": "2026-11-11T03:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Under 145.5",
+          "market": "total",
+          "side": "under",
+          "book": "ballybet",
+          "price_american": -106,
+          "line": 145.5,
+          "fair_prob": 0.529,
+          "fair_american": -112,
+          "edge": 0.028,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model total 139.4 vs market 145.5",
+            "Anchored fair total 144.0 vs line 145.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401927107",
+          "matchup": "Charleston Cougars @ USC Trojans",
+          "start": "2026-11-11T03:30Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 49.5,
         "home_score": 89.9,
@@ -1074,6 +1267,24 @@
         "games_away": 2,
         "rank_home": 3,
         "rank_away": 253
+      },
+      "market": {
+        "spread_home": -47.5,
+        "total": 145.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 46.0,
+        "spread_shift": -1.5,
+        "total": 144.0,
+        "total_shift": -1.5,
+        "season_bias_applied": 4.19
       }
     }
   ]

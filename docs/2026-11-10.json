@@ -1,5 +1,58 @@
 {
-  "cards": [],
+  "cards": [
+    {
+      "bet_label": "Furman Paladins +25.5",
+      "book": "ballybet",
+      "confidence": 9,
+      "edge": 0.0385,
+      "espn_event_id": "401928218",
+      "fair_american": -117,
+      "fair_prob": 0.5392,
+      "line": 25.5,
+      "market": "spread",
+      "matchup": "Furman Paladins @ Auburn Tigers",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -108,
+      "reasoning": [
+        "Model margin +19.0 vs market +25.5 (home)",
+        "Anchored fair margin +24.0 vs line +25.5 (away)"
+      ],
+      "risk": "Standard",
+      "side": "away",
+      "start": "2026-11-10T17:00Z",
+      "unit_size": 1.0
+    },
+    {
+      "bet_label": "Under 145.5",
+      "book": "ballybet",
+      "confidence": 6,
+      "edge": 0.028,
+      "espn_event_id": "401927107",
+      "fair_american": -112,
+      "fair_prob": 0.529,
+      "line": 145.5,
+      "market": "total",
+      "matchup": "Charleston Cougars @ USC Trojans",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -106,
+      "reasoning": [
+        "Model total 139.4 vs market 145.5",
+        "Anchored fair total 144.0 vs line 145.5"
+      ],
+      "risk": "Lean",
+      "side": "under",
+      "start": "2026-11-11T03:30Z",
+      "unit_size": 0.5
+    }
+  ],
   "date": "2026-11-10",
   "games": [
     {
@@ -17,10 +70,24 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 15.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 120.0,
+        "total_shift": 1.5
+      },
       "away_short": "Youngstown State",
       "cards": [],
       "espn_event_id": "401929137",
       "home_short": "Toledo",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -16.5,
+        "spread_src": "consensus",
+        "total": 118.5,
+        "total_src": "consensus"
+      },
       "matchup": "Youngstown State Penguins @ Toledo Rockets",
       "model": {
         "away_score": 58.4,
@@ -36,9 +103,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
       "start": "2026-11-10T16:00Z",
       "status": "graded"
     },
@@ -57,10 +128,24 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 36.5,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 145.0,
+        "total_shift": -1.5
+      },
       "away_short": "Bellarmine",
       "cards": [],
       "espn_event_id": "401926094",
       "home_short": "Bowling Green",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -38.0,
+        "spread_src": "consensus",
+        "total": 146.5,
+        "total_src": "consensus"
+      },
       "matchup": "Bellarmine Knights @ Bowling Green Falcons",
       "model": {
         "away_score": 60.0,
@@ -76,17 +161,62 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
       "start": "2026-11-10T16:00Z",
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 24.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 128.0,
+        "total_shift": 1.5
+      },
       "away_short": "Furman",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Furman Paladins +25.5",
+          "book": "ballybet",
+          "confidence": 9,
+          "edge": 0.0385,
+          "espn_event_id": "401928218",
+          "fair_american": -117,
+          "fair_prob": 0.5392,
+          "line": 25.5,
+          "market": "spread",
+          "matchup": "Furman Paladins @ Auburn Tigers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -108,
+          "reasoning": [
+            "Model margin +19.0 vs market +25.5 (home)",
+            "Anchored fair margin +24.0 vs line +25.5 (away)"
+          ],
+          "risk": "Standard",
+          "side": "away",
+          "start": "2026-11-10T17:00Z",
+          "unit_size": 1.0
+        }
+      ],
       "espn_event_id": "401928218",
       "home_short": "Auburn",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -25.5,
+        "spread_src": "consensus",
+        "total": 126.5,
+        "total_src": "consensus"
+      },
       "matchup": "Furman Paladins @ Auburn Tigers",
       "model": {
         "away_score": 55.1,
@@ -101,10 +231,12 @@
         "total": 129.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
       "start": "2026-11-10T17:00Z",
       "status": "graded"
     },
@@ -203,10 +335,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -15.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": 1.5,
+        "total": 125.0,
+        "total_shift": 1.5
+      },
       "away_short": "Missouri State",
       "cards": [],
       "espn_event_id": "401913874",
       "home_short": "Wichita State",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 16.5,
+        "spread_src": "consensus",
+        "total": 123.5,
+        "total_src": "consensus"
+      },
       "matchup": "Missouri State Lady Bears @ Wichita State Shockers",
       "model": {
         "away_score": 68.2,
@@ -222,9 +368,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
       "start": "2026-11-10T17:00Z",
       "status": "graded"
     },
@@ -269,10 +419,24 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 44.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 131.0,
+        "total_shift": -1.5
+      },
       "away_short": "Iona",
       "cards": [],
       "espn_event_id": "401915666",
       "home_short": "TCU",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -45.5,
+        "spread_src": "consensus",
+        "total": 132.5,
+        "total_src": "consensus"
+      },
       "matchup": "Iona Gaels @ TCU Horned Frogs",
       "model": {
         "away_score": 45.1,
@@ -288,9 +452,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
       "start": "2026-11-10T22:00Z",
       "status": "graded"
     },
@@ -1039,10 +1207,51 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 46.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 144.0,
+        "total_shift": -1.5
+      },
       "away_short": "Charleston",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 145.5",
+          "book": "ballybet",
+          "confidence": 6,
+          "edge": 0.028,
+          "espn_event_id": "401927107",
+          "fair_american": -112,
+          "fair_prob": 0.529,
+          "line": 145.5,
+          "market": "total",
+          "matchup": "Charleston Cougars @ USC Trojans",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -106,
+          "reasoning": [
+            "Model total 139.4 vs market 145.5",
+            "Anchored fair total 144.0 vs line 145.5"
+          ],
+          "risk": "Lean",
+          "side": "under",
+          "start": "2026-11-11T03:30Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401927107",
       "home_short": "USC",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -47.5,
+        "spread_src": "consensus",
+        "total": 145.5,
+        "total_src": "consensus"
+      },
       "matchup": "Charleston Cougars @ USC Trojans",
       "model": {
         "away_score": 49.5,
@@ -1057,24 +1266,26 @@
         "total": 139.4
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
       "start": "2026-11-11T03:30Z",
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-10T14:03:16.612418Z",
+  "generated_at": "2026-11-10T16:33:34.092158Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": -8.62,
+    "mean_total_delta": -2.62,
+    "n_spread_lines": 6,
+    "n_total_lines": 6
   },
-  "n_cards": 0,
+  "n_cards": 2,
   "n_games": 51,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 0
+  "total_units": 1.5
 }
