@@ -644,16 +644,22 @@ async function fetchBox(id){
     const [tm,ta]=_ma(st['threePointFieldGoalsMade-threePointFieldGoalsAttempted']);
     const [ftm,fta]=_ma(st['freeThrowsMade-freeThrowsAttempted']);
     const twoM=fgm-tm,twoA=fga-ta;
-    const luck=(tm-0.31*ta)*3+(twoM-0.46*twoA)*2+(ftm-0.70*fta);
-    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,luck};
+    const l3=(tm-0.31*ta)*3, l2=(twoM-0.46*twoA)*2, lft=(ftm-0.70*fta);
+    const luck=l3+l2+lft;
+    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,twoM,twoA,ftm,fta,l3,l2,lft,luck};
   });
   LIVEBOX[id]=out;return out;
 }
+function _sgn(x){return (x>0?'+':'')+x.toFixed(1);}
 function luckLine(s){
   if(!s)return '';
-  const p3=s.ta?Math.round(s.tm/s.ta*100):0;
+  // full decomposition — variance isn't just threes: twos and FTs count too
+  const parts=[];
+  if(Math.abs(s.l3)>=1.5)parts.push(`3P ${s.tm}/${s.ta} (${_sgn(s.l3)})`);
+  if(Math.abs(s.l2)>=1.5)parts.push(`2P ${s.twoM}/${s.twoA} (${_sgn(s.l2)})`);
+  if(Math.abs(s.lft)>=1.5)parts.push(`FT ${s.ftm}/${s.fta} (${_sgn(s.lft)})`);
   const hot=s.luck>8?' 🔥 unsustainable — expect reversion':s.luck<-8?' 🧊 cold — likely to normalize':'';
-  return `${s.loc}: ${s.tm}/${s.ta} from 3 (${p3}%) · shooting luck ${s.luck>0?'+':''}${s.luck.toFixed(1)} pts${hot}`;
+  return `${s.loc}: luck ${_sgn(s.luck)} pts${parts.length?' ['+parts.join(' · ')+']':''}${hot}`;
 }
 
 async function liveVerdict(){
@@ -806,8 +812,8 @@ function chatContext(){
     const bx=LIVEBOX[g.id];
     if(g.state==='in'&&bx&&bx.sides.home){
       const A=bx.sides.away,H=bx.sides.home;
-      live+=` | variance: ${A.loc} 3P ${A.tm}/${A.ta} luck ${A.luck>0?'+':''}${A.luck.toFixed(1)}, `+
-            `${H.loc} 3P ${H.tm}/${H.ta} luck ${H.luck>0?'+':''}${H.luck.toFixed(1)}`;
+      const brk=s=>`luck ${_sgn(s.luck)} (3P ${_sgn(s.l3)}, 2P ${_sgn(s.l2)}, FT ${_sgn(s.lft)})`;
+      live+=` | variance: ${A.loc} ${brk(A)}; ${H.loc} ${brk(H)}`;
     }
     const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
     const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+

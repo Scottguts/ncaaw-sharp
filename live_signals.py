@@ -70,9 +70,12 @@ def _luck(event_id: str) -> dict:
         tm, ta = _ma(st.get("threePointFieldGoalsMade-threePointFieldGoalsAttempted"))
         ftm, fta = _ma(st.get("freeThrowsMade-freeThrowsAttempted"))
         two_m, two_a = fgm - tm, fga - ta
+        l3 = (tm - 0.31 * ta) * 3
+        l2 = (two_m - 0.46 * two_a) * 2
+        lft = ftm - 0.70 * fta
         out[t.get("homeAway")] = {
-            "luck": (tm - 0.31 * ta) * 3 + (two_m - 0.46 * two_a) * 2 + (ftm - 0.70 * fta),
-            "three": f"{tm}/{ta}",
+            "luck": l3 + l2 + lft, "l3": l3, "l2": l2, "lft": lft,
+            "shots": f"3P {tm}/{ta}, 2P {two_m}/{two_a}, FT {ftm}/{fta}",
         }
     return out
 
@@ -196,7 +199,9 @@ def scan(target_date: str) -> int:
             l = (lk.get(side_key) or {})
             if abs(l.get("luck", 0)) > 8:
                 tag = "🔥 hot" if l["luck"] > 0 else "🧊 cold"
-                luck_note += f"\n{tag}: {nm} {l.get('three')} from 3 ({l['luck']:+.1f} luck pts — expect reversion)"
+                luck_note += (f"\n{tag}: {nm} {l['luck']:+.1f} luck pts "
+                              f"(3P {l.get('l3', 0):+.1f}, 2P {l.get('l2', 0):+.1f}, "
+                              f"FT {l.get('lft', 0):+.1f}) [{l.get('shots')}] — expect reversion")
         new_signals.append({
             "name": f"{lv['aname']} {lv['as']} — {lv['hs']} {lv['hname']} · {lv['clock']}",
             "label": label, "price": price, "book": book,
