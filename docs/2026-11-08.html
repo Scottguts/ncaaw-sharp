@@ -597,7 +597,36 @@ function minutesLeft(g){
   if(g.period<=4)return (4-g.period)*10+cm;
   return cm;
 }
-function liveVerdict(){
+// ═══ VARIANCE READ — live shooting luck vs sustainable rates ═══
+// NCAAW baselines: 3P ~31%, 2P ~46%, FT ~70%. "Luck" = points above what the
+// shot profile should have produced. Banked points stand, but the REST of
+// the game reverts — a team at 80% from three has its lead, not its form.
+let LIVEBOX={};
+function _ma(s){const p=(s||'0-0').split('-');return [+p[0]||0,+p[1]||0];}
+async function fetchBox(id){
+  if(LIVEBOX[id]&&Date.now()-LIVEBOX[id].at<60000)return LIVEBOX[id];
+  const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event='+id);
+  const d=await r.json();
+  const out={at:Date.now(),sides:{}};
+  (d.boxscore&&d.boxscore.teams||[]).forEach(t=>{
+    const st={};(t.statistics||[]).forEach(s=>st[s.name]=s.displayValue);
+    const [fgm,fga]=_ma(st['fieldGoalsMade-fieldGoalsAttempted']);
+    const [tm,ta]=_ma(st['threePointFieldGoalsMade-threePointFieldGoalsAttempted']);
+    const [ftm,fta]=_ma(st['freeThrowsMade-freeThrowsAttempted']);
+    const twoM=fgm-tm,twoA=fga-ta;
+    const luck=(tm-0.31*ta)*3+(twoM-0.46*twoA)*2+(ftm-0.70*fta);
+    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,luck};
+  });
+  LIVEBOX[id]=out;return out;
+}
+function luckLine(s){
+  if(!s)return '';
+  const p3=s.ta?Math.round(s.tm/s.ta*100):0;
+  const hot=s.luck>8?' 🔥 unsustainable — expect reversion':s.luck<-8?' 🧊 cold — likely to normalize':'';
+  return `${s.loc}: ${s.tm}/${s.ta} from 3 (${p3}%) · shooting luck ${s.luck>0?'+':''}${s.luck.toFixed(1)} pts${hot}`;
+}
+
+async function liveVerdict(){
   const id=document.getElementById('livesel').value;
   const g=LIVEGAMES[id]; const out=document.getElementById('liveout');
   if(!g||!g.model){out.innerHTML="<div class='verdict v-no'>pick a game</div>";return;}
@@ -606,9 +635,32 @@ function liveVerdict(){
   const price=parseInt(document.getElementById('livepr').value)||-110;
   const f=g.state==='pre'?1:Math.max(0,Math.min(1,minutesLeft(g)/40));
   const m=g.model;
-  const em=(g.hs-g.as)+m.m*f, et=(g.hs+g.as)+m.t*f;
+  const played=40*(1-f);
+  // variance read: luck-adjust the in-game signal, then blend the remaining-
+  // game rate between pregame expectation and SUSTAINABLE observed form
+  // (weight grows with minutes played; luck never projects forward)
+  let luckH=0,luckA=0,varRows=[];
+  if(g.state==='in'&&played>6){
+    try{
+      const box=await fetchBox(id);
+      const H=box.sides.home,A=box.sides.away;
+      if(H&&A){
+        luckH=H.luck;luckA=A.luck;
+        varRows.push(`<div class='muted'>📊 variance read — ${luckLine(A)}</div>`);
+        varRows.push(`<div class='muted'>📊 variance read — ${luckLine(H)}</div>`);
+      }
+    }catch(e){}
+  }
+  const margin=g.hs-g.as,total=g.hs+g.as;
+  const w=g.state==='in'&&played>6?played/(played+60):0;
+  const sustM=played>6?(margin-(luckH-luckA))/played*40:m.m;
+  const sustT=played>6?(total-luckH-luckA)/played*40:m.t;
+  const em=margin+f*(m.m*(1-w)+sustM*w);
+  const et=total+f*(m.t*(1-w)+sustT*w);
   const ss=(m.ss||12)*Math.sqrt(Math.max(f,0.05)), st=(m.st||16)*Math.sqrt(Math.max(f,0.05));
-  let rows=[`<div class='muted'>projected finish: home margin ${em>0?'+':''}${em.toFixed(1)}, total ${et.toFixed(1)} · ${(f*100).toFixed(0)}% of game left</div>`];
+  let rows=[...varRows,
+    `<div class='muted'>projected finish: home margin ${em>0?'+':''}${em.toFixed(1)}, total ${et.toFixed(1)} · ${(f*100).toFixed(0)}% of game left`+
+    (w?` · rest-of-game blend: ${Math.round((1-w)*100)}% pregame / ${Math.round(w*100)}% luck-adjusted form`:'')+`</div>`];
   let checks=[];
   if(!isNaN(sp)){
     const ph=phi((em+sp)/ss);
@@ -719,8 +771,14 @@ function chatContext(){
     :Object.entries(SLATE).map(([k,m])=>({id:k,name:(m.aw||'?')+' @ '+(m.hm||'?'),state:'pre',model:m}));
   src.forEach(g=>{
     const m=g.model;
-    const live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
+    let live=g.state==='in'?` LIVE ${g.as}-${g.hs} Q${g.period} ${g.clock} (${(minutesLeft(g)/40*100).toFixed(0)}% left)`:
       g.state==='post'?` FINAL ${g.as}-${g.hs}`:' pregame';
+    const bx=LIVEBOX[g.id];
+    if(g.state==='in'&&bx&&bx.sides.home){
+      const A=bx.sides.away,H=bx.sides.home;
+      live+=` | variance: ${A.loc} 3P ${A.tm}/${A.ta} luck ${A.luck>0?'+':''}${A.luck.toFixed(1)}, `+
+            `${H.loc} 3P ${H.tm}/${H.ta} luck ${H.luck>0?'+':''}${H.luck.toFixed(1)}`;
+    }
     const rank=(m.ra?` #${m.ra} away`:'' )+(m.rh?` #${m.rh} home`:'');
     const bk=(m.bk_sp!==undefined?` | book: home ${m.bk_sp>0?'+':''}${m.bk_sp}`:'')+
              (m.bk_t!==undefined?` O/U ${m.bk_t}`:'');
@@ -747,6 +805,10 @@ async function sendChat(){
   }
   renderChat(); renderChat('…thinking');
   if(!Object.keys(LIVEGAMES).length){try{await liveRefresh();}catch(e){}}
+  // prefetch the variance read for any in-progress games so the context has it
+  for(const g of Object.values(LIVEGAMES)){
+    if(g.state==='in'){try{await fetchBox(g.id);}catch(e){}}
+  }
   const system=`You are the betting copilot inside NCAAW Sharp — a market-anchored women's college basketball model built by your user, Scott. `+
 `VOICE: talk like a sharp, honest friend watching the games with him — plain English, short sentences, contractions, no jargon walls. `+
 `Lead with your answer in one plain sentence. Back it with 2-3 short points, weaving the key numbers in naturally `+
@@ -758,6 +820,8 @@ async function sendChat(){
 `Sizing (1u = 1% bankroll): ~5% edge = 1.5u max; ~3.5% = 1u; ~2% = 0.5u; never exceed 6u/day across 5 bets. `+
 `Live reference math (do silently): proj final home margin = current margin + model_margin x fraction_left; proj total = current total + model_total x fraction_left; `+
 `uncertainty shrinks with sqrt(fraction_left); viable live edge band 3.5%-12%; a bigger "edge" than 12% usually means a misread line — say that like a human ("that number looks off, double-check it"). `+
+`VARIANCE: live games carry 'luck' figures = points above sustainable shooting (3P ~31%, 2P ~46%, FT ~70% baselines). `+
+`Banked points stand, but NEVER project hot/cold shooting forward — a team at 80% from three has its lead, not its form, and live lines usually overprice the hot team. That reversion is where live value hides; call it out explicitly. `+
 `It's opening week: ratings are thin, the model runs hot on mismatches — be humble about big spreads and say so plainly. `+
 `If a sportsbook screenshot is attached: read every visible line, match to the board below, and verdict each one in a short list. `+
 `PENDING BETS below are already placed — talk about how they're tracking or hedges, never re-recommend them. `+
