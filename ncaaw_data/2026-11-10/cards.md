@@ -1,19 +1,11 @@
 # NCAAW Betting Card — 2026-11-10
 
-**2 play(s) · 1.5u total**
+**1 play(s) · 0.5u total**
 
-## Furman Paladins +25.5 (-108 ballybet)
-
-- **Game:** Furman Paladins @ Auburn Tigers
-- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 3.9%
-- **Confidence:** 9/10 · **Size:** 1.0u (Standard)
-- **Why:** Model margin +19.0 vs market +25.5 (home); Anchored fair margin +24.0 vs line +25.5 (away)
-- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
-
-## Under 145.5 (-106 ballybet)
+## Under 145.5 (+100 ballybet)
 
 - **Game:** Charleston Cougars @ USC Trojans
-- **Market:** total · **Fair:** 52.9% (-112) · **Edge:** 2.8%
+- **Market:** total · **Fair:** 52.9% (-112) · **Edge:** 5.8%
 - **Confidence:** 6/10 · **Size:** 0.5u (Lean)
 - **Why:** Model total 139.4 vs market 145.5; Anchored fair total 144.0 vs line 145.5
 - **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
@@ -22,18 +14,18 @@
 
 ### Full slate
 
-- **North Greenville Trailblazers @ Wofford Terriers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Youngstown State Penguins @ Toledo Rockets** — model 58-65 (margin +6.3 home, total 123.1) · market: home -16.5 (consensus) · total 118.5 (consensus) · PASS: no edge cleared the gates
-- **Edward Waters Tigers @ North Florida Ospreys** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Bellarmine Knights @ Bowling Green Falcons** — model 60-74 (margin +13.6 home, total 133.6) · market: home -38 (consensus) · total 146.5 (consensus) · PASS: no edge cleared the gates
-- **Furman Paladins @ Auburn Tigers** — model 55-74 (margin +19.0 home, total 129.2) · market: home -25.5 (consensus) · total 126.5 (consensus)
+- **Furman Paladins @ Auburn Tigers** — model 55-74 (margin +19.0 home, total 129.2) · market: home -15.5 (consensus) · total 115.5 (consensus) · PASS: no edge cleared the gates
 - **LSU Alexandria Generals @ Nicholls Colonels** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Culver Stockton Wildcats @ Valparaiso Beacons** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Huston Tillotson Rams @ Chicago State Cougars** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Cleveland State Vikings @ Drake Bulldogs** — model 61-72 (margin +10.5 home, total 133.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **Presbyterian Blue Hose @ Marquette Golden Eagles** — model 50-78 (margin +27.7 home, total 128.5) · market: no line · PASS: no market line (nothing to anchor against)
-- **Missouri State Lady Bears @ Wichita State Shockers** — model 68-58 (margin -10.1 home, total 126.2) · market: home +16.5 (consensus) · total 123.5 (consensus) · PASS: no edge cleared the gates
-- **Montana Lady Griz @ Kansas State Wildcats** — model 58-74 (margin +16.6 home, total 132.3) · market: no line · PASS: no market line (nothing to anchor against)
+- **Presbyterian Blue Hose @ Marquette Golden Eagles** — model 50-78 (margin +27.7 home, total 128.5) · market: total 149.5 (consensus) · PASS: no market spread quoted by target/sharp books
+- **Missouri State Lady Bears @ Wichita State Shockers** — model 68-58 (margin -10.1 home, total 126.2) · market: home +31.5 (consensus) · total 120.5 (consensus) · PASS: no edge cleared the gates
+- **Montana Lady Griz @ Kansas State Wildcats** — model 58-74 (margin +16.6 home, total 132.3) · market: total 132.5 (consensus) · PASS: no market spread quoted by target/sharp books
+- **North Greenville Trailblazers @ Wofford Terriers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Youngstown State Penguins @ Toledo Rockets** — model 58-65 (margin +6.3 home, total 123.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Edward Waters Tigers @ North Florida Ospreys** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Bellarmine Knights @ Bowling Green Falcons** — model 60-74 (margin +13.6 home, total 133.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **La Sierra Golden Eagles @ Loyola Marymount Lions** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Iona Gaels @ TCU Horned Frogs** — model 45-81 (margin +35.6 home, total 125.8) · market: home -45.5 (consensus) · total 132.5 (consensus) · PASS: no edge cleared the gates
 - **SUNY Geneseo Knights @ Le Moyne Dolphins** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
@@ -70,8 +62,8 @@
 - **Cal State Dominguez Hills Toros @ Pepperdine Waves** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Jessup Warriors @ Nevada Wolf Pack** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Portland State Vikings @ San Diego Toreros** — model 60-70 (margin +10.0 home, total 129.5) · market: no line · PASS: no market line (nothing to anchor against)
-- **Arizona State Sun Devils @ UNLV Lady Rebels** — model 70-64 (margin -6.2 home, total 133.3) · market: no line · PASS: no market line (nothing to anchor against)
+- **Arizona State Sun Devils @ UNLV Lady Rebels** — model 70-64 (margin -6.2 home, total 133.3) · market: no line · PASS: no market spread quoted by target/sharp books
 - **Chico State Wildcats @ Saint Mary's Gaels** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Charleston Cougars @ USC Trojans** — model 50-90 (margin +40.4 home, total 139.4) · market: home -47.5 (consensus) · total 145.5 (consensus)
 
-_Generated 2026-11-10T16:33:34Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-10T18:35:37Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

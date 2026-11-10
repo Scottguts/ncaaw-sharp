@@ -1,53 +1,27 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T16:33:34.092158Z",
+  "generated_at": "2026-11-10T18:35:37.965090Z",
   "market_bias": {
-    "n_spread_lines": 6,
+    "n_spread_lines": 4,
     "n_total_lines": 6,
-    "mean_spread_delta": -8.62,
-    "mean_total_delta": -2.62
+    "mean_spread_delta": 1.97,
+    "mean_total_delta": -2.43
   },
   "odds_available": true,
   "n_games": 51,
-  "n_cards": 2,
-  "total_units": 1.5,
+  "n_cards": 1,
+  "total_units": 0.5,
   "cards": [
-    {
-      "bet_label": "Furman Paladins +25.5",
-      "market": "spread",
-      "side": "away",
-      "book": "ballybet",
-      "price_american": -108,
-      "line": 25.5,
-      "fair_prob": 0.5392,
-      "fair_american": -117,
-      "edge": 0.0385,
-      "confidence": 9,
-      "unit_size": 1.0,
-      "risk": "Standard",
-      "reasoning": [
-        "Model margin +19.0 vs market +25.5 (home)",
-        "Anchored fair margin +24.0 vs line +25.5 (away)"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401928218",
-      "matchup": "Furman Paladins @ Auburn Tigers",
-      "start": "2026-11-10T17:00Z"
-    },
     {
       "bet_label": "Under 145.5",
       "market": "total",
       "side": "under",
       "book": "ballybet",
-      "price_american": -106,
+      "price_american": 100,
       "line": 145.5,
       "fair_prob": 0.529,
       "fair_american": -112,
-      "edge": 0.028,
+      "edge": 0.0579,
       "confidence": 6,
       "unit_size": 0.5,
       "risk": "Lean",
@@ -68,122 +42,6 @@
   "shadow_cards": [],
   "games": [
     {
-      "espn_event_id": "401929161",
-      "matchup": "North Greenville Trailblazers @ Wofford Terriers",
-      "home_short": "Wofford",
-      "away_short": "North Greenville",
-      "start": "2026-11-10T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401929137",
-      "matchup": "Youngstown State Penguins @ Toledo Rockets",
-      "home_short": "Toledo",
-      "away_short": "Youngstown State",
-      "start": "2026-11-10T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 58.4,
-        "home_score": 64.7,
-        "spread": -6.3,
-        "total": 123.1,
-        "proj_poss": 68.3,
-        "margin_home": 6.3,
-        "games_home": 2,
-        "games_away": 2,
-        "rank_home": 121,
-        "rank_away": 151
-      },
-      "market": {
-        "spread_home": -16.5,
-        "total": 118.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 15.23,
-        "total": 20.64
-      },
-      "anchored": {
-        "margin_home": 15.0,
-        "spread_shift": -1.5,
-        "total": 120.0,
-        "total_shift": 1.5,
-        "season_bias_applied": 4.19
-      }
-    },
-    {
-      "espn_event_id": "401927046",
-      "matchup": "Edward Waters Tigers @ North Florida Ospreys",
-      "home_short": "North Florida",
-      "away_short": "Edward Waters",
-      "start": "2026-11-10T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401926094",
-      "matchup": "Bellarmine Knights @ Bowling Green Falcons",
-      "home_short": "Bowling Green",
-      "away_short": "Bellarmine",
-      "start": "2026-11-10T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 60.0,
-        "home_score": 73.6,
-        "spread": -13.6,
-        "total": 133.6,
-        "proj_poss": 71.7,
-        "margin_home": 13.6,
-        "games_home": 2,
-        "games_away": 3,
-        "rank_home": 222,
-        "rank_away": 352
-      },
-      "market": {
-        "spread_home": -38.0,
-        "total": 146.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 15.23,
-        "total": 20.64
-      },
-      "anchored": {
-        "margin_home": 36.5,
-        "spread_shift": -1.5,
-        "total": 145.0,
-        "total_shift": -1.5,
-        "season_bias_applied": 4.19
-      }
-    },
-    {
       "espn_event_id": "401928218",
       "matchup": "Furman Paladins @ Auburn Tigers",
       "home_short": "Auburn",
@@ -191,36 +49,11 @@
       "start": "2026-11-10T17:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Furman Paladins +25.5",
-          "market": "spread",
-          "side": "away",
-          "book": "ballybet",
-          "price_american": -108,
-          "line": 25.5,
-          "fair_prob": 0.5392,
-          "fair_american": -117,
-          "edge": 0.0385,
-          "confidence": 9,
-          "unit_size": 1.0,
-          "risk": "Standard",
-          "reasoning": [
-            "Model margin +19.0 vs market +25.5 (home)",
-            "Anchored fair margin +24.0 vs line +25.5 (away)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401928218",
-          "matchup": "Furman Paladins @ Auburn Tigers",
-          "start": "2026-11-10T17:00Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 55.1,
         "home_score": 74.1,
@@ -234,8 +67,8 @@
         "rank_away": 213
       },
       "market": {
-        "spread_home": -25.5,
-        "total": 126.5,
+        "spread_home": -15.5,
+        "total": 115.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -245,9 +78,9 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": 24.0,
-        "spread_shift": -1.5,
-        "total": 128.0,
+        "margin_home": 17.0,
+        "spread_shift": 1.5,
+        "total": 117.0,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -331,7 +164,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 50.4,
@@ -344,6 +177,22 @@
         "games_away": 2,
         "rank_home": 85,
         "rank_away": 355
+      },
+      "market": {
+        "spread_home": null,
+        "total": 149.5,
+        "spread_src": null,
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "total": 148.0,
+        "total_shift": -1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -372,8 +221,8 @@
         "rank_away": 84
       },
       "market": {
-        "spread_home": 16.5,
-        "total": 123.5,
+        "spread_home": 31.5,
+        "total": 120.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -383,9 +232,9 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": -15.0,
+        "margin_home": -30.0,
         "spread_shift": 1.5,
-        "total": 125.0,
+        "total": 122.0,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -401,7 +250,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 57.9,
@@ -414,6 +263,102 @@
         "games_away": 2,
         "rank_home": 59,
         "rank_away": 195
+      },
+      "market": {
+        "spread_home": null,
+        "total": 132.5,
+        "spread_src": null,
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "total": 134.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
+      "espn_event_id": "401929161",
+      "matchup": "North Greenville Trailblazers @ Wofford Terriers",
+      "home_short": "Wofford",
+      "away_short": "North Greenville",
+      "start": "2026-11-10T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401929137",
+      "matchup": "Youngstown State Penguins @ Toledo Rockets",
+      "home_short": "Toledo",
+      "away_short": "Youngstown State",
+      "start": "2026-11-10T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 58.4,
+        "home_score": 64.7,
+        "spread": -6.3,
+        "total": 123.1,
+        "proj_poss": 68.3,
+        "margin_home": 6.3,
+        "games_home": 2,
+        "games_away": 2,
+        "rank_home": 121,
+        "rank_away": 151
+      }
+    },
+    {
+      "espn_event_id": "401927046",
+      "matchup": "Edward Waters Tigers @ North Florida Ospreys",
+      "home_short": "North Florida",
+      "away_short": "Edward Waters",
+      "start": "2026-11-10T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401926094",
+      "matchup": "Bellarmine Knights @ Bowling Green Falcons",
+      "home_short": "Bowling Green",
+      "away_short": "Bellarmine",
+      "start": "2026-11-10T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 60.0,
+        "home_score": 73.6,
+        "spread": -13.6,
+        "total": 133.6,
+        "proj_poss": 71.7,
+        "margin_home": 13.6,
+        "games_home": 2,
+        "games_away": 3,
+        "rank_home": 222,
+        "rank_away": 352
       }
     },
     {
@@ -1189,7 +1134,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 69.8,
@@ -1202,6 +1147,17 @@
         "games_away": 2,
         "rank_home": 83,
         "rank_away": 36
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
       }
     },
     {
@@ -1232,11 +1188,11 @@
           "market": "total",
           "side": "under",
           "book": "ballybet",
-          "price_american": -106,
+          "price_american": 100,
           "line": 145.5,
           "fair_prob": 0.529,
           "fair_american": -112,
-          "edge": 0.028,
+          "edge": 0.0579,
           "confidence": 6,
           "unit_size": 0.5,
           "risk": "Lean",
