@@ -24,6 +24,9 @@ from pathlib import Path
 
 from ncaaw_data_scraper import DATA_ROOT
 from ncaaw_model import SPREAD_SIGMA
+from ncaaw_grader import season_total_bias
+
+_TBIAS = season_total_bias()   # computed once per build
 
 
 def _win_prob_home(margin_home: float) -> float:
@@ -1075,7 +1078,9 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
         sig = g.get("sigma") or {}
         mk = g.get("market") or {}
         entry = {
-            "m": m["margin_home"], "t": m["total"],
+            # t carries the season scoring corrector so the Live tab and
+            # copilot project with environment-adjusted totals
+            "m": m["margin_home"], "t": round(m["total"] + _TBIAS, 1),
             "ss": sig.get("spread"), "st": sig.get("total"),
             "aw": g.get("away_short"), "hm": g.get("home_short"),
             "as_": m.get("away_score"), "hs_": m.get("home_score"),

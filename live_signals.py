@@ -25,7 +25,8 @@ import requests
 
 from ncaaw_data_scraper import DATA_ROOT, ESPN_API, TARGET_BOOKS, _get
 from ncaaw_model import canon_match, norm_cdf
-from ncaaw_grader import edge_pct, _markets_for_book, _team_outcome
+from ncaaw_grader import (edge_pct, _markets_for_book, _team_outcome,
+                          season_total_bias)
 
 MIN_EDGE_LIVE = 0.035
 MAX_EDGE_LIVE = 0.12
@@ -124,6 +125,7 @@ def scan(target_date: str) -> int:
         return 0
 
     seen = _load_signals()
+    tbias = season_total_bias()   # season scoring environment corrector
     new_signals = []
     for og in odds.get("games") or []:
         # match odds event to a live ESPN game
@@ -152,7 +154,7 @@ def scan(target_date: str) -> int:
         sust_m = (margin - (luck_h - luck_a)) / played * 40
         sust_t = (total - luck_h - luck_a) / played * 40
         em = margin + f * (m["margin_home"] * (1 - w) + sust_m * w)
-        et = total + f * (m["total"] * (1 - w) + sust_t * w)
+        et = total + f * ((m["total"] + tbias) * (1 - w) + sust_t * w)
         ss = (sig.get("spread") or 12.0) * math.sqrt(max(f, 0.05))
         st_ = (sig.get("total") or 16.0) * math.sqrt(max(f, 0.05))
 

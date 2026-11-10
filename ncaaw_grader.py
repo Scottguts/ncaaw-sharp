@@ -68,7 +68,7 @@ MAX_TOTAL_SHIFT  = 1.5   # points of total
 
 
 def season_total_bias(data_root: Path = DATA_ROOT, days: int = 10,
-                      min_games: int = 30, clamp: float = 4.0) -> float:
+                      min_games: int = 30, clamp: float = 6.0) -> float:
     """Self-correcting totals bias: mean (actual - model) total over recent
     finals reports. Positive = the season is scoring more than the model
     thinks -> raise projections before anchoring. Clamped, and zero until a
