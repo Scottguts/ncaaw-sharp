@@ -283,6 +283,9 @@ def fetch_torvik(year: int) -> dict[str, dict]:
             "tor": float(row[11]), "torD": float(row[12]),
             "orb": float(row[13]), "drb": float(row[14]),
             "tempo": float(row[15]),
+            # column 17 = team 3P% (verified vs 2026: UConn 38.3) — feeds the
+            # live variance engine's team-aware "hot shooting" baseline
+            "p3": float(row[17]) if row[17] not in ("", None) else 31.0,
         }
     return teams
 

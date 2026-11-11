@@ -267,10 +267,14 @@ function minutesLeft(g){
 // the game reverts — a team at 80% from three has its lead, not its form.
 let LIVEBOX={};
 function _ma(s){const p=(s||'0-0').split('-');return [+p[0]||0,+p[1]||0];}
+function b3(p3){ // team-aware 3P baseline, shrunk halfway to the 31% league rate
+  return p3?((p3/100)+0.31)/2:0.31;
+}
 async function fetchBox(id){
   if(LIVEBOX[id]&&Date.now()-LIVEBOX[id].at<60000)return LIVEBOX[id];
   const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event='+id);
   const d=await r.json();
+  const m=SLATE[id]||{};
   const out={at:Date.now(),sides:{}};
   (d.boxscore&&d.boxscore.teams||[]).forEach(t=>{
     const st={};(t.statistics||[]).forEach(s=>st[s.name]=s.displayValue);
@@ -278,9 +282,10 @@ async function fetchBox(id){
     const [tm,ta]=_ma(st['threePointFieldGoalsMade-threePointFieldGoalsAttempted']);
     const [ftm,fta]=_ma(st['freeThrowsMade-freeThrowsAttempted']);
     const twoM=fgm-tm,twoA=fga-ta;
-    const l3=(tm-0.31*ta)*3, l2=(twoM-0.46*twoA)*2, lft=(ftm-0.70*fta);
+    const base3=b3(t.homeAway==='home'?m.p3h:m.p3a);
+    const l3=(tm-base3*ta)*3, l2=(twoM-0.46*twoA)*2, lft=(ftm-0.70*fta);
     const luck=l3+l2+lft;
-    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,twoM,twoA,ftm,fta,l3,l2,lft,luck};
+    out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,twoM,twoA,ftm,fta,l3,l2,lft,luck,base3};
   });
   LIVEBOX[id]=out;return out;
 }
@@ -334,8 +339,9 @@ async function liveVerdict(){
   let checks=[];
   if(!isNaN(sp)){
     const ph=phi((em+sp)/ss);
-    checks.push({label:`HOME ${sp>0?'+':''}${sp}`,p:ph});
-    checks.push({label:`AWAY ${-sp>0?'+':''}${-sp}`,p:1-ph});
+    const hn=m.hm||'HOME',an=m.aw||'AWAY';
+    checks.push({label:`${hn} (home) ${sp>0?'+':''}${sp}`,p:ph});
+    checks.push({label:`${an} (away) ${-sp>0?'+':''}${-sp}`,p:1-ph});
   }
   if(!isNaN(tot)){
     const po=phi((et-tot)/st);
@@ -1088,6 +1094,7 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
             "ss": sig.get("spread"), "st": sig.get("total"),
             "aw": g.get("away_short"), "hm": g.get("home_short"),
             "as_": m.get("away_score"), "hs_": m.get("home_score"),
+            "p3h": m.get("p3_home"), "p3a": m.get("p3_away"),
         }
         if mk.get("spread_home") is not None:
             entry["bk_sp"] = mk["spread_home"]
@@ -1182,7 +1189,9 @@ target='_blank' rel='noopener'>Actions page</a> → Run workflow.</p>
 <p class='muted'>Scores and clock pull straight from ESPN in your browser; the verdict is
 computed instantly with the model's rates. Advisory only — separate from pregame cards.</p>
 <div class='lrow'>
-<select id='livesel' style='flex:1;min-width:240px'><option>open this tab to load…</option></select>
+<select id='livesel' style='flex:1;min-width:240px'
+onchange='const m=window.SLATE[this.value]||{{}};document.getElementById("livesp").placeholder="spread for "+(m.hm||"home team")+" (home side, e.g. -6.5)"'>
+<option>open this tab to load…</option></select>
 <button class='btn sec' onclick='liveRefresh()'>↻ refresh</button>
 </div>
 <div class='lrow'>

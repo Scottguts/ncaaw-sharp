@@ -37,6 +37,7 @@ from statistics import median
 from ncaaw_model import (
     TRAINED_WEIGHTS, SPREAD_SIGMA, TOTAL_SIGMA,
     predict, norm_cdf, early_season_sigma, canon_name, canon_match,
+    sigma_for_margin, sigma_for_total,
 )
 from ncaaw_data_scraper import (
     DATA_ROOT, TARGET_BOOKS, SHARP_ANCHORS, _et_date,
@@ -461,7 +462,9 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
     model_margin_home = -proj["spread"]           # jsx spread is away-minus-home
     rec["model"] = {**proj, "margin_home": round(model_margin_home, 1),
                     "games_home": th["games"], "games_away": ta["games"],
-                    "rank_home": th.get("tRank"), "rank_away": ta.get("tRank")}
+                    "rank_home": th.get("tRank"), "rank_away": ta.get("tRank"),
+                    # season 3P% (shrunk at use-site) for live luck baselines
+                    "p3_home": th.get("p3"), "p3_away": ta.get("p3")}
 
     if odds_event is None:
         rec["pass_reasons"].append("no market line (nothing to anchor against)")
@@ -476,10 +479,11 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
             f"insufficient sample (<{MIN_GAMES_TO_BET} effective games on one side)")
         return rec
 
-    sigma_s = early_season_sigma(SPREAD_SIGMA, gh_eff, ga_eff,
-                                 FULL_CONFIDENCE_GAMES)
-    sigma_t = early_season_sigma(TOTAL_SIGMA, gh_eff, ga_eff,
-                                 FULL_CONFIDENCE_GAMES)
+    # heteroscedastic base: sigma scales with projected margin / scoring level
+    sigma_s = early_season_sigma(sigma_for_margin(model_margin_home),
+                                 gh_eff, ga_eff, FULL_CONFIDENCE_GAMES)
+    sigma_t = early_season_sigma(sigma_for_total(proj["total"] + total_bias),
+                                 gh_eff, ga_eff, FULL_CONFIDENCE_GAMES)
     rec["sigma"] = {"spread": round(sigma_s, 2), "total": round(sigma_t, 2)}
 
     cards: list[BetCard] = []

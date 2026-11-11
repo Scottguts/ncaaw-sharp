@@ -237,6 +237,35 @@ def total_over_prob(fair_total: float, book_total: float,
     return norm_cdf((fair_total - book_total) / sigma)
 
 
+# Heteroscedastic sigma — fitted from 15,418 games (2026-11-09 residual
+# stds by band). Blowouts are noisier (garbage time), close games tighter
+# than the old flat sigma admitted. Tables scale with the retuned global
+# sigmas so the weekly recalibration still propagates.
+_SPREAD_BAND = [(4.0, 11.0), (12.0, 10.8), (20.5, 11.5), (30.0, 12.6)]
+_SPREAD_BAND_REF = 11.5
+_TOTAL_BAND = [(115.0, 14.5), (132.0, 15.5), (150.0, 16.4)]
+_TOTAL_BAND_REF = 15.5
+
+
+def _interp(x: float, table: list[tuple[float, float]]) -> float:
+    if x <= table[0][0]:
+        return table[0][1]
+    for (x0, y0), (x1, y1) in zip(table, table[1:]):
+        if x <= x1:
+            return y0 + (y1 - y0) * (x - x0) / (x1 - x0)
+    return table[-1][1]
+
+
+def sigma_for_margin(abs_margin: float) -> float:
+    """Spread sigma scaled to the size of the projected margin."""
+    return _interp(abs(abs_margin), _SPREAD_BAND) * (SPREAD_SIGMA / _SPREAD_BAND_REF)
+
+
+def sigma_for_total(proj_total: float) -> float:
+    """Total sigma scaled to the projected scoring level."""
+    return _interp(proj_total, _TOTAL_BAND) * (TOTAL_SIGMA / _TOTAL_BAND_REF)
+
+
 def early_season_sigma(base_sigma: float, games_a: int, games_b: int,
                        full_at: int = 10) -> float:
     """Widen sigma while Torvik samples are thin. At 0 games played the error

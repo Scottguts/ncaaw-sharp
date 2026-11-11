@@ -5,7 +5,7 @@
 ## Bethune-Cookman Wildcats +26.5 (-110 hardrockbet)
 
 - **Game:** Bethune-Cookman Wildcats @ Utah Utes
-- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 2.9%
+- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 2.8%
 - **Confidence:** 8/10 · **Size:** 0.5u (Lean)
 - **Why:** Model margin +21.9 vs market +26.5 (home); Anchored fair margin +25.0 vs line +26.5 (away)
 - **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
@@ -55,4 +55,4 @@
 - **Northern New Mexico Eagles @ Northern Colorado Bears** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Oregon Ducks @ Grand Canyon Lopes** — model 75-65 (margin -9.7 home, total 139.5) · market: home +9.5 (consensus) · total 137.5 (consensus) · PASS: no edge cleared the gates
 
-_Generated 2026-11-10T03:02:03Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-11T03:48:36Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

@@ -58,7 +58,12 @@ def _ma(s: str) -> tuple[int, int]:
         return 0, 0
 
 
-def _luck(event_id: str) -> dict:
+def _b3(p3) -> float:
+    """Team-aware 3P baseline, shrunk halfway to the 31% league rate."""
+    return ((float(p3) / 100) + 0.31) / 2 if p3 else 0.31
+
+
+def _luck(event_id: str, p3_home=None, p3_away=None) -> dict:
     """{'home': pts_above_sustainable, 'away': ...} from the live box."""
     try:
         d = _get(f"{ESPN_API}/summary", params={"event": event_id})
@@ -71,7 +76,8 @@ def _luck(event_id: str) -> dict:
         tm, ta = _ma(st.get("threePointFieldGoalsMade-threePointFieldGoalsAttempted"))
         ftm, fta = _ma(st.get("freeThrowsMade-freeThrowsAttempted"))
         two_m, two_a = fgm - tm, fga - ta
-        l3 = (tm - 0.31 * ta) * 3
+        base3 = _b3(p3_home if t.get("homeAway") == "home" else p3_away)
+        l3 = (tm - base3 * ta) * 3
         l2 = (two_m - 0.46 * two_a) * 2
         lft = ftm - 0.70 * fta
         out[t.get("homeAway")] = {
@@ -145,7 +151,7 @@ def scan(target_date: str) -> int:
         if not (MIN_FRACTION <= f <= MAX_FRACTION):
             continue
         played = 40 * (1 - f)
-        lk = _luck(eid)
+        lk = _luck(eid, m.get("p3_home"), m.get("p3_away"))
         luck_h = (lk.get("home") or {}).get("luck", 0.0)
         luck_a = (lk.get("away") or {}).get("luck", 0.0)
         margin = lv["hs"] - lv["as"]
