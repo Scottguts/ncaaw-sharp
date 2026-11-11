@@ -1,40 +1,7 @@
 {
   "date": "2026-11-11",
-  "fetched_at": "2026-11-11T16:20:22.990450Z",
+  "fetched_at": "2026-11-11T18:34:43.236494Z",
   "games": [
-    {
-      "espn_event_id": "401929149",
-      "start": "2026-11-11T15:30Z",
-      "et_date": "2026-11-11",
-      "name": "Mount Vernon Nazarene Cougars at Miami (OH) RedHawks",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "193",
-        "location": "Miami (OH)",
-        "display_name": "Miami (OH) RedHawks",
-        "canon": "miami oh",
-        "conf": "MAC",
-        "record": "3-0",
-        "score": "55",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2421",
-        "location": "Mount Vernon Nazarene",
-        "display_name": "Mount Vernon Nazarene Cougars",
-        "canon": "mount vernon nazarene",
-        "conf": "",
-        "record": null,
-        "score": "25",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401926049",
       "start": "2026-11-11T17:00Z",
@@ -42,7 +9,7 @@
       "name": "Houston Christian Huskies at North Texas Mean Green",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_END_PERIOD",
       "completed": false,
       "home": {
         "espn_id": "249",
@@ -51,7 +18,7 @@
         "canon": "north texas",
         "conf": "Amer",
         "record": "1-1",
-        "score": "0",
+        "score": "45",
         "winner": null
       },
       "away": {
@@ -61,7 +28,7 @@
         "canon": "houston christian",
         "conf": "Southland",
         "record": "1-2",
-        "score": "0",
+        "score": "45",
         "winner": null
       },
       "torvik_home": true,
@@ -75,7 +42,7 @@
       "name": "Incarnate Word Cardinals at UTSA Roadrunners",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2636",
@@ -84,7 +51,7 @@
         "canon": "utsa",
         "conf": "Amer",
         "record": "0-2",
-        "score": "0",
+        "score": "68",
         "winner": null
       },
       "away": {
@@ -94,7 +61,7 @@
         "canon": "incarnate word",
         "conf": "Southland",
         "record": "1-1",
-        "score": "0",
+        "score": "45",
         "winner": null
       },
       "torvik_home": true,
@@ -108,7 +75,7 @@
       "name": "South Alabama Jaguars at Florida Atlantic Owls",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2226",
@@ -117,7 +84,7 @@
         "canon": "florida atlantic",
         "conf": "Amer",
         "record": "1-2",
-        "score": "0",
+        "score": "21",
         "winner": null
       },
       "away": {
@@ -127,7 +94,7 @@
         "canon": "south alabama",
         "conf": "Sun Belt",
         "record": "1-2",
-        "score": "0",
+        "score": "19",
         "winner": null
       },
       "torvik_home": true,
@@ -141,7 +108,7 @@
       "name": "Bethune-Cookman Wildcats at BYU Cougars",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "252",
@@ -150,7 +117,7 @@
         "canon": "byu",
         "conf": "Big 12",
         "record": "3-0",
-        "score": "0",
+        "score": "33",
         "winner": null
       },
       "away": {
@@ -160,12 +127,45 @@
         "canon": "bethune cookman",
         "conf": "SWAC",
         "record": "2-1",
-        "score": "0",
+        "score": "22",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": "6f4816db75131a3da29d2702992223dc"
+    },
+    {
+      "espn_event_id": "401929149",
+      "start": "2026-11-11T15:30Z",
+      "et_date": "2026-11-11",
+      "name": "Mount Vernon Nazarene Cougars at Miami (OH) RedHawks",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "193",
+        "location": "Miami (OH)",
+        "display_name": "Miami (OH) RedHawks",
+        "canon": "miami oh",
+        "conf": "MAC",
+        "record": "4-0",
+        "score": "106",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2421",
+        "location": "Mount Vernon Nazarene",
+        "display_name": "Mount Vernon Nazarene Cougars",
+        "canon": "mount vernon nazarene",
+        "conf": "",
+        "record": null,
+        "score": "45",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401916212",
@@ -2343,7 +2343,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "bcc63d750a942e1f5fb267de55ef6ae0"
     }
   ]
 }
