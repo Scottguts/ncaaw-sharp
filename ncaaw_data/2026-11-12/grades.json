@@ -1,18 +1,45 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T12:49:09.200934Z",
+  "generated_at": "2026-11-12T16:21:57.169656Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 8,
+    "n_total_lines": 8,
+    "mean_spread_delta": 3.11,
+    "mean_total_delta": 1.07
   },
   "odds_available": true,
   "n_games": 50,
   "n_cards": 0,
   "total_units": 0,
   "cards": [],
-  "shadow_cards": [],
+  "shadow_cards": [
+    {
+      "bet_label": "Over 145.5",
+      "market": "total",
+      "side": "over",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 145.5,
+      "fair_prob": 0.5314,
+      "fair_american": -113,
+      "edge": 0.0145,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 148.1 vs market 145.5",
+        "Anchored fair total 147.0 vs line 145.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401911739",
+      "matchup": "UConn Huskies @ Ohio State Buckeyes",
+      "start": "2026-11-12T23:30Z"
+    }
+  ],
   "games": [
     {
       "espn_event_id": "401930885",
@@ -263,7 +290,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 77.6,
@@ -276,6 +303,24 @@
         "games_away": 3,
         "rank_home": 100,
         "rank_away": 24
+      },
+      "market": {
+        "spread_home": 24.5,
+        "total": 139.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -23.0,
+        "spread_shift": 1.5,
+        "total": 141.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -431,9 +476,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 145.5",
+          "market": "total",
+          "side": "over",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 145.5,
+          "fair_prob": 0.5314,
+          "fair_american": -113,
+          "edge": 0.0145,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 148.1 vs market 145.5",
+            "Anchored fair total 147.0 vs line 145.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401911739",
+          "matchup": "UConn Huskies @ Ohio State Buckeyes",
+          "start": "2026-11-12T23:30Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 77.2,
@@ -446,6 +518,24 @@
         "games_away": 3,
         "rank_home": 8,
         "rank_away": 1
+      },
+      "market": {
+        "spread_home": 9.5,
+        "total": 145.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": -8.0,
+        "spread_shift": 1.5,
+        "total": 147.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -511,7 +601,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 72.0,
@@ -524,6 +614,24 @@
         "games_away": 2,
         "rank_home": 34,
         "rank_away": 2
+      },
+      "market": {
+        "spread_home": 24.5,
+        "total": 132.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -23.0,
+        "spread_shift": 1.5,
+        "total": 134.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -537,7 +645,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 78.7,
@@ -550,6 +658,24 @@
         "games_away": 2,
         "rank_home": 54,
         "rank_away": 6
+      },
+      "market": {
+        "spread_home": 16.5,
+        "total": 141.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -15.0,
+        "spread_shift": 1.5,
+        "total": 143.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -563,7 +689,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 85.0,
@@ -576,6 +702,24 @@
         "games_away": 2,
         "rank_home": 284,
         "rank_away": 10
+      },
+      "market": {
+        "spread_home": 33.5,
+        "total": 132.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -32.0,
+        "spread_shift": 1.5,
+        "total": 134.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -1045,7 +1189,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 83.1,
@@ -1058,6 +1202,24 @@
         "games_away": 4,
         "rank_home": 108,
         "rank_away": 9
+      },
+      "market": {
+        "spread_home": 22.5,
+        "total": 147.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": -21.0,
+        "spread_shift": 1.5,
+        "total": 149.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -1163,7 +1325,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 52.8,
@@ -1176,6 +1338,24 @@
         "games_away": 2,
         "rank_home": 5,
         "rank_away": 140
+      },
+      "market": {
+        "spread_home": -33.5,
+        "total": 135.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 32.0,
+        "spread_shift": -1.5,
+        "total": 137.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -1215,7 +1395,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 59.3,
@@ -1228,6 +1408,24 @@
         "games_away": 2,
         "rank_home": 11,
         "rank_away": 64
+      },
+      "market": {
+        "spread_home": -24.5,
+        "total": 140.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "margin_home": 23.0,
+        "spread_shift": -1.5,
+        "total": 139.69,
+        "total_shift": -0.81,
+        "season_bias_applied": 4.19
       }
     }
   ]

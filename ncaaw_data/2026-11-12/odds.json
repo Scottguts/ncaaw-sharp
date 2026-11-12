@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-12T12:49:08.955102Z",
+  "fetched_at": "2026-11-12T16:21:56.989563Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -17,6 +17,655 @@
     "spreads",
     "totals"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "4fc136f82b31f3f71f99b2426400b7ee",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-12T23:00:00Z",
+      "home_team": "Tulsa Golden Hurricane",
+      "away_team": "Oklahoma St Cowgirls",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Oklahoma St Cowgirls",
+                  "price": -9000
+                },
+                {
+                  "name": "Tulsa Golden Hurricane",
+                  "price": 2500
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Oklahoma St Cowgirls",
+                  "price": -110,
+                  "point": -24.5
+                },
+                {
+                  "name": "Tulsa Golden Hurricane",
+                  "price": -110,
+                  "point": 24.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 139.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 139.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-12T16:21:43Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:43Z",
+              "outcomes": [
+                {
+                  "name": "Oklahoma St Cowgirls",
+                  "price": -5000
+                },
+                {
+                  "name": "Tulsa Golden Hurricane",
+                  "price": 2500
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:43Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 139.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 139.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6e3cd49d77335247016bb2b8e8733e1a",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-12T23:30:00Z",
+      "home_team": "Ohio State Buckeyes",
+      "away_team": "UConn Huskies",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Ohio State Buckeyes",
+                  "price": 320
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -410
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Ohio State Buckeyes",
+                  "price": -110,
+                  "point": 9.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -110,
+                  "point": -9.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 145.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 145.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-12T16:21:43Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:43Z",
+              "outcomes": [
+                {
+                  "name": "Ohio State Buckeyes",
+                  "price": 310
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -400
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:43Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 145.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 145.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4a531cbd9b7e86839c8fc72a3cd8218f",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T00:00:00Z",
+      "home_team": "Clemson Tigers",
+      "away_team": "South Carolina Gamecocks",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Clemson Tigers",
+                  "price": 2200
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -8000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Clemson Tigers",
+                  "price": -110,
+                  "point": 24.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -110,
+                  "point": -24.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5d6749cef4657755cc12a03f987df8e7",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T00:00:00Z",
+      "home_team": "Columbia Lions",
+      "away_team": "Michigan Wolverines",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 800
+                },
+                {
+                  "name": "Michigan Wolverines",
+                  "price": -1350
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": -110,
+                  "point": 16.5
+                },
+                {
+                  "name": "Michigan Wolverines",
+                  "price": -110,
+                  "point": -16.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 141.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 141.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "95e542fefc908c3a542c7d2ab638fa6f",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T00:00:00Z",
+      "home_team": "Norfolk St Spartans",
+      "away_team": "Duke Blue Devils",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -110,
+                  "point": -33.5
+                },
+                {
+                  "name": "Norfolk St Spartans",
+                  "price": -110,
+                  "point": 33.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c977e6b5d161018f13a53ab60117a997",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T00:30:00Z",
+      "home_team": "TCU Horned Frogs",
+      "away_team": "SE Louisiana Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "SE Louisiana Lions",
+                  "price": -110,
+                  "point": 55.5
+                },
+                {
+                  "name": "TCU Horned Frogs",
+                  "price": -110,
+                  "point": -55.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "94d56d1e89eedc955f6d23b544a50745",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T01:00:00Z",
+      "home_team": "Ball State Cardinals",
+      "away_team": "Louisville Cardinals",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Ball State Cardinals",
+                  "price": 2000
+                },
+                {
+                  "name": "Louisville Cardinals",
+                  "price": -6500
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Ball State Cardinals",
+                  "price": -110,
+                  "point": 22.5
+                },
+                {
+                  "name": "Louisville Cardinals",
+                  "price": -110,
+                  "point": -22.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 147.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 147.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e5ff84a417150a9d25f1fb05753cc63f",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T01:30:00Z",
+      "home_team": "Iowa Hawkeyes",
+      "away_team": "Northern Iowa Panthers",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Iowa Hawkeyes",
+                  "price": -110,
+                  "point": -33.5
+                },
+                {
+                  "name": "Northern Iowa Panthers",
+                  "price": -110,
+                  "point": 33.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bf31b4f71f4bab91a6677c35d49cec96",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T03:00:00Z",
+      "home_team": "Washington Huskies",
+      "away_team": "CSU Bakersfield Roadrunners",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "CSU Bakersfield Roadrunners",
+                  "price": -110,
+                  "point": 42.5
+                },
+                {
+                  "name": "Washington Huskies",
+                  "price": -110,
+                  "point": -42.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5bb74fcfe7ae7d77dfabfab476a2edca",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-13T03:30:00Z",
+      "home_team": "UCLA Bruins",
+      "away_team": "Arizona Wildcats",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-12T16:21:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Arizona Wildcats",
+                  "price": 2200
+                },
+                {
+                  "name": "UCLA Bruins",
+                  "price": -8000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Arizona Wildcats",
+                  "price": -110,
+                  "point": 24.5
+                },
+                {
+                  "name": "UCLA Bruins",
+                  "price": -110,
+                  "point": -24.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-12T16:21:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 140.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 140.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "errors": []
 }
