@@ -1,16 +1,16 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T18:47:36.903117Z",
+  "generated_at": "2026-11-12T22:10:30.186469Z",
   "market_bias": {
-    "n_spread_lines": 8,
-    "n_total_lines": 8,
-    "mean_spread_delta": 3.61,
-    "mean_total_delta": 1.01
+    "n_spread_lines": 9,
+    "n_total_lines": 9,
+    "mean_spread_delta": 3.79,
+    "mean_total_delta": 1.03
   },
   "odds_available": true,
   "n_games": 50,
-  "n_cards": 2,
-  "total_units": 1.0,
+  "n_cards": 1,
+  "total_units": 0.5,
   "cards": [
     {
       "bet_label": "Tulsa Golden Hurricane +24.5",
@@ -37,88 +37,132 @@
       "espn_event_id": "401907049",
       "matchup": "Oklahoma State Cowgirls @ Tulsa Golden Hurricane",
       "start": "2026-11-12T23:00Z"
-    },
+    }
+  ],
+  "shadow_cards": [
     {
-      "bet_label": "Arizona Wildcats +24.5",
-      "market": "spread",
-      "side": "away",
-      "book": "draftkings",
-      "price_american": -110,
-      "line": 24.5,
-      "fair_prob": 0.5392,
-      "fair_american": -117,
-      "edge": 0.0294,
-      "confidence": 9,
+      "bet_label": "Over 121.5",
+      "market": "total",
+      "side": "over",
+      "book": "espnbet",
+      "price_american": -105,
+      "line": 121.5,
+      "fair_prob": 0.5209,
+      "fair_american": -109,
+      "edge": 0.0171,
+      "confidence": 6,
       "unit_size": 0.5,
-      "risk": "Lean",
+      "risk": "Shadow",
       "reasoning": [
-        "Model margin +16.9 vs market +24.5 (home)",
-        "Anchored fair margin +23.0 vs line +24.5 (away)"
+        "Model total 122.2 vs market 121",
+        "Anchored fair total 122.5 vs line 121.5"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401913056",
-      "matchup": "Arizona Wildcats @ UCLA Bruins",
-      "start": "2026-11-13T03:30Z"
+      "espn_event_id": "401909684",
+      "matchup": "Holy Cross Crusaders @ Brown Bears",
+      "start": "2026-11-12T21:30Z"
+    },
+    {
+      "bet_label": "Over 146.5",
+      "market": "total",
+      "side": "over",
+      "book": "ballybet",
+      "price_american": -108,
+      "line": 146.5,
+      "fair_prob": 0.5314,
+      "fair_american": -113,
+      "edge": 0.0234,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 148.1 vs market 146.5",
+        "Anchored fair total 148.0 vs line 146.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401911739",
+      "matchup": "UConn Huskies @ Ohio State Buckeyes",
+      "start": "2026-11-12T23:30Z"
     }
   ],
-  "shadow_cards": [],
   "games": [
     {
-      "espn_event_id": "401929296",
-      "matchup": "Spalding Pelicans @ Southern Indiana Screaming Eagles",
-      "home_short": "Southern Indiana",
-      "away_short": "Spalding",
-      "start": "2026-11-12T17:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401928014",
-      "matchup": "Central Methodist Eagles @ SIU Edwardsville Cougars",
-      "home_short": "SIU Edwardsville",
-      "away_short": "Central Methodist",
-      "start": "2026-11-12T17:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401919709",
-      "matchup": "Morehead State Eagles @ Murray State Racers",
-      "home_short": "Murray State",
-      "away_short": "Morehead State",
-      "start": "2026-11-12T17:00Z",
+      "espn_event_id": "401909684",
+      "matchup": "Holy Cross Crusaders @ Brown Bears",
+      "home_short": "Brown",
+      "away_short": "Holy Cross",
+      "start": "2026-11-12T21:30Z",
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 121.5",
+          "market": "total",
+          "side": "over",
+          "book": "espnbet",
+          "price_american": -105,
+          "line": 121.5,
+          "fair_prob": 0.5209,
+          "fair_american": -109,
+          "edge": 0.0171,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 122.2 vs market 121",
+            "Anchored fair total 122.5 vs line 121.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401909684",
+          "matchup": "Holy Cross Crusaders @ Brown Bears",
+          "start": "2026-11-12T21:30Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
-        "away_score": 65.7,
-        "home_score": 85.1,
-        "spread": -19.4,
-        "total": 150.8,
-        "proj_poss": 72.3,
-        "margin_home": 19.4,
+        "away_score": 61.5,
+        "home_score": 60.7,
+        "spread": 0.8,
+        "total": 122.2,
+        "proj_poss": 69.1,
+        "margin_home": -0.8,
         "games_home": 3,
         "games_away": 3,
-        "rank_home": 92,
-        "rank_away": 304
+        "rank_home": 258,
+        "rank_away": 234
+      },
+      "market": {
+        "spread_home": 1.5,
+        "total": 121.0,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": -0.8,
+        "spread_shift": 0.7,
+        "total": 122.5,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -202,6 +246,60 @@
       }
     },
     {
+      "espn_event_id": "401929296",
+      "matchup": "Spalding Pelicans @ Southern Indiana Screaming Eagles",
+      "home_short": "Southern Indiana",
+      "away_short": "Spalding",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401928014",
+      "matchup": "Central Methodist Eagles @ SIU Edwardsville Cougars",
+      "home_short": "SIU Edwardsville",
+      "away_short": "Central Methodist",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401919709",
+      "matchup": "Morehead State Eagles @ Murray State Racers",
+      "home_short": "Murray State",
+      "away_short": "Morehead State",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 65.7,
+        "home_score": 85.1,
+        "spread": -19.4,
+        "total": 150.8,
+        "proj_poss": 72.3,
+        "margin_home": 19.4,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 92,
+        "rank_away": 304
+      }
+    },
+    {
       "espn_event_id": "401927000",
       "matchup": "Portland State Vikings @ UC San Diego Tritons",
       "home_short": "UC San Diego",
@@ -277,32 +375,6 @@
         "games_away": 3,
         "rank_home": 35,
         "rank_away": 259
-      }
-    },
-    {
-      "espn_event_id": "401909684",
-      "matchup": "Holy Cross Crusaders @ Brown Bears",
-      "home_short": "Brown",
-      "away_short": "Holy Cross",
-      "start": "2026-11-12T21:30Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 61.5,
-        "home_score": 60.7,
-        "spread": 0.8,
-        "total": 122.2,
-        "proj_poss": 69.1,
-        "margin_home": -0.8,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 258,
-        "rank_away": 234
       }
     },
     {
@@ -527,7 +599,34 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 146.5",
+          "market": "total",
+          "side": "over",
+          "book": "ballybet",
+          "price_american": -108,
+          "line": 146.5,
+          "fair_prob": 0.5314,
+          "fair_american": -113,
+          "edge": 0.0234,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 148.1 vs market 146.5",
+            "Anchored fair total 148.0 vs line 146.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401911739",
+          "matchup": "UConn Huskies @ Ohio State Buckeyes",
+          "start": "2026-11-12T23:30Z"
+        }
+      ],
       "pass_reasons": [
         "no edge cleared the gates"
       ],
@@ -545,7 +644,7 @@
       },
       "market": {
         "spread_home": 9.5,
-        "total": 146.0,
+        "total": 146.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -557,7 +656,7 @@
       "anchored": {
         "margin_home": -8.0,
         "spread_shift": 1.5,
-        "total": 147.5,
+        "total": 148.0,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -640,7 +739,7 @@
         "rank_away": 2
       },
       "market": {
-        "spread_home": 25.5,
+        "spread_home": 28.0,
         "total": 132.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -651,7 +750,7 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": -24.0,
+        "margin_home": -26.5,
         "spread_shift": 1.5,
         "total": 134.0,
         "total_shift": 1.5,
@@ -685,7 +784,7 @@
       },
       "market": {
         "spread_home": 18.5,
-        "total": 141.5,
+        "total": 142.0,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -697,7 +796,7 @@
       "anchored": {
         "margin_home": -17.0,
         "spread_shift": 1.5,
-        "total": 143.0,
+        "total": 143.5,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -728,8 +827,8 @@
         "rank_away": 10
       },
       "market": {
-        "spread_home": 33.5,
-        "total": 132.5,
+        "spread_home": 38.5,
+        "total": 132.0,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -739,9 +838,9 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": -32.0,
+        "margin_home": -37.0,
         "spread_shift": 1.5,
-        "total": 134.0,
+        "total": 133.5,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -1229,7 +1328,7 @@
       },
       "market": {
         "spread_home": 22.5,
-        "total": 147.5,
+        "total": 147.0,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -1241,7 +1340,7 @@
       "anchored": {
         "margin_home": -21.0,
         "spread_shift": 1.5,
-        "total": 149.0,
+        "total": 148.5,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -1416,36 +1515,11 @@
       "start": "2026-11-13T03:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Arizona Wildcats +24.5",
-          "market": "spread",
-          "side": "away",
-          "book": "draftkings",
-          "price_american": -110,
-          "line": 24.5,
-          "fair_prob": 0.5392,
-          "fair_american": -117,
-          "edge": 0.0294,
-          "confidence": 9,
-          "unit_size": 0.5,
-          "risk": "Lean",
-          "reasoning": [
-            "Model margin +16.9 vs market +24.5 (home)",
-            "Anchored fair margin +23.0 vs line +24.5 (away)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401913056",
-          "matchup": "Arizona Wildcats @ UCLA Bruins",
-          "start": "2026-11-13T03:30Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 59.3,
         "home_score": 76.2,
@@ -1459,7 +1533,7 @@
         "rank_away": 64
       },
       "market": {
-        "spread_home": -24.5,
+        "spread_home": -27.5,
         "total": 140.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -1470,7 +1544,7 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": 23.0,
+        "margin_home": 26.0,
         "spread_shift": -1.5,
         "total": 139.69,
         "total_shift": -0.81,
