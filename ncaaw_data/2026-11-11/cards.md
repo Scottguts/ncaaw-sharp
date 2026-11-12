@@ -1,29 +1,23 @@
 # NCAAW Betting Card — 2026-11-11
 
-**1 play(s) · 0.5u total**
+## NO PLAYS
 
-## Western Kentucky Lady Toppers +46.5 (-110 draftkings)
-
-- **Game:** Western Kentucky Lady Toppers @ Vanderbilt Commodores
-- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 2.9%
-- **Confidence:** 9/10 · **Size:** 0.5u (Lean)
-- **Why:** Model margin +32.6 vs market +46.5 (home); Anchored fair margin +45.0 vs line +46.5 (away)
-- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+Nothing cleared the gates today. A quiet day is a correct day.
 
 ---
 
 ### Full slate
 
-- **Mercyhurst Lakers @ St. Bonaventure Bonnies** — model 60-70 (margin +9.3 home, total 130.2) · market: total 128.5 (consensus) · PASS: no market spread quoted by target/sharp books
-- **Eastern Illinois Panthers @ Saint Louis Billikens** — model 60-77 (margin +16.8 home, total 137.4) · market: home -7.5 (consensus) · total 124.5 (consensus) · PASS: no edge cleared the gates
-- **Toccoa Falls Eagles @ Georgia State Panthers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Idaho State Bengals @ Utah State Aggies** — model 61-68 (margin +6.9 home, total 128.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **Binghamton Bearcats @ Colgate Raiders** — model 62-59 (margin -2.9 home, total 120.4) · market: no line · PASS: no market line (nothing to anchor against)
-- **Drexel Dragons @ Virginia Cavaliers** — model 52-71 (margin +18.7 home, total 123.7) · market: no line · PASS: no market line (nothing to anchor against)
-- **West Florida Argonauts @ Florida State Seminoles** — model 56-88 (margin +32.2 home, total 143.7) · market: no line · PASS: no market line (nothing to anchor against)
-- **Georgetown Hoyas @ George Washington Revolutionaries** — model 58-57 (margin -1.0 home, total 115.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **UNC Greensboro Spartans @ Gardner-Webb Runnin' Bulldogs** — model 56-53 (margin -3.2 home, total 109.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **UMass Lowell River Hawks @ Boston College Eagles** — model 58-70 (margin +12.1 home, total 128.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Northwest Nazarene Nighthawks @ Oregon State Beavers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Nelson American Indian Warriors @ Utah Tech Trailblazers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Seattle U Redhawks @ Cal Poly Mustangs** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **New Mexico Lobos @ Fresno State Bulldogs** — model 65-62 (margin -3.0 home, total 127.0) · market: total 131.5 (consensus) · PASS: no market spread quoted by target/sharp books
+- **Colorado Buffaloes @ San Diego State Aztecs** — model 67-63 (margin -4.4 home, total 130.1) · market: home +7.5 (consensus) · total 113.5 (consensus) · PASS: no edge cleared the gates
+- **South Dakota State Jackrabbits @ Texas Longhorns** — model 59-76 (margin +16.7 home, total 135.0) · market: no line · PASS: no market line (nothing to anchor against)
+- **Western Kentucky Lady Toppers @ Vanderbilt Commodores** — model 50-83 (margin +32.6 home, total 133.0) · market: no line · PASS: no market line (nothing to anchor against)
+- **Evansville Purple Aces @ Kentucky Wildcats** — model 49-84 (margin +35.2 home, total 133.6) · market: no line · PASS: no market line (nothing to anchor against)
+- **UAlbany Great Danes @ Ole Miss Rebels** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **North Carolina Central Eagles @ North Carolina Tar Heels** — model 51-90 (margin +39.2 home, total 141.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Mount Vernon Nazarene Cougars @ Miami (OH) RedHawks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Houston Christian Huskies @ North Texas Mean Green** — model 56-72 (margin +15.8 home, total 128.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Incarnate Word Cardinals @ UTSA Roadrunners** — model 55-71 (margin +15.7 home, total 125.6) · market: no line · PASS: no market line (nothing to anchor against)
@@ -31,29 +25,35 @@
 - **Bethune-Cookman Wildcats @ BYU Cougars** — model 51-80 (margin +28.3 home, total 130.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Quinnipiac Bobcats @ St. John's Red Storm** — model 47-73 (margin +26.2 home, total 120.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **Oregon Ducks @ Vermont Catamounts** — model 71-55 (margin -16.8 home, total 126.0) · market: no line · PASS: no market line (nothing to anchor against)
+- **Mercyhurst Lakers @ St. Bonaventure Bonnies** — model 60-70 (margin +9.3 home, total 130.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Eastern Illinois Panthers @ Saint Louis Billikens** — model 60-77 (margin +16.8 home, total 137.4) · market: no line · PASS: no market line (nothing to anchor against)
+- **Toccoa Falls Eagles @ Georgia State Panthers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Eastern Michigan Eagles @ Robert Morris Colonials** — model 62-69 (margin +7.7 home, total 131.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Idaho State Bengals @ Utah State Aggies** — model 61-68 (margin +6.9 home, total 128.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Binghamton Bearcats @ Colgate Raiders** — model 62-59 (margin -2.9 home, total 120.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **George Mason Patriots @ Army Black Knights** — model 62-59 (margin -3.5 home, total 121.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Coppin State Eagles @ Hofstra Pride** — model 53-71 (margin +17.9 home, total 123.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **Jacksonville Dolphins @ Coastal Carolina Chanticleers** — model 70-77 (margin +6.2 home, total 146.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Navy Midshipmen @ James Madison Dukes** — model 65-72 (margin +6.6 home, total 136.9) · market: home -14.5 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
-- **Siena Saints @ Syracuse Orange** — model 65-81 (margin +16.6 home, total 145.8) · market: total 138.5 (consensus) · PASS: no market spread quoted by target/sharp books
+- **Navy Midshipmen @ James Madison Dukes** — model 65-72 (margin +6.6 home, total 136.9) · market: no line · PASS: no market line (nothing to anchor against)
+- **Siena Saints @ Syracuse Orange** — model 65-81 (margin +16.6 home, total 145.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **San Francisco Dons @ Air Force Falcons** — model 68-66 (margin -2.2 home, total 134.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Stony Brook Seawolves @ Niagara Purple Eagles** — model 68-60 (margin -7.4 home, total 127.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Mount St. Mary's Mountaineers @ Lehigh Mountain Hawks** — model 60-76 (margin +15.4 home, total 136.4) · market: no line · PASS: no market line (nothing to anchor against)
+- **Drexel Dragons @ Virginia Cavaliers** — model 52-71 (margin +18.7 home, total 123.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Marist Red Foxes @ Duquesne Dukes** — model 61-70 (margin +9.4 home, total 131.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **NJIT Highlanders @ Lafayette Leopards** — model 64-61 (margin -3.5 home, total 125.5) · market: no line · PASS: no market line (nothing to anchor against)
+- **West Florida Argonauts @ Florida State Seminoles** — model 56-88 (margin +32.2 home, total 143.7) · market: no line · PASS: no market line (nothing to anchor against)
+- **Georgetown Hoyas @ George Washington Revolutionaries** — model 58-57 (margin -1.0 home, total 115.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Fordham Rams @ Bucknell Bison** — model 64-56 (margin -7.7 home, total 119.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Radford Highlanders @ Campbell Fighting Camels** — model 62-58 (margin -3.6 home, total 120.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **Evansville Purple Aces @ Kentucky Wildcats** — model 49-84 (margin +35.2 home, total 133.6) · market: home -51.5 (consensus) · total 138.5 (consensus) · PASS: no edge cleared the gates
+- **UNC Greensboro Spartans @ Gardner-Webb Runnin' Bulldogs** — model 56-53 (margin -3.2 home, total 109.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **UMass Lowell River Hawks @ Boston College Eagles** — model 58-70 (margin +12.1 home, total 128.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Oakland Golden Grizzlies @ Michigan State Spartans** — model 59-81 (margin +21.9 home, total 139.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Temple Owls @ La Salle Explorers** — model 73-68 (margin -5.5 home, total 140.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Austin Peay Governors @ UCF Knights** — model 60-65 (margin +5.8 home, total 125.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Saint Joseph's Hawks @ Cincinnati Bearcats** — model 63-65 (margin +2.1 home, total 128.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **New Hampshire Wildcats @ Dartmouth Big Green** — model 55-60 (margin +5.5 home, total 114.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Kennesaw State Owls @ Georgia Lady Bulldogs** — model 54-76 (margin +21.4 home, total 129.6) · market: no line · PASS: no market line (nothing to anchor against)
-- **South Dakota State Jackrabbits @ Texas Longhorns** — model 59-76 (margin +16.7 home, total 135.0) · market: home -28.5 (consensus) · total 137.5 (consensus) · PASS: no edge cleared the gates
-- **UAlbany Great Danes @ Ole Miss Rebels** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **North Carolina Central Eagles @ North Carolina Tar Heels** — model 51-90 (margin +39.2 home, total 141.8) · market: home +45.5 (consensus) · total 136.5 (consensus) · PASS: no edge cleared the gates
 - **Cornell (IA) Rams @ Western Illinois Leathernecks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **East Tennessee State Buccaneers @ Elon Phoenix** — model 61-62 (margin +0.6 home, total 122.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Charleston Southern Buccaneers @ Mercer Bears** — model 58-66 (margin +7.7 home, total 124.2) · market: no line · PASS: no market line (nothing to anchor against)
@@ -68,11 +68,10 @@
 - **High Point Panthers @ East Carolina Pirates** — model 74-65 (margin -8.2 home, total 138.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Bryant Bulldogs @ Providence Friars** — model 58-67 (margin +9.5 home, total 124.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **Monmouth Hawks @ Rutgers Scarlet Knights** — model 57-73 (margin +15.9 home, total 130.6) · market: no line · PASS: no market line (nothing to anchor against)
-- **Liberty Flames @ NC State Wolfpack** — model 57-73 (margin +16.3 home, total 130.1) · market: home -17.5 (consensus) · total 137.5 (consensus) · PASS: no edge cleared the gates
-- **South Dakota Coyotes @ Creighton Bluejays** — model 58-70 (margin +12.0 home, total 127.4) · market: no line · PASS: no market line (nothing to anchor against)
-- **Western Kentucky Lady Toppers @ Vanderbilt Commodores** — model 50-83 (margin +32.6 home, total 133.0) · market: home -46.5 (consensus) · total 140.5 (consensus)
+- **Liberty Flames @ NC State Wolfpack** — model 57-73 (margin +16.3 home, total 130.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Creighton Bluejays @ South Dakota Coyotes** — model 70-58 (margin -12.0 home, total 127.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Green Bay Phoenix @ Illinois State Redbirds** — model 66-66 (margin -0.7 home, total 132.3) · market: no line · PASS: no market line (nothing to anchor against)
-- **Delaware Blue Hens @ Wisconsin Badgers** — model 53-78 (margin +25.2 home, total 131.9) · market: home -25.5 (consensus) · total 136.5 (consensus) · PASS: no edge cleared the gates
+- **Delaware Blue Hens @ Wisconsin Badgers** — model 53-78 (margin +25.2 home, total 131.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Troy Trojans @ Mississippi State Bulldogs** — model 67-83 (margin +15.8 home, total 150.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **Louisiana Ragin' Cajuns @ East Texas A&M Lions** — model 65-71 (margin +6.1 home, total 136.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **Abilene Christian Wildcats @ UT Rio Grande Valley Vaqueros** — model 69-59 (margin -10.1 home, total 128.2) · market: no line · PASS: no market line (nothing to anchor against)
@@ -80,10 +79,5 @@
 - **Sul Ross State Lobos @ Tarleton State Texans** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Warner Pacific Knights @ Portland Pilots** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Arkansas State Red Wolves @ Loyola Chicago Ramblers** — model 71-66 (margin -4.9 home, total 137.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Northwest Nazarene Nighthawks @ Oregon State Beavers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Nelson American Indian Warriors @ Utah Tech Trailblazers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Seattle U Redhawks @ Cal Poly Mustangs** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **New Mexico Lobos @ Fresno State Bulldogs** — model 65-62 (margin -3.0 home, total 127.0) · market: home -4.5 (consensus) · total 127.5 (consensus) · PASS: no edge cleared the gates
-- **Colorado Buffaloes @ San Diego State Aztecs** — model 67-63 (margin -4.4 home, total 130.1) · market: total 127.5 (consensus) · PASS: no market spread quoted by target/sharp books
 
-_Generated 2026-11-11T23:11:15Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-12T03:43:08Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
