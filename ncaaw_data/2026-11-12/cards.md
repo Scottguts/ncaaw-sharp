@@ -1,36 +1,50 @@
 # NCAAW Betting Card — 2026-11-12
 
-## NO PLAYS
+**2 play(s) · 1u total**
 
-Nothing cleared the gates today. A quiet day is a correct day.
+## Tulsa Golden Hurricane +24.5 (-110 draftkings)
+
+- **Game:** Oklahoma State Cowgirls @ Tulsa Golden Hurricane
+- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 2.9%
+- **Confidence:** 9/10 · **Size:** 0.5u (Lean)
+- **Why:** Model margin -12.6 vs market -24.5 (home); Anchored fair margin -23.0 vs line +24.5 (home)
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+
+## Arizona Wildcats +24.5 (-110 draftkings)
+
+- **Game:** Arizona Wildcats @ UCLA Bruins
+- **Market:** spread · **Fair:** 53.9% (-117) · **Edge:** 2.9%
+- **Confidence:** 9/10 · **Size:** 0.5u (Lean)
+- **Why:** Model margin +16.9 vs market +24.5 (home); Anchored fair margin +23.0 vs line +24.5 (away)
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
 
 ---
 
 ### Full slate
 
+- **Spalding Pelicans @ Southern Indiana Screaming Eagles** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Central Methodist Eagles @ SIU Edwardsville Cougars** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Morehead State Eagles @ Murray State Racers** — model 66-85 (margin +19.4 home, total 150.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Albany State Golden Rams @ Florida A&M Rattlers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Chattanooga Mocs @ Northern Kentucky Norse** — model 61-62 (margin +1.7 home, total 123.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **West Virginia State Yellow Jackets @ Marshall Thundering Herd** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **UNC Wilmington Seahawks @ Wake Forest Demon Deacons** — model 58-68 (margin +9.9 home, total 125.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **Spalding Pelicans @ Southern Indiana Screaming Eagles** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Central Methodist Eagles @ SIU Edwardsville Cougars** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Morehead State Eagles @ Murray State Racers** — model 66-85 (margin +19.4 home, total 150.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Portland State Vikings @ UC San Diego Tritons** — model 61-76 (margin +14.9 home, total 137.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Cal State Fullerton Titans @ UC Davis Aggies** — model 65-73 (margin +7.9 home, total 137.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Charleston Cougars @ California Golden Bears** — model 54-82 (margin +27.8 home, total 136.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **Holy Cross Crusaders @ Brown Bears** — model 62-61 (margin -0.8 home, total 122.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **Oklahoma State Cowgirls @ Tulsa Golden Hurricane** — model 78-65 (margin -12.6 home, total 142.7) · market: home +24.5 (consensus) · total 139.5 (consensus) · PASS: no edge cleared the gates
+- **Oklahoma State Cowgirls @ Tulsa Golden Hurricane** — model 78-65 (margin -12.6 home, total 142.7) · market: home +24.5 (consensus) · total 139.5 (consensus)
 - **Longwood Lancers @ Pennsylvania Quakers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Sacramento State Hornets @ Buffalo Bulls** — model 68-65 (margin -3.2 home, total 132.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Southern Illinois Salukis @ Eastern Kentucky Colonels** — model 64-72 (margin +8.4 home, total 136.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **Virginia Tech Hokies @ VCU Rams** — model 70-60 (margin -9.3 home, total 130.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Old Dominion Monarchs @ Richmond Spiders** — model 61-69 (margin +8.3 home, total 130.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **South Florida Bulls @ Florida Gators** — model 66-74 (margin +7.7 home, total 140.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **UConn Huskies @ Ohio State Buckeyes** — model 77-71 (margin -6.2 home, total 148.1) · market: home +9.5 (consensus) · total 145.5 (consensus) · PASS: no edge cleared the gates
+- **UConn Huskies @ Ohio State Buckeyes** — model 77-71 (margin -6.2 home, total 148.1) · market: home +9.5 (consensus) · total 146 (consensus) · PASS: no edge cleared the gates
 - **Western Carolina Catamounts @ UNC Asheville Bulldogs** — model 64-62 (margin -2.2 home, total 126.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **Middle Tennessee Blue Raiders @ Tennessee Lady Volunteers** — model 57-79 (margin +22.1 home, total 135.3) · market: no line · PASS: no market line (nothing to anchor against)
-- **South Carolina Gamecocks @ Clemson Tigers** — model 72-59 (margin -12.9 home, total 131.2) · market: home +24.5 (consensus) · total 132.5 (consensus) · PASS: no edge cleared the gates
-- **Michigan Wolverines @ Columbia Lions** — model 79-65 (margin -13.3 home, total 144.1) · market: home +16.5 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
+- **South Carolina Gamecocks @ Clemson Tigers** — model 72-59 (margin -12.9 home, total 131.2) · market: home +25.5 (consensus) · total 132.5 (consensus) · PASS: no edge cleared the gates
+- **Michigan Wolverines @ Columbia Lions** — model 79-65 (margin -13.3 home, total 144.1) · market: home +18.5 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
 - **Duke Blue Devils @ Norfolk State Spartans** — model 85-53 (margin -32.0 home, total 138.1) · market: home +33.5 (consensus) · total 132.5 (consensus) · PASS: no edge cleared the gates
 - **Merrimack Warriors @ Villanova Wildcats** — model 52-84 (margin +32.4 home, total 136.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **Rider Broncs @ Central Connecticut Blue Devils** — model 64-57 (margin -7.3 home, total 121.0) · market: no line · PASS: no market line (nothing to anchor against)
@@ -55,8 +69,8 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Arlington Baptist Patriots @ Lamar Cardinals** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Prairie View A&M Lady Panthers @ Baylor Bears** — model 45-94 (margin +49.7 home, total 138.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Texas Southern Tigers @ Rice Owls** — model 54-81 (margin +27.0 home, total 134.7) · market: no line · PASS: no market line (nothing to anchor against)
-- **Northern Iowa Panthers @ Iowa Hawkeyes** — model 53-83 (margin +30.4 home, total 136.0) · market: home -33.5 (consensus) · total 135.5 (consensus) · PASS: no edge cleared the gates
+- **Northern Iowa Panthers @ Iowa Hawkeyes** — model 53-83 (margin +30.4 home, total 136.0) · market: home -32.5 (consensus) · total 135.5 (consensus) · PASS: no edge cleared the gates
 - **Cal State Bakersfield Roadrunners @ Washington Huskies** — model 46-82 (margin +35.9 home, total 127.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Arizona Wildcats @ UCLA Bruins** — model 59-76 (margin +16.9 home, total 135.5) · market: home -24.5 (consensus) · total 140.5 (consensus) · PASS: no edge cleared the gates
+- **Arizona Wildcats @ UCLA Bruins** — model 59-76 (margin +16.9 home, total 135.5) · market: home -24.5 (consensus) · total 140.5 (consensus)
 
-_Generated 2026-11-12T16:21:57Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-12T18:47:36Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

@@ -1,46 +1,126 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T16:21:57.169656Z",
+  "generated_at": "2026-11-12T18:47:36.903117Z",
   "market_bias": {
     "n_spread_lines": 8,
     "n_total_lines": 8,
-    "mean_spread_delta": 3.11,
-    "mean_total_delta": 1.07
+    "mean_spread_delta": 3.61,
+    "mean_total_delta": 1.01
   },
   "odds_available": true,
   "n_games": 50,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
-  "shadow_cards": [
+  "n_cards": 2,
+  "total_units": 1.0,
+  "cards": [
     {
-      "bet_label": "Over 145.5",
-      "market": "total",
-      "side": "over",
+      "bet_label": "Tulsa Golden Hurricane +24.5",
+      "market": "spread",
+      "side": "home",
       "book": "draftkings",
       "price_american": -110,
-      "line": 145.5,
-      "fair_prob": 0.5314,
-      "fair_american": -113,
-      "edge": 0.0145,
-      "confidence": 6,
+      "line": 24.5,
+      "fair_prob": 0.5392,
+      "fair_american": -117,
+      "edge": 0.0294,
+      "confidence": 9,
       "unit_size": 0.5,
-      "risk": "Shadow",
+      "risk": "Lean",
       "reasoning": [
-        "Model total 148.1 vs market 145.5",
-        "Anchored fair total 147.0 vs line 145.5"
+        "Model margin -12.6 vs market -24.5 (home)",
+        "Anchored fair margin -23.0 vs line +24.5 (home)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401911739",
-      "matchup": "UConn Huskies @ Ohio State Buckeyes",
-      "start": "2026-11-12T23:30Z"
+      "espn_event_id": "401907049",
+      "matchup": "Oklahoma State Cowgirls @ Tulsa Golden Hurricane",
+      "start": "2026-11-12T23:00Z"
+    },
+    {
+      "bet_label": "Arizona Wildcats +24.5",
+      "market": "spread",
+      "side": "away",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 24.5,
+      "fair_prob": 0.5392,
+      "fair_american": -117,
+      "edge": 0.0294,
+      "confidence": 9,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model margin +16.9 vs market +24.5 (home)",
+        "Anchored fair margin +23.0 vs line +24.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401913056",
+      "matchup": "Arizona Wildcats @ UCLA Bruins",
+      "start": "2026-11-13T03:30Z"
     }
   ],
+  "shadow_cards": [],
   "games": [
+    {
+      "espn_event_id": "401929296",
+      "matchup": "Spalding Pelicans @ Southern Indiana Screaming Eagles",
+      "home_short": "Southern Indiana",
+      "away_short": "Spalding",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401928014",
+      "matchup": "Central Methodist Eagles @ SIU Edwardsville Cougars",
+      "home_short": "SIU Edwardsville",
+      "away_short": "Central Methodist",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401919709",
+      "matchup": "Morehead State Eagles @ Murray State Racers",
+      "home_short": "Murray State",
+      "away_short": "Morehead State",
+      "start": "2026-11-12T17:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 65.7,
+        "home_score": 85.1,
+        "spread": -19.4,
+        "total": 150.8,
+        "proj_poss": 72.3,
+        "margin_home": 19.4,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 92,
+        "rank_away": 304
+      }
+    },
     {
       "espn_event_id": "401930885",
       "matchup": "Albany State Golden Rams @ Florida A&M Rattlers",
@@ -119,60 +199,6 @@
         "games_away": 2,
         "rank_home": 111,
         "rank_away": 184
-      }
-    },
-    {
-      "espn_event_id": "401929296",
-      "matchup": "Spalding Pelicans @ Southern Indiana Screaming Eagles",
-      "home_short": "Southern Indiana",
-      "away_short": "Spalding",
-      "start": "2026-11-12T17:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401928014",
-      "matchup": "Central Methodist Eagles @ SIU Edwardsville Cougars",
-      "home_short": "SIU Edwardsville",
-      "away_short": "Central Methodist",
-      "start": "2026-11-12T17:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401919709",
-      "matchup": "Morehead State Eagles @ Murray State Racers",
-      "home_short": "Murray State",
-      "away_short": "Morehead State",
-      "start": "2026-11-12T17:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 65.7,
-        "home_score": 85.1,
-        "spread": -19.4,
-        "total": 150.8,
-        "proj_poss": 72.3,
-        "margin_home": 19.4,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 92,
-        "rank_away": 304
       }
     },
     {
@@ -287,11 +313,36 @@
       "start": "2026-11-12T23:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Tulsa Golden Hurricane +24.5",
+          "market": "spread",
+          "side": "home",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 24.5,
+          "fair_prob": 0.5392,
+          "fair_american": -117,
+          "edge": 0.0294,
+          "confidence": 9,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin -12.6 vs market -24.5 (home)",
+            "Anchored fair margin -23.0 vs line +24.5 (home)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401907049",
+          "matchup": "Oklahoma State Cowgirls @ Tulsa Golden Hurricane",
+          "start": "2026-11-12T23:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 77.6,
         "home_score": 65.0,
@@ -476,34 +527,7 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [
-        {
-          "bet_label": "Over 145.5",
-          "market": "total",
-          "side": "over",
-          "book": "draftkings",
-          "price_american": -110,
-          "line": 145.5,
-          "fair_prob": 0.5314,
-          "fair_american": -113,
-          "edge": 0.0145,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 148.1 vs market 145.5",
-            "Anchored fair total 147.0 vs line 145.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401911739",
-          "matchup": "UConn Huskies @ Ohio State Buckeyes",
-          "start": "2026-11-12T23:30Z"
-        }
-      ],
+      "shadow": [],
       "pass_reasons": [
         "no edge cleared the gates"
       ],
@@ -521,7 +545,7 @@
       },
       "market": {
         "spread_home": 9.5,
-        "total": 145.5,
+        "total": 146.0,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -533,7 +557,7 @@
       "anchored": {
         "margin_home": -8.0,
         "spread_shift": 1.5,
-        "total": 147.0,
+        "total": 147.5,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
@@ -616,7 +640,7 @@
         "rank_away": 2
       },
       "market": {
-        "spread_home": 24.5,
+        "spread_home": 25.5,
         "total": 132.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -627,7 +651,7 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": -23.0,
+        "margin_home": -24.0,
         "spread_shift": 1.5,
         "total": 134.0,
         "total_shift": 1.5,
@@ -660,7 +684,7 @@
         "rank_away": 6
       },
       "market": {
-        "spread_home": 16.5,
+        "spread_home": 18.5,
         "total": 141.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -671,7 +695,7 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": -15.0,
+        "margin_home": -17.0,
         "spread_shift": 1.5,
         "total": 143.0,
         "total_shift": 1.5,
@@ -1340,7 +1364,7 @@
         "rank_away": 140
       },
       "market": {
-        "spread_home": -33.5,
+        "spread_home": -32.5,
         "total": 135.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -1351,7 +1375,7 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": 32.0,
+        "margin_home": 31.0,
         "spread_shift": -1.5,
         "total": 137.0,
         "total_shift": 1.5,
@@ -1392,11 +1416,36 @@
       "start": "2026-11-13T03:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Arizona Wildcats +24.5",
+          "market": "spread",
+          "side": "away",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 24.5,
+          "fair_prob": 0.5392,
+          "fair_american": -117,
+          "edge": 0.0294,
+          "confidence": 9,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin +16.9 vs market +24.5 (home)",
+            "Anchored fair margin +23.0 vs line +24.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401913056",
+          "matchup": "Arizona Wildcats @ UCLA Bruins",
+          "start": "2026-11-13T03:30Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 59.3,
         "home_score": 76.2,
