@@ -1,39 +1,303 @@
 {
   "date": "2026-11-12",
-  "fetched_at": "2026-11-12T23:09:57.870741Z",
+  "fetched_at": "2026-11-13T03:20:24.695630Z",
   "games": [
     {
-      "espn_event_id": "401909684",
-      "start": "2026-11-12T21:30Z",
+      "espn_event_id": "401919981",
+      "start": "2026-11-13T01:30Z",
       "et_date": "2026-11-12",
-      "name": "Holy Cross Crusaders at Brown Bears",
+      "name": "Northern Iowa Panthers at Iowa Hawkeyes",
       "neutral_site": false,
       "conference_game": false,
       "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "225",
-        "location": "Brown",
-        "display_name": "Brown Bears",
-        "canon": "brown",
-        "conf": "Ivy",
-        "record": "1-2",
-        "score": "59",
+        "espn_id": "2294",
+        "location": "Iowa",
+        "display_name": "Iowa Hawkeyes",
+        "canon": "iowa",
+        "conf": "Big Ten",
+        "record": "2-1",
+        "score": "78",
         "winner": null
       },
       "away": {
-        "espn_id": "107",
-        "location": "Holy Cross",
-        "display_name": "Holy Cross Crusaders",
-        "canon": "holy cross",
-        "conf": "Patriot",
-        "record": "2-1",
-        "score": "72",
+        "espn_id": "2460",
+        "location": "Northern Iowa",
+        "display_name": "Northern Iowa Panthers",
+        "canon": "northern iowa",
+        "conf": "MVC",
+        "record": "1-1",
+        "score": "40",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "0b85a55a6e320055492af7840fafabff"
+      "odds_event_id": "e5ff84a417150a9d25f1fb05753cc63f"
+    },
+    {
+      "espn_event_id": "401921495",
+      "start": "2026-11-13T03:00Z",
+      "et_date": "2026-11-12",
+      "name": "Cal State Bakersfield Roadrunners at Washington Huskies",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "264",
+        "location": "Washington",
+        "display_name": "Washington Huskies",
+        "canon": "washington",
+        "conf": "Big Ten",
+        "record": "2-0",
+        "score": "33",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2934",
+        "location": "Cal State Bakersfield",
+        "display_name": "Cal State Bakersfield Roadrunners",
+        "canon": "cal st bakersfield",
+        "conf": "Big West",
+        "record": "1-0",
+        "score": "8",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915886",
+      "start": "2026-11-13T00:00Z",
+      "et_date": "2026-11-12",
+      "name": "South Carolina Gamecocks at Clemson Tigers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "228",
+        "location": "Clemson",
+        "display_name": "Clemson Tigers",
+        "canon": "clemson",
+        "conf": "ACC",
+        "record": "3-1",
+        "score": "44",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2579",
+        "location": "South Carolina",
+        "display_name": "South Carolina Gamecocks",
+        "canon": "south carolina",
+        "conf": "SEC",
+        "record": "3-0",
+        "score": "65",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919324",
+      "start": "2026-11-13T00:00Z",
+      "et_date": "2026-11-12",
+      "name": "Michigan Wolverines at Columbia Lions",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "171",
+        "location": "Columbia",
+        "display_name": "Columbia Lions",
+        "canon": "columbia",
+        "conf": "Ivy",
+        "record": "3-1",
+        "score": "58",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "130",
+        "location": "Michigan",
+        "display_name": "Michigan Wolverines",
+        "canon": "michigan",
+        "conf": "Big Ten",
+        "record": "3-0",
+        "score": "81",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401911739",
+      "start": "2026-11-12T23:30Z",
+      "et_date": "2026-11-12",
+      "name": "UConn Huskies at Ohio State Buckeyes",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "194",
+        "location": "Ohio State",
+        "display_name": "Ohio State Buckeyes",
+        "canon": "ohio st",
+        "conf": "Big Ten",
+        "record": "3-1",
+        "score": "55",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "41",
+        "location": "UConn",
+        "display_name": "UConn Huskies",
+        "canon": "uconn",
+        "conf": "Big East",
+        "record": "3-1",
+        "score": "87",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915908",
+      "start": "2026-11-13T00:00Z",
+      "et_date": "2026-11-12",
+      "name": "Duke Blue Devils at Norfolk State Spartans",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2450",
+        "location": "Norfolk State",
+        "display_name": "Norfolk State Spartans",
+        "canon": "norfolk st",
+        "conf": "MEAC",
+        "record": "1-3",
+        "score": "23",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "150",
+        "location": "Duke",
+        "display_name": "Duke Blue Devils",
+        "canon": "duke",
+        "conf": "ACC",
+        "record": "3-0",
+        "score": "85",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401906078",
+      "start": "2026-11-13T01:00Z",
+      "et_date": "2026-11-12",
+      "name": "Louisville Cardinals at Ball State Cardinals",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2050",
+        "location": "Ball State",
+        "display_name": "Ball State Cardinals",
+        "canon": "ball st",
+        "conf": "MAC",
+        "record": "1-2",
+        "score": "73",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "97",
+        "location": "Louisville",
+        "display_name": "Louisville Cardinals",
+        "canon": "louisville",
+        "conf": "ACC",
+        "record": "5-0",
+        "score": "94",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401917941",
+      "start": "2026-11-13T00:30Z",
+      "et_date": "2026-11-12",
+      "name": "SE Louisiana Lady Lions at TCU Horned Frogs",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2628",
+        "location": "TCU",
+        "display_name": "TCU Horned Frogs",
+        "canon": "tcu",
+        "conf": "Big 12",
+        "record": "5-0",
+        "score": "106",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2545",
+        "location": "SE Louisiana",
+        "display_name": "SE Louisiana Lady Lions",
+        "canon": "se louisiana",
+        "conf": "Southland",
+        "record": "1-2",
+        "score": "47",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401907049",
+      "start": "2026-11-12T23:00Z",
+      "et_date": "2026-11-12",
+      "name": "Oklahoma State Cowgirls at Tulsa Golden Hurricane",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "202",
+        "location": "Tulsa",
+        "display_name": "Tulsa Golden Hurricane",
+        "canon": "tulsa",
+        "conf": "Amer",
+        "record": "2-1",
+        "score": "64",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "197",
+        "location": "Oklahoma State",
+        "display_name": "Oklahoma State Cowgirls",
+        "canon": "oklahoma st",
+        "conf": "Big 12",
+        "record": "3-1",
+        "score": "62",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401930885",
@@ -366,37 +630,37 @@
       "odds_event_id": null
     },
     {
-      "espn_event_id": "401907049",
-      "start": "2026-11-12T23:00Z",
+      "espn_event_id": "401909684",
+      "start": "2026-11-12T21:30Z",
       "et_date": "2026-11-12",
-      "name": "Oklahoma State Cowgirls at Tulsa Golden Hurricane",
+      "name": "Holy Cross Crusaders at Brown Bears",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
-        "espn_id": "202",
-        "location": "Tulsa",
-        "display_name": "Tulsa Golden Hurricane",
-        "canon": "tulsa",
-        "conf": "Amer",
-        "record": "1-1",
-        "score": "6",
-        "winner": null
+        "espn_id": "225",
+        "location": "Brown",
+        "display_name": "Brown Bears",
+        "canon": "brown",
+        "conf": "Ivy",
+        "record": "1-3",
+        "score": "64",
+        "winner": false
       },
       "away": {
-        "espn_id": "197",
-        "location": "Oklahoma State",
-        "display_name": "Oklahoma State Cowgirls",
-        "canon": "oklahoma st",
-        "conf": "Big 12",
-        "record": "3-0",
-        "score": "4",
-        "winner": null
+        "espn_id": "107",
+        "location": "Holy Cross",
+        "display_name": "Holy Cross Crusaders",
+        "canon": "holy cross",
+        "conf": "Patriot",
+        "record": "3-1",
+        "score": "77",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "4fc136f82b31f3f71f99b2426400b7ee"
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401922325",
@@ -405,17 +669,17 @@
       "name": "Longwood Lancers at Pennsylvania Quakers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "219",
         "location": "Pennsylvania",
         "display_name": "Pennsylvania Quakers",
         "canon": "pennsylvania",
         "conf": "Ivy",
-        "record": "3-0",
-        "score": "7",
-        "winner": null
+        "record": "4-0",
+        "score": "72",
+        "winner": true
       },
       "away": {
         "espn_id": "2344",
@@ -423,9 +687,9 @@
         "display_name": "Longwood Lancers",
         "canon": "longwood",
         "conf": "Big South",
-        "record": "2-1",
-        "score": "11",
-        "winner": null
+        "record": "2-2",
+        "score": "53",
+        "winner": false
       },
       "torvik_home": false,
       "torvik_away": true,
@@ -438,17 +702,17 @@
       "name": "Sacramento State Hornets at Buffalo Bulls",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2084",
         "location": "Buffalo",
         "display_name": "Buffalo Bulls",
         "canon": "buffalo",
         "conf": "MAC",
-        "record": "1-1",
-        "score": "6",
-        "winner": null
+        "record": "2-1",
+        "score": "67",
+        "winner": true
       },
       "away": {
         "espn_id": "16",
@@ -456,9 +720,9 @@
         "display_name": "Sacramento State Hornets",
         "canon": "sacramento st",
         "conf": "Big West",
-        "record": "3-0",
-        "score": "5",
-        "winner": null
+        "record": "3-1",
+        "score": "60",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -471,17 +735,17 @@
       "name": "Southern Illinois Salukis at Eastern Kentucky Colonels",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2198",
         "location": "Eastern Kentucky",
         "display_name": "Eastern Kentucky Colonels",
         "canon": "eastern kentucky",
         "conf": "WAC",
-        "record": "3-1",
-        "score": "8",
-        "winner": null
+        "record": "4-1",
+        "score": "71",
+        "winner": true
       },
       "away": {
         "espn_id": "79",
@@ -489,9 +753,9 @@
         "display_name": "Southern Illinois Salukis",
         "canon": "southern illinois",
         "conf": "MVC",
-        "record": "0-2",
-        "score": "6",
-        "winner": null
+        "record": "0-3",
+        "score": "57",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -504,17 +768,17 @@
       "name": "Virginia Tech Hokies at VCU Rams",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2670",
         "location": "VCU",
         "display_name": "VCU Rams",
         "canon": "vcu",
         "conf": "A10",
-        "record": "1-0",
-        "score": "3",
-        "winner": null
+        "record": "1-1",
+        "score": "66",
+        "winner": false
       },
       "away": {
         "espn_id": "259",
@@ -522,9 +786,9 @@
         "display_name": "Virginia Tech Hokies",
         "canon": "virginia tech",
         "conf": "ACC",
-        "record": "3-0",
-        "score": "8",
-        "winner": null
+        "record": "4-0",
+        "score": "77",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -537,17 +801,17 @@
       "name": "Old Dominion Monarchs at Richmond Spiders",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "257",
         "location": "Richmond",
         "display_name": "Richmond Spiders",
         "canon": "richmond",
         "conf": "A10",
-        "record": "1-2",
-        "score": "10",
-        "winner": null
+        "record": "2-2",
+        "score": "90",
+        "winner": true
       },
       "away": {
         "espn_id": "295",
@@ -555,9 +819,9 @@
         "display_name": "Old Dominion Monarchs",
         "canon": "old dominion",
         "conf": "Sun Belt",
-        "record": "3-0",
-        "score": "8",
-        "winner": null
+        "record": "3-1",
+        "score": "67",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -570,17 +834,17 @@
       "name": "South Florida Bulls at Florida Gators",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "57",
         "location": "Florida",
         "display_name": "Florida Gators",
         "canon": "florida",
         "conf": "SEC",
-        "record": "3-0",
-        "score": "3",
-        "winner": null
+        "record": "3-1",
+        "score": "70",
+        "winner": false
       },
       "away": {
         "espn_id": "58",
@@ -588,46 +852,13 @@
         "display_name": "South Florida Bulls",
         "canon": "south florida",
         "conf": "Amer",
-        "record": "2-1",
-        "score": "11",
-        "winner": null
+        "record": "3-1",
+        "score": "72",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401911739",
-      "start": "2026-11-12T23:30Z",
-      "et_date": "2026-11-12",
-      "name": "UConn Huskies at Ohio State Buckeyes",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "194",
-        "location": "Ohio State",
-        "display_name": "Ohio State Buckeyes",
-        "canon": "ohio st",
-        "conf": "Big Ten",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "41",
-        "location": "UConn",
-        "display_name": "UConn Huskies",
-        "canon": "uconn",
-        "conf": "Big East",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "6e3cd49d77335247016bb2b8e8733e1a"
     },
     {
       "espn_event_id": "401927055",
@@ -636,17 +867,17 @@
       "name": "Western Carolina Catamounts at UNC Asheville Bulldogs",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2427",
         "location": "UNC Asheville",
         "display_name": "UNC Asheville Bulldogs",
         "canon": "unc asheville",
         "conf": "Big South",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "63",
+        "winner": false
       },
       "away": {
         "espn_id": "2717",
@@ -654,9 +885,9 @@
         "display_name": "Western Carolina Catamounts",
         "canon": "western carolina",
         "conf": "SC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "73",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -669,17 +900,17 @@
       "name": "Middle Tennessee Blue Raiders at Tennessee Lady Volunteers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2633",
         "location": "Tennessee",
         "display_name": "Tennessee Lady Volunteers",
         "canon": "tennessee",
         "conf": "SEC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "110",
+        "winner": true
       },
       "away": {
         "espn_id": "2393",
@@ -687,112 +918,13 @@
         "display_name": "Middle Tennessee Blue Raiders",
         "canon": "middle tennessee",
         "conf": "CUSA",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
+        "record": "1-2",
+        "score": "64",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401915886",
-      "start": "2026-11-13T00:00Z",
-      "et_date": "2026-11-12",
-      "name": "South Carolina Gamecocks at Clemson Tigers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "228",
-        "location": "Clemson",
-        "display_name": "Clemson Tigers",
-        "canon": "clemson",
-        "conf": "ACC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2579",
-        "location": "South Carolina",
-        "display_name": "South Carolina Gamecocks",
-        "canon": "south carolina",
-        "conf": "SEC",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "4a531cbd9b7e86839c8fc72a3cd8218f"
-    },
-    {
-      "espn_event_id": "401919324",
-      "start": "2026-11-13T00:00Z",
-      "et_date": "2026-11-12",
-      "name": "Michigan Wolverines at Columbia Lions",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "171",
-        "location": "Columbia",
-        "display_name": "Columbia Lions",
-        "canon": "columbia",
-        "conf": "Ivy",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "130",
-        "location": "Michigan",
-        "display_name": "Michigan Wolverines",
-        "canon": "michigan",
-        "conf": "Big Ten",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "5d6749cef4657755cc12a03f987df8e7"
-    },
-    {
-      "espn_event_id": "401915908",
-      "start": "2026-11-13T00:00Z",
-      "et_date": "2026-11-12",
-      "name": "Duke Blue Devils at Norfolk State Spartans",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2450",
-        "location": "Norfolk State",
-        "display_name": "Norfolk State Spartans",
-        "canon": "norfolk st",
-        "conf": "MEAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "150",
-        "location": "Duke",
-        "display_name": "Duke Blue Devils",
-        "canon": "duke",
-        "conf": "ACC",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "95e542fefc908c3a542c7d2ab638fa6f"
     },
     {
       "espn_event_id": "401923470",
@@ -801,17 +933,17 @@
       "name": "Merrimack Warriors at Villanova Wildcats",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "222",
         "location": "Villanova",
         "display_name": "Villanova Wildcats",
         "canon": "villanova",
         "conf": "Big East",
-        "record": "0-2",
-        "score": "0",
-        "winner": null
+        "record": "1-2",
+        "score": "97",
+        "winner": true
       },
       "away": {
         "espn_id": "2771",
@@ -819,9 +951,9 @@
         "display_name": "Merrimack Warriors",
         "canon": "merrimack",
         "conf": "MAAC",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
+        "record": "0-4",
+        "score": "44",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -834,17 +966,17 @@
       "name": "Rider Broncs at Central Connecticut Blue Devils",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2115",
         "location": "Central Connecticut",
         "display_name": "Central Connecticut Blue Devils",
         "canon": "central connecticut",
         "conf": "NEC",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
+        "record": "0-4",
+        "score": "45",
+        "winner": false
       },
       "away": {
         "espn_id": "2520",
@@ -852,9 +984,9 @@
         "display_name": "Rider Broncs",
         "canon": "rider",
         "conf": "MAAC",
-        "record": "0-1",
-        "score": "0",
-        "winner": null
+        "record": "1-1",
+        "score": "56",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -867,17 +999,17 @@
       "name": "North Dakota Fighting Hawks at Milwaukee Panthers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "270",
         "location": "Milwaukee",
         "display_name": "Milwaukee Panthers",
         "canon": "milwaukee",
         "conf": "Horz",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "77",
+        "winner": true
       },
       "away": {
         "espn_id": "155",
@@ -885,9 +1017,9 @@
         "display_name": "North Dakota Fighting Hawks",
         "canon": "north dakota",
         "conf": "Summit",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
+        "record": "1-2",
+        "score": "49",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -900,17 +1032,17 @@
       "name": "North Dakota State Bison at Butler Bulldogs",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2086",
         "location": "Butler",
         "display_name": "Butler Bulldogs",
         "canon": "butler",
         "conf": "Big East",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "68",
+        "winner": true
       },
       "away": {
         "espn_id": "2449",
@@ -918,9 +1050,9 @@
         "display_name": "North Dakota State Bison",
         "canon": "north dakota st",
         "conf": "Summit",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "61",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -933,17 +1065,17 @@
       "name": "Jackson State Lady Tigers at Southern Miss Lady Eagles",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2572",
         "location": "Southern Miss",
         "display_name": "Southern Miss Lady Eagles",
         "canon": "southern miss",
         "conf": "Sun Belt",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
+        "record": "3-1",
+        "score": "73",
+        "winner": true
       },
       "away": {
         "espn_id": "2296",
@@ -951,9 +1083,9 @@
         "display_name": "Jackson State Lady Tigers",
         "canon": "jackson st",
         "conf": "SWAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "60",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -966,17 +1098,17 @@
       "name": "Mississippi Valley State Devilettes at Lipscomb Bisons",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "288",
         "location": "Lipscomb",
         "display_name": "Lipscomb Bisons",
         "canon": "lipscomb",
         "conf": "ASUN",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "87",
+        "winner": true
       },
       "away": {
         "espn_id": "2400",
@@ -984,9 +1116,9 @@
         "display_name": "Mississippi Valley State Devilettes",
         "canon": "mississippi valley st",
         "conf": "SWAC",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
+        "record": "0-4",
+        "score": "55",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -999,17 +1131,17 @@
       "name": "Rhode Island Rams at Wagner Seahawks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2681",
         "location": "Wagner",
         "display_name": "Wagner Seahawks",
         "canon": "wagner",
         "conf": "NEC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "38",
+        "winner": false
       },
       "away": {
         "espn_id": "227",
@@ -1017,9 +1149,9 @@
         "display_name": "Rhode Island Rams",
         "canon": "rhode island",
         "conf": "A10",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "88",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1032,17 +1164,17 @@
       "name": "Manhattan Jaspers at Fairleigh Dickinson Knights",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "161",
         "location": "Fairleigh Dickinson",
         "display_name": "Fairleigh Dickinson Knights",
         "canon": "fairleigh dickinson",
         "conf": "NEC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "58",
+        "winner": true
       },
       "away": {
         "espn_id": "2363",
@@ -1050,9 +1182,9 @@
         "display_name": "Manhattan Jaspers",
         "canon": "manhattan",
         "conf": "MAAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "55",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1065,17 +1197,17 @@
       "name": "Saint Peter's Peacocks at Miami Hurricanes",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2390",
         "location": "Miami",
         "display_name": "Miami Hurricanes",
         "canon": "miami",
         "conf": "ACC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "78",
+        "winner": true
       },
       "away": {
         "espn_id": "2612",
@@ -1083,9 +1215,9 @@
         "display_name": "Saint Peter's Peacocks",
         "canon": "saint peters",
         "conf": "MAAC",
-        "record": "0-2",
-        "score": "0",
-        "winner": null
+        "record": "0-3",
+        "score": "46",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1098,17 +1230,17 @@
       "name": "Maryland Eastern Shore Hawks at Georgia Tech Yellow Jackets",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "59",
         "location": "Georgia Tech",
         "display_name": "Georgia Tech Yellow Jackets",
         "canon": "georgia tech",
         "conf": "ACC",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
+        "record": "3-1",
+        "score": "89",
+        "winner": true
       },
       "away": {
         "espn_id": "2379",
@@ -1116,9 +1248,9 @@
         "display_name": "Maryland Eastern Shore Hawks",
         "canon": "maryland eastern shore",
         "conf": "MEAC",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
+        "record": "1-2",
+        "score": "58",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1131,17 +1263,17 @@
       "name": "Fairfield Stags at Seton Hall Pirates",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2550",
         "location": "Seton Hall",
         "display_name": "Seton Hall Pirates",
         "canon": "seton hall",
         "conf": "Big East",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
+        "record": "2-1",
+        "score": "67",
+        "winner": false
       },
       "away": {
         "espn_id": "2217",
@@ -1149,9 +1281,9 @@
         "display_name": "Fairfield Stags",
         "canon": "fairfield",
         "conf": "MAAC",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
+        "record": "3-0",
+        "score": "69",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1164,17 +1296,17 @@
       "name": "Alabama Crimson Tide at Memphis Tigers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "235",
         "location": "Memphis",
         "display_name": "Memphis Tigers",
         "canon": "memphis",
         "conf": "Amer",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "75",
+        "winner": true
       },
       "away": {
         "espn_id": "333",
@@ -1182,46 +1314,13 @@
         "display_name": "Alabama Crimson Tide",
         "canon": "alabama",
         "conf": "SEC",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
+        "record": "4-1",
+        "score": "70",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401917941",
-      "start": "2026-11-13T00:30Z",
-      "et_date": "2026-11-12",
-      "name": "SE Louisiana Lady Lions at TCU Horned Frogs",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2628",
-        "location": "TCU",
-        "display_name": "TCU Horned Frogs",
-        "canon": "tcu",
-        "conf": "Big 12",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2545",
-        "location": "SE Louisiana",
-        "display_name": "SE Louisiana Lady Lions",
-        "canon": "se louisiana",
-        "conf": "Southland",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": "c977e6b5d161018f13a53ab60117a997"
     },
     {
       "espn_event_id": "401929046",
@@ -1230,17 +1329,17 @@
       "name": "UT Martin Skyhawks at Missouri Tigers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "142",
         "location": "Missouri",
         "display_name": "Missouri Tigers",
         "canon": "missouri",
         "conf": "SEC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "103",
+        "winner": true
       },
       "away": {
         "espn_id": "2630",
@@ -1248,9 +1347,9 @@
         "display_name": "UT Martin Skyhawks",
         "canon": "ut martin",
         "conf": "OVC",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "59",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1263,17 +1362,17 @@
       "name": "Arkansas-Pine Bluff Golden Lions at Arkansas Razorbacks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "8",
         "location": "Arkansas",
         "display_name": "Arkansas Razorbacks",
         "canon": "arkansas",
         "conf": "SEC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "95",
+        "winner": true
       },
       "away": {
         "espn_id": "2029",
@@ -1281,9 +1380,9 @@
         "display_name": "Arkansas-Pine Bluff Golden Lions",
         "canon": "arkansas pine bluff",
         "conf": "SWAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "90",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1296,17 +1395,17 @@
       "name": "Northwestern State Lady Demons at Louisiana Tech Lady Techsters",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2348",
         "location": "Louisiana Tech",
         "display_name": "Louisiana Tech Lady Techsters",
         "canon": "louisiana tech",
         "conf": "Sun Belt",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "78",
+        "winner": true
       },
       "away": {
         "espn_id": "2466",
@@ -1314,9 +1413,9 @@
         "display_name": "Northwestern State Lady Demons",
         "canon": "northwestern st",
         "conf": "Southland",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "51",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1329,17 +1428,17 @@
       "name": "Howard Bison at Iowa State Cyclones",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "66",
         "location": "Iowa State",
         "display_name": "Iowa State Cyclones",
         "canon": "iowa st",
         "conf": "Big 12",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "77",
+        "winner": true
       },
       "away": {
         "espn_id": "47",
@@ -1347,9 +1446,9 @@
         "display_name": "Howard Bison",
         "canon": "howard",
         "conf": "MEAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "55",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1362,17 +1461,17 @@
       "name": "LSU New Orleans Privateers at Tulane Green Wave",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2655",
         "location": "Tulane",
         "display_name": "Tulane Green Wave",
         "canon": "tulane",
         "conf": "Amer",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
+        "record": "2-1",
+        "score": "101",
+        "winner": true
       },
       "away": {
         "espn_id": "2443",
@@ -1380,46 +1479,13 @@
         "display_name": "LSU New Orleans Privateers",
         "canon": "new orleans",
         "conf": "Southland",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
+        "record": "0-4",
+        "score": "61",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401906078",
-      "start": "2026-11-13T01:00Z",
-      "et_date": "2026-11-12",
-      "name": "Louisville Cardinals at Ball State Cardinals",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2050",
-        "location": "Ball State",
-        "display_name": "Ball State Cardinals",
-        "canon": "ball st",
-        "conf": "MAC",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "97",
-        "location": "Louisville",
-        "display_name": "Louisville Cardinals",
-        "canon": "louisville",
-        "conf": "ACC",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "94d56d1e89eedc955f6d23b544a50745"
     },
     {
       "espn_event_id": "401927047",
@@ -1428,17 +1494,17 @@
       "name": "North Florida Ospreys at Little Rock Trojans",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2031",
         "location": "Little Rock",
         "display_name": "Little Rock Trojans",
         "canon": "little rock",
         "conf": "WAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "1-3",
+        "score": "64",
+        "winner": false
       },
       "away": {
         "espn_id": "2454",
@@ -1446,9 +1512,9 @@
         "display_name": "North Florida Ospreys",
         "canon": "north florida",
         "conf": "ASUN",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
+        "record": "3-1",
+        "score": "71",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1461,17 +1527,17 @@
       "name": "Arlington Baptist Patriots at Lamar Cardinals",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2320",
         "location": "Lamar",
         "display_name": "Lamar Cardinals",
         "canon": "lamar",
         "conf": "Southland",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
+        "record": "2-2",
+        "score": "107",
+        "winner": true
       },
       "away": {
         "espn_id": "3166",
@@ -1480,8 +1546,8 @@
         "canon": "arlington baptist",
         "conf": "",
         "record": null,
-        "score": "0",
-        "winner": null
+        "score": "25",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
@@ -1494,17 +1560,17 @@
       "name": "Prairie View A&M Lady Panthers at Baylor Bears",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "239",
         "location": "Baylor",
         "display_name": "Baylor Bears",
         "canon": "baylor",
         "conf": "Big 12",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "121",
+        "winner": true
       },
       "away": {
         "espn_id": "2504",
@@ -1512,9 +1578,9 @@
         "display_name": "Prairie View A&M Lady Panthers",
         "canon": "prairie view a&m",
         "conf": "SWAC",
-        "record": "1-0",
-        "score": "0",
-        "winner": null
+        "record": "1-1",
+        "score": "43",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1527,17 +1593,17 @@
       "name": "Texas Southern Tigers at Rice Owls",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "242",
         "location": "Rice",
         "display_name": "Rice Owls",
         "canon": "rice",
         "conf": "Amer",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "71",
+        "winner": true
       },
       "away": {
         "espn_id": "2640",
@@ -1545,75 +1611,9 @@
         "display_name": "Texas Southern Tigers",
         "canon": "texas southern",
         "conf": "SWAC",
-        "record": "0-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919981",
-      "start": "2026-11-13T01:30Z",
-      "et_date": "2026-11-12",
-      "name": "Northern Iowa Panthers at Iowa Hawkeyes",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2294",
-        "location": "Iowa",
-        "display_name": "Iowa Hawkeyes",
-        "canon": "iowa",
-        "conf": "Big Ten",
-        "record": "2-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2460",
-        "location": "Northern Iowa",
-        "display_name": "Northern Iowa Panthers",
-        "canon": "northern iowa",
-        "conf": "MVC",
-        "record": "1-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "e5ff84a417150a9d25f1fb05753cc63f"
-    },
-    {
-      "espn_event_id": "401921495",
-      "start": "2026-11-13T03:00Z",
-      "et_date": "2026-11-12",
-      "name": "Cal State Bakersfield Roadrunners at Washington Huskies",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "264",
-        "location": "Washington",
-        "display_name": "Washington Huskies",
-        "canon": "washington",
-        "conf": "Big Ten",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2934",
-        "location": "Cal State Bakersfield",
-        "display_name": "Cal State Bakersfield Roadrunners",
-        "canon": "cal st bakersfield",
-        "conf": "Big West",
-        "record": "1-0",
-        "score": "0",
-        "winner": null
+        "record": "0-3",
+        "score": "46",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
