@@ -1,18 +1,72 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T12:40:53.256374Z",
+  "generated_at": "2026-11-13T16:25:16.827957Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 4,
+    "n_total_lines": 4,
+    "mean_spread_delta": -12.18,
+    "mean_total_delta": -1.88
   },
   "odds_available": true,
   "n_games": 37,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
-  "shadow_cards": [],
+  "n_cards": 1,
+  "total_units": 1.5,
+  "cards": [
+    {
+      "bet_label": "Oral Roberts Golden Eagles +54.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -106,
+      "line": 54.5,
+      "fair_prob": 0.5425,
+      "fair_american": -119,
+      "edge": 0.0542,
+      "confidence": 10,
+      "unit_size": 1.5,
+      "risk": "Strong",
+      "reasoning": [
+        "Model margin +33.9 vs market +54.5 (home)",
+        "Anchored fair margin +53.0 vs line +54.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401918773",
+      "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+      "start": "2026-11-13T16:30Z"
+    }
+  ],
+  "shadow_cards": [
+    {
+      "bet_label": "Over 165.5",
+      "market": "total",
+      "side": "over",
+      "book": "ballybet",
+      "price_american": -109,
+      "line": 165.5,
+      "fair_prob": 0.5314,
+      "fair_american": -113,
+      "edge": 0.0189,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 165.8 vs market 165.5",
+        "Anchored fair total 167.0 vs line 165.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401918773",
+      "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+      "start": "2026-11-13T16:30Z"
+    }
+  ],
   "games": [
     {
       "espn_event_id": "401920563",
@@ -76,11 +130,63 @@
       "start": "2026-11-13T16:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Oral Roberts Golden Eagles +54.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -106,
+          "line": 54.5,
+          "fair_prob": 0.5425,
+          "fair_american": -119,
+          "edge": 0.0542,
+          "confidence": 10,
+          "unit_size": 1.5,
+          "risk": "Strong",
+          "reasoning": [
+            "Model margin +33.9 vs market +54.5 (home)",
+            "Anchored fair margin +53.0 vs line +54.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918773",
+          "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+          "start": "2026-11-13T16:30Z"
+        }
       ],
+      "shadow": [
+        {
+          "bet_label": "Over 165.5",
+          "market": "total",
+          "side": "over",
+          "book": "ballybet",
+          "price_american": -109,
+          "line": 165.5,
+          "fair_prob": 0.5314,
+          "fair_american": -113,
+          "edge": 0.0189,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 165.8 vs market 165.5",
+            "Anchored fair total 167.0 vs line 165.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918773",
+          "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+          "start": "2026-11-13T16:30Z"
+        }
+      ],
+      "pass_reasons": [],
       "model": {
         "away_score": 66.0,
         "home_score": 99.8,
@@ -92,6 +198,24 @@
         "games_away": 4,
         "rank_home": 14,
         "rank_away": 239
+      },
+      "market": {
+        "spread_home": -54.5,
+        "total": 165.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 53.0,
+        "spread_shift": -1.5,
+        "total": 167.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -133,7 +257,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 69.2,
@@ -146,6 +270,24 @@
         "games_away": 3,
         "rank_home": 145,
         "rank_away": 153
+      },
+      "market": {
+        "spread_home": -2.5,
+        "total": 144.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 4.0,
+        "spread_shift": 1.5,
+        "total": 146.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -277,7 +419,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 63.1,
@@ -290,6 +432,24 @@
         "games_away": 3,
         "rank_home": 31,
         "rank_away": 112
+      },
+      "market": {
+        "spread_home": -20.5,
+        "total": 143.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 19.0,
+        "spread_shift": -1.5,
+        "total": 143.69,
+        "total_shift": 0.19,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -423,7 +583,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 51.9,
@@ -436,6 +596,24 @@
         "games_away": 4,
         "rank_home": 4,
         "rank_away": 309
+      },
+      "market": {
+        "spread_home": -64.5,
+        "total": 147.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 63.0,
+        "spread_shift": -1.5,
+        "total": 149.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
