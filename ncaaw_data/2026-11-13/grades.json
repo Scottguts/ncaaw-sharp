@@ -1,61 +1,33 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T16:25:16.827957Z",
+  "generated_at": "2026-11-13T18:28:27.682767Z",
   "market_bias": {
-    "n_spread_lines": 4,
-    "n_total_lines": 4,
-    "mean_spread_delta": -12.18,
-    "mean_total_delta": -1.88
+    "n_spread_lines": 3,
+    "n_total_lines": 5,
+    "mean_spread_delta": -11.1,
+    "mean_total_delta": 3.6
   },
   "odds_available": true,
   "n_games": 37,
   "n_cards": 1,
-  "total_units": 1.5,
+  "total_units": 1.0,
   "cards": [
     {
-      "bet_label": "Oral Roberts Golden Eagles +54.5",
+      "bet_label": "Oral Roberts Golden Eagles +37.5",
       "market": "spread",
       "side": "away",
       "book": "ballybet",
-      "price_american": -106,
-      "line": 54.5,
+      "price_american": -109,
+      "line": 37.5,
       "fair_prob": 0.5425,
       "fair_american": -119,
-      "edge": 0.0542,
-      "confidence": 10,
-      "unit_size": 1.5,
-      "risk": "Strong",
-      "reasoning": [
-        "Model margin +33.9 vs market +54.5 (home)",
-        "Anchored fair margin +53.0 vs line +54.5 (away)"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401918773",
-      "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
-      "start": "2026-11-13T16:30Z"
-    }
-  ],
-  "shadow_cards": [
-    {
-      "bet_label": "Over 165.5",
-      "market": "total",
-      "side": "over",
-      "book": "ballybet",
-      "price_american": -109,
-      "line": 165.5,
-      "fair_prob": 0.5314,
-      "fair_american": -113,
-      "edge": 0.0189,
+      "edge": 0.0402,
       "confidence": 7,
-      "unit_size": 0.5,
-      "risk": "Shadow",
+      "unit_size": 1.0,
+      "risk": "Standard",
       "reasoning": [
-        "Model total 165.8 vs market 165.5",
-        "Anchored fair total 167.0 vs line 165.5"
+        "Model margin +33.9 vs market +37.5 (home)",
+        "Anchored fair margin +36.0 vs line +37.5 (away)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
@@ -67,7 +39,201 @@
       "start": "2026-11-13T16:30Z"
     }
   ],
+  "shadow_cards": [],
   "games": [
+    {
+      "espn_event_id": "401918773",
+      "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+      "home_short": "Oklahoma",
+      "away_short": "Oral Roberts",
+      "start": "2026-11-13T16:30Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [
+        {
+          "bet_label": "Oral Roberts Golden Eagles +37.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -109,
+          "line": 37.5,
+          "fair_prob": 0.5425,
+          "fair_american": -119,
+          "edge": 0.0402,
+          "confidence": 7,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +33.9 vs market +37.5 (home)",
+            "Anchored fair margin +36.0 vs line +37.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918773",
+          "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
+          "start": "2026-11-13T16:30Z"
+        }
+      ],
+      "shadow": [],
+      "pass_reasons": [],
+      "model": {
+        "away_score": 66.0,
+        "home_score": 99.8,
+        "spread": -33.9,
+        "total": 165.8,
+        "proj_poss": 77.3,
+        "margin_home": 33.9,
+        "games_home": 3,
+        "games_away": 4,
+        "rank_home": 14,
+        "rank_away": 239
+      },
+      "market": {
+        "spread_home": -37.5,
+        "total": 153.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 36.0,
+        "spread_shift": -1.5,
+        "total": 155.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
+      "espn_event_id": "401927947",
+      "matchup": "Stephens STEPHENS @ Lindenwood Lions",
+      "home_short": "Lindenwood",
+      "away_short": "Stephens",
+      "start": "2026-11-13T17:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401919663",
+      "matchup": "Troy Trojans @ Belmont Bruins",
+      "home_short": "Belmont",
+      "away_short": "Troy",
+      "start": "2026-11-13T17:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market spread quoted by target/sharp books"
+      ],
+      "model": {
+        "away_score": 69.2,
+        "home_score": 73.3,
+        "spread": -4.1,
+        "total": 142.5,
+        "proj_poss": 73.7,
+        "margin_home": 4.1,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 145,
+        "rank_away": 153
+      },
+      "market": {
+        "spread_home": null,
+        "total": 129.5,
+        "spread_src": null,
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "total": 131.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
+      "espn_event_id": "401920440",
+      "matchup": "Texas A&M-Corpus Christi Islanders @ Texas State Bobcats",
+      "home_short": "Texas State",
+      "away_short": "Texas A&M-Corpus Christi",
+      "start": "2026-11-13T17:30Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 55.3,
+        "home_score": 71.6,
+        "spread": -16.4,
+        "total": 126.9,
+        "proj_poss": 69.0,
+        "margin_home": 16.4,
+        "games_home": 2,
+        "games_away": 2,
+        "rank_home": 128,
+        "rank_away": 327
+      }
+    },
+    {
+      "espn_event_id": "401918584",
+      "matchup": "Bethune-Cookman Wildcats @ Utah State Aggies",
+      "home_short": "Utah State",
+      "away_short": "Bethune-Cookman",
+      "start": "2026-11-13T18:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market spread quoted by target/sharp books"
+      ],
+      "model": {
+        "away_score": 56.0,
+        "home_score": 67.0,
+        "spread": -11.0,
+        "total": 123.0,
+        "proj_poss": 69.5,
+        "margin_home": 11.0,
+        "games_home": 4,
+        "games_away": 4,
+        "rank_home": 205,
+        "rank_away": 310
+      },
+      "market": {
+        "spread_home": null,
+        "total": 124.5,
+        "spread_src": null,
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.89,
+        "total": 17.46
+      },
+      "anchored": {
+        "total": 126.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
+      }
+    },
     {
       "espn_event_id": "401920563",
       "matchup": "Towson Tigers @ Loyola Maryland Greyhounds",
@@ -123,102 +289,6 @@
       ]
     },
     {
-      "espn_event_id": "401918773",
-      "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
-      "home_short": "Oklahoma",
-      "away_short": "Oral Roberts",
-      "start": "2026-11-13T16:30Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Oral Roberts Golden Eagles +54.5",
-          "market": "spread",
-          "side": "away",
-          "book": "ballybet",
-          "price_american": -106,
-          "line": 54.5,
-          "fair_prob": 0.5425,
-          "fair_american": -119,
-          "edge": 0.0542,
-          "confidence": 10,
-          "unit_size": 1.5,
-          "risk": "Strong",
-          "reasoning": [
-            "Model margin +33.9 vs market +54.5 (home)",
-            "Anchored fair margin +53.0 vs line +54.5 (away)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401918773",
-          "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
-          "start": "2026-11-13T16:30Z"
-        }
-      ],
-      "shadow": [
-        {
-          "bet_label": "Over 165.5",
-          "market": "total",
-          "side": "over",
-          "book": "ballybet",
-          "price_american": -109,
-          "line": 165.5,
-          "fair_prob": 0.5314,
-          "fair_american": -113,
-          "edge": 0.0189,
-          "confidence": 7,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 165.8 vs market 165.5",
-            "Anchored fair total 167.0 vs line 165.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401918773",
-          "matchup": "Oral Roberts Golden Eagles @ Oklahoma Sooners",
-          "start": "2026-11-13T16:30Z"
-        }
-      ],
-      "pass_reasons": [],
-      "model": {
-        "away_score": 66.0,
-        "home_score": 99.8,
-        "spread": -33.9,
-        "total": 165.8,
-        "proj_poss": 77.3,
-        "margin_home": 33.9,
-        "games_home": 3,
-        "games_away": 4,
-        "rank_home": 14,
-        "rank_away": 239
-      },
-      "market": {
-        "spread_home": -54.5,
-        "total": 165.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.06,
-        "total": 19.05
-      },
-      "anchored": {
-        "margin_home": 53.0,
-        "spread_shift": -1.5,
-        "total": 167.0,
-        "total_shift": 1.5,
-        "season_bias_applied": 4.19
-      }
-    },
-    {
       "espn_event_id": "401929215",
       "matchup": "Louisiana Christian Wildcats @ Southern Jaguars",
       "home_short": "Southern",
@@ -231,116 +301,6 @@
       "pass_reasons": [
         "missing Torvik data (non-D-I opponent?)"
       ]
-    },
-    {
-      "espn_event_id": "401927947",
-      "matchup": "Stephens STEPHENS @ Lindenwood Lions",
-      "home_short": "Lindenwood",
-      "away_short": "Stephens",
-      "start": "2026-11-13T17:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401919663",
-      "matchup": "Troy Trojans @ Belmont Bruins",
-      "home_short": "Belmont",
-      "away_short": "Troy",
-      "start": "2026-11-13T17:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 69.2,
-        "home_score": 73.3,
-        "spread": -4.1,
-        "total": 142.5,
-        "proj_poss": 73.7,
-        "margin_home": 4.1,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 145,
-        "rank_away": 153
-      },
-      "market": {
-        "spread_home": -2.5,
-        "total": 144.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.06,
-        "total": 19.05
-      },
-      "anchored": {
-        "margin_home": 4.0,
-        "spread_shift": 1.5,
-        "total": 146.0,
-        "total_shift": 1.5,
-        "season_bias_applied": 4.19
-      }
-    },
-    {
-      "espn_event_id": "401920440",
-      "matchup": "Texas A&M-Corpus Christi Islanders @ Texas State Bobcats",
-      "home_short": "Texas State",
-      "away_short": "Texas A&M-Corpus Christi",
-      "start": "2026-11-13T17:30Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 55.3,
-        "home_score": 71.6,
-        "spread": -16.4,
-        "total": 126.9,
-        "proj_poss": 69.0,
-        "margin_home": 16.4,
-        "games_home": 2,
-        "games_away": 2,
-        "rank_home": 128,
-        "rank_away": 327
-      }
-    },
-    {
-      "espn_event_id": "401918584",
-      "matchup": "Bethune-Cookman Wildcats @ Utah State Aggies",
-      "home_short": "Utah State",
-      "away_short": "Bethune-Cookman",
-      "start": "2026-11-13T18:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 56.0,
-        "home_score": 67.0,
-        "spread": -11.0,
-        "total": 123.0,
-        "proj_poss": 69.5,
-        "margin_home": 11.0,
-        "games_home": 4,
-        "games_away": 4,
-        "rank_home": 205,
-        "rank_away": 310
-      }
     },
     {
       "espn_event_id": "401926952",
@@ -530,6 +490,32 @@
         "games_away": 3,
         "rank_home": 338,
         "rank_away": 247
+      }
+    },
+    {
+      "espn_event_id": "401927487",
+      "matchup": "Loyola Marymount Lions @ Alabama A&M Bulldogs",
+      "home_short": "Alabama A&M",
+      "away_short": "Loyola Marymount",
+      "start": "2026-11-13T23:30Z",
+      "neutral_site": true,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 66.3,
+        "home_score": 55.3,
+        "spread": 11.0,
+        "total": 121.6,
+        "proj_poss": 68.1,
+        "margin_home": -11.0,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 234,
+        "rank_away": 109
       }
     },
     {
@@ -735,32 +721,6 @@
       }
     },
     {
-      "espn_event_id": "401927487",
-      "matchup": "Loyola Marymount Lions @ Alabama A&M Bulldogs",
-      "home_short": "Alabama A&M",
-      "away_short": "Loyola Marymount",
-      "start": "2026-11-14T00:30Z",
-      "neutral_site": true,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 66.3,
-        "home_score": 55.3,
-        "spread": 11.0,
-        "total": 121.6,
-        "proj_poss": 68.1,
-        "margin_home": -11.0,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 234,
-        "rank_away": 109
-      }
-    },
-    {
       "espn_event_id": "401920168",
       "matchup": "College of Biblical Studies Ambassadors @ McNeese Cowgirls",
       "home_short": "McNeese",
@@ -811,7 +771,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 70.5,
@@ -824,6 +784,17 @@
         "games_away": 3,
         "rank_home": 83,
         "rank_away": 65
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
       }
     },
     {
@@ -877,7 +848,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 50.7,
@@ -890,6 +861,17 @@
         "games_away": 3,
         "rank_home": 85,
         "rank_away": 213
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
       }
     },
     {
@@ -903,7 +885,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 70.6,
@@ -916,6 +898,17 @@
         "games_away": 3,
         "rank_home": 121,
         "rank_away": 69
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
       }
     },
     {
@@ -1007,7 +1000,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 72.8,
@@ -1020,6 +1013,17 @@
         "games_away": 3,
         "rank_home": 70,
         "rank_away": 54
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
       }
     }
   ]
