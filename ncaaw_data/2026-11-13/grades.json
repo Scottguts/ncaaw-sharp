@@ -1,69 +1,69 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T21:52:34.884006Z",
+  "generated_at": "2026-11-13T22:55:29.955926Z",
   "market_bias": {
     "n_spread_lines": 6,
-    "n_total_lines": 9,
-    "mean_spread_delta": -8.62,
-    "mean_total_delta": -2.6
+    "n_total_lines": 10,
+    "mean_spread_delta": -6.05,
+    "mean_total_delta": -1.31
   },
   "odds_available": true,
   "n_games": 37,
   "n_cards": 1,
-  "total_units": 0.5,
+  "total_units": 1.0,
   "cards": [
     {
-      "bet_label": "Over 134.5",
-      "market": "total",
-      "side": "over",
-      "book": "ballybet",
-      "price_american": -107,
-      "line": 134.5,
-      "fair_prob": 0.5314,
-      "fair_american": -113,
-      "edge": 0.028,
+      "bet_label": "Northwestern Wildcats +17.5",
+      "market": "spread",
+      "side": "away",
+      "book": "hardrockbet",
+      "price_american": -110,
+      "line": 17.5,
+      "fair_prob": 0.5425,
+      "fair_american": -119,
+      "edge": 0.0356,
       "confidence": 8,
-      "unit_size": 0.5,
-      "risk": "Lean",
+      "unit_size": 1.0,
+      "risk": "Standard",
       "reasoning": [
-        "Model total 136.1 vs market 134.5",
-        "Anchored fair total 136.0 vs line 134.5"
+        "Model margin +13.2 vs market +17.5 (home)",
+        "Anchored fair margin +16.0 vs line +17.5 (away)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401918933",
-      "matchup": "Utah Utes @ Boise State Broncos",
-      "start": "2026-11-14T01:30Z"
+      "espn_event_id": "401907166",
+      "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
+      "start": "2026-11-13T22:30Z"
     }
   ],
   "shadow_cards": [
     {
-      "bet_label": "Over 131.5",
+      "bet_label": "Over 141.5",
       "market": "total",
       "side": "over",
-      "book": "betmgm",
+      "book": "draftkings",
       "price_american": -110,
-      "line": 131.5,
+      "line": 141.5,
       "fair_prob": 0.5314,
       "fair_american": -113,
       "edge": 0.0145,
-      "confidence": 6,
+      "confidence": 5,
       "unit_size": 0.5,
       "risk": "Shadow",
       "reasoning": [
-        "Model total 132.5 vs market 131.5",
-        "Anchored fair total 133.0 vs line 131.5"
+        "Model total 139.6 vs market 141.5",
+        "Anchored fair total 143.0 vs line 141.5"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401919058",
-      "matchup": "Le Moyne Dolphins @ UCF Knights",
+      "espn_event_id": "401907166",
+      "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
       "start": "2026-11-13T22:30Z"
     },
     {
@@ -95,6 +95,102 @@
   ],
   "games": [
     {
+      "espn_event_id": "401907166",
+      "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
+      "home_short": "West Virginia",
+      "away_short": "Northwestern",
+      "start": "2026-11-13T22:30Z",
+      "neutral_site": true,
+      "status": "graded",
+      "cards": [
+        {
+          "bet_label": "Northwestern Wildcats +17.5",
+          "market": "spread",
+          "side": "away",
+          "book": "hardrockbet",
+          "price_american": -110,
+          "line": 17.5,
+          "fair_prob": 0.5425,
+          "fair_american": -119,
+          "edge": 0.0356,
+          "confidence": 8,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +13.2 vs market +17.5 (home)",
+            "Anchored fair margin +16.0 vs line +17.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401907166",
+          "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
+          "start": "2026-11-13T22:30Z"
+        }
+      ],
+      "shadow": [
+        {
+          "bet_label": "Over 141.5",
+          "market": "total",
+          "side": "over",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 141.5,
+          "fair_prob": 0.5314,
+          "fair_american": -113,
+          "edge": 0.0145,
+          "confidence": 5,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 139.6 vs market 141.5",
+            "Anchored fair total 143.0 vs line 141.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401907166",
+          "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
+          "start": "2026-11-13T22:30Z"
+        }
+      ],
+      "pass_reasons": [],
+      "model": {
+        "away_score": 63.2,
+        "home_score": 76.4,
+        "spread": -13.2,
+        "total": 139.6,
+        "proj_poss": 70.5,
+        "margin_home": 13.2,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 31,
+        "rank_away": 112
+      },
+      "market": {
+        "spread_home": -17.5,
+        "total": 141.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 16.0,
+        "spread_shift": -1.5,
+        "total": 143.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
       "espn_event_id": "401928045",
       "matchup": "Saint Mary's Gaels @ Hawai'i Rainbow Wahine",
       "home_short": "Hawai'i",
@@ -105,13 +201,13 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
-        "away_score": 56.4,
+        "away_score": 56.5,
         "home_score": 58.5,
         "spread": -2.0,
-        "total": 114.9,
+        "total": 115.0,
         "proj_poss": 66.0,
         "margin_home": 2.0,
         "games_home": 2,
@@ -120,8 +216,50 @@
         "rank_away": 181
       },
       "market": {
-        "spread_home": -6.5,
-        "total": 133.0,
+        "spread_home": null,
+        "total": 132.5,
+        "spread_src": null,
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 20.64
+      },
+      "anchored": {
+        "total": 131.0,
+        "total_shift": -1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
+      "espn_event_id": "401914491",
+      "matchup": "Canisius Golden Griffins @ Cornell Big Red",
+      "home_short": "Cornell",
+      "away_short": "Canisius",
+      "start": "2026-11-13T22:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "model": {
+        "away_score": 55.2,
+        "home_score": 61.7,
+        "spread": -6.5,
+        "total": 116.9,
+        "proj_poss": 66.1,
+        "margin_home": 6.5,
+        "games_home": 3,
+        "games_away": 2,
+        "rank_home": 259,
+        "rank_away": 304
+      },
+      "market": {
+        "spread_home": -5.5,
+        "total": 127.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -131,10 +269,54 @@
         "total": 20.64
       },
       "anchored": {
-        "margin_home": 5.0,
-        "spread_shift": -1.5,
-        "total": 131.5,
+        "margin_home": 6.5,
+        "spread_shift": 1.0,
+        "total": 126.0,
         "total_shift": -1.5,
+        "season_bias_applied": 4.19
+      }
+    },
+    {
+      "espn_event_id": "401919058",
+      "matchup": "Le Moyne Dolphins @ UCF Knights",
+      "home_short": "UCF",
+      "away_short": "Le Moyne",
+      "start": "2026-11-13T22:30Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "model": {
+        "away_score": 56.1,
+        "home_score": 76.4,
+        "spread": -20.3,
+        "total": 132.5,
+        "proj_poss": 68.5,
+        "margin_home": 20.3,
+        "games_home": 4,
+        "games_away": 3,
+        "rank_home": 111,
+        "rank_away": 345
+      },
+      "market": {
+        "spread_home": -21.5,
+        "total": 111.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 20.3,
+        "spread_shift": -1.2,
+        "total": 113.0,
+        "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
     },
@@ -153,13 +335,13 @@
       ],
       "model": {
         "away_score": 66.0,
-        "home_score": 99.8,
+        "home_score": 99.9,
         "spread": -33.9,
-        "total": 165.8,
-        "proj_poss": 77.3,
+        "total": 166.0,
+        "proj_poss": 77.5,
         "margin_home": 33.9,
-        "games_home": 3,
-        "games_away": 4,
+        "games_home": 4,
+        "games_away": 5,
         "rank_home": 14,
         "rank_away": 239
       }
@@ -192,16 +374,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 69.5,
-        "home_score": 69.8,
-        "spread": -0.3,
-        "total": 139.3,
-        "proj_poss": 73.2,
-        "margin_home": 0.3,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 305,
-        "rank_away": 293
+        "away_score": 68.7,
+        "home_score": 72.7,
+        "spread": -4.0,
+        "total": 141.4,
+        "proj_poss": 73.1,
+        "margin_home": 4.0,
+        "games_home": 4,
+        "games_away": 4,
+        "rank_home": 294,
+        "rank_away": 305
       }
     },
     {
@@ -260,16 +442,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 69.2,
-        "home_score": 73.3,
-        "spread": -4.1,
-        "total": 142.5,
+        "away_score": 67.1,
+        "home_score": 74.4,
+        "spread": -7.3,
+        "total": 141.5,
         "proj_poss": 73.7,
-        "margin_home": 4.1,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 145,
-        "rank_away": 153
+        "margin_home": 7.3,
+        "games_home": 4,
+        "games_away": 4,
+        "rank_home": 125,
+        "rank_away": 169
       }
     },
     {
@@ -286,16 +468,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 55.3,
-        "home_score": 71.6,
-        "spread": -16.4,
-        "total": 126.9,
-        "proj_poss": 69.0,
-        "margin_home": 16.4,
-        "games_home": 2,
-        "games_away": 2,
-        "rank_home": 128,
-        "rank_away": 327
+        "away_score": 54.8,
+        "home_score": 71.5,
+        "spread": -16.7,
+        "total": 126.3,
+        "proj_poss": 69.1,
+        "margin_home": 16.7,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 123,
+        "rank_away": 326
       }
     },
     {
@@ -312,16 +494,16 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 56.0,
-        "home_score": 67.0,
-        "spread": -11.0,
-        "total": 123.0,
-        "proj_poss": 69.5,
-        "margin_home": 11.0,
-        "games_home": 4,
-        "games_away": 4,
-        "rank_home": 205,
-        "rank_away": 310
+        "away_score": 56.9,
+        "home_score": 68.7,
+        "spread": -11.8,
+        "total": 125.6,
+        "proj_poss": 69.9,
+        "margin_home": 11.8,
+        "games_home": 5,
+        "games_away": 5,
+        "rank_home": 199,
+        "rank_away": 321
       }
     },
     {
@@ -337,147 +519,6 @@
       "pass_reasons": [
         "missing Torvik data (non-D-I opponent?)"
       ]
-    },
-    {
-      "espn_event_id": "401914491",
-      "matchup": "Canisius Golden Griffins @ Cornell Big Red",
-      "home_short": "Cornell",
-      "away_short": "Canisius",
-      "start": "2026-11-13T22:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 55.2,
-        "home_score": 61.7,
-        "spread": -6.5,
-        "total": 116.9,
-        "proj_poss": 66.1,
-        "margin_home": 6.5,
-        "games_home": 3,
-        "games_away": 2,
-        "rank_home": 259,
-        "rank_away": 304
-      }
-    },
-    {
-      "espn_event_id": "401907166",
-      "matchup": "Northwestern Wildcats @ West Virginia Mountaineers",
-      "home_short": "West Virginia",
-      "away_short": "Northwestern",
-      "start": "2026-11-13T22:30Z",
-      "neutral_site": true,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 63.1,
-        "home_score": 76.4,
-        "spread": -13.3,
-        "total": 139.5,
-        "proj_poss": 70.5,
-        "margin_home": 13.3,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 31,
-        "rank_away": 112
-      },
-      "market": {
-        "spread_home": -20.5,
-        "total": 143.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.06,
-        "total": 19.05
-      },
-      "anchored": {
-        "margin_home": 19.0,
-        "spread_shift": -1.5,
-        "total": 143.69,
-        "total_shift": 0.19,
-        "season_bias_applied": 4.19
-      }
-    },
-    {
-      "espn_event_id": "401919058",
-      "matchup": "Le Moyne Dolphins @ UCF Knights",
-      "home_short": "UCF",
-      "away_short": "Le Moyne",
-      "start": "2026-11-13T22:30Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [
-        {
-          "bet_label": "Over 131.5",
-          "market": "total",
-          "side": "over",
-          "book": "betmgm",
-          "price_american": -110,
-          "line": 131.5,
-          "fair_prob": 0.5314,
-          "fair_american": -113,
-          "edge": 0.0145,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 132.5 vs market 131.5",
-            "Anchored fair total 133.0 vs line 131.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401919058",
-          "matchup": "Le Moyne Dolphins @ UCF Knights",
-          "start": "2026-11-13T22:30Z"
-        }
-      ],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 56.1,
-        "home_score": 76.4,
-        "spread": -20.3,
-        "total": 132.5,
-        "proj_poss": 68.5,
-        "margin_home": 20.3,
-        "games_home": 4,
-        "games_away": 3,
-        "rank_home": 111,
-        "rank_away": 345
-      },
-      "market": {
-        "spread_home": -28.5,
-        "total": 131.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.06,
-        "total": 19.05
-      },
-      "anchored": {
-        "margin_home": 27.0,
-        "spread_shift": -1.5,
-        "total": 133.0,
-        "total_shift": 1.5,
-        "season_bias_applied": 4.19
-      }
     },
     {
       "espn_event_id": "401927967",
@@ -521,10 +562,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 70.2,
+        "away_score": 70.3,
         "home_score": 65.5,
         "spread": 4.8,
-        "total": 135.7,
+        "total": 135.8,
         "proj_poss": 69.7,
         "margin_home": -4.8,
         "games_home": 3,
@@ -588,14 +629,14 @@
       ],
       "model": {
         "away_score": 54.3,
-        "home_score": 69.3,
+        "home_score": 69.4,
         "spread": -15.0,
         "total": 123.7,
         "proj_poss": 68.6,
         "margin_home": 15.0,
         "games_home": 3,
         "games_away": 4,
-        "rank_home": 163,
+        "rank_home": 162,
         "rank_away": 335
       }
     },
@@ -643,7 +684,7 @@
         "away_score": 51.9,
         "home_score": 93.9,
         "spread": -42.0,
-        "total": 145.7,
+        "total": 145.8,
         "proj_poss": 72.4,
         "margin_home": 42.0,
         "games_home": 3,
@@ -698,10 +739,10 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 76.7,
+        "away_score": 76.8,
         "home_score": 74.4,
         "spread": 2.3,
-        "total": 151.1,
+        "total": 151.2,
         "proj_poss": 73.3,
         "margin_home": -2.3,
         "games_home": 4,
@@ -724,11 +765,11 @@
         "no edge cleared the gates"
       ],
       "model": {
-        "away_score": 59.0,
-        "home_score": 63.3,
+        "away_score": 59.1,
+        "home_score": 63.4,
         "spread": -4.3,
         "total": 122.4,
-        "proj_poss": 68.4,
+        "proj_poss": 68.3,
         "margin_home": 4.3,
         "games_home": 2,
         "games_away": 3,
@@ -771,7 +812,7 @@
         "away_score": 52.3,
         "home_score": 77.4,
         "spread": -25.1,
-        "total": 129.7,
+        "total": 129.8,
         "proj_poss": 68.4,
         "margin_home": 25.1,
         "games_home": 3,
@@ -916,7 +957,7 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 68.6,
+        "away_score": 68.7,
         "home_score": 71.1,
         "spread": -2.4,
         "total": 139.7,
@@ -924,8 +965,8 @@
         "margin_home": 2.4,
         "games_home": 2,
         "games_away": 2,
-        "rank_home": 154,
-        "rank_away": 155
+        "rank_home": 153,
+        "rank_away": 154
       }
     },
     {
@@ -945,7 +986,7 @@
         "away_score": 50.7,
         "home_score": 65.2,
         "spread": -14.5,
-        "total": 115.8,
+        "total": 115.9,
         "proj_poss": 65.7,
         "margin_home": 14.5,
         "games_home": 3,
@@ -955,7 +996,7 @@
       },
       "market": {
         "spread_home": null,
-        "total": 117.5,
+        "total": 119.5,
         "spread_src": null,
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -965,8 +1006,8 @@
         "total": 19.05
       },
       "anchored": {
-        "total": 119.0,
-        "total_shift": 1.5,
+        "total": 120.09,
+        "total_shift": 0.59,
         "season_bias_applied": 4.19
       }
     },
@@ -978,36 +1019,11 @@
       "start": "2026-11-14T01:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Over 134.5",
-          "market": "total",
-          "side": "over",
-          "book": "ballybet",
-          "price_american": -107,
-          "line": 134.5,
-          "fair_prob": 0.5314,
-          "fair_american": -113,
-          "edge": 0.028,
-          "confidence": 8,
-          "unit_size": 0.5,
-          "risk": "Lean",
-          "reasoning": [
-            "Model total 136.1 vs market 134.5",
-            "Anchored fair total 136.0 vs line 134.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401918933",
-          "matchup": "Utah Utes @ Boise State Broncos",
-          "start": "2026-11-14T01:30Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 70.6,
         "home_score": 65.5,
@@ -1054,10 +1070,10 @@
       ],
       "model": {
         "away_score": 74.0,
-        "home_score": 64.0,
+        "home_score": 64.1,
         "spread": 10.0,
-        "total": 138.0,
-        "proj_poss": 70.7,
+        "total": 138.1,
+        "proj_poss": 70.6,
         "margin_home": -10.0,
         "games_home": 3,
         "games_away": 3,
@@ -1079,15 +1095,15 @@
         "no market line (nothing to anchor against)"
       ],
       "model": {
-        "away_score": 71.2,
+        "away_score": 71.3,
         "home_score": 63.1,
         "spread": 8.1,
-        "total": 134.3,
+        "total": 134.4,
         "proj_poss": 68.2,
         "margin_home": -8.1,
         "games_home": 3,
         "games_away": 4,
-        "rank_home": 162,
+        "rank_home": 161,
         "rank_away": 62
       }
     },
@@ -1106,15 +1122,15 @@
       ],
       "model": {
         "away_score": 65.3,
-        "home_score": 71.9,
-        "spread": -6.7,
-        "total": 137.2,
+        "home_score": 72.0,
+        "spread": -6.6,
+        "total": 137.3,
         "proj_poss": 69.2,
-        "margin_home": 6.7,
+        "margin_home": 6.6,
         "games_home": 3,
         "games_away": 3,
         "rank_home": 122,
-        "rank_away": 161
+        "rank_away": 160
       }
     },
     {
@@ -1132,10 +1148,10 @@
       ],
       "model": {
         "away_score": 72.8,
-        "home_score": 72.0,
+        "home_score": 72.1,
         "spread": 0.7,
         "total": 144.8,
-        "proj_poss": 72.4,
+        "proj_poss": 72.3,
         "margin_home": -0.7,
         "games_home": 3,
         "games_away": 3,

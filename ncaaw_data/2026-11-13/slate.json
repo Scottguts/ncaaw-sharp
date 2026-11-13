@@ -1,7 +1,40 @@
 {
   "date": "2026-11-13",
-  "fetched_at": "2026-11-13T21:52:34.874977Z",
+  "fetched_at": "2026-11-13T22:55:29.951755Z",
   "games": [
+    {
+      "espn_event_id": "401907166",
+      "start": "2026-11-13T22:30Z",
+      "et_date": "2026-11-13",
+      "name": "Northwestern Wildcats at West Virginia Mountaineers",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_END_PERIOD",
+      "completed": false,
+      "home": {
+        "espn_id": "277",
+        "location": "West Virginia",
+        "display_name": "West Virginia Mountaineers",
+        "canon": "west virginia",
+        "conf": "Big 12",
+        "record": "3-0",
+        "score": "16",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "77",
+        "location": "Northwestern",
+        "display_name": "Northwestern Wildcats",
+        "canon": "northwestern",
+        "conf": "Big Ten",
+        "record": "1-2",
+        "score": "16",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "843e07d64b04ad4540afa984ceb7ae77"
+    },
     {
       "espn_event_id": "401928045",
       "start": "2026-11-13T21:00Z",
@@ -18,7 +51,7 @@
         "canon": "hawaii",
         "conf": "MWC",
         "record": "0-2",
-        "score": "30",
+        "score": "61",
         "winner": null
       },
       "away": {
@@ -28,12 +61,78 @@
         "canon": "saint marys ca",
         "conf": "WCC",
         "record": "1-2",
-        "score": "30",
+        "score": "63",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": "024b3a9e6970af94a99a7a4d694b7769"
+    },
+    {
+      "espn_event_id": "401914491",
+      "start": "2026-11-13T22:00Z",
+      "et_date": "2026-11-13",
+      "name": "Canisius Golden Griffins at Cornell Big Red",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_HALFTIME",
+      "completed": false,
+      "home": {
+        "espn_id": "172",
+        "location": "Cornell",
+        "display_name": "Cornell Big Red",
+        "canon": "cornell",
+        "conf": "Ivy",
+        "record": "1-2",
+        "score": "33",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2099",
+        "location": "Canisius",
+        "display_name": "Canisius Golden Griffins",
+        "canon": "canisius",
+        "conf": "MAAC",
+        "record": "2-0",
+        "score": "30",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "78e3cf11f913069a19c08d766dabbc9f"
+    },
+    {
+      "espn_event_id": "401919058",
+      "start": "2026-11-13T22:30Z",
+      "et_date": "2026-11-13",
+      "name": "Le Moyne Dolphins at UCF Knights",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2116",
+        "location": "UCF",
+        "display_name": "UCF Knights",
+        "canon": "ucf",
+        "conf": "Big 12",
+        "record": "3-1",
+        "score": "12",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2330",
+        "location": "Le Moyne",
+        "display_name": "Le Moyne Dolphins",
+        "canon": "le moyne",
+        "conf": "NEC",
+        "record": "1-2",
+        "score": "9",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "6f062168b08776a2f7ddf6c509df9849"
     },
     {
       "espn_event_id": "401918773",
@@ -364,105 +463,6 @@
       "torvik_home": true,
       "torvik_away": false,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401914491",
-      "start": "2026-11-13T22:00Z",
-      "et_date": "2026-11-13",
-      "name": "Canisius Golden Griffins at Cornell Big Red",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "172",
-        "location": "Cornell",
-        "display_name": "Cornell Big Red",
-        "canon": "cornell",
-        "conf": "Ivy",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2099",
-        "location": "Canisius",
-        "display_name": "Canisius Golden Griffins",
-        "canon": "canisius",
-        "conf": "MAAC",
-        "record": "2-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401907166",
-      "start": "2026-11-13T22:30Z",
-      "et_date": "2026-11-13",
-      "name": "Northwestern Wildcats at West Virginia Mountaineers",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "277",
-        "location": "West Virginia",
-        "display_name": "West Virginia Mountaineers",
-        "canon": "west virginia",
-        "conf": "Big 12",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "77",
-        "location": "Northwestern",
-        "display_name": "Northwestern Wildcats",
-        "canon": "northwestern",
-        "conf": "Big Ten",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "843e07d64b04ad4540afa984ceb7ae77"
-    },
-    {
-      "espn_event_id": "401919058",
-      "start": "2026-11-13T22:30Z",
-      "et_date": "2026-11-13",
-      "name": "Le Moyne Dolphins at UCF Knights",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2116",
-        "location": "UCF",
-        "display_name": "UCF Knights",
-        "canon": "ucf",
-        "conf": "Big 12",
-        "record": "3-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2330",
-        "location": "Le Moyne",
-        "display_name": "Le Moyne Dolphins",
-        "canon": "le moyne",
-        "conf": "NEC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "6f062168b08776a2f7ddf6c509df9849"
     },
     {
       "espn_event_id": "401927967",
