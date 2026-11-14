@@ -90,9 +90,32 @@ def build_report(d: str) -> dict | None:
                     fired["units"] += float(r.get("units_pl") or 0)
                 except ValueError:
                     pass
+    # Calibration ledger (research-validated: calibration drives returns more
+    # than accuracy). For every graded game with a market spread, record the
+    # model's home-cover probability and whether home actually covered — the
+    # weekly audit bins these to test Phi(margin/sigma) honesty.
+    calib = []
+    for g in grades.get("games") or []:
+        fin = finals.get(str(g.get("espn_event_id")))
+        m, mk, anch = g.get("model"), g.get("market") or {}, g.get("anchored") or {}
+        sig = g.get("sigma") or {}
+        if not fin or not m or mk.get("spread_home") is None or not sig.get("spread"):
+            continue
+        import math as _math
+        fair = anch.get("margin_home")
+        if fair is None:
+            continue
+        line = mk["spread_home"]
+        p_cover = 0.5 * (1 + _math.erf((fair + line) / sig["spread"] / _math.sqrt(2)))
+        act_margin = fin[0] - fin[1]
+        covered = (act_margin + line) > 0
+        if (act_margin + line) != 0:
+            calib.append({"p": round(p_cover, 3), "hit": bool(covered)})
+
     report = {
         "date": d,
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "calibration": calib,
         "summary": {
             "n": n,
             "spread_mae": round(s_err / n, 2),
