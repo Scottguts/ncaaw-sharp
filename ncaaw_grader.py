@@ -50,7 +50,10 @@ from ncaaw_data_scraper import (
 MIN_EDGE = {
     "moneyline": 0.018,   # 1.8% — matches MLB ML gate
     "spread":    0.025,   # 2.5% — point-handicap markets need more cushion
-    "total":     0.025,
+    "total":     0.032,   # tightened 2026-11-14: week one went 4-9 on totals
+                          # with negative CLV while spreads went 6-2 — totals
+                          # must show a bigger genuine edge to fire (shadow
+                          # tier still logs from half this floor)
 }
 MAX_REASONABLE_EDGE = 0.06   # bigger "edges" = stale line or calibration bug -> reject
 MIN_TEAM_WIN_PROB   = 0.45   # never ML a team we rate <45% to win outright
@@ -68,26 +71,46 @@ MAX_SPREAD_SHIFT = 1.5   # points of margin
 MAX_TOTAL_SHIFT  = 1.5   # points of total
 
 
-def season_total_bias(data_root: Path = DATA_ROOT, days: int = 10,
-                      min_games: int = 30, clamp: float = 6.0) -> float:
-    """Self-correcting totals bias: mean (actual - model) total over recent
-    finals reports. Positive = the season is scoring more than the model
-    thinks -> raise projections before anchoring. Clamped, and zero until a
-    real sample exists. This closes the loop the week-one audit exposed
-    without touching any betting gate."""
-    diffs: list[float] = []
-    reports = sorted((p / "finals.json" for p in data_root.iterdir()
-                      if p.is_dir() and (p / "finals.json").exists()),
-                     key=lambda p: p.parent.name, reverse=True)[:days]
-    for rp in reports:
-        try:
-            for r in json.loads(rp.read_text()).get("games") or []:
-                diffs.append(r["act_total"] - r["model_total"])
-        except (ValueError, KeyError):
-            continue
-    if len(diffs) < min_games:
-        return 0.0
-    return max(-clamp, min(clamp, sum(diffs) / len(diffs)))
+def season_total_bias(data_root: Path = DATA_ROOT, days: int = 12,
+                      min_lined: int = 20, min_games: int = 30,
+                      clamp: float = 8.0) -> float:
+    """Self-correcting totals bias, v2 (2026-11-14 week-one audit).
+
+    v1 chased trailing ACTUALS, which swing +/-10 a day on ~30 games — the
+    corrector oscillated from under-flood (-6 vs books) to over-flood (+6.3)
+    and totals went 4-9 while spreads went 6-2. v2 anchors to the BOOKS:
+    mean (book_total - model_total) over recent lined games. Books are the
+    low-noise information aggregate; driving systematic disagreement to zero
+    is exactly what a market-anchored system should do — only game-specific
+    deviations survive the anchor afterward. Grades store RAW model totals,
+    so there is no feedback loop. Falls back to the actuals-based estimate
+    until enough lined games exist."""
+    book_diffs: list[float] = []
+    act_diffs: list[float] = []
+    day_dirs = sorted((p for p in data_root.iterdir() if p.is_dir()),
+                      key=lambda p: p.name, reverse=True)[:days]
+    for day in day_dirs:
+        gp = day / "grades.json"
+        if gp.exists():
+            try:
+                for g in json.loads(gp.read_text()).get("games") or []:
+                    mk, m = g.get("market") or {}, g.get("model")
+                    if m and mk.get("total") is not None:
+                        book_diffs.append(mk["total"] - m["total"])
+            except (ValueError, KeyError):
+                pass
+        fp = day / "finals.json"
+        if fp.exists():
+            try:
+                for r in json.loads(fp.read_text()).get("games") or []:
+                    act_diffs.append(r["act_total"] - r["model_total"])
+            except (ValueError, KeyError):
+                pass
+    if len(book_diffs) >= min_lined:
+        return max(-clamp, min(clamp, sum(book_diffs) / len(book_diffs)))
+    if len(act_diffs) >= min_games:
+        return max(-clamp, min(clamp, sum(act_diffs) / len(act_diffs)))
+    return 0.0
 
 # Best price must be confirmed by a DIFFERENT book within this many cents
 # (and at the same line, for spread/total) — stale-line protection.
@@ -105,11 +128,13 @@ MIN_CONFIDENCE = 6
 FULL_CONFIDENCE_GAMES = 10
 MIN_GAMES_TO_BET = 2         # effective games below this -> no bet
 PRIOR_GAMES_CREDIT = 5
-PRIOR_BLEND_K = 8            # current-season games to mostly trust current stats
+PRIOR_BLEND_K = 4            # half-weight to current stats by game 4 — validated
+                             # on 199 Nov finals: K=4 beat K=8 on totals (13.71 vs
+                             # 14.01 MAE); current-only and prior-only both worse
 # blend ONLY the raw per-game stats; adjOE/adjDE/tRank stay live (already
 # prior-informed by Torvik — blending them made spreads slightly worse)
 PRIOR_BLEND_KEYS = ("tempo", "eFG", "eFGD", "tor", "torD",
-                    "orb", "drb", "ftr", "ftrD")
+                    "orb", "drb", "ftr", "ftrD", "p3")
 
 
 def blend_with_prior(cur: dict, pri: dict | None) -> dict:
@@ -122,7 +147,8 @@ def blend_with_prior(cur: dict, pri: dict | None) -> dict:
     g = cur.get("games", 0)
     w = g / (g + PRIOR_BLEND_K)
     for k in PRIOR_BLEND_KEYS:
-        out[k] = w * cur[k] + (1 - w) * pri[k]
+        if k in cur and k in pri:   # p3 absent from older snapshots
+            out[k] = w * cur[k] + (1 - w) * pri[k]
     out["games_eff"] = g + PRIOR_GAMES_CREDIT
     return out
 
