@@ -25,10 +25,10 @@
 - **Wofford Terriers @ Georgia Southern Eagles** — model 64-64 (margin -0.0 home, total 127.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **Rider Broncs @ Yale Bulldogs** — model 56-66 (margin +9.5 home, total 122.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Mississippi Valley State Devilettes @ Tennessee State Lady Tigers** — model 69-79 (margin +10.8 home, total 147.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Mississippi State Bulldogs @ Buffalo Bulls** — model 81-63 (margin -17.7 home, total 143.6) · market: home +32.5 (consensus) · total 144.5 (consensus) · PASS: no edge cleared the gates
+- **Mississippi State Bulldogs @ Buffalo Bulls** — model 81-63 (margin -17.7 home, total 143.6) · market: home +29.5 (consensus) · total 144.5 (consensus) · PASS: no edge cleared the gates
 - **Charleston Southern Buccaneers @ Pittsburgh Panthers** — model 54-76 (margin +22.1 home, total 129.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Clinton Golden Bears @ Winthrop Eagles** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Providence Friars @ Boston College Eagles** — model 67-65 (margin -2.2 home, total 132.1) · market: home -2.5 (consensus) · total 131.5 (consensus) · PASS: no edge cleared the gates
+- **Providence Friars @ Boston College Eagles** — model 67-65 (margin -2.2 home, total 132.1) · market: home -3.5 (consensus) · total 129.5 (consensus) · PASS: no edge cleared the gates
 - **Tarleton State Texans @ Texas Longhorns** — model 45-83 (margin +37.7 home, total 127.7) · market: home -47.5 (consensus) · total 131.5 (consensus) · PASS: no edge cleared the gates
 - **DePaul Blue Demons @ Notre Dame Fighting Irish** — model 63-82 (margin +19.0 home, total 145.5) · market: home -30.5 (consensus) · total 157.5 (consensus)
 - **Central Connecticut Blue Devils @ Massachusetts Minutewomen** — model 52-77 (margin +25.4 home, total 129.2) · market: no line · PASS: no market line (nothing to anchor against)
@@ -79,4 +79,4 @@
 - **Colgate Raiders @ New Hampshire Wildcats** — model 54-60 (margin +6.0 home, total 114.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Long Beach State Beach @ Portland Pilots** — model 58-76 (margin +18.3 home, total 133.5) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-14T16:20:19Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-14T16:57:19Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

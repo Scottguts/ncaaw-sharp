@@ -135,7 +135,7 @@
     },
     {
       "anchored": {
-        "margin_home": -31.0,
+        "margin_home": -28.0,
         "season_bias_applied": 4.19,
         "spread_shift": 1.5,
         "total": 146.0,
@@ -147,7 +147,7 @@
       "home_short": "Buffalo",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 32.5,
+        "spread_home": 29.5,
         "spread_src": "consensus",
         "total": 144.5,
         "total_src": "consensus"
@@ -169,7 +169,34 @@
       "pass_reasons": [
         "no edge cleared the gates"
       ],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 144.5",
+          "book": "betmgm",
+          "confidence": 5,
+          "edge": 0.0145,
+          "espn_event_id": "401918857",
+          "fair_american": -113,
+          "fair_prob": 0.5314,
+          "line": 144.5,
+          "market": "total",
+          "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 143.6 vs market 144.5",
+            "Anchored fair total 146.0 vs line 144.5"
+          ],
+          "risk": "Shadow",
+          "side": "over",
+          "start": "2026-11-14T17:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "sigma": {
         "spread": 14.06,
         "total": 19.05
@@ -219,10 +246,10 @@
     },
     {
       "anchored": {
-        "margin_home": 1.0,
+        "margin_home": 2.0,
         "season_bias_applied": 4.19,
         "spread_shift": -1.5,
-        "total": 133.0,
+        "total": 131.0,
         "total_shift": 1.5
       },
       "away_short": "Providence",
@@ -231,9 +258,9 @@
       "home_short": "Boston College",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -2.5,
+        "spread_home": -3.5,
         "spread_src": "consensus",
-        "total": 131.5,
+        "total": 129.5,
         "total_src": "consensus"
       },
       "matchup": "Providence Friars @ Boston College Eagles",
@@ -1598,16 +1625,43 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-14T16:20:19.666539Z",
+  "generated_at": "2026-11-14T16:57:19.245308Z",
   "market_bias": {
-    "mean_spread_delta": -1.98,
-    "mean_total_delta": -4.13,
+    "mean_spread_delta": -2.65,
+    "mean_total_delta": -3.8,
     "n_spread_lines": 6,
     "n_total_lines": 6
   },
   "n_cards": 2,
   "n_games": 56,
   "odds_available": true,
-  "shadow_cards": [],
+  "shadow_cards": [
+    {
+      "bet_label": "Over 144.5",
+      "book": "betmgm",
+      "confidence": 5,
+      "edge": 0.0145,
+      "espn_event_id": "401918857",
+      "fair_american": -113,
+      "fair_prob": 0.5314,
+      "line": 144.5,
+      "market": "total",
+      "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model total 143.6 vs market 144.5",
+        "Anchored fair total 146.0 vs line 144.5"
+      ],
+      "risk": "Shadow",
+      "side": "over",
+      "start": "2026-11-14T17:00Z",
+      "unit_size": 0.5
+    }
+  ],
   "total_units": 1.5
 }

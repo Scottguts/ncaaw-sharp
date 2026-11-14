@@ -1,11 +1,11 @@
 {
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T16:20:19.666539Z",
+  "generated_at": "2026-11-14T16:57:19.245308Z",
   "market_bias": {
     "n_spread_lines": 6,
     "n_total_lines": 6,
-    "mean_spread_delta": -1.98,
-    "mean_total_delta": -4.13
+    "mean_spread_delta": -2.65,
+    "mean_total_delta": -3.8
   },
   "odds_available": true,
   "n_games": 56,
@@ -65,7 +65,34 @@
       "start": "2026-11-14T19:00Z"
     }
   ],
-  "shadow_cards": [],
+  "shadow_cards": [
+    {
+      "bet_label": "Over 144.5",
+      "market": "total",
+      "side": "over",
+      "book": "betmgm",
+      "price_american": -110,
+      "line": 144.5,
+      "fair_prob": 0.5314,
+      "fair_american": -113,
+      "edge": 0.0145,
+      "confidence": 5,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 143.6 vs market 144.5",
+        "Anchored fair total 146.0 vs line 144.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401918857",
+      "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
+      "start": "2026-11-14T17:00Z"
+    }
+  ],
   "games": [
     {
       "espn_event_id": "401918685",
@@ -154,7 +181,34 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 144.5",
+          "market": "total",
+          "side": "over",
+          "book": "betmgm",
+          "price_american": -110,
+          "line": 144.5,
+          "fair_prob": 0.5314,
+          "fair_american": -113,
+          "edge": 0.0145,
+          "confidence": 5,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 143.6 vs market 144.5",
+            "Anchored fair total 146.0 vs line 144.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918857",
+          "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
+          "start": "2026-11-14T17:00Z"
+        }
+      ],
       "pass_reasons": [
         "no edge cleared the gates"
       ],
@@ -171,7 +225,7 @@
         "rank_away": 43
       },
       "market": {
-        "spread_home": 32.5,
+        "spread_home": 29.5,
         "total": 144.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -182,7 +236,7 @@
         "total": 19.05
       },
       "anchored": {
-        "margin_home": -31.0,
+        "margin_home": -28.0,
         "spread_shift": 1.5,
         "total": 146.0,
         "total_shift": 1.5,
@@ -255,8 +309,8 @@
         "rank_away": 142
       },
       "market": {
-        "spread_home": -2.5,
-        "total": 131.5,
+        "spread_home": -3.5,
+        "total": 129.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -266,9 +320,9 @@
         "total": 19.05
       },
       "anchored": {
-        "margin_home": 1.0,
+        "margin_home": 2.0,
         "spread_shift": -1.5,
-        "total": 133.0,
+        "total": 131.0,
         "total_shift": 1.5,
         "season_bias_applied": 4.19
       }
