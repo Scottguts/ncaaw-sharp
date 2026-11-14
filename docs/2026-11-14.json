@@ -3,8 +3,8 @@
     {
       "bet_label": "Under 131.5",
       "book": "draftkings",
-      "confidence": 6,
-      "edge": 0.038,
+      "confidence": 7,
+      "edge": 0.0381,
       "espn_event_id": "401918433",
       "fair_american": -114,
       "fair_prob": 0.5317,
@@ -21,10 +21,10 @@
         "Model total 128.3 vs market 131.5",
         "Anchored fair total 130.0 vs line 131.5"
       ],
-      "risk": "Lean",
+      "risk": "Standard",
       "side": "under",
       "start": "2026-11-14T18:00Z",
-      "unit_size": 0.5
+      "unit_size": 1.0
     },
     {
       "bet_label": "DePaul Blue Demons +30.5",
@@ -167,10 +167,10 @@
     },
     {
       "anchored": {
-        "margin_home": -28.0,
-        "season_bias_applied": 1.27,
+        "margin_home": -21.0,
+        "season_bias_applied": 1.04,
         "spread_shift": 1.5,
-        "total": 146.0,
+        "total": 140.5,
         "total_shift": 1.5
       },
       "away_short": "Mississippi State",
@@ -179,9 +179,9 @@
       "home_short": "Buffalo",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 29.5,
+        "spread_home": 22.5,
         "spread_src": "consensus",
-        "total": 144.5,
+        "total": 139.0,
         "total_src": "consensus"
       },
       "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
@@ -206,7 +206,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.77,
-        "total": 19.95
+        "total": 19.93
       },
       "start": "2026-11-14T17:00Z",
       "status": "graded"
@@ -255,10 +255,10 @@
     },
     {
       "anchored": {
-        "margin_home": 2.0,
-        "season_bias_applied": 1.27,
-        "spread_shift": -1.5,
-        "total": 131.0,
+        "margin_home": -2.2,
+        "season_bias_applied": 1.04,
+        "spread_shift": 0.3,
+        "total": 130.0,
         "total_shift": 1.5
       },
       "away_short": "Providence",
@@ -267,9 +267,9 @@
       "home_short": "Boston College",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -3.5,
+        "spread_home": 2.5,
         "spread_src": "consensus",
-        "total": 129.5,
+        "total": 128.5,
         "total_src": "consensus"
       },
       "matchup": "Providence Friars @ Boston College Eagles",
@@ -294,7 +294,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.45,
-        "total": 19.22
+        "total": 19.21
       },
       "start": "2026-11-14T17:00Z",
       "status": "graded"
@@ -302,7 +302,7 @@
     {
       "anchored": {
         "margin_home": 46.0,
-        "season_bias_applied": 1.27,
+        "season_bias_applied": 1.04,
         "spread_shift": -1.5,
         "total": 130.0,
         "total_shift": -1.5
@@ -312,8 +312,8 @@
         {
           "bet_label": "Under 131.5",
           "book": "draftkings",
-          "confidence": 6,
-          "edge": 0.038,
+          "confidence": 7,
+          "edge": 0.0381,
           "espn_event_id": "401918433",
           "fair_american": -114,
           "fair_prob": 0.5317,
@@ -330,10 +330,10 @@
             "Model total 128.3 vs market 131.5",
             "Anchored fair total 130.0 vs line 131.5"
           ],
-          "risk": "Lean",
+          "risk": "Standard",
           "side": "under",
           "start": "2026-11-14T18:00Z",
-          "unit_size": 0.5
+          "unit_size": 1.0
         }
       ],
       "espn_event_id": "401918433",
@@ -365,7 +365,7 @@
       "shadow": [],
       "sigma": {
         "spread": 15.41,
-        "total": 18.87
+        "total": 18.86
       },
       "start": "2026-11-14T18:00Z",
       "status": "graded"
@@ -373,7 +373,7 @@
     {
       "anchored": {
         "margin_home": 29.0,
-        "season_bias_applied": 1.27,
+        "season_bias_applied": 1.04,
         "spread_shift": -1.5,
         "total": 156.0,
         "total_shift": -1.5
@@ -436,7 +436,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.91,
-        "total": 20.14
+        "total": 20.13
       },
       "start": "2026-11-14T18:00Z",
       "status": "graded"
@@ -696,10 +696,10 @@
     {
       "anchored": {
         "margin_home": -9.6,
-        "season_bias_applied": 1.27,
+        "season_bias_applied": 1.04,
         "spread_shift": -0.1,
-        "total": 133.77,
-        "total_shift": -0.73
+        "total": 133.54,
+        "total_shift": -0.96
       },
       "away_short": "Minnesota",
       "cards": [
@@ -759,7 +759,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.28,
-        "total": 19.16
+        "total": 19.14
       },
       "start": "2026-11-14T19:00Z",
       "status": "graded"
@@ -1481,7 +1481,7 @@
     {
       "anchored": {
         "margin_home": -5.1,
-        "season_bias_applied": 1.27,
+        "season_bias_applied": 1.04,
         "spread_shift": -0.6,
         "total": 135.0,
         "total_shift": -1.5
@@ -1519,7 +1519,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.42,
-        "total": 19.21
+        "total": 19.19
       },
       "start": "2026-11-14T21:30Z",
       "status": "graded"
@@ -1749,10 +1749,10 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-14T17:26:54.836961Z",
+  "generated_at": "2026-11-14T17:27:21.848726Z",
   "market_bias": {
-    "mean_spread_delta": -2.62,
-    "mean_total_delta": -2.1,
+    "mean_spread_delta": -2.78,
+    "mean_total_delta": -1.02,
     "n_spread_lines": 6,
     "n_total_lines": 6
   },
@@ -1760,5 +1760,5 @@
   "n_games": 56,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 2.0
+  "total_units": 2.5
 }

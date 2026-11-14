@@ -1,12 +1,12 @@
 # NCAAW Betting Card — 2026-11-14
 
-**3 play(s) · 2u total**
+**3 play(s) · 2.5u total**
 
 ## Under 131.5 (-105 draftkings)
 
 - **Game:** Tarleton State Texans @ Texas Longhorns
 - **Market:** total · **Fair:** 53.2% (-114) · **Edge:** 3.8%
-- **Confidence:** 6/10 · **Size:** 0.5u (Lean)
+- **Confidence:** 7/10 · **Size:** 1.0u (Standard)
 - **Why:** Model total 128.3 vs market 131.5; Anchored fair total 130.0 vs line 131.5
 - **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
 
@@ -33,10 +33,10 @@
 - **Wofford Terriers @ Georgia Southern Eagles** — model 65-65 (margin -0.0 home, total 130.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Rider Broncs @ Yale Bulldogs** — model 57-67 (margin +9.5 home, total 123.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Mississippi Valley State Devilettes @ Tennessee State Lady Tigers** — model 69-80 (margin +10.8 home, total 148.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Mississippi State Bulldogs @ Buffalo Bulls** — model 82-64 (margin -17.6 home, total 145.3) · market: home +29.5 (consensus) · total 144.5 (consensus) · PASS: no edge cleared the gates
+- **Mississippi State Bulldogs @ Buffalo Bulls** — model 82-64 (margin -17.6 home, total 145.3) · market: home +22.5 (consensus) · total 139 (consensus) · PASS: no edge cleared the gates
 - **Charleston Southern Buccaneers @ Pittsburgh Panthers** — model 54-76 (margin +22.1 home, total 129.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Clinton Golden Bears @ Winthrop Eagles** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Providence Friars @ Boston College Eagles** — model 68-66 (margin -2.2 home, total 133.5) · market: home -3.5 (consensus) · total 129.5 (consensus) · PASS: no edge cleared the gates
+- **Providence Friars @ Boston College Eagles** — model 68-66 (margin -2.2 home, total 133.5) · market: home +2.5 (consensus) · total 128.5 (consensus) · PASS: no edge cleared the gates
 - **Tarleton State Texans @ Texas Longhorns** — model 45-83 (margin +37.8 home, total 128.3) · market: home -47.5 (consensus) · total 131.5 (consensus)
 - **DePaul Blue Demons @ Notre Dame Fighting Irish** — model 65-84 (margin +19.0 home, total 148.5) · market: home -30.5 (consensus) · total 157.5 (consensus)
 - **Central Connecticut Blue Devils @ Massachusetts Minutewomen** — model 52-78 (margin +25.4 home, total 130.5) · market: no line · PASS: no market line (nothing to anchor against)
@@ -87,4 +87,4 @@
 - **Colgate Raiders @ New Hampshire Wildcats** — model 55-61 (margin +6.1 home, total 115.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Long Beach State Beach @ Portland Pilots** — model 58-77 (margin +18.4 home, total 135.4) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-14T17:26:54Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-14T17:27:21Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
