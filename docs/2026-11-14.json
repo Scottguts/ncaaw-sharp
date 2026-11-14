@@ -1,5 +1,58 @@
 {
-  "cards": [],
+  "cards": [
+    {
+      "bet_label": "DePaul Blue Demons +30.5",
+      "book": "draftkings",
+      "confidence": 9,
+      "edge": 0.0356,
+      "espn_event_id": "401923183",
+      "fair_american": -119,
+      "fair_prob": 0.5425,
+      "line": 30.5,
+      "market": "spread",
+      "matchup": "DePaul Blue Demons @ Notre Dame Fighting Irish",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model margin +19.0 vs market +30.5 (home)",
+        "Anchored fair margin +29.0 vs line +30.5 (away)"
+      ],
+      "risk": "Standard",
+      "side": "away",
+      "start": "2026-11-14T18:00Z",
+      "unit_size": 1.0
+    },
+    {
+      "bet_label": "Kansas State Wildcats +9.5",
+      "book": "ballybet",
+      "confidence": 6,
+      "edge": 0.0341,
+      "espn_event_id": "401906983",
+      "fair_american": 101,
+      "fair_prob": 0.4972,
+      "line": 9.5,
+      "market": "spread",
+      "matchup": "Minnesota Golden Gophers @ Kansas State Wildcats",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": 108,
+      "reasoning": [
+        "Model margin -9.6 vs market -9.5 (home)",
+        "Anchored fair margin -9.6 vs line +9.5 (home)"
+      ],
+      "risk": "Lean",
+      "side": "home",
+      "start": "2026-11-14T19:00Z",
+      "unit_size": 0.5
+    }
+  ],
   "date": "2026-11-14",
   "games": [
     {
@@ -81,10 +134,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -31.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": 1.5,
+        "total": 146.0,
+        "total_shift": 1.5
+      },
       "away_short": "Mississippi State",
       "cards": [],
       "espn_event_id": "401918857",
       "home_short": "Buffalo",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 32.5,
+        "spread_src": "consensus",
+        "total": 144.5,
+        "total_src": "consensus"
+      },
       "matchup": "Mississippi State Bulldogs @ Buffalo Bulls",
       "model": {
         "away_score": 80.6,
@@ -100,9 +167,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
       "start": "2026-11-14T17:00Z",
       "status": "graded"
     },
@@ -147,10 +218,24 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 1.0,
+        "season_bias_applied": 4.19,
+        "spread_shift": -1.5,
+        "total": 133.0,
+        "total_shift": 1.5
+      },
       "away_short": "Providence",
       "cards": [],
       "espn_event_id": "401906034",
       "home_short": "Boston College",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -2.5,
+        "spread_src": "consensus",
+        "total": 131.5,
+        "total_src": "consensus"
+      },
       "matchup": "Providence Friars @ Boston College Eagles",
       "model": {
         "away_score": 67.1,
@@ -166,9 +251,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
       "start": "2026-11-14T17:00Z",
       "status": "graded"
     },
@@ -218,19 +307,46 @@
     },
     {
       "anchored": {
-        "margin_home": 28.0,
+        "margin_home": 29.0,
         "season_bias_applied": 4.19,
         "spread_shift": -1.5,
         "total": 156.0,
         "total_shift": -1.5
       },
       "away_short": "DePaul",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "DePaul Blue Demons +30.5",
+          "book": "draftkings",
+          "confidence": 9,
+          "edge": 0.0356,
+          "espn_event_id": "401923183",
+          "fair_american": -119,
+          "fair_prob": 0.5425,
+          "line": 30.5,
+          "market": "spread",
+          "matchup": "DePaul Blue Demons @ Notre Dame Fighting Irish",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin +19.0 vs market +30.5 (home)",
+            "Anchored fair margin +29.0 vs line +30.5 (away)"
+          ],
+          "risk": "Standard",
+          "side": "away",
+          "start": "2026-11-14T18:00Z",
+          "unit_size": 1.0
+        }
+      ],
       "espn_event_id": "401923183",
       "home_short": "Notre Dame",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -29.5,
+        "spread_home": -30.5,
         "spread_src": "consensus",
         "total": 157.5,
         "total_src": "consensus"
@@ -249,9 +365,7 @@
         "total": 145.5
       },
       "neutral_site": true,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [],
       "sigma": {
         "spread": 14.06,
@@ -498,19 +612,46 @@
       "anchored": {
         "margin_home": -9.6,
         "season_bias_applied": 4.19,
-        "spread_shift": 0.9,
+        "spread_shift": -0.1,
         "total": 134.69,
-        "total_shift": 1.19
+        "total_shift": 0.19
       },
       "away_short": "Minnesota",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Kansas State Wildcats +9.5",
+          "book": "ballybet",
+          "confidence": 6,
+          "edge": 0.0341,
+          "espn_event_id": "401906983",
+          "fair_american": 101,
+          "fair_prob": 0.4972,
+          "line": 9.5,
+          "market": "spread",
+          "matchup": "Minnesota Golden Gophers @ Kansas State Wildcats",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": 108,
+          "reasoning": [
+            "Model margin -9.6 vs market -9.5 (home)",
+            "Anchored fair margin -9.6 vs line +9.5 (home)"
+          ],
+          "risk": "Lean",
+          "side": "home",
+          "start": "2026-11-14T19:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401906983",
       "home_short": "Kansas State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 10.5,
+        "spread_home": 9.5,
         "spread_src": "consensus",
-        "total": 133.5,
+        "total": 134.5,
         "total_src": "consensus"
       },
       "matchup": "Minnesota Golden Gophers @ Kansas State Wildcats",
@@ -527,9 +668,7 @@
         "total": 130.5
       },
       "neutral_site": true,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [],
       "sigma": {
         "spread": 14.06,
@@ -1210,9 +1349,9 @@
       "anchored": {
         "margin_home": -5.1,
         "season_bias_applied": 4.19,
-        "spread_shift": 0.4,
-        "total": 136.0,
-        "total_shift": -1.5
+        "spread_shift": -0.6,
+        "total": 135.99,
+        "total_shift": -0.51
       },
       "away_short": "Nebraska",
       "cards": [],
@@ -1220,9 +1359,9 @@
       "home_short": "Kansas",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 5.5,
+        "spread_home": 4.5,
         "spread_src": "consensus",
-        "total": 137.5,
+        "total": 136.5,
         "total_src": "consensus"
       },
       "matchup": "Nebraska Cornhuskers @ Kansas Jayhawks",
@@ -1459,16 +1598,16 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-14T12:40:23.961644Z",
+  "generated_at": "2026-11-14T16:20:19.666539Z",
   "market_bias": {
-    "mean_spread_delta": -4.75,
-    "mean_total_delta": -6.12,
-    "n_spread_lines": 4,
-    "n_total_lines": 4
+    "mean_spread_delta": -1.98,
+    "mean_total_delta": -4.13,
+    "n_spread_lines": 6,
+    "n_total_lines": 6
   },
-  "n_cards": 0,
+  "n_cards": 2,
   "n_games": 56,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 0
+  "total_units": 1.5
 }

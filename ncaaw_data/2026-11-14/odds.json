@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-14T12:40:23.810701Z",
+  "fetched_at": "2026-11-14T16:20:19.468048Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -19,6 +19,104 @@
   ],
   "games": [
     {
+      "id": "046c772dfb3845412d7556ed29d4850a",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-14T17:00:00Z",
+      "home_team": "Boston College Eagles",
+      "away_team": "Providence Friars",
+      "bookmakers": [
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Boston College Eagles",
+                  "price": -115,
+                  "point": -2.5
+                },
+                {
+                  "name": "Providence Friars",
+                  "price": -115,
+                  "point": 2.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2ac05a5a345c548c302cd4f5eedda0d0",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-14T17:00:00Z",
+      "home_team": "Buffalo Bulls",
+      "away_team": "Mississippi St Bulldogs",
+      "bookmakers": [
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Buffalo Bulls",
+                  "price": -115,
+                  "point": 32.5
+                },
+                {
+                  "name": "Mississippi St Bulldogs",
+                  "price": -115,
+                  "point": -32.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 144.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 144.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "616394e6bab4c90f3368bc1a3a830481",
       "sport_key": "basketball_wncaab",
       "sport_title": "WNCAAB",
@@ -29,11 +127,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-14T12:39:42Z",
+          "last_update": "2026-11-14T16:19:20Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "DePaul Blue Demons",
@@ -47,32 +145,188 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "DePaul Blue Demons",
                   "price": -110,
-                  "point": 29.5
+                  "point": 30.5
                 },
                 {
                   "name": "Notre Dame Fighting Irish",
                   "price": -110,
-                  "point": -29.5
+                  "point": -30.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Over",
+                  "price": -115,
+                  "point": 158.5
+                },
+                {
+                  "name": "Under",
+                  "price": -105,
+                  "point": 158.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "DePaul Blue Demons",
                   "price": -110,
+                  "point": 30.5
+                },
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -120,
+                  "point": -30.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
                   "point": 157.5
                 },
                 {
                   "name": "Under",
+                  "price": -115,
+                  "point": 157.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "DePaul Blue Demons",
+                  "price": -121,
+                  "point": 30.5
+                },
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -106,
+                  "point": -30.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 157.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 157.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-14T16:19:39Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "DePaul Blue Demons",
+                  "price": -124,
+                  "point": 30.5
+                },
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -108,
+                  "point": -30.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 157.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 157.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-14T16:19:21Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "DePaul Blue Demons",
+                  "price": -125,
+                  "point": 30.5
+                },
+                {
+                  "name": "Notre Dame Fighting Irish",
                   "price": -110,
+                  "point": -30.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 157.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
                   "point": 157.5
                 }
               ]
@@ -92,27 +346,27 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-14T12:39:42Z",
+          "last_update": "2026-11-14T16:19:20Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Tarleton State Texans",
                   "price": -110,
-                  "point": 47.5
+                  "point": 48.5
                 },
                 {
                   "name": "Texas Longhorns",
                   "price": -110,
-                  "point": -47.5
+                  "point": -48.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -122,6 +376,185 @@
                 {
                   "name": "Under",
                   "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Tarleton State Texans",
+                  "price": 102,
+                  "point": 47.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -129,
+                  "point": -47.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -107,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-14T16:19:39Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Tarleton State Texans",
+                  "price": 100,
+                  "point": 47.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -134,
+                  "point": -47.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -122,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -109,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-14T16:19:21Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Tarleton State Texans",
+                  "price": 100,
+                  "point": 47.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -135,
+                  "point": -47.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Tarleton State Texans",
+                  "price": -115,
+                  "point": 50.5
+                },
+                {
+                  "name": "Texas Longhorns",
+                  "price": -115,
+                  "point": -50.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
                   "point": 131.5
                 }
               ]
@@ -141,51 +574,263 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-14T12:39:42Z",
+          "last_update": "2026-11-14T16:19:20Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Kansas St Wildcats",
-                  "price": 380
+                  "price": 490
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -500
+                  "price": -675
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Kansas St Wildcats",
-                  "price": -110,
+                  "price": -105,
                   "point": 10.5
                 },
                 {
                   "name": "Minnesota Golden Gophers",
-                  "price": -110,
+                  "price": -115,
                   "point": -10.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Over",
+                  "price": -118,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -102,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 400
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -650
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": -120,
+                  "point": 11.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
                   "price": -110,
+                  "point": -11.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
                   "point": 133.5
                 },
                 {
                   "name": "Under",
                   "price": -110,
                   "point": 133.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 420
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -625
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 108,
+                  "point": 9.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -137,
+                  "point": -9.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -108,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-14T16:19:39Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 420
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -715
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 106,
+                  "point": 9.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -141,
+                  "point": -9.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-14T16:19:21Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 425
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -650
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Kansas St Wildcats",
+                  "price": 105,
+                  "point": 9.5
+                },
+                {
+                  "name": "Minnesota Golden Gophers",
+                  "price": -140,
+                  "point": -9.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 134.5
                 }
               ]
             }
@@ -204,25 +849,25 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-14T12:39:42Z",
+          "last_update": "2026-11-14T16:19:20Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "North Carolina Tar Heels",
-                  "price": -1450
+                  "price": -1350
                 },
                 {
                   "name": "Pennsylvania Quakers",
-                  "price": 850
+                  "price": 800
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "North Carolina Tar Heels",
@@ -238,7 +883,203 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 130.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 130.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -1800
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 800
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -110,
+                  "point": -18.5
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": -120,
+                  "point": 18.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 130.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 130.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -2500
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 1000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -132,
+                  "point": -16.5
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 104,
+                  "point": 16.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 130.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 130.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-14T16:19:39Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -10000
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 1000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -136,
+                  "point": -16.5
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 102,
+                  "point": 16.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 130.5
+                },
+                {
+                  "name": "Under",
+                  "price": -113,
+                  "point": 130.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -1600
+                },
+                {
+                  "name": "Pennsylvania Quakers",
+                  "price": 900
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -267,51 +1108,263 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-14T12:39:42Z",
+          "last_update": "2026-11-14T16:19:20Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Kansas Jayhawks",
-                  "price": 180
+                  "price": 225
                 },
                 {
                   "name": "Nebraska Cornhuskers",
-                  "price": -218
+                  "price": -278
                 }
               ]
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Kansas Jayhawks",
-                  "price": -110,
+                  "price": -115,
                   "point": 5.5
                 },
                 {
                   "name": "Nebraska Cornhuskers",
-                  "price": -110,
+                  "price": -105,
                   "point": -5.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-14T12:39:42Z",
+              "last_update": "2026-11-14T16:19:20Z",
               "outcomes": [
                 {
                   "name": "Over",
                   "price": -110,
-                  "point": 137.5
+                  "point": 136.5
                 },
                 {
                   "name": "Under",
                   "price": -110,
-                  "point": 137.5
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-14T16:20:09Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": 170
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -220
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -115,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:09Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-14T16:19:39Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": 165
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -230
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": -113,
+                  "point": 4.5
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -118,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:39Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -113,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-14T16:20:11Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": 200
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -265
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": -120,
+                  "point": 6.5
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -110,
+                  "point": -6.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:20:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-14T16:19:21Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": 170
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -220
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Kansas Jayhawks",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Nebraska Cornhuskers",
+                  "price": -120,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-14T16:19:21Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
                 }
               ]
             }

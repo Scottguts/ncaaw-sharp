@@ -1,17 +1,70 @@
 {
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T12:40:23.961644Z",
+  "generated_at": "2026-11-14T16:20:19.666539Z",
   "market_bias": {
-    "n_spread_lines": 4,
-    "n_total_lines": 4,
-    "mean_spread_delta": -4.75,
-    "mean_total_delta": -6.12
+    "n_spread_lines": 6,
+    "n_total_lines": 6,
+    "mean_spread_delta": -1.98,
+    "mean_total_delta": -4.13
   },
   "odds_available": true,
   "n_games": 56,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
+  "n_cards": 2,
+  "total_units": 1.5,
+  "cards": [
+    {
+      "bet_label": "DePaul Blue Demons +30.5",
+      "market": "spread",
+      "side": "away",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 30.5,
+      "fair_prob": 0.5425,
+      "fair_american": -119,
+      "edge": 0.0356,
+      "confidence": 9,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin +19.0 vs market +30.5 (home)",
+        "Anchored fair margin +29.0 vs line +30.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401923183",
+      "matchup": "DePaul Blue Demons @ Notre Dame Fighting Irish",
+      "start": "2026-11-14T18:00Z"
+    },
+    {
+      "bet_label": "Kansas State Wildcats +9.5",
+      "market": "spread",
+      "side": "home",
+      "book": "ballybet",
+      "price_american": 108,
+      "line": 9.5,
+      "fair_prob": 0.4972,
+      "fair_american": 101,
+      "edge": 0.0341,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model margin -9.6 vs market -9.5 (home)",
+        "Anchored fair margin -9.6 vs line +9.5 (home)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401906983",
+      "matchup": "Minnesota Golden Gophers @ Kansas State Wildcats",
+      "start": "2026-11-14T19:00Z"
+    }
+  ],
   "shadow_cards": [],
   "games": [
     {
@@ -103,7 +156,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 80.6,
@@ -116,6 +169,24 @@
         "games_away": 3,
         "rank_home": 250,
         "rank_away": 43
+      },
+      "market": {
+        "spread_home": 32.5,
+        "total": 144.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": -31.0,
+        "spread_shift": 1.5,
+        "total": 146.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -169,7 +240,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 67.1,
@@ -182,6 +253,24 @@
         "games_away": 3,
         "rank_home": 187,
         "rank_away": 142
+      },
+      "market": {
+        "spread_home": -2.5,
+        "total": 131.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.06,
+        "total": 19.05
+      },
+      "anchored": {
+        "margin_home": 1.0,
+        "spread_shift": -1.5,
+        "total": 133.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 4.19
       }
     },
     {
@@ -236,11 +325,36 @@
       "start": "2026-11-14T18:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "DePaul Blue Demons +30.5",
+          "market": "spread",
+          "side": "away",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 30.5,
+          "fair_prob": 0.5425,
+          "fair_american": -119,
+          "edge": 0.0356,
+          "confidence": 9,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +19.0 vs market +30.5 (home)",
+            "Anchored fair margin +29.0 vs line +30.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401923183",
+          "matchup": "DePaul Blue Demons @ Notre Dame Fighting Irish",
+          "start": "2026-11-14T18:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 63.2,
         "home_score": 82.3,
@@ -254,7 +368,7 @@
         "rank_away": 136
       },
       "market": {
-        "spread_home": -29.5,
+        "spread_home": -30.5,
         "total": 157.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -265,7 +379,7 @@
         "total": 19.05
       },
       "anchored": {
-        "margin_home": 28.0,
+        "margin_home": 29.0,
         "spread_shift": -1.5,
         "total": 156.0,
         "total_shift": -1.5,
@@ -514,11 +628,36 @@
       "start": "2026-11-14T19:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Kansas State Wildcats +9.5",
+          "market": "spread",
+          "side": "home",
+          "book": "ballybet",
+          "price_american": 108,
+          "line": 9.5,
+          "fair_prob": 0.4972,
+          "fair_american": 101,
+          "edge": 0.0341,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin -9.6 vs market -9.5 (home)",
+            "Anchored fair margin -9.6 vs line +9.5 (home)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401906983",
+          "matchup": "Minnesota Golden Gophers @ Kansas State Wildcats",
+          "start": "2026-11-14T19:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 70.0,
         "home_score": 60.5,
@@ -532,8 +671,8 @@
         "rank_away": 26
       },
       "market": {
-        "spread_home": 10.5,
-        "total": 133.5,
+        "spread_home": 9.5,
+        "total": 134.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -544,9 +683,9 @@
       },
       "anchored": {
         "margin_home": -9.6,
-        "spread_shift": 0.9,
+        "spread_shift": -0.1,
         "total": 134.69,
-        "total_shift": 1.19,
+        "total_shift": 0.19,
         "season_bias_applied": 4.19
       }
     },
@@ -1244,8 +1383,8 @@
         "rank_away": 23
       },
       "market": {
-        "spread_home": 5.5,
-        "total": 137.5,
+        "spread_home": 4.5,
+        "total": 136.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -1256,9 +1395,9 @@
       },
       "anchored": {
         "margin_home": -5.1,
-        "spread_shift": 0.4,
-        "total": 136.0,
-        "total_shift": -1.5,
+        "spread_shift": -0.6,
+        "total": 135.99,
+        "total_shift": -0.51,
         "season_bias_applied": 4.19
       }
     },
