@@ -8,18 +8,14 @@ Nothing cleared the gates today. A quiet day is a correct day.
 
 ### Full slate
 
-- **North Carolina Tar Heels @ Pennsylvania Quakers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Nebraska Cornhuskers @ Kansas Jayhawks** — model 69-64 (margin -5.1 home, total 133.7) · market: home +18.5 (consensus) · total 165.5 (consensus) · PASS: no edge cleared the gates
-- **St. Thomas Tommies @ Army Black Knights** — model 59-65 (margin +6.1 home, total 123.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **Nevada Wolf Pack @ Utah Valley Wolverines** — model 61-65 (margin +4.5 home, total 125.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **LSU Shreveport Pilots @ UT Arlington Mavericks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
-- **Akron Zips @ Mercyhurst Lakers** — model 76-68 (margin -8.3 home, total 143.5) · market: no line · PASS: no market line (nothing to anchor against)
-- **Bradley Braves @ Bellarmine Knights** — model 73-62 (margin -11.5 home, total 134.6) · market: no line · PASS: no market line (nothing to anchor against)
-- **Cal State Northridge Matadors @ San Diego Toreros** — model 66-73 (margin +6.1 home, total 139.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **Long Island University Sharks @ George Washington Revolutionaries** — model 54-73 (margin +19.0 home, total 127.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Norfolk State Spartans @ Hampton Lady Pirates** — model 64-72 (margin +7.3 home, total 136.3) · market: no line · PASS: no market line (nothing to anchor against)
+- **Northwestern Wildcats @ App State Mountaineers** — model 68-64 (margin -3.8 home, total 132.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Colgate Raiders @ New Hampshire Wildcats** — model 55-61 (margin +5.8 home, total 116.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Tarleton State Texans @ Texas Longhorns** — model 45-84 (margin +38.5 home, total 128.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **DePaul Blue Demons @ Notre Dame Fighting Irish** — model 68-87 (margin +18.7 home, total 154.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **Minnesota Golden Gophers @ Kansas State Wildcats** — model 71-62 (margin -8.9 home, total 133.9) · market: no line · PASS: no market line (nothing to anchor against)
+- **North Carolina Tar Heels @ Pennsylvania Quakers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Nebraska Cornhuskers @ Kansas Jayhawks** — model 69-64 (margin -5.1 home, total 133.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Wofford Terriers @ Georgia Southern Eagles** — model 66-71 (margin +5.3 home, total 137.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **Rider Broncs @ Yale Bulldogs** — model 57-68 (margin +11.2 home, total 124.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Mississippi Valley State Devilettes @ Tennessee State Lady Tigers** — model 69-84 (margin +14.3 home, total 153.1) · market: no line · PASS: no market line (nothing to anchor against)
@@ -60,9 +56,13 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **New Mexico Lobos @ BYU Cougars** — model 62-76 (margin +14.3 home, total 138.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **UC Riverside Highlanders @ Wichita State Shockers** — model 59-70 (margin +10.8 home, total 129.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **California Golden Bears @ UC Santa Barbara Gauchos** — model 72-62 (margin -10.3 home, total 134.6) · market: no line · PASS: no market line (nothing to anchor against)
-- **Norfolk State Spartans @ Hampton Lady Pirates** — model 64-72 (margin +7.3 home, total 136.3) · market: no line · PASS: no market line (nothing to anchor against)
-- **Northwestern Wildcats @ App State Mountaineers** — model 68-64 (margin -3.8 home, total 132.1) · market: no line · PASS: no market spread quoted by target/sharp books
-- **Colgate Raiders @ New Hampshire Wildcats** — model 55-61 (margin +5.8 home, total 116.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **St. Thomas Tommies @ Army Black Knights** — model 59-65 (margin +6.1 home, total 123.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Nevada Wolf Pack @ Utah Valley Wolverines** — model 61-65 (margin +4.5 home, total 125.9) · market: no line · PASS: no market line (nothing to anchor against)
+- **LSU Shreveport Pilots @ UT Arlington Mavericks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
+- **Akron Zips @ Mercyhurst Lakers** — model 76-68 (margin -8.3 home, total 143.5) · market: no line · PASS: no market line (nothing to anchor against)
+- **Bradley Braves @ Bellarmine Knights** — model 73-62 (margin -11.5 home, total 134.6) · market: no line · PASS: no market line (nothing to anchor against)
+- **Cal State Northridge Matadors @ San Diego Toreros** — model 66-73 (margin +6.1 home, total 139.1) · market: no line · PASS: no market line (nothing to anchor against)
+- **Long Island University Sharks @ George Washington Revolutionaries** — model 54-73 (margin +19.0 home, total 127.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **Long Beach State Beach @ Portland Pilots** — model 59-77 (margin +18.3 home, total 135.9) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-14T22:40:28Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-15T00:55:58Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
