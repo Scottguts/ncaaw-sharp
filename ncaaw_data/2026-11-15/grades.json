@@ -1,30 +1,30 @@
 {
   "date": "2026-11-15",
-  "generated_at": "2026-11-15T12:40:26.386535Z",
+  "generated_at": "2026-11-15T16:21:24.043497Z",
   "market_bias": {
     "n_spread_lines": 10,
     "n_total_lines": 10,
-    "mean_spread_delta": -2.41,
-    "mean_total_delta": -0.61
+    "mean_spread_delta": -2.81,
+    "mean_total_delta": -0.71
   },
   "odds_available": true,
-  "n_games": 74,
-  "n_cards": 2,
-  "total_units": 1.5,
+  "n_games": 72,
+  "n_cards": 3,
+  "total_units": 2.5,
   "cards": [
     {
       "bet_label": "Iowa Hawkeyes ML",
       "market": "moneyline",
       "side": "home",
-      "book": "ballybet",
-      "price_american": 123,
+      "book": "hardrockbet",
+      "price_american": 125,
       "line": null,
       "fair_prob": 0.4677,
       "fair_american": 114,
-      "edge": 0.0429,
-      "confidence": 9,
-      "unit_size": 1.0,
-      "risk": "Standard",
+      "edge": 0.0523,
+      "confidence": 10,
+      "unit_size": 1.5,
+      "risk": "Strong",
       "reasoning": [
         "Model margin +3.5 vs market -2.5 (home)",
         "Anchored fair margin -1.0, sigma 12.3"
@@ -39,30 +39,56 @@
       "start": "2026-11-15T18:00Z"
     },
     {
-      "bet_label": "Louisville Cardinals +14.5",
+      "bet_label": "Eastern Michigan Eagles +47.5",
       "market": "spread",
-      "side": "home",
+      "side": "away",
       "book": "draftkings",
-      "price_american": -115,
-      "line": 14.5,
-      "fair_prob": 0.5487,
-      "fair_american": -122,
-      "edge": 0.0259,
+      "price_american": -110,
+      "line": 47.5,
+      "fair_prob": 0.5394,
+      "fair_american": -117,
+      "edge": 0.0298,
       "confidence": 9,
       "unit_size": 0.5,
       "risk": "Lean",
       "reasoning": [
-        "Model margin -6.9 vs market -14.5 (home)",
-        "Anchored fair margin -13.0 vs line +14.5 (home)"
+        "Model margin +28.2 vs market +47.5 (home)",
+        "Anchored fair margin +46.0 vs line +47.5 (away)"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401906079",
-      "matchup": "UConn Huskies @ Louisville Cardinals",
-      "start": "2026-11-15T22:30Z"
+      "espn_event_id": "401929060",
+      "matchup": "Eastern Michigan Eagles @ Kentucky Wildcats",
+      "start": "2026-11-15T17:00Z"
+    },
+    {
+      "bet_label": "Oklahoma State Cowgirls ML",
+      "market": "moneyline",
+      "side": "away",
+      "book": "betmgm",
+      "price_american": -170,
+      "line": null,
+      "fair_prob": 0.6456,
+      "fair_american": -182,
+      "edge": 0.0254,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model margin -6.2 vs market -3.5 (home)",
+        "Anchored fair margin -5.0, sigma 13.4"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401907050",
+      "matchup": "Oklahoma State Cowgirls @ South Dakota State Jackrabbits",
+      "start": "2026-11-15T19:00Z"
     }
   ],
   "shadow_cards": [
@@ -93,30 +119,108 @@
       "start": "2026-11-15T18:00Z"
     },
     {
-      "bet_label": "Over 142.5",
+      "bet_label": "Over 133.5",
       "market": "total",
       "side": "over",
-      "book": "draftkings",
-      "price_american": -110,
-      "line": 142.5,
-      "fair_prob": 0.5324,
-      "fair_american": -114,
-      "edge": 0.0163,
+      "book": "ballybet",
+      "price_american": -105,
+      "line": 133.5,
+      "fair_prob": 0.5264,
+      "fair_american": -111,
+      "edge": 0.0277,
       "confidence": 6,
       "unit_size": 0.5,
       "risk": "Shadow",
       "reasoning": [
-        "Model total 150.9 vs market 142.5",
-        "Anchored fair total 144.0 vs line 142.5"
+        "Model total 134.3 vs market 133.5",
+        "Anchored fair total 134.8 vs line 133.5"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401906079",
-      "matchup": "UConn Huskies @ Louisville Cardinals",
-      "start": "2026-11-15T22:30Z"
+      "espn_event_id": "401915909",
+      "matchup": "Marshall Thundering Herd @ Duke Blue Devils",
+      "start": "2026-11-15T20:00Z"
+    },
+    {
+      "bet_label": "Canisius Golden Griffins +34.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -112,
+      "line": 34.5,
+      "fair_prob": 0.5406,
+      "fair_american": -118,
+      "edge": 0.0232,
+      "confidence": 8,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model margin +25.2 vs market +34.5 (home)",
+        "Anchored fair margin +33.0 vs line +34.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401915595",
+      "matchup": "Canisius Golden Griffins @ Syracuse Orange",
+      "start": "2026-11-16T00:00Z"
+    },
+    {
+      "bet_label": "Over 132.5",
+      "market": "total",
+      "side": "over",
+      "book": "draftkings",
+      "price_american": -105,
+      "line": 132.5,
+      "fair_prob": 0.5285,
+      "fair_american": -112,
+      "edge": 0.0319,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 133.4 vs market 132.5",
+        "Anchored fair total 133.9 vs line 132.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401915595",
+      "matchup": "Canisius Golden Griffins @ Syracuse Orange",
+      "start": "2026-11-16T00:00Z"
+    },
+    {
+      "bet_label": "Iowa Hawkeyes +2.5",
+      "market": "spread",
+      "side": "home",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 2.5,
+      "fair_prob": 0.5484,
+      "fair_american": -121,
+      "edge": 0.047,
+      "confidence": 10,
+      "unit_size": 0.5,
+      "risk": "Shadow(cap-cut)",
+      "reasoning": [
+        "Model margin +3.5 vs market -2.5 (home)",
+        "Anchored fair margin -1.0 vs line +2.5 (home)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401918830",
+      "matchup": "Vanderbilt Commodores @ Iowa Hawkeyes",
+      "start": "2026-11-15T18:00Z"
     }
   ],
   "games": [
@@ -128,11 +232,36 @@
       "start": "2026-11-15T17:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Eastern Michigan Eagles +47.5",
+          "market": "spread",
+          "side": "away",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 47.5,
+          "fair_prob": 0.5394,
+          "fair_american": -117,
+          "edge": 0.0298,
+          "confidence": 9,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin +28.2 vs market +47.5 (home)",
+            "Anchored fair margin +46.0 vs line +47.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401929060",
+          "matchup": "Eastern Michigan Eagles @ Kentucky Wildcats",
+          "start": "2026-11-15T17:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 54.4,
         "home_score": 82.7,
@@ -163,7 +292,7 @@
         "spread_shift": -1.5,
         "total": 141.0,
         "total_shift": -1.5,
-        "season_bias_applied": 0.43
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -207,9 +336,9 @@
       "anchored": {
         "margin_home": 18.0,
         "spread_shift": -0.5,
-        "total": 133.33,
-        "total_shift": -0.17,
-        "season_bias_applied": 0.43
+        "total": 133.37,
+        "total_shift": -0.13,
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -268,8 +397,8 @@
         "p3_away": 39.49999999999999
       },
       "market": {
-        "spread_home": -3.5,
-        "total": 143.5,
+        "spread_home": -6.5,
+        "total": 145.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -279,11 +408,11 @@
         "total": 19.86
       },
       "anchored": {
-        "margin_home": 2.6,
-        "spread_shift": -0.9,
-        "total": 145.0,
-        "total_shift": 1.5,
-        "season_bias_applied": 0.43
+        "margin_home": 5.0,
+        "spread_shift": -1.5,
+        "total": 145.17,
+        "total_shift": -0.33,
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -299,18 +428,44 @@
           "bet_label": "Iowa Hawkeyes ML",
           "market": "moneyline",
           "side": "home",
-          "book": "ballybet",
-          "price_american": 123,
+          "book": "hardrockbet",
+          "price_american": 125,
           "line": null,
           "fair_prob": 0.4677,
           "fair_american": 114,
-          "edge": 0.0429,
-          "confidence": 9,
-          "unit_size": 1.0,
-          "risk": "Standard",
+          "edge": 0.0523,
+          "confidence": 10,
+          "unit_size": 1.5,
+          "risk": "Strong",
           "reasoning": [
             "Model margin +3.5 vs market -2.5 (home)",
             "Anchored fair margin -1.0, sigma 12.3"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918830",
+          "matchup": "Vanderbilt Commodores @ Iowa Hawkeyes",
+          "start": "2026-11-15T18:00Z"
+        },
+        {
+          "bet_label": "Iowa Hawkeyes +2.5",
+          "market": "spread",
+          "side": "home",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 2.5,
+          "fair_prob": 0.5484,
+          "fair_american": -121,
+          "edge": 0.047,
+          "confidence": 10,
+          "unit_size": 0.5,
+          "risk": "Shadow(cap-cut)",
+          "reasoning": [
+            "Model margin +3.5 vs market -2.5 (home)",
+            "Anchored fair margin -1.0 vs line +2.5 (home)"
           ],
           "pass_triggers": [
             "Key player ruled out after card is posted",
@@ -381,7 +536,7 @@
         "spread_shift": 1.5,
         "total": 148.0,
         "total_shift": -1.5,
-        "season_bias_applied": 0.43
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -395,7 +550,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 52.4,
@@ -410,6 +565,17 @@
         "rank_away": 164,
         "p3_home": 41.5,
         "p3_away": 45.35
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 17.65
       }
     },
     {
@@ -423,7 +589,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 67.9,
@@ -438,6 +604,17 @@
         "rank_away": 56,
         "p3_home": 43.900000000000006,
         "p3_away": 47.400000000000006
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.49,
+        "total": 21.83
       }
     },
     {
@@ -551,20 +728,6 @@
         "p3_home": 44.733333333333334,
         "p3_away": 46.333333333333336
       }
-    },
-    {
-      "espn_event_id": "401920564",
-      "matchup": "TBD @ TBD",
-      "home_short": "TBD",
-      "away_short": "TBD",
-      "start": "2026-11-15T18:00Z",
-      "neutral_site": true,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
     },
     {
       "espn_event_id": "401918041",
@@ -742,11 +905,36 @@
       "start": "2026-11-15T19:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Oklahoma State Cowgirls ML",
+          "market": "moneyline",
+          "side": "away",
+          "book": "betmgm",
+          "price_american": -170,
+          "line": null,
+          "fair_prob": 0.6456,
+          "fair_american": -182,
+          "edge": 0.0254,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin -6.2 vs market -3.5 (home)",
+            "Anchored fair margin -5.0, sigma 13.4"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401907050",
+          "matchup": "Oklahoma State Cowgirls @ South Dakota State Jackrabbits",
+          "start": "2026-11-15T19:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 75.6,
         "home_score": 69.4,
@@ -777,7 +965,7 @@
         "spread_shift": -1.5,
         "total": 145.0,
         "total_shift": 1.5,
-        "season_bias_applied": 0.43
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -1337,7 +1525,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 72.8,
@@ -1352,6 +1540,17 @@
         "rank_away": 48,
         "p3_home": 43.0,
         "p3_away": 44.4
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.3,
+        "total": 18.48
       }
     },
     {
@@ -1391,7 +1590,34 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 133.5",
+          "market": "total",
+          "side": "over",
+          "book": "ballybet",
+          "price_american": -105,
+          "line": 133.5,
+          "fair_prob": 0.5264,
+          "fair_american": -111,
+          "edge": 0.0277,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 134.3 vs market 133.5",
+            "Anchored fair total 134.8 vs line 133.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915909",
+          "matchup": "Marshall Thundering Herd @ Duke Blue Devils",
+          "start": "2026-11-15T20:00Z"
+        }
+      ],
       "pass_reasons": [
         "no edge cleared the gates"
       ],
@@ -1423,9 +1649,9 @@
       "anchored": {
         "margin_home": 32.0,
         "spread_shift": -1.5,
-        "total": 134.73,
-        "total_shift": 1.23,
-        "season_bias_applied": 0.43
+        "total": 134.77,
+        "total_shift": 1.27,
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -1439,7 +1665,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 59.9,
@@ -1454,6 +1680,17 @@
         "rank_away": 87,
         "p3_home": 37.91111111111111,
         "p3_away": 45.24285714285714
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 13.65,
+        "total": 19.34
       }
     },
     {
@@ -1467,7 +1704,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no market spread quoted by target/sharp books"
       ],
       "model": {
         "away_score": 59.3,
@@ -1482,6 +1719,17 @@
         "rank_away": 96,
         "p3_home": 41.64285714285714,
         "p3_away": 47.15
+      },
+      "market": {
+        "spread_home": null,
+        "total": null,
+        "spread_src": null,
+        "total_src": null,
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 13.51,
+        "total": 19.18
       }
     },
     {
@@ -1737,20 +1985,6 @@
       }
     },
     {
-      "espn_event_id": "401920565",
-      "matchup": "TBD @ TBD",
-      "home_short": "TBD",
-      "away_short": "TBD",
-      "start": "2026-11-15T20:30Z",
-      "neutral_site": true,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
       "espn_event_id": "401927001",
       "matchup": "Portland State Vikings @ San Jos\u00e9 State Spartans",
       "home_short": "San Jos\u00e9 State",
@@ -1988,7 +2222,7 @@
         "p3_away": 49.75
       },
       "market": {
-        "spread_home": -28.5,
+        "spread_home": -29.5,
         "total": 128.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -1999,11 +2233,11 @@
         "total": 16.8
       },
       "anchored": {
-        "margin_home": 30.0,
-        "spread_shift": 1.5,
+        "margin_home": 30.5,
+        "spread_shift": 1.0,
         "total": 127.0,
         "total_shift": -1.5,
-        "season_bias_applied": 0.43
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -2014,63 +2248,11 @@
       "start": "2026-11-15T22:30Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Louisville Cardinals +14.5",
-          "market": "spread",
-          "side": "home",
-          "book": "draftkings",
-          "price_american": -115,
-          "line": 14.5,
-          "fair_prob": 0.5487,
-          "fair_american": -122,
-          "edge": 0.0259,
-          "confidence": 9,
-          "unit_size": 0.5,
-          "risk": "Lean",
-          "reasoning": [
-            "Model margin -6.9 vs market -14.5 (home)",
-            "Anchored fair margin -13.0 vs line +14.5 (home)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401906079",
-          "matchup": "UConn Huskies @ Louisville Cardinals",
-          "start": "2026-11-15T22:30Z"
-        }
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
       ],
-      "shadow": [
-        {
-          "bet_label": "Over 142.5",
-          "market": "total",
-          "side": "over",
-          "book": "draftkings",
-          "price_american": -110,
-          "line": 142.5,
-          "fair_prob": 0.5324,
-          "fair_american": -114,
-          "edge": 0.0163,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Shadow",
-          "reasoning": [
-            "Model total 150.9 vs market 142.5",
-            "Anchored fair total 144.0 vs line 142.5"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401906079",
-          "matchup": "UConn Huskies @ Louisville Cardinals",
-          "start": "2026-11-15T22:30Z"
-        }
-      ],
-      "pass_reasons": [],
       "model": {
         "away_score": 78.9,
         "home_score": 72.0,
@@ -2101,7 +2283,7 @@
         "spread_shift": 1.5,
         "total": 144.0,
         "total_shift": 1.5,
-        "season_bias_applied": 0.43
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -2133,7 +2315,7 @@
       },
       "market": {
         "spread_home": -22.5,
-        "total": 132.5,
+        "total": 131.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -2145,9 +2327,9 @@
       "anchored": {
         "margin_home": 21.0,
         "spread_shift": -1.5,
-        "total": 131.0,
-        "total_shift": -1.5,
-        "season_bias_applied": 0.43
+        "total": 130.37,
+        "total_shift": -1.13,
+        "season_bias_applied": 0.47
       }
     },
     {
@@ -2187,7 +2369,60 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Canisius Golden Griffins +34.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -112,
+          "line": 34.5,
+          "fair_prob": 0.5406,
+          "fair_american": -118,
+          "edge": 0.0232,
+          "confidence": 8,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model margin +25.2 vs market +34.5 (home)",
+            "Anchored fair margin +33.0 vs line +34.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915595",
+          "matchup": "Canisius Golden Griffins @ Syracuse Orange",
+          "start": "2026-11-16T00:00Z"
+        },
+        {
+          "bet_label": "Over 132.5",
+          "market": "total",
+          "side": "over",
+          "book": "draftkings",
+          "price_american": -105,
+          "line": 132.5,
+          "fair_prob": 0.5285,
+          "fair_american": -112,
+          "edge": 0.0319,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 133.4 vs market 132.5",
+            "Anchored fair total 133.9 vs line 132.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915595",
+          "matchup": "Canisius Golden Griffins @ Syracuse Orange",
+          "start": "2026-11-16T00:00Z"
+        }
+      ],
       "pass_reasons": [
         "no edge cleared the gates"
       ],
@@ -2214,14 +2449,14 @@
       },
       "sigma": {
         "spread": 14.73,
-        "total": 19.16
+        "total": 19.17
       },
       "anchored": {
         "margin_home": 33.0,
         "spread_shift": -1.5,
-        "total": 133.83,
-        "total_shift": 1.33,
-        "season_bias_applied": 0.43
+        "total": 133.87,
+        "total_shift": 1.37,
+        "season_bias_applied": 0.47
       }
     },
     {
