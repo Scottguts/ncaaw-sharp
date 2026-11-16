@@ -1,49 +1,49 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T16:29:40.138931Z",
+  "generated_at": "2026-11-16T20:54:57.017056Z",
   "market_bias": {
     "n_spread_lines": 4,
     "n_total_lines": 4,
-    "mean_spread_delta": -4.6,
-    "mean_total_delta": 0.9
+    "mean_spread_delta": -2.55,
+    "mean_total_delta": 1.07
   },
   "odds_available": true,
   "n_games": 33,
   "n_cards": 1,
-  "total_units": 1.0,
+  "total_units": 1.5,
   "cards": [
     {
-      "bet_label": "Penn State Lady Lions +21.5",
-      "market": "spread",
-      "side": "away",
-      "book": "ballybet",
-      "price_american": -108,
-      "line": 21.5,
-      "fair_prob": 0.5437,
-      "fair_american": -119,
-      "edge": 0.0471,
-      "confidence": 9,
-      "unit_size": 1.0,
-      "risk": "Standard",
+      "bet_label": "Under 166.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 166.5,
+      "fair_prob": 0.5538,
+      "fair_american": -124,
+      "edge": 0.0573,
+      "confidence": 8,
+      "unit_size": 1.5,
+      "risk": "Strong",
       "reasoning": [
-        "Model margin +16.6 vs market +21.5 (home)",
-        "Anchored fair margin +20.0 vs line +21.5 (away)"
+        "Model total 164.2 vs market 165.5",
+        "Anchored fair total 164.0 vs line 166.5"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "espn_event_id": "401916083",
-      "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
-      "start": "2026-11-16T21:00Z"
+      "espn_event_id": "401912968",
+      "matchup": "Troy Trojans @ LSU Tigers",
+      "start": "2026-11-17T01:00Z"
     }
   ],
   "shadow_cards": [],
   "games": [
     {
       "espn_event_id": "401929164",
-      "matchup": "Lawrence Tech LAWRENCE TECH @ Bowling Green Falcons",
+      "matchup": "Lawrence Tech Blue Devils @ Bowling Green Falcons",
       "home_short": "Bowling Green",
       "away_short": "Lawrence Tech",
       "start": "2026-11-16T16:00Z",
@@ -94,7 +94,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 48.4,
@@ -109,24 +109,6 @@
         "rank_away": 343,
         "p3_home": 42.2,
         "p3_away": 50.75
-      },
-      "market": {
-        "spread_home": -40.5,
-        "total": 125.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.12,
-        "total": 17.37
-      },
-      "anchored": {
-        "margin_home": 39.0,
-        "spread_shift": -1.5,
-        "total": 127.0,
-        "total_shift": 1.5,
-        "season_bias_applied": -0.85
       }
     },
     {
@@ -165,36 +147,11 @@
       "start": "2026-11-16T21:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Penn State Lady Lions +21.5",
-          "market": "spread",
-          "side": "away",
-          "book": "ballybet",
-          "price_american": -108,
-          "line": 21.5,
-          "fair_prob": 0.5437,
-          "fair_american": -119,
-          "edge": 0.0471,
-          "confidence": 9,
-          "unit_size": 1.0,
-          "risk": "Standard",
-          "reasoning": [
-            "Model margin +16.6 vs market +21.5 (home)",
-            "Anchored fair margin +20.0 vs line +21.5 (away)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401916083",
-          "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
-          "start": "2026-11-16T21:00Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 65.6,
         "home_score": 82.2,
@@ -210,8 +167,8 @@
         "p3_away": 50.357142857142854
       },
       "market": {
-        "spread_home": -21.5,
-        "total": 141.5,
+        "spread_home": -23.5,
+        "total": 139.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -221,11 +178,11 @@
         "total": 19.97
       },
       "anchored": {
-        "margin_home": 20.0,
+        "margin_home": 22.0,
         "spread_shift": -1.5,
-        "total": 143.0,
+        "total": 141.0,
         "total_shift": 1.5,
-        "season_bias_applied": -0.85
+        "season_bias_applied": -0.86
       }
     },
     {
@@ -239,7 +196,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 53.6,
@@ -254,6 +211,24 @@
         "rank_away": 220,
         "p3_home": 43.099999999999994,
         "p3_away": 52.9
+      },
+      "market": {
+        "spread_home": -19.5,
+        "total": 124.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.01,
+        "total": 18.64
+      },
+      "anchored": {
+        "margin_home": 20.0,
+        "spread_shift": 0.5,
+        "total": 126.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -0.86
       }
     },
     {
@@ -704,8 +679,8 @@
         "p3_away": 45.15714285714286
       },
       "market": {
-        "spread_home": 42.5,
-        "total": 144.5,
+        "spread_home": 45.5,
+        "total": 145.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -715,11 +690,11 @@
         "total": 19.5
       },
       "anchored": {
-        "margin_home": -41.0,
+        "margin_home": -44.0,
         "spread_shift": 1.5,
-        "total": 143.0,
+        "total": 144.0,
         "total_shift": -1.5,
-        "season_bias_applied": -0.85
+        "season_bias_applied": -0.86
       }
     },
     {
@@ -730,11 +705,36 @@
       "start": "2026-11-17T01:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "Under 166.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 166.5,
+          "fair_prob": 0.5538,
+          "fair_american": -124,
+          "edge": 0.0573,
+          "confidence": 8,
+          "unit_size": 1.5,
+          "risk": "Strong",
+          "reasoning": [
+            "Model total 164.2 vs market 165.5",
+            "Anchored fair total 164.0 vs line 166.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401912968",
+          "matchup": "Troy Trojans @ LSU Tigers",
+          "start": "2026-11-17T01:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 64.9,
         "home_score": 99.3,
@@ -750,8 +750,8 @@
         "p3_away": 47.099999999999994
       },
       "market": {
-        "spread_home": -51.5,
-        "total": 168.5,
+        "spread_home": -50.5,
+        "total": 165.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -761,11 +761,11 @@
         "total": 18.48
       },
       "anchored": {
-        "margin_home": 50.0,
+        "margin_home": 49.0,
         "spread_shift": -1.5,
-        "total": 167.0,
+        "total": 164.0,
         "total_shift": -1.5,
-        "season_bias_applied": -0.85
+        "season_bias_applied": -0.86
       }
     },
     {

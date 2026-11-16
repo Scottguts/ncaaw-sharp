@@ -1,30 +1,30 @@
 {
   "cards": [
     {
-      "bet_label": "Penn State Lady Lions +21.5",
-      "book": "ballybet",
-      "confidence": 9,
-      "edge": 0.0471,
-      "espn_event_id": "401916083",
-      "fair_american": -119,
-      "fair_prob": 0.5437,
-      "line": 21.5,
-      "market": "spread",
-      "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
+      "bet_label": "Under 166.5",
+      "book": "draftkings",
+      "confidence": 8,
+      "edge": 0.0573,
+      "espn_event_id": "401912968",
+      "fair_american": -124,
+      "fair_prob": 0.5538,
+      "line": 166.5,
+      "market": "total",
+      "matchup": "Troy Trojans @ LSU Tigers",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "price_american": -108,
+      "price_american": -110,
       "reasoning": [
-        "Model margin +16.6 vs market +21.5 (home)",
-        "Anchored fair margin +20.0 vs line +21.5 (away)"
+        "Model total 164.2 vs market 165.5",
+        "Anchored fair total 164.0 vs line 166.5"
       ],
-      "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-16T21:00Z",
-      "unit_size": 1.0
+      "risk": "Strong",
+      "side": "under",
+      "start": "2026-11-17T01:00Z",
+      "unit_size": 1.5
     }
   ],
   "date": "2026-11-16",
@@ -34,7 +34,7 @@
       "cards": [],
       "espn_event_id": "401929164",
       "home_short": "Bowling Green",
-      "matchup": "Lawrence Tech LAWRENCE TECH @ Bowling Green Falcons",
+      "matchup": "Lawrence Tech Blue Devils @ Bowling Green Falcons",
       "neutral_site": false,
       "pass_reasons": [
         "missing Torvik data (non-D-I opponent?)"
@@ -72,24 +72,10 @@
       "status": "graded"
     },
     {
-      "anchored": {
-        "margin_home": 39.0,
-        "season_bias_applied": -0.85,
-        "spread_shift": -1.5,
-        "total": 127.0,
-        "total_shift": 1.5
-      },
       "away_short": "Le Moyne",
       "cards": [],
       "espn_event_id": "401913727",
       "home_short": "Miami",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -40.5,
-        "spread_src": "consensus",
-        "total": 125.5,
-        "total_src": "consensus"
-      },
       "matchup": "Le Moyne Dolphins @ Miami Hurricanes",
       "model": {
         "away_score": 48.4,
@@ -107,13 +93,9 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "sigma": {
-        "spread": 14.12,
-        "total": 17.37
-      },
       "start": "2026-11-16T16:00Z",
       "status": "graded"
     },
@@ -147,48 +129,21 @@
     },
     {
       "anchored": {
-        "margin_home": 20.0,
-        "season_bias_applied": -0.85,
+        "margin_home": 22.0,
+        "season_bias_applied": -0.86,
         "spread_shift": -1.5,
-        "total": 143.0,
+        "total": 141.0,
         "total_shift": 1.5
       },
       "away_short": "Penn State",
-      "cards": [
-        {
-          "bet_label": "Penn State Lady Lions +21.5",
-          "book": "ballybet",
-          "confidence": 9,
-          "edge": 0.0471,
-          "espn_event_id": "401916083",
-          "fair_american": -119,
-          "fair_prob": 0.5437,
-          "line": 21.5,
-          "market": "spread",
-          "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -108,
-          "reasoning": [
-            "Model margin +16.6 vs market +21.5 (home)",
-            "Anchored fair margin +20.0 vs line +21.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-16T21:00Z",
-          "unit_size": 1.0
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401916083",
       "home_short": "Arizona State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -21.5,
+        "spread_home": -23.5,
         "spread_src": "consensus",
-        "total": 141.5,
+        "total": 139.5,
         "total_src": "consensus"
       },
       "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
@@ -207,7 +162,9 @@
         "total": 147.8
       },
       "neutral_site": false,
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "shadow": [],
       "sigma": {
         "spread": 13.67,
@@ -217,10 +174,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 20.0,
+        "season_bias_applied": -0.86,
+        "spread_shift": 0.5,
+        "total": 126.0,
+        "total_shift": 1.5
+      },
       "away_short": "Lamar",
       "cards": [],
       "espn_event_id": "401920087",
       "home_short": "Texas A&M",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -19.5,
+        "spread_src": "consensus",
+        "total": 124.5,
+        "total_src": "consensus"
+      },
       "matchup": "Lamar Cardinals @ Texas A&M Aggies",
       "model": {
         "away_score": 53.6,
@@ -238,9 +209,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 14.01,
+        "total": 18.64
+      },
       "start": "2026-11-16T22:00Z",
       "status": "graded"
     },
@@ -666,10 +641,10 @@
     },
     {
       "anchored": {
-        "margin_home": -41.0,
-        "season_bias_applied": -0.85,
+        "margin_home": -44.0,
+        "season_bias_applied": -0.86,
         "spread_shift": 1.5,
-        "total": 143.0,
+        "total": 144.0,
         "total_shift": -1.5
       },
       "away_short": "Michigan",
@@ -678,9 +653,9 @@
       "home_short": "Central Michigan",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 42.5,
+        "spread_home": 45.5,
         "spread_src": "consensus",
-        "total": 144.5,
+        "total": 145.5,
         "total_src": "consensus"
       },
       "matchup": "Michigan Wolverines @ Central Michigan Chippewas",
@@ -712,21 +687,48 @@
     },
     {
       "anchored": {
-        "margin_home": 50.0,
-        "season_bias_applied": -0.85,
+        "margin_home": 49.0,
+        "season_bias_applied": -0.86,
         "spread_shift": -1.5,
-        "total": 167.0,
+        "total": 164.0,
         "total_shift": -1.5
       },
       "away_short": "Troy",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 166.5",
+          "book": "draftkings",
+          "confidence": 8,
+          "edge": 0.0573,
+          "espn_event_id": "401912968",
+          "fair_american": -124,
+          "fair_prob": 0.5538,
+          "line": 166.5,
+          "market": "total",
+          "matchup": "Troy Trojans @ LSU Tigers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model total 164.2 vs market 165.5",
+            "Anchored fair total 164.0 vs line 166.5"
+          ],
+          "risk": "Strong",
+          "side": "under",
+          "start": "2026-11-17T01:00Z",
+          "unit_size": 1.5
+        }
+      ],
       "espn_event_id": "401912968",
       "home_short": "LSU",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -51.5,
+        "spread_home": -50.5,
         "spread_src": "consensus",
-        "total": 168.5,
+        "total": 165.5,
         "total_src": "consensus"
       },
       "matchup": "Troy Trojans @ LSU Tigers",
@@ -745,9 +747,7 @@
         "total": 164.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [],
       "sigma": {
         "spread": 14.12,
@@ -883,10 +883,10 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-16T16:29:40.138931Z",
+  "generated_at": "2026-11-16T20:54:57.017056Z",
   "market_bias": {
-    "mean_spread_delta": -4.6,
-    "mean_total_delta": 0.9,
+    "mean_spread_delta": -2.55,
+    "mean_total_delta": 1.07,
     "n_spread_lines": 4,
     "n_total_lines": 4
   },
@@ -894,5 +894,5 @@
   "n_games": 33,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 1.0
+  "total_units": 1.5
 }

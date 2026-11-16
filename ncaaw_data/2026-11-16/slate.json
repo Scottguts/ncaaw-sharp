@@ -1,35 +1,35 @@
 {
   "date": "2026-11-16",
-  "fetched_at": "2026-11-16T16:29:40.127654Z",
+  "fetched_at": "2026-11-16T20:54:57.006919Z",
   "games": [
     {
       "espn_event_id": "401929164",
       "start": "2026-11-16T16:00Z",
       "et_date": "2026-11-16",
-      "name": "Lawrence Tech LAWRENCE TECH at Bowling Green Falcons",
+      "name": "Lawrence Tech Blue Devils at Bowling Green Falcons",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "189",
         "location": "Bowling Green",
         "display_name": "Bowling Green Falcons",
         "canon": "bowling green",
         "conf": "MAC",
-        "record": "3-0",
-        "score": "40",
-        "winner": null
+        "record": "4-0",
+        "score": "120",
+        "winner": true
       },
       "away": {
         "espn_id": "3251",
         "location": "Lawrence Tech",
-        "display_name": "Lawrence Tech LAWRENCE TECH",
+        "display_name": "Lawrence Tech Blue Devils",
         "canon": "lawrence tech",
         "conf": "",
         "record": null,
-        "score": "13",
-        "winner": null
+        "score": "38",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
@@ -42,17 +42,17 @@
       "name": "UNC Wilmington Seahawks at Presbyterian Blue Hose",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2506",
         "location": "Presbyterian",
         "display_name": "Presbyterian Blue Hose",
         "canon": "presbyterian",
         "conf": "Big South",
-        "record": "0-3",
-        "score": "4",
-        "winner": null
+        "record": "0-4",
+        "score": "35",
+        "winner": false
       },
       "away": {
         "espn_id": "350",
@@ -60,9 +60,9 @@
         "display_name": "UNC Wilmington Seahawks",
         "canon": "unc wilmington",
         "conf": "CAA",
-        "record": "2-1",
-        "score": "24",
-        "winner": null
+        "record": "3-1",
+        "score": "61",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -75,17 +75,17 @@
       "name": "Le Moyne Dolphins at Miami Hurricanes",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2390",
         "location": "Miami",
         "display_name": "Miami Hurricanes",
         "canon": "miami",
         "conf": "ACC",
-        "record": "4-0",
-        "score": "20",
-        "winner": null
+        "record": "5-0",
+        "score": "87",
+        "winner": true
       },
       "away": {
         "espn_id": "2330",
@@ -93,13 +93,13 @@
         "display_name": "Le Moyne Dolphins",
         "canon": "le moyne",
         "conf": "NEC",
-        "record": "1-3",
-        "score": "15",
-        "winner": null
+        "record": "1-4",
+        "score": "40",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "1c51132eeb2c5ce28bee3607bdf865eb"
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401911507",
@@ -108,17 +108,17 @@
       "name": "Ferrum Panthers at Radford Highlanders",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2515",
         "location": "Radford",
         "display_name": "Radford Highlanders",
         "canon": "radford",
         "conf": "Big South",
-        "record": "2-2",
-        "score": "25",
-        "winner": null
+        "record": "3-2",
+        "score": "98",
+        "winner": true
       },
       "away": {
         "espn_id": "366",
@@ -127,8 +127,8 @@
         "canon": "ferrum",
         "conf": "",
         "record": null,
-        "score": "13",
-        "winner": null
+        "score": "41",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
@@ -141,17 +141,17 @@
       "name": "Northern New Mexico Eagles at Weber State Wildcats",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2692",
         "location": "Weber State",
         "display_name": "Weber State Wildcats",
         "canon": "weber st",
         "conf": "Big Sky",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
+        "record": "4-0",
+        "score": "123",
+        "winner": true
       },
       "away": {
         "espn_id": "3141",
@@ -160,8 +160,8 @@
         "canon": "northern new mexico",
         "conf": "",
         "record": null,
-        "score": "0",
-        "winner": null
+        "score": "46",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
@@ -231,7 +231,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "8bc633d0b4ab826d0f4d141470608bfe"
     },
     {
       "espn_event_id": "401926086",
