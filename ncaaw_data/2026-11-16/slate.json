@@ -1,7 +1,73 @@
 {
   "date": "2026-11-16",
-  "fetched_at": "2026-11-16T20:54:57.006919Z",
+  "fetched_at": "2026-11-16T22:40:40.997265Z",
   "games": [
+    {
+      "espn_event_id": "401916083",
+      "start": "2026-11-16T21:00Z",
+      "et_date": "2026-11-16",
+      "name": "Penn State Lady Lions at Arizona State Sun Devils",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "9",
+        "location": "Arizona State",
+        "display_name": "Arizona State Sun Devils",
+        "canon": "arizona st",
+        "conf": "Big 12",
+        "record": "3-0",
+        "score": "80",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "213",
+        "location": "Penn State",
+        "display_name": "Penn State Lady Lions",
+        "canon": "penn st",
+        "conf": "Big Ten",
+        "record": "0-3",
+        "score": "38",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "9593fa0ed38471701a08c307124ade13"
+    },
+    {
+      "espn_event_id": "401920087",
+      "start": "2026-11-16T22:00Z",
+      "et_date": "2026-11-16",
+      "name": "Lamar Cardinals at Texas A&M Aggies",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "245",
+        "location": "Texas A&M",
+        "display_name": "Texas A&M Aggies",
+        "canon": "texas a&m",
+        "conf": "SEC",
+        "record": "3-0",
+        "score": "29",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2320",
+        "location": "Lamar",
+        "display_name": "Lamar Cardinals",
+        "canon": "lamar",
+        "conf": "Southland",
+        "record": "2-2",
+        "score": "24",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "8bc633d0b4ab826d0f4d141470608bfe"
+    },
     {
       "espn_event_id": "401929164",
       "start": "2026-11-16T16:00Z",
@@ -166,72 +232,6 @@
       "torvik_home": true,
       "torvik_away": false,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401916083",
-      "start": "2026-11-16T21:00Z",
-      "et_date": "2026-11-16",
-      "name": "Penn State Lady Lions at Arizona State Sun Devils",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "9",
-        "location": "Arizona State",
-        "display_name": "Arizona State Sun Devils",
-        "canon": "arizona st",
-        "conf": "Big 12",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "213",
-        "location": "Penn State",
-        "display_name": "Penn State Lady Lions",
-        "canon": "penn st",
-        "conf": "Big Ten",
-        "record": "0-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "9593fa0ed38471701a08c307124ade13"
-    },
-    {
-      "espn_event_id": "401920087",
-      "start": "2026-11-16T22:00Z",
-      "et_date": "2026-11-16",
-      "name": "Lamar Cardinals at Texas A&M Aggies",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "245",
-        "location": "Texas A&M",
-        "display_name": "Texas A&M Aggies",
-        "canon": "texas a&m",
-        "conf": "SEC",
-        "record": "3-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2320",
-        "location": "Lamar",
-        "display_name": "Lamar Cardinals",
-        "canon": "lamar",
-        "conf": "Southland",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "8bc633d0b4ab826d0f4d141470608bfe"
     },
     {
       "espn_event_id": "401926086",
