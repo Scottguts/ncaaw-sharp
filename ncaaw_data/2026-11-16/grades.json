@@ -1,17 +1,44 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T12:44:05.741662Z",
+  "generated_at": "2026-11-16T16:29:40.138931Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 4,
+    "n_total_lines": 4,
+    "mean_spread_delta": -4.6,
+    "mean_total_delta": 0.9
   },
   "odds_available": true,
   "n_games": 33,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
+  "n_cards": 1,
+  "total_units": 1.0,
+  "cards": [
+    {
+      "bet_label": "Penn State Lady Lions +21.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -108,
+      "line": 21.5,
+      "fair_prob": 0.5437,
+      "fair_american": -119,
+      "edge": 0.0471,
+      "confidence": 9,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin +16.6 vs market +21.5 (home)",
+        "Anchored fair margin +20.0 vs line +21.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401916083",
+      "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
+      "start": "2026-11-16T21:00Z"
+    }
+  ],
   "shadow_cards": [],
   "games": [
     {
@@ -67,7 +94,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 48.4,
@@ -82,6 +109,24 @@
         "rank_away": 343,
         "p3_home": 42.2,
         "p3_away": 50.75
+      },
+      "market": {
+        "spread_home": -40.5,
+        "total": 125.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 17.37
+      },
+      "anchored": {
+        "margin_home": 39.0,
+        "spread_shift": -1.5,
+        "total": 127.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -0.85
       }
     },
     {
@@ -120,11 +165,36 @@
       "start": "2026-11-16T21:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Penn State Lady Lions +21.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -108,
+          "line": 21.5,
+          "fair_prob": 0.5437,
+          "fair_american": -119,
+          "edge": 0.0471,
+          "confidence": 9,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +16.6 vs market +21.5 (home)",
+            "Anchored fair margin +20.0 vs line +21.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401916083",
+          "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
+          "start": "2026-11-16T21:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 65.6,
         "home_score": 82.2,
@@ -138,6 +208,24 @@
         "rank_away": 138,
         "p3_home": 41.114285714285714,
         "p3_away": 50.357142857142854
+      },
+      "market": {
+        "spread_home": -21.5,
+        "total": 141.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 13.67,
+        "total": 19.97
+      },
+      "anchored": {
+        "margin_home": 20.0,
+        "spread_shift": -1.5,
+        "total": 143.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -0.85
       }
     },
     {
@@ -599,7 +687,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 86.6,
@@ -614,6 +702,24 @@
         "rank_away": 6,
         "p3_home": 48.21428571428571,
         "p3_away": 45.15714285714286
+      },
+      "market": {
+        "spread_home": 42.5,
+        "total": 144.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.41,
+        "total": 19.5
+      },
+      "anchored": {
+        "margin_home": -41.0,
+        "spread_shift": 1.5,
+        "total": 143.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -0.85
       }
     },
     {
@@ -627,7 +733,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 64.9,
@@ -642,6 +748,24 @@
         "rank_away": 173,
         "p3_home": 29.65,
         "p3_away": 47.099999999999994
+      },
+      "market": {
+        "spread_home": -51.5,
+        "total": 168.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 18.48
+      },
+      "anchored": {
+        "margin_home": 50.0,
+        "spread_shift": -1.5,
+        "total": 167.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -0.85
       }
     },
     {
