@@ -1,59 +1,33 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T22:40:41.005016Z",
+  "generated_at": "2026-11-17T00:06:55.175939Z",
   "market_bias": {
-    "n_spread_lines": 4,
-    "n_total_lines": 4,
-    "mean_spread_delta": -6.55,
-    "mean_total_delta": 0.32
+    "n_spread_lines": 2,
+    "n_total_lines": 2,
+    "mean_spread_delta": -1.4,
+    "mean_total_delta": -3.1
   },
   "odds_available": true,
   "n_games": 33,
-  "n_cards": 2,
-  "total_units": 2.5,
+  "n_cards": 1,
+  "total_units": 1.0,
   "cards": [
     {
-      "bet_label": "Central Michigan Chippewas +45.5",
-      "market": "spread",
-      "side": "home",
-      "book": "draftkings",
-      "price_american": -105,
-      "line": 45.5,
-      "fair_prob": 0.5388,
-      "fair_american": -117,
-      "edge": 0.0519,
-      "confidence": 10,
-      "unit_size": 1.5,
-      "risk": "Strong",
-      "reasoning": [
-        "Model margin -33.2 vs market -45.5 (home)",
-        "Anchored fair margin -44.0 vs line +45.5 (home)"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401927069",
-      "matchup": "Michigan Wolverines @ Central Michigan Chippewas",
-      "start": "2026-11-17T01:00Z"
-    },
-    {
-      "bet_label": "Under 166.5",
+      "bet_label": "Under 165.5",
       "market": "total",
       "side": "under",
       "book": "draftkings",
-      "price_american": -110,
-      "line": 166.5,
-      "fair_prob": 0.5431,
-      "fair_american": -119,
-      "edge": 0.0368,
+      "price_american": -105,
+      "line": 165.5,
+      "fair_prob": 0.5324,
+      "fair_american": -114,
+      "edge": 0.0394,
       "confidence": 7,
       "unit_size": 1.0,
       "risk": "Standard",
       "reasoning": [
-        "Model total 164.2 vs market 166",
-        "Anchored fair total 164.5 vs line 166.5"
+        "Model total 164.2 vs market 165.5",
+        "Anchored fair total 164.0 vs line 165.5"
       ],
       "pass_triggers": [
         "Key player ruled out after card is posted",
@@ -68,52 +42,6 @@
   "shadow_cards": [],
   "games": [
     {
-      "espn_event_id": "401916083",
-      "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
-      "home_short": "Arizona State",
-      "away_short": "Penn State",
-      "start": "2026-11-16T21:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "model": {
-        "away_score": 65.6,
-        "home_score": 82.2,
-        "spread": -16.6,
-        "total": 147.8,
-        "proj_poss": 72.0,
-        "margin_home": 16.6,
-        "games_home": 3,
-        "games_away": 3,
-        "rank_home": 37,
-        "rank_away": 138,
-        "p3_home": 41.114285714285714,
-        "p3_away": 50.357142857142854
-      },
-      "market": {
-        "spread_home": -43.5,
-        "total": 136.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 13.67,
-        "total": 19.97
-      },
-      "anchored": {
-        "margin_home": 42.0,
-        "spread_shift": -1.5,
-        "total": 138.0,
-        "total_shift": 1.5,
-        "season_bias_applied": -0.88
-      }
-    },
-    {
       "espn_event_id": "401920087",
       "matchup": "Lamar Cardinals @ Texas A&M Aggies",
       "home_short": "Texas A&M",
@@ -124,7 +52,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "model": {
         "away_score": 53.6,
@@ -139,123 +67,7 @@
         "rank_away": 220,
         "p3_home": 43.099999999999994,
         "p3_away": 52.9
-      },
-      "market": {
-        "spread_home": -15.5,
-        "total": 130.5,
-        "spread_src": "consensus",
-        "total_src": "consensus",
-        "pinnacle_fair_home_ml": null
-      },
-      "sigma": {
-        "spread": 14.01,
-        "total": 18.64
-      },
-      "anchored": {
-        "margin_home": 17.0,
-        "spread_shift": 1.5,
-        "total": 129.0,
-        "total_shift": -1.5,
-        "season_bias_applied": -0.88
       }
-    },
-    {
-      "espn_event_id": "401929164",
-      "matchup": "Lawrence Tech Blue Devils @ Bowling Green Falcons",
-      "home_short": "Bowling Green",
-      "away_short": "Lawrence Tech",
-      "start": "2026-11-16T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401927036",
-      "matchup": "UNC Wilmington Seahawks @ Presbyterian Blue Hose",
-      "home_short": "Presbyterian",
-      "away_short": "UNC Wilmington",
-      "start": "2026-11-16T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 69.4,
-        "home_score": 56.0,
-        "spread": 13.4,
-        "total": 125.3,
-        "proj_poss": 69.5,
-        "margin_home": -13.4,
-        "games_home": 4,
-        "games_away": 4,
-        "rank_home": 356,
-        "rank_away": 171,
-        "p3_home": 51.2,
-        "p3_away": 45.5
-      }
-    },
-    {
-      "espn_event_id": "401913727",
-      "matchup": "Le Moyne Dolphins @ Miami Hurricanes",
-      "home_short": "Miami",
-      "away_short": "Le Moyne",
-      "start": "2026-11-16T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 48.6,
-        "home_score": 83.5,
-        "spread": -34.9,
-        "total": 132.0,
-        "proj_poss": 68.5,
-        "margin_home": 34.9,
-        "games_home": 5,
-        "games_away": 5,
-        "rank_home": 30,
-        "rank_away": 343,
-        "p3_home": 41.75555555555556,
-        "p3_away": 52.42222222222222
-      }
-    },
-    {
-      "espn_event_id": "401911507",
-      "matchup": "Ferrum Panthers @ Radford Highlanders",
-      "home_short": "Radford",
-      "away_short": "Ferrum",
-      "start": "2026-11-16T16:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
-    },
-    {
-      "espn_event_id": "401927018",
-      "matchup": "Northern New Mexico Eagles @ Weber State Wildcats",
-      "home_short": "Weber State",
-      "away_short": "Northern New Mexico",
-      "start": "2026-11-16T18:00Z",
-      "neutral_site": false,
-      "status": "skipped",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ]
     },
     {
       "espn_event_id": "401926086",
@@ -437,6 +249,132 @@
         "rank_away": 264,
         "p3_home": 45.91428571428571,
         "p3_away": 43.84285714285714
+      }
+    },
+    {
+      "espn_event_id": "401929164",
+      "matchup": "Lawrence Tech Blue Devils @ Bowling Green Falcons",
+      "home_short": "Bowling Green",
+      "away_short": "Lawrence Tech",
+      "start": "2026-11-16T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401927036",
+      "matchup": "UNC Wilmington Seahawks @ Presbyterian Blue Hose",
+      "home_short": "Presbyterian",
+      "away_short": "UNC Wilmington",
+      "start": "2026-11-16T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 69.4,
+        "home_score": 56.0,
+        "spread": 13.4,
+        "total": 125.3,
+        "proj_poss": 69.5,
+        "margin_home": -13.4,
+        "games_home": 4,
+        "games_away": 4,
+        "rank_home": 356,
+        "rank_away": 171,
+        "p3_home": 51.2,
+        "p3_away": 45.5
+      }
+    },
+    {
+      "espn_event_id": "401913727",
+      "matchup": "Le Moyne Dolphins @ Miami Hurricanes",
+      "home_short": "Miami",
+      "away_short": "Le Moyne",
+      "start": "2026-11-16T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 48.6,
+        "home_score": 83.5,
+        "spread": -34.9,
+        "total": 132.0,
+        "proj_poss": 68.5,
+        "margin_home": 34.9,
+        "games_home": 5,
+        "games_away": 5,
+        "rank_home": 30,
+        "rank_away": 343,
+        "p3_home": 41.75555555555556,
+        "p3_away": 52.42222222222222
+      }
+    },
+    {
+      "espn_event_id": "401911507",
+      "matchup": "Ferrum Panthers @ Radford Highlanders",
+      "home_short": "Radford",
+      "away_short": "Ferrum",
+      "start": "2026-11-16T16:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401927018",
+      "matchup": "Northern New Mexico Eagles @ Weber State Wildcats",
+      "home_short": "Weber State",
+      "away_short": "Northern New Mexico",
+      "start": "2026-11-16T18:00Z",
+      "neutral_site": false,
+      "status": "skipped",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ]
+    },
+    {
+      "espn_event_id": "401916083",
+      "matchup": "Penn State Lady Lions @ Arizona State Sun Devils",
+      "home_short": "Arizona State",
+      "away_short": "Penn State",
+      "start": "2026-11-16T21:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 65.6,
+        "home_score": 82.2,
+        "spread": -16.6,
+        "total": 147.8,
+        "proj_poss": 72.0,
+        "margin_home": 16.6,
+        "games_home": 3,
+        "games_away": 3,
+        "rank_home": 37,
+        "rank_away": 138,
+        "p3_home": 41.114285714285714,
+        "p3_away": 50.357142857142854
       }
     },
     {
@@ -685,36 +623,11 @@
       "start": "2026-11-17T01:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Central Michigan Chippewas +45.5",
-          "market": "spread",
-          "side": "home",
-          "book": "draftkings",
-          "price_american": -105,
-          "line": 45.5,
-          "fair_prob": 0.5388,
-          "fair_american": -117,
-          "edge": 0.0519,
-          "confidence": 10,
-          "unit_size": 1.5,
-          "risk": "Strong",
-          "reasoning": [
-            "Model margin -33.2 vs market -45.5 (home)",
-            "Anchored fair margin -44.0 vs line +45.5 (home)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401927069",
-          "matchup": "Michigan Wolverines @ Central Michigan Chippewas",
-          "start": "2026-11-17T01:00Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 86.6,
         "home_score": 53.5,
@@ -730,7 +643,7 @@
         "p3_away": 45.15714285714286
       },
       "market": {
-        "spread_home": 45.5,
+        "spread_home": 46.5,
         "total": 145.0,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -738,14 +651,14 @@
       },
       "sigma": {
         "spread": 15.41,
-        "total": 19.49
+        "total": 19.5
       },
       "anchored": {
-        "margin_home": -44.0,
+        "margin_home": -45.0,
         "spread_shift": 1.5,
         "total": 143.5,
         "total_shift": -1.5,
-        "season_bias_applied": -0.88
+        "season_bias_applied": -0.8
       }
     },
     {
@@ -758,21 +671,21 @@
       "status": "graded",
       "cards": [
         {
-          "bet_label": "Under 166.5",
+          "bet_label": "Under 165.5",
           "market": "total",
           "side": "under",
           "book": "draftkings",
-          "price_american": -110,
-          "line": 166.5,
-          "fair_prob": 0.5431,
-          "fair_american": -119,
-          "edge": 0.0368,
+          "price_american": -105,
+          "line": 165.5,
+          "fair_prob": 0.5324,
+          "fair_american": -114,
+          "edge": 0.0394,
           "confidence": 7,
           "unit_size": 1.0,
           "risk": "Standard",
           "reasoning": [
-            "Model total 164.2 vs market 166",
-            "Anchored fair total 164.5 vs line 166.5"
+            "Model total 164.2 vs market 165.5",
+            "Anchored fair total 164.0 vs line 165.5"
           ],
           "pass_triggers": [
             "Key player ruled out after card is posted",
@@ -802,7 +715,7 @@
       },
       "market": {
         "spread_home": -50.5,
-        "total": 166.0,
+        "total": 165.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -814,9 +727,9 @@
       "anchored": {
         "margin_home": 49.0,
         "spread_shift": -1.5,
-        "total": 164.5,
+        "total": 164.0,
         "total_shift": -1.5,
-        "season_bias_applied": -0.88
+        "season_bias_applied": -0.8
       }
     },
     {

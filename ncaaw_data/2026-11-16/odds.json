@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-16T22:40:40.943819Z",
+  "fetched_at": "2026-11-17T00:06:54.931396Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -19,47 +19,45 @@
   ],
   "games": [
     {
-      "id": "9593fa0ed38471701a08c307124ade13",
+      "id": "261e8a9d16c946911e4cd4d11af8123a",
       "sport_key": "basketball_wncaab",
       "sport_title": "WNCAAB",
-      "commence_time": "2026-11-16T21:00:00Z",
-      "home_team": "Arizona St Sun Devils",
-      "away_team": "Penn State Nittany Lions",
+      "commence_time": "2026-11-17T00:00:00Z",
+      "home_team": "Rutgers Scarlet Knights",
+      "away_team": "Albany Great Danes",
       "bookmakers": [
         {
-          "key": "betrivers",
-          "title": "BetRivers",
-          "last_update": "2026-11-16T22:40:26Z",
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-17T00:06:43Z",
           "markets": [
             {
-              "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "key": "h2h",
+              "last_update": "2026-11-17T00:06:43Z",
               "outcomes": [
                 {
-                  "name": "Arizona St Sun Devils",
-                  "price": -125,
-                  "point": -43.5
+                  "name": "Albany Great Danes",
+                  "price": 1600
                 },
                 {
-                  "name": "Penn State Nittany Lions",
-                  "price": -125,
-                  "point": 43.5
+                  "name": "Rutgers Scarlet Knights",
+                  "price": -10000
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:43Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -120,
-                  "point": 136.5
+                  "price": -110,
+                  "point": 126.5
                 },
                 {
                   "name": "Under",
-                  "price": -132,
-                  "point": 136.5
+                  "price": -118,
+                  "point": 126.5
                 }
               ]
             }
@@ -68,199 +66,115 @@
         {
           "key": "ballybet",
           "title": "Bally Bet",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:05:36Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:35Z",
               "outcomes": [
                 {
-                  "name": "Arizona St Sun Devils",
+                  "name": "Albany Great Danes",
                   "price": -124,
-                  "point": -43.5
+                  "point": 26.5
                 },
                 {
-                  "name": "Penn State Nittany Lions",
-                  "price": -124,
-                  "point": 43.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -118,
-                  "point": 136.5
-                },
-                {
-                  "name": "Under",
-                  "price": -130,
-                  "point": 136.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "hardrockbet",
-          "title": "Hard Rock Bet",
-          "last_update": "2026-11-16T22:39:42Z",
-          "markets": [
-            {
-              "key": "spreads",
-              "last_update": "2026-11-16T22:39:42Z",
-              "outcomes": [
-                {
-                  "name": "Arizona St Sun Devils",
-                  "price": -125,
-                  "point": -41.5
-                },
-                {
-                  "name": "Penn State Nittany Lions",
+                  "name": "Rutgers Scarlet Knights",
                   "price": -115,
-                  "point": 41.5
+                  "point": -26.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:42Z",
+              "last_update": "2026-11-17T00:05:35Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -120,
-                  "point": 137.5
+                  "price": -124,
+                  "point": 127.5
                 },
                 {
                   "name": "Under",
-                  "price": -120,
-                  "point": 137.5
+                  "price": -118,
+                  "point": 127.5
                 }
               ]
             }
           ]
         },
         {
-          "key": "betmgm",
-          "title": "BetMGM",
-          "last_update": "2026-11-16T22:40:26Z",
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
+              "key": "spreads",
+              "last_update": "2026-11-17T00:06:14Z",
+              "outcomes": [
+                {
+                  "name": "Albany Great Danes",
+                  "price": -125,
+                  "point": 26.5
+                },
+                {
+                  "name": "Rutgers Scarlet Knights",
+                  "price": -117,
+                  "point": -26.5
+                }
+              ]
+            },
+            {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
                   "price": -125,
-                  "point": 135.5
+                  "point": 127.5
                 },
                 {
                   "name": "Under",
-                  "price": -105,
-                  "point": 135.5
+                  "price": -120,
+                  "point": 127.5
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "8bc633d0b4ab826d0f4d141470608bfe",
-      "sport_key": "basketball_wncaab",
-      "sport_title": "WNCAAB",
-      "commence_time": "2026-11-16T22:00:00Z",
-      "home_team": "Texas A&M Aggies",
-      "away_team": "Lamar Cardinals",
-      "bookmakers": [
+        },
         {
           "key": "espnbet",
           "title": "theScore Bet",
-          "last_update": "2026-11-16T22:39:56Z",
+          "last_update": "2026-11-17T00:06:27Z",
           "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-11-16T22:39:56Z",
-              "outcomes": [
-                {
-                  "name": "Lamar Cardinals",
-                  "price": 1800
-                },
-                {
-                  "name": "Texas A&M Aggies",
-                  "price": -10000
-                }
-              ]
-            },
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:56Z",
+              "last_update": "2026-11-17T00:06:27Z",
               "outcomes": [
                 {
-                  "name": "Lamar Cardinals",
-                  "price": -115,
-                  "point": 15.5
+                  "name": "Albany Great Danes",
+                  "price": -120,
+                  "point": 22.5
                 },
                 {
-                  "name": "Texas A&M Aggies",
-                  "price": -115,
-                  "point": -15.5
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-11-16T22:39:56Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -115,
-                  "point": 131.5
-                },
-                {
-                  "name": "Under",
-                  "price": -115,
-                  "point": 131.5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "key": "betmgm",
-          "title": "BetMGM",
-          "last_update": "2026-11-16T22:40:26Z",
-          "markets": [
-            {
-              "key": "h2h",
-              "last_update": "2026-11-16T22:40:26Z",
-              "outcomes": [
-                {
-                  "name": "Lamar Cardinals",
-                  "price": 1150
-                },
-                {
-                  "name": "Texas A&M Aggies",
-                  "price": -5000
-                }
-              ]
-            },
-            {
-              "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
-              "outcomes": [
-                {
-                  "name": "Over",
-                  "price": -118,
-                  "point": 129.5
-                },
-                {
-                  "name": "Under",
+                  "name": "Rutgers Scarlet Knights",
                   "price": -110,
-                  "point": 129.5
+                  "point": -22.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T00:06:27Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 124.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 124.5
                 }
               ]
             }
@@ -279,11 +193,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Arkansas-Little Rock Trojans",
@@ -297,7 +211,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Arkansas-Little Rock Trojans",
@@ -313,7 +227,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -332,11 +246,11 @@
         {
           "key": "ballybet",
           "title": "Bally Bet",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:05:36Z",
           "markets": [
             {
               "key": "h2h",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Arkansas-Little Rock Trojans",
@@ -350,7 +264,7 @@
             },
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Arkansas-Little Rock Trojans",
@@ -366,7 +280,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -395,11 +309,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-16T22:39:43Z",
+          "last_update": "2026-11-17T00:04:44Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:43Z",
+              "last_update": "2026-11-17T00:04:44Z",
               "outcomes": [
                 {
                   "name": "Central Michigan Chippewas",
@@ -415,7 +329,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:43Z",
+              "last_update": "2026-11-17T00:04:44Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -434,36 +348,36 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Central Michigan Chippewas",
                   "price": -120,
-                  "point": 45.5
+                  "point": 46.5
                 },
                 {
                   "name": "Michigan Wolverines",
                   "price": -112,
-                  "point": -45.5
+                  "point": -46.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -110,
+                  "price": -115,
                   "point": 145.5
                 },
                 {
                   "name": "Under",
-                  "price": -120,
+                  "price": -114,
                   "point": 145.5
                 }
               ]
@@ -473,36 +387,36 @@
         {
           "key": "ballybet",
           "title": "Bally Bet",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:05:36Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Central Michigan Chippewas",
                   "price": -117,
-                  "point": 45.5
+                  "point": 46.5
                 },
                 {
                   "name": "Michigan Wolverines",
                   "price": -109,
-                  "point": -45.5
+                  "point": -46.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -108,
+                  "price": -113,
                   "point": 145.5
                 },
                 {
                   "name": "Under",
-                  "price": -117,
+                  "price": -113,
                   "point": 145.5
                 }
               ]
@@ -512,36 +426,36 @@
         {
           "key": "hardrockbet",
           "title": "Hard Rock Bet",
-          "last_update": "2026-11-16T22:39:42Z",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:42Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Central Michigan Chippewas",
                   "price": -120,
-                  "point": 45.5
+                  "point": 46.5
                 },
                 {
                   "name": "Michigan Wolverines",
                   "price": -110,
-                  "point": -45.5
+                  "point": -46.5
                 }
               ]
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:42Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -110,
+                  "price": -115,
                   "point": 145.5
                 },
                 {
                   "name": "Under",
-                  "price": -120,
+                  "price": -115,
                   "point": 145.5
                 }
               ]
@@ -551,11 +465,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:06:43Z",
           "markets": [
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -574,11 +488,11 @@
         {
           "key": "espnbet",
           "title": "theScore Bet",
-          "last_update": "2026-11-16T22:39:56Z",
+          "last_update": "2026-11-17T00:06:27Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:56Z",
+              "last_update": "2026-11-17T00:06:27Z",
               "outcomes": [
                 {
                   "name": "Central Michigan Chippewas",
@@ -594,7 +508,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:56Z",
+              "last_update": "2026-11-17T00:06:27Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -623,11 +537,11 @@
         {
           "key": "draftkings",
           "title": "DraftKings",
-          "last_update": "2026-11-16T22:39:43Z",
+          "last_update": "2026-11-17T00:04:44Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:43Z",
+              "last_update": "2026-11-17T00:04:44Z",
               "outcomes": [
                 {
                   "name": "LSU Tigers",
@@ -643,17 +557,17 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:43Z",
+              "last_update": "2026-11-17T00:04:44Z",
               "outcomes": [
                 {
                   "name": "Over",
-                  "price": -110,
-                  "point": 166.5
+                  "price": -115,
+                  "point": 165.5
                 },
                 {
                   "name": "Under",
-                  "price": -110,
-                  "point": 166.5
+                  "price": -105,
+                  "point": 165.5
                 }
               ]
             }
@@ -662,11 +576,11 @@
         {
           "key": "betrivers",
           "title": "BetRivers",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "LSU Tigers",
@@ -682,7 +596,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -701,11 +615,11 @@
         {
           "key": "ballybet",
           "title": "Bally Bet",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:05:36Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "LSU Tigers",
@@ -721,7 +635,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:05:36Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -740,11 +654,11 @@
         {
           "key": "hardrockbet",
           "title": "Hard Rock Bet",
-          "last_update": "2026-11-16T22:39:42Z",
+          "last_update": "2026-11-17T00:06:14Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:42Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "LSU Tigers",
@@ -760,7 +674,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:42Z",
+              "last_update": "2026-11-17T00:06:14Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -779,11 +693,11 @@
         {
           "key": "betmgm",
           "title": "BetMGM",
-          "last_update": "2026-11-16T22:40:26Z",
+          "last_update": "2026-11-17T00:06:43Z",
           "markets": [
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:40:26Z",
+              "last_update": "2026-11-17T00:06:43Z",
               "outcomes": [
                 {
                   "name": "Over",
@@ -802,11 +716,11 @@
         {
           "key": "espnbet",
           "title": "theScore Bet",
-          "last_update": "2026-11-16T22:39:56Z",
+          "last_update": "2026-11-17T00:06:27Z",
           "markets": [
             {
               "key": "spreads",
-              "last_update": "2026-11-16T22:39:56Z",
+              "last_update": "2026-11-17T00:06:27Z",
               "outcomes": [
                 {
                   "name": "LSU Tigers",
@@ -822,7 +736,7 @@
             },
             {
               "key": "totals",
-              "last_update": "2026-11-16T22:39:56Z",
+              "last_update": "2026-11-17T00:06:27Z",
               "outcomes": [
                 {
                   "name": "Over",
