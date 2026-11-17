@@ -1,7 +1,73 @@
 {
   "date": "2026-11-17",
-  "fetched_at": "2026-11-17T12:42:39.170960Z",
+  "fetched_at": "2026-11-17T19:44:33.630349Z",
   "games": [
+    {
+      "espn_event_id": "401920268",
+      "start": "2026-11-17T19:00Z",
+      "et_date": "2026-11-17",
+      "name": "Pepperdine Waves at Nevada Wolf Pack",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2440",
+        "location": "Nevada",
+        "display_name": "Nevada Wolf Pack",
+        "canon": "nevada",
+        "conf": "MWC",
+        "record": "1-3",
+        "score": "26",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2492",
+        "location": "Pepperdine",
+        "display_name": "Pepperdine Waves",
+        "canon": "pepperdine",
+        "conf": "WCC",
+        "record": "2-2",
+        "score": "32",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "5656f2c4763d12cada7472c614356068"
+    },
+    {
+      "espn_event_id": "401918904",
+      "start": "2026-11-17T19:00Z",
+      "et_date": "2026-11-17",
+      "name": "Murray State Racers at Oregon Ducks",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2483",
+        "location": "Oregon",
+        "display_name": "Oregon Ducks",
+        "canon": "oregon",
+        "conf": "Big Ten",
+        "record": "4-1",
+        "score": "43",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "93",
+        "location": "Murray State",
+        "display_name": "Murray State Racers",
+        "canon": "murray st",
+        "conf": "MVC",
+        "record": "2-2",
+        "score": "49",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "4d6b53f0c7d069acd55e44e95fa7601a"
+    },
     {
       "espn_event_id": "401907167",
       "start": "2026-11-17T15:30Z",
@@ -9,17 +75,17 @@
       "name": "Akron Zips at West Virginia Mountaineers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "277",
         "location": "West Virginia",
         "display_name": "West Virginia Mountaineers",
         "canon": "west virginia",
         "conf": "Big 12",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
+        "record": "5-0",
+        "score": "98",
+        "winner": true
       },
       "away": {
         "espn_id": "2006",
@@ -27,9 +93,9 @@
         "display_name": "Akron Zips",
         "canon": "akron",
         "conf": "MAC",
-        "record": "1-3",
-        "score": "0",
-        "winner": null
+        "record": "1-4",
+        "score": "60",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -42,17 +108,17 @@
       "name": "Heidelberg Student Princes at Youngstown State Penguins",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2754",
         "location": "Youngstown State",
         "display_name": "Youngstown State Penguins",
         "canon": "youngstown st",
         "conf": "Horz",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
+        "record": "3-2",
+        "score": "82",
+        "winner": true
       },
       "away": {
         "espn_id": "191",
@@ -61,8 +127,8 @@
         "canon": "heidelberg",
         "conf": "",
         "record": null,
-        "score": "0",
-        "winner": null
+        "score": "37",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": false,
@@ -75,17 +141,17 @@
       "name": "North Florida Ospreys at UCF Knights",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2116",
         "location": "UCF",
         "display_name": "UCF Knights",
         "canon": "ucf",
         "conf": "Big 12",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
+        "record": "5-1",
+        "score": "82",
+        "winner": true
       },
       "away": {
         "espn_id": "2454",
@@ -93,13 +159,13 @@
         "display_name": "North Florida Ospreys",
         "canon": "north florida",
         "conf": "ASUN",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
+        "record": "4-2",
+        "score": "64",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "e440b78d774d900481a97896773fbcd6"
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401909673",
@@ -108,17 +174,17 @@
       "name": "South Carolina State Lady Bulldogs at Winthrop Eagles",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2737",
         "location": "Winthrop",
         "display_name": "Winthrop Eagles",
         "canon": "winthrop",
         "conf": "Big South",
-        "record": "3-1",
-        "score": "0",
-        "winner": null
+        "record": "4-1",
+        "score": "65",
+        "winner": true
       },
       "away": {
         "espn_id": "2569",
@@ -126,9 +192,9 @@
         "display_name": "South Carolina State Lady Bulldogs",
         "canon": "south carolina st",
         "conf": "MEAC",
-        "record": "1-3",
-        "score": "0",
-        "winner": null
+        "record": "1-4",
+        "score": "46",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -141,17 +207,17 @@
       "name": "Purdue Fort Wayne Mastodons at Western Illinois Leathernecks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2710",
         "location": "Western Illinois",
         "display_name": "Western Illinois Leathernecks",
         "canon": "western illinois",
         "conf": "OVC",
-        "record": "3-1",
-        "score": "0",
-        "winner": null
+        "record": "4-1",
+        "score": "60",
+        "winner": true
       },
       "away": {
         "espn_id": "2870",
@@ -159,9 +225,9 @@
         "display_name": "Purdue Fort Wayne Mastodons",
         "canon": "purdue fort wayne",
         "conf": "Horz",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
+        "record": "2-3",
+        "score": "56",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -174,17 +240,17 @@
       "name": "Alabama State Lady Hornets at Mississippi State Bulldogs",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "344",
         "location": "Mississippi State",
         "display_name": "Mississippi State Bulldogs",
         "canon": "mississippi st",
         "conf": "SEC",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
+        "record": "5-0",
+        "score": "88",
+        "winner": true
       },
       "away": {
         "espn_id": "2011",
@@ -192,9 +258,9 @@
         "display_name": "Alabama State Lady Hornets",
         "canon": "alabama st",
         "conf": "SWAC",
-        "record": "1-3",
-        "score": "0",
-        "winner": null
+        "record": "1-4",
+        "score": "46",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -207,17 +273,17 @@
       "name": "Loyola Chicago Ramblers at Illinois State Redbirds",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2287",
         "location": "Illinois State",
         "display_name": "Illinois State Redbirds",
         "canon": "illinois st",
         "conf": "MVC",
-        "record": "5-0",
-        "score": "0",
-        "winner": null
+        "record": "6-0",
+        "score": "77",
+        "winner": true
       },
       "away": {
         "espn_id": "2350",
@@ -225,79 +291,13 @@
         "display_name": "Loyola Chicago Ramblers",
         "canon": "loyola chicago",
         "conf": "A10",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
+        "record": "2-3",
+        "score": "58",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401920268",
-      "start": "2026-11-17T19:00Z",
-      "et_date": "2026-11-17",
-      "name": "Pepperdine Waves at Nevada Wolf Pack",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2440",
-        "location": "Nevada",
-        "display_name": "Nevada Wolf Pack",
-        "canon": "nevada",
-        "conf": "MWC",
-        "record": "1-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2492",
-        "location": "Pepperdine",
-        "display_name": "Pepperdine Waves",
-        "canon": "pepperdine",
-        "conf": "WCC",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401918904",
-      "start": "2026-11-17T19:00Z",
-      "et_date": "2026-11-17",
-      "name": "Murray State Racers at Oregon Ducks",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2483",
-        "location": "Oregon",
-        "display_name": "Oregon Ducks",
-        "canon": "oregon",
-        "conf": "Big Ten",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "93",
-        "location": "Murray State",
-        "display_name": "Murray State Racers",
-        "canon": "murray st",
-        "conf": "MVC",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "4d6b53f0c7d069acd55e44e95fa7601a"
     },
     {
       "espn_event_id": "401919493",
@@ -396,7 +396,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "71700654ec6a6e83ffbf252a53337273"
     },
     {
       "espn_event_id": "401919648",
@@ -627,7 +627,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "a6e129d5813895185a5d6b308a6f33bc"
     },
     {
       "espn_event_id": "401916165",
@@ -1188,7 +1188,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "eb34b20c1b88f60bf0c35503355ffe9c"
     },
     {
       "espn_event_id": "401906984",
@@ -1221,7 +1221,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "752f6a29bf625f6dbaa5c29f3ac95d40"
     },
     {
       "espn_event_id": "401920441",
@@ -1353,7 +1353,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "513c510d0db144d530f5297eda9a5981"
     },
     {
       "espn_event_id": "401923340",
@@ -1386,7 +1386,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "0c26c1efacc401ab1cc20d143226dbdd"
     },
     {
       "espn_event_id": "401928373",
@@ -1518,7 +1518,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "76e3c7d657dcef051ce7a896b236acdb"
     }
   ]
 }
