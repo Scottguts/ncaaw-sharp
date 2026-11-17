@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-17T07:46:50.275810Z",
+  "fetched_at": "2026-11-17T12:42:38.961428Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -17,6 +17,471 @@
     "spreads",
     "totals"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "e440b78d774d900481a97896773fbcd6",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-17T16:00:00Z",
+      "home_team": "UCF Knights",
+      "away_team": "North Florida Ospreys",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-17T12:42:01Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "North Florida Ospreys",
+                  "price": 475
+                },
+                {
+                  "name": "UCF Knights",
+                  "price": -835
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "North Florida Ospreys",
+                  "price": -114,
+                  "point": 10.5
+                },
+                {
+                  "name": "UCF Knights",
+                  "price": -115,
+                  "point": -10.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -117,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-17T12:42:06Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "North Florida Ospreys",
+                  "price": 475
+                },
+                {
+                  "name": "UCF Knights",
+                  "price": -770
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "North Florida Ospreys",
+                  "price": -113,
+                  "point": 10.5
+                },
+                {
+                  "name": "UCF Knights",
+                  "price": -113,
+                  "point": -10.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -112,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4d6b53f0c7d069acd55e44e95fa7601a",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-17T19:00:00Z",
+      "home_team": "Oregon Ducks",
+      "away_team": "Murray St Racers",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-17T12:42:01Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Murray St Racers",
+                  "price": 700
+                },
+                {
+                  "name": "Oregon Ducks",
+                  "price": -2000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Murray St Racers",
+                  "price": -110,
+                  "point": 14.5
+                },
+                {
+                  "name": "Oregon Ducks",
+                  "price": -120,
+                  "point": -14.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 154.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 154.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-17T12:42:06Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Murray St Racers",
+                  "price": 700
+                },
+                {
+                  "name": "Oregon Ducks",
+                  "price": -1430
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Murray St Racers",
+                  "price": -108,
+                  "point": 14.5
+                },
+                {
+                  "name": "Oregon Ducks",
+                  "price": -117,
+                  "point": -14.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 154.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 154.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "94b372333af8685f7b0e185dace62a19",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-18T00:00:00Z",
+      "home_team": "Auburn Tigers",
+      "away_team": "Seton Hall Pirates",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-17T12:42:01Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Auburn Tigers",
+                  "price": -335
+                },
+                {
+                  "name": "Seton Hall Pirates",
+                  "price": 235
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Auburn Tigers",
+                  "price": -115,
+                  "point": -6.5
+                },
+                {
+                  "name": "Seton Hall Pirates",
+                  "price": -115,
+                  "point": 6.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 120.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 120.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-17T12:42:06Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Auburn Tigers",
+                  "price": -315
+                },
+                {
+                  "name": "Seton Hall Pirates",
+                  "price": 235
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Auburn Tigers",
+                  "price": -113,
+                  "point": -6.5
+                },
+                {
+                  "name": "Seton Hall Pirates",
+                  "price": -113,
+                  "point": 6.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 120.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 120.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f427c20263ba4a606e1ecb56a7c0b2d0",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-18T00:30:00Z",
+      "home_team": "Wisconsin Badgers",
+      "away_team": "Marquette Golden Eagles",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-17T12:42:01Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 310
+                },
+                {
+                  "name": "Wisconsin Badgers",
+                  "price": -480
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": -115,
+                  "point": 8.5
+                },
+                {
+                  "name": "Wisconsin Badgers",
+                  "price": -114,
+                  "point": -8.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:01Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-17T12:42:06Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": 310
+                },
+                {
+                  "name": "Wisconsin Badgers",
+                  "price": -455
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Marquette Golden Eagles",
+                  "price": -114,
+                  "point": 8.5
+                },
+                {
+                  "name": "Wisconsin Badgers",
+                  "price": -112,
+                  "point": -8.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-17T12:42:06Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 138.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 138.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "errors": []
 }

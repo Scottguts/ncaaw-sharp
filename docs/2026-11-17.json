@@ -1,5 +1,84 @@
 {
-  "cards": [],
+  "cards": [
+    {
+      "bet_label": "Murray State Racers +14.5",
+      "book": "ballybet",
+      "confidence": 6,
+      "edge": 0.0574,
+      "espn_event_id": "401918904",
+      "fair_american": -122,
+      "fair_prob": 0.549,
+      "line": 14.5,
+      "market": "spread",
+      "matchup": "Murray State Racers @ Oregon Ducks",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -108,
+      "reasoning": [
+        "Model margin +12.7 vs market +14.5 (home)",
+        "Anchored fair margin +13.0 vs line +14.5 (away)"
+      ],
+      "risk": "Lean",
+      "side": "away",
+      "start": "2026-11-17T19:00Z",
+      "unit_size": 0.5
+    },
+    {
+      "bet_label": "Auburn Tigers -6.5",
+      "book": "ballybet",
+      "confidence": 7,
+      "edge": 0.035,
+      "espn_event_id": "401913028",
+      "fair_american": -122,
+      "fair_prob": 0.5491,
+      "line": -6.5,
+      "market": "spread",
+      "matchup": "Seton Hall Pirates @ Auburn Tigers",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -113,
+      "reasoning": [
+        "Model margin +10.0 vs market +6.5 (home)",
+        "Anchored fair margin +8.0 vs line -6.5 (home)"
+      ],
+      "risk": "Lean",
+      "side": "home",
+      "start": "2026-11-18T00:00Z",
+      "unit_size": 0.5
+    },
+    {
+      "bet_label": "Marquette Golden Eagles +8.5",
+      "book": "ballybet",
+      "confidence": 6,
+      "edge": 0.0301,
+      "espn_event_id": "401918889",
+      "fair_american": -122,
+      "fair_prob": 0.5487,
+      "line": 8.5,
+      "market": "spread",
+      "matchup": "Marquette Golden Eagles @ Wisconsin Badgers",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -114,
+      "reasoning": [
+        "Model margin +7.0 vs market +8.5 (home)",
+        "Anchored fair margin +7.0 vs line +8.5 (away)"
+      ],
+      "risk": "Lean",
+      "side": "away",
+      "start": "2026-11-18T00:30Z",
+      "unit_size": 0.5
+    }
+  ],
   "date": "2026-11-17",
   "games": [
     {
@@ -9,18 +88,18 @@
       "home_short": "West Virginia",
       "matchup": "Akron Zips @ West Virginia Mountaineers",
       "model": {
-        "away_score": 61.8,
+        "away_score": 61.6,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 80.8,
-        "margin_home": 19.1,
+        "home_score": 80.6,
+        "margin_home": 19.0,
         "p3_away": 52.9,
         "p3_home": 45.5,
-        "proj_poss": 72.0,
-        "rank_away": 148,
-        "rank_home": 32,
-        "spread": -19.1,
-        "total": 142.6
+        "proj_poss": 71.9,
+        "rank_away": 146,
+        "rank_home": 33,
+        "spread": -19.0,
+        "total": 142.1
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -45,30 +124,75 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 11.7,
+        "season_bias_applied": -1.02,
+        "spread_shift": 1.2,
+        "total": 136.0,
+        "total_shift": 1.5
+      },
       "away_short": "North Florida",
       "cards": [],
       "espn_event_id": "401919059",
       "home_short": "UCF",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -10.5,
+        "spread_src": "consensus",
+        "total": 134.5,
+        "total_src": "consensus"
+      },
       "matchup": "North Florida Ospreys @ UCF Knights",
       "model": {
-        "away_score": 65.5,
+        "away_score": 65.2,
         "games_away": 5,
         "games_home": 5,
-        "home_score": 77.2,
+        "home_score": 76.9,
         "margin_home": 11.7,
         "p3_away": 49.644444444444446,
         "p3_home": 42.422222222222224,
         "proj_poss": 70.8,
-        "rank_away": 204,
-        "rank_home": 110,
+        "rank_away": 203,
+        "rank_home": 111,
         "spread": -11.7,
-        "total": 142.7
+        "total": 142.1
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "UCF Knights -10.5",
+          "book": "ballybet",
+          "confidence": 5,
+          "edge": 0.0243,
+          "espn_event_id": "401919059",
+          "fair_american": -119,
+          "fair_prob": 0.5434,
+          "line": -10.5,
+          "market": "spread",
+          "matchup": "North Florida Ospreys @ UCF Knights",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -113,
+          "reasoning": [
+            "Model margin +11.7 vs market +10.5 (home)",
+            "Anchored fair margin +11.7 vs line -10.5 (home)"
+          ],
+          "risk": "Shadow",
+          "side": "home",
+          "start": "2026-11-17T16:00Z",
+          "unit_size": 0.5
+        }
+      ],
+      "sigma": {
+        "spread": 11.01,
+        "total": 16.34
+      },
       "start": "2026-11-17T16:00Z",
       "status": "graded"
     },
@@ -79,18 +203,18 @@
       "home_short": "Winthrop",
       "matchup": "South Carolina State Lady Bulldogs @ Winthrop Eagles",
       "model": {
-        "away_score": 58.6,
+        "away_score": 58.4,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 72.0,
-        "margin_home": 13.5,
+        "home_score": 71.8,
+        "margin_home": 13.4,
         "p3_away": 47.885714285714286,
         "p3_home": 50.150000000000006,
-        "proj_poss": 71.5,
+        "proj_poss": 71.4,
         "rank_away": 357,
-        "rank_home": 262,
-        "spread": -13.5,
-        "total": 130.6
+        "rank_home": 263,
+        "spread": -13.4,
+        "total": 130.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -107,18 +231,18 @@
       "home_short": "Western Illinois",
       "matchup": "Purdue Fort Wayne Mastodons @ Western Illinois Leathernecks",
       "model": {
-        "away_score": 63.8,
+        "away_score": 63.7,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 73.8,
+        "home_score": 73.5,
         "margin_home": 9.9,
         "p3_away": 46.75,
         "p3_home": 48.2,
-        "proj_poss": 71.0,
-        "rank_away": 297,
-        "rank_home": 202,
+        "proj_poss": 70.9,
+        "rank_away": 296,
+        "rank_home": 200,
         "spread": -9.9,
-        "total": 137.6
+        "total": 137.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -135,18 +259,18 @@
       "home_short": "Mississippi State",
       "matchup": "Alabama State Lady Hornets @ Mississippi State Bulldogs",
       "model": {
-        "away_score": 55.9,
+        "away_score": 55.7,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 84.6,
-        "margin_home": 28.7,
+        "home_score": 84.4,
+        "margin_home": 28.6,
         "p3_away": 43.35,
         "p3_home": 41.9,
         "proj_poss": 72.6,
-        "rank_away": 301,
+        "rank_away": 300,
         "rank_home": 43,
-        "spread": -28.7,
-        "total": 140.6
+        "spread": -28.6,
+        "total": 140.1
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -163,18 +287,18 @@
       "home_short": "Illinois State",
       "matchup": "Loyola Chicago Ramblers @ Illinois State Redbirds",
       "model": {
-        "away_score": 59.3,
+        "away_score": 59.1,
         "games_away": 4,
         "games_home": 5,
-        "home_score": 74.9,
+        "home_score": 74.7,
         "margin_home": 15.6,
         "p3_away": 47.45,
         "p3_home": 45.766666666666666,
-        "proj_poss": 69.1,
-        "rank_away": 267,
+        "proj_poss": 69.0,
+        "rank_away": 266,
         "rank_home": 103,
         "spread": -15.6,
-        "total": 134.2
+        "total": 133.7
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -191,18 +315,18 @@
       "home_short": "Nevada",
       "matchup": "Pepperdine Waves @ Nevada Wolf Pack",
       "model": {
-        "away_score": 66.1,
+        "away_score": 65.9,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 63.9,
+        "home_score": 63.7,
         "margin_home": -2.2,
         "p3_away": 34.5,
         "p3_home": 50.95,
         "proj_poss": 69.1,
-        "rank_away": 158,
-        "rank_home": 213,
+        "rank_away": 159,
+        "rank_home": 211,
         "spread": 2.2,
-        "total": 130.0
+        "total": 129.6
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -213,30 +337,73 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 13.0,
+        "season_bias_applied": -1.02,
+        "spread_shift": -1.5,
+        "total": 156.0,
+        "total_shift": 1.5
+      },
       "away_short": "Murray State",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Murray State Racers +14.5",
+          "book": "ballybet",
+          "confidence": 6,
+          "edge": 0.0574,
+          "espn_event_id": "401918904",
+          "fair_american": -122,
+          "fair_prob": 0.549,
+          "line": 14.5,
+          "market": "spread",
+          "matchup": "Murray State Racers @ Oregon Ducks",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -108,
+          "reasoning": [
+            "Model margin +12.7 vs market +14.5 (home)",
+            "Anchored fair margin +13.0 vs line +14.5 (away)"
+          ],
+          "risk": "Lean",
+          "side": "away",
+          "start": "2026-11-17T19:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401918904",
       "home_short": "Oregon",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -14.5,
+        "spread_src": "consensus",
+        "total": 154.5,
+        "total_src": "consensus"
+      },
       "matchup": "Murray State Racers @ Oregon Ducks",
       "model": {
-        "away_score": 74.0,
+        "away_score": 73.7,
         "games_away": 4,
         "games_home": 5,
-        "home_score": 86.7,
+        "home_score": 86.5,
         "margin_home": 12.7,
         "p3_away": 48.9,
         "p3_home": 43.91111111111111,
-        "proj_poss": 73.1,
+        "proj_poss": 73.0,
         "rank_away": 95,
         "rank_home": 38,
         "spread": -12.7,
-        "total": 160.6
+        "total": 160.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 12.17,
+        "total": 18.48
+      },
       "start": "2026-11-17T19:00Z",
       "status": "graded"
     },
@@ -247,18 +414,18 @@
       "home_short": "Massachusetts",
       "matchup": "Army Black Knights @ Massachusetts Minutewomen",
       "model": {
-        "away_score": 62.3,
+        "away_score": 62.0,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 65.8,
-        "margin_home": 3.5,
+        "home_score": 65.6,
+        "margin_home": 3.6,
         "p3_away": 45.95,
         "p3_home": 46.25,
         "proj_poss": 68.4,
-        "rank_away": 121,
-        "rank_home": 118,
-        "spread": -3.5,
-        "total": 128.1
+        "rank_away": 123,
+        "rank_home": 119,
+        "spread": -3.6,
+        "total": 127.7
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -289,18 +456,18 @@
       "home_short": "Louisville",
       "matchup": "Tennessee State Lady Tigers @ Louisville Cardinals",
       "model": {
-        "away_score": 55.2,
+        "away_score": 55.0,
         "games_away": 4,
         "games_home": 6,
-        "home_score": 95.2,
+        "home_score": 95.0,
         "margin_home": 40.0,
         "p3_away": 45.25,
         "p3_home": 40.84,
-        "proj_poss": 72.9,
-        "rank_away": 288,
-        "rank_home": 7,
+        "proj_poss": 72.8,
+        "rank_away": 289,
+        "rank_home": 8,
         "spread": -40.0,
-        "total": 150.4
+        "total": 149.9
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -331,18 +498,18 @@
       "home_short": "Eastern Kentucky",
       "matchup": "Northern Kentucky Norse @ Eastern Kentucky Colonels",
       "model": {
-        "away_score": 62.5,
+        "away_score": 62.2,
         "games_away": 4,
         "games_home": 5,
-        "home_score": 74.2,
+        "home_score": 74.0,
         "margin_home": 11.8,
         "p3_away": 46.150000000000006,
         "p3_home": 44.166666666666664,
         "proj_poss": 72.1,
-        "rank_away": 280,
-        "rank_home": 154,
+        "rank_away": 279,
+        "rank_home": 153,
         "spread": -11.8,
-        "total": 136.7
+        "total": 136.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -373,18 +540,18 @@
       "home_short": "George Washington",
       "matchup": "Temple Owls @ George Washington Revolutionaries",
       "model": {
-        "away_score": 65.0,
+        "away_score": 64.8,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 71.1,
-        "margin_home": 6.1,
+        "home_score": 70.9,
+        "margin_home": 6.2,
         "p3_away": 46.099999999999994,
         "p3_home": 45.75,
-        "proj_poss": 69.7,
-        "rank_away": 113,
+        "proj_poss": 69.6,
+        "rank_away": 114,
         "rank_home": 94,
-        "spread": -6.1,
-        "total": 136.1
+        "spread": -6.2,
+        "total": 135.7
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -401,18 +568,18 @@
       "home_short": "Campbell",
       "matchup": "Fordham Rams @ Campbell Fighting Camels",
       "model": {
-        "away_score": 65.8,
+        "away_score": 65.6,
         "games_away": 5,
         "games_home": 5,
-        "home_score": 59.5,
+        "home_score": 59.3,
         "margin_home": -6.3,
         "p3_away": 45.111111111111114,
         "p3_home": 45.81111111111112,
-        "proj_poss": 68.2,
-        "rank_away": 170,
-        "rank_home": 296,
+        "proj_poss": 68.1,
+        "rank_away": 171,
+        "rank_home": 297,
         "spread": 6.3,
-        "total": 125.3
+        "total": 124.8
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -429,18 +596,18 @@
       "home_short": "Boston College",
       "matchup": "Merrimack Warriors @ Boston College Eagles",
       "model": {
-        "away_score": 63.8,
+        "away_score": 63.6,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 76.9,
-        "margin_home": 13.1,
+        "home_score": 76.7,
+        "margin_home": 13.0,
         "p3_away": 49.4,
         "p3_home": 51.85,
         "proj_poss": 72.0,
         "rank_away": 324,
-        "rank_home": 190,
-        "spread": -13.1,
-        "total": 140.7
+        "rank_home": 192,
+        "spread": -13.0,
+        "total": 140.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -457,18 +624,18 @@
       "home_short": "South Carolina",
       "matchup": "Florida Gulf Coast Eagles @ South Carolina Gamecocks",
       "model": {
-        "away_score": 53.6,
+        "away_score": 53.4,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 86.5,
+        "home_score": 86.3,
         "margin_home": 32.9,
         "p3_away": 43.8,
         "p3_home": 38.05,
-        "proj_poss": 70.1,
+        "proj_poss": 70.0,
         "rank_away": 104,
         "rank_home": 2,
         "spread": -32.9,
-        "total": 140.1
+        "total": 139.7
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -485,18 +652,18 @@
       "home_short": "Nebraska",
       "matchup": "Mount St. Mary's Mountaineers @ Nebraska Cornhuskers",
       "model": {
-        "away_score": 51.1,
+        "away_score": 50.8,
         "games_away": 5,
         "games_home": 4,
-        "home_score": 91.7,
-        "margin_home": 40.6,
+        "home_score": 91.4,
+        "margin_home": 40.7,
         "p3_away": 47.67777777777778,
         "p3_home": 48.599999999999994,
-        "proj_poss": 71.8,
+        "proj_poss": 71.7,
         "rank_away": 354,
         "rank_home": 21,
-        "spread": -40.6,
-        "total": 142.8
+        "spread": -40.7,
+        "total": 142.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -541,18 +708,18 @@
       "home_short": "Incarnate Word",
       "matchup": "Texas State Bobcats @ Incarnate Word Cardinals",
       "model": {
-        "away_score": 73.4,
+        "away_score": 73.2,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 62.3,
+        "home_score": 62.1,
         "margin_home": -11.1,
         "p3_away": 44.31428571428572,
         "p3_home": 51.95,
         "proj_poss": 69.6,
-        "rank_away": 123,
+        "rank_away": 124,
         "rank_home": 312,
         "spread": 11.1,
-        "total": 135.8
+        "total": 135.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -569,18 +736,18 @@
       "home_short": "Southern Illinois",
       "matchup": "Eastern Illinois Panthers @ Southern Illinois Salukis",
       "model": {
-        "away_score": 62.6,
+        "away_score": 62.4,
         "games_away": 5,
         "games_home": 3,
-        "home_score": 70.3,
+        "home_score": 70.1,
         "margin_home": 7.7,
         "p3_away": 47.955555555555556,
         "p3_home": 54.18571428571428,
         "proj_poss": 70.0,
         "rank_away": 298,
-        "rank_home": 235,
+        "rank_home": 233,
         "spread": -7.7,
-        "total": 133.0
+        "total": 132.5
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -597,18 +764,18 @@
       "home_short": "Northern Illinois",
       "matchup": "SIU Edwardsville Cougars @ Northern Illinois Huskies",
       "model": {
-        "away_score": 65.0,
+        "away_score": 64.8,
         "games_away": 5,
         "games_home": 3,
-        "home_score": 63.9,
+        "home_score": 63.7,
         "margin_home": -1.1,
         "p3_away": 47.67777777777778,
         "p3_home": 50.857142857142854,
-        "proj_poss": 68.2,
-        "rank_away": 227,
-        "rank_home": 253,
+        "proj_poss": 68.1,
+        "rank_away": 225,
+        "rank_home": 255,
         "spread": 1.1,
-        "total": 128.9
+        "total": 128.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -625,18 +792,18 @@
       "home_short": "Indiana State",
       "matchup": "Bellarmine Knights @ Indiana State Sycamores",
       "model": {
-        "away_score": 72.8,
+        "away_score": 72.5,
         "games_away": 5,
         "games_home": 5,
-        "home_score": 83.1,
-        "margin_home": 10.3,
+        "home_score": 82.8,
+        "margin_home": 10.4,
         "p3_away": 55.144444444444446,
         "p3_home": 46.3,
         "proj_poss": 74.9,
-        "rank_away": 351,
-        "rank_home": 283,
-        "spread": -10.3,
-        "total": 155.8
+        "rank_away": 350,
+        "rank_home": 282,
+        "spread": -10.4,
+        "total": 155.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -653,18 +820,18 @@
       "home_short": "Fairleigh Dickinson",
       "matchup": "Rider Broncs @ Fairleigh Dickinson Knights",
       "model": {
-        "away_score": 53.0,
+        "away_score": 52.8,
         "games_away": 3,
         "games_home": 5,
-        "home_score": 64.6,
+        "home_score": 64.5,
         "margin_home": 11.7,
         "p3_away": 43.55714285714286,
         "p3_home": 46.888888888888886,
-        "proj_poss": 66.1,
-        "rank_away": 300,
-        "rank_home": 169,
+        "proj_poss": 66.0,
+        "rank_away": 301,
+        "rank_home": 170,
         "spread": -11.7,
-        "total": 117.6
+        "total": 117.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -681,18 +848,18 @@
       "home_short": "Drake",
       "matchup": "St. Thomas Tommies @ Drake Bulldogs",
       "model": {
-        "away_score": 65.7,
+        "away_score": 65.6,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 69.9,
-        "margin_home": 4.2,
+        "home_score": 69.6,
+        "margin_home": 4.0,
         "p3_away": 45.55,
         "p3_home": 46.15,
-        "proj_poss": 69.7,
+        "proj_poss": 69.6,
         "rank_away": 189,
-        "rank_home": 181,
-        "spread": -4.2,
-        "total": 135.7
+        "rank_home": 183,
+        "spread": -4.0,
+        "total": 135.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -709,18 +876,18 @@
       "home_short": "Monmouth",
       "matchup": "Marist Red Foxes @ Monmouth Hawks",
       "model": {
-        "away_score": 58.1,
+        "away_score": 57.9,
         "games_away": 5,
         "games_home": 4,
-        "home_score": 69.9,
-        "margin_home": 11.8,
+        "home_score": 69.6,
+        "margin_home": 11.7,
         "p3_away": 44.355555555555554,
         "p3_home": 40.85,
         "proj_poss": 68.6,
-        "rank_away": 257,
-        "rank_home": 142,
-        "spread": -11.8,
-        "total": 127.9
+        "rank_away": 254,
+        "rank_home": 141,
+        "spread": -11.7,
+        "total": 127.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -737,18 +904,18 @@
       "home_short": "Providence",
       "matchup": "Northeastern Huskies @ Providence Friars",
       "model": {
-        "away_score": 59.8,
+        "away_score": 59.6,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 70.4,
+        "home_score": 70.2,
         "margin_home": 10.6,
         "p3_away": 46.5,
         "p3_home": 45.5,
-        "proj_poss": 68.3,
-        "rank_away": 229,
-        "rank_home": 144,
+        "proj_poss": 68.2,
+        "rank_away": 227,
+        "rank_home": 142,
         "spread": -10.6,
-        "total": 130.2
+        "total": 129.8
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -759,30 +926,73 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 8.0,
+        "season_bias_applied": -1.02,
+        "spread_shift": 1.5,
+        "total": 122.0,
+        "total_shift": 1.5
+      },
       "away_short": "Seton Hall",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Auburn Tigers -6.5",
+          "book": "ballybet",
+          "confidence": 7,
+          "edge": 0.035,
+          "espn_event_id": "401913028",
+          "fair_american": -122,
+          "fair_prob": 0.5491,
+          "line": -6.5,
+          "market": "spread",
+          "matchup": "Seton Hall Pirates @ Auburn Tigers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -113,
+          "reasoning": [
+            "Model margin +10.0 vs market +6.5 (home)",
+            "Anchored fair margin +8.0 vs line -6.5 (home)"
+          ],
+          "risk": "Lean",
+          "side": "home",
+          "start": "2026-11-18T00:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401913028",
       "home_short": "Auburn",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -6.5,
+        "spread_src": "consensus",
+        "total": 120.5,
+        "total_src": "consensus"
+      },
       "matchup": "Seton Hall Pirates @ Auburn Tigers",
       "model": {
-        "away_score": 57.4,
+        "away_score": 57.2,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 67.3,
-        "margin_home": 9.9,
+        "home_score": 67.1,
+        "margin_home": 10.0,
         "p3_away": 45.5,
         "p3_home": 41.45,
-        "proj_poss": 68.8,
-        "rank_away": 93,
-        "rank_home": 50,
-        "spread": -9.9,
-        "total": 124.7
+        "proj_poss": 68.7,
+        "rank_away": 92,
+        "rank_home": 49,
+        "spread": -10.0,
+        "total": 124.3
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 12.16,
+        "total": 16.88
+      },
       "start": "2026-11-18T00:00Z",
       "status": "graded"
     },
@@ -793,18 +1003,18 @@
       "home_short": "North Carolina A&T",
       "matchup": "Liberty Flames @ North Carolina A&T Aggies",
       "model": {
-        "away_score": 65.5,
+        "away_score": 65.3,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 57.4,
+        "home_score": 57.2,
         "margin_home": -8.1,
         "p3_away": 44.614285714285714,
         "p3_home": 51.75,
         "proj_poss": 67.2,
-        "rank_away": 106,
+        "rank_away": 107,
         "rank_home": 241,
         "spread": 8.1,
-        "total": 122.9
+        "total": 122.5
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -843,30 +1053,73 @@
       "status": "skipped"
     },
     {
+      "anchored": {
+        "margin_home": 7.0,
+        "season_bias_applied": -1.02,
+        "spread_shift": -1.5,
+        "total": 137.0,
+        "total_shift": -1.5
+      },
       "away_short": "Marquette",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Marquette Golden Eagles +8.5",
+          "book": "ballybet",
+          "confidence": 6,
+          "edge": 0.0301,
+          "espn_event_id": "401918889",
+          "fair_american": -122,
+          "fair_prob": 0.5487,
+          "line": 8.5,
+          "market": "spread",
+          "matchup": "Marquette Golden Eagles @ Wisconsin Badgers",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -114,
+          "reasoning": [
+            "Model margin +7.0 vs market +8.5 (home)",
+            "Anchored fair margin +7.0 vs line +8.5 (away)"
+          ],
+          "risk": "Lean",
+          "side": "away",
+          "start": "2026-11-18T00:30Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401918889",
       "home_short": "Wisconsin",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -8.5,
+        "spread_src": "consensus",
+        "total": 138.5,
+        "total_src": "consensus"
+      },
       "matchup": "Marquette Golden Eagles @ Wisconsin Badgers",
       "model": {
-        "away_score": 65.3,
+        "away_score": 65.1,
         "games_away": 4,
         "games_home": 5,
-        "home_score": 72.3,
+        "home_score": 72.0,
         "margin_home": 7.0,
         "p3_away": 43.3,
         "p3_home": 44.3,
-        "proj_poss": 70.0,
-        "rank_away": 81,
+        "proj_poss": 69.9,
+        "rank_away": 80,
         "rank_home": 51,
         "spread": -7.0,
-        "total": 137.5
+        "total": 137.1
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 12.25,
+        "total": 17.69
+      },
       "start": "2026-11-18T00:30Z",
       "status": "graded"
     },
@@ -877,18 +1130,18 @@
       "home_short": "Belmont",
       "matchup": "Tennessee Lady Volunteers @ Belmont Bruins",
       "model": {
-        "away_score": 82.4,
+        "away_score": 82.1,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 66.4,
+        "home_score": 66.0,
         "margin_home": -16.1,
         "p3_away": 45.1,
         "p3_home": 40.900000000000006,
-        "proj_poss": 73.1,
+        "proj_poss": 73.0,
         "rank_away": 22,
-        "rank_home": 126,
+        "rank_home": 128,
         "spread": 16.1,
-        "total": 148.8
+        "total": 148.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -905,18 +1158,18 @@
       "home_short": "Kansas State",
       "matchup": "SMU Mustangs @ Kansas State Wildcats",
       "model": {
-        "away_score": 64.8,
+        "away_score": 64.6,
         "games_away": 5,
         "games_home": 5,
-        "home_score": 70.8,
-        "margin_home": 5.9,
+        "home_score": 70.6,
+        "margin_home": 6.0,
         "p3_away": 42.72222222222222,
         "p3_home": 42.27777777777778,
         "proj_poss": 71.3,
-        "rank_away": 80,
+        "rank_away": 81,
         "rank_home": 59,
-        "spread": -5.9,
-        "total": 135.6
+        "spread": -6.0,
+        "total": 135.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -933,18 +1186,18 @@
       "home_short": "Houston",
       "matchup": "Texas A&M-Corpus Christi Islanders @ Houston Cougars",
       "model": {
-        "away_score": 53.7,
+        "away_score": 53.5,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 78.9,
-        "margin_home": 25.2,
+        "home_score": 78.7,
+        "margin_home": 25.1,
         "p3_away": 49.614285714285714,
         "p3_home": 45.5,
         "proj_poss": 70.7,
         "rank_away": 322,
-        "rank_home": 72,
-        "spread": -25.2,
-        "total": 132.5
+        "rank_home": 73,
+        "spread": -25.1,
+        "total": 132.2
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -961,18 +1214,18 @@
       "home_short": "Arkansas State",
       "matchup": "Jackson State Lady Tigers @ Arkansas State Red Wolves",
       "model": {
-        "away_score": 61.0,
+        "away_score": 60.8,
         "games_away": 4,
         "games_home": 3,
-        "home_score": 77.8,
+        "home_score": 77.5,
         "margin_home": 16.8,
         "p3_away": 47.65,
         "p3_home": 49.37142857142857,
         "proj_poss": 72.1,
-        "rank_away": 349,
-        "rank_home": 165,
+        "rank_away": 347,
+        "rank_home": 166,
         "spread": -16.8,
-        "total": 138.8
+        "total": 138.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -989,18 +1242,18 @@
       "home_short": "Oral Roberts",
       "matchup": "Wichita State Shockers @ Oral Roberts Golden Eagles",
       "model": {
-        "away_score": 72.0,
+        "away_score": 71.8,
         "games_away": 4,
         "games_home": 5,
-        "home_score": 72.2,
-        "margin_home": 0.2,
+        "home_score": 72.1,
+        "margin_home": 0.3,
         "p3_away": 44.9,
         "p3_home": 53.3,
-        "proj_poss": 73.4,
-        "rank_away": 234,
+        "proj_poss": 73.3,
+        "rank_away": 235,
         "rank_home": 239,
-        "spread": -0.2,
-        "total": 144.2
+        "spread": -0.3,
+        "total": 143.9
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1017,18 +1270,18 @@
       "home_short": "Arizona State",
       "matchup": "San Diego Toreros @ Arizona State Sun Devils",
       "model": {
-        "away_score": 57.7,
+        "away_score": 56.7,
         "games_away": 4,
-        "games_home": 3,
-        "home_score": 78.2,
-        "margin_home": 20.5,
+        "games_home": 4,
+        "home_score": 78.1,
+        "margin_home": 21.4,
         "p3_away": 45.9,
-        "p3_home": 41.114285714285714,
+        "p3_home": 40.05,
         "proj_poss": 69.2,
-        "rank_away": 195,
-        "rank_home": 37,
-        "spread": -20.5,
-        "total": 135.9
+        "rank_away": 193,
+        "rank_home": 30,
+        "spread": -21.4,
+        "total": 134.8
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1045,18 +1298,18 @@
       "home_short": "Oklahoma",
       "matchup": "Texas Southern Tigers @ Oklahoma Sooners",
       "model": {
-        "away_score": 53.8,
+        "away_score": 53.6,
         "games_away": 4,
         "games_home": 4,
-        "home_score": 102.7,
-        "margin_home": 49.0,
+        "home_score": 102.4,
+        "margin_home": 48.8,
         "p3_away": 51.05,
         "p3_home": 37.75,
-        "proj_poss": 76.3,
+        "proj_poss": 76.2,
         "rank_away": 358,
         "rank_home": 13,
-        "spread": -49.0,
-        "total": 156.5
+        "spread": -48.8,
+        "total": 156.0
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1087,18 +1340,18 @@
       "home_short": "UNLV",
       "matchup": "Rice Owls @ UNLV Lady Rebels",
       "model": {
-        "away_score": 63.1,
+        "away_score": 62.9,
         "games_away": 4,
         "games_home": 3,
-        "home_score": 68.5,
+        "home_score": 68.4,
         "margin_home": 5.4,
         "p3_away": 40.25,
         "p3_home": 45.71428571428571,
         "proj_poss": 69.5,
-        "rank_away": 101,
-        "rank_home": 85,
+        "rank_away": 100,
+        "rank_home": 84,
         "spread": -5.4,
-        "total": 131.7
+        "total": 131.3
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1115,10 +1368,10 @@
       "home_short": "Santa Clara",
       "matchup": "Grand Canyon Lopes @ Santa Clara Broncos",
       "model": {
-        "away_score": 74.2,
+        "away_score": 74.0,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 75.3,
+        "home_score": 75.1,
         "margin_home": 1.1,
         "p3_away": 43.67142857142857,
         "p3_home": 41.5,
@@ -1126,7 +1379,7 @@
         "rank_away": 70,
         "rank_home": 75,
         "spread": -1.1,
-        "total": 149.5
+        "total": 149.0
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1143,18 +1396,18 @@
       "home_short": "Washington State",
       "matchup": "Washington Huskies @ Washington State Cougars",
       "model": {
-        "away_score": 74.8,
+        "away_score": 74.6,
         "games_away": 3,
         "games_home": 4,
-        "home_score": 59.0,
+        "home_score": 58.8,
         "margin_home": -15.8,
         "p3_away": 41.957142857142856,
         "p3_home": 42.45,
         "proj_poss": 68.5,
         "rank_away": 20,
-        "rank_home": 124,
+        "rank_home": 125,
         "spread": 15.8,
-        "total": 133.8
+        "total": 133.4
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1165,16 +1418,43 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-17T07:46:50.395709Z",
+  "generated_at": "2026-11-17T12:42:39.179074Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": 0.35,
+    "mean_total_delta": 3.92,
+    "n_spread_lines": 4,
+    "n_total_lines": 4
   },
-  "n_cards": 0,
+  "n_cards": 3,
   "n_games": 46,
   "odds_available": true,
-  "shadow_cards": [],
-  "total_units": 0
+  "shadow_cards": [
+    {
+      "bet_label": "UCF Knights -10.5",
+      "book": "ballybet",
+      "confidence": 5,
+      "edge": 0.0243,
+      "espn_event_id": "401919059",
+      "fair_american": -119,
+      "fair_prob": 0.5434,
+      "line": -10.5,
+      "market": "spread",
+      "matchup": "North Florida Ospreys @ UCF Knights",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -113,
+      "reasoning": [
+        "Model margin +11.7 vs market +10.5 (home)",
+        "Anchored fair margin +11.7 vs line -10.5 (home)"
+      ],
+      "risk": "Shadow",
+      "side": "home",
+      "start": "2026-11-17T16:00Z",
+      "unit_size": 0.5
+    }
+  ],
+  "total_units": 1.5
 }
