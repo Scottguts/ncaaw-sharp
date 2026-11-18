@@ -46,12 +46,12 @@
 
 ### Full slate
 
-- **Utah State Aggies @ BYU Cougars** — model 60-79 (margin +19.3 home, total 138.9) · market: home -2.5 (consensus) · total 168.5 (consensus) · PASS: no edge cleared the gates
+- **Utah State Aggies @ BYU Cougars** — model 60-79 (margin +19.3 home, total 138.9) · market: home -7.5 (consensus) · total 169.5 (consensus) · PASS: no edge cleared the gates
 - **Rowan Profs @ La Salle Explorers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **New Hampshire Wildcats @ Yale Bulldogs** — model 58-67 (margin +8.9 home, total 124.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Boston University Terriers @ Stonehill Skyhawks** — model 65-63 (margin -2.3 home, total 127.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Marshall Thundering Herd @ Wright State Raiders** — model 70-67 (margin -3.4 home, total 136.6) · market: no line · PASS: no market line (nothing to anchor against)
-- **Western Carolina Catamounts @ Cincinnati Bearcats** — model 60-76 (margin +15.9 home, total 135.9) · market: home -20.5 (consensus) · total 115.5 (consensus) · PASS: no edge cleared the gates
+- **Western Carolina Catamounts @ Cincinnati Bearcats** — model 60-76 (margin +15.9 home, total 135.9) · market: home -20.5 (consensus) · total 113 (consensus) · PASS: no edge cleared the gates
 - **Syracuse Orange @ Harvard Crimson** — model 67-67 (margin +0.1 home, total 134.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Bucknell Bison @ UAlbany Great Danes** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **UMBC Retrievers @ Pittsburgh Panthers** — model 61-74 (margin +13.4 home, total 134.5) · market: no line · PASS: no market line (nothing to anchor against)
@@ -71,7 +71,7 @@
 - **Mercyhurst Lakers @ Cornell Big Red** — model 59-66 (margin +7.0 home, total 125.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Central Connecticut Blue Devils @ UMass Lowell River Hawks** — model 58-68 (margin +10.8 home, total 126.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Delaware State Hornets @ NJIT Highlanders** — model 60-74 (margin +14.4 home, total 133.7) · market: no line · PASS: no market line (nothing to anchor against)
-- **Georgia Lady Bulldogs @ Georgia Tech Yellow Jackets** — model 72-68 (margin -3.1 home, total 140.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Georgia Lady Bulldogs @ Georgia Tech Yellow Jackets** — model 72-68 (margin -3.1 home, total 140.2) · market: home +3.5 (consensus) · total 139.5 (consensus) · PASS: no edge cleared the gates
 - **East Tennessee State Buccaneers @ Gardner-Webb Runnin' Bulldogs** — model 63-51 (margin -12.1 home, total 113.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Illinois Fighting Illini @ Ball State Cardinals** — model 81-67 (margin -13.9 home, total 148.1) · market: home +15.5 (consensus) · total 147.5 (consensus)
 - **Eastern Michigan Eagles @ Oakland Golden Grizzlies** — model 69-70 (margin +1.6 home, total 139.2) · market: no line · PASS: no market line (nothing to anchor against)
@@ -115,4 +115,4 @@
 - **Utah Tech Trailblazers @ Cal State Bakersfield Roadrunners** — model 66-70 (margin +3.9 home, total 136.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Champion Christian Tigers @ UT Martin Skyhawks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 
-_Generated 2026-11-18T22:40:42Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-18T22:53:58Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

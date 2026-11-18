@@ -1,11 +1,11 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T22:40:42.286586Z",
+  "generated_at": "2026-11-18T22:53:58.263161Z",
   "market_bias": {
-    "n_spread_lines": 13,
-    "n_total_lines": 13,
-    "mean_spread_delta": -3.25,
-    "mean_total_delta": -0.71
+    "n_spread_lines": 14,
+    "n_total_lines": 14,
+    "mean_spread_delta": -3.35,
+    "mean_total_delta": -0.5
   },
   "odds_available": true,
   "n_games": 68,
@@ -204,8 +204,8 @@
       "price_american": -110,
       "line": 139.5,
       "fair_prob": 0.5338,
-      "fair_american": -115,
-      "edge": 0.0191,
+      "fair_american": -114,
+      "edge": 0.019,
       "confidence": 6,
       "unit_size": 0.5,
       "risk": "Shadow",
@@ -304,22 +304,22 @@
         "p3_away": 51.13333333333333
       },
       "market": {
-        "spread_home": -2.5,
-        "total": 168.5,
+        "spread_home": -7.5,
+        "total": 169.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
         "spread": 11.62,
-        "total": 16.12
+        "total": 16.14
       },
       "anchored": {
-        "margin_home": 4.0,
+        "margin_home": 9.0,
         "spread_shift": 1.5,
-        "total": 167.0,
+        "total": 168.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -449,21 +449,21 @@
       },
       "market": {
         "spread_home": -20.5,
-        "total": 115.5,
+        "total": 113.0,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
         "spread": 12.47,
-        "total": 17.56
+        "total": 17.58
       },
       "anchored": {
         "margin_home": 19.0,
         "spread_shift": -1.5,
-        "total": 117.0,
+        "total": 114.5,
         "total_shift": 1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -723,14 +723,14 @@
       },
       "sigma": {
         "spread": 15.41,
-        "total": 19.75
+        "total": 19.77
       },
       "anchored": {
         "margin_home": 43.0,
         "spread_shift": -1.5,
         "total": 148.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -853,14 +853,14 @@
       },
       "sigma": {
         "spread": 12.84,
-        "total": 15.03
+        "total": 15.05
       },
       "anchored": {
         "margin_home": 34.0,
         "spread_shift": -1.5,
-        "total": 118.0,
-        "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "total": 118.29,
+        "total_shift": -1.21,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -986,7 +986,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 71.7,
@@ -1001,6 +1001,24 @@
         "rank_away": 44,
         "p3_home": 41.1,
         "p3_away": 41.93333333333334
+      },
+      "market": {
+        "spread_home": 3.5,
+        "total": 139.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.21,
+        "total": 16.2
+      },
+      "anchored": {
+        "margin_home": -3.1,
+        "spread_shift": 0.4,
+        "total": 138.39,
+        "total_shift": -1.11,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1092,14 +1110,14 @@
       },
       "sigma": {
         "spread": 13.4,
-        "total": 19.91
+        "total": 19.93
       },
       "anchored": {
         "margin_home": -14.0,
         "spread_shift": 1.5,
-        "total": 146.0,
-        "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "total": 146.29,
+        "total_shift": -1.21,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1288,14 +1306,14 @@
       },
       "sigma": {
         "spread": 14.12,
-        "total": 18.12
+        "total": 18.14
       },
       "anchored": {
         "margin_home": 72.0,
         "spread_shift": -1.5,
         "total": 145.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1359,14 +1377,14 @@
       },
       "sigma": {
         "spread": 14.12,
-        "total": 17.72
+        "total": 17.74
       },
       "anchored": {
         "margin_home": 48.0,
         "spread_shift": -1.5,
         "total": 140.5,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1405,14 +1423,14 @@
       },
       "sigma": {
         "spread": 12.17,
-        "total": 18.01
+        "total": 18.03
       },
       "anchored": {
         "margin_home": 9.8,
         "spread_shift": 0.3,
-        "total": 141.74,
-        "total_shift": -0.26,
-        "season_bias_applied": -2.16
+        "total": 142.09,
+        "total_shift": 0.09,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1825,14 +1843,14 @@
       },
       "sigma": {
         "spread": 12.54,
-        "total": 17.69
+        "total": 17.71
       },
       "anchored": {
         "margin_home": -20.0,
         "spread_shift": 1.5,
         "total": 136.0,
         "total_shift": 1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1896,14 +1914,14 @@
       },
       "sigma": {
         "spread": 14.12,
-        "total": 17.83
+        "total": 17.85
       },
       "anchored": {
         "margin_home": 46.0,
         "spread_shift": -1.5,
         "total": 140.5,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -1942,14 +1960,14 @@
       },
       "sigma": {
         "spread": 14.11,
-        "total": 17.99
+        "total": 18.01
       },
       "anchored": {
         "margin_home": 37.0,
         "spread_shift": -1.5,
-        "total": 141.44,
-        "total_shift": -1.06,
-        "season_bias_applied": -2.16
+        "total": 141.79,
+        "total_shift": -0.71,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -2013,14 +2031,14 @@
       },
       "sigma": {
         "spread": 12.16,
-        "total": 17.69
+        "total": 17.71
       },
       "anchored": {
         "margin_home": 9.0,
         "spread_shift": 1.5,
-        "total": 136.04,
-        "total_shift": 0.54,
-        "season_bias_applied": -2.16
+        "total": 136.39,
+        "total_shift": 0.89,
+        "season_bias_applied": -1.81
       }
     },
     {
@@ -2125,8 +2143,8 @@
           "price_american": -110,
           "line": 139.5,
           "fair_prob": 0.5338,
-          "fair_american": -115,
-          "edge": 0.0191,
+          "fair_american": -114,
+          "edge": 0.019,
           "confidence": 6,
           "unit_size": 0.5,
           "risk": "Shadow",
@@ -2170,14 +2188,14 @@
       },
       "sigma": {
         "spread": 12.24,
-        "total": 17.68
+        "total": 17.7
       },
       "anchored": {
         "margin_home": 7.3,
         "spread_shift": -1.2,
         "total": 138.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.16
+        "season_bias_applied": -1.81
       }
     },
     {

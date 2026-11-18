@@ -135,10 +135,10 @@
   "games": [
     {
       "anchored": {
-        "margin_home": 4.0,
-        "season_bias_applied": -2.16,
+        "margin_home": 9.0,
+        "season_bias_applied": -1.81,
         "spread_shift": 1.5,
-        "total": 167.0,
+        "total": 168.0,
         "total_shift": -1.5
       },
       "away_short": "Utah State",
@@ -147,9 +147,9 @@
       "home_short": "BYU",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -2.5,
+        "spread_home": -7.5,
         "spread_src": "consensus",
-        "total": 168.5,
+        "total": 169.5,
         "total_src": "consensus"
       },
       "matchup": "Utah State Aggies @ BYU Cougars",
@@ -174,7 +174,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.62,
-        "total": 16.12
+        "total": 16.14
       },
       "start": "2026-11-18T21:00Z",
       "status": "graded"
@@ -280,9 +280,9 @@
     {
       "anchored": {
         "margin_home": 19.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
-        "total": 117.0,
+        "total": 114.5,
         "total_shift": 1.5
       },
       "away_short": "Western Carolina",
@@ -293,7 +293,7 @@
         "pinnacle_fair_home_ml": null,
         "spread_home": -20.5,
         "spread_src": "consensus",
-        "total": 115.5,
+        "total": 113.0,
         "total_src": "consensus"
       },
       "matchup": "Western Carolina Catamounts @ Cincinnati Bearcats",
@@ -318,7 +318,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.47,
-        "total": 17.56
+        "total": 17.58
       },
       "start": "2026-11-18T22:00Z",
       "status": "graded"
@@ -522,7 +522,7 @@
     {
       "anchored": {
         "margin_home": 43.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
         "total": 148.0,
         "total_shift": -1.5
@@ -585,7 +585,7 @@
       "shadow": [],
       "sigma": {
         "spread": 15.41,
-        "total": 19.75
+        "total": 19.77
       },
       "start": "2026-11-18T23:00Z",
       "status": "graded"
@@ -677,10 +677,10 @@
     {
       "anchored": {
         "margin_home": 34.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
-        "total": 118.0,
-        "total_shift": -1.5
+        "total": 118.29,
+        "total_shift": -1.21
       },
       "away_short": "South Carolina Upstate",
       "cards": [],
@@ -715,7 +715,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.84,
-        "total": 15.03
+        "total": 15.05
       },
       "start": "2026-11-18T23:00Z",
       "status": "graded"
@@ -833,10 +833,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -3.1,
+        "season_bias_applied": -1.81,
+        "spread_shift": 0.4,
+        "total": 138.39,
+        "total_shift": -1.11
+      },
       "away_short": "Georgia",
       "cards": [],
       "espn_event_id": "401912981",
       "home_short": "Georgia Tech",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 3.5,
+        "spread_src": "consensus",
+        "total": 139.5,
+        "total_src": "consensus"
+      },
       "matchup": "Georgia Lady Bulldogs @ Georgia Tech Yellow Jackets",
       "model": {
         "away_score": 71.7,
@@ -854,9 +868,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 11.21,
+        "total": 16.2
+      },
       "start": "2026-11-18T23:00Z",
       "status": "graded"
     },
@@ -891,10 +909,10 @@
     {
       "anchored": {
         "margin_home": -14.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": 1.5,
-        "total": 146.0,
-        "total_shift": -1.5
+        "total": 146.29,
+        "total_shift": -1.21
       },
       "away_short": "Illinois",
       "cards": [
@@ -954,7 +972,7 @@
       "shadow": [],
       "sigma": {
         "spread": 13.4,
-        "total": 19.91
+        "total": 19.93
       },
       "start": "2026-11-18T23:30Z",
       "status": "graded"
@@ -1060,7 +1078,7 @@
     {
       "anchored": {
         "margin_home": 72.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
         "total": 145.0,
         "total_shift": -1.5
@@ -1150,7 +1168,7 @@
       ],
       "sigma": {
         "spread": 14.12,
-        "total": 18.12
+        "total": 18.14
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
@@ -1158,7 +1176,7 @@
     {
       "anchored": {
         "margin_home": 48.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
         "total": 140.5,
         "total_shift": -1.5
@@ -1221,7 +1239,7 @@
       "shadow": [],
       "sigma": {
         "spread": 14.12,
-        "total": 17.72
+        "total": 17.74
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
@@ -1229,10 +1247,10 @@
     {
       "anchored": {
         "margin_home": 9.8,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": 0.3,
-        "total": 141.74,
-        "total_shift": -0.26
+        "total": 142.09,
+        "total_shift": 0.09
       },
       "away_short": "Ole Miss",
       "cards": [],
@@ -1267,7 +1285,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.17,
-        "total": 18.01
+        "total": 18.03
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
@@ -1597,7 +1615,7 @@
     {
       "anchored": {
         "margin_home": -20.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": 1.5,
         "total": 136.0,
         "total_shift": 1.5
@@ -1687,7 +1705,7 @@
       ],
       "sigma": {
         "spread": 12.54,
-        "total": 17.69
+        "total": 17.71
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1695,7 +1713,7 @@
     {
       "anchored": {
         "margin_home": 46.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
         "total": 140.5,
         "total_shift": -1.5
@@ -1758,7 +1776,7 @@
       "shadow": [],
       "sigma": {
         "spread": 14.12,
-        "total": 17.83
+        "total": 17.85
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1766,10 +1784,10 @@
     {
       "anchored": {
         "margin_home": 37.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.5,
-        "total": 141.44,
-        "total_shift": -1.06
+        "total": 141.79,
+        "total_shift": -0.71
       },
       "away_short": "UT Arlington",
       "cards": [],
@@ -1804,7 +1822,7 @@
       "shadow": [],
       "sigma": {
         "spread": 14.11,
-        "total": 17.99
+        "total": 18.01
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1812,10 +1830,10 @@
     {
       "anchored": {
         "margin_home": 9.0,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": 1.5,
-        "total": 136.04,
-        "total_shift": 0.54
+        "total": 136.39,
+        "total_shift": 0.89
       },
       "away_short": "St. John's",
       "cards": [
@@ -1875,7 +1893,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.16,
-        "total": 17.69
+        "total": 17.71
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1967,7 +1985,7 @@
     {
       "anchored": {
         "margin_home": 7.3,
-        "season_bias_applied": -2.16,
+        "season_bias_applied": -1.81,
         "spread_shift": -1.2,
         "total": 138.0,
         "total_shift": -1.5
@@ -2007,9 +2025,9 @@
           "bet_label": "Under 139.5",
           "book": "draftkings",
           "confidence": 6,
-          "edge": 0.0191,
+          "edge": 0.019,
           "espn_event_id": "401906966",
-          "fair_american": -115,
+          "fair_american": -114,
           "fair_prob": 0.5338,
           "line": 139.5,
           "market": "total",
@@ -2032,7 +2050,7 @@
       ],
       "sigma": {
         "spread": 12.24,
-        "total": 17.68
+        "total": 17.7
       },
       "start": "2026-11-19T01:00Z",
       "status": "graded"
@@ -2290,12 +2308,12 @@
       "status": "skipped"
     }
   ],
-  "generated_at": "2026-11-18T22:40:42.286586Z",
+  "generated_at": "2026-11-18T22:53:58.263161Z",
   "market_bias": {
-    "mean_spread_delta": -3.25,
-    "mean_total_delta": -0.71,
-    "n_spread_lines": 13,
-    "n_total_lines": 13
+    "mean_spread_delta": -3.35,
+    "mean_total_delta": -0.5,
+    "n_spread_lines": 14,
+    "n_total_lines": 14
   },
   "n_cards": 5,
   "n_games": 68,
@@ -2357,9 +2375,9 @@
       "bet_label": "Under 139.5",
       "book": "draftkings",
       "confidence": 6,
-      "edge": 0.0191,
+      "edge": 0.019,
       "espn_event_id": "401906966",
-      "fair_american": -115,
+      "fair_american": -114,
       "fair_prob": 0.5338,
       "line": 139.5,
       "market": "total",
