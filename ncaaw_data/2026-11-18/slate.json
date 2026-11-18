@@ -1,106 +1,7 @@
 {
   "date": "2026-11-18",
-  "fetched_at": "2026-11-18T16:20:25.629588Z",
+  "fetched_at": "2026-11-18T19:21:45.833764Z",
   "games": [
-    {
-      "espn_event_id": "401913801",
-      "start": "2026-11-18T16:00Z",
-      "et_date": "2026-11-18",
-      "name": "Bucknell Bison at UAlbany Great Danes",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "399",
-        "location": "UAlbany",
-        "display_name": "UAlbany Great Danes",
-        "canon": "ualbany",
-        "conf": "AE",
-        "record": "3-2",
-        "score": "11",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2083",
-        "location": "Bucknell",
-        "display_name": "Bucknell Bison",
-        "canon": "bucknell",
-        "conf": "Patriot",
-        "record": "1-3",
-        "score": "5",
-        "winner": null
-      },
-      "torvik_home": false,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401913748",
-      "start": "2026-11-18T16:00Z",
-      "et_date": "2026-11-18",
-      "name": "UMBC Retrievers at Pittsburgh Panthers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "221",
-        "location": "Pittsburgh",
-        "display_name": "Pittsburgh Panthers",
-        "canon": "pittsburgh",
-        "conf": "ACC",
-        "record": "4-0",
-        "score": "12",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2378",
-        "location": "UMBC",
-        "display_name": "UMBC Retrievers",
-        "canon": "umbc",
-        "conf": "AE",
-        "record": "4-1",
-        "score": "13",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "4feb1dd8453031eab8466f80d1d3565a"
-    },
-    {
-      "espn_event_id": "401923485",
-      "start": "2026-11-18T17:00Z",
-      "et_date": "2026-11-18",
-      "name": "East Texas A&M Lions at Texas A&M Aggies",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "245",
-        "location": "Texas A&M",
-        "display_name": "Texas A&M Aggies",
-        "canon": "texas a&m",
-        "conf": "SEC",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2837",
-        "location": "East Texas A&M",
-        "display_name": "East Texas A&M Lions",
-        "canon": "east texas a&m",
-        "conf": "Southland",
-        "record": "2-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401918819",
       "start": "2026-11-18T18:30Z",
@@ -108,7 +9,7 @@
       "name": "Kansas City Roos at UTEP Miners",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "2638",
@@ -117,7 +18,7 @@
         "canon": "utep",
         "conf": "MWC",
         "record": "3-1",
-        "score": "0",
+        "score": "31",
         "winner": null
       },
       "away": {
@@ -127,7 +28,7 @@
         "canon": "kansas city",
         "conf": "Summit",
         "record": "3-2",
-        "score": "0",
+        "score": "31",
         "winner": null
       },
       "torvik_home": true,
@@ -141,7 +42,7 @@
       "name": "Oregon State Beavers at UC Riverside Highlanders",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "27",
@@ -150,7 +51,7 @@
         "canon": "uc riverside",
         "conf": "Big West",
         "record": "1-3",
-        "score": "0",
+        "score": "13",
         "winner": null
       },
       "away": {
@@ -160,7 +61,7 @@
         "canon": "oregon st",
         "conf": "Pac-12",
         "record": "2-2",
-        "score": "0",
+        "score": "17",
         "winner": null
       },
       "torvik_home": true,
@@ -174,7 +75,7 @@
       "name": "California Baptist Lancers at San Jos\u00e9 State Spartans",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "23",
@@ -183,7 +84,7 @@
         "canon": "san jos st",
         "conf": "MWC",
         "record": "1-2",
-        "score": "0",
+        "score": "21",
         "winner": null
       },
       "away": {
@@ -193,12 +94,12 @@
         "canon": "cal baptist",
         "conf": "Big West",
         "record": "3-0",
-        "score": "0",
+        "score": "28",
         "winner": null
       },
       "torvik_home": false,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "c622c3861ec1897c0e3e80267d5a5808"
     },
     {
       "espn_event_id": "401918740",
@@ -207,7 +108,7 @@
       "name": "South Dakota Coyotes at Chicago State Cougars",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2130",
@@ -216,7 +117,7 @@
         "canon": "chicago st",
         "conf": "NEC",
         "record": "2-3",
-        "score": "0",
+        "score": "9",
         "winner": null
       },
       "away": {
@@ -226,7 +127,7 @@
         "canon": "south dakota",
         "conf": "Summit",
         "record": "3-1",
-        "score": "0",
+        "score": "11",
         "winner": null
       },
       "torvik_home": true,
@@ -240,7 +141,7 @@
       "name": "Pacific Lutheran Lutes at Seattle U Redhawks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_END_PERIOD",
       "completed": false,
       "home": {
         "espn_id": "2547",
@@ -249,7 +150,7 @@
         "canon": "seattle u",
         "conf": "WCC",
         "record": "2-2",
-        "score": "0",
+        "score": "26",
         "winner": null
       },
       "away": {
@@ -259,11 +160,110 @@
         "canon": "pacific lutheran",
         "conf": "",
         "record": null,
-        "score": "0",
+        "score": "11",
         "winner": null
       },
       "torvik_home": false,
       "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913801",
+      "start": "2026-11-18T16:00Z",
+      "et_date": "2026-11-18",
+      "name": "Bucknell Bison at UAlbany Great Danes",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "399",
+        "location": "UAlbany",
+        "display_name": "UAlbany Great Danes",
+        "canon": "ualbany",
+        "conf": "AE",
+        "record": "4-2",
+        "score": "65",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2083",
+        "location": "Bucknell",
+        "display_name": "Bucknell Bison",
+        "canon": "bucknell",
+        "conf": "Patriot",
+        "record": "1-4",
+        "score": "59",
+        "winner": false
+      },
+      "torvik_home": false,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913748",
+      "start": "2026-11-18T16:00Z",
+      "et_date": "2026-11-18",
+      "name": "UMBC Retrievers at Pittsburgh Panthers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "221",
+        "location": "Pittsburgh",
+        "display_name": "Pittsburgh Panthers",
+        "canon": "pittsburgh",
+        "conf": "ACC",
+        "record": "5-0",
+        "score": "72",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2378",
+        "location": "UMBC",
+        "display_name": "UMBC Retrievers",
+        "canon": "umbc",
+        "conf": "AE",
+        "record": "4-2",
+        "score": "59",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401923485",
+      "start": "2026-11-18T17:00Z",
+      "et_date": "2026-11-18",
+      "name": "East Texas A&M Lions at Texas A&M Aggies",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "245",
+        "location": "Texas A&M",
+        "display_name": "Texas A&M Aggies",
+        "canon": "texas a&m",
+        "conf": "SEC",
+        "record": "5-0",
+        "score": "59",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2837",
+        "location": "East Texas A&M",
+        "display_name": "East Texas A&M Lions",
+        "canon": "east texas a&m",
+        "conf": "Southland",
+        "record": "2-4",
+        "score": "55",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
       "odds_event_id": null
     },
     {
@@ -1156,39 +1156,6 @@
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": "5b598d5c342cb609a54135f6d4456f8a"
-    },
-    {
-      "espn_event_id": "401929303",
-      "start": "2026-11-19T00:00Z",
-      "et_date": "2026-11-18",
-      "name": "Champion Christian Tigers at UT Martin Skyhawks",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2630",
-        "location": "UT Martin",
-        "display_name": "UT Martin Skyhawks",
-        "canon": "ut martin",
-        "conf": "OVC",
-        "record": "2-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "123311",
-        "location": "Champion Christian",
-        "display_name": "Champion Christian Tigers",
-        "canon": "champion christian",
-        "conf": "",
-        "record": null,
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
     },
     {
       "espn_event_id": "401929152",
@@ -2244,6 +2211,39 @@
       },
       "torvik_home": true,
       "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401929303",
+      "start": "2026-11-19T00:00Z",
+      "et_date": "2026-11-18",
+      "name": "Champion Christian Tigers at UT Martin Skyhawks",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_CANCELED",
+      "completed": false,
+      "home": {
+        "espn_id": "2630",
+        "location": "UT Martin",
+        "display_name": "UT Martin Skyhawks",
+        "canon": "ut martin",
+        "conf": "OVC",
+        "record": "2-3",
+        "score": "0",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "123311",
+        "location": "Champion Christian",
+        "display_name": "Champion Christian Tigers",
+        "canon": "champion christian",
+        "conf": "",
+        "record": null,
+        "score": "0",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": false,
       "odds_event_id": null
     }
   ]

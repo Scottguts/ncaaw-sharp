@@ -1,30 +1,82 @@
 {
   "cards": [
     {
-      "bet_label": "Under 148.5",
-      "book": "draftkings",
+      "bet_label": "Green Bay Phoenix +21.5",
+      "book": "ballybet",
       "confidence": 9,
-      "edge": 0.0502,
-      "espn_event_id": "401918917",
-      "fair_american": -113,
-      "fair_prob": 0.5303,
-      "line": 148.5,
-      "market": "total",
-      "matchup": "Coppin State Eagles @ Maryland Terrapins",
+      "edge": 0.0594,
+      "espn_event_id": "401918843",
+      "fair_american": -121,
+      "fair_prob": 0.5476,
+      "line": 21.5,
+      "market": "spread",
+      "matchup": "Texas Longhorns @ Green Bay Phoenix",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "price_american": -102,
+      "price_american": -107,
       "reasoning": [
-        "Model total 145.6 vs market 148.5",
-        "Anchored fair total 147.0 vs line 148.5"
+        "Model margin -16.7 vs market -21.5 (home)",
+        "Anchored fair margin -20.0 vs line +21.5 (home)"
+      ],
+      "risk": "Strong",
+      "side": "home",
+      "start": "2026-11-19T00:30Z",
+      "unit_size": 1.5
+    },
+    {
+      "bet_label": "Under 141.5",
+      "book": "ballybet",
+      "confidence": 8,
+      "edge": 0.0515,
+      "espn_event_id": "401918831",
+      "fair_american": -114,
+      "fair_prob": 0.5335,
+      "line": 141.5,
+      "market": "total",
+      "matchup": "North Alabama Lions @ Vanderbilt Commodores",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -103,
+      "reasoning": [
+        "Model total 140.6 vs market 141.5",
+        "Anchored fair total 140.0 vs line 141.5"
       ],
       "risk": "Strong",
       "side": "under",
-      "start": "2026-11-18T23:00Z",
+      "start": "2026-11-19T00:30Z",
       "unit_size": 1.5
+    },
+    {
+      "bet_label": "Ball State Cardinals +15.5",
+      "book": "ballybet",
+      "confidence": 6,
+      "edge": 0.0488,
+      "espn_event_id": "401927063",
+      "fair_american": -120,
+      "fair_prob": 0.5446,
+      "line": 15.5,
+      "market": "spread",
+      "matchup": "Illinois Fighting Illini @ Ball State Cardinals",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -108,
+      "reasoning": [
+        "Model margin -13.9 vs market -15.5 (home)",
+        "Anchored fair margin -14.0 vs line +15.5 (home)"
+      ],
+      "risk": "Lean",
+      "side": "home",
+      "start": "2026-11-18T23:30Z",
+      "unit_size": 0.5
     },
     {
       "bet_label": "Oklahoma State Cowgirls -7.5",
@@ -53,174 +105,34 @@
       "unit_size": 1.0
     },
     {
-      "bet_label": "Kansas Jayhawks +9.5",
-      "book": "draftkings",
-      "confidence": 8,
-      "edge": 0.0477,
-      "espn_event_id": "401906966",
-      "fair_american": -122,
-      "fair_prob": 0.5488,
-      "line": 9.5,
-      "market": "spread",
-      "matchup": "Kansas Jayhawks @ Minnesota Golden Gophers",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +7.3 vs market +9.5 (home)",
-        "Anchored fair margin +8.0 vs line +9.5 (away)"
-      ],
-      "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-19T01:00Z",
-      "unit_size": 1.0
-    },
-    {
-      "bet_label": "UT Arlington Mavericks +38.5",
-      "book": "draftkings",
+      "bet_label": "Coppin State Eagles +44.5",
+      "book": "ballybet",
       "confidence": 9,
-      "edge": 0.0354,
-      "espn_event_id": "401918003",
-      "fair_american": -118,
-      "fair_prob": 0.5423,
-      "line": 38.5,
+      "edge": 0.0331,
+      "espn_event_id": "401918917",
+      "fair_american": -117,
+      "fair_prob": 0.5388,
+      "line": 44.5,
       "market": "spread",
-      "matchup": "UT Arlington Mavericks @ TCU Horned Frogs",
+      "matchup": "Coppin State Eagles @ Maryland Terrapins",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
         "Confirmed lineup/coaching news that invalidates the Torvik profile"
       ],
-      "price_american": -110,
+      "price_american": -109,
       "reasoning": [
-        "Model margin +29.9 vs market +38.5 (home)",
-        "Anchored fair margin +37.0 vs line +38.5 (away)"
+        "Model margin +38.5 vs market +44.5 (home)",
+        "Anchored fair margin +43.0 vs line +44.5 (away)"
       ],
-      "risk": "Standard",
+      "risk": "Lean",
       "side": "away",
-      "start": "2026-11-19T00:30Z",
-      "unit_size": 1.0
-    },
-    {
-      "bet_label": "Southern Jaguars +49.5",
-      "book": "draftkings",
-      "confidence": 9,
-      "edge": 0.0353,
-      "espn_event_id": "401923184",
-      "fair_american": -118,
-      "fair_prob": 0.5423,
-      "line": 49.5,
-      "market": "spread",
-      "matchup": "Southern Jaguars @ Notre Dame Fighting Irish",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +31.2 vs market +49.5 (home)",
-        "Anchored fair margin +48.0 vs line +49.5 (away)"
-      ],
-      "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-19T00:00Z",
-      "unit_size": 1.0
+      "start": "2026-11-18T23:00Z",
+      "unit_size": 0.5
     }
   ],
   "date": "2026-11-18",
   "games": [
-    {
-      "away_short": "Bucknell",
-      "cards": [],
-      "espn_event_id": "401913801",
-      "home_short": "UAlbany",
-      "matchup": "Bucknell Bison @ UAlbany Great Danes",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-18T16:00Z",
-      "status": "skipped"
-    },
-    {
-      "anchored": {
-        "margin_home": 13.0,
-        "season_bias_applied": -2.56,
-        "spread_shift": -1.5,
-        "total": 130.84,
-        "total_shift": 0.84
-      },
-      "away_short": "UMBC",
-      "cards": [],
-      "espn_event_id": "401913748",
-      "home_short": "Pittsburgh",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -14.5,
-        "spread_src": "consensus",
-        "total": 130.0,
-        "total_src": "consensus"
-      },
-      "matchup": "UMBC Retrievers @ Pittsburgh Panthers",
-      "model": {
-        "away_score": 60.4,
-        "games_away": 5,
-        "games_home": 4,
-        "home_score": 73.0,
-        "margin_home": 12.5,
-        "p3_away": 45.5,
-        "p3_home": 42.25,
-        "proj_poss": 70.5,
-        "rank_away": 147,
-        "rank_home": 72,
-        "spread": -12.5,
-        "total": 133.4
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 12.15,
-        "total": 17.39
-      },
-      "start": "2026-11-18T16:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "East Texas A&M",
-      "cards": [],
-      "espn_event_id": "401923485",
-      "home_short": "Texas A&M",
-      "matchup": "East Texas A&M Lions @ Texas A&M Aggies",
-      "model": {
-        "away_score": 58.6,
-        "games_away": 5,
-        "games_home": 4,
-        "home_score": 80.2,
-        "margin_home": 21.6,
-        "p3_away": 47.86666666666667,
-        "p3_home": 43.0,
-        "proj_poss": 70.4,
-        "rank_away": 249,
-        "rank_home": 51,
-        "spread": -21.6,
-        "total": 138.9
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-18T17:00Z",
-      "status": "graded"
-    },
     {
       "away_short": "Kansas City",
       "cards": [],
@@ -320,11 +232,81 @@
       "status": "skipped"
     },
     {
+      "away_short": "Bucknell",
+      "cards": [],
+      "espn_event_id": "401913801",
+      "home_short": "UAlbany",
+      "matchup": "Bucknell Bison @ UAlbany Great Danes",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-18T16:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "UMBC",
+      "cards": [],
+      "espn_event_id": "401913748",
+      "home_short": "Pittsburgh",
+      "matchup": "UMBC Retrievers @ Pittsburgh Panthers",
+      "model": {
+        "away_score": 60.4,
+        "games_away": 5,
+        "games_home": 4,
+        "home_score": 73.0,
+        "margin_home": 12.5,
+        "p3_away": 45.5,
+        "p3_home": 42.25,
+        "proj_poss": 70.5,
+        "rank_away": 147,
+        "rank_home": 72,
+        "spread": -12.5,
+        "total": 133.4
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-18T16:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "East Texas A&M",
+      "cards": [],
+      "espn_event_id": "401923485",
+      "home_short": "Texas A&M",
+      "matchup": "East Texas A&M Lions @ Texas A&M Aggies",
+      "model": {
+        "away_score": 58.6,
+        "games_away": 5,
+        "games_home": 4,
+        "home_score": 80.2,
+        "margin_home": 21.6,
+        "p3_away": 47.86666666666667,
+        "p3_home": 43.0,
+        "proj_poss": 70.4,
+        "rank_away": 249,
+        "rank_home": 51,
+        "spread": -21.6,
+        "total": 138.9
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-18T17:00Z",
+      "status": "graded"
+    },
+    {
       "anchored": {
-        "margin_home": 29.0,
-        "season_bias_applied": -2.56,
+        "margin_home": 27.5,
+        "season_bias_applied": -2.2,
         "spread_shift": -1.5,
-        "total": 136.0,
+        "total": 135.5,
         "total_shift": 1.5
       },
       "away_short": "Utah State",
@@ -333,9 +315,9 @@
       "home_short": "BYU",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -30.5,
+        "spread_home": -29.0,
         "spread_src": "consensus",
-        "total": 134.5,
+        "total": 134.0,
         "total_src": "consensus"
       },
       "matchup": "Utah State Aggies @ BYU Cougars",
@@ -360,7 +342,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.62,
-        "total": 16.1
+        "total": 16.12
       },
       "start": "2026-11-18T21:00Z",
       "status": "graded"
@@ -522,18 +504,18 @@
     {
       "anchored": {
         "margin_home": 43.0,
-        "season_bias_applied": -2.56,
+        "season_bias_applied": -2.2,
         "spread_shift": -1.5,
-        "total": 147.0,
+        "total": 147.5,
         "total_shift": -1.5
       },
       "away_short": "Coppin State",
       "cards": [
         {
           "bet_label": "Coppin State Eagles +44.5",
-          "book": "draftkings",
+          "book": "ballybet",
           "confidence": 9,
-          "edge": 0.0286,
+          "edge": 0.0331,
           "espn_event_id": "401918917",
           "fair_american": -117,
           "fair_prob": 0.5388,
@@ -545,41 +527,15 @@
             "Line moves through our fair value before tip",
             "Confirmed lineup/coaching news that invalidates the Torvik profile"
           ],
-          "price_american": -110,
+          "price_american": -109,
           "reasoning": [
             "Model margin +38.5 vs market +44.5 (home)",
             "Anchored fair margin +43.0 vs line +44.5 (away)"
           ],
-          "risk": "Shadow(cap-cut)",
+          "risk": "Lean",
           "side": "away",
           "start": "2026-11-18T23:00Z",
           "unit_size": 0.5
-        },
-        {
-          "bet_label": "Under 148.5",
-          "book": "draftkings",
-          "confidence": 9,
-          "edge": 0.0502,
-          "espn_event_id": "401918917",
-          "fair_american": -113,
-          "fair_prob": 0.5303,
-          "line": 148.5,
-          "market": "total",
-          "matchup": "Coppin State Eagles @ Maryland Terrapins",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -102,
-          "reasoning": [
-            "Model total 145.6 vs market 148.5",
-            "Anchored fair total 147.0 vs line 148.5"
-          ],
-          "risk": "Strong",
-          "side": "under",
-          "start": "2026-11-18T23:00Z",
-          "unit_size": 1.5
         }
       ],
       "espn_event_id": "401918917",
@@ -588,7 +544,7 @@
         "pinnacle_fair_home_ml": null,
         "spread_home": -44.5,
         "spread_src": "consensus",
-        "total": 148.5,
+        "total": 149.0,
         "total_src": "consensus"
       },
       "matchup": "Coppin State Eagles @ Maryland Terrapins",
@@ -608,10 +564,37 @@
       },
       "neutral_site": false,
       "pass_reasons": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 148.5",
+          "book": "draftkings",
+          "confidence": 8,
+          "edge": 0.0302,
+          "espn_event_id": "401918917",
+          "fair_american": -108,
+          "fair_prob": 0.5202,
+          "line": 148.5,
+          "market": "total",
+          "matchup": "Coppin State Eagles @ Maryland Terrapins",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -102,
+          "reasoning": [
+            "Model total 145.6 vs market 149",
+            "Anchored fair total 147.5 vs line 148.5"
+          ],
+          "risk": "Shadow",
+          "side": "under",
+          "start": "2026-11-18T23:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "sigma": {
         "spread": 15.41,
-        "total": 19.73
+        "total": 19.75
       },
       "start": "2026-11-18T23:00Z",
       "status": "graded"
@@ -898,21 +881,48 @@
     },
     {
       "anchored": {
-        "margin_home": -13.9,
-        "season_bias_applied": -2.56,
-        "spread_shift": 1.1,
-        "total": 145.54,
-        "total_shift": -0.96
+        "margin_home": -14.0,
+        "season_bias_applied": -2.2,
+        "spread_shift": 1.5,
+        "total": 145.9,
+        "total_shift": -1.1
       },
       "away_short": "Illinois",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Ball State Cardinals +15.5",
+          "book": "ballybet",
+          "confidence": 6,
+          "edge": 0.0488,
+          "espn_event_id": "401927063",
+          "fair_american": -120,
+          "fair_prob": 0.5446,
+          "line": 15.5,
+          "market": "spread",
+          "matchup": "Illinois Fighting Illini @ Ball State Cardinals",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -108,
+          "reasoning": [
+            "Model margin -13.9 vs market -15.5 (home)",
+            "Anchored fair margin -14.0 vs line +15.5 (home)"
+          ],
+          "risk": "Lean",
+          "side": "home",
+          "start": "2026-11-18T23:30Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401927063",
       "home_short": "Ball State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 15.0,
+        "spread_home": 15.5,
         "spread_src": "consensus",
-        "total": 146.5,
+        "total": 147.0,
         "total_src": "consensus"
       },
       "matchup": "Illinois Fighting Illini @ Ball State Cardinals",
@@ -931,13 +941,11 @@
         "total": 148.1
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "pass_reasons": [],
       "shadow": [],
       "sigma": {
         "spread": 13.4,
-        "total": 19.88
+        "total": 19.9
       },
       "start": "2026-11-18T23:30Z",
       "status": "graded"
@@ -1043,7 +1051,7 @@
     {
       "anchored": {
         "margin_home": 71.0,
-        "season_bias_applied": -2.56,
+        "season_bias_applied": -2.2,
         "spread_shift": -1.5,
         "total": 145.0,
         "total_shift": -1.5
@@ -1083,7 +1091,7 @@
           "bet_label": "Under 146.5",
           "book": "draftkings",
           "confidence": 5,
-          "edge": 0.0176,
+          "edge": 0.0175,
           "espn_event_id": "401916196",
           "fair_american": -114,
           "fair_prob": 0.533,
@@ -1108,7 +1116,7 @@
       ],
       "sigma": {
         "spread": 14.12,
-        "total": 18.1
+        "total": 18.12
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
@@ -1116,47 +1124,20 @@
     {
       "anchored": {
         "margin_home": 48.0,
-        "season_bias_applied": -2.56,
+        "season_bias_applied": -2.2,
         "spread_shift": -1.5,
-        "total": 140.0,
+        "total": 140.5,
         "total_shift": -1.5
       },
       "away_short": "Southern",
-      "cards": [
-        {
-          "bet_label": "Southern Jaguars +49.5",
-          "book": "draftkings",
-          "confidence": 9,
-          "edge": 0.0353,
-          "espn_event_id": "401923184",
-          "fair_american": -118,
-          "fair_prob": 0.5423,
-          "line": 49.5,
-          "market": "spread",
-          "matchup": "Southern Jaguars @ Notre Dame Fighting Irish",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +31.2 vs market +49.5 (home)",
-            "Anchored fair margin +48.0 vs line +49.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-19T00:00Z",
-          "unit_size": 1.0
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401923184",
       "home_short": "Notre Dame",
       "market": {
         "pinnacle_fair_home_ml": null,
         "spread_home": -49.5,
         "spread_src": "consensus",
-        "total": 141.5,
+        "total": 142.0,
         "total_src": "consensus"
       },
       "matchup": "Southern Jaguars @ Notre Dame Fighting Irish",
@@ -1175,38 +1156,13 @@
         "total": 138.8
       },
       "neutral_site": false,
-      "pass_reasons": [],
-      "shadow": [
-        {
-          "bet_label": "Under 141.5",
-          "book": "draftkings",
-          "confidence": 7,
-          "edge": 0.019,
-          "espn_event_id": "401923184",
-          "fair_american": -114,
-          "fair_prob": 0.5338,
-          "line": 141.5,
-          "market": "total",
-          "matchup": "Southern Jaguars @ Notre Dame Fighting Irish",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model total 138.8 vs market 141.5",
-            "Anchored fair total 140.0 vs line 141.5"
-          ],
-          "risk": "Shadow",
-          "side": "under",
-          "start": "2026-11-19T00:00Z",
-          "unit_size": 0.5
-        }
+      "pass_reasons": [
+        "no edge cleared the gates"
       ],
+      "shadow": [],
       "sigma": {
         "spread": 14.12,
-        "total": 17.7
+        "total": 17.72
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
@@ -1214,10 +1170,10 @@
     {
       "anchored": {
         "margin_home": 9.9,
-        "season_bias_applied": -2.56,
-        "spread_shift": 0.9,
-        "total": 141.54,
-        "total_shift": 0.04
+        "season_bias_applied": -2.2,
+        "spread_shift": 0.4,
+        "total": 141.9,
+        "total_shift": -0.1
       },
       "away_short": "Ole Miss",
       "cards": [],
@@ -1225,9 +1181,9 @@
       "home_short": "Ohio State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -9.0,
+        "spread_home": -9.5,
         "spread_src": "consensus",
-        "total": 141.5,
+        "total": 142.0,
         "total_src": "consensus"
       },
       "matchup": "Ole Miss Rebels @ Ohio State Buckeyes",
@@ -1252,24 +1208,10 @@
       "shadow": [],
       "sigma": {
         "spread": 12.17,
-        "total": 18.0
+        "total": 18.02
       },
       "start": "2026-11-19T00:00Z",
       "status": "graded"
-    },
-    {
-      "away_short": "Champion Christian",
-      "cards": [],
-      "espn_event_id": "401929303",
-      "home_short": "UT Martin",
-      "matchup": "Champion Christian Tigers @ UT Martin Skyhawks",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-19T00:00Z",
-      "status": "skipped"
     },
     {
       "away_short": "Ohio",
@@ -1595,19 +1537,46 @@
     },
     {
       "anchored": {
-        "margin_home": -19.5,
-        "season_bias_applied": -2.56,
+        "margin_home": -20.0,
+        "season_bias_applied": -2.2,
         "spread_shift": 1.5,
-        "total": 135.64,
-        "total_shift": 1.14
+        "total": 136.0,
+        "total_shift": 1.5
       },
       "away_short": "Texas",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Green Bay Phoenix +21.5",
+          "book": "ballybet",
+          "confidence": 9,
+          "edge": 0.0594,
+          "espn_event_id": "401918843",
+          "fair_american": -121,
+          "fair_prob": 0.5476,
+          "line": 21.5,
+          "market": "spread",
+          "matchup": "Texas Longhorns @ Green Bay Phoenix",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -107,
+          "reasoning": [
+            "Model margin -16.7 vs market -21.5 (home)",
+            "Anchored fair margin -20.0 vs line +21.5 (home)"
+          ],
+          "risk": "Strong",
+          "side": "home",
+          "start": "2026-11-19T00:30Z",
+          "unit_size": 1.5
+        }
+      ],
       "espn_event_id": "401918843",
       "home_short": "Green Bay",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 21.0,
+        "spread_home": 21.5,
         "spread_src": "consensus",
         "total": 134.5,
         "total_src": "consensus"
@@ -1628,38 +1597,19 @@
         "total": 138.2
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 12.54,
-        "total": 17.67
-      },
-      "start": "2026-11-19T00:30Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": 43.0,
-        "season_bias_applied": -2.56,
-        "spread_shift": -1.5,
-        "total": 140.0,
-        "total_shift": -1.5
-      },
-      "away_short": "North Alabama",
-      "cards": [
+      "pass_reasons": [],
+      "shadow": [
         {
-          "bet_label": "North Alabama Lions +44.5",
+          "bet_label": "Over 134.5",
           "book": "draftkings",
-          "confidence": 9,
-          "edge": 0.0353,
-          "espn_event_id": "401918831",
-          "fair_american": -118,
-          "fair_prob": 0.5423,
-          "line": 44.5,
-          "market": "spread",
-          "matchup": "North Alabama Lions @ Vanderbilt Commodores",
+          "confidence": 5,
+          "edge": 0.0191,
+          "espn_event_id": "401918843",
+          "fair_american": -114,
+          "fair_prob": 0.5338,
+          "line": 134.5,
+          "market": "total",
+          "matchup": "Texas Longhorns @ Green Bay Phoenix",
           "pass_triggers": [
             "Key player ruled out after card is posted",
             "Line moves through our fair value before tip",
@@ -1667,20 +1617,64 @@
           ],
           "price_american": -110,
           "reasoning": [
-            "Model margin +38.5 vs market +44.5 (home)",
-            "Anchored fair margin +43.0 vs line +44.5 (away)"
+            "Model total 138.2 vs market 134.5",
+            "Anchored fair total 136.0 vs line 134.5"
           ],
-          "risk": "Shadow(cap-cut)",
-          "side": "away",
+          "risk": "Shadow",
+          "side": "over",
           "start": "2026-11-19T00:30Z",
           "unit_size": 0.5
+        }
+      ],
+      "sigma": {
+        "spread": 12.54,
+        "total": 17.69
+      },
+      "start": "2026-11-19T00:30Z",
+      "status": "graded"
+    },
+    {
+      "anchored": {
+        "margin_home": 40.0,
+        "season_bias_applied": -2.2,
+        "spread_shift": -1.5,
+        "total": 140.0,
+        "total_shift": -1.5
+      },
+      "away_short": "North Alabama",
+      "cards": [
+        {
+          "bet_label": "Under 141.5",
+          "book": "ballybet",
+          "confidence": 8,
+          "edge": 0.0515,
+          "espn_event_id": "401918831",
+          "fair_american": -114,
+          "fair_prob": 0.5335,
+          "line": 141.5,
+          "market": "total",
+          "matchup": "North Alabama Lions @ Vanderbilt Commodores",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -103,
+          "reasoning": [
+            "Model total 140.6 vs market 141.5",
+            "Anchored fair total 140.0 vs line 141.5"
+          ],
+          "risk": "Strong",
+          "side": "under",
+          "start": "2026-11-19T00:30Z",
+          "unit_size": 1.5
         }
       ],
       "espn_event_id": "401918831",
       "home_short": "Vanderbilt",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -44.5,
+        "spread_home": -41.5,
         "spread_src": "consensus",
         "total": 141.5,
         "total_src": "consensus"
@@ -1702,37 +1696,10 @@
       },
       "neutral_site": false,
       "pass_reasons": [],
-      "shadow": [
-        {
-          "bet_label": "Under 141.5",
-          "book": "draftkings",
-          "confidence": 6,
-          "edge": 0.0186,
-          "espn_event_id": "401918831",
-          "fair_american": -114,
-          "fair_prob": 0.5336,
-          "line": 141.5,
-          "market": "total",
-          "matchup": "North Alabama Lions @ Vanderbilt Commodores",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model total 140.6 vs market 141.5",
-            "Anchored fair total 140.0 vs line 141.5"
-          ],
-          "risk": "Shadow",
-          "side": "under",
-          "start": "2026-11-19T00:30Z",
-          "unit_size": 0.5
-        }
-      ],
+      "shadow": [],
       "sigma": {
         "spread": 14.12,
-        "total": 17.8
+        "total": 17.82
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1740,40 +1707,13 @@
     {
       "anchored": {
         "margin_home": 37.0,
-        "season_bias_applied": -2.56,
+        "season_bias_applied": -2.2,
         "spread_shift": -1.5,
-        "total": 141.04,
-        "total_shift": -1.46
+        "total": 141.4,
+        "total_shift": -1.1
       },
       "away_short": "UT Arlington",
-      "cards": [
-        {
-          "bet_label": "UT Arlington Mavericks +38.5",
-          "book": "draftkings",
-          "confidence": 9,
-          "edge": 0.0354,
-          "espn_event_id": "401918003",
-          "fair_american": -118,
-          "fair_prob": 0.5423,
-          "line": 38.5,
-          "market": "spread",
-          "matchup": "UT Arlington Mavericks @ TCU Horned Frogs",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +29.9 vs market +38.5 (home)",
-            "Anchored fair margin +37.0 vs line +38.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-19T00:30Z",
-          "unit_size": 1.0
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401918003",
       "home_short": "TCU",
       "market": {
@@ -1799,11 +1739,13 @@
         "total": 143.6
       },
       "neutral_site": false,
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "shadow": [],
       "sigma": {
         "spread": 14.11,
-        "total": 17.97
+        "total": 17.99
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1811,10 +1753,10 @@
     {
       "anchored": {
         "margin_home": 9.0,
-        "season_bias_applied": -2.56,
+        "season_bias_applied": -2.2,
         "spread_shift": 1.5,
-        "total": 135.64,
-        "total_shift": -0.36
+        "total": 136.0,
+        "total_shift": 0.5
       },
       "away_short": "St. John's",
       "cards": [
@@ -1851,7 +1793,7 @@
         "pinnacle_fair_home_ml": null,
         "spread_home": -7.5,
         "spread_src": "consensus",
-        "total": 136.0,
+        "total": 135.5,
         "total_src": "consensus"
       },
       "matchup": "St. John's Red Storm @ Oklahoma State Cowgirls",
@@ -1874,7 +1816,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.16,
-        "total": 17.67
+        "total": 17.69
       },
       "start": "2026-11-19T00:30Z",
       "status": "graded"
@@ -1965,46 +1907,19 @@
     },
     {
       "anchored": {
-        "margin_home": 8.0,
-        "season_bias_applied": -2.56,
-        "spread_shift": -1.5,
+        "margin_home": 7.3,
+        "season_bias_applied": -2.2,
+        "spread_shift": -1.2,
         "total": 138.0,
         "total_shift": -1.5
       },
       "away_short": "Kansas",
-      "cards": [
-        {
-          "bet_label": "Kansas Jayhawks +9.5",
-          "book": "draftkings",
-          "confidence": 8,
-          "edge": 0.0477,
-          "espn_event_id": "401906966",
-          "fair_american": -122,
-          "fair_prob": 0.5488,
-          "line": 9.5,
-          "market": "spread",
-          "matchup": "Kansas Jayhawks @ Minnesota Golden Gophers",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +7.3 vs market +9.5 (home)",
-            "Anchored fair margin +8.0 vs line +9.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-19T01:00Z",
-          "unit_size": 1.0
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401906966",
       "home_short": "Minnesota",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -9.5,
+        "spread_home": -8.5,
         "spread_src": "consensus",
         "total": 139.5,
         "total_src": "consensus"
@@ -2025,16 +1940,18 @@
         "total": 138.0
       },
       "neutral_site": false,
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "shadow": [
         {
           "bet_label": "Under 139.5",
           "book": "draftkings",
-          "confidence": 7,
-          "edge": 0.0192,
+          "confidence": 6,
+          "edge": 0.0191,
           "espn_event_id": "401906966",
           "fair_american": -115,
-          "fair_prob": 0.5339,
+          "fair_prob": 0.5338,
           "line": 139.5,
           "market": "total",
           "matchup": "Kansas Jayhawks @ Minnesota Golden Gophers",
@@ -2056,7 +1973,7 @@
       ],
       "sigma": {
         "spread": 12.24,
-        "total": 17.66
+        "total": 17.68
       },
       "start": "2026-11-19T01:00Z",
       "status": "graded"
@@ -2298,24 +2215,64 @@
       "shadow": [],
       "start": "2026-11-19T02:30Z",
       "status": "graded"
+    },
+    {
+      "away_short": "Champion Christian",
+      "cards": [],
+      "espn_event_id": "401929303",
+      "home_short": "UT Martin",
+      "matchup": "Champion Christian Tigers @ UT Martin Skyhawks",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-19T00:00Z",
+      "status": "skipped"
     }
   ],
-  "generated_at": "2026-11-18T16:20:25.642700Z",
+  "generated_at": "2026-11-18T19:21:45.848760Z",
   "market_bias": {
-    "mean_spread_delta": -5.03,
-    "mean_total_delta": 0.87,
-    "n_spread_lines": 12,
-    "n_total_lines": 12
+    "mean_spread_delta": -4.76,
+    "mean_total_delta": 0.55,
+    "n_spread_lines": 11,
+    "n_total_lines": 11
   },
   "n_cards": 5,
   "n_games": 68,
   "odds_available": true,
   "shadow_cards": [
     {
+      "bet_label": "Under 148.5",
+      "book": "draftkings",
+      "confidence": 8,
+      "edge": 0.0302,
+      "espn_event_id": "401918917",
+      "fair_american": -108,
+      "fair_prob": 0.5202,
+      "line": 148.5,
+      "market": "total",
+      "matchup": "Coppin State Eagles @ Maryland Terrapins",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -102,
+      "reasoning": [
+        "Model total 145.6 vs market 149",
+        "Anchored fair total 147.5 vs line 148.5"
+      ],
+      "risk": "Shadow",
+      "side": "under",
+      "start": "2026-11-18T23:00Z",
+      "unit_size": 0.5
+    },
+    {
       "bet_label": "Under 146.5",
       "book": "draftkings",
       "confidence": 5,
-      "edge": 0.0176,
+      "edge": 0.0175,
       "espn_event_id": "401916196",
       "fair_american": -114,
       "fair_prob": 0.533,
@@ -2338,16 +2295,16 @@
       "unit_size": 0.5
     },
     {
-      "bet_label": "Under 141.5",
+      "bet_label": "Over 134.5",
       "book": "draftkings",
-      "confidence": 7,
-      "edge": 0.019,
-      "espn_event_id": "401923184",
+      "confidence": 5,
+      "edge": 0.0191,
+      "espn_event_id": "401918843",
       "fair_american": -114,
       "fair_prob": 0.5338,
-      "line": 141.5,
+      "line": 134.5,
       "market": "total",
-      "matchup": "Southern Jaguars @ Notre Dame Fighting Irish",
+      "matchup": "Texas Longhorns @ Green Bay Phoenix",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
@@ -2355,48 +2312,22 @@
       ],
       "price_american": -110,
       "reasoning": [
-        "Model total 138.8 vs market 141.5",
-        "Anchored fair total 140.0 vs line 141.5"
+        "Model total 138.2 vs market 134.5",
+        "Anchored fair total 136.0 vs line 134.5"
       ],
       "risk": "Shadow",
-      "side": "under",
-      "start": "2026-11-19T00:00Z",
-      "unit_size": 0.5
-    },
-    {
-      "bet_label": "Under 141.5",
-      "book": "draftkings",
-      "confidence": 6,
-      "edge": 0.0186,
-      "espn_event_id": "401918831",
-      "fair_american": -114,
-      "fair_prob": 0.5336,
-      "line": 141.5,
-      "market": "total",
-      "matchup": "North Alabama Lions @ Vanderbilt Commodores",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model total 140.6 vs market 141.5",
-        "Anchored fair total 140.0 vs line 141.5"
-      ],
-      "risk": "Shadow",
-      "side": "under",
+      "side": "over",
       "start": "2026-11-19T00:30Z",
       "unit_size": 0.5
     },
     {
       "bet_label": "Under 139.5",
       "book": "draftkings",
-      "confidence": 7,
-      "edge": 0.0192,
+      "confidence": 6,
+      "edge": 0.0191,
       "espn_event_id": "401906966",
       "fair_american": -115,
-      "fair_prob": 0.5339,
+      "fair_prob": 0.5338,
       "line": 139.5,
       "market": "total",
       "matchup": "Kansas Jayhawks @ Minnesota Golden Gophers",
@@ -2414,59 +2345,7 @@
       "side": "under",
       "start": "2026-11-19T01:00Z",
       "unit_size": 0.5
-    },
-    {
-      "bet_label": "Coppin State Eagles +44.5",
-      "book": "draftkings",
-      "confidence": 9,
-      "edge": 0.0286,
-      "espn_event_id": "401918917",
-      "fair_american": -117,
-      "fair_prob": 0.5388,
-      "line": 44.5,
-      "market": "spread",
-      "matchup": "Coppin State Eagles @ Maryland Terrapins",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +38.5 vs market +44.5 (home)",
-        "Anchored fair margin +43.0 vs line +44.5 (away)"
-      ],
-      "risk": "Shadow(cap-cut)",
-      "side": "away",
-      "start": "2026-11-18T23:00Z",
-      "unit_size": 0.5
-    },
-    {
-      "bet_label": "North Alabama Lions +44.5",
-      "book": "draftkings",
-      "confidence": 9,
-      "edge": 0.0353,
-      "espn_event_id": "401918831",
-      "fair_american": -118,
-      "fair_prob": 0.5423,
-      "line": 44.5,
-      "market": "spread",
-      "matchup": "North Alabama Lions @ Vanderbilt Commodores",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +38.5 vs market +44.5 (home)",
-        "Anchored fair margin +43.0 vs line +44.5 (away)"
-      ],
-      "risk": "Shadow(cap-cut)",
-      "side": "away",
-      "start": "2026-11-19T00:30Z",
-      "unit_size": 0.5
     }
   ],
-  "total_units": 5.5
+  "total_units": 5.0
 }
