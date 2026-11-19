@@ -1,16 +1,16 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T22:40:21.255209Z",
+  "generated_at": "2026-11-19T22:59:03.056578Z",
   "market_bias": {
     "n_spread_lines": 10,
-    "n_total_lines": 10,
-    "mean_spread_delta": -2.3,
-    "mean_total_delta": 0.96
+    "n_total_lines": 11,
+    "mean_spread_delta": -2.4,
+    "mean_total_delta": 0.68
   },
   "odds_available": true,
   "n_games": 48,
-  "n_cards": 3,
-  "total_units": 2.5,
+  "n_cards": 4,
+  "total_units": 3.0,
   "cards": [
     {
       "bet_label": "Cal Poly Mustangs +48.5",
@@ -65,10 +65,36 @@
       "start": "2026-11-20T00:00Z"
     },
     {
-      "bet_label": "Virginia Cavaliers -10.5",
+      "bet_label": "North Carolina Tar Heels -6.5",
       "market": "spread",
       "side": "home",
       "book": "draftkings",
+      "price_american": -110,
+      "line": -6.5,
+      "fair_prob": 0.5456,
+      "fair_american": -120,
+      "edge": 0.0416,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model margin +7.9 vs market +6.5 (home)",
+        "Anchored fair margin +7.9 vs line -6.5 (home)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401906092",
+      "matchup": "Texas Tech Lady Raiders @ North Carolina Tar Heels",
+      "start": "2026-11-19T23:00Z"
+    },
+    {
+      "bet_label": "Virginia Cavaliers -10.5",
+      "market": "spread",
+      "side": "home",
+      "book": "betmgm",
       "price_american": -110,
       "line": -10.5,
       "fair_prob": 0.5398,
@@ -93,13 +119,39 @@
   ],
   "shadow_cards": [
     {
+      "bet_label": "Under 145.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -105,
+      "line": 145.5,
+      "fair_prob": 0.5244,
+      "fair_american": -110,
+      "edge": 0.0238,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 143.4 vs market 146",
+        "Anchored fair total 144.5 vs line 145.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401922832",
+      "matchup": "Northwestern State Lady Demons @ Oklahoma Sooners",
+      "start": "2026-11-20T00:00Z"
+    },
+    {
       "bet_label": "Under 152.5",
       "market": "total",
       "side": "under",
       "book": "betmgm",
       "price_american": -110,
       "line": 152.5,
-      "fair_prob": 0.5357,
+      "fair_prob": 0.5358,
       "fair_american": -115,
       "edge": 0.0228,
       "confidence": 7,
@@ -350,11 +402,36 @@
       "start": "2026-11-19T23:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no edge cleared the gates"
+      "cards": [
+        {
+          "bet_label": "North Carolina Tar Heels -6.5",
+          "market": "spread",
+          "side": "home",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": -6.5,
+          "fair_prob": 0.5456,
+          "fair_american": -120,
+          "edge": 0.0416,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin +7.9 vs market +6.5 (home)",
+            "Anchored fair margin +7.9 vs line -6.5 (home)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401906092",
+          "matchup": "Texas Tech Lady Raiders @ North Carolina Tar Heels",
+          "start": "2026-11-19T23:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 61.0,
         "home_score": 68.9,
@@ -370,8 +447,8 @@
         "p3_away": 37.15
       },
       "market": {
-        "spread_home": -5.5,
-        "total": 128.5,
+        "spread_home": -6.5,
+        "total": 129.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
@@ -381,11 +458,11 @@
         "total": 17.18
       },
       "anchored": {
-        "margin_home": 7.0,
-        "spread_shift": 1.5,
-        "total": 127.77,
-        "total_shift": -0.73,
-        "season_bias_applied": -2.03
+        "margin_home": 7.9,
+        "spread_shift": 1.4,
+        "total": 128.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -513,7 +590,7 @@
           "bet_label": "Virginia Cavaliers -10.5",
           "market": "spread",
           "side": "home",
-          "book": "draftkings",
+          "book": "betmgm",
           "price_american": -110,
           "line": -10.5,
           "fair_prob": 0.5398,
@@ -566,9 +643,9 @@
       "anchored": {
         "margin_home": 11.6,
         "spread_shift": 1.1,
-        "total": 132.87,
-        "total_shift": 1.37,
-        "season_bias_applied": -2.03
+        "total": 132.82,
+        "total_shift": 1.32,
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -684,14 +761,19 @@
       },
       "market": {
         "spread_home": null,
-        "total": null,
+        "total": 129.5,
         "spread_src": null,
-        "total_src": null,
+        "total_src": "consensus",
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
         "spread": 12.26,
         "total": 17.09
+      },
+      "anchored": {
+        "total": 128.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -828,7 +910,34 @@
           "start": "2026-11-20T00:00Z"
         }
       ],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 145.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -105,
+          "line": 145.5,
+          "fair_prob": 0.5244,
+          "fair_american": -110,
+          "edge": 0.0238,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 143.4 vs market 146",
+            "Anchored fair total 144.5 vs line 145.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401922832",
+          "matchup": "Northwestern State Lady Demons @ Oklahoma Sooners",
+          "start": "2026-11-20T00:00Z"
+        }
+      ],
       "pass_reasons": [],
       "model": {
         "away_score": 52.6,
@@ -860,7 +969,7 @@
         "spread_shift": -1.5,
         "total": 144.5,
         "total_shift": -1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1109,14 +1218,14 @@
       },
       "sigma": {
         "spread": 11.15,
-        "total": 15.96
+        "total": 15.95
       },
       "anchored": {
         "margin_home": 15.0,
         "spread_shift": -1.5,
-        "total": 133.57,
-        "total_shift": 0.07,
-        "season_bias_applied": -2.03
+        "total": 133.52,
+        "total_shift": 0.02,
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1178,7 +1287,7 @@
           "book": "betmgm",
           "price_american": -110,
           "line": 152.5,
-          "fair_prob": 0.5357,
+          "fair_prob": 0.5358,
           "fair_american": -115,
           "edge": 0.0228,
           "confidence": 7,
@@ -1231,7 +1340,7 @@
         "spread_shift": -1.5,
         "total": 151.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1354,14 +1463,14 @@
       },
       "sigma": {
         "spread": 15.23,
-        "total": 21.11
+        "total": 21.1
       },
       "anchored": {
         "margin_home": 21.0,
         "spread_shift": -1.5,
         "total": 137.0,
         "total_shift": 1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1434,7 +1543,7 @@
         "spread_shift": -1.5,
         "total": 147.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1522,7 +1631,7 @@
         "spread_shift": 1.5,
         "total": 141.0,
         "total_shift": -1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1649,7 +1758,7 @@
         "spread_shift": -1.5,
         "total": 125.5,
         "total_shift": -1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     },
     {
@@ -1723,7 +1832,7 @@
         "spread_shift": 1.5,
         "total": 139.0,
         "total_shift": 1.5,
-        "season_bias_applied": -2.03
+        "season_bias_applied": -2.08
       }
     }
   ]

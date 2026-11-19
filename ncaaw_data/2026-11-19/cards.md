@@ -1,6 +1,6 @@
 # NCAAW Betting Card — 2026-11-19
 
-**3 play(s) · 2.5u total**
+**4 play(s) · 3u total**
 
 ## Cal Poly Mustangs +48.5 (-107 ballybet)
 
@@ -18,7 +18,15 @@
 - **Why:** Model margin +38.2 vs market +51.5 (home); Anchored fair margin +50.0 vs line +51.5 (away)
 - **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
 
-## Virginia Cavaliers -10.5 (-110 draftkings)
+## North Carolina Tar Heels -6.5 (-110 draftkings)
+
+- **Game:** Texas Tech Lady Raiders @ North Carolina Tar Heels
+- **Market:** spread · **Fair:** 54.6% (-120) · **Edge:** 4.2%
+- **Confidence:** 6/10 · **Size:** 0.5u (Lean)
+- **Why:** Model margin +7.9 vs market +6.5 (home); Anchored fair margin +7.9 vs line -6.5 (home)
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+
+## Virginia Cavaliers -10.5 (-110 betmgm)
 
 - **Game:** James Madison Dukes @ Virginia Cavaliers
 - **Market:** spread · **Fair:** 54.0% (-117) · **Edge:** 3.0%
@@ -37,7 +45,7 @@
 - **Maryland Eastern Shore Hawks @ Rutgers Scarlet Knights** — model 54-84 (margin +29.6 home, total 137.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **Liberty Flames @ Elon Phoenix** — model 64-61 (margin -2.9 home, total 124.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **South Alabama Jaguars @ Memphis Tigers** — model 64-79 (margin +15.7 home, total 143.0) · market: no line · PASS: no market line (nothing to anchor against)
-- **Texas Tech Lady Raiders @ North Carolina Tar Heels** — model 61-69 (margin +7.9 home, total 129.8) · market: home -5.5 (consensus) · total 128.5 (consensus) · PASS: no edge cleared the gates
+- **Texas Tech Lady Raiders @ North Carolina Tar Heels** — model 61-69 (margin +7.9 home, total 129.8) · market: home -6.5 (consensus) · total 129.5 (consensus)
 - **Tusculum Pioneers @ Morehead State Eagles** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Erskine Flying Fleet @ Presbyterian Blue Hose** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Army Black Knights @ Siena Saints** — model 70-66 (margin -3.9 home, total 135.2) · market: no line · PASS: no market line (nothing to anchor against)
@@ -47,7 +55,7 @@
 - **VCU Rams @ Maine Black Bears** — model 67-59 (margin -7.6 home, total 125.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **St. Bonaventure Bonnies @ Buffalo Bulls** — model 68-68 (margin +0.4 home, total 136.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **Florida Atlantic Owls @ Florida Gators** — model 61-77 (margin +15.9 home, total 138.2) · market: no line · PASS: no market line (nothing to anchor against)
-- **App State Mountaineers @ Wake Forest Demon Deacons** — model 61-68 (margin +6.5 home, total 128.4) · market: no line · PASS: no market spread quoted by target/sharp books
+- **App State Mountaineers @ Wake Forest Demon Deacons** — model 61-68 (margin +6.5 home, total 128.4) · market: total 129.5 (consensus) · PASS: no market spread quoted by target/sharp books
 - **William & Mary Tribe @ Old Dominion Monarchs** — model 67-68 (margin +0.8 home, total 135.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Sacred Heart Pioneers @ Michigan State Spartans** — model 49-82 (margin +32.8 home, total 130.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Stetson Hatters @ UCF Knights** — model 57-76 (margin +18.7 home, total 132.5) · market: no line · PASS: no market line (nothing to anchor against)
@@ -79,4 +87,4 @@
 - **Weber State Wildcats @ Cal State Fullerton Titans** — model 69-68 (margin -1.1 home, total 137.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Fairfield Stags @ Oregon Ducks** — model 68-78 (margin +10.0 home, total 147.0) · market: home -7.5 (consensus) · total 137.5 (consensus) · PASS: no edge cleared the gates
 
-_Generated 2026-11-19T22:40:21Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-19T22:59:03Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
