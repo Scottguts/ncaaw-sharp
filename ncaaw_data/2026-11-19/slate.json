@@ -1,7 +1,40 @@
 {
   "date": "2026-11-19",
-  "fetched_at": "2026-11-19T19:27:28.718200Z",
+  "fetched_at": "2026-11-19T22:40:21.248129Z",
   "games": [
+    {
+      "espn_event_id": "401920339",
+      "start": "2026-11-19T21:00Z",
+      "et_date": "2026-11-19",
+      "name": "High Point Panthers at Vermont Catamounts",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "261",
+        "location": "Vermont",
+        "display_name": "Vermont Catamounts",
+        "canon": "vermont",
+        "conf": "AE",
+        "record": "3-2",
+        "score": "60",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2272",
+        "location": "High Point",
+        "display_name": "High Point Panthers",
+        "canon": "high point",
+        "conf": "Big South",
+        "record": "6-0",
+        "score": "61",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
     {
       "espn_event_id": "401911746",
       "start": "2026-11-19T16:00Z",
@@ -195,39 +228,6 @@
         "record": "1-5",
         "score": "56",
         "winner": false
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401920339",
-      "start": "2026-11-19T21:00Z",
-      "et_date": "2026-11-19",
-      "name": "High Point Panthers at Vermont Catamounts",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "261",
-        "location": "Vermont",
-        "display_name": "Vermont Catamounts",
-        "canon": "vermont",
-        "conf": "AE",
-        "record": "3-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2272",
-        "location": "High Point",
-        "display_name": "High Point Panthers",
-        "canon": "high point",
-        "conf": "Big South",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -594,7 +594,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "f19819d6c07f113a7c52a17932fdb8df"
     },
     {
       "espn_event_id": "401927982",
