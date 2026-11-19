@@ -1,18 +1,202 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T12:40:22.849862Z",
+  "generated_at": "2026-11-19T16:20:19.627254Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 12,
+    "n_total_lines": 12,
+    "mean_spread_delta": -2.77,
+    "mean_total_delta": 1.82
   },
   "odds_available": true,
   "n_games": 48,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
-  "shadow_cards": [],
+  "n_cards": 2,
+  "total_units": 1.5,
+  "cards": [
+    {
+      "bet_label": "Fordham Rams +44.5",
+      "market": "spread",
+      "side": "away",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 44.5,
+      "fair_prob": 0.5423,
+      "fair_american": -118,
+      "edge": 0.0353,
+      "confidence": 9,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin +31.2 vs market +44.5 (home)",
+        "Anchored fair margin +43.0 vs line +44.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401911746",
+      "matchup": "Fordham Rams @ Duke Blue Devils",
+      "start": "2026-11-19T16:00Z"
+    },
+    {
+      "bet_label": "Virginia Cavaliers -10.5",
+      "market": "spread",
+      "side": "home",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": -10.5,
+      "fair_prob": 0.5398,
+      "fair_american": -117,
+      "edge": 0.0305,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Lean",
+      "reasoning": [
+        "Model margin +11.6 vs market +10.5 (home)",
+        "Anchored fair margin +11.6 vs line -10.5 (home)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401916008",
+      "matchup": "James Madison Dukes @ Virginia Cavaliers",
+      "start": "2026-11-19T23:00Z"
+    }
+  ],
+  "shadow_cards": [
+    {
+      "bet_label": "Maryland Eastern Shore Hawks +30.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -114,
+      "line": 30.5,
+      "fair_prob": 0.5398,
+      "fair_american": -117,
+      "edge": 0.0133,
+      "confidence": 4,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model margin +29.1 vs market +30.5 (home)",
+        "Anchored fair margin +29.1 vs line +30.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401913008",
+      "matchup": "Maryland Eastern Shore Hawks @ Rutgers Scarlet Knights",
+      "start": "2026-11-19T16:00Z"
+    },
+    {
+      "bet_label": "Under 145.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 145.5,
+      "fair_prob": 0.5366,
+      "fair_american": -116,
+      "edge": 0.0244,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 143.4 vs market 145.5",
+        "Anchored fair total 144.0 vs line 145.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401922832",
+      "matchup": "Northwestern State Lady Demons @ Oklahoma Sooners",
+      "start": "2026-11-20T00:00Z"
+    },
+    {
+      "bet_label": "Under 152.5",
+      "market": "total",
+      "side": "under",
+      "book": "betmgm",
+      "price_american": -110,
+      "line": 152.5,
+      "fair_prob": 0.5358,
+      "fair_american": -115,
+      "edge": 0.0228,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 150.6 vs market 152.5",
+        "Anchored fair total 151.0 vs line 152.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401911508",
+      "matchup": "Radford Highlanders @ Tennessee Lady Volunteers",
+      "start": "2026-11-20T00:00Z"
+    },
+    {
+      "bet_label": "Under 148.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 148.5,
+      "fair_prob": 0.5362,
+      "fair_american": -116,
+      "edge": 0.0236,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 147.0 vs market 148.5",
+        "Anchored fair total 147.0 vs line 148.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401912969",
+      "matchup": "Fairleigh Dickinson Knights @ LSU Tigers",
+      "start": "2026-11-20T01:00Z"
+    },
+    {
+      "bet_label": "Under 128.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 128.5,
+      "fair_prob": 0.5353,
+      "fair_american": -115,
+      "edge": 0.0219,
+      "confidence": 7,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 126.6 vs market 128.5",
+        "Anchored fair total 127.0 vs line 128.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401918898",
+      "matchup": "Cal Poly Mustangs @ UCLA Bruins",
+      "start": "2026-11-20T03:00Z"
+    }
+  ],
   "games": [
     {
       "espn_event_id": "401911746",
@@ -22,11 +206,36 @@
       "start": "2026-11-19T16:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Fordham Rams +44.5",
+          "market": "spread",
+          "side": "away",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 44.5,
+          "fair_prob": 0.5423,
+          "fair_american": -118,
+          "edge": 0.0353,
+          "confidence": 9,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +31.2 vs market +44.5 (home)",
+            "Anchored fair margin +43.0 vs line +44.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401911746",
+          "matchup": "Fordham Rams @ Duke Blue Devils",
+          "start": "2026-11-19T16:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 52.3,
         "home_score": 83.5,
@@ -40,6 +249,24 @@
         "rank_away": 174,
         "p3_home": 35.0,
         "p3_away": 44.099999999999994
+      },
+      "market": {
+        "spread_home": -44.5,
+        "total": 125.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 17.54
+      },
+      "anchored": {
+        "margin_home": 43.0,
+        "spread_shift": -1.5,
+        "total": 127.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -53,7 +280,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 69.3,
@@ -68,6 +295,24 @@
         "rank_away": 207,
         "p3_home": 51.8,
         "p3_away": 44.5
+      },
+      "market": {
+        "spread_home": 1.5,
+        "total": 136.0,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.22,
+        "total": 18.15
+      },
+      "anchored": {
+        "margin_home": 0.0,
+        "spread_shift": 1.5,
+        "total": 137.5,
+        "total_shift": 1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -81,7 +326,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 68.1,
@@ -96,6 +341,24 @@
         "rank_away": 74,
         "p3_home": 41.56666666666666,
         "p3_away": 45.349999999999994
+      },
+      "market": {
+        "spread_home": -14.5,
+        "total": 140.0,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.27,
+        "total": 17.92
+      },
+      "anchored": {
+        "margin_home": 13.0,
+        "spread_shift": -1.5,
+        "total": 140.14,
+        "total_shift": 0.14,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -107,9 +370,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Maryland Eastern Shore Hawks +30.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -114,
+          "line": 30.5,
+          "fair_prob": 0.5398,
+          "fair_american": -117,
+          "edge": 0.0133,
+          "confidence": 4,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model margin +29.1 vs market +30.5 (home)",
+            "Anchored fair margin +29.1 vs line +30.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401913008",
+          "matchup": "Maryland Eastern Shore Hawks @ Rutgers Scarlet Knights",
+          "start": "2026-11-19T16:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 53.3,
@@ -124,6 +414,24 @@
         "rank_away": 337,
         "p3_home": 46.81111111111112,
         "p3_away": 46.5
+      },
+      "market": {
+        "spread_home": -30.5,
+        "total": 132.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.01,
+        "total": 17.54
+      },
+      "anchored": {
+        "margin_home": 29.1,
+        "spread_shift": -1.4,
+        "total": 133.34,
+        "total_shift": 0.84,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -221,7 +529,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 61.0,
@@ -236,6 +544,24 @@
         "rank_away": 44,
         "p3_home": 41.7,
         "p3_away": 37.15
+      },
+      "market": {
+        "spread_home": -6.5,
+        "total": 128.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.22,
+        "total": 17.17
+      },
+      "anchored": {
+        "margin_home": 7.9,
+        "spread_shift": 1.4,
+        "total": 127.54,
+        "total_shift": -0.96,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -358,11 +684,36 @@
       "start": "2026-11-19T23:00Z",
       "neutral_site": false,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Virginia Cavaliers -10.5",
+          "market": "spread",
+          "side": "home",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": -10.5,
+          "fair_prob": 0.5398,
+          "fair_american": -117,
+          "edge": 0.0305,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Lean",
+          "reasoning": [
+            "Model margin +11.6 vs market +10.5 (home)",
+            "Anchored fair margin +11.6 vs line -10.5 (home)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401916008",
+          "matchup": "James Madison Dukes @ Virginia Cavaliers",
+          "start": "2026-11-19T23:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 61.7,
         "home_score": 73.4,
@@ -376,6 +727,24 @@
         "rank_away": 76,
         "p3_home": 40.111111111111114,
         "p3_away": 37.644444444444446
+      },
+      "market": {
+        "spread_home": -10.5,
+        "total": 133.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.02,
+        "total": 15.91
+      },
+      "anchored": {
+        "margin_home": 11.6,
+        "spread_shift": 1.1,
+        "total": 132.74,
+        "total_shift": -0.76,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -597,9 +966,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 145.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 145.5,
+          "fair_prob": 0.5366,
+          "fair_american": -116,
+          "edge": 0.0244,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 143.4 vs market 145.5",
+            "Anchored fair total 144.0 vs line 145.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401922832",
+          "matchup": "Northwestern State Lady Demons @ Oklahoma Sooners",
+          "start": "2026-11-20T00:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 52.6,
@@ -614,6 +1010,24 @@
         "rank_away": 322,
         "p3_home": 37.25555555555556,
         "p3_away": 48.355555555555554
+      },
+      "market": {
+        "spread_home": -46.5,
+        "total": 145.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.84,
+        "total": 16.34
+      },
+      "anchored": {
+        "margin_home": 45.0,
+        "spread_shift": -1.5,
+        "total": 144.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -905,9 +1319,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 152.5",
+          "market": "total",
+          "side": "under",
+          "book": "betmgm",
+          "price_american": -110,
+          "line": 152.5,
+          "fair_prob": 0.5358,
+          "fair_american": -115,
+          "edge": 0.0228,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 150.6 vs market 152.5",
+            "Anchored fair total 151.0 vs line 152.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401911508",
+          "matchup": "Radford Highlanders @ Tennessee Lady Volunteers",
+          "start": "2026-11-20T00:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 61.3,
@@ -922,6 +1363,24 @@
         "rank_away": 180,
         "p3_home": 46.87777777777778,
         "p3_away": 45.97777777777778
+      },
+      "market": {
+        "spread_home": -33.5,
+        "total": 152.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.59,
+        "total": 16.71
+      },
+      "anchored": {
+        "margin_home": 32.0,
+        "spread_shift": -1.5,
+        "total": 151.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -1019,7 +1478,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 60.3,
@@ -1034,6 +1493,24 @@
         "rank_away": 60,
         "p3_home": 42.8,
         "p3_away": 43.16666666666667
+      },
+      "market": {
+        "spread_home": -21.5,
+        "total": 134.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 15.23,
+        "total": 21.09
+      },
+      "anchored": {
+        "margin_home": 20.5,
+        "spread_shift": -1.0,
+        "total": 136.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -1045,9 +1522,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 148.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 148.5,
+          "fair_prob": 0.5362,
+          "fair_american": -116,
+          "edge": 0.0236,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 147.0 vs market 148.5",
+            "Anchored fair total 147.0 vs line 148.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401912969",
+          "matchup": "Fairleigh Dickinson Knights @ LSU Tigers",
+          "start": "2026-11-20T01:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 56.2,
@@ -1062,6 +1566,24 @@
         "rank_away": 172,
         "p3_home": 30.52222222222222,
         "p3_away": 46.779999999999994
+      },
+      "market": {
+        "spread_home": -42.5,
+        "total": 148.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.84,
+        "total": 16.52
+      },
+      "anchored": {
+        "margin_home": 41.0,
+        "spread_shift": -1.5,
+        "total": 147.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -1117,7 +1639,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 83.7,
@@ -1132,6 +1654,24 @@
         "rank_away": 35,
         "p3_home": 48.7,
         "p3_away": 36.67999999999999
+      },
+      "market": {
+        "spread_home": 41.5,
+        "total": 143.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 17.59
+      },
+      "anchored": {
+        "margin_home": -40.0,
+        "spread_shift": 1.5,
+        "total": 142.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
@@ -1199,9 +1739,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 128.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 128.5,
+          "fair_prob": 0.5353,
+          "fair_american": -115,
+          "edge": 0.0219,
+          "confidence": 7,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 126.6 vs market 128.5",
+            "Anchored fair total 127.0 vs line 128.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401918898",
+          "matchup": "Cal Poly Mustangs @ UCLA Bruins",
+          "start": "2026-11-20T03:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 44.6,
@@ -1216,6 +1783,24 @@
         "rank_away": 271,
         "p3_home": 34.45,
         "p3_away": 51.0
+      },
+      "market": {
+        "spread_home": -47.5,
+        "total": 128.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 14.12,
+        "total": 16.95
+      },
+      "anchored": {
+        "margin_home": 46.0,
+        "spread_shift": -1.5,
+        "total": 127.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.36
       }
     },
     {
