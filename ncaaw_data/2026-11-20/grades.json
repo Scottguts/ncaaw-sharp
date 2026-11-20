@@ -1,47 +1,72 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T07:01:59.187167Z",
+  "generated_at": "2026-11-20T19:02:14.586072Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 4,
+    "n_total_lines": 4,
+    "mean_spread_delta": -3.4,
+    "mean_total_delta": 0.55
   },
   "odds_available": true,
   "n_games": 41,
   "n_cards": 0,
   "total_units": 0,
   "cards": [],
-  "shadow_cards": [],
-  "games": [
+  "shadow_cards": [
     {
-      "espn_event_id": "401929110",
-      "matchup": "Robert Morris Colonials @ Akron Zips",
-      "home_short": "Akron",
-      "away_short": "Robert Morris",
-      "start": "2026-11-20T16:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "bet_label": "Over 131.5",
+      "market": "total",
+      "side": "over",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 131.5,
+      "fair_prob": 0.5375,
+      "fair_american": -116,
+      "edge": 0.0261,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 136.1 vs market 131.5",
+        "Anchored fair total 133.0 vs line 131.5"
       ],
-      "model": {
-        "away_score": 68.5,
-        "home_score": 66.5,
-        "spread": 2.0,
-        "total": 135.0,
-        "proj_poss": 70.2,
-        "margin_home": -2.0,
-        "games_home": 5,
-        "games_away": 4,
-        "rank_home": 163,
-        "rank_away": 124,
-        "p3_home": 53.233333333333334,
-        "p3_away": 43.4
-      }
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401923012",
+      "matchup": "Seton Hall Pirates @ UConn Huskies",
+      "start": "2026-11-21T01:00Z"
     },
+    {
+      "bet_label": "Under 133.5",
+      "market": "total",
+      "side": "under",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": 133.5,
+      "fair_prob": 0.5345,
+      "fair_american": -115,
+      "edge": 0.0205,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model total 132.6 vs market 133.5",
+        "Anchored fair total 132.0 vs line 133.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401915982",
+      "matchup": "Stanford Cardinal @ Washington Huskies",
+      "start": "2026-11-21T03:00Z"
+    }
+  ],
+  "games": [
     {
       "espn_event_id": "401918520",
       "matchup": "Grambling Lady Tigers @ Central Arkansas Sugar Bears",
@@ -55,34 +80,6 @@
       "pass_reasons": [
         "missing Torvik data (non-D-I opponent?)"
       ]
-    },
-    {
-      "espn_event_id": "401916060",
-      "matchup": "Alcorn State Lady Braves @ Tulane Green Wave",
-      "home_short": "Tulane",
-      "away_short": "Alcorn State",
-      "start": "2026-11-20T17:00Z",
-      "neutral_site": false,
-      "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "model": {
-        "away_score": 53.1,
-        "home_score": 74.1,
-        "spread": -21.0,
-        "total": 127.2,
-        "proj_poss": 69.5,
-        "margin_home": 21.0,
-        "games_home": 4,
-        "games_away": 3,
-        "rank_home": 120,
-        "rank_away": 349,
-        "p3_home": 39.05,
-        "p3_away": 49.42857142857142
-      }
     },
     {
       "espn_event_id": "401918809",
@@ -138,6 +135,62 @@
         "rank_away": 245,
         "p3_home": 46.75555555555556,
         "p3_away": 44.13333333333333
+      }
+    },
+    {
+      "espn_event_id": "401929110",
+      "matchup": "Robert Morris Colonials @ Akron Zips",
+      "home_short": "Akron",
+      "away_short": "Robert Morris",
+      "start": "2026-11-20T16:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 68.5,
+        "home_score": 66.5,
+        "spread": 2.0,
+        "total": 135.0,
+        "proj_poss": 70.2,
+        "margin_home": -2.0,
+        "games_home": 5,
+        "games_away": 4,
+        "rank_home": 163,
+        "rank_away": 124,
+        "p3_home": 53.233333333333334,
+        "p3_away": 43.4
+      }
+    },
+    {
+      "espn_event_id": "401916060",
+      "matchup": "Alcorn State Lady Braves @ Tulane Green Wave",
+      "home_short": "Tulane",
+      "away_short": "Alcorn State",
+      "start": "2026-11-20T17:00Z",
+      "neutral_site": false,
+      "status": "graded",
+      "cards": [],
+      "shadow": [],
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "model": {
+        "away_score": 53.1,
+        "home_score": 74.1,
+        "spread": -21.0,
+        "total": 127.2,
+        "proj_poss": 69.5,
+        "margin_home": 21.0,
+        "games_home": 4,
+        "games_away": 3,
+        "rank_home": 120,
+        "rank_away": 349,
+        "p3_home": 39.05,
+        "p3_away": 49.42857142857142
       }
     },
     {
@@ -249,7 +302,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 53.7,
@@ -264,6 +317,24 @@
         "rank_away": 149,
         "p3_home": 35.21111111111111,
         "p3_away": 42.66
+      },
+      "market": {
+        "spread_home": -29.5,
+        "total": 133.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.43,
+        "total": 15.82
+      },
+      "anchored": {
+        "margin_home": 28.0,
+        "spread_shift": -1.5,
+        "total": 132.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.87
       }
     },
     {
@@ -793,9 +864,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Over 131.5",
+          "market": "total",
+          "side": "over",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 131.5,
+          "fair_prob": 0.5375,
+          "fair_american": -116,
+          "edge": 0.0261,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 136.1 vs market 131.5",
+            "Anchored fair total 133.0 vs line 131.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401923012",
+          "matchup": "Seton Hall Pirates @ UConn Huskies",
+          "start": "2026-11-21T01:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 52.2,
@@ -810,6 +908,24 @@
         "rank_away": 94,
         "p3_home": 43.96666666666667,
         "p3_away": 45.233333333333334
+      },
+      "market": {
+        "spread_home": -37.5,
+        "total": 131.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.84,
+        "total": 15.94
+      },
+      "anchored": {
+        "margin_home": 36.0,
+        "spread_shift": -1.5,
+        "total": 133.0,
+        "total_shift": 1.5,
+        "season_bias_applied": -2.87
       }
     },
     {
@@ -1017,9 +1133,36 @@
       "neutral_site": false,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Under 133.5",
+          "market": "total",
+          "side": "under",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": 133.5,
+          "fair_prob": 0.5345,
+          "fair_american": -115,
+          "edge": 0.0205,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model total 132.6 vs market 133.5",
+            "Anchored fair total 132.0 vs line 133.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915982",
+          "matchup": "Stanford Cardinal @ Washington Huskies",
+          "start": "2026-11-21T03:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 59.4,
@@ -1034,6 +1177,24 @@
         "rank_away": 57,
         "p3_home": 43.25,
         "p3_away": 41.44444444444444
+      },
+      "market": {
+        "spread_home": -13.5,
+        "total": 133.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.27,
+        "total": 17.31
+      },
+      "anchored": {
+        "margin_home": 13.8,
+        "spread_shift": 0.3,
+        "total": 132.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.87
       }
     },
     {
@@ -1075,7 +1236,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 69.6,
@@ -1090,6 +1251,24 @@
         "rank_away": 14,
         "p3_home": 41.7,
         "p3_away": 36.611111111111114
+      },
+      "market": {
+        "spread_home": -12.5,
+        "total": 148.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.24,
+        "total": 18.12
+      },
+      "anchored": {
+        "margin_home": 11.0,
+        "spread_shift": -1.5,
+        "total": 147.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.87
       }
     }
   ]

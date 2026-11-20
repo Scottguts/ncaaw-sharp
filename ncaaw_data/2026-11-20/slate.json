@@ -1,40 +1,7 @@
 {
   "date": "2026-11-20",
-  "fetched_at": "2026-11-20T07:01:59.174852Z",
+  "fetched_at": "2026-11-20T19:02:14.579109Z",
   "games": [
-    {
-      "espn_event_id": "401929110",
-      "start": "2026-11-20T16:00Z",
-      "et_date": "2026-11-20",
-      "name": "Robert Morris Colonials at Akron Zips",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2006",
-        "location": "Akron",
-        "display_name": "Akron Zips",
-        "canon": "akron",
-        "conf": "MAC",
-        "record": "1-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2523",
-        "location": "Robert Morris",
-        "display_name": "Robert Morris Colonials",
-        "canon": "robert morris",
-        "conf": "Horz",
-        "record": "2-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401918520",
       "start": "2026-11-20T17:00Z",
@@ -42,7 +9,7 @@
       "name": "Grambling Lady Tigers at Central Arkansas Sugar Bears",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2110",
@@ -51,7 +18,7 @@
         "canon": "central arkansas",
         "conf": "WAC",
         "record": "2-2",
-        "score": "0",
+        "score": "74",
         "winner": null
       },
       "away": {
@@ -61,44 +28,11 @@
         "canon": "grambling",
         "conf": "SWAC",
         "record": "1-4",
-        "score": "0",
+        "score": "77",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401916060",
-      "start": "2026-11-20T17:00Z",
-      "et_date": "2026-11-20",
-      "name": "Alcorn State Lady Braves at Tulane Green Wave",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2655",
-        "location": "Tulane",
-        "display_name": "Tulane Green Wave",
-        "canon": "tulane",
-        "conf": "Amer",
-        "record": "3-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2016",
-        "location": "Alcorn State",
-        "display_name": "Alcorn State Lady Braves",
-        "canon": "alcorn st",
-        "conf": "SWAC",
-        "record": "1-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
       "odds_event_id": null
     },
     {
@@ -108,7 +42,7 @@
       "name": "Jacksonville State Gamecocks at North Dakota Fighting Hawks",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "155",
@@ -117,7 +51,7 @@
         "canon": "north dakota",
         "conf": "Summit",
         "record": "1-3",
-        "score": "0",
+        "score": "32",
         "winner": null
       },
       "away": {
@@ -127,7 +61,7 @@
         "canon": "jacksonville st",
         "conf": "CUSA",
         "record": "2-2",
-        "score": "0",
+        "score": "28",
         "winner": null
       },
       "torvik_home": true,
@@ -141,7 +75,7 @@
       "name": "West Georgia Wolves at Mississippi Valley State Devilettes",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_HALFTIME",
       "completed": false,
       "home": {
         "espn_id": "2400",
@@ -150,7 +84,7 @@
         "canon": "mississippi valley st",
         "conf": "SWAC",
         "record": "0-5",
-        "score": "0",
+        "score": "34",
         "winner": null
       },
       "away": {
@@ -160,8 +94,74 @@
         "canon": "west georgia",
         "conf": "WAC",
         "record": "4-1",
-        "score": "0",
+        "score": "42",
         "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401929110",
+      "start": "2026-11-20T16:00Z",
+      "et_date": "2026-11-20",
+      "name": "Robert Morris Colonials at Akron Zips",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2006",
+        "location": "Akron",
+        "display_name": "Akron Zips",
+        "canon": "akron",
+        "conf": "MAC",
+        "record": "1-5",
+        "score": "73",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2523",
+        "location": "Robert Morris",
+        "display_name": "Robert Morris Colonials",
+        "canon": "robert morris",
+        "conf": "Horz",
+        "record": "3-2",
+        "score": "76",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401916060",
+      "start": "2026-11-20T17:00Z",
+      "et_date": "2026-11-20",
+      "name": "Alcorn State Lady Braves at Tulane Green Wave",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2655",
+        "location": "Tulane",
+        "display_name": "Tulane Green Wave",
+        "canon": "tulane",
+        "conf": "Amer",
+        "record": "4-1",
+        "score": "76",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2016",
+        "location": "Alcorn State",
+        "display_name": "Alcorn State Lady Braves",
+        "canon": "alcorn st",
+        "conf": "SWAC",
+        "record": "1-3",
+        "score": "39",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -330,7 +330,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "b75831bf9559fd1e9546830b350a4eba"
     },
     {
       "espn_event_id": "401926087",
@@ -1023,7 +1023,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "741803cdc8d5d8f45458e5443d3b6efd"
     },
     {
       "espn_event_id": "401920406",
@@ -1287,7 +1287,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "c2b4baaab3b745523a1b704591028232"
     },
     {
       "espn_event_id": "401917712",
@@ -1353,7 +1353,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "d1562293e2245498f3e929abd063826f"
     }
   ]
 }

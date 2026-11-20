@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-20T07:01:59.055736Z",
+  "fetched_at": "2026-11-20T19:02:14.417771Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -17,6 +17,503 @@
     "spreads",
     "totals"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "b75831bf9559fd1e9546830b350a4eba",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-20T23:00:00Z",
+      "home_team": "Kentucky Wildcats",
+      "away_team": "Marshall Thundering Herd",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-20T19:01:56Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:56Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -124,
+                  "point": -29.5
+                },
+                {
+                  "name": "Marshall Thundering Herd",
+                  "price": -108,
+                  "point": 29.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:56Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 133.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 133.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-20T19:01:58Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -121,
+                  "point": -29.5
+                },
+                {
+                  "name": "Marshall Thundering Herd",
+                  "price": -106,
+                  "point": 29.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -108,
+                  "point": 133.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 133.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-20T19:01:57Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:57Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -125,
+                  "point": -29.5
+                },
+                {
+                  "name": "Marshall Thundering Herd",
+                  "price": -110,
+                  "point": 29.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:57Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 133.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 133.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-20T19:01:24Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Kentucky Wildcats",
+                  "price": -110,
+                  "point": -31.5
+                },
+                {
+                  "name": "Marshall Thundering Herd",
+                  "price": -110,
+                  "point": 31.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-20T19:01:58Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "683d0f849c08e009b8f17c60ab626813",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T00:30:00Z",
+      "home_team": "Oklahoma St Cowgirls",
+      "away_team": "Arkansas-Little Rock Trojans",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-20T19:01:24Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Arkansas-Little Rock Trojans",
+                  "price": -110,
+                  "point": 38.5
+                },
+                {
+                  "name": "Oklahoma St Cowgirls",
+                  "price": -110,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-20T19:01:58Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "741803cdc8d5d8f45458e5443d3b6efd",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T01:00:00Z",
+      "home_team": "UConn Huskies",
+      "away_team": "Seton Hall Pirates",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-20T19:01:24Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Seton Hall Pirates",
+                  "price": -105,
+                  "point": 37.5
+                },
+                {
+                  "name": "UConn Huskies",
+                  "price": -115,
+                  "point": -37.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-20T19:01:58Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 131.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 131.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2b4baaab3b745523a1b704591028232",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T03:00:00Z",
+      "home_team": "Washington Huskies",
+      "away_team": "Stanford Cardinal",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-20T19:01:24Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Stanford Cardinal",
+                  "price": 600
+                },
+                {
+                  "name": "Washington Huskies",
+                  "price": -900
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Stanford Cardinal",
+                  "price": -112,
+                  "point": 13.5
+                },
+                {
+                  "name": "Washington Huskies",
+                  "price": -108,
+                  "point": -13.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 133.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 133.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-20T19:01:58Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Stanford Cardinal",
+                  "price": 500
+                },
+                {
+                  "name": "Washington Huskies",
+                  "price": -700
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:58Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 133.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 133.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d1562293e2245498f3e929abd063826f",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T04:00:00Z",
+      "home_team": "USC Trojans",
+      "away_team": "Baylor Bears",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-20T19:01:24Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Baylor Bears",
+                  "price": 500
+                },
+                {
+                  "name": "USC Trojans",
+                  "price": -700
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Baylor Bears",
+                  "price": -110,
+                  "point": 12.5
+                },
+                {
+                  "name": "USC Trojans",
+                  "price": -110,
+                  "point": -12.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-20T19:01:24Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 148.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 148.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "errors": []
 }
