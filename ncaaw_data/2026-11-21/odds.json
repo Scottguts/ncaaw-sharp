@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-21T06:56:03.747649Z",
+  "fetched_at": "2026-11-21T17:56:02.249292Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -17,6 +17,698 @@
     "spreads",
     "totals"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "d96b6f99e25356680ca37310478c941d",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T18:30:00Z",
+      "home_team": "Providence Friars",
+      "away_team": "South Carolina Gamecocks",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-21T17:56:00Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Providence Friars",
+                  "price": -110,
+                  "point": 38.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -110,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-21T17:55:59Z",
+          "markets": [
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:59Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-21T17:55:41Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Providence Friars",
+                  "price": 100,
+                  "point": 38.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -134,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -113,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Providence Friars",
+                  "price": 102,
+                  "point": 38.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -130,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Providence Friars",
+                  "price": -115,
+                  "point": 38.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -115,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -115,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -115,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-21T17:55:25Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:25Z",
+              "outcomes": [
+                {
+                  "name": "Providence Friars",
+                  "price": 100,
+                  "point": 38.5
+                },
+                {
+                  "name": "South Carolina Gamecocks",
+                  "price": -135,
+                  "point": -38.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:25Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -120,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "81d1fd5ef297b6d3dd0b938fd28200ca",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T19:00:00Z",
+      "home_team": "Rutgers Scarlet Knights",
+      "away_team": "Delaware St Hornets",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-21T17:55:41Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Delaware St Hornets",
+                  "price": -117,
+                  "point": 39.5
+                },
+                {
+                  "name": "Rutgers Scarlet Knights",
+                  "price": -114,
+                  "point": -39.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Delaware St Hornets",
+                  "price": -114,
+                  "point": 39.5
+                },
+                {
+                  "name": "Rutgers Scarlet Knights",
+                  "price": -112,
+                  "point": -39.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e612bdac28340edff6ac55e27f74ad2d",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-21T22:00:00Z",
+      "home_team": "North Carolina Tar Heels",
+      "away_team": "Alabama Crimson Tide",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-21T17:56:00Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": 180
+                },
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -218
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -110,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": 170
+                },
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -220
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Alabama Crimson Tide",
+                  "price": -115,
+                  "point": 4.5
+                },
+                {
+                  "name": "North Carolina Tar Heels",
+                  "price": -115,
+                  "point": -4.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 136.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 136.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7dad279b6b82dd2bec8d50f0c7cf03b1",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-22T00:00:00Z",
+      "home_team": "Columbia Lions",
+      "away_team": "Duke Blue Devils",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-21T17:56:00Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 1000
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -1800
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": -110,
+                  "point": 17.5
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -110,
+                  "point": -17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:56:00Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 134.5
+                },
+                {
+                  "name": "Under",
+                  "price": -102,
+                  "point": 134.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "last_update": "2026-11-21T17:55:59Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:55:59Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 1150
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -2500
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:59Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espnbet",
+          "title": "theScore Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 1100
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -3000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": -115,
+                  "point": 17.5
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -115,
+                  "point": -17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -120,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-21T17:55:41Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 1000
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -5000
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": -114,
+                  "point": 17.5
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -117,
+                  "point": -17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -113,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -117,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-21T17:55:23Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": 1000
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -2500
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Columbia Lions",
+                  "price": -112,
+                  "point": 17.5
+                },
+                {
+                  "name": "Duke Blue Devils",
+                  "price": -114,
+                  "point": -17.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-21T17:55:23Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -112,
+                  "point": 135.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 135.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "errors": []
 }

@@ -1,5 +1,58 @@
 {
-  "cards": [],
+  "cards": [
+    {
+      "bet_label": "Columbia Lions +17.5",
+      "book": "draftkings",
+      "confidence": 8,
+      "edge": 0.0564,
+      "espn_event_id": "401915910",
+      "fair_american": -124,
+      "fair_prob": 0.5534,
+      "line": 17.5,
+      "market": "spread",
+      "matchup": "Duke Blue Devils @ Columbia Lions",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model margin -14.1 vs market -17.5 (home)",
+        "Anchored fair margin -16.0 vs line +17.5 (home)"
+      ],
+      "risk": "Strong",
+      "side": "home",
+      "start": "2026-11-22T00:00Z",
+      "unit_size": 1.5
+    },
+    {
+      "bet_label": "Delaware State Hornets +39.5",
+      "book": "ballybet",
+      "confidence": 9,
+      "edge": 0.0259,
+      "espn_event_id": "401913009",
+      "fair_american": -121,
+      "fair_prob": 0.5465,
+      "line": 39.5,
+      "market": "spread",
+      "matchup": "Delaware State Hornets @ Rutgers Scarlet Knights",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -114,
+      "reasoning": [
+        "Model margin +30.4 vs market +39.5 (home)",
+        "Anchored fair margin +38.0 vs line +39.5 (away)"
+      ],
+      "risk": "Lean",
+      "side": "away",
+      "start": "2026-11-21T19:00Z",
+      "unit_size": 0.5
+    }
+  ],
   "date": "2026-11-21",
   "games": [
     {
@@ -339,10 +392,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -37.0,
+        "season_bias_applied": -3.24,
+        "spread_shift": 1.5,
+        "total": 134.96,
+        "total_shift": 0.46
+      },
       "away_short": "South Carolina",
       "cards": [],
       "espn_event_id": "401913038",
       "home_short": "Providence",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 38.5,
+        "spread_src": "consensus",
+        "total": 134.5,
+        "total_src": "consensus"
+      },
       "matchup": "South Carolina Gamecocks @ Providence Friars",
       "model": {
         "away_score": 84.5,
@@ -360,9 +427,13 @@
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 12.84,
+        "total": 16.03
+      },
       "start": "2026-11-21T18:30Z",
       "status": "graded"
     },
@@ -675,10 +746,51 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 38.0,
+        "season_bias_applied": -3.24,
+        "spread_shift": -1.5,
+        "total": 134.86,
+        "total_shift": -0.64
+      },
       "away_short": "Delaware State",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Delaware State Hornets +39.5",
+          "book": "ballybet",
+          "confidence": 9,
+          "edge": 0.0259,
+          "espn_event_id": "401913009",
+          "fair_american": -121,
+          "fair_prob": 0.5465,
+          "line": 39.5,
+          "market": "spread",
+          "matchup": "Delaware State Hornets @ Rutgers Scarlet Knights",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -114,
+          "reasoning": [
+            "Model margin +30.4 vs market +39.5 (home)",
+            "Anchored fair margin +38.0 vs line +39.5 (away)"
+          ],
+          "risk": "Lean",
+          "side": "away",
+          "start": "2026-11-21T19:00Z",
+          "unit_size": 0.5
+        }
+      ],
       "espn_event_id": "401913009",
       "home_short": "Rutgers",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -39.5,
+        "spread_src": "consensus",
+        "total": 135.5,
+        "total_src": "consensus"
+      },
       "matchup": "Delaware State Hornets @ Rutgers Scarlet Knights",
       "model": {
         "away_score": 53.8,
@@ -695,10 +807,12 @@
         "total": 138.1
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 12.84,
+        "total": 16.02
+      },
       "start": "2026-11-21T19:00Z",
       "status": "graded"
     },
@@ -969,10 +1083,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 5.6,
+        "season_bias_applied": -3.24,
+        "spread_shift": 1.1,
+        "total": 135.0,
+        "total_shift": -1.5
+      },
       "away_short": "Alabama",
       "cards": [],
       "espn_event_id": "401906093",
       "home_short": "North Carolina",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -4.5,
+        "spread_src": "consensus",
+        "total": 136.5,
+        "total_src": "consensus"
+      },
       "matchup": "Alabama Crimson Tide @ North Carolina Tar Heels",
       "model": {
         "away_score": 63.5,
@@ -990,9 +1118,40 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "North Carolina Tar Heels -4.5",
+          "book": "draftkings",
+          "confidence": 5,
+          "edge": 0.0226,
+          "espn_event_id": "401906093",
+          "fair_american": -115,
+          "fair_prob": 0.5357,
+          "line": -4.5,
+          "market": "spread",
+          "matchup": "Alabama Crimson Tide @ North Carolina Tar Heels",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin +5.6 vs market +4.5 (home)",
+            "Anchored fair margin +5.6 vs line -4.5 (home)"
+          ],
+          "risk": "Shadow",
+          "side": "home",
+          "start": "2026-11-21T22:00Z",
+          "unit_size": 0.5
+        }
+      ],
+      "sigma": {
+        "spread": 12.29,
+        "total": 17.29
+      },
       "start": "2026-11-21T22:00Z",
       "status": "graded"
     },
@@ -1109,10 +1268,51 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -16.0,
+        "season_bias_applied": -3.24,
+        "spread_shift": 1.5,
+        "total": 136.26,
+        "total_shift": 0.76
+      },
       "away_short": "Duke",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Columbia Lions +17.5",
+          "book": "draftkings",
+          "confidence": 8,
+          "edge": 0.0564,
+          "espn_event_id": "401915910",
+          "fair_american": -124,
+          "fair_prob": 0.5534,
+          "line": 17.5,
+          "market": "spread",
+          "matchup": "Duke Blue Devils @ Columbia Lions",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin -14.1 vs market -17.5 (home)",
+            "Anchored fair margin -16.0 vs line +17.5 (home)"
+          ],
+          "risk": "Strong",
+          "side": "home",
+          "start": "2026-11-22T00:00Z",
+          "unit_size": 1.5
+        }
+      ],
       "espn_event_id": "401915910",
       "home_short": "Columbia",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 17.5,
+        "spread_src": "consensus",
+        "total": 135.5,
+        "total_src": "consensus"
+      },
       "matchup": "Duke Blue Devils @ Columbia Lions",
       "model": {
         "away_score": 76.8,
@@ -1129,10 +1329,12 @@
         "total": 139.5
       },
       "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 11.18,
+        "total": 16.09
+      },
       "start": "2026-11-22T00:00Z",
       "status": "graded"
     },
@@ -1305,16 +1507,43 @@
       "status": "skipped"
     }
   ],
-  "generated_at": "2026-11-21T06:56:03.831599Z",
+  "generated_at": "2026-11-21T17:56:02.448413Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": 0.8,
+    "mean_total_delta": 1.6,
+    "n_spread_lines": 4,
+    "n_total_lines": 4
   },
-  "n_cards": 0,
+  "n_cards": 2,
   "n_games": 52,
   "odds_available": true,
-  "shadow_cards": [],
-  "total_units": 0
+  "shadow_cards": [
+    {
+      "bet_label": "North Carolina Tar Heels -4.5",
+      "book": "draftkings",
+      "confidence": 5,
+      "edge": 0.0226,
+      "espn_event_id": "401906093",
+      "fair_american": -115,
+      "fair_prob": 0.5357,
+      "line": -4.5,
+      "market": "spread",
+      "matchup": "Alabama Crimson Tide @ North Carolina Tar Heels",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -110,
+      "reasoning": [
+        "Model margin +5.6 vs market +4.5 (home)",
+        "Anchored fair margin +5.6 vs line -4.5 (home)"
+      ],
+      "risk": "Shadow",
+      "side": "home",
+      "start": "2026-11-21T22:00Z",
+      "unit_size": 0.5
+    }
+  ],
+  "total_units": 2.0
 }
