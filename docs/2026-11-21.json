@@ -4,160 +4,160 @@
   "games": [
     {
       "anchored": {
-        "margin_home": 3.0,
-        "season_bias_applied": -3.07,
+        "margin_home": -23.5,
+        "season_bias_applied": -2.73,
         "spread_shift": 1.5,
-        "total": 143.5,
-        "total_shift": -1.5
+        "total": 123.0,
+        "total_shift": 1.5
       },
-      "away_short": "Alabama",
+      "away_short": "Duke",
       "cards": [],
-      "espn_event_id": "401906093",
-      "home_short": "North Carolina",
+      "espn_event_id": "401915910",
+      "home_short": "Columbia",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -1.5,
+        "spread_home": 25.0,
         "spread_src": "consensus",
-        "total": 145.0,
+        "total": 121.5,
         "total_src": "consensus"
       },
-      "matchup": "Alabama Crimson Tide @ North Carolina Tar Heels",
+      "matchup": "Duke Blue Devils @ Columbia Lions",
       "model": {
-        "away_score": 62.6,
-        "games_away": 7,
+        "away_score": 75.4,
+        "games_away": 5,
         "games_home": 5,
-        "home_score": 68.2,
-        "margin_home": 5.6,
-        "p3_away": 36.32727272727273,
-        "p3_home": 41.22222222222222,
-        "proj_poss": 70.6,
-        "rank_away": 34,
-        "rank_home": 19,
-        "spread": -5.6,
-        "total": 130.7
+        "home_score": 61.4,
+        "margin_home": -14.0,
+        "p3_away": 35.33333333333333,
+        "p3_home": 47.03333333333333,
+        "proj_poss": 71.0,
+        "rank_away": 8,
+        "rank_home": 62,
+        "spread": 14.0,
+        "total": 136.9
       },
-      "neutral_site": true,
+      "neutral_site": false,
       "pass_reasons": [
         "no edge cleared the gates"
       ],
       "shadow": [],
       "sigma": {
         "spread": 11.17,
-        "total": 15.61
+        "total": 15.99
       },
-      "start": "2026-11-21T22:00Z",
+      "start": "2026-11-22T00:00Z",
       "status": "graded"
     },
     {
-      "away_short": "Siena",
+      "away_short": "Gonzaga",
       "cards": [],
-      "espn_event_id": "401918036",
-      "home_short": "Mercyhurst",
-      "matchup": "Siena Saints @ Mercyhurst Lakers",
+      "espn_event_id": "401928067",
+      "home_short": "Hawai'i",
+      "matchup": "Gonzaga Bulldogs @ Hawai'i Rainbow Wahine",
       "model": {
-        "away_score": 71.5,
-        "games_away": 6,
-        "games_home": 6,
-        "home_score": 66.1,
-        "margin_home": -5.4,
-        "p3_away": 45.56,
-        "p3_home": 56.08,
-        "proj_poss": 71.3,
-        "rank_away": 210,
-        "rank_home": 312,
-        "spread": 5.4,
-        "total": 137.6
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-21T22:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Cincinnati",
-      "cards": [],
-      "espn_event_id": "401916189",
-      "home_short": "UNLV",
-      "matchup": "Cincinnati Bearcats @ UNLV Lady Rebels",
-      "model": {
-        "away_score": 63.1,
-        "games_away": 5,
-        "games_home": 4,
-        "home_score": 67.9,
-        "margin_home": 4.8,
-        "p3_away": 43.522222222222226,
-        "p3_home": 46.4,
-        "proj_poss": 69.6,
-        "rank_away": 97,
-        "rank_home": 84,
-        "spread": -4.8,
-        "total": 131.0
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-21T22:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Iona",
-      "cards": [],
-      "espn_event_id": "401915669",
-      "home_short": "Bucknell",
-      "matchup": "Iona Gaels @ Bucknell Bison",
-      "model": {
-        "away_score": 58.2,
+        "away_score": 67.8,
         "games_away": 6,
         "games_home": 5,
-        "home_score": 61.1,
-        "margin_home": 2.9,
-        "p3_away": 46.84,
-        "p3_home": 50.355555555555554,
-        "proj_poss": 66.8,
-        "rank_away": 279,
-        "rank_home": 277,
-        "spread": -2.9,
-        "total": 119.3
+        "home_score": 56.4,
+        "margin_home": -11.4,
+        "p3_away": 44.34,
+        "p3_home": 42.86666666666667,
+        "proj_poss": 69.2,
+        "rank_away": 73,
+        "rank_home": 186,
+        "spread": 11.4,
+        "total": 124.2
       },
-      "neutral_site": false,
+      "neutral_site": true,
       "pass_reasons": [
         "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-21T22:00Z",
+      "start": "2026-11-22T00:00Z",
       "status": "graded"
     },
     {
-      "away_short": "Grand Canyon",
+      "away_short": "Southeast Missouri State",
       "cards": [],
-      "espn_event_id": "401915965",
-      "home_short": "SMU",
-      "matchup": "Grand Canyon Lopes @ SMU Mustangs",
+      "espn_event_id": "401921236",
+      "home_short": "Saint Louis",
+      "matchup": "Southeast Missouri State Redhawks @ Saint Louis Billikens",
       "model": {
-        "away_score": 68.3,
-        "games_away": 4,
-        "games_home": 6,
-        "home_score": 68.6,
-        "margin_home": 0.3,
-        "p3_away": 44.15,
-        "p3_home": 42.660000000000004,
-        "proj_poss": 71.8,
-        "rank_away": 70,
-        "rank_home": 82,
-        "spread": -0.3,
-        "total": 137.0
+        "away_score": 60.5,
+        "games_away": 7,
+        "games_home": 5,
+        "home_score": 76.7,
+        "margin_home": 16.2,
+        "p3_away": 51.845454545454544,
+        "p3_home": 43.3,
+        "proj_poss": 72.5,
+        "rank_away": 334,
+        "rank_home": 147,
+        "spread": -16.2,
+        "total": 137.2
       },
       "neutral_site": false,
       "pass_reasons": [
         "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-21T23:00Z",
+      "start": "2026-11-22T00:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Charlotte",
+      "cards": [],
+      "espn_event_id": "401921021",
+      "home_short": "Davidson",
+      "matchup": "Charlotte 49ers @ Davidson Wildcats",
+      "model": {
+        "away_score": 54.4,
+        "games_away": 4,
+        "games_home": 5,
+        "home_score": 67.7,
+        "margin_home": 13.3,
+        "p3_away": 44.1,
+        "p3_home": 47.18888888888888,
+        "proj_poss": 67.9,
+        "rank_away": 204,
+        "rank_home": 89,
+        "spread": -13.3,
+        "total": 122.0
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-22T00:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Eastern Illinois",
+      "cards": [],
+      "espn_event_id": "401919710",
+      "home_short": "Murray State",
+      "matchup": "Eastern Illinois Panthers @ Murray State Racers",
+      "model": {
+        "away_score": 64.0,
+        "games_away": 6,
+        "games_home": 5,
+        "home_score": 82.8,
+        "margin_home": 18.8,
+        "p3_away": 47.78,
+        "p3_home": 50.13333333333333,
+        "proj_poss": 71.8,
+        "rank_away": 299,
+        "rank_home": 94,
+        "spread": -18.8,
+        "total": 146.7
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-22T01:00Z",
       "status": "graded"
     },
     {
@@ -214,6 +214,34 @@
       ],
       "shadow": [],
       "start": "2026-11-21T17:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Alabama",
+      "cards": [],
+      "espn_event_id": "401906093",
+      "home_short": "North Carolina",
+      "matchup": "Alabama Crimson Tide @ North Carolina Tar Heels",
+      "model": {
+        "away_score": 62.6,
+        "games_away": 7,
+        "games_home": 5,
+        "home_score": 68.2,
+        "margin_home": 5.6,
+        "p3_away": 36.32727272727273,
+        "p3_home": 41.22222222222222,
+        "proj_poss": 70.6,
+        "rank_away": 34,
+        "rank_home": 19,
+        "spread": -5.6,
+        "total": 130.7
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-21T22:00Z",
       "status": "graded"
     },
     {
@@ -1127,161 +1155,115 @@
       "status": "graded"
     },
     {
-      "anchored": {
-        "margin_home": -16.0,
-        "season_bias_applied": -3.07,
-        "spread_shift": 1.5,
-        "total": 134.0,
-        "total_shift": -1.5
-      },
-      "away_short": "Duke",
+      "away_short": "Siena",
       "cards": [],
-      "espn_event_id": "401915910",
-      "home_short": "Columbia",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 17.5,
-        "spread_src": "consensus",
-        "total": 135.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Duke Blue Devils @ Columbia Lions",
+      "espn_event_id": "401918036",
+      "home_short": "Mercyhurst",
+      "matchup": "Siena Saints @ Mercyhurst Lakers",
       "model": {
-        "away_score": 75.4,
+        "away_score": 71.5,
+        "games_away": 6,
+        "games_home": 6,
+        "home_score": 66.1,
+        "margin_home": -5.4,
+        "p3_away": 45.56,
+        "p3_home": 56.08,
+        "proj_poss": 71.3,
+        "rank_away": 210,
+        "rank_home": 312,
+        "spread": 5.4,
+        "total": 137.6
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-21T22:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Cincinnati",
+      "cards": [],
+      "espn_event_id": "401916189",
+      "home_short": "UNLV",
+      "matchup": "Cincinnati Bearcats @ UNLV Lady Rebels",
+      "model": {
+        "away_score": 63.1,
         "games_away": 5,
-        "games_home": 5,
-        "home_score": 61.4,
-        "margin_home": -14.0,
-        "p3_away": 35.33333333333333,
-        "p3_home": 47.03333333333333,
-        "proj_poss": 71.0,
-        "rank_away": 8,
-        "rank_home": 62,
-        "spread": 14.0,
-        "total": 136.9
+        "games_home": 4,
+        "home_score": 67.9,
+        "margin_home": 4.8,
+        "p3_away": 43.522222222222226,
+        "p3_home": 46.4,
+        "proj_poss": 69.6,
+        "rank_away": 97,
+        "rank_home": 84,
+        "spread": -4.8,
+        "total": 131.0
       },
       "neutral_site": false,
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "sigma": {
-        "spread": 11.17,
-        "total": 15.97
-      },
-      "start": "2026-11-22T00:00Z",
+      "start": "2026-11-21T22:00Z",
       "status": "graded"
     },
     {
-      "away_short": "Gonzaga",
+      "away_short": "Iona",
       "cards": [],
-      "espn_event_id": "401928067",
-      "home_short": "Hawai'i",
-      "matchup": "Gonzaga Bulldogs @ Hawai'i Rainbow Wahine",
+      "espn_event_id": "401915669",
+      "home_short": "Bucknell",
+      "matchup": "Iona Gaels @ Bucknell Bison",
       "model": {
-        "away_score": 67.8,
+        "away_score": 58.2,
         "games_away": 6,
         "games_home": 5,
-        "home_score": 56.4,
-        "margin_home": -11.4,
-        "p3_away": 44.34,
-        "p3_home": 42.86666666666667,
-        "proj_poss": 69.2,
-        "rank_away": 73,
-        "rank_home": 186,
-        "spread": 11.4,
-        "total": 124.2
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-22T00:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Southeast Missouri State",
-      "cards": [],
-      "espn_event_id": "401921236",
-      "home_short": "Saint Louis",
-      "matchup": "Southeast Missouri State Redhawks @ Saint Louis Billikens",
-      "model": {
-        "away_score": 60.5,
-        "games_away": 7,
-        "games_home": 5,
-        "home_score": 76.7,
-        "margin_home": 16.2,
-        "p3_away": 51.845454545454544,
-        "p3_home": 43.3,
-        "proj_poss": 72.5,
-        "rank_away": 334,
-        "rank_home": 147,
-        "spread": -16.2,
-        "total": 137.2
+        "home_score": 61.1,
+        "margin_home": 2.9,
+        "p3_away": 46.84,
+        "p3_home": 50.355555555555554,
+        "proj_poss": 66.8,
+        "rank_away": 279,
+        "rank_home": 277,
+        "spread": -2.9,
+        "total": 119.3
       },
       "neutral_site": false,
       "pass_reasons": [
         "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-22T00:00Z",
+      "start": "2026-11-21T22:00Z",
       "status": "graded"
     },
     {
-      "away_short": "Charlotte",
+      "away_short": "Grand Canyon",
       "cards": [],
-      "espn_event_id": "401921021",
-      "home_short": "Davidson",
-      "matchup": "Charlotte 49ers @ Davidson Wildcats",
+      "espn_event_id": "401915965",
+      "home_short": "SMU",
+      "matchup": "Grand Canyon Lopes @ SMU Mustangs",
       "model": {
-        "away_score": 54.4,
+        "away_score": 68.3,
         "games_away": 4,
-        "games_home": 5,
-        "home_score": 67.7,
-        "margin_home": 13.3,
-        "p3_away": 44.1,
-        "p3_home": 47.18888888888888,
-        "proj_poss": 67.9,
-        "rank_away": 204,
-        "rank_home": 89,
-        "spread": -13.3,
-        "total": 122.0
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-22T00:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Eastern Illinois",
-      "cards": [],
-      "espn_event_id": "401919710",
-      "home_short": "Murray State",
-      "matchup": "Eastern Illinois Panthers @ Murray State Racers",
-      "model": {
-        "away_score": 64.0,
-        "games_away": 6,
-        "games_home": 5,
-        "home_score": 82.8,
-        "margin_home": 18.8,
-        "p3_away": 47.78,
-        "p3_home": 50.13333333333333,
+        "games_home": 6,
+        "home_score": 68.6,
+        "margin_home": 0.3,
+        "p3_away": 44.15,
+        "p3_home": 42.660000000000004,
         "proj_poss": 71.8,
-        "rank_away": 299,
-        "rank_home": 94,
-        "spread": -18.8,
-        "total": 146.7
+        "rank_away": 70,
+        "rank_home": 82,
+        "spread": -0.3,
+        "total": 137.0
       },
       "neutral_site": false,
       "pass_reasons": [
         "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-22T01:00Z",
+      "start": "2026-11-21T23:00Z",
       "status": "graded"
     },
     {
@@ -1341,12 +1323,12 @@
       "status": "skipped"
     }
   ],
-  "generated_at": "2026-11-21T23:22:57.080133Z",
+  "generated_at": "2026-11-22T02:00:17.706985Z",
   "market_bias": {
-    "mean_spread_delta": 3.8,
-    "mean_total_delta": -6.45,
-    "n_spread_lines": 2,
-    "n_total_lines": 2
+    "mean_spread_delta": 11.0,
+    "mean_total_delta": 15.4,
+    "n_spread_lines": 1,
+    "n_total_lines": 1
   },
   "n_cards": 0,
   "n_games": 52,
