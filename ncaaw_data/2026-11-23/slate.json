@@ -1,369 +1,138 @@
 {
   "date": "2026-11-23",
-  "fetched_at": "2026-11-23T07:24:02.174972Z",
+  "fetched_at": "2026-11-23T22:32:03.246109Z",
   "games": [
-    {
-      "espn_event_id": "401926088",
-      "start": "2026-11-23T16:00Z",
-      "et_date": "2026-11-23",
-      "name": "Toledo Rockets at Navy Midshipmen",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2426",
-        "location": "Navy",
-        "display_name": "Navy Midshipmen",
-        "canon": "navy",
-        "conf": "Patriot",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2649",
-        "location": "Toledo",
-        "display_name": "Toledo Rockets",
-        "canon": "toledo",
-        "conf": "MAC",
-        "record": "3-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401928193",
-      "start": "2026-11-23T17:00Z",
-      "et_date": "2026-11-23",
-      "name": "St. Bonaventure Bonnies at Chattanooga Mocs",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "236",
-        "location": "Chattanooga",
-        "display_name": "Chattanooga Mocs",
-        "canon": "chattanooga",
-        "conf": "SC",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "179",
-        "location": "St. Bonaventure",
-        "display_name": "St. Bonaventure Bonnies",
-        "canon": "st bonaventure",
-        "conf": "A10",
-        "record": "3-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401923672",
-      "start": "2026-11-23T17:00Z",
-      "et_date": "2026-11-23",
-      "name": "Oregon State Beavers at Middle Tennessee Blue Raiders",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2393",
-        "location": "Middle Tennessee",
-        "display_name": "Middle Tennessee Blue Raiders",
-        "canon": "middle tennessee",
-        "conf": "CUSA",
-        "record": "2-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "204",
-        "location": "Oregon State",
-        "display_name": "Oregon State Beavers",
-        "canon": "oregon st",
-        "conf": "Pac-12",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401916024",
-      "start": "2026-11-23T17:00Z",
-      "et_date": "2026-11-23",
-      "name": "Alcorn State Lady Braves at Michigan State Spartans",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "127",
-        "location": "Michigan State",
-        "display_name": "Michigan State Spartans",
-        "canon": "michigan st",
-        "conf": "Big Ten",
-        "record": "5-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2016",
-        "location": "Alcorn State",
-        "display_name": "Alcorn State Lady Braves",
-        "canon": "alcorn st",
-        "conf": "SWAC",
-        "record": "1-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401921427",
-      "start": "2026-11-23T18:30Z",
-      "et_date": "2026-11-23",
-      "name": "Utah Utes at Iowa Hawkeyes",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2294",
-        "location": "Iowa",
-        "display_name": "Iowa Hawkeyes",
-        "canon": "iowa",
-        "conf": "Big Ten",
-        "record": "5-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "254",
-        "location": "Utah",
-        "display_name": "Utah Utes",
-        "canon": "utah",
-        "conf": "Big 12",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401923673",
-      "start": "2026-11-23T19:30Z",
-      "et_date": "2026-11-23",
-      "name": "Oklahoma Sooners at Virginia Cavaliers",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "258",
-        "location": "Virginia",
-        "display_name": "Virginia Cavaliers",
-        "canon": "virginia",
-        "conf": "ACC",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "201",
-        "location": "Oklahoma",
-        "display_name": "Oklahoma Sooners",
-        "canon": "oklahoma",
-        "conf": "SEC",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401916019",
-      "start": "2026-11-23T19:30Z",
-      "et_date": "2026-11-23",
-      "name": "Virginia Tech Hokies at UT Martin Skyhawks",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2630",
-        "location": "UT Martin",
-        "display_name": "UT Martin Skyhawks",
-        "canon": "ut martin",
-        "conf": "OVC",
-        "record": "2-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "259",
-        "location": "Virginia Tech",
-        "display_name": "Virginia Tech Hokies",
-        "canon": "virginia tech",
-        "conf": "ACC",
-        "record": "5-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401913729",
       "start": "2026-11-23T21:00Z",
       "et_date": "2026-11-23",
-      "name": "Michigan Wolverines at Miami Hurricanes",
+      "name": "Miami Hurricanes at Michigan Wolverines",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2390",
-        "location": "Miami",
-        "display_name": "Miami Hurricanes",
-        "canon": "miami",
-        "conf": "ACC",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "130",
         "location": "Michigan",
         "display_name": "Michigan Wolverines",
         "canon": "michigan",
         "conf": "Big Ten",
         "record": "5-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401926044",
-      "start": "2026-11-23T21:00Z",
-      "et_date": "2026-11-23",
-      "name": "Old Dominion Monarchs at Memphis Tigers",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "235",
-        "location": "Memphis",
-        "display_name": "Memphis Tigers",
-        "canon": "memphis",
-        "conf": "Amer",
-        "record": "5-0",
-        "score": "0",
+        "score": "58",
         "winner": null
       },
       "away": {
-        "espn_id": "295",
-        "location": "Old Dominion",
-        "display_name": "Old Dominion Monarchs",
-        "canon": "old dominion",
-        "conf": "Sun Belt",
-        "record": "3-3",
-        "score": "0",
+        "espn_id": "2390",
+        "location": "Miami",
+        "display_name": "Miami Hurricanes",
+        "canon": "miami",
+        "conf": "ACC",
+        "record": "6-0",
+        "score": "43",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401921391",
-      "start": "2026-11-23T21:00Z",
-      "et_date": "2026-11-23",
-      "name": "Grand Canyon Lopes at High Point Panthers",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2272",
-        "location": "High Point",
-        "display_name": "High Point Panthers",
-        "canon": "high point",
-        "conf": "Big South",
-        "record": "6-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2253",
-        "location": "Grand Canyon",
-        "display_name": "Grand Canyon Lopes",
-        "canon": "grand canyon",
-        "conf": "MWC",
-        "record": "3-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "247e3cf7312de50688ae42ae038ce15f"
     },
     {
       "espn_event_id": "401913059",
       "start": "2026-11-23T22:00Z",
       "et_date": "2026-11-23",
-      "name": "Vanderbilt Commodores at Arizona Wildcats",
+      "name": "Arizona Wildcats at Vanderbilt Commodores",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "12",
-        "location": "Arizona",
-        "display_name": "Arizona Wildcats",
-        "canon": "arizona",
-        "conf": "Big 12",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "238",
         "location": "Vanderbilt",
         "display_name": "Vanderbilt Commodores",
         "canon": "vanderbilt",
         "conf": "SEC",
         "record": "5-1",
-        "score": "0",
+        "score": "34",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "12",
+        "location": "Arizona",
+        "display_name": "Arizona Wildcats",
+        "canon": "arizona",
+        "conf": "Big 12",
+        "record": "4-1",
+        "score": "23",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "33bdfb711e4edfd26eaaba0e3713da7b"
+    },
+    {
+      "espn_event_id": "401926044",
+      "start": "2026-11-23T21:00Z",
+      "et_date": "2026-11-23",
+      "name": "Memphis Tigers at Old Dominion Monarchs",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "295",
+        "location": "Old Dominion",
+        "display_name": "Old Dominion Monarchs",
+        "canon": "old dominion",
+        "conf": "Sun Belt",
+        "record": "3-3",
+        "score": "61",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "235",
+        "location": "Memphis",
+        "display_name": "Memphis Tigers",
+        "canon": "memphis",
+        "conf": "Amer",
+        "record": "5-0",
+        "score": "65",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "d0cb4547f6b0d0de8d28d58fb2c8d861"
+    },
+    {
+      "espn_event_id": "401921391",
+      "start": "2026-11-23T21:00Z",
+      "et_date": "2026-11-23",
+      "name": "High Point Panthers at Grand Canyon Lopes",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2253",
+        "location": "Grand Canyon",
+        "display_name": "Grand Canyon Lopes",
+        "canon": "grand canyon",
+        "conf": "MWC",
+        "record": "3-2",
+        "score": "49",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2272",
+        "location": "High Point",
+        "display_name": "High Point Panthers",
+        "canon": "high point",
+        "conf": "Big South",
+        "record": "6-1",
+        "score": "51",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "175f9de8bab5176b89735ee850957b0e"
     },
     {
       "espn_event_id": "401925624",
@@ -372,7 +141,7 @@
       "name": "Elon Phoenix at North Carolina Central Eagles",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2428",
@@ -381,7 +150,7 @@
         "canon": "north carolina central",
         "conf": "MEAC",
         "record": "2-6",
-        "score": "0",
+        "score": "19",
         "winner": null
       },
       "away": {
@@ -391,7 +160,7 @@
         "canon": "elon",
         "conf": "CAA",
         "record": "3-2",
-        "score": "0",
+        "score": "19",
         "winner": null
       },
       "torvik_home": true,
@@ -405,7 +174,7 @@
       "name": "Gonzaga Bulldogs at California Golden Bears",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "25",
@@ -414,7 +183,7 @@
         "canon": "california",
         "conf": "ACC",
         "record": "6-0",
-        "score": "0",
+        "score": "27",
         "winner": null
       },
       "away": {
@@ -424,8 +193,239 @@
         "canon": "gonzaga",
         "conf": "Pac-12",
         "record": "4-3",
-        "score": "0",
+        "score": "19",
         "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401921427",
+      "start": "2026-11-23T18:30Z",
+      "et_date": "2026-11-23",
+      "name": "Iowa Hawkeyes at Utah Utes",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "254",
+        "location": "Utah",
+        "display_name": "Utah Utes",
+        "canon": "utah",
+        "conf": "Big 12",
+        "record": "6-1",
+        "score": "66",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2294",
+        "location": "Iowa",
+        "display_name": "Iowa Hawkeyes",
+        "canon": "iowa",
+        "conf": "Big Ten",
+        "record": "6-1",
+        "score": "75",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401923673",
+      "start": "2026-11-23T19:30Z",
+      "et_date": "2026-11-23",
+      "name": "Oklahoma Sooners at Virginia Cavaliers",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "258",
+        "location": "Virginia",
+        "display_name": "Virginia Cavaliers",
+        "canon": "virginia",
+        "conf": "ACC",
+        "record": "6-1",
+        "score": "66",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "201",
+        "location": "Oklahoma",
+        "display_name": "Oklahoma Sooners",
+        "canon": "oklahoma",
+        "conf": "SEC",
+        "record": "7-0",
+        "score": "86",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401926088",
+      "start": "2026-11-23T16:00Z",
+      "et_date": "2026-11-23",
+      "name": "Toledo Rockets at Navy Midshipmen",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2426",
+        "location": "Navy",
+        "display_name": "Navy Midshipmen",
+        "canon": "navy",
+        "conf": "Patriot",
+        "record": "4-3",
+        "score": "51",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2649",
+        "location": "Toledo",
+        "display_name": "Toledo Rockets",
+        "canon": "toledo",
+        "conf": "MAC",
+        "record": "4-2",
+        "score": "72",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401928193",
+      "start": "2026-11-23T17:00Z",
+      "et_date": "2026-11-23",
+      "name": "St. Bonaventure Bonnies at Chattanooga Mocs",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "236",
+        "location": "Chattanooga",
+        "display_name": "Chattanooga Mocs",
+        "canon": "chattanooga",
+        "conf": "SC",
+        "record": "4-3",
+        "score": "55",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "179",
+        "location": "St. Bonaventure",
+        "display_name": "St. Bonaventure Bonnies",
+        "canon": "st bonaventure",
+        "conf": "A10",
+        "record": "4-1",
+        "score": "62",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401923672",
+      "start": "2026-11-23T17:00Z",
+      "et_date": "2026-11-23",
+      "name": "Oregon State Beavers at Middle Tennessee Blue Raiders",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2393",
+        "location": "Middle Tennessee",
+        "display_name": "Middle Tennessee Blue Raiders",
+        "canon": "middle tennessee",
+        "conf": "CUSA",
+        "record": "3-3",
+        "score": "63",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "204",
+        "location": "Oregon State",
+        "display_name": "Oregon State Beavers",
+        "canon": "oregon st",
+        "conf": "Pac-12",
+        "record": "4-3",
+        "score": "54",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401916024",
+      "start": "2026-11-23T17:00Z",
+      "et_date": "2026-11-23",
+      "name": "Alcorn State Lady Braves at Michigan State Spartans",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "127",
+        "location": "Michigan State",
+        "display_name": "Michigan State Spartans",
+        "canon": "michigan st",
+        "conf": "Big Ten",
+        "record": "6-0",
+        "score": "94",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2016",
+        "location": "Alcorn State",
+        "display_name": "Alcorn State Lady Braves",
+        "canon": "alcorn st",
+        "conf": "SWAC",
+        "record": "1-4",
+        "score": "44",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401916019",
+      "start": "2026-11-23T19:30Z",
+      "et_date": "2026-11-23",
+      "name": "Virginia Tech Hokies at UT Martin Skyhawks",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2630",
+        "location": "UT Martin",
+        "display_name": "UT Martin Skyhawks",
+        "canon": "ut martin",
+        "conf": "OVC",
+        "record": "2-5",
+        "score": "41",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "259",
+        "location": "Virginia Tech",
+        "display_name": "Virginia Tech Hokies",
+        "canon": "virginia tech",
+        "conf": "ACC",
+        "record": "6-0",
+        "score": "85",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -561,7 +561,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "cc517255abb7d21d93e616b9c420135f"
     },
     {
       "espn_event_id": "401911509",
@@ -1122,7 +1122,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "d6ef1c00481fb8a852aa61a9430fc6b1"
     },
     {
       "espn_event_id": "401923482",
@@ -1221,7 +1221,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "44a504d58b9668e80ca7afd25e294171"
     }
   ]
 }
