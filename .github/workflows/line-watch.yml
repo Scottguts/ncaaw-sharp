@@ -13,6 +13,9 @@ on:
     - cron: "7 11,13,15 * 11,12,1-4 *"  # 6a/8a/10a ET — early lines
     - cron: "7 16-23 * 11,12,1-4 *"     # 11a-6p ET hourly — posting window
     - cron: "7 0-3 * 11,12,1-4 *"       # 7p-10p ET — live-signal scans
+    - cron: "37 5 * 11,12,1-4 *"        # 12:37a ET — bookkeeping-only pass:
+                                        # settle late West Coast finishes
+                                        # (quota saver skips the odds call)
   workflow_dispatch:
 
 permissions:

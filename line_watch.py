@@ -26,7 +26,8 @@ from zoneinfo import ZoneInfo
 
 import ncaaw_data_scraper as scraper
 import ncaaw_grader as grader
-from bet_tracker import _read_log, append_pending, append_shadow, build_record
+from bet_tracker import (_read_log, append_pending, append_shadow,
+                         build_record, settle_pending, BET_LOG, SHADOW_LOG)
 from notify import post_discord, _fmt_price, SITE_URL
 import build_site
 
@@ -42,7 +43,27 @@ def run() -> int:
     today = datetime.now(_ET).date()
     today_iso = today.isoformat()
 
-    # 0. quota saver: if nothing is pregame AND nothing is in progress,
+    # 0a. continuous bookkeeping (free — ESPN only): settle any finished
+    # games, refresh the finals report card, rebuild the record. This runs
+    # EVERY sweep so the dashboard's record and bet badges update within the
+    # hour a game ends, instead of lagging until the next-morning daily run.
+    settled = 0
+    try:
+        settled += settle_pending(BET_LOG, "real")
+        settled += settle_pending(SHADOW_LOG, "shadow")
+        import finals_report
+        from datetime import timedelta
+        for d in (today - timedelta(days=1), today):
+            try:
+                finals_report.build_report(d.isoformat())
+            except Exception:
+                pass
+        if settled:
+            build_record()
+    except Exception as e:
+        print(f"[watch] bookkeeping failed (non-fatal): {e}")
+
+    # 0b. quota saver: if nothing is pregame AND nothing is in progress,
     # there's nothing to bet or scan — skip the odds call (ESPN check free).
     # In-progress games keep the sweep alive for the live-signal scan.
     try:
@@ -52,7 +73,8 @@ def run() -> int:
         in_progress = [g for g in slate_now if not g.get("completed")
                        and g not in upcoming]
         if not upcoming and not in_progress:
-            print("[watch] no pregame or live games left today — skipping odds call")
+            print("[watch] no pregame or live games left — bookkeeping-only sweep")
+            build_site.build()
             return 0
         print(f"[watch] {len(upcoming)} pregame, {len(in_progress)} live")
     except Exception as e:
