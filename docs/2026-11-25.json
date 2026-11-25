@@ -1,39 +1,13 @@
 {
   "cards": [
     {
-      "bet_label": "Stetson Hatters +15.5",
-      "book": "betrivers",
-      "confidence": 6,
-      "edge": 0.0589,
-      "espn_event_id": "401915874",
-      "fair_american": -122,
-      "fair_prob": 0.5498,
-      "line": 15.5,
-      "market": "spread",
-      "matchup": "Robert Morris Colonials @ Stetson Hatters",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -108,
-      "reasoning": [
-        "Model margin -14.1 vs market -15.5 (home)",
-        "Anchored fair margin -14.1 vs line +15.5 (home)"
-      ],
-      "risk": "Lean",
-      "side": "home",
-      "start": "2026-11-25T18:15Z",
-      "unit_size": 0.5
-    },
-    {
       "bet_label": "Under 139.5",
       "book": "ballybet",
       "confidence": 9,
-      "edge": 0.0404,
+      "edge": 0.04,
       "espn_event_id": "401918832",
       "fair_american": -116,
-      "fair_prob": 0.5378,
+      "fair_prob": 0.5376,
       "line": 139.5,
       "market": "total",
       "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
@@ -58,7 +32,7 @@
     {
       "anchored": {
         "margin_home": 40.0,
-        "season_bias_applied": -3.34,
+        "season_bias_applied": -1.84,
         "spread_shift": -1.5,
         "total": 170.0,
         "total_shift": -1.5
@@ -96,14 +70,14 @@
       "shadow": [],
       "sigma": {
         "spread": 12.49,
-        "total": 15.67
+        "total": 15.76
       },
       "start": "2026-11-25T18:30Z",
       "status": "graded"
     },
     {
       "anchored": {
-        "margin_home": 12.5,
+        "margin_home": 13.0,
         "spread_shift": -1.5
       },
       "away_short": "Saint Mary's",
@@ -112,7 +86,7 @@
       "home_short": "Old Dominion",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -14.0,
+        "spread_home": -14.5,
         "spread_src": "consensus",
         "total": null,
         "total_src": null
@@ -139,7 +113,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.19,
-        "total": 15.11
+        "total": 15.2
       },
       "start": "2026-11-25T18:00Z",
       "status": "graded"
@@ -356,48 +330,21 @@
     },
     {
       "anchored": {
-        "margin_home": -14.1,
-        "season_bias_applied": -3.34,
-        "spread_shift": 1.4,
-        "total": 127.5,
+        "margin_home": -15.0,
+        "season_bias_applied": -1.84,
+        "spread_shift": 1.5,
+        "total": 128.0,
         "total_shift": -1.5
       },
       "away_short": "Robert Morris",
-      "cards": [
-        {
-          "bet_label": "Stetson Hatters +15.5",
-          "book": "betrivers",
-          "confidence": 6,
-          "edge": 0.0589,
-          "espn_event_id": "401915874",
-          "fair_american": -122,
-          "fair_prob": 0.5498,
-          "line": 15.5,
-          "market": "spread",
-          "matchup": "Robert Morris Colonials @ Stetson Hatters",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -108,
-          "reasoning": [
-            "Model margin -14.1 vs market -15.5 (home)",
-            "Anchored fair margin -14.1 vs line +15.5 (home)"
-          ],
-          "risk": "Lean",
-          "side": "home",
-          "start": "2026-11-25T18:15Z",
-          "unit_size": 0.5
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401915874",
       "home_short": "Stetson",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 15.5,
+        "spread_home": 16.5,
         "spread_src": "consensus",
-        "total": 129.0,
+        "total": 129.5,
         "total_src": "consensus"
       },
       "matchup": "Robert Morris Colonials @ Stetson Hatters",
@@ -416,11 +363,13 @@
         "total": 121.0
       },
       "neutral_site": true,
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "shadow": [],
       "sigma": {
         "spread": 11.18,
-        "total": 15.01
+        "total": 15.1
       },
       "start": "2026-11-25T18:15Z",
       "status": "graded"
@@ -483,8 +432,8 @@
     },
     {
       "anchored": {
-        "margin_home": -10.0,
-        "season_bias_applied": -3.34,
+        "margin_home": -10.5,
+        "season_bias_applied": -1.84,
         "spread_shift": 1.5,
         "total": 123.0,
         "total_shift": 1.5
@@ -495,7 +444,7 @@
       "home_short": "Eastern Illinois",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 11.5,
+        "spread_home": 12.0,
         "spread_src": "consensus",
         "total": 121.5,
         "total_src": "consensus"
@@ -522,7 +471,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.19,
-        "total": 15.59
+        "total": 15.68
       },
       "start": "2026-11-25T19:00Z",
       "status": "graded"
@@ -981,7 +930,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.18,
-        "total": 15.6
+        "total": 15.69
       },
       "start": "2026-11-25T21:00Z",
       "status": "graded"
@@ -1146,7 +1095,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.2,
-        "total": 15.7
+        "total": 15.79
       },
       "start": "2026-11-25T21:00Z",
       "status": "graded"
@@ -1238,7 +1187,7 @@
     {
       "anchored": {
         "margin_home": -20.0,
-        "season_bias_applied": -3.34,
+        "season_bias_applied": -1.84,
         "spread_shift": 1.5,
         "total": 138.0,
         "total_shift": -1.5
@@ -1249,10 +1198,10 @@
           "bet_label": "Under 139.5",
           "book": "ballybet",
           "confidence": 9,
-          "edge": 0.0404,
+          "edge": 0.04,
           "espn_event_id": "401918832",
           "fair_american": -116,
-          "fair_prob": 0.5378,
+          "fair_prob": 0.5376,
           "line": 139.5,
           "market": "total",
           "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
@@ -1301,7 +1250,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.37,
-        "total": 15.81
+        "total": 15.9
       },
       "start": "2026-11-25T23:30Z",
       "status": "graded"
@@ -1461,16 +1410,16 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-25T19:49:02.446314Z",
+  "generated_at": "2026-11-25T19:49:29.406046Z",
   "market_bias": {
-    "mean_spread_delta": -4.0,
-    "mean_total_delta": -10.9,
+    "mean_spread_delta": -3.8,
+    "mean_total_delta": -11.02,
     "n_spread_lines": 5,
     "n_total_lines": 4
   },
-  "n_cards": 2,
+  "n_cards": 1,
   "n_games": 49,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 1.5
+  "total_units": 1.0
 }

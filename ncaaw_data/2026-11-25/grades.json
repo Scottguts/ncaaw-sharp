@@ -1,43 +1,17 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T19:49:02.446314Z",
+  "generated_at": "2026-11-25T19:49:29.406046Z",
   "market_bias": {
     "n_spread_lines": 5,
     "n_total_lines": 4,
-    "mean_spread_delta": -4.0,
-    "mean_total_delta": -10.9
+    "mean_spread_delta": -3.8,
+    "mean_total_delta": -11.02
   },
   "odds_available": true,
   "n_games": 49,
-  "n_cards": 2,
-  "total_units": 1.5,
+  "n_cards": 1,
+  "total_units": 1.0,
   "cards": [
-    {
-      "bet_label": "Stetson Hatters +15.5",
-      "market": "spread",
-      "side": "home",
-      "book": "betrivers",
-      "price_american": -108,
-      "line": 15.5,
-      "fair_prob": 0.5498,
-      "fair_american": -122,
-      "edge": 0.0589,
-      "confidence": 6,
-      "unit_size": 0.5,
-      "risk": "Lean",
-      "reasoning": [
-        "Model margin -14.1 vs market -15.5 (home)",
-        "Anchored fair margin -14.1 vs line +15.5 (home)"
-      ],
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "espn_event_id": "401915874",
-      "matchup": "Robert Morris Colonials @ Stetson Hatters",
-      "start": "2026-11-25T18:15Z"
-    },
     {
       "bet_label": "Under 139.5",
       "market": "total",
@@ -45,9 +19,9 @@
       "book": "ballybet",
       "price_american": -107,
       "line": 139.5,
-      "fair_prob": 0.5378,
+      "fair_prob": 0.5376,
       "fair_american": -116,
-      "edge": 0.0404,
+      "edge": 0.04,
       "confidence": 9,
       "unit_size": 1.0,
       "risk": "Standard",
@@ -103,14 +77,14 @@
       },
       "sigma": {
         "spread": 12.49,
-        "total": 15.67
+        "total": 15.76
       },
       "anchored": {
         "margin_home": 40.0,
         "spread_shift": -1.5,
         "total": 170.0,
         "total_shift": -1.5,
-        "season_bias_applied": -3.34
+        "season_bias_applied": -1.84
       }
     },
     {
@@ -141,7 +115,7 @@
         "p3_away": 50.0
       },
       "market": {
-        "spread_home": -14.0,
+        "spread_home": -14.5,
         "total": null,
         "spread_src": "consensus",
         "total_src": null,
@@ -149,10 +123,10 @@
       },
       "sigma": {
         "spread": 11.19,
-        "total": 15.11
+        "total": 15.2
       },
       "anchored": {
-        "margin_home": 12.5,
+        "margin_home": 13.0,
         "spread_shift": -1.5
       }
     },
@@ -374,36 +348,11 @@
       "start": "2026-11-25T18:15Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [
-        {
-          "bet_label": "Stetson Hatters +15.5",
-          "market": "spread",
-          "side": "home",
-          "book": "betrivers",
-          "price_american": -108,
-          "line": 15.5,
-          "fair_prob": 0.5498,
-          "fair_american": -122,
-          "edge": 0.0589,
-          "confidence": 6,
-          "unit_size": 0.5,
-          "risk": "Lean",
-          "reasoning": [
-            "Model margin -14.1 vs market -15.5 (home)",
-            "Anchored fair margin -14.1 vs line +15.5 (home)"
-          ],
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "espn_event_id": "401915874",
-          "matchup": "Robert Morris Colonials @ Stetson Hatters",
-          "start": "2026-11-25T18:15Z"
-        }
-      ],
+      "cards": [],
       "shadow": [],
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "model": {
         "away_score": 67.5,
         "home_score": 53.5,
@@ -419,22 +368,22 @@
         "p3_away": 42.733333333333334
       },
       "market": {
-        "spread_home": 15.5,
-        "total": 129.0,
+        "spread_home": 16.5,
+        "total": 129.5,
         "spread_src": "consensus",
         "total_src": "consensus",
         "pinnacle_fair_home_ml": null
       },
       "sigma": {
         "spread": 11.18,
-        "total": 15.01
+        "total": 15.1
       },
       "anchored": {
-        "margin_home": -14.1,
-        "spread_shift": 1.4,
-        "total": 127.5,
+        "margin_home": -15.0,
+        "spread_shift": 1.5,
+        "total": 128.0,
         "total_shift": -1.5,
-        "season_bias_applied": -3.34
+        "season_bias_applied": -1.84
       }
     },
     {
@@ -521,7 +470,7 @@
         "p3_away": 50.62
       },
       "market": {
-        "spread_home": 11.5,
+        "spread_home": 12.0,
         "total": 121.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -529,14 +478,14 @@
       },
       "sigma": {
         "spread": 11.19,
-        "total": 15.59
+        "total": 15.68
       },
       "anchored": {
-        "margin_home": -10.0,
+        "margin_home": -10.5,
         "spread_shift": 1.5,
         "total": 123.0,
         "total_shift": 1.5,
-        "season_bias_applied": -3.34
+        "season_bias_applied": -1.84
       }
     },
     {
@@ -995,7 +944,7 @@
       },
       "sigma": {
         "spread": 11.18,
-        "total": 15.6
+        "total": 15.69
       }
     },
     {
@@ -1160,7 +1109,7 @@
       },
       "sigma": {
         "spread": 11.2,
-        "total": 15.7
+        "total": 15.79
       }
     },
     {
@@ -1263,9 +1212,9 @@
           "book": "ballybet",
           "price_american": -107,
           "line": 139.5,
-          "fair_prob": 0.5378,
+          "fair_prob": 0.5376,
           "fair_american": -116,
-          "edge": 0.0404,
+          "edge": 0.04,
           "confidence": 9,
           "unit_size": 1.0,
           "risk": "Standard",
@@ -1308,14 +1257,14 @@
       },
       "sigma": {
         "spread": 11.37,
-        "total": 15.81
+        "total": 15.9
       },
       "anchored": {
         "margin_home": -20.0,
         "spread_shift": 1.5,
         "total": 138.0,
         "total_shift": -1.5,
-        "season_bias_applied": -3.34
+        "season_bias_applied": -1.84
       }
     },
     {

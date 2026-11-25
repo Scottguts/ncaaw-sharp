@@ -1,14 +1,6 @@
 # NCAAW Betting Card — 2026-11-25
 
-**2 play(s) · 1.5u total**
-
-## Stetson Hatters +15.5 (-108 betrivers)
-
-- **Game:** Robert Morris Colonials @ Stetson Hatters
-- **Market:** spread · **Fair:** 55.0% (-122) · **Edge:** 5.9%
-- **Confidence:** 6/10 · **Size:** 0.5u (Lean)
-- **Why:** Model margin -14.1 vs market -15.5 (home); Anchored fair margin -14.1 vs line +15.5 (home)
-- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+**1 play(s) · 1u total**
 
 ## Under 139.5 (-107 ballybet)
 
@@ -23,7 +15,7 @@
 ### Full slate
 
 - **Toledo Rockets @ Michigan Wolverines** — model 52-80 (margin +27.0 home, total 132.0) · market: home -41.5 (consensus) · total 171.5 (consensus) · PASS: no edge cleared the gates
-- **Saint Mary's Gaels @ Old Dominion Monarchs** — model 64-59 (margin -4.8 home, total 122.6) · market: home -14 (consensus) · PASS: no edge cleared the gates
+- **Saint Mary's Gaels @ Old Dominion Monarchs** — model 64-59 (margin -4.8 home, total 122.6) · market: home -14.5 (consensus) · PASS: no edge cleared the gates
 - **IU Columbus Crimson Pride @ IU Indianapolis Jaguars** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Southern Indiana Screaming Eagles @ Northern Kentucky Norse** — model 66-60 (margin -5.3 home, total 125.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **Furman Paladins @ Presbyterian Blue Hose** — model 72-61 (margin -11.6 home, total 132.8) · market: no line · PASS: no market line (nothing to anchor against)
@@ -33,10 +25,10 @@
 - **Rhode Island Rams @ Holy Cross Crusaders** — model 65-53 (margin -11.4 home, total 118.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **Canisius Golden Griffins @ Mercyhurst Lakers** — model 64-64 (margin -0.1 home, total 128.2) · market: no line · PASS: no market line (nothing to anchor against)
 - **UT Rio Grande Valley Vaqueros @ Rice Owls** — model 56-72 (margin +15.8 home, total 127.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **Robert Morris Colonials @ Stetson Hatters** — model 68-54 (margin -14.1 home, total 121.0) · market: home +15.5 (consensus) · total 129 (consensus)
+- **Robert Morris Colonials @ Stetson Hatters** — model 68-54 (margin -14.1 home, total 121.0) · market: home +16.5 (consensus) · total 129.5 (consensus) · PASS: no edge cleared the gates
 - **Arizona Wildcats @ George Washington Revolutionaries** — model 66-62 (margin -4.3 home, total 127.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Florida A&M Rattlers @ Kennesaw State Owls** — model 64-73 (margin +9.2 home, total 136.5) · market: no line · PASS: no market line (nothing to anchor against)
-- **Oakland Golden Grizzlies @ Eastern Illinois Panthers** — model 68-63 (margin -4.8 home, total 130.6) · market: home +11.5 (consensus) · total 121.5 (consensus) · PASS: no edge cleared the gates
+- **Oakland Golden Grizzlies @ Eastern Illinois Panthers** — model 68-63 (margin -4.8 home, total 130.6) · market: home +12 (consensus) · total 121.5 (consensus) · PASS: no edge cleared the gates
 - **Cal State East Bay Pioneers @ San Francisco Dons** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Union Garnet Chargers @ UAlbany Great Danes** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Navy Midshipmen @ Iowa Hawkeyes** — model 59-86 (margin +27.2 home, total 144.4) · market: no line · PASS: no market line (nothing to anchor against)
@@ -72,4 +64,4 @@
 - **Samford Bulldogs @ Alabama Crimson Tide** — model 52-79 (margin +26.8 home, total 131.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **San Diego Toreros @ Utah Tech Trailblazers** — model 71-63 (margin -8.2 home, total 133.3) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-25T19:49:02Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-25T19:49:29Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
