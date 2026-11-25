@@ -1,17 +1,30 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T19:49:28.773725Z",
-  "calibration": [],
+  "generated_at": "2026-11-25T20:26:08.937817Z",
+  "calibration": [
+    {
+      "p": 0.452,
+      "hit": true
+    },
+    {
+      "p": 0.447,
+      "hit": false
+    },
+    {
+      "p": 0.553,
+      "hit": true
+    }
+  ],
   "summary": {
-    "n": 13,
-    "spread_mae": 14.01,
-    "total_mae": 13.68,
-    "su_pct": 84.6,
+    "n": 20,
+    "spread_mae": 13.27,
+    "total_mae": 13.12,
+    "su_pct": 80.0,
     "fired": {
-      "w": 0,
+      "w": 1,
       "l": 0,
       "p": 0,
-      "units": 0.0
+      "units": 0.46
     }
   },
   "games": [
@@ -84,6 +97,57 @@
       "had_card": false
     },
     {
+      "matchup": "Robert Morris Colonials @ Stetson Hatters",
+      "away_short": "Robert Morris",
+      "home_short": "Stetson",
+      "model_away": 67.5,
+      "model_home": 53.5,
+      "act_away": 69,
+      "act_home": 59,
+      "model_margin_home": -14.1,
+      "act_margin_home": -10,
+      "model_total": 121.0,
+      "act_total": 128,
+      "spread_err": -4.1,
+      "total_err": -7.0,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Canisius Golden Griffins @ Mercyhurst Lakers",
+      "away_short": "Canisius",
+      "home_short": "Mercyhurst",
+      "model_away": 64.2,
+      "model_home": 64.1,
+      "act_away": 55,
+      "act_home": 60,
+      "model_margin_home": -0.1,
+      "act_margin_home": 5,
+      "model_total": 128.2,
+      "act_total": 115,
+      "spread_err": -5.1,
+      "total_err": 13.2,
+      "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Rhode Island Rams @ Holy Cross Crusaders",
+      "away_short": "Rhode Island",
+      "home_short": "Holy Cross",
+      "model_away": 64.8,
+      "model_home": 53.4,
+      "act_away": 62,
+      "act_home": 43,
+      "model_margin_home": -11.4,
+      "act_margin_home": -19,
+      "model_total": 118.3,
+      "act_total": 105,
+      "spread_err": 7.6,
+      "total_err": 13.3,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Vermont Catamounts @ Texas Southern Tigers",
       "away_short": "Vermont",
       "home_short": "Texas Southern",
@@ -115,6 +179,23 @@
       "spread_err": 10.2,
       "total_err": -1.0,
       "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Saint Mary's Gaels @ Old Dominion Monarchs",
+      "away_short": "Saint Mary's",
+      "home_short": "Old Dominion",
+      "model_away": 63.7,
+      "model_home": 58.9,
+      "act_away": 64,
+      "act_home": 72,
+      "model_margin_home": -4.8,
+      "act_margin_home": 8,
+      "model_total": 122.6,
+      "act_total": 136,
+      "spread_err": -12.8,
+      "total_err": -13.4,
+      "side_right": false,
       "had_card": false
     },
     {
@@ -152,6 +233,40 @@
       "had_card": false
     },
     {
+      "matchup": "Mississippi Valley State Devilettes @ Louisiana Tech Lady Techsters",
+      "away_short": "Mississippi Valley State",
+      "home_short": "Louisiana Tech",
+      "model_away": 54.6,
+      "model_home": 85.3,
+      "act_away": 45,
+      "act_home": 93,
+      "model_margin_home": 30.7,
+      "act_margin_home": 48,
+      "model_total": 139.9,
+      "act_total": 138,
+      "spread_err": -17.3,
+      "total_err": 1.9,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Furman Paladins @ Presbyterian Blue Hose",
+      "away_short": "Furman",
+      "home_short": "Presbyterian",
+      "model_away": 72.2,
+      "model_home": 60.6,
+      "act_away": 76,
+      "act_home": 47,
+      "model_margin_home": -11.6,
+      "act_margin_home": -29,
+      "model_total": 132.8,
+      "act_total": 123,
+      "spread_err": 17.4,
+      "total_err": 9.8,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "UT Rio Grande Valley Vaqueros @ Rice Owls",
       "away_short": "UT Rio Grande Valley",
       "home_short": "Rice",
@@ -183,6 +298,23 @@
       "spread_err": 18.4,
       "total_err": 8.1,
       "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Toledo Rockets @ Michigan Wolverines",
+      "away_short": "Toledo",
+      "home_short": "Michigan",
+      "model_away": 52.5,
+      "model_home": 79.5,
+      "act_away": 56,
+      "act_home": 102,
+      "model_margin_home": 27.0,
+      "act_margin_home": 46,
+      "model_total": 132.0,
+      "act_total": 158,
+      "spread_err": -19.0,
+      "total_err": -26.0,
+      "side_right": true,
       "had_card": false
     },
     {
