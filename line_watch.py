@@ -53,9 +53,17 @@ def run() -> int:
         settled += settle_pending(SHADOW_LOG, "shadow")
         import finals_report
         from datetime import timedelta
-        for d in (today - timedelta(days=1), today):
+        # yesterday + today refresh every sweep; older dates backfill if
+        # missing (daily-run precheck can skip the whole morning job, so
+        # sweeps are the reliable bookkeeping path)
+        targets = {(today - timedelta(days=1)).isoformat(), today.isoformat()}
+        targets |= {p.name for p in scraper.DATA_ROOT.iterdir()
+                    if p.is_dir() and p.name < today.isoformat()
+                    and p.name != 'history' and (p / 'grades.json').exists()
+                    and not (p / 'finals.json').exists()}
+        for d in sorted(targets):
             try:
-                finals_report.build_report(d.isoformat())
+                finals_report.build_report(d)
             except Exception:
                 pass
         if settled:
