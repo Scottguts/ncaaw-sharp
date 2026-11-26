@@ -1,0 +1,147 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T20:04:39.173378Z",
+  "calibration": [
+    {
+      "p": 0.553,
+      "hit": false
+    },
+    {
+      "p": 0.489,
+      "hit": true
+    }
+  ],
+  "summary": {
+    "n": 7,
+    "spread_mae": 9.41,
+    "total_mae": 12.16,
+    "su_pct": 71.4,
+    "fired": {
+      "w": 1,
+      "l": 0,
+      "p": 0,
+      "units": 0.92
+    }
+  },
+  "games": [
+    {
+      "matchup": "Texas Southern Tigers @ Howard Bison",
+      "away_short": "Texas Southern",
+      "home_short": "Howard",
+      "model_away": 60.3,
+      "model_home": 75.2,
+      "act_away": 51,
+      "act_home": 64,
+      "model_margin_home": 15.0,
+      "act_margin_home": 13,
+      "model_total": 135.5,
+      "act_total": 115,
+      "spread_err": 2.0,
+      "total_err": 20.5,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Little Rock Trojans @ Tennessee Tech Golden Eagles",
+      "away_short": "Little Rock",
+      "home_short": "Tennessee Tech",
+      "model_away": 61.9,
+      "model_home": 65.1,
+      "act_away": 53,
+      "act_home": 50,
+      "model_margin_home": 3.2,
+      "act_margin_home": -3,
+      "model_total": 127.0,
+      "act_total": 103,
+      "spread_err": 6.2,
+      "total_err": 24.0,
+      "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Oregon Ducks @ Maryland Eastern Shore Hawks",
+      "away_short": "Oregon",
+      "home_short": "Maryland Eastern Shore",
+      "model_away": 85.8,
+      "model_home": 54.3,
+      "act_away": 74,
+      "act_home": 50,
+      "model_margin_home": -31.5,
+      "act_margin_home": -24,
+      "model_total": 140.1,
+      "act_total": 124,
+      "spread_err": -7.5,
+      "total_err": 16.1,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Clemson Tigers @ Robert Morris Colonials",
+      "away_short": "Clemson",
+      "home_short": "Robert Morris",
+      "model_away": 66.7,
+      "model_home": 52.5,
+      "act_away": 66,
+      "act_home": 43,
+      "model_margin_home": -14.2,
+      "act_margin_home": -23,
+      "model_total": 119.2,
+      "act_total": 109,
+      "spread_err": 8.8,
+      "total_err": 10.2,
+      "side_right": true,
+      "had_card": true
+    },
+    {
+      "matchup": "West Virginia Mountaineers @ Notre Dame Fighting Irish",
+      "away_short": "West Virginia",
+      "home_short": "Notre Dame",
+      "model_away": 70.5,
+      "model_home": 75.8,
+      "act_away": 64,
+      "act_home": 78,
+      "model_margin_home": 5.2,
+      "act_margin_home": 14,
+      "model_total": 146.3,
+      "act_total": 142,
+      "spread_err": -8.8,
+      "total_err": 4.3,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Auburn Tigers @ Southern Jaguars",
+      "away_short": "Auburn",
+      "home_short": "Southern",
+      "model_away": 66.6,
+      "model_home": 48.8,
+      "act_away": 54,
+      "act_home": 52,
+      "model_margin_home": -17.9,
+      "act_margin_home": -2,
+      "model_total": 115.4,
+      "act_total": 106,
+      "spread_err": -15.9,
+      "total_err": 9.4,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Syracuse Orange @ Wisconsin Badgers",
+      "away_short": "Syracuse",
+      "home_short": "Wisconsin",
+      "model_away": 66.3,
+      "model_home": 70.1,
+      "act_away": 75,
+      "act_home": 62,
+      "model_margin_home": 3.7,
+      "act_margin_home": -13,
+      "model_total": 136.4,
+      "act_total": 137,
+      "spread_err": 16.7,
+      "total_err": -0.6,
+      "side_right": false,
+      "had_card": false
+    }
+  ]
+}

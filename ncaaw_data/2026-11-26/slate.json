@@ -1,7 +1,172 @@
 {
   "date": "2026-11-26",
-  "fetched_at": "2026-11-26T15:44:54.055836Z",
+  "fetched_at": "2026-11-26T20:04:39.608517Z",
   "games": [
+    {
+      "espn_event_id": "401920170",
+      "start": "2026-11-26T18:00Z",
+      "et_date": "2026-11-26",
+      "name": "McNeese Cowgirls at Charleston Cougars",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "232",
+        "location": "Charleston",
+        "display_name": "Charleston Cougars",
+        "canon": "charleston",
+        "conf": "CAA",
+        "record": "4-2",
+        "score": "68",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2377",
+        "location": "McNeese",
+        "display_name": "McNeese Cowgirls",
+        "canon": "mcneese",
+        "conf": "Southland",
+        "record": "3-5",
+        "score": "61",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": "1186337f8b044d033d952a300c44bde7"
+    },
+    {
+      "espn_event_id": "401903569",
+      "start": "2026-11-26T18:30Z",
+      "et_date": "2026-11-26",
+      "name": "Georgia Lady Bulldogs at Colorado Buffaloes",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "38",
+        "location": "Colorado",
+        "display_name": "Colorado Buffaloes",
+        "canon": "colorado",
+        "conf": "Big 12",
+        "record": "5-0",
+        "score": "46",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "61",
+        "location": "Georgia",
+        "display_name": "Georgia Lady Bulldogs",
+        "canon": "georgia",
+        "conf": "SEC",
+        "record": "6-1",
+        "score": "37",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "e8c0cce65906d20a387bd5679dfb200a"
+    },
+    {
+      "espn_event_id": "401925995",
+      "start": "2026-11-26T19:00Z",
+      "et_date": "2026-11-26",
+      "name": "UTSA Roadrunners at Binghamton Bearcats",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_END_PERIOD",
+      "completed": false,
+      "home": {
+        "espn_id": "2066",
+        "location": "Binghamton",
+        "display_name": "Binghamton Bearcats",
+        "canon": "binghamton",
+        "conf": "AE",
+        "record": "5-3",
+        "score": "39",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2636",
+        "location": "UTSA",
+        "display_name": "UTSA Roadrunners",
+        "canon": "utsa",
+        "conf": "Amer",
+        "record": "3-2",
+        "score": "29",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "2401089ce2873b99ec2d9ea94f69537a"
+    },
+    {
+      "espn_event_id": "401921023",
+      "start": "2026-11-26T19:00Z",
+      "et_date": "2026-11-26",
+      "name": "Davidson Wildcats at Florida Gators",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "57",
+        "location": "Florida",
+        "display_name": "Florida Gators",
+        "canon": "florida",
+        "conf": "SEC",
+        "record": "4-3",
+        "score": "28",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2166",
+        "location": "Davidson",
+        "display_name": "Davidson Wildcats",
+        "canon": "davidson",
+        "conf": "A10",
+        "record": "3-4",
+        "score": "27",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "fa0b0db496341818042b099a426a8b87"
+    },
+    {
+      "espn_event_id": "401923185",
+      "start": "2026-11-26T16:30Z",
+      "et_date": "2026-11-26",
+      "name": "West Virginia Mountaineers at Notre Dame Fighting Irish",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "87",
+        "location": "Notre Dame",
+        "display_name": "Notre Dame Fighting Irish",
+        "canon": "notre dame",
+        "conf": "ACC",
+        "record": "7-0",
+        "score": "78",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "277",
+        "location": "West Virginia",
+        "display_name": "West Virginia Mountaineers",
+        "canon": "west virginia",
+        "conf": "Big 12",
+        "record": "6-1",
+        "score": "64",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
     {
       "espn_event_id": "401928219",
       "start": "2026-11-26T15:00Z",
@@ -9,17 +174,17 @@
       "name": "Auburn Tigers at Southern Jaguars",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_HALFTIME",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2582",
         "location": "Southern",
         "display_name": "Southern Jaguars",
         "canon": "southern",
         "conf": "SWAC",
-        "record": "1-5",
-        "score": "29",
-        "winner": null
+        "record": "1-6",
+        "score": "52",
+        "winner": false
       },
       "away": {
         "espn_id": "2",
@@ -27,9 +192,9 @@
         "display_name": "Auburn Tigers",
         "canon": "auburn",
         "conf": "SEC",
-        "record": "6-1",
-        "score": "27",
-        "winner": null
+        "record": "7-1",
+        "score": "54",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -42,17 +207,17 @@
       "name": "Clemson Tigers at Robert Morris Colonials",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2523",
         "location": "Robert Morris",
         "display_name": "Robert Morris Colonials",
         "canon": "robert morris",
         "conf": "Horz",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
+        "record": "4-3",
+        "score": "43",
+        "winner": false
       },
       "away": {
         "espn_id": "228",
@@ -60,13 +225,13 @@
         "display_name": "Clemson Tigers",
         "canon": "clemson",
         "conf": "ACC",
-        "record": "6-1",
-        "score": "0",
-        "winner": null
+        "record": "7-1",
+        "score": "66",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": "6087298ba8ae9cde229c8f16f3a463c4"
+      "odds_event_id": null
     },
     {
       "espn_event_id": "401903568",
@@ -75,17 +240,17 @@
       "name": "Oregon Ducks at Maryland Eastern Shore Hawks",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2379",
         "location": "Maryland Eastern Shore",
         "display_name": "Maryland Eastern Shore Hawks",
         "canon": "maryland eastern shore",
         "conf": "MEAC",
-        "record": "1-5",
-        "score": "0",
-        "winner": null
+        "record": "1-6",
+        "score": "50",
+        "winner": false
       },
       "away": {
         "espn_id": "2483",
@@ -93,46 +258,13 @@
         "display_name": "Oregon Ducks",
         "canon": "oregon",
         "conf": "Big Ten",
-        "record": "6-1",
-        "score": "0",
-        "winner": null
+        "record": "7-1",
+        "score": "74",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401923185",
-      "start": "2026-11-26T16:30Z",
-      "et_date": "2026-11-26",
-      "name": "West Virginia Mountaineers at Notre Dame Fighting Irish",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "87",
-        "location": "Notre Dame",
-        "display_name": "Notre Dame Fighting Irish",
-        "canon": "notre dame",
-        "conf": "ACC",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "277",
-        "location": "West Virginia",
-        "display_name": "West Virginia Mountaineers",
-        "canon": "west virginia",
-        "conf": "Big 12",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "a1f674476eccca7d3907cc4fb1912de2"
     },
     {
       "espn_event_id": "401923343",
@@ -141,17 +273,17 @@
       "name": "Texas Southern Tigers at Howard Bison",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "47",
         "location": "Howard",
         "display_name": "Howard Bison",
         "canon": "howard",
         "conf": "MEAC",
-        "record": "1-6",
-        "score": "0",
-        "winner": null
+        "record": "2-6",
+        "score": "64",
+        "winner": true
       },
       "away": {
         "espn_id": "2640",
@@ -159,9 +291,9 @@
         "display_name": "Texas Southern Tigers",
         "canon": "texas southern",
         "conf": "SWAC",
-        "record": "0-7",
-        "score": "0",
-        "winner": null
+        "record": "0-8",
+        "score": "51",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -174,17 +306,17 @@
       "name": "Syracuse Orange at Wisconsin Badgers",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "275",
         "location": "Wisconsin",
         "display_name": "Wisconsin Badgers",
         "canon": "wisconsin",
         "conf": "Big Ten",
-        "record": "6-2",
-        "score": "0",
-        "winner": null
+        "record": "6-3",
+        "score": "62",
+        "winner": false
       },
       "away": {
         "espn_id": "183",
@@ -192,9 +324,9 @@
         "display_name": "Syracuse Orange",
         "canon": "syracuse",
         "conf": "ACC",
-        "record": "5-1",
-        "score": "0",
-        "winner": null
+        "record": "6-1",
+        "score": "75",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -207,17 +339,17 @@
       "name": "Little Rock Trojans at Tennessee Tech Golden Eagles",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
       "home": {
         "espn_id": "2635",
         "location": "Tennessee Tech",
         "display_name": "Tennessee Tech Golden Eagles",
         "canon": "tennessee tech",
         "conf": "SC",
-        "record": "3-3",
-        "score": "0",
-        "winner": null
+        "record": "3-4",
+        "score": "50",
+        "winner": false
       },
       "away": {
         "espn_id": "2031",
@@ -225,141 +357,9 @@
         "display_name": "Little Rock Trojans",
         "canon": "little rock",
         "conf": "WAC",
-        "record": "1-5",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401920170",
-      "start": "2026-11-26T18:00Z",
-      "et_date": "2026-11-26",
-      "name": "McNeese Cowgirls at Charleston Cougars",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "232",
-        "location": "Charleston",
-        "display_name": "Charleston Cougars",
-        "canon": "charleston",
-        "conf": "CAA",
-        "record": "3-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2377",
-        "location": "McNeese",
-        "display_name": "McNeese Cowgirls",
-        "canon": "mcneese",
-        "conf": "Southland",
-        "record": "3-4",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": false,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401903569",
-      "start": "2026-11-26T18:30Z",
-      "et_date": "2026-11-26",
-      "name": "Georgia Lady Bulldogs at Colorado Buffaloes",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "38",
-        "location": "Colorado",
-        "display_name": "Colorado Buffaloes",
-        "canon": "colorado",
-        "conf": "Big 12",
-        "record": "5-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "61",
-        "location": "Georgia",
-        "display_name": "Georgia Lady Bulldogs",
-        "canon": "georgia",
-        "conf": "SEC",
-        "record": "6-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401925995",
-      "start": "2026-11-26T19:00Z",
-      "et_date": "2026-11-26",
-      "name": "UTSA Roadrunners at Binghamton Bearcats",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2066",
-        "location": "Binghamton",
-        "display_name": "Binghamton Bearcats",
-        "canon": "binghamton",
-        "conf": "AE",
-        "record": "5-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2636",
-        "location": "UTSA",
-        "display_name": "UTSA Roadrunners",
-        "canon": "utsa",
-        "conf": "Amer",
-        "record": "3-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401921023",
-      "start": "2026-11-26T19:00Z",
-      "et_date": "2026-11-26",
-      "name": "Davidson Wildcats at Florida Gators",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "57",
-        "location": "Florida",
-        "display_name": "Florida Gators",
-        "canon": "florida",
-        "conf": "SEC",
-        "record": "4-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2166",
-        "location": "Davidson",
-        "display_name": "Davidson Wildcats",
-        "canon": "davidson",
-        "conf": "A10",
-        "record": "3-4",
-        "score": "0",
-        "winner": null
+        "record": "2-5",
+        "score": "53",
+        "winner": true
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -369,22 +369,12 @@
       "espn_event_id": "401916119",
       "start": "2026-11-26T20:00Z",
       "et_date": "2026-11-26",
-      "name": "Colorado State Rams at Grambling Lady Tigers",
+      "name": "Grambling Lady Tigers at Colorado State Rams",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2755",
-        "location": "Grambling",
-        "display_name": "Grambling Lady Tigers",
-        "canon": "grambling",
-        "conf": "SWAC",
-        "record": "2-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "36",
         "location": "Colorado State",
         "display_name": "Colorado State Rams",
@@ -394,8 +384,18 @@
         "score": "0",
         "winner": null
       },
-      "torvik_home": false,
-      "torvik_away": true,
+      "away": {
+        "espn_id": "2755",
+        "location": "Grambling",
+        "display_name": "Grambling Lady Tigers",
+        "canon": "grambling",
+        "conf": "SWAC",
+        "record": "2-4",
+        "score": "0",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": false,
       "odds_event_id": null
     },
     {
@@ -429,7 +429,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "382b5f4b9e57af4dedd7576bddcd0808"
     },
     {
       "espn_event_id": "401903558",
@@ -462,7 +462,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "d7cf855290da8d1a2903c8cd7a4689a6"
     },
     {
       "espn_event_id": "401916120",
@@ -528,7 +528,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "29af7c2055751a53577c685ae7f327ab"
     },
     {
       "espn_event_id": "401913021",
@@ -594,7 +594,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "e4ebca7283733cc3aac0b6fc5fc1847c"
     }
   ]
 }
