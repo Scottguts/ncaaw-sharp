@@ -1,25 +1,46 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-26T00:06:48.638951Z",
+  "generated_at": "2026-11-26T08:04:13.626816Z",
   "calibration": [
     {
-      "p": 0.553,
+      "p": 0.552,
       "hit": true
+    },
+    {
+      "p": 0.553,
+      "hit": false
     }
   ],
   "summary": {
-    "n": 31,
-    "spread_mae": 11.11,
-    "total_mae": 13.07,
-    "su_pct": 74.2,
+    "n": 40,
+    "spread_mae": 10.45,
+    "total_mae": 11.98,
+    "su_pct": 80.0,
     "fired": {
-      "w": 1,
+      "w": 2,
       "l": 0,
       "p": 0,
-      "units": 0.46
+      "units": 1.4
     }
   },
   "games": [
+    {
+      "matchup": "Campbell Fighting Camels @ Mercer Bears",
+      "away_short": "Campbell",
+      "home_short": "Mercer",
+      "model_away": 56.1,
+      "model_home": 61.5,
+      "act_away": 57,
+      "act_home": 62,
+      "model_margin_home": 5.4,
+      "act_margin_home": 5,
+      "model_total": 117.5,
+      "act_total": 119,
+      "spread_err": 0.4,
+      "total_err": -1.5,
+      "side_right": true,
+      "had_card": false
+    },
     {
       "matchup": "Southern Jaguars @ Syracuse Orange",
       "away_short": "Southern",
@@ -85,6 +106,23 @@
       "act_total": 216,
       "spread_err": 1.4,
       "total_err": -65.1,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Pacific Tigers @ Texas State Bobcats",
+      "away_short": "Pacific",
+      "home_short": "Texas State",
+      "model_away": 60.5,
+      "model_home": 70.9,
+      "act_away": 63,
+      "act_home": 75,
+      "model_margin_home": 10.3,
+      "act_margin_home": 12,
+      "model_total": 131.4,
+      "act_total": 138,
+      "spread_err": -1.7,
+      "total_err": -6.6,
       "side_right": true,
       "had_card": false
     },
@@ -222,7 +260,41 @@
       "spread_err": 5.2,
       "total_err": 12.6,
       "side_right": true,
-      "had_card": true
+      "had_card": false
+    },
+    {
+      "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
+      "away_short": "Vanderbilt",
+      "home_short": "Oregon State",
+      "model_away": 75.3,
+      "model_home": 59.0,
+      "act_away": 71,
+      "act_home": 60,
+      "model_margin_home": -16.3,
+      "act_margin_home": -11,
+      "model_total": 134.3,
+      "act_total": 131,
+      "spread_err": -5.3,
+      "total_err": 3.3,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "UC Santa Barbara Gauchos @ Portland Pilots",
+      "away_short": "UC Santa Barbara",
+      "home_short": "Portland",
+      "model_away": 62.0,
+      "model_home": 66.6,
+      "act_away": 65,
+      "act_home": 75,
+      "model_margin_home": 4.6,
+      "act_margin_home": 10,
+      "model_total": 128.7,
+      "act_total": 140,
+      "spread_err": -5.4,
+      "total_err": -11.3,
+      "side_right": true,
+      "had_card": false
     },
     {
       "matchup": "Tennessee State Lady Tigers @ South Carolina Upstate Spartans",
@@ -239,6 +311,23 @@
       "spread_err": -5.5,
       "total_err": 5.4,
       "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Arkansas Razorbacks @ James Madison Dukes",
+      "away_short": "Arkansas",
+      "home_short": "James Madison",
+      "model_away": 69.1,
+      "model_home": 68.4,
+      "act_away": 75,
+      "act_home": 67,
+      "model_margin_home": -0.7,
+      "act_margin_home": -8,
+      "model_total": 137.5,
+      "act_total": 142,
+      "spread_err": 7.3,
+      "total_err": -4.5,
+      "side_right": true,
       "had_card": false
     },
     {
@@ -276,6 +365,23 @@
       "had_card": false
     },
     {
+      "matchup": "Saint Louis Billikens @ Northern Iowa Panthers",
+      "away_short": "Saint Louis",
+      "home_short": "Northern Iowa",
+      "model_away": 66.6,
+      "model_home": 66.4,
+      "act_away": 70,
+      "act_home": 60,
+      "model_margin_home": -0.2,
+      "act_margin_home": -10,
+      "model_total": 132.9,
+      "act_total": 130,
+      "spread_err": 9.8,
+      "total_err": 2.9,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Winthrop Eagles @ Grand Canyon Lopes",
       "away_short": "Winthrop",
       "home_short": "Grand Canyon",
@@ -289,6 +395,23 @@
       "act_total": 116,
       "spread_err": 9.8,
       "total_err": 13.5,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "San Diego Toreros @ Utah Tech Trailblazers",
+      "away_short": "San Diego",
+      "home_short": "Utah Tech",
+      "model_away": 70.8,
+      "model_home": 62.6,
+      "act_away": 89,
+      "act_home": 71,
+      "model_margin_home": -8.2,
+      "act_margin_home": -18,
+      "model_total": 133.3,
+      "act_total": 160,
+      "spread_err": 9.8,
+      "total_err": -26.7,
       "side_right": true,
       "had_card": false
     },
@@ -391,6 +514,40 @@
       "act_total": 136,
       "spread_err": -15.4,
       "total_err": -11.4,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Oral Roberts Golden Eagles @ Butler Bulldogs",
+      "away_short": "Oral Roberts",
+      "home_short": "Butler",
+      "model_away": 62.6,
+      "model_home": 79.2,
+      "act_away": 54,
+      "act_home": 87,
+      "model_margin_home": 16.6,
+      "act_margin_home": 33,
+      "model_total": 141.7,
+      "act_total": 141,
+      "spread_err": -16.4,
+      "total_err": 0.7,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Samford Bulldogs @ Alabama Crimson Tide",
+      "away_short": "Samford",
+      "home_short": "Alabama",
+      "model_away": 52.4,
+      "model_home": 79.2,
+      "act_away": 52,
+      "act_home": 96,
+      "model_margin_home": 26.8,
+      "act_margin_home": 44,
+      "model_total": 131.5,
+      "act_total": 148,
+      "spread_err": -17.2,
+      "total_err": -16.5,
       "side_right": true,
       "had_card": false
     },
