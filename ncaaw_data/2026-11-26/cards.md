@@ -1,17 +1,23 @@
 # NCAAW Betting Card — 2026-11-26
 
-## NO PLAYS
+**1 play(s) · 1u total**
 
-Nothing cleared the gates today. A quiet day is a correct day.
+## Under 120.5 (-109 ballybet)
+
+- **Game:** Clemson Tigers @ Robert Morris Colonials
+- **Market:** total · **Fair:** 54.0% (-117) · **Edge:** 3.5%
+- **Confidence:** 7/10 · **Size:** 1.0u (Standard)
+- **Why:** Model total 119.2 vs market 120.5; Anchored fair total 119.0 vs line 120.5
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
 
 ---
 
 ### Full slate
 
 - **Auburn Tigers @ Southern Jaguars** — model 67-49 (margin -17.9 home, total 115.4) · market: no line · PASS: no market line (nothing to anchor against)
-- **Clemson Tigers @ Robert Morris Colonials** — model 67-52 (margin -14.2 home, total 119.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Clemson Tigers @ Robert Morris Colonials** — model 67-52 (margin -14.2 home, total 119.2) · market: home +20.5 (consensus) · total 120.5 (consensus)
 - **Oregon Ducks @ Maryland Eastern Shore Hawks** — model 86-54 (margin -31.5 home, total 140.1) · market: no line · PASS: no market line (nothing to anchor against)
-- **West Virginia Mountaineers @ Notre Dame Fighting Irish** — model 70-76 (margin +5.2 home, total 146.3) · market: no line · PASS: no market line (nothing to anchor against)
+- **West Virginia Mountaineers @ Notre Dame Fighting Irish** — model 70-76 (margin +5.2 home, total 146.3) · market: home -5.5 (consensus) · total 146.5 (consensus) · PASS: no edge cleared the gates
 - **Texas Southern Tigers @ Howard Bison** — model 60-75 (margin +15.0 home, total 135.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **Syracuse Orange @ Wisconsin Badgers** — model 66-70 (margin +3.7 home, total 136.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Little Rock Trojans @ Tennessee Tech Golden Eagles** — model 62-65 (margin +3.2 home, total 127.0) · market: no line · PASS: no market line (nothing to anchor against)
@@ -27,4 +33,4 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Xavier Musketeers @ Santa Clara Broncos** — model 65-72 (margin +7.0 home, total 137.3) · market: no line · PASS: no market line (nothing to anchor against)
 - **Cincinnati Bearcats @ Miami (OH) RedHawks** — model 60-62 (margin +2.0 home, total 122.4) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-26T08:04:14Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-26T15:44:54Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

@@ -1,5 +1,32 @@
 {
-  "cards": [],
+  "cards": [
+    {
+      "bet_label": "Under 120.5",
+      "book": "ballybet",
+      "confidence": 7,
+      "edge": 0.0353,
+      "espn_event_id": "401915872",
+      "fair_american": -117,
+      "fair_prob": 0.5399,
+      "line": 120.5,
+      "market": "total",
+      "matchup": "Clemson Tigers @ Robert Morris Colonials",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -109,
+      "reasoning": [
+        "Model total 119.2 vs market 120.5",
+        "Anchored fair total 119.0 vs line 120.5"
+      ],
+      "risk": "Standard",
+      "side": "under",
+      "start": "2026-11-26T16:00Z",
+      "unit_size": 1.0
+    }
+  ],
   "date": "2026-11-26",
   "games": [
     {
@@ -31,10 +58,51 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -19.0,
+        "season_bias_applied": -2.41,
+        "spread_shift": 1.5,
+        "total": 119.0,
+        "total_shift": -1.5
+      },
       "away_short": "Clemson",
-      "cards": [],
+      "cards": [
+        {
+          "bet_label": "Under 120.5",
+          "book": "ballybet",
+          "confidence": 7,
+          "edge": 0.0353,
+          "espn_event_id": "401915872",
+          "fair_american": -117,
+          "fair_prob": 0.5399,
+          "line": 120.5,
+          "market": "total",
+          "matchup": "Clemson Tigers @ Robert Morris Colonials",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -109,
+          "reasoning": [
+            "Model total 119.2 vs market 120.5",
+            "Anchored fair total 119.0 vs line 120.5"
+          ],
+          "risk": "Standard",
+          "side": "under",
+          "start": "2026-11-26T16:00Z",
+          "unit_size": 1.0
+        }
+      ],
       "espn_event_id": "401915872",
       "home_short": "Robert Morris",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 20.5,
+        "spread_src": "consensus",
+        "total": 120.5,
+        "total_src": "consensus"
+      },
       "matchup": "Clemson Tigers @ Robert Morris Colonials",
       "model": {
         "away_score": 66.7,
@@ -51,10 +119,12 @@
         "total": 119.2
       },
       "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
+      "pass_reasons": [],
       "shadow": [],
+      "sigma": {
+        "spread": 11.19,
+        "total": 14.96
+      },
       "start": "2026-11-26T16:00Z",
       "status": "graded"
     },
@@ -87,10 +157,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 5.2,
+        "season_bias_applied": -2.41,
+        "spread_shift": -0.3,
+        "total": 145.0,
+        "total_shift": -1.5
+      },
       "away_short": "West Virginia",
       "cards": [],
       "espn_event_id": "401923185",
       "home_short": "Notre Dame",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -5.5,
+        "spread_src": "consensus",
+        "total": 146.5,
+        "total_src": "consensus"
+      },
       "matchup": "West Virginia Mountaineers @ Notre Dame Fighting Irish",
       "model": {
         "away_score": 70.5,
@@ -108,9 +192,13 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 11.18,
+        "total": 16.48
+      },
       "start": "2026-11-26T16:30Z",
       "status": "graded"
     },
@@ -479,16 +567,16 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-26T08:04:14.280976Z",
+  "generated_at": "2026-11-26T15:44:54.061238Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": 3.0,
+    "mean_total_delta": -0.75,
+    "n_spread_lines": 2,
+    "n_total_lines": 2
   },
-  "n_cards": 0,
+  "n_cards": 1,
   "n_games": 18,
   "odds_available": true,
   "shadow_cards": [],
-  "total_units": 0
+  "total_units": 1.0
 }

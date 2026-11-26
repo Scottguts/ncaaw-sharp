@@ -1,17 +1,44 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T08:04:14.280976Z",
+  "generated_at": "2026-11-26T15:44:54.061238Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 2,
+    "n_total_lines": 2,
+    "mean_spread_delta": 3.0,
+    "mean_total_delta": -0.75
   },
   "odds_available": true,
   "n_games": 18,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
+  "n_cards": 1,
+  "total_units": 1.0,
+  "cards": [
+    {
+      "bet_label": "Under 120.5",
+      "market": "total",
+      "side": "under",
+      "book": "ballybet",
+      "price_american": -109,
+      "line": 120.5,
+      "fair_prob": 0.5399,
+      "fair_american": -117,
+      "edge": 0.0353,
+      "confidence": 7,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model total 119.2 vs market 120.5",
+        "Anchored fair total 119.0 vs line 120.5"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401915872",
+      "matchup": "Clemson Tigers @ Robert Morris Colonials",
+      "start": "2026-11-26T16:00Z"
+    }
+  ],
   "shadow_cards": [],
   "games": [
     {
@@ -50,11 +77,36 @@
       "start": "2026-11-26T16:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Under 120.5",
+          "market": "total",
+          "side": "under",
+          "book": "ballybet",
+          "price_american": -109,
+          "line": 120.5,
+          "fair_prob": 0.5399,
+          "fair_american": -117,
+          "edge": 0.0353,
+          "confidence": 7,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model total 119.2 vs market 120.5",
+            "Anchored fair total 119.0 vs line 120.5"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915872",
+          "matchup": "Clemson Tigers @ Robert Morris Colonials",
+          "start": "2026-11-26T16:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 66.7,
         "home_score": 52.5,
@@ -68,6 +120,24 @@
         "rank_away": 30,
         "p3_home": 42.733333333333334,
         "p3_away": 40.09090909090909
+      },
+      "market": {
+        "spread_home": 20.5,
+        "total": 120.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.19,
+        "total": 14.96
+      },
+      "anchored": {
+        "margin_home": -19.0,
+        "spread_shift": 1.5,
+        "total": 119.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.41
       }
     },
     {
@@ -109,7 +179,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 70.5,
@@ -124,6 +194,24 @@
         "rank_away": 29,
         "p3_home": 40.900000000000006,
         "p3_away": 44.81111111111112
+      },
+      "market": {
+        "spread_home": -5.5,
+        "total": 146.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.18,
+        "total": 16.48
+      },
+      "anchored": {
+        "margin_home": 5.2,
+        "spread_shift": -0.3,
+        "total": 145.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.41
       }
     },
     {

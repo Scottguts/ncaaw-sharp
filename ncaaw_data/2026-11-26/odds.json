@@ -1,6 +1,6 @@
 {
   "available": true,
-  "fetched_at": "2026-11-26T08:04:14.150328Z",
+  "fetched_at": "2026-11-26T15:44:53.927666Z",
   "books_used": [
     "draftkings",
     "betmgm",
@@ -17,6 +17,433 @@
     "spreads",
     "totals"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "6087298ba8ae9cde229c8f16f3a463c4",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-26T16:00:00Z",
+      "home_team": "Clemson Tigers",
+      "away_team": "Robert Morris Colonials",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-26T15:44:14Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Clemson Tigers",
+                  "price": -120,
+                  "point": -20.5
+                },
+                {
+                  "name": "Robert Morris Colonials",
+                  "price": -110,
+                  "point": 20.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -118,
+                  "point": 120.5
+                },
+                {
+                  "name": "Under",
+                  "price": -112,
+                  "point": 120.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-26T15:44:36Z",
+          "markets": [
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Clemson Tigers",
+                  "price": -117,
+                  "point": -20.5
+                },
+                {
+                  "name": "Robert Morris Colonials",
+                  "price": -109,
+                  "point": 20.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -117,
+                  "point": 120.5
+                },
+                {
+                  "name": "Under",
+                  "price": -109,
+                  "point": 120.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1f674476eccca7d3907cc4fb1912de2",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-26T16:30:00Z",
+      "home_team": "Notre Dame Fighting Irish",
+      "away_team": "West Virginia Mountaineers",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-26T15:44:14Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -265
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": 190
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -117,
+                  "point": -5.5
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": -113,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": 104,
+                  "point": 146.5
+                },
+                {
+                  "name": "Under",
+                  "price": -137,
+                  "point": 146.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-26T15:44:36Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -250
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": 190
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -115,
+                  "point": -5.5
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": -110,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": 106,
+                  "point": 146.5
+                },
+                {
+                  "name": "Under",
+                  "price": -134,
+                  "point": 146.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hardrockbet",
+          "title": "Hard Rock Bet",
+          "last_update": "2026-11-26T15:44:14Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -250
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": 190
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -115,
+                  "point": -5.5
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": -110,
+                  "point": 5.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": 105,
+                  "point": 146.5
+                },
+                {
+                  "name": "Under",
+                  "price": -135,
+                  "point": 146.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "last_update": "2026-11-26T15:44:35Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:35Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -298
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": 240
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:35Z",
+              "outcomes": [
+                {
+                  "name": "Notre Dame Fighting Irish",
+                  "price": -112,
+                  "point": -7.5
+                },
+                {
+                  "name": "West Virginia Mountaineers",
+                  "price": -108,
+                  "point": 7.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -110,
+                  "point": 147.5
+                },
+                {
+                  "name": "Under",
+                  "price": -110,
+                  "point": 147.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99ba2bf42e446a3b082a82d99f99831c",
+      "sport_key": "basketball_wncaab",
+      "sport_title": "WNCAAB",
+      "commence_time": "2026-11-26T17:30:00Z",
+      "home_team": "Tennessee Tech Golden Eagles",
+      "away_team": "Arkansas-Little Rock Trojans",
+      "bookmakers": [
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "last_update": "2026-11-26T15:44:14Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Arkansas-Little Rock Trojans",
+                  "price": 102
+                },
+                {
+                  "name": "Tennessee Tech Golden Eagles",
+                  "price": -134
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Arkansas-Little Rock Trojans",
+                  "price": 102,
+                  "point": 0.5
+                },
+                {
+                  "name": "Tennessee Tech Golden Eagles",
+                  "price": -134,
+                  "point": -0.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:14Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -117,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -114,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ballybet",
+          "title": "Bally Bet",
+          "last_update": "2026-11-26T15:44:36Z",
+          "markets": [
+            {
+              "key": "h2h",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Arkansas-Little Rock Trojans",
+                  "price": 102
+                },
+                {
+                  "name": "Tennessee Tech Golden Eagles",
+                  "price": -130
+                }
+              ]
+            },
+            {
+              "key": "spreads",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Arkansas-Little Rock Trojans",
+                  "price": 102,
+                  "point": 0.5
+                },
+                {
+                  "name": "Tennessee Tech Golden Eagles",
+                  "price": -130,
+                  "point": -0.5
+                }
+              ]
+            },
+            {
+              "key": "totals",
+              "last_update": "2026-11-26T15:44:36Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "price": -114,
+                  "point": 132.5
+                },
+                {
+                  "name": "Under",
+                  "price": -112,
+                  "point": 132.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "errors": []
 }
