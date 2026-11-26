@@ -1,60 +1,280 @@
 {
-  "cards": [
-    {
-      "bet_label": "Eastern Illinois Panthers +18.5",
-      "book": "ballybet",
-      "confidence": 9,
-      "edge": 0.043,
-      "espn_event_id": "401927935",
-      "fair_american": -124,
-      "fair_prob": 0.5533,
-      "line": 18.5,
-      "market": "spread",
-      "matchup": "Oakland Golden Grizzlies @ Eastern Illinois Panthers",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -113,
-      "reasoning": [
-        "Model margin -4.8 vs market -18.5 (home)",
-        "Anchored fair margin -17.0 vs line +18.5 (home)"
-      ],
-      "risk": "Standard",
-      "side": "home",
-      "start": "2026-11-25T19:00Z",
-      "unit_size": 1.0
-    },
-    {
-      "bet_label": "Under 139.5",
-      "book": "ballybet",
-      "confidence": 9,
-      "edge": 0.04,
-      "espn_event_id": "401918832",
-      "fair_american": -116,
-      "fair_prob": 0.5376,
-      "line": 139.5,
-      "market": "total",
-      "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -107,
-      "reasoning": [
-        "Model total 134.3 vs market 139.5",
-        "Anchored fair total 138.0 vs line 139.5"
-      ],
-      "risk": "Standard",
-      "side": "under",
-      "start": "2026-11-25T23:30Z",
-      "unit_size": 1.0
-    }
-  ],
+  "cards": [],
   "date": "2026-11-25",
   "games": [
+    {
+      "away_short": "SE Louisiana",
+      "cards": [],
+      "espn_event_id": "401918845",
+      "home_short": "Texas",
+      "matchup": "SE Louisiana Lady Lions @ Texas Longhorns",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T00:00Z",
+      "status": "skipped"
+    },
+    {
+      "anchored": {
+        "margin_home": -20.0,
+        "season_bias_applied": -3.46,
+        "spread_shift": 1.5,
+        "total": 138.5,
+        "total_shift": -1.5
+      },
+      "away_short": "Vanderbilt",
+      "cards": [],
+      "espn_event_id": "401918832",
+      "home_short": "Oregon State",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 21.5,
+        "spread_src": "consensus",
+        "total": 140.0,
+        "total_src": "consensus"
+      },
+      "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
+      "model": {
+        "away_score": 75.3,
+        "games_away": 6,
+        "games_home": 6,
+        "home_score": 59.0,
+        "margin_home": -16.3,
+        "p3_away": 46.040000000000006,
+        "p3_home": 41.82,
+        "proj_poss": 69.8,
+        "rank_away": 13,
+        "rank_home": 86,
+        "spread": 16.3,
+        "total": 134.3
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "shadow": [],
+      "sigma": {
+        "spread": 11.37,
+        "total": 15.81
+      },
+      "start": "2026-11-25T23:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "UC Santa Barbara",
+      "cards": [],
+      "espn_event_id": "401917724",
+      "home_short": "Portland",
+      "matchup": "UC Santa Barbara Gauchos @ Portland Pilots",
+      "model": {
+        "away_score": 62.0,
+        "games_away": 6,
+        "games_home": 5,
+        "home_score": 66.6,
+        "margin_home": 4.6,
+        "p3_away": 42.5,
+        "p3_home": 41.91111111111111,
+        "proj_poss": 69.7,
+        "rank_away": 111,
+        "rank_home": 104,
+        "spread": -4.6,
+        "total": 128.7
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T22:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Oral Roberts",
+      "cards": [],
+      "espn_event_id": "401918775",
+      "home_short": "Butler",
+      "matchup": "Oral Roberts Golden Eagles @ Butler Bulldogs",
+      "model": {
+        "away_score": 62.6,
+        "games_away": 7,
+        "games_home": 6,
+        "home_score": 79.2,
+        "margin_home": 16.6,
+        "p3_away": 50.209090909090904,
+        "p3_home": 41.62,
+        "proj_poss": 73.4,
+        "rank_away": 231,
+        "rank_home": 59,
+        "spread": -16.6,
+        "total": 141.7
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T22:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Campbell",
+      "cards": [],
+      "espn_event_id": "401928201",
+      "home_short": "Mercer",
+      "matchup": "Campbell Fighting Camels @ Mercer Bears",
+      "model": {
+        "away_score": 56.1,
+        "games_away": 7,
+        "games_home": 5,
+        "home_score": 61.5,
+        "margin_home": 5.4,
+        "p3_away": 46.263636363636365,
+        "p3_home": 45.78888888888889,
+        "proj_poss": 67.9,
+        "rank_away": 311,
+        "rank_home": 287,
+        "spread": -5.4,
+        "total": 117.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T23:00Z",
+      "status": "graded"
+    },
+    {
+      "anchored": {
+        "margin_home": -3.0,
+        "season_bias_applied": -3.46,
+        "spread_shift": 1.5,
+        "total": 139.0,
+        "total_shift": -1.5
+      },
+      "away_short": "Arkansas",
+      "cards": [],
+      "espn_event_id": "401915905",
+      "home_short": "James Madison",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 4.5,
+        "spread_src": "consensus",
+        "total": 140.5,
+        "total_src": "consensus"
+      },
+      "matchup": "Arkansas Razorbacks @ James Madison Dukes",
+      "model": {
+        "away_score": 69.1,
+        "games_away": 5,
+        "games_home": 7,
+        "home_score": 68.4,
+        "margin_home": -0.7,
+        "p3_away": 48.84444444444445,
+        "p3_home": 38.03636363636363,
+        "proj_poss": 73.5,
+        "rank_away": 76,
+        "rank_home": 75,
+        "spread": 0.7,
+        "total": 137.5
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "shadow": [
+        {
+          "bet_label": "James Madison Dukes +4.5",
+          "book": "betrivers",
+          "confidence": 5,
+          "edge": 0.0142,
+          "espn_event_id": "401915905",
+          "fair_american": -124,
+          "fair_prob": 0.5532,
+          "line": 4.5,
+          "market": "spread",
+          "matchup": "Arkansas Razorbacks @ James Madison Dukes",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -120,
+          "reasoning": [
+            "Model margin -0.7 vs market -4.5 (home)",
+            "Anchored fair margin -3.0 vs line +4.5 (home)"
+          ],
+          "risk": "Shadow",
+          "side": "home",
+          "start": "2026-11-25T23:30Z",
+          "unit_size": 0.5
+        }
+      ],
+      "sigma": {
+        "spread": 11.21,
+        "total": 15.98
+      },
+      "start": "2026-11-25T23:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Saint Louis",
+      "cards": [],
+      "espn_event_id": "401919983",
+      "home_short": "Northern Iowa",
+      "matchup": "Saint Louis Billikens @ Northern Iowa Panthers",
+      "model": {
+        "away_score": 66.6,
+        "games_away": 5,
+        "games_home": 5,
+        "home_score": 66.4,
+        "margin_home": -0.2,
+        "p3_away": 43.3,
+        "p3_home": 50.41111111111111,
+        "proj_poss": 71.0,
+        "rank_away": 147,
+        "rank_home": 162,
+        "spread": 0.2,
+        "total": 132.9
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T00:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Samford",
+      "cards": [],
+      "espn_event_id": "401912996",
+      "home_short": "Alabama",
+      "matchup": "Samford Bulldogs @ Alabama Crimson Tide",
+      "model": {
+        "away_score": 52.4,
+        "games_away": 6,
+        "games_home": 7,
+        "home_score": 79.2,
+        "margin_home": 26.8,
+        "p3_away": 49.78,
+        "p3_home": 36.32727272727273,
+        "proj_poss": 70.0,
+        "rank_away": 229,
+        "rank_home": 34,
+        "spread": -26.8,
+        "total": 131.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T00:00Z",
+      "status": "graded"
+    },
     {
       "away_short": "Toledo",
       "cards": [],
@@ -82,259 +302,6 @@
       "shadow": [],
       "start": "2026-11-25T18:30Z",
       "status": "graded"
-    },
-    {
-      "away_short": "Robert Morris",
-      "cards": [],
-      "espn_event_id": "401915874",
-      "home_short": "Stetson",
-      "matchup": "Robert Morris Colonials @ Stetson Hatters",
-      "model": {
-        "away_score": 67.5,
-        "games_away": 5,
-        "games_home": 6,
-        "home_score": 53.5,
-        "margin_home": -14.1,
-        "p3_away": 42.733333333333334,
-        "p3_home": 51.14,
-        "proj_poss": 68.9,
-        "rank_away": 121,
-        "rank_home": 319,
-        "spread": 14.1,
-        "total": 121.0
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T18:15Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Arizona",
-      "cards": [],
-      "espn_event_id": "401913060",
-      "home_short": "George Washington",
-      "matchup": "Arizona Wildcats @ George Washington Revolutionaries",
-      "model": {
-        "away_score": 66.1,
-        "games_away": 5,
-        "games_home": 6,
-        "home_score": 61.8,
-        "margin_home": -4.3,
-        "p3_away": 50.53333333333333,
-        "p3_home": 43.64,
-        "proj_poss": 69.7,
-        "rank_away": 77,
-        "rank_home": 102,
-        "spread": 4.3,
-        "total": 127.9
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T18:30Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Florida A&M",
-      "cards": [],
-      "espn_event_id": "401927998",
-      "home_short": "Kennesaw State",
-      "matchup": "Florida A&M Rattlers @ Kennesaw State Owls",
-      "model": {
-        "away_score": 63.7,
-        "games_away": 5,
-        "games_home": 6,
-        "home_score": 72.8,
-        "margin_home": 9.2,
-        "p3_away": 50.37777777777778,
-        "p3_home": 46.980000000000004,
-        "proj_poss": 70.5,
-        "rank_away": 332,
-        "rank_home": 273,
-        "spread": -9.2,
-        "total": 136.5
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T19:00Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": -17.0,
-        "season_bias_applied": -1.83,
-        "spread_shift": 1.5,
-        "total": 116.0,
-        "total_shift": 1.5
-      },
-      "away_short": "Oakland",
-      "cards": [
-        {
-          "bet_label": "Eastern Illinois Panthers +18.5",
-          "book": "ballybet",
-          "confidence": 9,
-          "edge": 0.043,
-          "espn_event_id": "401927935",
-          "fair_american": -124,
-          "fair_prob": 0.5533,
-          "line": 18.5,
-          "market": "spread",
-          "matchup": "Oakland Golden Grizzlies @ Eastern Illinois Panthers",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -113,
-          "reasoning": [
-            "Model margin -4.8 vs market -18.5 (home)",
-            "Anchored fair margin -17.0 vs line +18.5 (home)"
-          ],
-          "risk": "Standard",
-          "side": "home",
-          "start": "2026-11-25T19:00Z",
-          "unit_size": 1.0
-        }
-      ],
-      "espn_event_id": "401927935",
-      "home_short": "Eastern Illinois",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 18.5,
-        "spread_src": "consensus",
-        "total": 114.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Oakland Golden Grizzlies @ Eastern Illinois Panthers",
-      "model": {
-        "away_score": 67.7,
-        "games_away": 6,
-        "games_home": 6,
-        "home_score": 62.9,
-        "margin_home": -4.8,
-        "p3_away": 50.62,
-        "p3_home": 47.78,
-        "proj_poss": 69.0,
-        "rank_away": 198,
-        "rank_home": 299,
-        "spread": 4.8,
-        "total": 130.6
-      },
-      "neutral_site": false,
-      "pass_reasons": [],
-      "shadow": [],
-      "sigma": {
-        "spread": 11.19,
-        "total": 15.68
-      },
-      "start": "2026-11-25T19:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Cal State East Bay",
-      "cards": [],
-      "espn_event_id": "401917722",
-      "home_short": "San Francisco",
-      "matchup": "Cal State East Bay Pioneers @ San Francisco Dons",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T19:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Union",
-      "cards": [],
-      "espn_event_id": "401913803",
-      "home_short": "UAlbany",
-      "matchup": "Union Garnet Chargers @ UAlbany Great Danes",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T19:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Lindenwood",
-      "cards": [],
-      "espn_event_id": "401927951",
-      "home_short": "Cleveland State",
-      "matchup": "Lindenwood Lions @ Cleveland State Vikings",
-      "model": {
-        "away_score": 56.3,
-        "games_away": 8,
-        "games_home": 4,
-        "home_score": 61.7,
-        "margin_home": 5.4,
-        "p3_away": 47.900000000000006,
-        "p3_home": 45.4,
-        "proj_poss": 68.1,
-        "rank_away": 309,
-        "rank_home": 283,
-        "spread": -5.4,
-        "total": 118.1
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T20:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Loyola Marymount",
-      "cards": [],
-      "espn_event_id": "401917723",
-      "home_short": "UNLV",
-      "matchup": "Loyola Marymount Lions @ UNLV Lady Rebels",
-      "model": {
-        "away_score": 63.2,
-        "games_away": 6,
-        "games_home": 4,
-        "home_score": 68.3,
-        "margin_home": 5.1,
-        "p3_away": 46.4,
-        "p3_home": 46.4,
-        "proj_poss": 69.8,
-        "rank_away": 96,
-        "rank_home": 84,
-        "spread": -5.1,
-        "total": 131.5
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T20:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Weber State",
-      "cards": [],
-      "espn_event_id": "401917718",
-      "home_short": "Seattle U",
-      "matchup": "Weber State Wildcats @ Seattle U Redhawks",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T20:00Z",
-      "status": "skipped"
     },
     {
       "away_short": "Navy",
@@ -897,17 +864,220 @@
       "status": "graded"
     },
     {
+      "away_short": "Robert Morris",
+      "cards": [],
+      "espn_event_id": "401915874",
+      "home_short": "Stetson",
+      "matchup": "Robert Morris Colonials @ Stetson Hatters",
+      "model": {
+        "away_score": 67.5,
+        "games_away": 5,
+        "games_home": 6,
+        "home_score": 53.5,
+        "margin_home": -14.1,
+        "p3_away": 42.733333333333334,
+        "p3_home": 51.14,
+        "proj_poss": 68.9,
+        "rank_away": 121,
+        "rank_home": 319,
+        "spread": 14.1,
+        "total": 121.0
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T18:15Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Arizona",
+      "cards": [],
+      "espn_event_id": "401913060",
+      "home_short": "George Washington",
+      "matchup": "Arizona Wildcats @ George Washington Revolutionaries",
+      "model": {
+        "away_score": 66.1,
+        "games_away": 5,
+        "games_home": 6,
+        "home_score": 61.8,
+        "margin_home": -4.3,
+        "p3_away": 50.53333333333333,
+        "p3_home": 43.64,
+        "proj_poss": 69.7,
+        "rank_away": 77,
+        "rank_home": 102,
+        "spread": 4.3,
+        "total": 127.9
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T18:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Florida A&M",
+      "cards": [],
+      "espn_event_id": "401927998",
+      "home_short": "Kennesaw State",
+      "matchup": "Florida A&M Rattlers @ Kennesaw State Owls",
+      "model": {
+        "away_score": 63.7,
+        "games_away": 5,
+        "games_home": 6,
+        "home_score": 72.8,
+        "margin_home": 9.2,
+        "p3_away": 50.37777777777778,
+        "p3_home": 46.980000000000004,
+        "proj_poss": 70.5,
+        "rank_away": 332,
+        "rank_home": 273,
+        "spread": -9.2,
+        "total": 136.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T19:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Oakland",
+      "cards": [],
+      "espn_event_id": "401927935",
+      "home_short": "Eastern Illinois",
+      "matchup": "Oakland Golden Grizzlies @ Eastern Illinois Panthers",
+      "model": {
+        "away_score": 67.7,
+        "games_away": 6,
+        "games_home": 6,
+        "home_score": 62.9,
+        "margin_home": -4.8,
+        "p3_away": 50.62,
+        "p3_home": 47.78,
+        "proj_poss": 69.0,
+        "rank_away": 198,
+        "rank_home": 299,
+        "spread": 4.8,
+        "total": 130.6
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T19:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Cal State East Bay",
+      "cards": [],
+      "espn_event_id": "401917722",
+      "home_short": "San Francisco",
+      "matchup": "Cal State East Bay Pioneers @ San Francisco Dons",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T19:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Union",
+      "cards": [],
+      "espn_event_id": "401913803",
+      "home_short": "UAlbany",
+      "matchup": "Union Garnet Chargers @ UAlbany Great Danes",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T19:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Lindenwood",
+      "cards": [],
+      "espn_event_id": "401927951",
+      "home_short": "Cleveland State",
+      "matchup": "Lindenwood Lions @ Cleveland State Vikings",
+      "model": {
+        "away_score": 56.3,
+        "games_away": 8,
+        "games_home": 4,
+        "home_score": 61.7,
+        "margin_home": 5.4,
+        "p3_away": 47.900000000000006,
+        "p3_home": 45.4,
+        "proj_poss": 68.1,
+        "rank_away": 309,
+        "rank_home": 283,
+        "spread": -5.4,
+        "total": 118.1
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T20:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Loyola Marymount",
+      "cards": [],
+      "espn_event_id": "401917723",
+      "home_short": "UNLV",
+      "matchup": "Loyola Marymount Lions @ UNLV Lady Rebels",
+      "model": {
+        "away_score": 63.2,
+        "games_away": 6,
+        "games_home": 4,
+        "home_score": 68.3,
+        "margin_home": 5.1,
+        "p3_away": 46.4,
+        "p3_home": 46.4,
+        "proj_poss": 69.8,
+        "rank_away": 96,
+        "rank_home": 84,
+        "spread": -5.1,
+        "total": 131.5
+      },
+      "neutral_site": false,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T20:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Weber State",
+      "cards": [],
+      "espn_event_id": "401917718",
+      "home_short": "Seattle U",
+      "matchup": "Weber State Wildcats @ Seattle U Redhawks",
+      "neutral_site": false,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-25T20:00Z",
+      "status": "skipped"
+    },
+    {
       "away_short": "Utah",
       "cards": [],
       "espn_event_id": "401929205",
       "home_short": "Miami",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": null,
-        "spread_src": null,
-        "total": null,
-        "total_src": null
-      },
       "matchup": "Utah Utes @ Miami Hurricanes",
       "model": {
         "away_score": 62.8,
@@ -925,13 +1095,9 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market spread quoted by target/sharp books"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "sigma": {
-        "spread": 11.18,
-        "total": 15.69
-      },
       "start": "2026-11-25T21:00Z",
       "status": "graded"
     },
@@ -1066,13 +1232,6 @@
       "cards": [],
       "espn_event_id": "401915967",
       "home_short": "Memphis",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": null,
-        "spread_src": null,
-        "total": null,
-        "total_src": null
-      },
       "matchup": "SMU Mustangs @ Memphis Tigers",
       "model": {
         "away_score": 68.5,
@@ -1090,239 +1249,10 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market spread quoted by target/sharp books"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "sigma": {
-        "spread": 11.2,
-        "total": 15.79
-      },
       "start": "2026-11-25T21:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "UC Santa Barbara",
-      "cards": [],
-      "espn_event_id": "401917724",
-      "home_short": "Portland",
-      "matchup": "UC Santa Barbara Gauchos @ Portland Pilots",
-      "model": {
-        "away_score": 62.0,
-        "games_away": 6,
-        "games_home": 5,
-        "home_score": 66.6,
-        "margin_home": 4.6,
-        "p3_away": 42.5,
-        "p3_home": 41.91111111111111,
-        "proj_poss": 69.7,
-        "rank_away": 111,
-        "rank_home": 104,
-        "spread": -4.6,
-        "total": 128.7
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T22:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Oral Roberts",
-      "cards": [],
-      "espn_event_id": "401918775",
-      "home_short": "Butler",
-      "matchup": "Oral Roberts Golden Eagles @ Butler Bulldogs",
-      "model": {
-        "away_score": 62.6,
-        "games_away": 7,
-        "games_home": 6,
-        "home_score": 79.2,
-        "margin_home": 16.6,
-        "p3_away": 50.209090909090904,
-        "p3_home": 41.62,
-        "proj_poss": 73.4,
-        "rank_away": 231,
-        "rank_home": 59,
-        "spread": -16.6,
-        "total": 141.7
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T22:30Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Campbell",
-      "cards": [],
-      "espn_event_id": "401928201",
-      "home_short": "Mercer",
-      "matchup": "Campbell Fighting Camels @ Mercer Bears",
-      "model": {
-        "away_score": 56.1,
-        "games_away": 7,
-        "games_home": 5,
-        "home_score": 61.5,
-        "margin_home": 5.4,
-        "p3_away": 46.263636363636365,
-        "p3_home": 45.78888888888889,
-        "proj_poss": 67.9,
-        "rank_away": 311,
-        "rank_home": 287,
-        "spread": -5.4,
-        "total": 117.5
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T23:00Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": -20.0,
-        "season_bias_applied": -1.83,
-        "spread_shift": 1.5,
-        "total": 138.0,
-        "total_shift": -1.5
-      },
-      "away_short": "Vanderbilt",
-      "cards": [
-        {
-          "bet_label": "Under 139.5",
-          "book": "ballybet",
-          "confidence": 9,
-          "edge": 0.04,
-          "espn_event_id": "401918832",
-          "fair_american": -116,
-          "fair_prob": 0.5376,
-          "line": 139.5,
-          "market": "total",
-          "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -107,
-          "reasoning": [
-            "Model total 134.3 vs market 139.5",
-            "Anchored fair total 138.0 vs line 139.5"
-          ],
-          "risk": "Standard",
-          "side": "under",
-          "start": "2026-11-25T23:30Z",
-          "unit_size": 1.0
-        }
-      ],
-      "espn_event_id": "401918832",
-      "home_short": "Oregon State",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 21.5,
-        "spread_src": "consensus",
-        "total": 139.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Vanderbilt Commodores @ Oregon State Beavers",
-      "model": {
-        "away_score": 75.3,
-        "games_away": 6,
-        "games_home": 6,
-        "home_score": 59.0,
-        "margin_home": -16.3,
-        "p3_away": 46.040000000000006,
-        "p3_home": 41.82,
-        "proj_poss": 69.8,
-        "rank_away": 13,
-        "rank_home": 86,
-        "spread": 16.3,
-        "total": 134.3
-      },
-      "neutral_site": true,
-      "pass_reasons": [],
-      "shadow": [],
-      "sigma": {
-        "spread": 11.37,
-        "total": 15.9
-      },
-      "start": "2026-11-25T23:30Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Arkansas",
-      "cards": [],
-      "espn_event_id": "401915905",
-      "home_short": "James Madison",
-      "matchup": "Arkansas Razorbacks @ James Madison Dukes",
-      "model": {
-        "away_score": 69.1,
-        "games_away": 5,
-        "games_home": 7,
-        "home_score": 68.4,
-        "margin_home": -0.7,
-        "p3_away": 48.84444444444445,
-        "p3_home": 38.03636363636363,
-        "proj_poss": 73.5,
-        "rank_away": 76,
-        "rank_home": 75,
-        "spread": 0.7,
-        "total": 137.5
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-25T23:30Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "SE Louisiana",
-      "cards": [],
-      "espn_event_id": "401918845",
-      "home_short": "Texas",
-      "matchup": "SE Louisiana Lady Lions @ Texas Longhorns",
-      "neutral_site": false,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-26T00:00Z",
-      "status": "skipped"
-    },
-    {
-      "away_short": "Saint Louis",
-      "cards": [],
-      "espn_event_id": "401919983",
-      "home_short": "Northern Iowa",
-      "matchup": "Saint Louis Billikens @ Northern Iowa Panthers",
-      "model": {
-        "away_score": 66.6,
-        "games_away": 5,
-        "games_home": 5,
-        "home_score": 66.4,
-        "margin_home": -0.2,
-        "p3_away": 43.3,
-        "p3_home": 50.41111111111111,
-        "proj_poss": 71.0,
-        "rank_away": 147,
-        "rank_home": 162,
-        "spread": 0.2,
-        "total": 132.9
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-26T00:00Z",
       "status": "graded"
     },
     {
@@ -1344,34 +1274,6 @@
         "rank_home": 105,
         "spread": -10.3,
         "total": 131.4
-      },
-      "neutral_site": false,
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
-      ],
-      "shadow": [],
-      "start": "2026-11-26T00:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Samford",
-      "cards": [],
-      "espn_event_id": "401912996",
-      "home_short": "Alabama",
-      "matchup": "Samford Bulldogs @ Alabama Crimson Tide",
-      "model": {
-        "away_score": 52.4,
-        "games_away": 6,
-        "games_home": 7,
-        "home_score": 79.2,
-        "margin_home": 26.8,
-        "p3_away": 49.78,
-        "p3_home": 36.32727272727273,
-        "proj_poss": 70.0,
-        "rank_away": 229,
-        "rank_home": 34,
-        "spread": -26.8,
-        "total": 131.5
       },
       "neutral_site": false,
       "pass_reasons": [
@@ -1410,16 +1312,43 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-25T20:26:09.593889Z",
+  "generated_at": "2026-11-26T00:06:49.971181Z",
   "market_bias": {
-    "mean_spread_delta": 9.45,
-    "mean_total_delta": 5.45,
+    "mean_spread_delta": 4.5,
+    "mean_total_delta": -4.35,
     "n_spread_lines": 2,
     "n_total_lines": 2
   },
-  "n_cards": 2,
+  "n_cards": 0,
   "n_games": 49,
   "odds_available": true,
-  "shadow_cards": [],
-  "total_units": 2.0
+  "shadow_cards": [
+    {
+      "bet_label": "James Madison Dukes +4.5",
+      "book": "betrivers",
+      "confidence": 5,
+      "edge": 0.0142,
+      "espn_event_id": "401915905",
+      "fair_american": -124,
+      "fair_prob": 0.5532,
+      "line": 4.5,
+      "market": "spread",
+      "matchup": "Arkansas Razorbacks @ James Madison Dukes",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -120,
+      "reasoning": [
+        "Model margin -0.7 vs market -4.5 (home)",
+        "Anchored fair margin -3.0 vs line +4.5 (home)"
+      ],
+      "risk": "Shadow",
+      "side": "home",
+      "start": "2026-11-25T23:30Z",
+      "unit_size": 0.5
+    }
+  ],
+  "total_units": 0
 }
