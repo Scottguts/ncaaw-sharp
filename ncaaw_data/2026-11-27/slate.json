@@ -1,7 +1,40 @@
 {
   "date": "2026-11-27",
-  "fetched_at": "2026-11-27T15:34:10.033363Z",
+  "fetched_at": "2026-11-27T16:20:25.770453Z",
   "games": [
+    {
+      "espn_event_id": "401919078",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "Marquette Golden Eagles at Illinois Fighting Illini",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "356",
+        "location": "Illinois",
+        "display_name": "Illinois Fighting Illini",
+        "canon": "illinois",
+        "conf": "Big Ten",
+        "record": "4-0",
+        "score": "18",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "269",
+        "location": "Marquette",
+        "display_name": "Marquette Golden Eagles",
+        "canon": "marquette",
+        "conf": "Big East",
+        "record": "5-2",
+        "score": "11",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "d3a791fd72d595641f7a847c713701cc"
+    },
     {
       "espn_event_id": "401921394",
       "start": "2026-11-27T15:00Z",
@@ -18,7 +51,7 @@
         "canon": "syracuse",
         "conf": "ACC",
         "record": "6-1",
-        "score": "26",
+        "score": "44",
         "winner": null
       },
       "away": {
@@ -28,7 +61,7 @@
         "canon": "auburn",
         "conf": "SEC",
         "record": "7-1",
-        "score": "24",
+        "score": "37",
         "winner": null
       },
       "torvik_home": true,
@@ -51,7 +84,7 @@
         "canon": "george mason",
         "conf": "A10",
         "record": "4-4",
-        "score": "28",
+        "score": "52",
         "winner": null
       },
       "away": {
@@ -61,7 +94,7 @@
         "canon": "vermont",
         "conf": "AE",
         "record": "6-2",
-        "score": "20",
+        "score": "54",
         "winner": null
       },
       "torvik_home": true,
@@ -84,7 +117,7 @@
         "canon": "boise st",
         "conf": "Pac-12",
         "record": "4-2",
-        "score": "30",
+        "score": "62",
         "winner": null
       },
       "away": {
@@ -94,7 +127,7 @@
         "canon": "stetson",
         "conf": "ASUN",
         "record": "2-6",
-        "score": "18",
+        "score": "39",
         "winner": null
       },
       "torvik_home": true,
@@ -102,65 +135,32 @@
       "odds_event_id": "f9169076ac467e9dd49be41e92eef016"
     },
     {
-      "espn_event_id": "401919078",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "Marquette Golden Eagles at Illinois Fighting Illini",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "356",
-        "location": "Illinois",
-        "display_name": "Illinois Fighting Illini",
-        "canon": "illinois",
-        "conf": "Big Ten",
-        "record": "4-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "269",
-        "location": "Marquette",
-        "display_name": "Marquette Golden Eagles",
-        "canon": "marquette",
-        "conf": "Big East",
-        "record": "5-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "d3a791fd72d595641f7a847c713701cc"
-    },
-    {
       "espn_event_id": "401929165",
       "start": "2026-11-27T16:00Z",
       "et_date": "2026-11-27",
-      "name": "Bowling Green Falcons at Texas A&M Aggies",
+      "name": "Texas A&M Aggies at Bowling Green Falcons",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "245",
-        "location": "Texas A&M",
-        "display_name": "Texas A&M Aggies",
-        "canon": "texas a&m",
-        "conf": "SEC",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "189",
         "location": "Bowling Green",
         "display_name": "Bowling Green Falcons",
         "canon": "bowling green",
         "conf": "MAC",
         "record": "4-1",
-        "score": "0",
+        "score": "13",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "245",
+        "location": "Texas A&M",
+        "display_name": "Texas A&M Aggies",
+        "canon": "texas a&m",
+        "conf": "SEC",
+        "record": "6-0",
+        "score": "18",
         "winner": null
       },
       "torvik_home": true,
@@ -174,7 +174,7 @@
       "name": "North Dakota Fighting Hawks at Florida International Panthers",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2229",
@@ -183,7 +183,7 @@
         "canon": "florida intl",
         "conf": "CUSA",
         "record": "1-3",
-        "score": "0",
+        "score": "14",
         "winner": null
       },
       "away": {
@@ -193,7 +193,7 @@
         "canon": "north dakota",
         "conf": "Summit",
         "record": "1-4",
-        "score": "0",
+        "score": "16",
         "winner": null
       },
       "torvik_home": false,
@@ -207,7 +207,7 @@
       "name": "Indiana Hoosiers at Mississippi State Bulldogs",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "344",
@@ -216,7 +216,7 @@
         "canon": "mississippi st",
         "conf": "SEC",
         "record": "6-0",
-        "score": "0",
+        "score": "14",
         "winner": null
       },
       "away": {
@@ -226,7 +226,7 @@
         "canon": "indiana",
         "conf": "Big Ten",
         "record": "7-0",
-        "score": "0",
+        "score": "7",
         "winner": null
       },
       "torvik_home": true,
@@ -240,7 +240,7 @@
       "name": "North Carolina A&T Aggies at Abilene Christian Wildcats",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2000",
@@ -249,7 +249,7 @@
         "canon": "abilene christian",
         "conf": "WAC",
         "record": "5-1",
-        "score": "0",
+        "score": "22",
         "winner": null
       },
       "away": {
@@ -259,7 +259,7 @@
         "canon": "north carolina a&t",
         "conf": "CAA",
         "record": "2-4",
-        "score": "0",
+        "score": "10",
         "winner": null
       },
       "torvik_home": true,
@@ -273,7 +273,7 @@
       "name": "Colorado Buffaloes at Oregon Ducks",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2483",
@@ -282,7 +282,7 @@
         "canon": "oregon",
         "conf": "Big Ten",
         "record": "7-1",
-        "score": "0",
+        "score": "11",
         "winner": null
       },
       "away": {
@@ -292,7 +292,7 @@
         "canon": "colorado",
         "conf": "Big 12",
         "record": "6-0",
-        "score": "0",
+        "score": "19",
         "winner": null
       },
       "torvik_home": true,
@@ -726,7 +726,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "238cd5c60e389c2c01f5318d4013d2b0"
     },
     {
       "espn_event_id": "401913719",

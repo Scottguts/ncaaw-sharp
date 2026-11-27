@@ -1,65 +1,13 @@
 {
   "cards": [
     {
-      "bet_label": "Vermont Catamounts +11.5",
-      "book": "ballybet",
-      "confidence": 8,
-      "edge": 0.0571,
-      "espn_event_id": "401921081",
-      "fair_american": -124,
-      "fair_prob": 0.5537,
-      "line": 11.5,
-      "market": "spread",
-      "matchup": "Vermont Catamounts @ George Mason Patriots",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -110,
-      "reasoning": [
-        "Model margin +8.0 vs market +11.5 (home)",
-        "Anchored fair margin +10.0 vs line +11.5 (away)"
-      ],
-      "risk": "Strong",
-      "side": "away",
-      "start": "2026-11-27T15:00Z",
-      "unit_size": 1.5
-    },
-    {
-      "bet_label": "Stetson Hatters +15.5",
-      "book": "ballybet",
-      "confidence": 8,
-      "edge": 0.0398,
-      "espn_event_id": "401915875",
-      "fair_american": -124,
-      "fair_prob": 0.5539,
-      "line": 15.5,
-      "market": "spread",
-      "matchup": "Stetson Hatters @ Boise State Broncos",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -114,
-      "reasoning": [
-        "Model margin +9.8 vs market +15.5 (home)",
-        "Anchored fair margin +14.0 vs line +15.5 (away)"
-      ],
-      "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-27T15:00Z",
-      "unit_size": 1.0
-    },
-    {
       "bet_label": "Under 132.5",
       "book": "ballybet",
       "confidence": 7,
-      "edge": 0.0364,
+      "edge": 0.0361,
       "espn_event_id": "401913719",
-      "fair_american": -117,
-      "fair_prob": 0.5381,
+      "fair_american": -116,
+      "fair_prob": 0.538,
       "line": 132.5,
       "market": "total",
       "matchup": "TCU Horned Frogs @ Georgia Tech Yellow Jackets",
@@ -77,16 +25,117 @@
       "side": "under",
       "start": "2026-11-27T18:30Z",
       "unit_size": 1.0
+    },
+    {
+      "bet_label": "Stetson Hatters +23.5",
+      "book": "hardrockbet",
+      "confidence": 9,
+      "edge": 0.0356,
+      "espn_event_id": "401915875",
+      "fair_american": -124,
+      "fair_prob": 0.5539,
+      "line": 23.5,
+      "market": "spread",
+      "matchup": "Stetson Hatters @ Boise State Broncos",
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "price_american": -115,
+      "reasoning": [
+        "Model margin +9.8 vs market +23.5 (home)",
+        "Anchored fair margin +22.0 vs line +23.5 (away)"
+      ],
+      "risk": "Standard",
+      "side": "away",
+      "start": "2026-11-27T15:00Z",
+      "unit_size": 1.0
     }
   ],
   "date": "2026-11-27",
   "games": [
     {
       "anchored": {
-        "margin_home": 1.0,
-        "season_bias_applied": -2.11,
+        "margin_home": 22.5,
+        "season_bias_applied": -0.99,
         "spread_shift": -1.5,
-        "total": 140.0,
+        "total": 132.0,
+        "total_shift": -1.5
+      },
+      "away_short": "Marquette",
+      "cards": [],
+      "espn_event_id": "401919078",
+      "home_short": "Illinois",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -24.0,
+        "spread_src": "consensus",
+        "total": 133.5,
+        "total_src": "consensus"
+      },
+      "matchup": "Marquette Golden Eagles @ Illinois Fighting Illini",
+      "model": {
+        "away_score": 56.1,
+        "games_away": 7,
+        "games_home": 4,
+        "home_score": 72.5,
+        "margin_home": 16.3,
+        "p2_away": 52.04545454545455,
+        "p2_home": 54.150000000000006,
+        "p3_away": 34.290909090909096,
+        "p3_home": 39.65,
+        "proj_poss": 68.8,
+        "rank_away": 83,
+        "rank_home": 17,
+        "spread": -16.3,
+        "total": 128.6
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "shadow": [
+        {
+          "bet_label": "Marquette Golden Eagles +23.5",
+          "book": "draftkings",
+          "confidence": 6,
+          "edge": 0.0154,
+          "espn_event_id": "401919078",
+          "fair_american": -114,
+          "fair_prob": 0.5319,
+          "line": 23.5,
+          "market": "spread",
+          "matchup": "Marquette Golden Eagles @ Illinois Fighting Illini",
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "price_american": -110,
+          "reasoning": [
+            "Model margin +16.3 vs market +24.0 (home)",
+            "Anchored fair margin +22.5 vs line +23.5 (away)"
+          ],
+          "risk": "Shadow",
+          "side": "away",
+          "start": "2026-11-27T16:00Z",
+          "unit_size": 0.5
+        }
+      ],
+      "sigma": {
+        "spread": 12.5,
+        "total": 17.17
+      },
+      "start": "2026-11-27T16:00Z",
+      "status": "graded"
+    },
+    {
+      "anchored": {
+        "margin_home": 6.0,
+        "season_bias_applied": -0.99,
+        "spread_shift": -1.5,
+        "total": 135.0,
         "total_shift": -1.5
       },
       "away_short": "Auburn",
@@ -95,9 +144,9 @@
       "home_short": "Syracuse",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -2.5,
+        "spread_home": -7.5,
         "spread_src": "consensus",
-        "total": 141.5,
+        "total": 136.5,
         "total_src": "consensus"
       },
       "matchup": "Auburn Tigers @ Syracuse Orange",
@@ -121,85 +170,31 @@
       "pass_reasons": [
         "no edge cleared the gates"
       ],
-      "shadow": [
-        {
-          "bet_label": "Auburn Tigers +2.5",
-          "book": "ballybet",
-          "confidence": 6,
-          "edge": 0.0142,
-          "espn_event_id": "401921394",
-          "fair_american": -124,
-          "fair_prob": 0.5532,
-          "line": 2.5,
-          "market": "spread",
-          "matchup": "Auburn Tigers @ Syracuse Orange",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -120,
-          "reasoning": [
-            "Model margin -3.0 vs market +2.5 (home)",
-            "Anchored fair margin +1.0 vs line +2.5 (away)"
-          ],
-          "risk": "Shadow",
-          "side": "away",
-          "start": "2026-11-27T15:00Z",
-          "unit_size": 0.5
-        }
-      ],
+      "shadow": [],
       "sigma": {
         "spread": 11.21,
-        "total": 15.38
+        "total": 15.45
       },
       "start": "2026-11-27T15:00Z",
       "status": "graded"
     },
     {
       "anchored": {
-        "margin_home": 10.0,
-        "season_bias_applied": -2.11,
-        "spread_shift": -1.5,
-        "total": 125.0,
+        "margin_home": 4.0,
+        "season_bias_applied": -0.99,
+        "spread_shift": 1.5,
+        "total": 129.0,
         "total_shift": -1.5
       },
       "away_short": "Vermont",
-      "cards": [
-        {
-          "bet_label": "Vermont Catamounts +11.5",
-          "book": "ballybet",
-          "confidence": 8,
-          "edge": 0.0571,
-          "espn_event_id": "401921081",
-          "fair_american": -124,
-          "fair_prob": 0.5537,
-          "line": 11.5,
-          "market": "spread",
-          "matchup": "Vermont Catamounts @ George Mason Patriots",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +8.0 vs market +11.5 (home)",
-            "Anchored fair margin +10.0 vs line +11.5 (away)"
-          ],
-          "risk": "Strong",
-          "side": "away",
-          "start": "2026-11-27T15:00Z",
-          "unit_size": 1.5
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401921081",
       "home_short": "George Mason",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -11.5,
+        "spread_home": -2.5,
         "spread_src": "consensus",
-        "total": 126.5,
+        "total": 130.5,
         "total_src": "consensus"
       },
       "matchup": "Vermont Catamounts @ George Mason Patriots",
@@ -220,19 +215,21 @@
         "total": 118.5
       },
       "neutral_site": true,
-      "pass_reasons": [],
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
       "shadow": [],
       "sigma": {
         "spread": 11.11,
-        "total": 14.93
+        "total": 15.0
       },
       "start": "2026-11-27T15:00Z",
       "status": "graded"
     },
     {
       "anchored": {
-        "margin_home": 14.0,
-        "season_bias_applied": -2.11,
+        "margin_home": 22.0,
+        "season_bias_applied": -0.99,
         "spread_shift": -1.5,
         "total": 133.0,
         "total_shift": -1.5
@@ -240,14 +237,14 @@
       "away_short": "Stetson",
       "cards": [
         {
-          "bet_label": "Stetson Hatters +15.5",
-          "book": "ballybet",
-          "confidence": 8,
-          "edge": 0.0398,
+          "bet_label": "Stetson Hatters +23.5",
+          "book": "hardrockbet",
+          "confidence": 9,
+          "edge": 0.0356,
           "espn_event_id": "401915875",
           "fair_american": -124,
           "fair_prob": 0.5539,
-          "line": 15.5,
+          "line": 23.5,
           "market": "spread",
           "matchup": "Stetson Hatters @ Boise State Broncos",
           "pass_triggers": [
@@ -255,10 +252,10 @@
             "Line moves through our fair value before tip",
             "Confirmed lineup/coaching news that invalidates the Torvik profile"
           ],
-          "price_american": -114,
+          "price_american": -115,
           "reasoning": [
-            "Model margin +9.8 vs market +15.5 (home)",
-            "Anchored fair margin +14.0 vs line +15.5 (away)"
+            "Model margin +9.8 vs market +23.5 (home)",
+            "Anchored fair margin +22.0 vs line +23.5 (away)"
           ],
           "risk": "Standard",
           "side": "away",
@@ -270,7 +267,7 @@
       "home_short": "Boise State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -15.5,
+        "spread_home": -23.5,
         "spread_src": "consensus",
         "total": 134.5,
         "total_src": "consensus"
@@ -297,79 +294,31 @@
       "shadow": [],
       "sigma": {
         "spread": 11.06,
-        "total": 15.21
+        "total": 15.27
       },
       "start": "2026-11-27T15:00Z",
       "status": "graded"
     },
     {
-      "anchored": {
-        "margin_home": 20.0,
-        "season_bias_applied": -2.11,
-        "spread_shift": -1.5,
-        "total": 134.0,
-        "total_shift": -1.5
-      },
-      "away_short": "Marquette",
-      "cards": [],
-      "espn_event_id": "401919078",
-      "home_short": "Illinois",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -21.5,
-        "spread_src": "consensus",
-        "total": 135.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Marquette Golden Eagles @ Illinois Fighting Illini",
-      "model": {
-        "away_score": 56.1,
-        "games_away": 7,
-        "games_home": 4,
-        "home_score": 72.5,
-        "margin_home": 16.3,
-        "p2_away": 52.04545454545455,
-        "p2_home": 54.150000000000006,
-        "p3_away": 34.290909090909096,
-        "p3_home": 39.65,
-        "proj_poss": 68.8,
-        "rank_away": 83,
-        "rank_home": 17,
-        "spread": -16.3,
-        "total": 128.6
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 12.5,
-        "total": 17.1
-      },
-      "start": "2026-11-27T16:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Bowling Green",
+      "away_short": "Texas A&M",
       "cards": [],
       "espn_event_id": "401929165",
-      "home_short": "Texas A&M",
-      "matchup": "Bowling Green Falcons @ Texas A&M Aggies",
+      "home_short": "Bowling Green",
+      "matchup": "Texas A&M Aggies @ Bowling Green Falcons",
       "model": {
-        "away_score": 55.6,
-        "games_away": 5,
-        "games_home": 6,
-        "home_score": 68.3,
-        "margin_home": 12.7,
-        "p2_away": 50.833333333333336,
-        "p2_home": 45.4,
-        "p3_away": 28.788888888888888,
-        "p3_home": 27.759999999999998,
+        "away_score": 68.3,
+        "games_away": 6,
+        "games_home": 5,
+        "home_score": 55.6,
+        "margin_home": -12.7,
+        "p2_away": 45.4,
+        "p2_home": 50.833333333333336,
+        "p3_away": 27.759999999999998,
+        "p3_home": 28.788888888888888,
         "proj_poss": 70.9,
-        "rank_away": 187,
-        "rank_home": 66,
-        "spread": -12.7,
+        "rank_away": 66,
+        "rank_home": 187,
+        "spread": 12.7,
         "total": 123.8
       },
       "neutral_site": true,
@@ -456,11 +405,11 @@
     },
     {
       "anchored": {
-        "margin_home": -1.1,
-        "season_bias_applied": -2.11,
-        "spread_shift": -0.6,
-        "total": 134.0,
-        "total_shift": -1.5
+        "margin_home": -4.0,
+        "season_bias_applied": -0.99,
+        "spread_shift": 1.5,
+        "total": 134.61,
+        "total_shift": 0.11
       },
       "away_short": "Colorado",
       "cards": [],
@@ -468,9 +417,9 @@
       "home_short": "Oregon",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 0.5,
+        "spread_home": 5.5,
         "spread_src": "consensus",
-        "total": 135.5,
+        "total": 134.5,
         "total_src": "consensus"
       },
       "matchup": "Colorado Buffaloes @ Oregon Ducks",
@@ -497,7 +446,7 @@
       "shadow": [],
       "sigma": {
         "spread": 11.21,
-        "total": 15.95
+        "total": 16.01
       },
       "start": "2026-11-27T16:00Z",
       "status": "graded"
@@ -505,10 +454,10 @@
     {
       "anchored": {
         "margin_home": 40.0,
-        "season_bias_applied": -2.11,
+        "season_bias_applied": -0.99,
         "spread_shift": -1.5,
-        "total": 143.0,
-        "total_shift": -1.5
+        "total": 143.41,
+        "total_shift": -1.09
       },
       "away_short": "Akron",
       "cards": [],
@@ -545,7 +494,7 @@
       "shadow": [],
       "sigma": {
         "spread": 12.84,
-        "total": 16.4
+        "total": 16.46
       },
       "start": "2026-11-27T17:00Z",
       "status": "graded"
@@ -849,10 +798,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -33.0,
+        "season_bias_applied": -0.99,
+        "spread_shift": 1.5,
+        "total": 135.0,
+        "total_shift": -1.5
+      },
       "away_short": "USC",
       "cards": [],
       "espn_event_id": "401921243",
       "home_short": "Saint Joseph's",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 34.5,
+        "spread_src": "consensus",
+        "total": 136.5,
+        "total_src": "consensus"
+      },
       "matchup": "USC Trojans @ Saint Joseph's Hawks",
       "model": {
         "away_score": 80.2,
@@ -872,17 +835,21 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 12.56,
+        "total": 15.86
+      },
       "start": "2026-11-27T18:30Z",
       "status": "graded"
     },
     {
       "anchored": {
         "margin_home": -17.4,
-        "season_bias_applied": -2.11,
-        "spread_shift": 1.1,
+        "season_bias_applied": -0.99,
+        "spread_shift": 0.1,
         "total": 131.0,
         "total_shift": -1.5
       },
@@ -892,10 +859,10 @@
           "bet_label": "Under 132.5",
           "book": "ballybet",
           "confidence": 7,
-          "edge": 0.0364,
+          "edge": 0.0361,
           "espn_event_id": "401913719",
-          "fair_american": -117,
-          "fair_prob": 0.5381,
+          "fair_american": -116,
+          "fair_prob": 0.538,
           "line": 132.5,
           "market": "total",
           "matchup": "TCU Horned Frogs @ Georgia Tech Yellow Jackets",
@@ -919,7 +886,7 @@
       "home_short": "Georgia Tech",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": 18.5,
+        "spread_home": 17.5,
         "spread_src": "consensus",
         "total": 132.5,
         "total_src": "consensus"
@@ -946,16 +913,16 @@
       "shadow": [],
       "sigma": {
         "spread": 11.46,
-        "total": 15.67
+        "total": 15.74
       },
       "start": "2026-11-27T18:30Z",
       "status": "graded"
     },
     {
       "anchored": {
-        "margin_home": 3.4,
-        "season_bias_applied": -2.11,
-        "spread_shift": 1.4,
+        "margin_home": 3.0,
+        "season_bias_applied": -0.99,
+        "spread_shift": 1.5,
         "total": 140.0,
         "total_shift": -1.5
       },
@@ -965,7 +932,7 @@
       "home_short": "Washington",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -2.0,
+        "spread_home": -1.5,
         "spread_src": "consensus",
         "total": 141.5,
         "total_src": "consensus"
@@ -993,39 +960,13 @@
       ],
       "shadow": [
         {
-          "bet_label": "Washington Huskies -2.5",
-          "book": "draftkings",
-          "confidence": 4,
-          "edge": 0.0156,
-          "espn_event_id": "401927837",
-          "fair_american": -114,
-          "fair_prob": 0.532,
-          "line": -2.5,
-          "market": "spread",
-          "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -110,
-          "reasoning": [
-            "Model margin +3.4 vs market +2.0 (home)",
-            "Anchored fair margin +3.4 vs line -2.5 (home)"
-          ],
-          "risk": "Shadow",
-          "side": "home",
-          "start": "2026-11-27T18:30Z",
-          "unit_size": 0.5
-        },
-        {
           "bet_label": "Under 141.5",
           "book": "draftkings",
-          "confidence": 8,
-          "edge": 0.0253,
+          "confidence": 7,
+          "edge": 0.025,
           "espn_event_id": "401927837",
           "fair_american": -116,
-          "fair_prob": 0.5371,
+          "fair_prob": 0.5369,
           "line": 141.5,
           "market": "total",
           "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
@@ -1047,7 +988,7 @@
       ],
       "sigma": {
         "spread": 11.21,
-        "total": 16.13
+        "total": 16.18
       },
       "start": "2026-11-27T18:30Z",
       "status": "graded"
@@ -2577,54 +2518,28 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-27T15:34:10.047204Z",
+  "generated_at": "2026-11-27T16:20:25.780269Z",
   "market_bias": {
-    "mean_spread_delta": -3.29,
-    "mean_total_delta": -5.79,
-    "n_spread_lines": 8,
-    "n_total_lines": 8
+    "mean_spread_delta": -2.38,
+    "mean_total_delta": -5.11,
+    "n_spread_lines": 9,
+    "n_total_lines": 9
   },
-  "n_cards": 3,
+  "n_cards": 2,
   "n_games": 78,
   "odds_available": true,
   "shadow_cards": [
     {
-      "bet_label": "Auburn Tigers +2.5",
-      "book": "ballybet",
-      "confidence": 6,
-      "edge": 0.0142,
-      "espn_event_id": "401921394",
-      "fair_american": -124,
-      "fair_prob": 0.5532,
-      "line": 2.5,
-      "market": "spread",
-      "matchup": "Auburn Tigers @ Syracuse Orange",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -120,
-      "reasoning": [
-        "Model margin -3.0 vs market +2.5 (home)",
-        "Anchored fair margin +1.0 vs line +2.5 (away)"
-      ],
-      "risk": "Shadow",
-      "side": "away",
-      "start": "2026-11-27T15:00Z",
-      "unit_size": 0.5
-    },
-    {
-      "bet_label": "Washington Huskies -2.5",
+      "bet_label": "Marquette Golden Eagles +23.5",
       "book": "draftkings",
-      "confidence": 4,
-      "edge": 0.0156,
-      "espn_event_id": "401927837",
+      "confidence": 6,
+      "edge": 0.0154,
+      "espn_event_id": "401919078",
       "fair_american": -114,
-      "fair_prob": 0.532,
-      "line": -2.5,
+      "fair_prob": 0.5319,
+      "line": 23.5,
       "market": "spread",
-      "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
+      "matchup": "Marquette Golden Eagles @ Illinois Fighting Illini",
       "pass_triggers": [
         "Key player ruled out after card is posted",
         "Line moves through our fair value before tip",
@@ -2632,22 +2547,22 @@
       ],
       "price_american": -110,
       "reasoning": [
-        "Model margin +3.4 vs market +2.0 (home)",
-        "Anchored fair margin +3.4 vs line -2.5 (home)"
+        "Model margin +16.3 vs market +24.0 (home)",
+        "Anchored fair margin +22.5 vs line +23.5 (away)"
       ],
       "risk": "Shadow",
-      "side": "home",
-      "start": "2026-11-27T18:30Z",
+      "side": "away",
+      "start": "2026-11-27T16:00Z",
       "unit_size": 0.5
     },
     {
       "bet_label": "Under 141.5",
       "book": "draftkings",
-      "confidence": 8,
-      "edge": 0.0253,
+      "confidence": 7,
+      "edge": 0.025,
       "espn_event_id": "401927837",
       "fair_american": -116,
-      "fair_prob": 0.5371,
+      "fair_prob": 0.5369,
       "line": 141.5,
       "market": "total",
       "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
@@ -2667,5 +2582,5 @@
       "unit_size": 0.5
     }
   ],
-  "total_units": 3.5
+  "total_units": 2.0
 }
