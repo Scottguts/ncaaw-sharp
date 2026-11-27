@@ -1,23 +1,45 @@
 # NCAAW Betting Card — 2026-11-27
 
-## NO PLAYS
+**3 play(s) · 3.5u total**
 
-Nothing cleared the gates today. A quiet day is a correct day.
+## Vermont Catamounts +11.5 (-110 ballybet)
+
+- **Game:** Vermont Catamounts @ George Mason Patriots
+- **Market:** spread · **Fair:** 55.4% (-124) · **Edge:** 5.7%
+- **Confidence:** 8/10 · **Size:** 1.5u (Strong)
+- **Why:** Model margin +8.0 vs market +11.5 (home); Anchored fair margin +10.0 vs line +11.5 (away)
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+
+## Stetson Hatters +15.5 (-114 ballybet)
+
+- **Game:** Stetson Hatters @ Boise State Broncos
+- **Market:** spread · **Fair:** 55.4% (-124) · **Edge:** 4.0%
+- **Confidence:** 8/10 · **Size:** 1.0u (Standard)
+- **Why:** Model margin +9.8 vs market +15.5 (home); Anchored fair margin +14.0 vs line +15.5 (away)
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
+
+## Under 132.5 (-108 ballybet)
+
+- **Game:** TCU Horned Frogs @ Georgia Tech Yellow Jackets
+- **Market:** total · **Fair:** 53.8% (-117) · **Edge:** 3.6%
+- **Confidence:** 7/10 · **Size:** 1.0u (Standard)
+- **Why:** Model total 130.7 vs market 132.5; Anchored fair total 131.0 vs line 132.5
+- **Pass if:** Key player ruled out after card is posted; Line moves through our fair value before tip; Confirmed lineup/coaching news that invalidates the Torvik profile
 
 ---
 
 ### Full slate
 
-- **Auburn Tigers @ Syracuse Orange** — model 64-61 (margin -3.0 home, total 125.9) · market: no line · PASS: no market line (nothing to anchor against)
-- **Vermont Catamounts @ George Mason Patriots** — model 55-63 (margin +8.0 home, total 118.5) · market: no line · PASS: no market line (nothing to anchor against)
-- **Stetson Hatters @ Boise State Broncos** — model 57-66 (margin +9.8 home, total 123.0) · market: no line · PASS: no market line (nothing to anchor against)
+- **Auburn Tigers @ Syracuse Orange** — model 64-61 (margin -3.0 home, total 125.9) · market: home -2.5 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
+- **Vermont Catamounts @ George Mason Patriots** — model 55-63 (margin +8.0 home, total 118.5) · market: home -11.5 (consensus) · total 126.5 (consensus)
+- **Stetson Hatters @ Boise State Broncos** — model 57-66 (margin +9.8 home, total 123.0) · market: home -15.5 (consensus) · total 134.5 (consensus)
 - **Marquette Golden Eagles @ Illinois Fighting Illini** — model 56-72 (margin +16.3 home, total 128.6) · market: home -21.5 (consensus) · total 135.5 (consensus) · PASS: no edge cleared the gates
 - **Bowling Green Falcons @ Texas A&M Aggies** — model 56-68 (margin +12.7 home, total 123.8) · market: no line · PASS: no market line (nothing to anchor against)
 - **North Dakota Fighting Hawks @ Florida International Panthers** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Indiana Hoosiers @ Mississippi State Bulldogs** — model 70-68 (margin -2.3 home, total 137.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **North Carolina A&T Aggies @ Abilene Christian Wildcats** — model 54-69 (margin +14.9 home, total 123.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Colorado Buffaloes @ Oregon Ducks** — model 68-67 (margin -1.1 home, total 135.6) · market: home +0.5 (consensus) · total 135.5 (consensus) · PASS: no edge cleared the gates
-- **Akron Zips @ Louisville Cardinals** — model 56-89 (margin +33.2 home, total 144.4) · market: no line · PASS: no market line (nothing to anchor against)
+- **Akron Zips @ Louisville Cardinals** — model 56-89 (margin +33.2 home, total 144.4) · market: home -41.5 (consensus) · total 144.5 (consensus) · PASS: no edge cleared the gates
 - **Morehead State Eagles @ Buffalo Bulls** — model 63-70 (margin +6.5 home, total 132.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **UMBC Retrievers @ Iona Gaels** — model 64-58 (margin -5.2 home, total 122.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **DePaul Blue Demons @ Northwestern Wildcats** — model 72-77 (margin +5.1 home, total 148.1) · market: no line · PASS: no market line (nothing to anchor against)
@@ -30,8 +52,8 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **UT Arlington Mavericks @ West Florida Argonauts** — model 73-59 (margin -13.4 home, total 132.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **Central Michigan Chippewas @ Tulsa Golden Hurricane** — model 51-70 (margin +18.3 home, total 121.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **USC Trojans @ Saint Joseph's Hawks** — model 80-53 (margin -27.6 home, total 132.8) · market: no line · PASS: no market line (nothing to anchor against)
-- **TCU Horned Frogs @ Georgia Tech Yellow Jackets** — model 74-57 (margin -17.4 home, total 130.7) · market: home +17.5 (consensus) · total 132.5 (consensus) · PASS: no edge cleared the gates
-- **Oklahoma State Cowgirls @ Washington Huskies** — model 68-71 (margin +3.4 home, total 139.0) · market: home -1.5 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
+- **TCU Horned Frogs @ Georgia Tech Yellow Jackets** — model 74-57 (margin -17.4 home, total 130.7) · market: home +18.5 (consensus) · total 132.5 (consensus)
+- **Oklahoma State Cowgirls @ Washington Huskies** — model 68-71 (margin +3.4 home, total 139.0) · market: home -2 (consensus) · total 141.5 (consensus) · PASS: no edge cleared the gates
 - **Northern Illinois Huskies @ Manhattan Jaspers** — model 59-56 (margin -3.1 home, total 115.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **South Dakota Coyotes @ North Florida Ospreys** — model 64-63 (margin -0.7 home, total 126.5) · market: no line · PASS: no market line (nothing to anchor against)
 - **Maryland Eastern Shore Hawks @ Georgia Lady Bulldogs** — model 46-74 (margin +28.5 home, total 120.6) · market: no line · PASS: no market line (nothing to anchor against)
@@ -87,4 +109,4 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Cincinnati Bearcats @ Minnesota Golden Gophers** — model 56-74 (margin +17.6 home, total 129.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **New Mexico State Aggies @ Nevada Wolf Pack** — model 60-60 (margin -0.7 home, total 120.2) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-27T14:43:49Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-27T15:34:10Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

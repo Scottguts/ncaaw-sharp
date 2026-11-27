@@ -1,31 +1,82 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T14:43:49.656606Z",
+  "generated_at": "2026-11-27T15:34:10.047204Z",
   "market_bias": {
-    "n_spread_lines": 4,
-    "n_total_lines": 4,
-    "mean_spread_delta": -0.95,
-    "mean_total_delta": -2.78
+    "n_spread_lines": 8,
+    "n_total_lines": 8,
+    "mean_spread_delta": -3.29,
+    "mean_total_delta": -5.79
   },
   "odds_available": true,
   "n_games": 78,
-  "n_cards": 0,
-  "total_units": 0,
-  "cards": [],
-  "shadow_cards": [
+  "n_cards": 3,
+  "total_units": 3.5,
+  "cards": [
+    {
+      "bet_label": "Vermont Catamounts +11.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -110,
+      "line": 11.5,
+      "fair_prob": 0.5537,
+      "fair_american": -124,
+      "edge": 0.0571,
+      "confidence": 8,
+      "unit_size": 1.5,
+      "risk": "Strong",
+      "reasoning": [
+        "Model margin +8.0 vs market +11.5 (home)",
+        "Anchored fair margin +10.0 vs line +11.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401921081",
+      "matchup": "Vermont Catamounts @ George Mason Patriots",
+      "start": "2026-11-27T15:00Z"
+    },
+    {
+      "bet_label": "Stetson Hatters +15.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -114,
+      "line": 15.5,
+      "fair_prob": 0.5539,
+      "fair_american": -124,
+      "edge": 0.0398,
+      "confidence": 8,
+      "unit_size": 1.0,
+      "risk": "Standard",
+      "reasoning": [
+        "Model margin +9.8 vs market +15.5 (home)",
+        "Anchored fair margin +14.0 vs line +15.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401915875",
+      "matchup": "Stetson Hatters @ Boise State Broncos",
+      "start": "2026-11-27T15:00Z"
+    },
     {
       "bet_label": "Under 132.5",
       "market": "total",
       "side": "under",
-      "book": "draftkings",
-      "price_american": -110,
+      "book": "ballybet",
+      "price_american": -108,
       "line": 132.5,
       "fair_prob": 0.5381,
       "fair_american": -117,
-      "edge": 0.0273,
+      "edge": 0.0364,
       "confidence": 7,
-      "unit_size": 0.5,
-      "risk": "Shadow",
+      "unit_size": 1.0,
+      "risk": "Standard",
       "reasoning": [
         "Model total 130.7 vs market 132.5",
         "Anchored fair total 131.0 vs line 132.5"
@@ -37,6 +88,60 @@
       ],
       "espn_event_id": "401913719",
       "matchup": "TCU Horned Frogs @ Georgia Tech Yellow Jackets",
+      "start": "2026-11-27T18:30Z"
+    }
+  ],
+  "shadow_cards": [
+    {
+      "bet_label": "Auburn Tigers +2.5",
+      "market": "spread",
+      "side": "away",
+      "book": "ballybet",
+      "price_american": -120,
+      "line": 2.5,
+      "fair_prob": 0.5532,
+      "fair_american": -124,
+      "edge": 0.0142,
+      "confidence": 6,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model margin -3.0 vs market +2.5 (home)",
+        "Anchored fair margin +1.0 vs line +2.5 (away)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401921394",
+      "matchup": "Auburn Tigers @ Syracuse Orange",
+      "start": "2026-11-27T15:00Z"
+    },
+    {
+      "bet_label": "Washington Huskies -2.5",
+      "market": "spread",
+      "side": "home",
+      "book": "draftkings",
+      "price_american": -110,
+      "line": -2.5,
+      "fair_prob": 0.532,
+      "fair_american": -114,
+      "edge": 0.0156,
+      "confidence": 4,
+      "unit_size": 0.5,
+      "risk": "Shadow",
+      "reasoning": [
+        "Model margin +3.4 vs market +2.0 (home)",
+        "Anchored fair margin +3.4 vs line -2.5 (home)"
+      ],
+      "pass_triggers": [
+        "Key player ruled out after card is posted",
+        "Line moves through our fair value before tip",
+        "Confirmed lineup/coaching news that invalidates the Torvik profile"
+      ],
+      "espn_event_id": "401927837",
+      "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
       "start": "2026-11-27T18:30Z"
     },
     {
@@ -76,9 +181,36 @@
       "neutral_site": true,
       "status": "graded",
       "cards": [],
-      "shadow": [],
+      "shadow": [
+        {
+          "bet_label": "Auburn Tigers +2.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -120,
+          "line": 2.5,
+          "fair_prob": 0.5532,
+          "fair_american": -124,
+          "edge": 0.0142,
+          "confidence": 6,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model margin -3.0 vs market +2.5 (home)",
+            "Anchored fair margin +1.0 vs line +2.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401921394",
+          "matchup": "Auburn Tigers @ Syracuse Orange",
+          "start": "2026-11-27T15:00Z"
+        }
+      ],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 64.5,
@@ -95,6 +227,24 @@
         "p3_away": 30.93333333333333,
         "p2_home": 49.981818181818184,
         "p2_away": 46.633333333333326
+      },
+      "market": {
+        "spread_home": -2.5,
+        "total": 141.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.21,
+        "total": 15.38
+      },
+      "anchored": {
+        "margin_home": 1.0,
+        "spread_shift": -1.5,
+        "total": 140.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.11
       }
     },
     {
@@ -105,11 +255,36 @@
       "start": "2026-11-27T15:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Vermont Catamounts +11.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -110,
+          "line": 11.5,
+          "fair_prob": 0.5537,
+          "fair_american": -124,
+          "edge": 0.0571,
+          "confidence": 8,
+          "unit_size": 1.5,
+          "risk": "Strong",
+          "reasoning": [
+            "Model margin +8.0 vs market +11.5 (home)",
+            "Anchored fair margin +10.0 vs line +11.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401921081",
+          "matchup": "Vermont Catamounts @ George Mason Patriots",
+          "start": "2026-11-27T15:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 55.2,
         "home_score": 63.3,
@@ -125,6 +300,24 @@
         "p3_away": 36.333333333333336,
         "p2_home": 44.43333333333334,
         "p2_away": 48.633333333333326
+      },
+      "market": {
+        "spread_home": -11.5,
+        "total": 126.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.11,
+        "total": 14.93
+      },
+      "anchored": {
+        "margin_home": 10.0,
+        "spread_shift": -1.5,
+        "total": 125.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.11
       }
     },
     {
@@ -135,11 +328,36 @@
       "start": "2026-11-27T15:00Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [],
-      "pass_reasons": [
-        "no market line (nothing to anchor against)"
+      "cards": [
+        {
+          "bet_label": "Stetson Hatters +15.5",
+          "market": "spread",
+          "side": "away",
+          "book": "ballybet",
+          "price_american": -114,
+          "line": 15.5,
+          "fair_prob": 0.5539,
+          "fair_american": -124,
+          "edge": 0.0398,
+          "confidence": 8,
+          "unit_size": 1.0,
+          "risk": "Standard",
+          "reasoning": [
+            "Model margin +9.8 vs market +15.5 (home)",
+            "Anchored fair margin +14.0 vs line +15.5 (away)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401915875",
+          "matchup": "Stetson Hatters @ Boise State Broncos",
+          "start": "2026-11-27T15:00Z"
+        }
       ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 56.6,
         "home_score": 66.4,
@@ -155,6 +373,24 @@
         "p3_away": 26.333333333333336,
         "p2_home": 45.06,
         "p2_away": 42.16666666666667
+      },
+      "market": {
+        "spread_home": -15.5,
+        "total": 134.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.06,
+        "total": 15.21
+      },
+      "anchored": {
+        "margin_home": 14.0,
+        "spread_shift": -1.5,
+        "total": 133.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.11
       }
     },
     {
@@ -368,7 +604,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 55.6,
@@ -385,6 +621,24 @@
         "p3_away": 25.481818181818184,
         "p2_home": 56.37692307692308,
         "p2_away": 44.227272727272734
+      },
+      "market": {
+        "spread_home": -41.5,
+        "total": 144.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.84,
+        "total": 16.4
+      },
+      "anchored": {
+        "margin_home": 40.0,
+        "spread_shift": -1.5,
+        "total": 143.0,
+        "total_shift": -1.5,
+        "season_bias_applied": -2.11
       }
     },
     {
@@ -723,21 +977,20 @@
       "start": "2026-11-27T18:30Z",
       "neutral_site": true,
       "status": "graded",
-      "cards": [],
-      "shadow": [
+      "cards": [
         {
           "bet_label": "Under 132.5",
           "market": "total",
           "side": "under",
-          "book": "draftkings",
-          "price_american": -110,
+          "book": "ballybet",
+          "price_american": -108,
           "line": 132.5,
           "fair_prob": 0.5381,
           "fair_american": -117,
-          "edge": 0.0273,
+          "edge": 0.0364,
           "confidence": 7,
-          "unit_size": 0.5,
-          "risk": "Shadow",
+          "unit_size": 1.0,
+          "risk": "Standard",
           "reasoning": [
             "Model total 130.7 vs market 132.5",
             "Anchored fair total 131.0 vs line 132.5"
@@ -752,9 +1005,8 @@
           "start": "2026-11-27T18:30Z"
         }
       ],
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
+      "shadow": [],
+      "pass_reasons": [],
       "model": {
         "away_score": 74.1,
         "home_score": 56.6,
@@ -772,7 +1024,7 @@
         "p2_away": 58.9
       },
       "market": {
-        "spread_home": 17.5,
+        "spread_home": 18.5,
         "total": 132.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -784,7 +1036,7 @@
       },
       "anchored": {
         "margin_home": -17.4,
-        "spread_shift": 0.1,
+        "spread_shift": 1.1,
         "total": 131.0,
         "total_shift": -1.5,
         "season_bias_applied": -2.11
@@ -800,6 +1052,32 @@
       "status": "graded",
       "cards": [],
       "shadow": [
+        {
+          "bet_label": "Washington Huskies -2.5",
+          "market": "spread",
+          "side": "home",
+          "book": "draftkings",
+          "price_american": -110,
+          "line": -2.5,
+          "fair_prob": 0.532,
+          "fair_american": -114,
+          "edge": 0.0156,
+          "confidence": 4,
+          "unit_size": 0.5,
+          "risk": "Shadow",
+          "reasoning": [
+            "Model margin +3.4 vs market +2.0 (home)",
+            "Anchored fair margin +3.4 vs line -2.5 (home)"
+          ],
+          "pass_triggers": [
+            "Key player ruled out after card is posted",
+            "Line moves through our fair value before tip",
+            "Confirmed lineup/coaching news that invalidates the Torvik profile"
+          ],
+          "espn_event_id": "401927837",
+          "matchup": "Oklahoma State Cowgirls @ Washington Huskies",
+          "start": "2026-11-27T18:30Z"
+        },
         {
           "bet_label": "Under 141.5",
           "market": "total",
@@ -847,7 +1125,7 @@
         "p2_away": 55.9
       },
       "market": {
-        "spread_home": -1.5,
+        "spread_home": -2.0,
         "total": 141.5,
         "spread_src": "consensus",
         "total_src": "consensus",
@@ -858,8 +1136,8 @@
         "total": 16.13
       },
       "anchored": {
-        "margin_home": 3.0,
-        "spread_shift": 1.5,
+        "margin_home": 3.4,
+        "spread_shift": 1.4,
         "total": 140.0,
         "total_shift": -1.5,
         "season_bias_applied": -2.11
