@@ -241,6 +241,31 @@ def torvik_season_for(d: date) -> int:
     return d.year + 1 if d.month >= 7 else d.year
 
 
+def _solve_torvik_challenge(html: str) -> dict | None:
+    """Solve barttorvik's JS proof-of-work (added ~2026-11-21).
+
+    The challenge page carries hidden fields (bt_n nonce, bt_t timestamp,
+    bt_s server hash) plus a JS loop that finds an integer n where the first
+    32 bits of SHA-256(prefix + n) have the top 14 bits zero
+    ((h0 & 0xfffc0000) == 0), then submits it as bt_a. ~2^18 hashes —
+    milliseconds with hashlib."""
+    import hashlib
+    fields = dict(re.findall(r'name="(bt_\w+)"(?:\s+id="[^"]*")?\s+value="([^"]*)"', html))
+    m = re.search(r'var prefix = "([^"]+)"', html)
+    if not m or "bt_s" not in fields:
+        return None
+    prefix = m.group(1)
+    n = 0
+    while n < 5_000_000:   # expected ~260k; hard stop for safety
+        h = hashlib.sha256(f"{prefix}{n}".encode()).digest()
+        if int.from_bytes(h[:4], "big") & 0xFFFC0000 == 0:
+            fields["bt_a"] = str(n)
+            fields["js_test_submitted"] = "1"
+            return fields
+        n += 1
+    return None
+
+
 def fetch_torvik(year: int) -> dict[str, dict]:
     """Live Torvik NCAAW table keyed by canonical team name."""
     s = requests.Session()
@@ -249,9 +274,10 @@ def fetch_torvik(year: int) -> dict[str, dict]:
     rows = None
     for attempt in range(3):
         r = s.get(url, timeout=30)
-        if "js_test" in r.text[:500] or "Verifying" in r.text[:500]:
-            s.post(url, data={"js_test_submitted": "1"}, timeout=30,
-                   allow_redirects=True)
+        if "js_test" in r.text[:600] or "Verifying" in r.text[:600]:
+            payload = (_solve_torvik_challenge(r.text)
+                       or {"js_test_submitted": "1"})   # legacy fallback
+            s.post(url, data=payload, timeout=30, allow_redirects=True)
             r = s.get(url, timeout=30)
         try:
             rows = r.json()
