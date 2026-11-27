@@ -1,8 +1,8 @@
 # NCAAW Sharp — Record
 
-_Updated 2026-11-27T19:52:49Z_
+_Updated 2026-11-27T22:40:29Z_
 
-**35-31-0** · **+0.71u** on 60u risked (+1.2% ROI) · 1 pending
+**35-32-0** · **-0.29u** on 61u risked (-0.5% ROI) · 2 pending
 
 CLV: avg +0.04pp · beat close 4/21 (19%)
 
@@ -10,16 +10,16 @@ CLV: avg +0.04pp · beat close 4/21 (19%)
 |---|---|---|
 | moneyline | 3-0-0 | +2.07u |
 | spread | 24-19-0 | +1.67u |
-| total | 8-12-0 | -3.03u |
+| total | 8-13-0 | -4.03u |
 
 ## Shadow (paper) tier — half-gate evidence, 0.5u flat
 
-**39-37-0** · -0.56u paper · 4 pending
+**40-39-0** · -1.11u paper · 4 pending
 
 | market | W-L-P | paper units |
 |---|---|---|
 | moneyline | 0-2-0 | -1.00u |
-| spread | 13-14-0 | -0.98u |
-| total | 26-21-0 | +1.41u |
+| spread | 13-15-0 | -1.48u |
+| total | 27-22-0 | +1.37u |
 
 _Validation is Brier/log-loss on all graded games + CLV, never small-sample ROI._
