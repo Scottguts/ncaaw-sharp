@@ -1,727 +1,34 @@
 {
   "date": "2026-11-27",
-  "fetched_at": "2026-11-27T16:20:25.770453Z",
+  "fetched_at": "2026-11-27T19:52:49.554207Z",
   "games": [
-    {
-      "espn_event_id": "401919078",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "Marquette Golden Eagles at Illinois Fighting Illini",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "356",
-        "location": "Illinois",
-        "display_name": "Illinois Fighting Illini",
-        "canon": "illinois",
-        "conf": "Big Ten",
-        "record": "4-0",
-        "score": "18",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "269",
-        "location": "Marquette",
-        "display_name": "Marquette Golden Eagles",
-        "canon": "marquette",
-        "conf": "Big East",
-        "record": "5-2",
-        "score": "11",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "d3a791fd72d595641f7a847c713701cc"
-    },
-    {
-      "espn_event_id": "401921394",
-      "start": "2026-11-27T15:00Z",
-      "et_date": "2026-11-27",
-      "name": "Auburn Tigers at Syracuse Orange",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "183",
-        "location": "Syracuse",
-        "display_name": "Syracuse Orange",
-        "canon": "syracuse",
-        "conf": "ACC",
-        "record": "6-1",
-        "score": "44",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2",
-        "location": "Auburn",
-        "display_name": "Auburn Tigers",
-        "canon": "auburn",
-        "conf": "SEC",
-        "record": "7-1",
-        "score": "37",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "9b98d24c99570177607c16e72030cbec"
-    },
-    {
-      "espn_event_id": "401921081",
-      "start": "2026-11-27T15:00Z",
-      "et_date": "2026-11-27",
-      "name": "Vermont Catamounts at George Mason Patriots",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2244",
-        "location": "George Mason",
-        "display_name": "George Mason Patriots",
-        "canon": "george mason",
-        "conf": "A10",
-        "record": "4-4",
-        "score": "52",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "261",
-        "location": "Vermont",
-        "display_name": "Vermont Catamounts",
-        "canon": "vermont",
-        "conf": "AE",
-        "record": "6-2",
-        "score": "54",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "09508a42d5fdd64eadef9670056e0875"
-    },
-    {
-      "espn_event_id": "401915875",
-      "start": "2026-11-27T15:00Z",
-      "et_date": "2026-11-27",
-      "name": "Stetson Hatters at Boise State Broncos",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "68",
-        "location": "Boise State",
-        "display_name": "Boise State Broncos",
-        "canon": "boise st",
-        "conf": "Pac-12",
-        "record": "4-2",
-        "score": "62",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "56",
-        "location": "Stetson",
-        "display_name": "Stetson Hatters",
-        "canon": "stetson",
-        "conf": "ASUN",
-        "record": "2-6",
-        "score": "39",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "f9169076ac467e9dd49be41e92eef016"
-    },
-    {
-      "espn_event_id": "401929165",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "Texas A&M Aggies at Bowling Green Falcons",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "189",
-        "location": "Bowling Green",
-        "display_name": "Bowling Green Falcons",
-        "canon": "bowling green",
-        "conf": "MAC",
-        "record": "4-1",
-        "score": "13",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "245",
-        "location": "Texas A&M",
-        "display_name": "Texas A&M Aggies",
-        "canon": "texas a&m",
-        "conf": "SEC",
-        "record": "6-0",
-        "score": "18",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401927987",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "North Dakota Fighting Hawks at Florida International Panthers",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2229",
-        "location": "Florida International",
-        "display_name": "Florida International Panthers",
-        "canon": "florida intl",
-        "conf": "CUSA",
-        "record": "1-3",
-        "score": "14",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "155",
-        "location": "North Dakota",
-        "display_name": "North Dakota Fighting Hawks",
-        "canon": "north dakota",
-        "conf": "Summit",
-        "record": "1-4",
-        "score": "16",
-        "winner": null
-      },
-      "torvik_home": false,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401918859",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "Indiana Hoosiers at Mississippi State Bulldogs",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "344",
-        "location": "Mississippi State",
-        "display_name": "Mississippi State Bulldogs",
-        "canon": "mississippi st",
-        "conf": "SEC",
-        "record": "6-0",
-        "score": "14",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "84",
-        "location": "Indiana",
-        "display_name": "Indiana Hoosiers",
-        "canon": "indiana",
-        "conf": "Big Ten",
-        "record": "7-0",
-        "score": "7",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401918544",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "North Carolina A&T Aggies at Abilene Christian Wildcats",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2000",
-        "location": "Abilene Christian",
-        "display_name": "Abilene Christian Wildcats",
-        "canon": "abilene christian",
-        "conf": "WAC",
-        "record": "5-1",
-        "score": "22",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2448",
-        "location": "North Carolina A&T",
-        "display_name": "North Carolina A&T Aggies",
-        "canon": "north carolina a&t",
-        "conf": "CAA",
-        "record": "2-4",
-        "score": "10",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401903572",
-      "start": "2026-11-27T16:00Z",
-      "et_date": "2026-11-27",
-      "name": "Colorado Buffaloes at Oregon Ducks",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_IN_PROGRESS",
-      "completed": false,
-      "home": {
-        "espn_id": "2483",
-        "location": "Oregon",
-        "display_name": "Oregon Ducks",
-        "canon": "oregon",
-        "conf": "Big Ten",
-        "record": "7-1",
-        "score": "11",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "38",
-        "location": "Colorado",
-        "display_name": "Colorado Buffaloes",
-        "canon": "colorado",
-        "conf": "Big 12",
-        "record": "6-0",
-        "score": "19",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "ca7a1c600011f2d6413e5afc620f2235"
-    },
-    {
-      "espn_event_id": "401906082",
-      "start": "2026-11-27T17:00Z",
-      "et_date": "2026-11-27",
-      "name": "Akron Zips at Louisville Cardinals",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "97",
-        "location": "Louisville",
-        "display_name": "Louisville Cardinals",
-        "canon": "louisville",
-        "conf": "ACC",
-        "record": "9-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2006",
-        "location": "Akron",
-        "display_name": "Akron Zips",
-        "canon": "akron",
-        "conf": "MAC",
-        "record": "2-5",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": "50ff0e5a7fb0ed3130127ff75ae1f9a3"
-    },
-    {
-      "espn_event_id": "401927959",
-      "start": "2026-11-27T17:00Z",
-      "et_date": "2026-11-27",
-      "name": "Morehead State Eagles at Buffalo Bulls",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2084",
-        "location": "Buffalo",
-        "display_name": "Buffalo Bulls",
-        "canon": "buffalo",
-        "conf": "MAC",
-        "record": "3-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2413",
-        "location": "Morehead State",
-        "display_name": "Morehead State Eagles",
-        "canon": "morehead st",
-        "conf": "OVC",
-        "record": "1-6",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401915670",
-      "start": "2026-11-27T17:00Z",
-      "et_date": "2026-11-27",
-      "name": "UMBC Retrievers at Iona Gaels",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "314",
-        "location": "Iona",
-        "display_name": "Iona Gaels",
-        "canon": "iona",
-        "conf": "MAAC",
-        "record": "4-3",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2378",
-        "location": "UMBC",
-        "display_name": "UMBC Retrievers",
-        "canon": "umbc",
-        "conf": "AE",
-        "record": "4-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401913050",
-      "start": "2026-11-27T17:00Z",
-      "et_date": "2026-11-27",
-      "name": "DePaul Blue Demons at Northwestern Wildcats",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "77",
-        "location": "Northwestern",
-        "display_name": "Northwestern Wildcats",
-        "canon": "northwestern",
-        "conf": "Big Ten",
-        "record": "4-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "305",
-        "location": "DePaul",
-        "display_name": "DePaul Blue Demons",
-        "canon": "depaul",
-        "conf": "Big East",
-        "record": "7-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401906058",
-      "start": "2026-11-27T17:00Z",
-      "et_date": "2026-11-27",
-      "name": "Charleston Cougars at Boston College Eagles",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "103",
-        "location": "Boston College",
-        "display_name": "Boston College Eagles",
-        "canon": "boston college",
-        "conf": "ACC",
-        "record": "5-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "232",
-        "location": "Charleston",
-        "display_name": "Charleston Cougars",
-        "canon": "charleston",
-        "conf": "CAA",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401915876",
-      "start": "2026-11-27T17:15Z",
-      "et_date": "2026-11-27",
-      "name": "Missouri Tigers at Tulane Green Wave",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2655",
-        "location": "Tulane",
-        "display_name": "Tulane Green Wave",
-        "canon": "tulane",
-        "conf": "Amer",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "142",
-        "location": "Missouri",
-        "display_name": "Missouri Tigers",
-        "canon": "missouri",
-        "conf": "SEC",
-        "record": "6-1",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401921211",
-      "start": "2026-11-27T17:30Z",
-      "et_date": "2026-11-27",
-      "name": "Tennessee Tech Golden Eagles at Grambling Lady Tigers",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2755",
-        "location": "Grambling",
-        "display_name": "Grambling Lady Tigers",
-        "canon": "grambling",
-        "conf": "SWAC",
-        "record": "2-5",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2635",
-        "location": "Tennessee Tech",
-        "display_name": "Tennessee Tech Golden Eagles",
-        "canon": "tennessee tech",
-        "conf": "SC",
-        "record": "3-4",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": false,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401913040",
-      "start": "2026-11-27T17:30Z",
-      "et_date": "2026-11-27",
-      "name": "Binghamton Bearcats at Providence Friars",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2507",
-        "location": "Providence",
-        "display_name": "Providence Friars",
-        "canon": "providence",
-        "conf": "Big East",
-        "record": "3-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2066",
-        "location": "Binghamton",
-        "display_name": "Binghamton Bearcats",
-        "canon": "binghamton",
-        "conf": "AE",
-        "record": "6-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401922844",
-      "start": "2026-11-27T18:00Z",
-      "et_date": "2026-11-27",
-      "name": "UT Rio Grande Valley Vaqueros at UIC Flames",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "82",
-        "location": "UIC",
-        "display_name": "UIC Flames",
-        "canon": "uic",
-        "conf": "MVC",
-        "record": "6-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "292",
-        "location": "UT Rio Grande Valley",
-        "display_name": "UT Rio Grande Valley Vaqueros",
-        "canon": "ut rio grande valley",
-        "conf": "Southland",
-        "record": "1-5",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": false,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401919536",
-      "start": "2026-11-27T18:00Z",
-      "et_date": "2026-11-27",
-      "name": "Delaware State Hornets at Bucknell Bison",
-      "neutral_site": false,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2083",
-        "location": "Bucknell",
-        "display_name": "Bucknell Bison",
-        "canon": "bucknell",
-        "conf": "Patriot",
-        "record": "2-5",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2169",
-        "location": "Delaware State",
-        "display_name": "Delaware State Hornets",
-        "canon": "delaware st",
-        "conf": "MEAC",
-        "record": "2-5",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401913904",
-      "start": "2026-11-27T18:00Z",
-      "et_date": "2026-11-27",
-      "name": "UT Arlington Mavericks at West Florida Argonauts",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "2697",
-        "location": "West Florida",
-        "display_name": "West Florida Argonauts",
-        "canon": "west florida",
-        "conf": "ASUN",
-        "record": "3-4",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "250",
-        "location": "UT Arlington",
-        "display_name": "UT Arlington Mavericks",
-        "canon": "ut arlington",
-        "conf": "WAC",
-        "record": "3-3",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
-    {
-      "espn_event_id": "401926029",
-      "start": "2026-11-27T18:15Z",
-      "et_date": "2026-11-27",
-      "name": "Central Michigan Chippewas at Tulsa Golden Hurricane",
-      "neutral_site": true,
-      "conference_game": false,
-      "status": "STATUS_SCHEDULED",
-      "completed": false,
-      "home": {
-        "espn_id": "202",
-        "location": "Tulsa",
-        "display_name": "Tulsa Golden Hurricane",
-        "canon": "tulsa",
-        "conf": "Amer",
-        "record": "5-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
-        "espn_id": "2117",
-        "location": "Central Michigan",
-        "display_name": "Central Michigan Chippewas",
-        "canon": "central michigan",
-        "conf": "MAC",
-        "record": "0-6",
-        "score": "0",
-        "winner": null
-      },
-      "torvik_home": true,
-      "torvik_away": true,
-      "odds_event_id": null
-    },
     {
       "espn_event_id": "401921243",
       "start": "2026-11-27T18:30Z",
       "et_date": "2026-11-27",
-      "name": "USC Trojans at Saint Joseph's Hawks",
+      "name": "Saint Joseph's Hawks at USC Trojans",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2603",
-        "location": "Saint Joseph's",
-        "display_name": "Saint Joseph's Hawks",
-        "canon": "saint josephs",
-        "conf": "A10",
-        "record": "4-1",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "30",
         "location": "USC",
         "display_name": "USC Trojans",
         "canon": "usc",
         "conf": "Big Ten",
         "record": "5-1",
-        "score": "0",
+        "score": "55",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2603",
+        "location": "Saint Joseph's",
+        "display_name": "Saint Joseph's Hawks",
+        "canon": "saint josephs",
+        "conf": "A10",
+        "record": "4-1",
+        "score": "37",
         "winner": null
       },
       "torvik_home": true,
@@ -735,7 +42,7 @@
       "name": "TCU Horned Frogs at Georgia Tech Yellow Jackets",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "59",
@@ -744,7 +51,7 @@
         "canon": "georgia tech",
         "conf": "ACC",
         "record": "5-2",
-        "score": "0",
+        "score": "46",
         "winner": null
       },
       "away": {
@@ -754,7 +61,7 @@
         "canon": "tcu",
         "conf": "Big 12",
         "record": "8-0",
-        "score": "0",
+        "score": "49",
         "winner": null
       },
       "torvik_home": true,
@@ -765,29 +72,29 @@
       "espn_event_id": "401927837",
       "start": "2026-11-27T18:30Z",
       "et_date": "2026-11-27",
-      "name": "Oklahoma State Cowgirls at Washington Huskies",
+      "name": "Washington Huskies at Oklahoma State Cowgirls",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "264",
-        "location": "Washington",
-        "display_name": "Washington Huskies",
-        "canon": "washington",
-        "conf": "Big Ten",
-        "record": "6-0",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "197",
         "location": "Oklahoma State",
         "display_name": "Oklahoma State Cowgirls",
         "canon": "oklahoma st",
         "conf": "Big 12",
         "record": "7-1",
-        "score": "0",
+        "score": "48",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "264",
+        "location": "Washington",
+        "display_name": "Washington Huskies",
+        "canon": "washington",
+        "conf": "Big Ten",
+        "record": "6-0",
+        "score": "56",
         "winner": null
       },
       "torvik_home": true,
@@ -795,32 +102,98 @@
       "odds_event_id": "1fdbde2099e12108b40e312b74119856"
     },
     {
-      "espn_event_id": "401920507",
-      "start": "2026-11-27T18:30Z",
+      "espn_event_id": "401921211",
+      "start": "2026-11-27T17:30Z",
       "et_date": "2026-11-27",
-      "name": "Northern Illinois Huskies at Manhattan Jaspers",
+      "name": "Tennessee Tech Golden Eagles at Grambling Lady Tigers",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2755",
+        "location": "Grambling",
+        "display_name": "Grambling Lady Tigers",
+        "canon": "grambling",
+        "conf": "SWAC",
+        "record": "2-6",
+        "score": "71",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2635",
+        "location": "Tennessee Tech",
+        "display_name": "Tennessee Tech Golden Eagles",
+        "canon": "tennessee tech",
+        "conf": "SC",
+        "record": "4-4",
+        "score": "83",
+        "winner": true
+      },
+      "torvik_home": false,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913904",
+      "start": "2026-11-27T18:00Z",
+      "et_date": "2026-11-27",
+      "name": "UT Arlington Mavericks at West Florida Argonauts",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2363",
-        "location": "Manhattan",
-        "display_name": "Manhattan Jaspers",
-        "canon": "manhattan",
-        "conf": "MAAC",
-        "record": "3-3",
-        "score": "0",
+        "espn_id": "2697",
+        "location": "West Florida",
+        "display_name": "West Florida Argonauts",
+        "canon": "west florida",
+        "conf": "ASUN",
+        "record": "3-4",
+        "score": "73",
         "winner": null
       },
       "away": {
-        "espn_id": "2459",
-        "location": "Northern Illinois",
-        "display_name": "Northern Illinois Huskies",
-        "canon": "northern illinois",
-        "conf": "Horz",
+        "espn_id": "250",
+        "location": "UT Arlington",
+        "display_name": "UT Arlington Mavericks",
+        "canon": "ut arlington",
+        "conf": "WAC",
         "record": "3-3",
-        "score": "0",
+        "score": "72",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401926029",
+      "start": "2026-11-27T18:15Z",
+      "et_date": "2026-11-27",
+      "name": "Tulsa Golden Hurricane at Central Michigan Chippewas",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_IN_PROGRESS",
+      "completed": false,
+      "home": {
+        "espn_id": "2117",
+        "location": "Central Michigan",
+        "display_name": "Central Michigan Chippewas",
+        "canon": "central michigan",
+        "conf": "MAC",
+        "record": "0-6",
+        "score": "53",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "202",
+        "location": "Tulsa",
+        "display_name": "Tulsa Golden Hurricane",
+        "canon": "tulsa",
+        "conf": "Amer",
+        "record": "5-1",
+        "score": "55",
         "winner": null
       },
       "torvik_home": true,
@@ -834,7 +207,7 @@
       "name": "South Dakota Coyotes at North Florida Ospreys",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2454",
@@ -843,7 +216,7 @@
         "canon": "north florida",
         "conf": "ASUN",
         "record": "5-2",
-        "score": "0",
+        "score": "37",
         "winner": null
       },
       "away": {
@@ -853,12 +226,12 @@
         "canon": "south dakota",
         "conf": "Summit",
         "record": "6-1",
-        "score": "0",
+        "score": "41",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "79bff49126b93963832f1240bb239c0f"
     },
     {
       "espn_event_id": "401903573",
@@ -867,7 +240,7 @@
       "name": "Maryland Eastern Shore Hawks at Georgia Lady Bulldogs",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "61",
@@ -876,7 +249,7 @@
         "canon": "georgia",
         "conf": "SEC",
         "record": "6-2",
-        "score": "0",
+        "score": "47",
         "winner": null
       },
       "away": {
@@ -886,12 +259,45 @@
         "canon": "maryland eastern shore",
         "conf": "MEAC",
         "record": "1-6",
-        "score": "0",
+        "score": "23",
         "winner": null
       },
       "torvik_home": true,
       "torvik_away": true,
       "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401920507",
+      "start": "2026-11-27T18:45Z",
+      "et_date": "2026-11-27",
+      "name": "Northern Illinois Huskies at Manhattan Jaspers",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_HALFTIME",
+      "completed": false,
+      "home": {
+        "espn_id": "2363",
+        "location": "Manhattan",
+        "display_name": "Manhattan Jaspers",
+        "canon": "manhattan",
+        "conf": "MAAC",
+        "record": "3-3",
+        "score": "28",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2459",
+        "location": "Northern Illinois",
+        "display_name": "Northern Illinois Huskies",
+        "canon": "northern illinois",
+        "conf": "Horz",
+        "record": "3-3",
+        "score": "40",
+        "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": "c1d930186f682d0341e897e5afbd1874"
     },
     {
       "espn_event_id": "401926034",
@@ -900,7 +306,7 @@
       "name": "Western Kentucky Lady Toppers at Florida Atlantic Owls",
       "neutral_site": false,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "2226",
@@ -909,7 +315,7 @@
         "canon": "florida atlantic",
         "conf": "Amer",
         "record": "2-4",
-        "score": "0",
+        "score": "13",
         "winner": null
       },
       "away": {
@@ -919,7 +325,7 @@
         "canon": "western kentucky",
         "conf": "CUSA",
         "record": "3-2",
-        "score": "0",
+        "score": "8",
         "winner": null
       },
       "torvik_home": true,
@@ -930,29 +336,29 @@
       "espn_event_id": "401929206",
       "start": "2026-11-27T19:30Z",
       "et_date": "2026-11-27",
-      "name": "Richmond Spiders at St. John's Red Storm",
+      "name": "St. John's Red Storm at Richmond Spiders",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
-        "espn_id": "2599",
-        "location": "St. John's",
-        "display_name": "St. John's Red Storm",
-        "canon": "st johns ny",
-        "conf": "Big East",
-        "record": "4-2",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "257",
         "location": "Richmond",
         "display_name": "Richmond Spiders",
         "canon": "richmond",
         "conf": "A10",
         "record": "5-2",
-        "score": "0",
+        "score": "12",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "2599",
+        "location": "St. John's",
+        "display_name": "St. John's Red Storm",
+        "canon": "st johns ny",
+        "conf": "Big East",
+        "record": "4-2",
+        "score": "13",
         "winner": null
       },
       "torvik_home": true,
@@ -966,7 +372,7 @@
       "name": "Southern Miss Lady Eagles at Drexel Dragons",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_END_PERIOD",
       "completed": false,
       "home": {
         "espn_id": "2182",
@@ -975,7 +381,7 @@
         "canon": "drexel",
         "conf": "CAA",
         "record": "3-3",
-        "score": "0",
+        "score": "13",
         "winner": null
       },
       "away": {
@@ -985,7 +391,7 @@
         "canon": "southern miss",
         "conf": "Sun Belt",
         "record": "5-2",
-        "score": "0",
+        "score": "21",
         "winner": null
       },
       "torvik_home": true,
@@ -999,7 +405,7 @@
       "name": "Fairfield Stags at BYU Cougars",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "252",
@@ -1008,7 +414,7 @@
         "canon": "byu",
         "conf": "Big 12",
         "record": "8-0",
-        "score": "0",
+        "score": "5",
         "winner": null
       },
       "away": {
@@ -1018,7 +424,7 @@
         "canon": "fairfield",
         "conf": "MAAC",
         "record": "4-3",
-        "score": "0",
+        "score": "10",
         "winner": null
       },
       "torvik_home": true,
@@ -1032,7 +438,7 @@
       "name": "Georgetown Hoyas at Clemson Tigers",
       "neutral_site": true,
       "conference_game": false,
-      "status": "STATUS_SCHEDULED",
+      "status": "STATUS_IN_PROGRESS",
       "completed": false,
       "home": {
         "espn_id": "228",
@@ -1041,7 +447,7 @@
         "canon": "clemson",
         "conf": "ACC",
         "record": "7-1",
-        "score": "0",
+        "score": "11",
         "winner": null
       },
       "away": {
@@ -1051,8 +457,602 @@
         "canon": "georgetown",
         "conf": "Big East",
         "record": "4-3",
-        "score": "0",
+        "score": "9",
         "winner": null
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401906082",
+      "start": "2026-11-27T17:00Z",
+      "et_date": "2026-11-27",
+      "name": "Akron Zips at Louisville Cardinals",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "97",
+        "location": "Louisville",
+        "display_name": "Louisville Cardinals",
+        "canon": "louisville",
+        "conf": "ACC",
+        "record": "10-0",
+        "score": "92",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2006",
+        "location": "Akron",
+        "display_name": "Akron Zips",
+        "canon": "akron",
+        "conf": "MAC",
+        "record": "2-6",
+        "score": "48",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919078",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "Marquette Golden Eagles at Illinois Fighting Illini",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "356",
+        "location": "Illinois",
+        "display_name": "Illinois Fighting Illini",
+        "canon": "illinois",
+        "conf": "Big Ten",
+        "record": "5-0",
+        "score": "88",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "269",
+        "location": "Marquette",
+        "display_name": "Marquette Golden Eagles",
+        "canon": "marquette",
+        "conf": "Big East",
+        "record": "5-3",
+        "score": "61",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401921394",
+      "start": "2026-11-27T15:00Z",
+      "et_date": "2026-11-27",
+      "name": "Auburn Tigers at Syracuse Orange",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "183",
+        "location": "Syracuse",
+        "display_name": "Syracuse Orange",
+        "canon": "syracuse",
+        "conf": "ACC",
+        "record": "7-1",
+        "score": "70",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2",
+        "location": "Auburn",
+        "display_name": "Auburn Tigers",
+        "canon": "auburn",
+        "conf": "SEC",
+        "record": "7-2",
+        "score": "54",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401921081",
+      "start": "2026-11-27T15:00Z",
+      "et_date": "2026-11-27",
+      "name": "Vermont Catamounts at George Mason Patriots",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2244",
+        "location": "George Mason",
+        "display_name": "George Mason Patriots",
+        "canon": "george mason",
+        "conf": "A10",
+        "record": "5-4",
+        "score": "72",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "261",
+        "location": "Vermont",
+        "display_name": "Vermont Catamounts",
+        "canon": "vermont",
+        "conf": "AE",
+        "record": "6-3",
+        "score": "66",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915875",
+      "start": "2026-11-27T15:00Z",
+      "et_date": "2026-11-27",
+      "name": "Stetson Hatters at Boise State Broncos",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "68",
+        "location": "Boise State",
+        "display_name": "Boise State Broncos",
+        "canon": "boise st",
+        "conf": "Pac-12",
+        "record": "5-2",
+        "score": "73",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "56",
+        "location": "Stetson",
+        "display_name": "Stetson Hatters",
+        "canon": "stetson",
+        "conf": "ASUN",
+        "record": "2-7",
+        "score": "62",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401929165",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "Texas A&M Aggies at Bowling Green Falcons",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "189",
+        "location": "Bowling Green",
+        "display_name": "Bowling Green Falcons",
+        "canon": "bowling green",
+        "conf": "MAC",
+        "record": "4-2",
+        "score": "56",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "245",
+        "location": "Texas A&M",
+        "display_name": "Texas A&M Aggies",
+        "canon": "texas a&m",
+        "conf": "SEC",
+        "record": "7-0",
+        "score": "69",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401927987",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "North Dakota Fighting Hawks at Florida International Panthers",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2229",
+        "location": "Florida International",
+        "display_name": "Florida International Panthers",
+        "canon": "florida intl",
+        "conf": "CUSA",
+        "record": "1-4",
+        "score": "62",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "155",
+        "location": "North Dakota",
+        "display_name": "North Dakota Fighting Hawks",
+        "canon": "north dakota",
+        "conf": "Summit",
+        "record": "2-4",
+        "score": "64",
+        "winner": true
+      },
+      "torvik_home": false,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401918859",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "Indiana Hoosiers at Mississippi State Bulldogs",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "344",
+        "location": "Mississippi State",
+        "display_name": "Mississippi State Bulldogs",
+        "canon": "mississippi st",
+        "conf": "SEC",
+        "record": "7-0",
+        "score": "72",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "84",
+        "location": "Indiana",
+        "display_name": "Indiana Hoosiers",
+        "canon": "indiana",
+        "conf": "Big Ten",
+        "record": "7-1",
+        "score": "62",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401918544",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "North Carolina A&T Aggies at Abilene Christian Wildcats",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2000",
+        "location": "Abilene Christian",
+        "display_name": "Abilene Christian Wildcats",
+        "canon": "abilene christian",
+        "conf": "WAC",
+        "record": "6-1",
+        "score": "67",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2448",
+        "location": "North Carolina A&T",
+        "display_name": "North Carolina A&T Aggies",
+        "canon": "north carolina a&t",
+        "conf": "CAA",
+        "record": "2-5",
+        "score": "40",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401903572",
+      "start": "2026-11-27T16:00Z",
+      "et_date": "2026-11-27",
+      "name": "Colorado Buffaloes at Oregon Ducks",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2483",
+        "location": "Oregon",
+        "display_name": "Oregon Ducks",
+        "canon": "oregon",
+        "conf": "Big Ten",
+        "record": "7-2",
+        "score": "66",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "38",
+        "location": "Colorado",
+        "display_name": "Colorado Buffaloes",
+        "canon": "colorado",
+        "conf": "Big 12",
+        "record": "7-0",
+        "score": "68",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401927959",
+      "start": "2026-11-27T17:00Z",
+      "et_date": "2026-11-27",
+      "name": "Morehead State Eagles at Buffalo Bulls",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2084",
+        "location": "Buffalo",
+        "display_name": "Buffalo Bulls",
+        "canon": "buffalo",
+        "conf": "MAC",
+        "record": "4-3",
+        "score": "85",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2413",
+        "location": "Morehead State",
+        "display_name": "Morehead State Eagles",
+        "canon": "morehead st",
+        "conf": "OVC",
+        "record": "1-7",
+        "score": "79",
+        "winner": false
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915670",
+      "start": "2026-11-27T17:00Z",
+      "et_date": "2026-11-27",
+      "name": "UMBC Retrievers at Iona Gaels",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "314",
+        "location": "Iona",
+        "display_name": "Iona Gaels",
+        "canon": "iona",
+        "conf": "MAAC",
+        "record": "4-4",
+        "score": "60",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2378",
+        "location": "UMBC",
+        "display_name": "UMBC Retrievers",
+        "canon": "umbc",
+        "conf": "AE",
+        "record": "5-3",
+        "score": "61",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913050",
+      "start": "2026-11-27T17:00Z",
+      "et_date": "2026-11-27",
+      "name": "DePaul Blue Demons at Northwestern Wildcats",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "77",
+        "location": "Northwestern",
+        "display_name": "Northwestern Wildcats",
+        "canon": "northwestern",
+        "conf": "Big Ten",
+        "record": "4-5",
+        "score": "75",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "305",
+        "location": "DePaul",
+        "display_name": "DePaul Blue Demons",
+        "canon": "depaul",
+        "conf": "Big East",
+        "record": "8-1",
+        "score": "80",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401906058",
+      "start": "2026-11-27T17:00Z",
+      "et_date": "2026-11-27",
+      "name": "Charleston Cougars at Boston College Eagles",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "103",
+        "location": "Boston College",
+        "display_name": "Boston College Eagles",
+        "canon": "boston college",
+        "conf": "ACC",
+        "record": "5-3",
+        "score": "58",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "232",
+        "location": "Charleston",
+        "display_name": "Charleston Cougars",
+        "canon": "charleston",
+        "conf": "CAA",
+        "record": "5-2",
+        "score": "62",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401915876",
+      "start": "2026-11-27T17:15Z",
+      "et_date": "2026-11-27",
+      "name": "Tulane Green Wave at Missouri Tigers",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "142",
+        "location": "Missouri",
+        "display_name": "Missouri Tigers",
+        "canon": "missouri",
+        "conf": "SEC",
+        "record": "6-2",
+        "score": "64",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2655",
+        "location": "Tulane",
+        "display_name": "Tulane Green Wave",
+        "canon": "tulane",
+        "conf": "Amer",
+        "record": "5-1",
+        "score": "80",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401913040",
+      "start": "2026-11-27T17:30Z",
+      "et_date": "2026-11-27",
+      "name": "Binghamton Bearcats at Providence Friars",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2507",
+        "location": "Providence",
+        "display_name": "Providence Friars",
+        "canon": "providence",
+        "conf": "Big East",
+        "record": "3-5",
+        "score": "51",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "2066",
+        "location": "Binghamton",
+        "display_name": "Binghamton Bearcats",
+        "canon": "binghamton",
+        "conf": "AE",
+        "record": "7-3",
+        "score": "54",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": true,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401922844",
+      "start": "2026-11-27T18:00Z",
+      "et_date": "2026-11-27",
+      "name": "UIC Flames at UT Rio Grande Valley Vaqueros",
+      "neutral_site": true,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "292",
+        "location": "UT Rio Grande Valley",
+        "display_name": "UT Rio Grande Valley Vaqueros",
+        "canon": "ut rio grande valley",
+        "conf": "Southland",
+        "record": "1-6",
+        "score": "50",
+        "winner": false
+      },
+      "away": {
+        "espn_id": "82",
+        "location": "UIC",
+        "display_name": "UIC Flames",
+        "canon": "uic",
+        "conf": "MVC",
+        "record": "7-2",
+        "score": "74",
+        "winner": true
+      },
+      "torvik_home": true,
+      "torvik_away": false,
+      "odds_event_id": null
+    },
+    {
+      "espn_event_id": "401919536",
+      "start": "2026-11-27T18:00Z",
+      "et_date": "2026-11-27",
+      "name": "Delaware State Hornets at Bucknell Bison",
+      "neutral_site": false,
+      "conference_game": false,
+      "status": "STATUS_FINAL",
+      "completed": true,
+      "home": {
+        "espn_id": "2083",
+        "location": "Bucknell",
+        "display_name": "Bucknell Bison",
+        "canon": "bucknell",
+        "conf": "Patriot",
+        "record": "3-5",
+        "score": "76",
+        "winner": true
+      },
+      "away": {
+        "espn_id": "2169",
+        "location": "Delaware State",
+        "display_name": "Delaware State Hornets",
+        "canon": "delaware st",
+        "conf": "MEAC",
+        "record": "2-6",
+        "score": "56",
+        "winner": false
       },
       "torvik_home": true,
       "torvik_away": true,
@@ -1122,7 +1122,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "ce684f80cd9d1fce48db50b845799084"
     },
     {
       "espn_event_id": "401927461",
@@ -1359,28 +1359,28 @@
       "espn_event_id": "401917726",
       "start": "2026-11-27T20:00Z",
       "et_date": "2026-11-27",
-      "name": "Loyola Marymount Lions at Oral Roberts Golden Eagles",
+      "name": "Oral Roberts Golden Eagles at Loyola Marymount Lions",
       "neutral_site": true,
       "conference_game": false,
       "status": "STATUS_SCHEDULED",
       "completed": false,
       "home": {
-        "espn_id": "198",
-        "location": "Oral Roberts",
-        "display_name": "Oral Roberts Golden Eagles",
-        "canon": "oral roberts",
-        "conf": "Summit",
-        "record": "3-5",
-        "score": "0",
-        "winner": null
-      },
-      "away": {
         "espn_id": "2351",
         "location": "Loyola Marymount",
         "display_name": "Loyola Marymount Lions",
         "canon": "loyola marymount",
         "conf": "WCC",
         "record": "6-1",
+        "score": "0",
+        "winner": null
+      },
+      "away": {
+        "espn_id": "198",
+        "location": "Oral Roberts",
+        "display_name": "Oral Roberts Golden Eagles",
+        "canon": "oral roberts",
+        "conf": "Summit",
+        "record": "3-5",
         "score": "0",
         "winner": null
       },
@@ -1485,7 +1485,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "a446036c60c72c003806e96c6898da08"
     },
     {
       "espn_event_id": "401926996",
@@ -1716,7 +1716,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "3dad152f7034b7da174bfd96c926ab45"
     },
     {
       "espn_event_id": "401915877",
@@ -1749,7 +1749,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "a3546003259e1797914d28f43adb3d72"
     },
     {
       "espn_event_id": "401931795",
@@ -1914,7 +1914,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "4ca38eaf66157edbc568e9371b2b6901"
     },
     {
       "espn_event_id": "401930135",
@@ -2145,7 +2145,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "af7edfd3291e68bb4b1e595220772827"
     },
     {
       "espn_event_id": "401920468",
@@ -2244,7 +2244,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "252112c914aeb4e97fe3d1cb1b8eb41f"
     },
     {
       "espn_event_id": "401906095",
@@ -2277,7 +2277,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "a6c26c95b940713eaf760a6efb4b0f41"
     },
     {
       "espn_event_id": "401915878",
@@ -2343,7 +2343,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "5ad13c23504540a6616908b3bb9b9c92"
     },
     {
       "espn_event_id": "401926052",
@@ -2541,7 +2541,7 @@
       },
       "torvik_home": true,
       "torvik_away": true,
-      "odds_event_id": null
+      "odds_event_id": "aae43bd8699a850b4de30afff665520a"
     },
     {
       "espn_event_id": "401920270",
