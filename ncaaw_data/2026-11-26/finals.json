@@ -1,33 +1,17 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-27T00:27:51.518785Z",
+  "generated_at": "2026-11-27T08:12:11.325243Z",
   "calibration": [
     {
-      "p": 0.447,
-      "hit": true
-    },
-    {
-      "p": 0.446,
-      "hit": true
-    },
-    {
       "p": 0.554,
-      "hit": true
-    },
-    {
-      "p": 0.447,
-      "hit": true
-    },
-    {
-      "p": 0.446,
       "hit": false
     }
   ],
   "summary": {
-    "n": 12,
-    "spread_mae": 9.82,
-    "total_mae": 15.78,
-    "su_pct": 66.7,
+    "n": 16,
+    "spread_mae": 9.93,
+    "total_mae": 15.17,
+    "su_pct": 81.2,
     "fired": {
       "w": 2,
       "l": 0,
@@ -68,7 +52,7 @@
       "spread_err": -1.0,
       "total_err": 2.5,
       "side_right": true,
-      "had_card": true
+      "had_card": false
     },
     {
       "matchup": "Texas Southern Tigers @ Howard Bison",
@@ -84,6 +68,23 @@
       "act_total": 115,
       "spread_err": 2.0,
       "total_err": 20.5,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Xavier Musketeers @ Santa Clara Broncos",
+      "away_short": "Xavier",
+      "home_short": "Santa Clara",
+      "model_away": 65.1,
+      "model_home": 72.1,
+      "act_away": 80,
+      "act_home": 89,
+      "model_margin_home": 7.0,
+      "act_margin_home": 9,
+      "model_total": 137.3,
+      "act_total": 169,
+      "spread_err": -2.0,
+      "total_err": -31.7,
       "side_right": true,
       "had_card": false
     },
@@ -173,6 +174,40 @@
       "had_card": false
     },
     {
+      "matchup": "Air Force Falcons @ Texas Tech Lady Raiders",
+      "away_short": "Air Force",
+      "home_short": "Texas Tech",
+      "model_away": 52.2,
+      "model_home": 67.9,
+      "act_away": 60,
+      "act_home": 66,
+      "model_margin_home": 15.7,
+      "act_margin_home": 6,
+      "model_total": 120.1,
+      "act_total": 126,
+      "spread_err": 9.7,
+      "total_err": -5.9,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Cincinnati Bearcats @ Miami (OH) RedHawks",
+      "away_short": "Cincinnati",
+      "home_short": "Miami (OH)",
+      "model_away": 60.2,
+      "model_home": 62.2,
+      "act_away": 56,
+      "act_home": 70,
+      "model_margin_home": 2.0,
+      "act_margin_home": 14,
+      "model_total": 122.4,
+      "act_total": 126,
+      "spread_err": -12.0,
+      "total_err": -3.6,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "UTSA Roadrunners @ Binghamton Bearcats",
       "away_short": "UTSA",
       "home_short": "Binghamton",
@@ -224,20 +259,37 @@
       "had_card": false
     },
     {
-      "matchup": "Fairfield Stags @ North Dakota State Bison",
-      "away_short": "Fairfield",
-      "home_short": "North Dakota State",
-      "model_away": 68.5,
-      "model_home": 65.6,
+      "matchup": "North Dakota State Bison @ Fairfield Stags",
+      "away_short": "North Dakota State",
+      "home_short": "Fairfield",
+      "model_away": 65.6,
+      "model_home": 68.5,
       "act_away": 27,
       "act_home": 52,
-      "model_margin_home": -2.9,
+      "model_margin_home": 2.9,
       "act_margin_home": 25,
       "model_total": 134.2,
       "act_total": 79,
-      "spread_err": -27.9,
+      "spread_err": -22.1,
       "total_err": 55.2,
-      "side_right": false,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Minnesota Golden Gophers @ Missouri State Lady Bears",
+      "away_short": "Minnesota",
+      "home_short": "Missouri State",
+      "model_away": 71.4,
+      "model_home": 59.5,
+      "act_away": 89,
+      "act_home": 54,
+      "model_margin_home": -11.9,
+      "act_margin_home": -35,
+      "model_total": 130.9,
+      "act_total": 143,
+      "spread_err": 23.1,
+      "total_err": -12.1,
+      "side_right": true,
       "had_card": false
     }
   ]
