@@ -309,9 +309,18 @@ def fetch_torvik(year: int) -> dict[str, dict]:
             "tor": float(row[11]), "torD": float(row[12]),
             "orb": float(row[13]), "drb": float(row[14]),
             "tempo": float(row[15]),
-            # column 17 = team 3P% (verified vs 2026: UConn 38.3) — feeds the
-            # live variance engine's team-aware "hot shooting" baseline
-            "p3": float(row[17]) if row[17] not in ("", None) else 31.0,
+            # Shooting splits — labels VALIDATED against 2026 league means
+            # (2026-11-27; the old p3=col17 mapping was wrong — 17 is 2P%
+            # DEFENSE, which coincidentally matched UConn's 3P%):
+            #   16 = 2P%  (league ~45.3)   17 = 2P% defense (~45.6)
+            #   18 = 3P%  (league ~30.6)   19 = 3P% defense (~30.9)
+            #   24 = 3PA rate (~33.9)      [FT% not identifiable — cols 22/23
+            #   fail the league-mean test; the variance engine keeps 70% flat]
+            "p2": float(row[16]) if row[16] not in ("", None) else 46.0,
+            "p2d": float(row[17]) if row[17] not in ("", None) else 46.0,
+            "p3": float(row[18]) if row[18] not in ("", None) else 31.0,
+            "p3d": float(row[19]) if row[19] not in ("", None) else 31.0,
+            "p3rate": float(row[24]) if row[24] not in ("", None) else 32.0,
         }
     return teams
 

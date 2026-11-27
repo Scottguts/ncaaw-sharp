@@ -167,6 +167,23 @@ function toggleGame(id){
   d.style.display=open?'none':'block';
   if(c)c.textContent=open?'▸':'▾';
 }
+function teamSearch(q){
+  q=q.trim().toLowerCase();
+  document.querySelectorAll('.teamrow').forEach(el=>{
+    el.style.display=(!q||el.dataset.team.includes(q))?'':'none';
+  });
+}
+function sortTeams(col,numeric){
+  const tbl=document.getElementById('teamtbl');
+  const rows=[...tbl.querySelectorAll('.teamrow')];
+  const dir=tbl.dataset['s'+col]==='1'?-1:1;
+  tbl.dataset['s'+col]=dir===1?'1':'0';
+  rows.sort((a,b)=>{
+    const av=a.cells[col].textContent, bv=b.cells[col].textContent;
+    return numeric?dir*(parseFloat(av)-parseFloat(bv)):dir*av.localeCompare(bv);
+  });
+  rows.forEach(r=>tbl.appendChild(r));
+}
 function searchGames(q){
   q=q.trim().toLowerCase();
   document.querySelectorAll('.gamecard').forEach(el=>{
@@ -270,6 +287,9 @@ function _ma(s){const p=(s||'0-0').split('-');return [+p[0]||0,+p[1]||0];}
 function b3(p3){ // team-aware 3P baseline, shrunk halfway to the 31% league rate
   return p3?((p3/100)+0.31)/2:0.31;
 }
+function b2(p2){ // team-aware 2P baseline, shrunk halfway to the 46% league rate
+  return p2?((p2/100)+0.46)/2:0.46;
+}
 async function fetchBox(id){
   if(LIVEBOX[id]&&Date.now()-LIVEBOX[id].at<60000)return LIVEBOX[id];
   const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event='+id);
@@ -283,7 +303,8 @@ async function fetchBox(id){
     const [ftm,fta]=_ma(st['freeThrowsMade-freeThrowsAttempted']);
     const twoM=fgm-tm,twoA=fga-ta;
     const base3=b3(t.homeAway==='home'?m.p3h:m.p3a);
-    const l3=(tm-base3*ta)*3, l2=(twoM-0.46*twoA)*2, lft=(ftm-0.70*fta);
+    const base2=b2(t.homeAway==='home'?m.p2h:m.p2a);
+    const l3=(tm-base3*ta)*3, l2=(twoM-base2*twoA)*2, lft=(ftm-0.70*fta);
     const luck=l3+l2+lft;
     out.sides[t.homeAway]={loc:(t.team||{}).location||'',tm,ta,twoM,twoA,ftm,fta,l3,l2,lft,luck,base3};
   });
@@ -978,6 +999,60 @@ def render_best_bets(dates: list[str], bet_idx: dict) -> str:
     return "".join(out)
 
 
+def render_teams(day: Path) -> str:
+    """Searchable/sortable team-stats table, shooting-first — built for the
+    live-variance workflow: season 3P%/2P% are what the luck engine reverts
+    toward, and the 'hot >=' column shows each team's sustainable threshold
+    (the shrunk baseline the engine actually uses)."""
+    tp = day / "teams.json"
+    if not tp.exists():
+        return "<div class='card empty'>no team data for this date</div>"
+    teams = json.loads(tp.read_text()).get("teams") or {}
+    rows = []
+    for key, v in teams.items():
+        if not v.get("games") or v.get("p3") is None:
+            continue
+        rows.append({
+            "key": key,   # canonical name ('uconn') so search hits aliases
+            "rk": v.get("tRank", 999), "team": v.get("torvik_name", "?"),
+            "rec": v.get("record", ""), "net": v["adjOE"] - v["adjDE"],
+            "tempo": v.get("tempo", 0), "efg": v.get("eFG", 0),
+            "p2": v.get("p2", 0), "p3": v.get("p3", 0),
+            "p3r": v.get("p3rate", 0), "p3d": v.get("p3d", 0),
+            "hot": (v.get("p3", 31) + 31) / 2, "tov": v.get("tor", 0),
+        })
+    rows.sort(key=lambda r: r["rk"])
+    out = ["<h2>\U0001F4CB Team stats — season shooting & efficiency</h2>",
+           "<p class='muted'>Live-betting lens: <b>3P%</b>/<b>2P%</b> are what the "
+           "variance engine reverts to; <b>hot \u2265</b> is the sustainable 3P "
+           "threshold (shooting above it in-game = \U0001F525 luck, expect reversion). "
+           "<b>3PAr</b> = share of shots from three (volume shooters swing harder). "
+           "Tap a column header to sort.</p>",
+           "<input class='search' type='search' placeholder='\U0001F50D Search teams\u2026' "
+           "oninput='teamSearch(this.value)'>",
+           "<div style='overflow-x:auto'><table id='teamtbl'>"
+           "<tr><th onclick='sortTeams(0,1)'>#</th><th onclick='sortTeams(1,0)'>team</th>"
+           "<th>rec</th><th onclick='sortTeams(3,1)'>net</th>"
+           "<th onclick='sortTeams(4,1)'>tempo</th><th onclick='sortTeams(5,1)'>eFG</th>"
+           "<th onclick='sortTeams(6,1)'>2P%</th><th onclick='sortTeams(7,1)'>3P%</th>"
+           "<th onclick='sortTeams(8,1)'>3PAr</th><th onclick='sortTeams(9,1)'>3P%D</th>"
+           "<th>hot \u2265</th><th onclick='sortTeams(11,1)'>TOV%</th></tr>"]
+    for r in rows:
+        p3c = " class='g'" if r["p3"] >= 36 else (" class='bl'" if r["p3"] <= 27 else "")
+        p2c = " class='g'" if r["p2"] >= 50 else ""
+        p3rc = " class='y'" if r["p3r"] >= 38 else ""
+        out.append(
+            f"<tr class='teamrow statrow' data-team='{esc(r['team'].lower())} {esc(r['key'])}'>"
+            f"<td>{r['rk']}</td><td style='font-weight:700'>{esc(r['team'])}</td>"
+            f"<td class='muted'>{esc(r['rec'])}</td><td>{r['net']:+.1f}</td>"
+            f"<td>{r['tempo']:.0f}</td><td>{r['efg']:.1f}</td>"
+            f"<td{p2c}>{r['p2']:.1f}</td><td{p3c}>{r['p3']:.1f}</td>"
+            f"<td{p3rc}>{r['p3r']:.0f}</td><td>{r['p3d']:.1f}</td>"
+            f"<td class='dim'>{r['hot']:.0f}%</td><td>{r['tov']:.1f}</td></tr>")
+    out.append("</table></div>")
+    return "".join(out)
+
+
 def render_finals(day: Path, dates: list[str], this_date: str) -> str:
     fp = day / "finals.json"
     if not fp.exists():
@@ -1095,6 +1170,7 @@ def _page(this_date: str, grades: dict, dates: list[str], bets: list[dict],
             "aw": g.get("away_short"), "hm": g.get("home_short"),
             "as_": m.get("away_score"), "hs_": m.get("home_score"),
             "p3h": m.get("p3_home"), "p3a": m.get("p3_away"),
+            "p2h": m.get("p2_home"), "p2a": m.get("p2_away"),
         }
         if mk.get("spread_home") is not None:
             entry["bk_sp"] = mk["spread_home"]
@@ -1159,6 +1235,7 @@ href='https://github.com/Scottguts/ncaaw-sharp/issues/new?title=INJ%3A%20Team%20
 <button class='tab' id='tab-bets' onclick="showTab('bets')">⚡ Best Bets</button>
 <button class='tab' id='tab-live' onclick="showTab('live');liveRefresh();renderKeyState()">📡 Live</button>
 <button class='tab' id='tab-chat' onclick="showTab('chat');renderKeyState();if(!Object.keys(LIVEGAMES).length)liveRefresh()">🤖 Copilot</button>
+<button class='tab' id='tab-teams' onclick="showTab('teams')">📋 Teams</button>
 <button class='tab' id='tab-finals' onclick="showTab('finals')">🏁 Finals</button>
 <button class='tab' id='tab-history' onclick="showTab('history')">💰 Bet History</button>
 </div>
@@ -1237,6 +1314,7 @@ onpaste='[...(event.clipboardData||{{}}).items||[]].forEach(it=>{{if(it.type&&it
 <button class='btn' onclick='sendChat()'>send</button>
 </div>
 </div>
+<div class='pane' id='pane-teams' style='display:none'>{render_teams(DATA_ROOT / this_date)}</div>
 <div class='pane' id='pane-finals' style='display:none'>{render_finals(DATA_ROOT / this_date, dates, this_date)}</div>
 <div class='pane' id='pane-history' style='display:none'>{render_history(bets)}</div>
 </div>

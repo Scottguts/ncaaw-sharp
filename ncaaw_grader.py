@@ -134,7 +134,7 @@ PRIOR_BLEND_K = 4            # half-weight to current stats by game 4 — valida
 # blend ONLY the raw per-game stats; adjOE/adjDE/tRank stay live (already
 # prior-informed by Torvik — blending them made spreads slightly worse)
 PRIOR_BLEND_KEYS = ("tempo", "eFG", "eFGD", "tor", "torD",
-                    "orb", "drb", "ftr", "ftrD", "p3")
+                    "orb", "drb", "ftr", "ftrD", "p2", "p2d", "p3", "p3d", "p3rate")
 
 
 def blend_with_prior(cur: dict, pri: dict | None) -> dict:
@@ -489,8 +489,9 @@ def grade_game(game: dict, teams: dict, odds_event: dict | None,
     rec["model"] = {**proj, "margin_home": round(model_margin_home, 1),
                     "games_home": th["games"], "games_away": ta["games"],
                     "rank_home": th.get("tRank"), "rank_away": ta.get("tRank"),
-                    # season 3P% (shrunk at use-site) for live luck baselines
-                    "p3_home": th.get("p3"), "p3_away": ta.get("p3")}
+                    # season shooting (shrunk at use-site) for live luck baselines
+                    "p3_home": th.get("p3"), "p3_away": ta.get("p3"),
+                    "p2_home": th.get("p2"), "p2_away": ta.get("p2")}
 
     if odds_event is None:
         rec["pass_reasons"].append("no market line (nothing to anchor against)")

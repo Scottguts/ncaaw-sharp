@@ -87,4 +87,4 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Cincinnati Bearcats @ Minnesota Golden Gophers** — model 56-74 (margin +17.6 home, total 129.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **New Mexico State Aggies @ Nevada Wolf Pack** — model 60-60 (margin -0.7 home, total 120.2) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-27T14:34:09Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-27T14:42:31Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
