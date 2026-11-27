@@ -1,211 +1,79 @@
 {
-  "cards": [
-    {
-      "bet_label": "Kansas Jayhawks -9.5",
-      "book": "ballybet",
-      "confidence": 7,
-      "edge": 0.0404,
-      "espn_event_id": "401903558",
-      "fair_american": -124,
-      "fair_prob": 0.5542,
-      "line": -9.5,
-      "market": "spread",
-      "matchup": "Kansas Jayhawks @ Washington State Cougars",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -114,
-      "reasoning": [
-        "Model margin -12.0 vs market -9.5 (home)",
-        "Anchored fair margin -11.0 vs line -9.5 (away)"
-      ],
-      "risk": "Standard",
-      "side": "away",
-      "start": "2026-11-26T21:00Z",
-      "unit_size": 1.0
-    }
-  ],
+  "cards": [],
   "date": "2026-11-26",
   "games": [
     {
-      "away_short": "McNeese",
-      "cards": [],
-      "espn_event_id": "401920170",
-      "home_short": "Charleston",
-      "matchup": "McNeese Cowgirls @ Charleston Cougars",
-      "neutral_site": true,
-      "pass_reasons": [
-        "missing Torvik data (non-D-I opponent?)"
-      ],
-      "shadow": [],
-      "start": "2026-11-26T18:00Z",
-      "status": "skipped"
-    },
-    {
       "anchored": {
-        "margin_home": 7.0,
-        "season_bias_applied": -2.23,
-        "spread_shift": -1.5,
-        "total": 115.0,
-        "total_shift": 1.5
-      },
-      "away_short": "Georgia",
-      "cards": [],
-      "espn_event_id": "401903569",
-      "home_short": "Colorado",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -8.5,
-        "spread_src": "consensus",
-        "total": 113.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Georgia Lady Bulldogs @ Colorado Buffaloes",
-      "model": {
-        "away_score": 61.9,
-        "games_away": 6,
-        "games_home": 5,
-        "home_score": 64.1,
-        "margin_home": 2.1,
-        "p3_away": 41.06,
-        "p3_home": 39.577777777777776,
-        "proj_poss": 69.2,
-        "rank_away": 45,
-        "rank_home": 41,
-        "spread": -2.1,
-        "total": 126.0
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [
-        {
-          "bet_label": "Georgia Lady Bulldogs +8.5",
-          "book": "hardrockbet",
-          "confidence": 6,
-          "edge": 0.0142,
-          "espn_event_id": "401903569",
-          "fair_american": -124,
-          "fair_prob": 0.5532,
-          "line": 8.5,
-          "market": "spread",
-          "matchup": "Georgia Lady Bulldogs @ Colorado Buffaloes",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -120,
-          "reasoning": [
-            "Model margin +2.1 vs market +8.5 (home)",
-            "Anchored fair margin +7.0 vs line +8.5 (away)"
-          ],
-          "risk": "Shadow",
-          "side": "away",
-          "start": "2026-11-26T18:30Z",
-          "unit_size": 0.5
-        }
-      ],
-      "sigma": {
-        "spread": 11.21,
-        "total": 15.38
-      },
-      "start": "2026-11-26T18:30Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": 3.0,
-        "season_bias_applied": -2.23,
-        "spread_shift": -1.5,
-        "total": 126.0,
-        "total_shift": -1.5
-      },
-      "away_short": "UTSA",
-      "cards": [],
-      "espn_event_id": "401925995",
-      "home_short": "Binghamton",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": -4.5,
-        "spread_src": "consensus",
-        "total": 127.5,
-        "total_src": "consensus"
-      },
-      "matchup": "UTSA Roadrunners @ Binghamton Bearcats",
-      "model": {
-        "away_score": 61.1,
-        "games_away": 5,
-        "games_home": 7,
-        "home_score": 53.3,
-        "margin_home": -7.8,
-        "p3_away": 43.77777777777778,
-        "p3_home": 45.7,
-        "proj_poss": 67.5,
-        "rank_away": 130,
-        "rank_home": 212,
-        "spread": 7.8,
-        "total": 114.3
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no edge cleared the gates"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 11.11,
-        "total": 14.85
-      },
-      "start": "2026-11-26T19:00Z",
-      "status": "graded"
-    },
-    {
-      "anchored": {
-        "margin_home": 7.0,
-        "season_bias_applied": -2.23,
+        "margin_home": -25.0,
+        "season_bias_applied": -2.26,
         "spread_shift": 1.5,
-        "total": 118.0,
-        "total_shift": 1.5
+        "total": 128.64,
+        "total_shift": -0.86
       },
-      "away_short": "Davidson",
+      "away_short": "Minnesota",
       "cards": [],
-      "espn_event_id": "401921023",
-      "home_short": "Florida",
+      "espn_event_id": "401903570",
+      "home_short": "Missouri State",
       "market": {
         "pinnacle_fair_home_ml": null,
-        "spread_home": -5.5,
+        "spread_home": 26.5,
         "spread_src": "consensus",
-        "total": 116.5,
+        "total": 129.5,
         "total_src": "consensus"
       },
-      "matchup": "Davidson Wildcats @ Florida Gators",
+      "matchup": "Minnesota Golden Gophers @ Missouri State Lady Bears",
       "model": {
-        "away_score": 58.8,
+        "away_score": 71.4,
+        "games_away": 5,
+        "games_home": 5,
+        "home_score": 59.5,
+        "margin_home": -11.9,
+        "p3_away": 44.47777777777778,
+        "p3_home": 42.32222222222222,
+        "proj_poss": 69.0,
+        "rank_away": 28,
+        "rank_home": 74,
+        "spread": 11.9,
+        "total": 130.9
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no edge cleared the gates"
+      ],
+      "shadow": [],
+      "sigma": {
+        "spread": 11.01,
+        "total": 15.67
+      },
+      "start": "2026-11-26T23:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Air Force",
+      "cards": [],
+      "espn_event_id": "401916120",
+      "home_short": "Texas Tech",
+      "matchup": "Air Force Falcons @ Texas Tech Lady Raiders",
+      "model": {
+        "away_score": 52.2,
         "games_away": 5,
         "games_home": 6,
-        "home_score": 68.1,
-        "margin_home": 9.3,
-        "p3_away": 47.18888888888888,
-        "p3_home": 43.44,
-        "proj_poss": 69.3,
-        "rank_away": 89,
-        "rank_home": 42,
-        "spread": -9.3,
-        "total": 126.9
+        "home_score": 67.9,
+        "margin_home": 15.7,
+        "p3_away": 45.68888888888889,
+        "p3_home": 39.82,
+        "proj_poss": 69.0,
+        "rank_away": 201,
+        "rank_home": 51,
+        "spread": -15.7,
+        "total": 120.1
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "sigma": {
-        "spread": 11.07,
-        "total": 15.43
-      },
-      "start": "2026-11-26T19:00Z",
+      "start": "2026-11-26T22:30Z",
       "status": "graded"
     },
     {
@@ -405,6 +273,104 @@
       "status": "graded"
     },
     {
+      "away_short": "McNeese",
+      "cards": [],
+      "espn_event_id": "401920170",
+      "home_short": "Charleston",
+      "matchup": "McNeese Cowgirls @ Charleston Cougars",
+      "neutral_site": true,
+      "pass_reasons": [
+        "missing Torvik data (non-D-I opponent?)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T18:00Z",
+      "status": "skipped"
+    },
+    {
+      "away_short": "Georgia",
+      "cards": [],
+      "espn_event_id": "401903569",
+      "home_short": "Colorado",
+      "matchup": "Georgia Lady Bulldogs @ Colorado Buffaloes",
+      "model": {
+        "away_score": 61.9,
+        "games_away": 6,
+        "games_home": 5,
+        "home_score": 64.1,
+        "margin_home": 2.1,
+        "p3_away": 41.06,
+        "p3_home": 39.577777777777776,
+        "proj_poss": 69.2,
+        "rank_away": 45,
+        "rank_home": 41,
+        "spread": -2.1,
+        "total": 126.0
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T18:30Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "UTSA",
+      "cards": [],
+      "espn_event_id": "401925995",
+      "home_short": "Binghamton",
+      "matchup": "UTSA Roadrunners @ Binghamton Bearcats",
+      "model": {
+        "away_score": 61.1,
+        "games_away": 5,
+        "games_home": 7,
+        "home_score": 53.3,
+        "margin_home": -7.8,
+        "p3_away": 43.77777777777778,
+        "p3_home": 45.7,
+        "proj_poss": 67.5,
+        "rank_away": 130,
+        "rank_home": 212,
+        "spread": 7.8,
+        "total": 114.3
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T19:00Z",
+      "status": "graded"
+    },
+    {
+      "away_short": "Davidson",
+      "cards": [],
+      "espn_event_id": "401921023",
+      "home_short": "Florida",
+      "matchup": "Davidson Wildcats @ Florida Gators",
+      "model": {
+        "away_score": 58.8,
+        "games_away": 5,
+        "games_home": 6,
+        "home_score": 68.1,
+        "margin_home": 9.3,
+        "p3_away": 47.18888888888888,
+        "p3_home": 43.44,
+        "proj_poss": 69.3,
+        "rank_away": 89,
+        "rank_home": 42,
+        "spread": -9.3,
+        "total": 126.9
+      },
+      "neutral_site": true,
+      "pass_reasons": [
+        "no market line (nothing to anchor against)"
+      ],
+      "shadow": [],
+      "start": "2026-11-26T19:00Z",
+      "status": "graded"
+    },
+    {
       "away_short": "Grambling",
       "cards": [],
       "espn_event_id": "401916119",
@@ -419,124 +385,38 @@
       "status": "skipped"
     },
     {
-      "anchored": {
-        "margin_home": -2.0,
-        "season_bias_applied": -2.23,
-        "spread_shift": -1.5,
-        "total": 132.0,
-        "total_shift": -1.5
-      },
-      "away_short": "Fairfield",
+      "away_short": "North Dakota State",
       "cards": [],
       "espn_event_id": "401918799",
-      "home_short": "North Dakota State",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 0.5,
-        "spread_src": "consensus",
-        "total": 133.5,
-        "total_src": "consensus"
-      },
-      "matchup": "Fairfield Stags @ North Dakota State Bison",
+      "home_short": "Fairfield",
+      "matchup": "North Dakota State Bison @ Fairfield Stags",
       "model": {
-        "away_score": 68.5,
+        "away_score": 65.6,
         "games_away": 6,
         "games_home": 6,
-        "home_score": 65.6,
-        "margin_home": -2.9,
-        "p3_away": 50.32000000000001,
-        "p3_home": 47.68000000000001,
+        "home_score": 68.5,
+        "margin_home": 2.9,
+        "p3_away": 47.68000000000001,
+        "p3_home": 50.32000000000001,
         "proj_poss": 68.5,
-        "rank_away": 78,
-        "rank_home": 93,
-        "spread": 2.9,
+        "rank_away": 93,
+        "rank_home": 78,
+        "spread": -2.9,
         "total": 134.2
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no edge cleared the gates"
+        "no market line (nothing to anchor against)"
       ],
-      "shadow": [
-        {
-          "bet_label": "Fairfield Stags ML",
-          "book": "ballybet",
-          "confidence": 5,
-          "edge": 0.0133,
-          "espn_event_id": "401918799",
-          "fair_american": -133,
-          "fair_prob": 0.5708,
-          "line": null,
-          "market": "moneyline",
-          "matchup": "Fairfield Stags @ North Dakota State Bison",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -129,
-          "reasoning": [
-            "Model margin -2.9 vs market -0.5 (home)",
-            "Anchored fair margin -2.0, sigma 11.2"
-          ],
-          "risk": "Shadow",
-          "side": "away",
-          "start": "2026-11-26T20:30Z",
-          "unit_size": 0.5
-        }
-      ],
-      "sigma": {
-        "spread": 11.21,
-        "total": 15.87
-      },
+      "shadow": [],
       "start": "2026-11-26T20:30Z",
       "status": "graded"
     },
     {
-      "anchored": {
-        "margin_home": -11.0,
-        "season_bias_applied": -2.23,
-        "spread_shift": -1.5,
-        "total": 132.0,
-        "total_shift": -1.5
-      },
       "away_short": "Kansas",
-      "cards": [
-        {
-          "bet_label": "Kansas Jayhawks -9.5",
-          "book": "ballybet",
-          "confidence": 7,
-          "edge": 0.0404,
-          "espn_event_id": "401903558",
-          "fair_american": -124,
-          "fair_prob": 0.5542,
-          "line": -9.5,
-          "market": "spread",
-          "matchup": "Kansas Jayhawks @ Washington State Cougars",
-          "pass_triggers": [
-            "Key player ruled out after card is posted",
-            "Line moves through our fair value before tip",
-            "Confirmed lineup/coaching news that invalidates the Torvik profile"
-          ],
-          "price_american": -114,
-          "reasoning": [
-            "Model margin -12.0 vs market -9.5 (home)",
-            "Anchored fair margin -11.0 vs line -9.5 (away)"
-          ],
-          "risk": "Standard",
-          "side": "away",
-          "start": "2026-11-26T21:00Z",
-          "unit_size": 1.0
-        }
-      ],
+      "cards": [],
       "espn_event_id": "401903558",
       "home_short": "Washington State",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": 9.5,
-        "spread_src": "consensus",
-        "total": 133.5,
-        "total_src": "consensus"
-      },
       "matchup": "Kansas Jayhawks @ Washington State Cougars",
       "model": {
         "away_score": 70.7,
@@ -553,80 +433,11 @@
         "total": 129.5
       },
       "neutral_site": true,
-      "pass_reasons": [],
-      "shadow": [],
-      "sigma": {
-        "spread": 11.01,
-        "total": 15.59
-      },
-      "start": "2026-11-26T21:00Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Air Force",
-      "cards": [],
-      "espn_event_id": "401916120",
-      "home_short": "Texas Tech",
-      "matchup": "Air Force Falcons @ Texas Tech Lady Raiders",
-      "model": {
-        "away_score": 52.2,
-        "games_away": 5,
-        "games_home": 6,
-        "home_score": 67.9,
-        "margin_home": 15.7,
-        "p3_away": 45.68888888888889,
-        "p3_home": 39.82,
-        "proj_poss": 69.0,
-        "rank_away": 201,
-        "rank_home": 51,
-        "spread": -15.7,
-        "total": 120.1
-      },
-      "neutral_site": true,
       "pass_reasons": [
         "no market line (nothing to anchor against)"
       ],
       "shadow": [],
-      "start": "2026-11-26T22:30Z",
-      "status": "graded"
-    },
-    {
-      "away_short": "Minnesota",
-      "cards": [],
-      "espn_event_id": "401903570",
-      "home_short": "Missouri State",
-      "market": {
-        "pinnacle_fair_home_ml": null,
-        "spread_home": null,
-        "spread_src": null,
-        "total": null,
-        "total_src": null
-      },
-      "matchup": "Minnesota Golden Gophers @ Missouri State Lady Bears",
-      "model": {
-        "away_score": 71.4,
-        "games_away": 5,
-        "games_home": 5,
-        "home_score": 59.5,
-        "margin_home": -11.9,
-        "p3_away": 44.47777777777778,
-        "p3_home": 42.32222222222222,
-        "proj_poss": 69.0,
-        "rank_away": 28,
-        "rank_home": 74,
-        "spread": 11.9,
-        "total": 130.9
-      },
-      "neutral_site": true,
-      "pass_reasons": [
-        "no market spread quoted by target/sharp books"
-      ],
-      "shadow": [],
-      "sigma": {
-        "spread": 11.01,
-        "total": 15.67
-      },
-      "start": "2026-11-26T23:30Z",
+      "start": "2026-11-26T21:00Z",
       "status": "graded"
     },
     {
@@ -697,69 +508,16 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-26T20:04:39.619140Z",
+  "generated_at": "2026-11-27T00:27:51.960186Z",
   "market_bias": {
-    "mean_spread_delta": -3.96,
-    "mean_total_delta": 1.28,
-    "n_spread_lines": 5,
-    "n_total_lines": 5
+    "mean_spread_delta": 14.6,
+    "mean_total_delta": 1.4,
+    "n_spread_lines": 1,
+    "n_total_lines": 1
   },
-  "n_cards": 1,
+  "n_cards": 0,
   "n_games": 18,
   "odds_available": true,
-  "shadow_cards": [
-    {
-      "bet_label": "Georgia Lady Bulldogs +8.5",
-      "book": "hardrockbet",
-      "confidence": 6,
-      "edge": 0.0142,
-      "espn_event_id": "401903569",
-      "fair_american": -124,
-      "fair_prob": 0.5532,
-      "line": 8.5,
-      "market": "spread",
-      "matchup": "Georgia Lady Bulldogs @ Colorado Buffaloes",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -120,
-      "reasoning": [
-        "Model margin +2.1 vs market +8.5 (home)",
-        "Anchored fair margin +7.0 vs line +8.5 (away)"
-      ],
-      "risk": "Shadow",
-      "side": "away",
-      "start": "2026-11-26T18:30Z",
-      "unit_size": 0.5
-    },
-    {
-      "bet_label": "Fairfield Stags ML",
-      "book": "ballybet",
-      "confidence": 5,
-      "edge": 0.0133,
-      "espn_event_id": "401918799",
-      "fair_american": -133,
-      "fair_prob": 0.5708,
-      "line": null,
-      "market": "moneyline",
-      "matchup": "Fairfield Stags @ North Dakota State Bison",
-      "pass_triggers": [
-        "Key player ruled out after card is posted",
-        "Line moves through our fair value before tip",
-        "Confirmed lineup/coaching news that invalidates the Torvik profile"
-      ],
-      "price_american": -129,
-      "reasoning": [
-        "Model margin -2.9 vs market -0.5 (home)",
-        "Anchored fair margin -2.0, sigma 11.2"
-      ],
-      "risk": "Shadow",
-      "side": "away",
-      "start": "2026-11-26T20:30Z",
-      "unit_size": 0.5
-    }
-  ],
-  "total_units": 1.0
+  "shadow_cards": [],
+  "total_units": 0
 }
