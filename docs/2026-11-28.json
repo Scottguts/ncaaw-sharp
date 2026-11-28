@@ -3,10 +3,24 @@
   "date": "2026-11-28",
   "games": [
     {
+      "anchored": {
+        "margin_home": -7.5,
+        "season_bias_applied": 1.89,
+        "spread_shift": 1.0,
+        "total": 139.39,
+        "total_shift": -1.11
+      },
       "away_short": "TCU",
       "cards": [],
       "espn_event_id": "401918005",
       "home_short": "Mississippi State",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 8.5,
+        "spread_src": "consensus",
+        "total": 140.5,
+        "total_src": "consensus"
+      },
       "matchup": "TCU Horned Frogs @ Mississippi State Bulldogs",
       "model": {
         "away_score": 72.5,
@@ -26,9 +40,13 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 11.12,
+        "total": 16.25
+      },
       "start": "2026-11-28T16:00Z",
       "status": "graded"
     },
@@ -153,10 +171,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": -31.8,
+        "season_bias_applied": 1.89,
+        "spread_shift": -0.3,
+        "total": 128.29,
+        "total_shift": -1.21
+      },
       "away_short": "Colorado",
       "cards": [],
       "espn_event_id": "401903576",
       "home_short": "Maryland Eastern Shore",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": 31.5,
+        "spread_src": "consensus",
+        "total": 129.5,
+        "total_src": "consensus"
+      },
       "matchup": "Colorado Buffaloes @ Maryland Eastern Shore Hawks",
       "model": {
         "away_score": 79.1,
@@ -176,9 +208,13 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 12.84,
+        "total": 15.65
+      },
       "start": "2026-11-28T16:00Z",
       "status": "graded"
     },
@@ -1943,10 +1979,24 @@
       "status": "graded"
     },
     {
+      "anchored": {
+        "margin_home": 6.3,
+        "season_bias_applied": 1.89,
+        "spread_shift": -0.2,
+        "total": 132.0,
+        "total_shift": 1.5
+      },
       "away_short": "Duke",
       "cards": [],
       "espn_event_id": "401911741",
       "home_short": "UConn",
+      "market": {
+        "pinnacle_fair_home_ml": null,
+        "spread_home": -6.5,
+        "spread_src": "consensus",
+        "total": 130.5,
+        "total_src": "consensus"
+      },
       "matchup": "Duke Blue Devils @ UConn Huskies",
       "model": {
         "away_score": 63.4,
@@ -1966,9 +2016,13 @@
       },
       "neutral_site": true,
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "shadow": [],
+      "sigma": {
+        "spread": 11.15,
+        "total": 16.03
+      },
       "start": "2026-11-29T00:00Z",
       "status": "graded"
     },
@@ -2167,12 +2221,12 @@
       "status": "graded"
     }
   ],
-  "generated_at": "2026-11-28T07:36:15.678488Z",
+  "generated_at": "2026-11-28T14:30:08.400414Z",
   "market_bias": {
-    "mean_spread_delta": null,
-    "mean_total_delta": null,
-    "n_spread_lines": 0,
-    "n_total_lines": 0
+    "mean_spread_delta": 0.17,
+    "mean_total_delta": -1.13,
+    "n_spread_lines": 3,
+    "n_total_lines": 3
   },
   "n_cards": 0,
   "n_games": 78,

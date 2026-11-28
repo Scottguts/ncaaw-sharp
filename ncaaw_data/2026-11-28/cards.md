@@ -8,12 +8,12 @@ Nothing cleared the gates today. A quiet day is a correct day.
 
 ### Full slate
 
-- **TCU Horned Frogs @ Mississippi State Bulldogs** — model 72-65 (margin -7.5 home, total 137.5) · market: no line · PASS: no market line (nothing to anchor against)
+- **TCU Horned Frogs @ Mississippi State Bulldogs** — model 72-65 (margin -7.5 home, total 137.5) · market: home +8.5 (consensus) · total 140.5 (consensus) · PASS: no edge cleared the gates
 - **Drexel Dragons @ Iona Gaels** — model 59-56 (margin -3.3 home, total 114.9) · market: no line · PASS: no market line (nothing to anchor against)
 - **Bowling Green Falcons @ Tulsa Golden Hurricane** — model 59-69 (margin +10.2 home, total 127.6) · market: no line · PASS: no market line (nothing to anchor against)
 - **South Dakota Coyotes @ Abilene Christian Wildcats** — model 56-67 (margin +11.1 home, total 123.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Tulane Green Wave @ Maine Black Bears** — model 67-56 (margin -10.9 home, total 122.7) · market: no line · PASS: no market line (nothing to anchor against)
-- **Colorado Buffaloes @ Maryland Eastern Shore Hawks** — model 79-47 (margin -31.8 home, total 126.4) · market: no line · PASS: no market line (nothing to anchor against)
+- **Colorado Buffaloes @ Maryland Eastern Shore Hawks** — model 79-47 (margin -31.8 home, total 126.4) · market: home +31.5 (consensus) · total 129.5 (consensus) · PASS: no edge cleared the gates
 - **VCU Rams @ Ohio State Buckeyes** — model 56-76 (margin +20.1 home, total 131.7) · market: no line · PASS: no market line (nothing to anchor against)
 - **Western Kentucky Lady Toppers @ Morehead State Eagles** — model 67-59 (margin -8.2 home, total 126.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **Alabama A&M Bulldogs @ North Carolina Central Eagles** — model 66-54 (margin -12.1 home, total 120.4) · market: no line · PASS: no market line (nothing to anchor against)
@@ -78,7 +78,7 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **Purdue Fort Wayne Mastodons @ UL Monroe Warhawks** — model 65-59 (margin -5.2 home, total 124.0) · market: no line · PASS: no market line (nothing to anchor against)
 - **Saint Louis Billikens @ Omaha Mavericks** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Harvard Crimson @ Pittsburgh Panthers** — model 65-62 (margin -3.2 home, total 127.4) · market: no line · PASS: no market line (nothing to anchor against)
-- **Duke Blue Devils @ UConn Huskies** — model 63-70 (margin +6.3 home, total 133.2) · market: no line · PASS: no market line (nothing to anchor against)
+- **Duke Blue Devils @ UConn Huskies** — model 63-70 (margin +6.3 home, total 133.2) · market: home -6.5 (consensus) · total 130.5 (consensus) · PASS: no edge cleared the gates
 - **Utah Valley Wolverines @ Idaho State Bengals** — model 56-61 (margin +5.5 home, total 117.1) · market: no line · PASS: no market line (nothing to anchor against)
 - **San José State Spartans @ Saint Mary's Gaels** — no model · market: no line · PASS: missing Torvik data (non-D-I opponent?)
 - **Yale Bulldogs @ Marist Red Foxes** — model 64-62 (margin -2.8 home, total 125.8) · market: no line · PASS: no market line (nothing to anchor against)
@@ -87,4 +87,4 @@ Nothing cleared the gates today. A quiet day is a correct day.
 - **San Diego State Aztecs @ Stanford Cardinal** — model 62-63 (margin +1.4 home, total 124.4) · market: no line · PASS: no market line (nothing to anchor against)
 - **Seton Hall Pirates @ Baylor Bears** — model 57-74 (margin +16.9 home, total 130.7) · market: no line · PASS: no market line (nothing to anchor against)
 
-_Generated 2026-11-28T07:36:15Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_
+_Generated 2026-11-28T14:30:08Z — gates: minEdge 1.8%/2.5%, maxEdge 6%, conf ≥6, caps 5 cards/6u_

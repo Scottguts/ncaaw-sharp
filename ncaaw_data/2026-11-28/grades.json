@@ -1,11 +1,11 @@
 {
   "date": "2026-11-28",
-  "generated_at": "2026-11-28T07:36:15.678488Z",
+  "generated_at": "2026-11-28T14:30:08.400414Z",
   "market_bias": {
-    "n_spread_lines": 0,
-    "n_total_lines": 0,
-    "mean_spread_delta": null,
-    "mean_total_delta": null
+    "n_spread_lines": 3,
+    "n_total_lines": 3,
+    "mean_spread_delta": 0.17,
+    "mean_total_delta": -1.13
   },
   "odds_available": true,
   "n_games": 78,
@@ -25,7 +25,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 72.5,
@@ -42,6 +42,24 @@
         "p3_away": 35.738461538461536,
         "p2_home": 52.13636363636364,
         "p2_away": 58.730769230769226
+      },
+      "market": {
+        "spread_home": 8.5,
+        "total": 140.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.12,
+        "total": 16.25
+      },
+      "anchored": {
+        "margin_home": -7.5,
+        "spread_shift": 1.0,
+        "total": 139.39,
+        "total_shift": -1.11,
+        "season_bias_applied": 1.89
       }
     },
     {
@@ -175,7 +193,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 79.1,
@@ -192,6 +210,24 @@
         "p3_away": 26.154545454545456,
         "p2_home": 39.333333333333336,
         "p2_away": 48.2
+      },
+      "market": {
+        "spread_home": 31.5,
+        "total": 129.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 12.84,
+        "total": 15.65
+      },
+      "anchored": {
+        "margin_home": -31.8,
+        "spread_shift": -0.3,
+        "total": 128.29,
+        "total_shift": -1.21,
+        "season_bias_applied": 1.89
       }
     },
     {
@@ -1965,7 +2001,7 @@
       "cards": [],
       "shadow": [],
       "pass_reasons": [
-        "no market line (nothing to anchor against)"
+        "no edge cleared the gates"
       ],
       "model": {
         "away_score": 63.4,
@@ -1982,6 +2018,24 @@
         "p3_away": 33.84,
         "p2_home": 52.47272727272727,
         "p2_away": 54.82
+      },
+      "market": {
+        "spread_home": -6.5,
+        "total": 130.5,
+        "spread_src": "consensus",
+        "total_src": "consensus",
+        "pinnacle_fair_home_ml": null
+      },
+      "sigma": {
+        "spread": 11.15,
+        "total": 16.03
+      },
+      "anchored": {
+        "margin_home": 6.3,
+        "spread_shift": -0.2,
+        "total": 132.0,
+        "total_shift": 1.5,
+        "season_bias_applied": 1.89
       }
     },
     {
