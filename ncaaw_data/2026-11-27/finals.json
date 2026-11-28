@@ -1,34 +1,50 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T23:58:17.619565Z",
+  "generated_at": "2026-11-28T07:36:15.169723Z",
   "calibration": [
+    {
+      "p": 0.548,
+      "hit": true
+    },
+    {
+      "p": 0.446,
+      "hit": false
+    },
     {
       "p": 0.552,
       "hit": true
     },
     {
-      "p": 0.453,
-      "hit": false
-    },
-    {
-      "p": 0.553,
-      "hit": false
-    },
-    {
-      "p": 0.553,
+      "p": 0.447,
       "hit": true
+    },
+    {
+      "p": 0.449,
+      "hit": false
+    },
+    {
+      "p": 0.446,
+      "hit": true
+    },
+    {
+      "p": 0.464,
+      "hit": true
+    },
+    {
+      "p": 0.448,
+      "hit": false
     }
   ],
   "summary": {
-    "n": 48,
-    "spread_mae": 10.58,
-    "total_mae": 11.98,
-    "su_pct": 70.8,
+    "n": 69,
+    "spread_mae": 10.09,
+    "total_mae": 12.91,
+    "su_pct": 73.9,
     "fired": {
-      "w": 2,
-      "l": 1,
+      "w": 3,
+      "l": 2,
       "p": 0,
-      "units": 1.24
+      "units": 1.6
     }
   },
   "games": [
@@ -67,6 +83,23 @@
       "had_card": false
     },
     {
+      "matchup": "UTEP Miners @ Pacific Tigers",
+      "away_short": "UTEP",
+      "home_short": "Pacific",
+      "model_away": 58.8,
+      "model_home": 62.4,
+      "act_away": 55,
+      "act_home": 59,
+      "model_margin_home": 3.6,
+      "act_margin_home": 4,
+      "model_total": 121.3,
+      "act_total": 114,
+      "spread_err": -0.4,
+      "total_err": 7.3,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Morehead State Eagles @ Buffalo Bulls",
       "away_short": "Morehead State",
       "home_short": "Buffalo",
@@ -84,6 +117,23 @@
       "had_card": false
     },
     {
+      "matchup": "Army Black Knights @ North Carolina Tar Heels",
+      "away_short": "Army",
+      "home_short": "North Carolina",
+      "model_away": 48.8,
+      "model_home": 69.1,
+      "act_away": 65,
+      "act_home": 85,
+      "model_margin_home": 20.4,
+      "act_margin_home": 20,
+      "model_total": 117.9,
+      "act_total": 150,
+      "spread_err": 0.4,
+      "total_err": -32.1,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Texas A&M Aggies @ Bowling Green Falcons",
       "away_short": "Texas A&M",
       "home_short": "Bowling Green",
@@ -97,6 +147,23 @@
       "act_total": 125,
       "spread_err": 0.5,
       "total_err": -0.3,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Penn State Lady Lions @ Baylor Bears",
+      "away_short": "Penn State",
+      "home_short": "Baylor",
+      "model_away": 59.7,
+      "model_home": 86.5,
+      "act_away": 56,
+      "act_home": 82,
+      "model_margin_home": 26.8,
+      "act_margin_home": 26,
+      "model_total": 146.3,
+      "act_total": 138,
+      "spread_err": 0.8,
+      "total_err": 8.3,
       "side_right": true,
       "had_card": false
     },
@@ -131,6 +198,40 @@
       "act_total": 109,
       "spread_err": -1.4,
       "total_err": 21.7,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Cincinnati Bearcats @ Minnesota Golden Gophers",
+      "away_short": "Cincinnati",
+      "home_short": "Minnesota",
+      "model_away": 56.0,
+      "model_home": 73.6,
+      "act_away": 50,
+      "act_home": 69,
+      "model_margin_home": 17.6,
+      "act_margin_home": 19,
+      "model_total": 129.6,
+      "act_total": 119,
+      "spread_err": -1.4,
+      "total_err": 10.6,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Wofford Terriers @ North Texas Mean Green",
+      "away_short": "Wofford",
+      "home_short": "North Texas",
+      "model_away": 58.5,
+      "model_home": 72.0,
+      "act_away": 67,
+      "act_home": 82,
+      "model_margin_home": 13.4,
+      "act_margin_home": 15,
+      "model_total": 130.5,
+      "act_total": 149,
+      "spread_err": -1.6,
+      "total_err": -18.5,
       "side_right": true,
       "had_card": false
     },
@@ -186,6 +287,23 @@
       "had_card": false
     },
     {
+      "matchup": "St. Thomas Tommies @ Cal State Northridge Matadors",
+      "away_short": "St. Thomas",
+      "home_short": "Cal State Northridge",
+      "model_away": 66.6,
+      "model_home": 58.5,
+      "act_away": 60,
+      "act_home": 54,
+      "model_margin_home": -8.1,
+      "act_margin_home": -6,
+      "model_total": 125.0,
+      "act_total": 114,
+      "spread_err": -2.1,
+      "total_err": 11.0,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "UCF Knights @ Charlotte 49ers",
       "away_short": "UCF",
       "home_short": "Charlotte",
@@ -199,6 +317,23 @@
       "act_total": 152,
       "spread_err": 2.3,
       "total_err": -23.9,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "Gardner-Webb Runnin' Bulldogs @ East Carolina Pirates",
+      "away_short": "Gardner-Webb",
+      "home_short": "East Carolina",
+      "model_away": 50.3,
+      "model_home": 62.6,
+      "act_away": 70,
+      "act_home": 79,
+      "model_margin_home": 12.3,
+      "act_margin_home": 9,
+      "model_total": 112.9,
+      "act_total": 149,
+      "spread_err": 3.3,
+      "total_err": -36.1,
       "side_right": true,
       "had_card": false
     },
@@ -237,6 +372,23 @@
       "had_card": false
     },
     {
+      "matchup": "Kansas State Wildcats @ NC State Wolfpack",
+      "away_short": "Kansas State",
+      "home_short": "NC State",
+      "model_away": 58.8,
+      "model_home": 68.8,
+      "act_away": 70,
+      "act_home": 85,
+      "model_margin_home": 10.0,
+      "act_margin_home": 15,
+      "model_total": 127.6,
+      "act_total": 155,
+      "spread_err": -5.0,
+      "total_err": -27.4,
+      "side_right": true,
+      "had_card": true
+    },
+    {
       "matchup": "Bradley Braves @ Texas State Bobcats",
       "away_short": "Bradley",
       "home_short": "Texas State",
@@ -267,6 +419,23 @@
       "act_total": 132,
       "spread_err": -5.3,
       "total_err": -10.7,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "UL Monroe Warhawks @ Fresno State Bulldogs",
+      "away_short": "UL Monroe",
+      "home_short": "Fresno State",
+      "model_away": 52.1,
+      "model_home": 68.5,
+      "act_away": 53,
+      "act_home": 64,
+      "model_margin_home": 16.4,
+      "act_margin_home": 11,
+      "model_total": 120.6,
+      "act_total": 117,
+      "spread_err": 5.4,
+      "total_err": 3.6,
       "side_right": true,
       "had_card": false
     },
@@ -356,6 +525,23 @@
       "had_card": false
     },
     {
+      "matchup": "Miami (OH) RedHawks @ Kansas Jayhawks",
+      "away_short": "Miami (OH)",
+      "home_short": "Kansas",
+      "model_away": 59.2,
+      "model_home": 63.8,
+      "act_away": 63,
+      "act_home": 75,
+      "model_margin_home": 4.6,
+      "act_margin_home": 12,
+      "model_total": 123.0,
+      "act_total": 138,
+      "spread_err": -7.4,
+      "total_err": -15.0,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Delaware State Hornets @ Bucknell Bison",
       "away_short": "Delaware State",
       "home_short": "Bucknell",
@@ -387,6 +573,23 @@
       "spread_err": 8.1,
       "total_err": -6.2,
       "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Tennessee Lady Volunteers @ Florida Gulf Coast Eagles",
+      "away_short": "Tennessee",
+      "home_short": "Florida Gulf Coast",
+      "model_away": 84.7,
+      "model_home": 68.3,
+      "act_away": 88,
+      "act_home": 80,
+      "model_margin_home": -16.4,
+      "act_margin_home": -8,
+      "model_total": 153.0,
+      "act_total": 168,
+      "spread_err": -8.4,
+      "total_err": -15.0,
+      "side_right": true,
       "had_card": false
     },
     {
@@ -526,6 +729,40 @@
       "had_card": false
     },
     {
+      "matchup": "Utah State Aggies @ Wyoming Cowgirls",
+      "away_short": "Utah State",
+      "home_short": "Wyoming",
+      "model_away": 56.6,
+      "model_home": 54.4,
+      "act_away": 51,
+      "act_home": 59,
+      "model_margin_home": -2.1,
+      "act_margin_home": 8,
+      "model_total": 111.0,
+      "act_total": 110,
+      "spread_err": -10.1,
+      "total_err": 1.0,
+      "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "UNC Asheville Bulldogs @ App State Mountaineers",
+      "away_short": "UNC Asheville",
+      "home_short": "App State",
+      "model_away": 51.4,
+      "model_home": 68.9,
+      "act_away": 53,
+      "act_home": 81,
+      "model_margin_home": 17.5,
+      "act_margin_home": 28,
+      "model_total": 120.3,
+      "act_total": 134,
+      "spread_err": -10.5,
+      "total_err": -13.7,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Charleston Cougars @ Boston College Eagles",
       "away_short": "Charleston",
       "home_short": "Boston College",
@@ -594,6 +831,23 @@
       "had_card": false
     },
     {
+      "matchup": "Coppin State Eagles @ VCU Rams",
+      "away_short": "Coppin State",
+      "home_short": "VCU",
+      "model_away": 53.3,
+      "model_home": 69.4,
+      "act_away": 59,
+      "act_home": 87,
+      "model_margin_home": 16.1,
+      "act_margin_home": 28,
+      "model_total": 122.8,
+      "act_total": 146,
+      "spread_err": -11.9,
+      "total_err": -23.2,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "Idaho Vandals @ California Baptist Lancers",
       "away_short": "Idaho",
       "home_short": "California Baptist",
@@ -607,6 +861,23 @@
       "act_total": 146,
       "spread_err": 13.4,
       "total_err": -2.3,
+      "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "San Diego State Aztecs @ Hawai'i Rainbow Wahine",
+      "away_short": "San Diego State",
+      "home_short": "Hawai'i",
+      "model_away": 62.2,
+      "model_home": 55.5,
+      "act_away": 64,
+      "act_home": 71,
+      "model_margin_home": -6.7,
+      "act_margin_home": 7,
+      "model_total": 117.7,
+      "act_total": 135,
+      "spread_err": -13.7,
+      "total_err": -17.3,
       "side_right": false,
       "had_card": false
     },
@@ -662,6 +933,57 @@
       "had_card": false
     },
     {
+      "matchup": "New Mexico State Aggies @ Nevada Wolf Pack",
+      "away_short": "New Mexico State",
+      "home_short": "Nevada",
+      "model_away": 60.4,
+      "model_home": 59.6,
+      "act_away": 59,
+      "act_home": 42,
+      "model_margin_home": -0.8,
+      "act_margin_home": -17,
+      "model_total": 120.0,
+      "act_total": 101,
+      "spread_err": 16.2,
+      "total_err": 19.0,
+      "side_right": true,
+      "had_card": false
+    },
+    {
+      "matchup": "South Florida Bulls @ Seton Hall Pirates",
+      "away_short": "South Florida",
+      "home_short": "Seton Hall",
+      "model_away": 64.6,
+      "model_home": 58.0,
+      "act_away": 54,
+      "act_home": 64,
+      "model_margin_home": -6.5,
+      "act_margin_home": 10,
+      "model_total": 122.6,
+      "act_total": 118,
+      "spread_err": -16.5,
+      "total_err": 4.6,
+      "side_right": false,
+      "had_card": true
+    },
+    {
+      "matchup": "Butler Bulldogs @ UNLV Lady Rebels",
+      "away_short": "Butler",
+      "home_short": "UNLV",
+      "model_away": 68.2,
+      "model_home": 66.9,
+      "act_away": 72,
+      "act_home": 54,
+      "model_margin_home": -1.3,
+      "act_margin_home": -18,
+      "model_total": 135.0,
+      "act_total": 126,
+      "spread_err": 16.7,
+      "total_err": 9.0,
+      "side_right": true,
+      "had_card": false
+    },
+    {
       "matchup": "St. John's Red Storm @ Richmond Spiders",
       "away_short": "St. John's",
       "home_short": "Richmond",
@@ -693,6 +1015,40 @@
       "spread_err": -17.1,
       "total_err": 1.3,
       "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "South Dakota State Jackrabbits @ Rutgers Scarlet Knights",
+      "away_short": "South Dakota State",
+      "home_short": "Rutgers",
+      "model_away": 69.8,
+      "model_home": 68.7,
+      "act_away": 68,
+      "act_home": 84,
+      "model_margin_home": -1.1,
+      "act_margin_home": 16,
+      "model_total": 138.5,
+      "act_total": 152,
+      "spread_err": -17.1,
+      "total_err": -13.5,
+      "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Columbia Lions @ Stanford Cardinal",
+      "away_short": "Columbia",
+      "home_short": "Stanford",
+      "model_away": 67.3,
+      "model_home": 63.2,
+      "act_away": 68,
+      "act_home": 45,
+      "model_margin_home": -4.1,
+      "act_margin_home": -23,
+      "model_total": 130.4,
+      "act_total": 113,
+      "spread_err": 18.9,
+      "total_err": 17.4,
+      "side_right": true,
       "had_card": false
     },
     {
@@ -761,6 +1117,23 @@
       "spread_err": -20.5,
       "total_err": -29.7,
       "side_right": false,
+      "had_card": false
+    },
+    {
+      "matchup": "Troy Trojans @ UC Davis Aggies",
+      "away_short": "Troy",
+      "home_short": "UC Davis",
+      "model_away": 66.4,
+      "model_home": 70.6,
+      "act_away": 50,
+      "act_home": 75,
+      "model_margin_home": 4.1,
+      "act_margin_home": 25,
+      "model_total": 137.0,
+      "act_total": 125,
+      "spread_err": -20.9,
+      "total_err": 12.0,
+      "side_right": true,
       "had_card": false
     },
     {
